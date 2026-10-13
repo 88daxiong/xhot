@@ -1,0 +1,381 @@
+{
+  "handle": "op7418",
+  "tweets": [
+    {
+      "created_at": "2026-10-13T03:44:30.000Z",
+      "id": "2109852753875075242",
+      "lang": "",
+      "metrics": {
+        "bookmark": 122,
+        "impression": 37194,
+        "like": 172,
+        "quote": 7,
+        "reply": 65,
+        "retweet": 13
+      },
+      "text": "Anthropic 发布了他们是如何反蒸馏的文章。\n\n但是这文章也告诉我们，如何在一定程度上避免被封！\n\n我们很多被封的用户，很大程度上是被系统误认为在对模型进行蒸馏而误封的，尤其是那些刚注册完就被快速封禁的账号。\n\n你可以看一下如何避免某些操作，别让他们误以为你在做蒸馏，从而减少被封禁的风险： https://t.co/7f9WD8wbOQ",
+      "url": "https://x.com/op7418/status/2109852753875075242"
+    },
+    {
+      "created_at": "2026-10-13T03:26:13.000Z",
+      "id": "2109848153650495617",
+      "lang": "",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 2906,
+        "like": 5,
+        "quote": 0,
+        "reply": 5,
+        "retweet": 0
+      },
+      "text": "注意！最低 8 美元的订阅不包含 Grok Bot https://t.co/bi42ZvRFoY",
+      "url": "https://x.com/op7418/status/2109848153650495617"
+    },
+    {
+      "created_at": "2026-10-13T03:20:25.000Z",
+      "id": "2109846692443161040",
+      "lang": "",
+      "metrics": {
+        "bookmark": 1,
+        "impression": 6370,
+        "like": 10,
+        "quote": 0,
+        "reply": 12,
+        "retweet": 0
+      },
+      "text": "没活了又重置 https://t.co/4mCvodsfOk",
+      "url": "https://x.com/op7418/status/2109846692443161040"
+    },
+    {
+      "created_at": "2026-10-13T02:52:27.000Z",
+      "id": "2109839657739644966",
+      "lang": "",
+      "metrics": {
+        "bookmark": 1,
+        "impression": 4182,
+        "like": 1,
+        "quote": 0,
+        "reply": 2,
+        "retweet": 0
+      },
+      "text": "官方解释：https://t.co/EgNyIUhKnZ",
+      "url": "https://x.com/op7418/status/2109839657739644966"
+    },
+    {
+      "created_at": "2026-10-13T02:52:02.000Z",
+      "id": "2109839549706969259",
+      "lang": "",
+      "metrics": {
+        "bookmark": 49,
+        "impression": 17670,
+        "like": 70,
+        "quote": 2,
+        "reply": 65,
+        "retweet": 4
+      },
+      "text": "很多人问我，随着玩 Grok bot 越来越多，什么时候订阅合适？\n\n我一直都让大家再等等，但感觉现在时间到了。\n\n他们终于推出了将 Twitter、Cursor、Grok bot 和 Grok 四合一的订阅，总共有 4 个档位：\n\n$8（Plus）：包含 Twitter Premium\n$30 (Premium)：Plus 的 4 倍用量\n$100（Super）：Plus 的 15 https://t.co/TnApgDtZ8n",
+      "url": "https://x.com/op7418/status/2109839549706969259"
+    },
+    {
+      "created_at": "2026-10-13T02:35:59.000Z",
+      "id": "2109835512068591616",
+      "lang": "",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 1442,
+        "like": 0,
+        "quote": 0,
+        "reply": 2,
+        "retweet": 0
+      },
+      "text": "@bot 可以看到这条推特吗",
+      "url": "https://x.com/op7418/status/2109835512068591616"
+    },
+    {
+      "created_at": "2026-10-12T17:11:06.000Z",
+      "id": "2109693353633927310",
+      "lang": "",
+      "metrics": {
+        "bookmark": 5,
+        "impression": 7740,
+        "like": 8,
+        "quote": 0,
+        "reply": 3,
+        "retweet": 2
+      },
+      "text": "无人深空居然上线 iOS 端了 https://t.co/nkSmpdBFzn",
+      "url": "https://x.com/op7418/status/2109693353633927310"
+    },
+    {
+      "created_at": "2026-10-12T16:17:34.000Z",
+      "id": "2109679880438989160",
+      "lang": "",
+      "metrics": {
+        "bookmark": 336,
+        "impression": 22104,
+        "like": 267,
+        "quote": 3,
+        "reply": 38,
+        "retweet": 42
+      },
+      "text": "Anatomy 应该是这周最火的 Skill\n\n能将复杂的机械结构变成一个风格非常独特的等轴立体动画。\n\n然后我在想，用这个风格做那种科普视频是不是很爽？\n\n于是结合了 Grok bot，还用即梦生成了一些图片和视频，\n\n最后用这个 skill 做了个“芯片是如何制造的”科普视频，讲解得挺清楚的 https://t.co/yHnyooCwrJ https://t.co/jFNxFhtYnU",
+      "url": "https://x.com/op7418/status/2109679880438989160"
+    },
+    {
+      "created_at": "2026-10-12T15:58:31.000Z",
+      "id": "2109675087729492472",
+      "lang": "",
+      "metrics": {
+        "bookmark": 6,
+        "impression": 18534,
+        "like": 63,
+        "quote": 2,
+        "reply": 22,
+        "retweet": 2
+      },
+      "text": "今天下午去了 Apple 孵化器的 Demo Day，见到了非常多不错的产品和开发者。\n\n顺便没想到库克也来了，感谢苹果邀请。\n\n就是这个合影，我感觉我又被广角镜头给坑了，怎么感觉如此肥大。 https://t.co/U8p9lQi4US",
+      "url": "https://x.com/op7418/status/2109675087729492472"
+    },
+    {
+      "created_at": "2026-10-12T05:23:57.000Z",
+      "id": "2109515395749310821",
+      "lang": "",
+      "metrics": {
+        "bookmark": 319,
+        "impression": 31416,
+        "like": 324,
+        "quote": 5,
+        "reply": 69,
+        "retweet": 40
+      },
+      "text": "Opus 5.5 + 即梦 CLI\n\n试了一下，让 Opus 5.5 结合视频模型做故事片表达\n\n没想到效果还不错，所有的编排、视频特效、提示词、视频剪辑都是 Opus 5.5 决定\n\n即梦 CLI 负责对应分镜的图片和视频生成。\n\n在视频上叠加了非常多的代码做的动画效果，看起来质感好了不少 https://t.co/PrCsEsA7rQ",
+      "url": "https://x.com/op7418/status/2109515395749310821"
+    },
+    {
+      "created_at": "2026-10-12T02:31:04.000Z",
+      "id": "2109471885960647082",
+      "lang": "",
+      "metrics": {
+        "bookmark": 98,
+        "impression": 17975,
+        "like": 127,
+        "quote": 0,
+        "reply": 18,
+        "retweet": 9
+      },
+      "text": "我的 Grok Bot 工作室配置 https://t.co/HCy4MXkRoK https://t.co/hOR3ahOUln",
+      "url": "https://x.com/op7418/status/2109471885960647082"
+    },
+    {
+      "created_at": "2026-10-12T02:23:38.000Z",
+      "id": "2109470015091261561",
+      "lang": "",
+      "metrics": {
+        "bookmark": 8,
+        "impression": 3801,
+        "like": 5,
+        "quote": 0,
+        "reply": 0,
+        "retweet": 0
+      },
+      "text": "可以把这段话发给你的 GrokBot：https://t.co/xOsbVBwpAz",
+      "url": "https://x.com/op7418/status/2109470015091261561"
+    },
+    {
+      "created_at": "2026-10-12T02:23:17.000Z",
+      "id": "2109469928852230518",
+      "lang": "",
+      "metrics": {
+        "bookmark": 87,
+        "impression": 16976,
+        "like": 50,
+        "quote": 2,
+        "reply": 10,
+        "retweet": 4
+      },
+      "text": "教一下怎么让 Grok Bot 食用\n\n公众号文章在这里：https://t.co/KZ8wK4fdKI https://t.co/Yc9Qp5hiEa https://t.co/hOR3ahOUln",
+      "url": "https://x.com/op7418/status/2109469928852230518"
+    },
+    {
+      "created_at": "2026-10-12T02:15:25.000Z",
+      "id": "2109467948582891554",
+      "lang": "",
+      "metrics": {
+        "bookmark": 11,
+        "impression": 4433,
+        "like": 5,
+        "quote": 0,
+        "reply": 1,
+        "retweet": 1
+      },
+      "text": "他帮我做的那个教程视频 https://t.co/9glwcMwsaj",
+      "url": "https://x.com/op7418/status/2109467948582891554"
+    },
+    {
+      "created_at": "2026-10-12T02:13:37.000Z",
+      "id": "2109467496298516760",
+      "lang": "",
+      "metrics": {
+        "bookmark": 225,
+        "impression": 52213,
+        "like": 214,
+        "quote": 10,
+        "reply": 57,
+        "retweet": 28
+      },
+      "text": "介绍一下新的 GrokBot 玩法：\n\n让它从一个复杂的推文串里，剪出了一条 3 分钟的学习视频。\n\n注意这一切（包括我这个介绍教程视频）都是在床上完成的，全程没有使用我的电脑。\n\n而且做完这一堆以后，我的额度消耗还不到 4%\n\n他帮我做的原始视频，放下面了。 https://t.co/tu4vqZMHfg https://t.co/vrOWKizS9W",
+      "url": "https://x.com/op7418/status/2109467496298516760"
+    },
+    {
+      "created_at": "2026-10-11T05:49:25.000Z",
+      "id": "2109159416599883861",
+      "lang": "",
+      "metrics": {
+        "bookmark": 33,
+        "impression": 12239,
+        "like": 42,
+        "quote": 2,
+        "reply": 28,
+        "retweet": 3
+      },
+      "text": "Next Token 上周的观察，再次领先国内其他媒体\n\n关于“一切都会被开源”和“游戏破解”这事，我们在前几天的播客里就非常详细地讨论过，今天突然就火了。\n\n业内的人还是可以多看看我们聊的这些东西。\n\n总结一下我们在播客里面的观点。 https://t.co/WxBbJKUOWD https://t.co/XDOLPd1Pu3",
+      "url": "https://x.com/op7418/status/2109159416599883861"
+    },
+    {
+      "created_at": "2026-10-11T02:01:49.000Z",
+      "id": "2109102136890180034",
+      "lang": "",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 16426,
+        "like": 12,
+        "quote": 2,
+        "reply": 30,
+        "retweet": 0
+      },
+      "text": "重置了 https://t.co/kDFKrxEAwP",
+      "url": "https://x.com/op7418/status/2109102136890180034"
+    },
+    {
+      "created_at": "2026-10-10T17:24:39.000Z",
+      "id": "2108971987750298094",
+      "lang": "",
+      "metrics": {
+        "bookmark": 3,
+        "impression": 3879,
+        "like": 3,
+        "quote": 0,
+        "reply": 3,
+        "retweet": 0
+      },
+      "text": "笑死，在手机上还可以在即览里面打开获得更好的阅读效果 https://t.co/OAvvNSF16p",
+      "url": "https://x.com/op7418/status/2108971987750298094"
+    },
+    {
+      "created_at": "2026-10-10T17:03:40.000Z",
+      "id": "2108966708740505828",
+      "lang": "",
+      "metrics": {
+        "bookmark": 112,
+        "impression": 39312,
+        "like": 87,
+        "quote": 2,
+        "reply": 58,
+        "retweet": 11
+      },
+      "text": "超有用的 GrokBot 用法：\n\n将复杂难阅读的推串内容变成长文档，在手机上阅读\n\n有人让 LLM 通过纯代码完成了一次细节非常丰富的 3D 龙建模，分享了整个过程，内容极其复杂。\n\n我直接让 Grok bot 帮我拉取了所有内容： https://t.co/LRR691M3Yx https://t.co/cYkPVG8gae",
+      "url": "https://x.com/op7418/status/2108966708740505828"
+    },
+    {
+      "created_at": "2026-10-10T16:43:05.000Z",
+      "id": "2108961526635983040",
+      "lang": "",
+      "metrics": {
+        "bookmark": 7,
+        "impression": 11851,
+        "like": 16,
+        "quote": 0,
+        "reply": 16,
+        "retweet": 0
+      },
+      "text": "给我的 Grok Bot 换个新头像 https://t.co/B6fvHb0tLg",
+      "url": "https://x.com/op7418/status/2108961526635983040"
+    },
+    {
+      "created_at": "2026-10-10T13:47:39.000Z",
+      "id": "2108917380600791463",
+      "lang": "",
+      "metrics": {
+        "bookmark": 3,
+        "impression": 9599,
+        "like": 28,
+        "quote": 0,
+        "reply": 21,
+        "retweet": 1
+      },
+      "text": "谁能想到只播了 5 期 订阅就超 7000 了 https://t.co/xDleKal8K9 https://t.co/XDOLPd1Pu3",
+      "url": "https://x.com/op7418/status/2108917380600791463"
+    },
+    {
+      "created_at": "2026-10-10T02:46:05.000Z",
+      "id": "2108750890480078899",
+      "lang": "",
+      "metrics": {
+        "bookmark": 6,
+        "impression": 7200,
+        "like": 25,
+        "quote": 0,
+        "reply": 23,
+        "retweet": 1
+      },
+      "text": "Midjourney 终于要有 MCP 了 https://t.co/ENl242SnIW",
+      "url": "https://x.com/op7418/status/2108750890480078899"
+    },
+    {
+      "created_at": "2026-10-09T20:02:11.000Z",
+      "id": "2108649243301081319",
+      "lang": "",
+      "metrics": {
+        "bookmark": 140,
+        "impression": 60653,
+        "like": 119,
+        "quote": 5,
+        "reply": 113,
+        "retweet": 12
+      },
+      "text": "Grok Bot 的邮箱正式推出了，推荐让你的 Bot 赶紧领一下你需要的对应前缀的邮箱\n\n直接在评论区 @ 或者把这个推特发给他就行 https://t.co/We9uoN61G7",
+      "url": "https://x.com/op7418/status/2108649243301081319"
+    },
+    {
+      "created_at": "2026-10-09T17:04:38.000Z",
+      "id": "2108604561753874568",
+      "lang": "",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 5287,
+        "like": 2,
+        "quote": 0,
+        "reply": 1,
+        "retweet": 0
+      },
+      "text": "已经站起来蹬了",
+      "url": "https://x.com/op7418/status/2108604561753874568"
+    },
+    {
+      "created_at": "2026-10-09T17:03:35.000Z",
+      "id": "2108604299383337210",
+      "lang": "",
+      "metrics": {
+        "bookmark": 50,
+        "impression": 35454,
+        "like": 74,
+        "quote": 1,
+        "reply": 23,
+        "retweet": 3
+      },
+      "text": "顺便再次感叹一下老马的豪横！\n\n我这几天疯狂拿 Grok 做视频（就是代码类的视频），看了一下，每周的用量才消耗了 15%。\n\n我这个是之前 99 美元买的 Grok 会员 https://t.co/m1gFusje7a https://t.co/jsO0p36MvW",
+      "url": "https://x.com/op7418/status/2108604299383337210"
+    }
+  ],
+  "user_id": "1669276256"
+}

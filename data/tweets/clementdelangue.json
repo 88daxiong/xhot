@@ -1,0 +1,171 @@
+{
+  "handle": "clementdelangue",
+  "tweets": [
+    {
+      "created_at": "2026-10-12T16:02:47.000Z",
+      "id": "2109676163333554684",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 3,
+        "impression": 15485,
+        "like": 51,
+        "quote": 0,
+        "reply": 3,
+        "retweet": 2
+      },
+      "text": "😂 faceplant at 0:50 https://t.co/lFgHoIpVnr https://t.co/0fL0O8MIMm",
+      "url": "https://x.com/ClementDelangue/status/2109676163333554684"
+    },
+    {
+      "created_at": "2026-10-12T15:53:21.000Z",
+      "id": "2109673788971405497",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 110,
+        "impression": 20740,
+        "like": 372,
+        "quote": 2,
+        "reply": 66,
+        "retweet": 44
+      },
+      "text": "If you’re a researcher, please consider sharing your RL environments openly! Something you built for one experiment could help the entire field move forward.\n\nI know we’re in dark days for sharing from frontier labs in the US, but I believe this can have a huge impact on the field and the world!",
+      "url": "https://x.com/ClementDelangue/status/2109673788971405497"
+    },
+    {
+      "created_at": "2026-10-11T14:31:24.000Z",
+      "id": "2109290775322243143",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 484,
+        "impression": 64582,
+        "like": 1329,
+        "quote": 30,
+        "reply": 123,
+        "retweet": 162
+      },
+      "text": "We turned @OpenAI's math problems into open-source RL environments on @huggingface!\n\nEarly and rough (the verifier only accepts the exact original formalization, so an equivalent proof can still score 0), but this is what it looks like when a research release becomes executable training infrastructure for everyone.\n\nThis is an exciting direction imo: turning open research into open executable environments that anyone can build on to train better open models!\n\nhttps://t.co/CtDUzi1DPP",
+      "url": "https://x.com/ClementDelangue/status/2109290775322243143"
+    },
+    {
+      "created_at": "2026-10-09T13:28:23.000Z",
+      "id": "2108550140479041742",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 9,
+        "impression": 20483,
+        "like": 134,
+        "quote": 4,
+        "reply": 23,
+        "retweet": 6
+      },
+      "text": "love the building in public! https://t.co/s0w8bNE3oZ",
+      "url": "https://x.com/ClementDelangue/status/2108550140479041742"
+    },
+    {
+      "created_at": "2026-10-08T15:42:20.000Z",
+      "id": "2108221462347702612",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 1,
+        "impression": 2896,
+        "like": 6,
+        "quote": 0,
+        "reply": 1,
+        "retweet": 0
+      },
+      "text": "The flow continues! https://t.co/uTKu4xB4V5",
+      "url": "https://x.com/ClementDelangue/status/2108221462347702612"
+    },
+    {
+      "created_at": "2026-10-08T15:35:38.000Z",
+      "id": "2108219777332207769",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 1,
+        "impression": 1862,
+        "like": 7,
+        "quote": 0,
+        "reply": 0,
+        "retweet": 0
+      },
+      "text": "you can make your own reachy mini danse here btw https://t.co/MlCO5yo05r",
+      "url": "https://x.com/ClementDelangue/status/2108219777332207769"
+    },
+    {
+      "created_at": "2026-10-08T15:05:49.000Z",
+      "id": "2108212272317288746",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 40,
+        "impression": 28361,
+        "like": 258,
+        "quote": 5,
+        "reply": 48,
+        "retweet": 23
+      },
+      "text": "Is there anything Reachy mini can’t do? https://t.co/eh0SdAUmWR",
+      "url": "https://x.com/ClementDelangue/status/2108212272317288746"
+    },
+    {
+      "created_at": "2026-10-08T13:17:14.000Z",
+      "id": "2108184948548976921",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 208,
+        "impression": 63483,
+        "like": 1285,
+        "quote": 24,
+        "reply": 137,
+        "retweet": 138
+      },
+      "text": "We urgently need more public traces of AI agents attacking and defending systems. Defenders can’t learn from what they can’t see.\n\nIf you have traces and are being pressured to keep them private, my DMs are open. Let’s level the playing field and fight the asymmetry and lack of transparency in AI!",
+      "url": "https://x.com/ClementDelangue/status/2108184948548976921"
+    },
+    {
+      "created_at": "2026-10-07T20:14:46.000Z",
+      "id": "2107927636529795117",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 68,
+        "impression": 43162,
+        "like": 339,
+        "quote": 9,
+        "reply": 32,
+        "retweet": 40
+      },
+      "text": "If you need any more evidence about how exciting local AI (and llamacpp) is! From the @Microsoft windows launch today with @satyanadella @sriramk @JensenHuang https://t.co/mN7gkgj2Rd",
+      "url": "https://x.com/ClementDelangue/status/2107927636529795117"
+    },
+    {
+      "created_at": "2026-10-06T17:36:06.000Z",
+      "id": "2107525319012090301",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 22,
+        "impression": 28076,
+        "like": 541,
+        "quote": 1,
+        "reply": 36,
+        "retweet": 32
+      },
+      "text": "Super excited about this and I know weights are coming (https://t.co/svhuNNJHnZ) but just to be fair, you can't be the best open-weight model if you're not open-weight yet! https://t.co/CtvdVUXCN0",
+      "url": "https://x.com/ClementDelangue/status/2107525319012090301"
+    },
+    {
+      "created_at": "2026-10-06T13:50:09.000Z",
+      "id": "2107468457768092149",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 73,
+        "impression": 70282,
+        "like": 1095,
+        "quote": 22,
+        "reply": 50,
+        "retweet": 69
+      },
+      "text": "Le fat chaton! https://t.co/svhuNNJHnZ https://t.co/nbT0DF8BN7",
+      "url": "https://x.com/ClementDelangue/status/2107468457768092149"
+    }
+  ],
+  "user_id": "186420551"
+}

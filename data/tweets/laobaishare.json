@@ -1,0 +1,381 @@
+{
+  "handle": "laobaishare",
+  "tweets": [
+    {
+      "created_at": "2026-10-13T04:15:03.000Z",
+      "id": "2109860441409397238",
+      "lang": "",
+      "metrics": {
+        "bookmark": 5,
+        "impression": 1669,
+        "like": 7,
+        "quote": 0,
+        "reply": 0,
+        "retweet": 0
+      },
+      "text": "你的浏览器能跑的游戏，比你想象的多得多。\n\n这些游戏大多不用传统安装。有些移植版需要你自己提供游戏文件。\n\nBO1 僵尸模式\n https://t.co/T4miuQQkSd \n\nMoon\n https://t.co/vOLLX5aJeF \n\nKino der Toten\n https://t.co/JfRBnbBz2x \n\nBO3 Cheese Cube\n https://t.co/uaXTmxyQ3w \n\nBlack Ops 2 https://t.co/Wmj1wElTfk",
+      "url": "https://x.com/laobaishare/status/2109860441409397238"
+    },
+    {
+      "created_at": "2026-10-12T08:56:01.000Z",
+      "id": "2109568762156585390",
+      "lang": "",
+      "metrics": {
+        "bookmark": 7,
+        "impression": 3555,
+        "like": 11,
+        "quote": 0,
+        "reply": 3,
+        "retweet": 0
+      },
+      "text": "AI 研究正在变成一整套分析师工具链\n\n5 个开源仓库能让一个模型强很多\n\n01 GPT Researcher\n▸ https://t.co/cXTx6YUfoP\n→ 把一个问题拆成多个研究任务\n\n02 Firecrawl\n▸ https://t.co/yxFvjfCpsQ\n→ 把网站变成干净、可用的数据\n\n03 Browser Use\n▸ https://t.co/v5QNCTjOHu\n→",
+      "url": "https://x.com/laobaishare/status/2109568762156585390"
+    },
+    {
+      "created_at": "2026-10-12T04:01:01.000Z",
+      "id": "2109494523105775713",
+      "lang": "",
+      "metrics": {
+        "bookmark": 5,
+        "impression": 6222,
+        "like": 9,
+        "quote": 0,
+        "reply": 0,
+        "retweet": 1
+      },
+      "text": "有人把 Cognition 的“做梦”记忆系统开源了。\n\nMemoryRepo 是 Instinct、Muse 和 OpenClaw 这类系统所用记忆方案的参考实现，基于 Cloudflare Artifacts、Durable Objects、Alchemy 和 Effect 构建。\n\n如果你在做需要持久记忆的 agent，这个仓库值得研究。\n\nhttps://t.co/U6k96t6Bjy\n\n仓库：",
+      "url": "https://x.com/laobaishare/status/2109494523105775713"
+    },
+    {
+      "created_at": "2026-10-11T12:09:13.000Z",
+      "id": "2109254994054815811",
+      "lang": "",
+      "metrics": {
+        "bookmark": 94,
+        "impression": 11804,
+        "like": 52,
+        "quote": 0,
+        "reply": 6,
+        "retweet": 9
+      },
+      "text": "OpenMuse 刚成为今天排名第一的 TypeScript 仓库。\n\n&gt;一个带浏览器、终端和文件的个人智能体\n&gt;说出你想要的结果，审阅计划，然后回来看结果\n&gt;支持 iOS、Android 和网页端\n\nMIT 许可，克隆下来一键部署到 Render\n\n一个完全属于你、可以免费定制的个人智能体。\n\nhttps://t.co/k9ciFKdtke https://t.co/2QEGIZrRv9",
+      "url": "https://x.com/laobaishare/status/2109254994054815811"
+    },
+    {
+      "created_at": "2026-10-11T09:58:04.000Z",
+      "id": "2109221988955042186",
+      "lang": "",
+      "metrics": {
+        "bookmark": 6,
+        "impression": 979,
+        "like": 2,
+        "quote": 0,
+        "reply": 0,
+        "retweet": 0
+      },
+      "text": "希望这个讨论帖对您有所帮助。\n关注我 @laobaishare 以获取更多内容。\n如果可以的话，请点赞或转发下面的这段话吧： https://t.co/lWLi4bCmb5",
+      "url": "https://x.com/laobaishare/status/2109221988955042186"
+    },
+    {
+      "created_at": "2026-10-11T09:58:03.000Z",
+      "id": "2109221987226960162",
+      "lang": "",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 930,
+        "like": 0,
+        "quote": 0,
+        "reply": 1,
+        "retweet": 0
+      },
+      "text": "6/ 检查还有什么连着\n\n你以前用谷歌登录过的老应用，可能还在给它喂数据。\n\n操作：数据和隐私 → 往下滚到\"第三方应用和服务\"。\n\n任何你不认识、或者几个月没用过的 → 点进去 → \"删除所有关联\"。",
+      "url": "https://x.com/laobaishare/status/2109221987226960162"
+    },
+    {
+      "created_at": "2026-10-11T09:58:03.000Z",
+      "id": "2109221985612181626",
+      "lang": "",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 248,
+        "like": 0,
+        "quote": 0,
+        "reply": 1,
+        "retweet": 0
+      },
+      "text": "5/ 清掉它给你建的画像\n\n你的历史记录早就被做成了画像。删掉历史记录，删不掉这个。\n\n操作：数据和隐私 → 往下滚到\"我的广告中心\"。\n\n关掉：个性化广告。然后往下滚，把合作伙伴广告设置也关掉。",
+      "url": "https://x.com/laobaishare/status/2109221985612181626"
+    },
+    {
+      "created_at": "2026-10-11T09:58:03.000Z",
+      "id": "2109221983976341788",
+      "lang": "",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 290,
+        "like": 0,
+        "quote": 0,
+        "reply": 1,
+        "retweet": 0
+      },
+      "text": "4/ 给保留的项目设自动删除\n\n如果你想留一个开着，至少限制它保存多久。\n\n在每个历史记录设置里：点\"自动删除\" → 选 3 个月。\n\n谷歌默认是 18 或 36 个月。3 个月是它给的最短选项。",
+      "url": "https://x.com/laobaishare/status/2109221983976341788"
+    },
+    {
+      "created_at": "2026-10-11T09:58:02.000Z",
+      "id": "2109221982328037576",
+      "lang": "",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 323,
+        "like": 0,
+        "quote": 0,
+        "reply": 1,
+        "retweet": 0
+      },
+      "text": "3/ 给保留的项目设自动删除\n\n如果你想留一个开着，至少限制它保存多久。\n\n在每个历史记录设置里：点\"自动删除\" → 选 3 个月。\n\n谷歌默认是 18 或 36 个月。3 个月是它给的最短选项。",
+      "url": "https://x.com/laobaishare/status/2109221982328037576"
+    },
+    {
+      "created_at": "2026-10-11T09:58:02.000Z",
+      "id": "2109221980369223847",
+      "lang": "",
+      "metrics": {
+        "bookmark": 3,
+        "impression": 835,
+        "like": 2,
+        "quote": 0,
+        "reply": 1,
+        "retweet": 0
+      },
+      "text": "2/ 删掉谷歌留的那份\n\n这份才是关键。你搜过的、看过的、打过的字，全都存在你的账号下。\n\n操作：Gmail 应用 → 点右上角头像 → 管理你的谷歌账号 → 滑到\"数据和隐私\" → 往下滚到\"历史记录设置\" → 点\"我的活动\"。\n\n怎么用：点删除 → \"不限时间\" → 确认。删之前先翻一翻，就是这部分让人破防。",
+      "url": "https://x.com/laobaishare/status/2109221980369223847"
+    },
+    {
+      "created_at": "2026-10-11T09:58:01.000Z",
+      "id": "2109221978758602856",
+      "lang": "",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 1083,
+        "like": 1,
+        "quote": 0,
+        "reply": 1,
+        "retweet": 0
+      },
+      "text": "1/ 先清浏览器\n\n这一步大家都知道。它只清掉存在你设备上的东西。\n\n操作：Chrome → 右上角三个点 → 删除浏览数据 → 时间范围选\"不限时间\" → 三个框全勾上 → 删除数据。\n\n你的设备干净了。谷歌那份还在。",
+      "url": "https://x.com/laobaishare/status/2109221978758602856"
+    },
+    {
+      "created_at": "2026-10-11T09:58:01.000Z",
+      "id": "2109221977131257949",
+      "lang": "",
+      "metrics": {
+        "bookmark": 29,
+        "impression": 9239,
+        "like": 22,
+        "quote": 1,
+        "reply": 2,
+        "retweet": 5
+      },
+      "text": "删掉浏览记录，不等于真的删掉了浏览记录。\n\n谷歌自己留了一份，绑在你的账号上，藏在一个大多数人从没打开过的页面里。下面是彻底清空的方法：",
+      "url": "https://x.com/laobaishare/status/2109221977131257949"
+    },
+    {
+      "created_at": "2026-10-09T12:22:14.000Z",
+      "id": "2108533494725103926",
+      "lang": "",
+      "metrics": {
+        "bookmark": 1634,
+        "impression": 81402,
+        "like": 981,
+        "quote": 7,
+        "reply": 16,
+        "retweet": 225
+      },
+      "text": "Netflix工程师放出20个GitHub仓库，直接把Claude Opus 5.5改造成视频生成机器\n\n视频都能生成了，那67个Skills还能解锁什么玩法？\nhttps://t.co/qYRPohb5wt\n\n【Opus 5.5专用工具】\n\n1. claude-motion：自动检查每一帧，音频也写进代码\nhttps://t.co/rU6o1aQdGI\n\n2. https://t.co/J470DJwxFo https://t.co/Hu0Vt5kBlp",
+      "url": "https://x.com/laobaishare/status/2108533494725103926"
+    },
+    {
+      "created_at": "2026-10-09T04:02:02.000Z",
+      "id": "2108407617353810238",
+      "lang": "",
+      "metrics": {
+        "bookmark": 22,
+        "impression": 5300,
+        "like": 16,
+        "quote": 0,
+        "reply": 22,
+        "retweet": 2
+      },
+      "text": "🚀 别再一遍遍重写同样的 AI 提示词了。\n\n把这些简单的提示词快捷指令存下来，让 AI 给出更快、更清晰、更稳定的结果：\n\n🧠 理解\n/TLDR — 总结要点\n/ELI5 — 用简单的话解释\n/COMPARE — 对比不同选项\n/EXAMPLES — 给出相关例子\n\n⚡ 思考\n/STEP-BY-STEP — 把复杂任务拆成清晰步骤\n/PROS-CONS — https://t.co/XGvZf0nPB5",
+      "url": "https://x.com/laobaishare/status/2108407617353810238"
+    },
+    {
+      "created_at": "2026-10-08T14:45:01.000Z",
+      "id": "2108207038455275831",
+      "lang": "",
+      "metrics": {
+        "bookmark": 14,
+        "impression": 6474,
+        "like": 8,
+        "quote": 0,
+        "reply": 1,
+        "retweet": 0
+      },
+      "text": "一个开源插件：Autoharness\n\n能让 Claude Code 根据你的工作方式，自己创建并维护技能。\n\n→ 默认每 50 次工具调用就在后台做一次反思，提出新增或更新的技能\n→ 它会合并重复的技能，把不再使用的技能归档\n→ 它只改自己创建的技能，并记录每一次改动\n→ 仓库称在同一个模型下，CORE-Bench 上的成绩从",
+      "url": "https://x.com/laobaishare/status/2108207038455275831"
+    },
+    {
+      "created_at": "2026-10-08T09:29:40.000Z",
+      "id": "2108127679845376170",
+      "lang": "",
+      "metrics": {
+        "bookmark": 32,
+        "impression": 6672,
+        "like": 26,
+        "quote": 0,
+        "reply": 1,
+        "retweet": 10
+      },
+      "text": "一个人 + Codex，跑出月入 10W+ 的案例！\n\n其中有个 Codex 剪辑自动化案例，用 2 条视频接下近四位数商单，把从剪辑到交付的流程拆得很细：\nhttps://t.co/wHp9PLbftW\n\n我整理了近期 10 篇高赞推文给大家参考\n\n1、Opus 5 + Codex 制作了一个 3D 网页游戏 \n@ring_hyacinth\n\nhttps://t.co/vnuiaq20KT https://t.co/LoCNTf8tWg",
+      "url": "https://x.com/laobaishare/status/2108127679845376170"
+    },
+    {
+      "created_at": "2026-10-07T15:07:25.000Z",
+      "id": "2107850291001602356",
+      "lang": "",
+      "metrics": {
+        "bookmark": 2,
+        "impression": 7535,
+        "like": 10,
+        "quote": 0,
+        "reply": 5,
+        "retweet": 0
+      },
+      "text": "iPhone Duo 的设计灵感，找到了 😂 https://t.co/1I8lJd071d",
+      "url": "https://x.com/laobaishare/status/2107850291001602356"
+    },
+    {
+      "created_at": "2026-10-07T15:05:54.000Z",
+      "id": "2107849905658265704",
+      "lang": "",
+      "metrics": {
+        "bookmark": 1,
+        "impression": 7465,
+        "like": 4,
+        "quote": 0,
+        "reply": 0,
+        "retweet": 0
+      },
+      "text": "其实只改最后的结局就行了，所以为什么那帮科学家全都手残打不了针？ https://t.co/rJOrcahUdc",
+      "url": "https://x.com/laobaishare/status/2107849905658265704"
+    },
+    {
+      "created_at": "2026-10-06T12:45:54.000Z",
+      "id": "2107452286427594833",
+      "lang": "",
+      "metrics": {
+        "bookmark": 11,
+        "impression": 3845,
+        "like": 11,
+        "quote": 0,
+        "reply": 0,
+        "retweet": 1
+      },
+      "text": "希望这个讨论帖对您有所帮助。\n关注我 @laobaishare 以获取更多内容。\n如果可以的话，请点赞或转发下面的这段话吧： https://t.co/FkMfAjclur",
+      "url": "https://x.com/laobaishare/status/2107452286427594833"
+    },
+    {
+      "created_at": "2026-10-06T12:45:53.000Z",
+      "id": "2107452284561236194",
+      "lang": "",
+      "metrics": {
+        "bookmark": 13,
+        "impression": 3515,
+        "like": 5,
+        "quote": 0,
+        "reply": 1,
+        "retweet": 1
+      },
+      "text": "独立酒店通常会直接给你降价。\n\n大型连锁酒店一般会匹配价格，再给你免费的 VIP 升级，好拿下这笔直接预订、省下佣金。\n\n不管哪种，你都能得到好得多的度假体验，酒店也保住了利润。除了中间商，所有人都大赚。\n\n下次旅行前把这段话术存下来。",
+      "url": "https://x.com/laobaishare/status/2107452284561236194"
+    },
+    {
+      "created_at": "2026-10-06T12:45:53.000Z",
+      "id": "2107452282677895478",
+      "lang": "",
+      "metrics": {
+        "bookmark": 4,
+        "impression": 2682,
+        "like": 7,
+        "quote": 0,
+        "reply": 1,
+        "retweet": 4
+      },
+      "text": "前台接电话后，你就用一套非常具体的谈判话术。\n\n告诉他们你在折扣网站上看到了他们酒店，但你想直接订，这样他们就不用付那 15% 到 25% 的佣金。\n\n问他们能不能给一个比网上更低的价格。如果他们说因为公司的价格一致性规则不行，就让他们匹配那个价格，再免掉度假村费、送早餐或者升级房型。",
+      "url": "https://x.com/laobaishare/status/2107452282677895478"
+    },
+    {
+      "created_at": "2026-10-06T12:45:52.000Z",
+      "id": "2107452280882790413",
+      "lang": "",
+      "metrics": {
+        "bookmark": 8,
+        "impression": 2761,
+        "like": 3,
+        "quote": 0,
+        "reply": 1,
+        "retweet": 1
+      },
+      "text": "下面是绕过这套系统、拿到最好待遇的具体方法。\n\n第一，那些第三方网站只用来做调研。找到你想住的酒店，看它打出的最低价是多少。别点预订。\n\n直接关掉浏览器，打电话给酒店前台。你要跟真正站在那栋楼前台的人说话，那是你打算睡觉的地方。",
+      "url": "https://x.com/laobaishare/status/2107452280882790413"
+    },
+    {
+      "created_at": "2026-10-06T12:45:52.000Z",
+      "id": "2107452279116935484",
+      "lang": "",
+      "metrics": {
+        "bookmark": 1,
+        "impression": 2816,
+        "like": 3,
+        "quote": 0,
+        "reply": 1,
+        "retweet": 1
+      },
+      "text": "那些第三方网站还用激进的心理操控逼你恐慌下单。\n\n当你看到红色闪烁横幅写着\"这个价格只剩一间房\"，这几乎都是编造出来的稀缺假象。\n\n它只说明酒店分配给那个网站的那一批房里只剩一间。酒店自己通常还有几十间一模一样的空房。",
+      "url": "https://x.com/laobaishare/status/2107452279116935484"
+    },
+    {
+      "created_at": "2026-10-06T12:45:52.000Z",
+      "id": "2107452277305082288",
+      "lang": "",
+      "metrics": {
+        "bookmark": 2,
+        "impression": 3189,
+        "like": 3,
+        "quote": 0,
+        "reply": 1,
+        "retweet": 1
+      },
+      "text": "因为第三方预订让酒店亏太多钱，他们会重点照顾直接订房的客人。\n\n前台每天分配房间时，用折扣网站订房的人排在升级名单的最底下。\n\n如果酒店快住满了，只剩一间挨着吵闹电梯或者对着停车场的房，那间几乎总是给第三方客人。",
+      "url": "https://x.com/laobaishare/status/2107452277305082288"
+    },
+    {
+      "created_at": "2026-10-06T12:45:51.000Z",
+      "id": "2107452275329552712",
+      "lang": "",
+      "metrics": {
+        "bookmark": 5,
+        "impression": 3806,
+        "like": 1,
+        "quote": 0,
+        "reply": 1,
+        "retweet": 2
+      },
+      "text": "整个酒店行业都被一个叫在线旅行社的数字黑帮挟持着。\n\nExpedia 和 Booking 这类网站向酒店收取巨额佣金，通常从每笔通过它们平台完成的预订里抽走 15% 到 25%。\n\n酒店的利润空间薄得可怜。你通过第三方 App",
+      "url": "https://x.com/laobaishare/status/2107452275329552712"
+    }
+  ],
+  "user_id": "1398934230407606278"
+}

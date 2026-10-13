@@ -1,0 +1,336 @@
+{
+  "handle": "zai_org",
+  "tweets": [
+    {
+      "created_at": "2026-10-12T16:10:47.000Z",
+      "id": "2109678174468534511",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 1615,
+        "impression": 337558,
+        "like": 5327,
+        "quote": 219,
+        "reply": 229,
+        "retweet": 422
+      },
+      "text": "Introducing GLM-Legal\n\nBuilt on GLM-5.3-Flash, GLM-Legal matches frontier models on mainstream legal benchmarks.\n\nDesigned for real legal workflows: contract review, evidence analysis, compliance, and more.\n\nTech Blog: https://t.co/xOzFqKNyqD\nApply for API Access: https://t.co/dKuoDRIKKz\nTry AutoClaw: https://t.co/aGEG5HqTTb",
+      "url": "https://x.com/Zai_org/status/2109678174468534511"
+    },
+    {
+      "created_at": "2026-10-06T00:49:38.000Z",
+      "id": "2107272032073437185",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 62,
+        "impression": 96868,
+        "like": 838,
+        "quote": 28,
+        "reply": 76,
+        "retweet": 52
+      },
+      "text": "GLM-5.3 is now available on Amazon Bedrock.\n\nBring powerful coding and agentic capabilities to your enterprise.\n\nGet started: https://t.co/daStGOYqsA https://t.co/BB1qLRbvhS",
+      "url": "https://x.com/Zai_org/status/2107272032073437185"
+    },
+    {
+      "created_at": "2026-09-17T07:05:26.000Z",
+      "id": "2100481236364079277",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 1809,
+        "impression": 1132419,
+        "like": 4224,
+        "quote": 175,
+        "reply": 239,
+        "retweet": 487
+      },
+      "text": "We’re sharing how GLM-5.3 helped build and optimize the inference infrastructure serving GLM-5.3-Flash.\n\nThe system went from its first successful run to production readiness in less than two weeks, with end-to-end throughput tripling relative to the initial baseline.\n\nThe key was dense feedback: local correctness tests, execution traces, microbenchmarks, and end-to-end measurements that enabled targeted hypothesis testing rather than reliance on aggregate performance metrics alone.\n\nhttps://t.co/yUf6OpJD7c",
+      "url": "https://x.com/Zai_org/status/2100481236364079277"
+    },
+    {
+      "created_at": "2026-09-03T15:09:49.000Z",
+      "id": "2095529704841224490",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 228,
+        "impression": 583830,
+        "like": 10766,
+        "quote": 201,
+        "reply": 473,
+        "retweet": 394
+      },
+      "text": "We’re still up.",
+      "url": "https://x.com/Zai_org/status/2095529704841224490"
+    },
+    {
+      "created_at": "2026-09-01T12:49:29.000Z",
+      "id": "2094769612730532172",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 206,
+        "impression": 307357,
+        "like": 2161,
+        "quote": 59,
+        "reply": 168,
+        "retweet": 105
+      },
+      "text": "GLM Coding Plan turns one year old today.\n\nTo celebrate, we're giving every current subscriber a Reset Card. Use it to refill both your weekly and 5-hour quotas.\n\nThanks for using GLM, helping shape it, and pushing it to its limits.\n\n- Personal plan: https://t.co/TGZjzCwjo9\n- Team plan: https://t.co/jiXCgh9HUR",
+      "url": "https://x.com/Zai_org/status/2094769612730532172"
+    },
+    {
+      "created_at": "2026-08-28T15:04:44.000Z",
+      "id": "2093354097122455713",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 1206,
+        "impression": 1485251,
+        "like": 8562,
+        "quote": 298,
+        "reply": 275,
+        "retweet": 952
+      },
+      "text": "GLM-5.3 is now open-weight.\n\nOur most capable model for agentic coding and cyber defense is now available to download, run, and customize.\n\nWeights: https://t.co/v1IbWMXxg4\nTech blog: https://t.co/ekQkO83jCv https://t.co/f8XlJksKyf",
+      "url": "https://x.com/Zai_org/status/2093354097122455713"
+    },
+    {
+      "created_at": "2026-08-27T03:19:15.000Z",
+      "id": "2092814169263218860",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 336,
+        "impression": 561669,
+        "like": 4830,
+        "quote": 145,
+        "reply": 148,
+        "retweet": 403
+      },
+      "text": "More good news: GLM-5.3’s weights will be released tomorrow.\n\nhttps://t.co/v1IbWMXxg4",
+      "url": "https://x.com/Zai_org/status/2092814169263218860"
+    },
+    {
+      "created_at": "2026-08-26T14:12:41.000Z",
+      "id": "2092616225998213610",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 148,
+        "impression": 157337,
+        "like": 1007,
+        "quote": 8,
+        "reply": 6,
+        "retweet": 34
+      },
+      "text": "Architectural enhancements, combined with an optimized pre-training corpus, enable GLM-5.3-Flash to deliver greater intelligence with less compute. https://t.co/L0B2bLPKlT",
+      "url": "https://x.com/Zai_org/status/2092616225998213610"
+    },
+    {
+      "created_at": "2026-08-26T14:12:39.000Z",
+      "id": "2092616217236222149",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 76,
+        "impression": 201162,
+        "like": 1018,
+        "quote": 32,
+        "reply": 17,
+        "retweet": 29
+      },
+      "text": "On the https://t.co/w8mHB85z4n Code Bench, which measures real-world coding performance, GLM-5.3-Flash clearly outperforms GLM-5.2 at every effort level and performs on par with Claude Opus 4.8. https://t.co/UNenXGTwfp",
+      "url": "https://x.com/Zai_org/status/2092616217236222149"
+    },
+    {
+      "created_at": "2026-08-26T14:12:37.000Z",
+      "id": "2092616209426493766",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 184,
+        "impression": 558167,
+        "like": 2451,
+        "quote": 132,
+        "reply": 74,
+        "retweet": 93
+      },
+      "text": "Standard API Pricing for GLM-5.3-Flash (per 1M tokens)\n\n- Input: $0.15\n- Output: $0.50\n- Cached input: $0.03",
+      "url": "https://x.com/Zai_org/status/2092616209426493766"
+    },
+    {
+      "created_at": "2026-08-26T14:12:36.000Z",
+      "id": "2092616204787626030",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 4187,
+        "impression": 6957794,
+        "like": 23831,
+        "quote": 2012,
+        "reply": 1003,
+        "retweet": 2614
+      },
+      "text": "Introducing GLM-5.3-Flash\n\n- Leading capabilities at a highly competitive price\n- Natively multimodal with a 1M-token context window\n- A 320B-A18B model released under the MIT License\n- Previously previewed as Ox Alpha, running entirely on Chinese AI chips\n\nBlog: https://t.co/tzOmB7gdZP\n\nAvailable now across all official platforms:\n\nWeights: https://t.co/9LRMahY9Wa\nAPI: https://t.co/VcaQnzYmS9\nCoding Plan: https://t.co/Nk8Y98HNhU\nZCode: https://t.co/Peepqv4XSx\nChat: https://t.co/WCqWT0qCQb\nAutoClaw: https://t.co/aGEG5HqTTb",
+      "url": "https://x.com/Zai_org/status/2092616204787626030"
+    },
+    {
+      "created_at": "2026-08-21T16:00:02.000Z",
+      "id": "2090831300915556515",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 203,
+        "impression": 197728,
+        "like": 1007,
+        "quote": 14,
+        "reply": 69,
+        "retweet": 53
+      },
+      "text": "The community has already built so many interesting projects with ZCode + GLM-5.3.\n\nTo thank everyone for all the support, we’re turning Build Week into an ongoing series.\n\nFrom now to Aug 23 at 6 PM PT, we’re giving 50,000 new ZCode users 100M free GLM-5.3 tokens each. https://t.co/yGGYBZx082",
+      "url": "https://x.com/Zai_org/status/2090831300915556515"
+    },
+    {
+      "created_at": "2026-08-18T20:46:06.000Z",
+      "id": "2089816129011098048",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 442,
+        "impression": 531997,
+        "like": 3780,
+        "quote": 172,
+        "reply": 189,
+        "retweet": 327
+      },
+      "text": "GLM-5.3 API is now live.\n\n- Built for coding, defensive cybersecurity, and long-horizon agentic tasks\n- Priced the same as GLM-5.2\n- Available via the official API and partner model gateways\n\nGet started: https://t.co/3Dpy1tOdaM https://t.co/yBzgPwTFxL",
+      "url": "https://x.com/Zai_org/status/2089816129011098048"
+    },
+    {
+      "created_at": "2026-08-14T15:04:06.000Z",
+      "id": "2088280509474320693",
+      "lang": "zxx",
+      "metrics": {
+        "bookmark": 547,
+        "impression": 266470,
+        "like": 1916,
+        "quote": 47,
+        "reply": 51,
+        "retweet": 161
+      },
+      "text": "https://t.co/fbjLdFGKez",
+      "url": "https://x.com/Zai_org/status/2088280509474320693"
+    },
+    {
+      "created_at": "2026-08-14T05:17:52.000Z",
+      "id": "2088132978698256725",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 18,
+        "impression": 86364,
+        "like": 634,
+        "quote": 2,
+        "reply": 7,
+        "retweet": 13
+      },
+      "text": "An initial group of partners is now offering GLM-5.3-powered services through our official service, with its safeguards and usage policies in place. We’re expanding partner access through a consistent and responsible process and will share updates publicly.",
+      "url": "https://x.com/Zai_org/status/2088132978698256725"
+    },
+    {
+      "created_at": "2026-08-14T05:17:51.000Z",
+      "id": "2088132973606445208",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 48,
+        "impression": 123615,
+        "like": 910,
+        "quote": 6,
+        "reply": 10,
+        "retweet": 38
+      },
+      "text": "GLM-5.3 takes agentic coding to the next level, delivering a dramatic improvement over GLM-5.2 while achieving better results with fewer output tokens. https://t.co/KGc6ZR7GHv",
+      "url": "https://x.com/Zai_org/status/2088132973606445208"
+    },
+    {
+      "created_at": "2026-08-14T05:17:50.000Z",
+      "id": "2088132969630212372",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 60,
+        "impression": 147166,
+        "like": 1087,
+        "quote": 17,
+        "reply": 28,
+        "retweet": 30
+      },
+      "text": "GLM-5.3 is available now through GLM Coding Plan and ZCode. API access and open weights will be released in stages following rigorous safety evaluations.\n\nGLM Coding Plan: https://t.co/002j3FkZkZ\nZCode: https://t.co/lOy3IRTGqJ",
+      "url": "https://x.com/Zai_org/status/2088132969630212372"
+    },
+    {
+      "created_at": "2026-08-14T05:17:49.000Z",
+      "id": "2088132965922476159",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 3253,
+        "impression": 5914187,
+        "like": 19254,
+        "quote": 1668,
+        "reply": 949,
+        "retweet": 2361
+      },
+      "text": "Introducing GLM-5.3: Built to Code. Ready for Cyber Defense.\n\n- Top-tier coding and agentic capabilities, achieved through post-training on the 743B base model\n- A major leap in cybersecurity, setting a new standard among open models\n\nTech Blog: https://t.co/ekQkO83jCv https://t.co/y3Y2AB0wxr",
+      "url": "https://x.com/Zai_org/status/2088132965922476159"
+    },
+    {
+      "created_at": "2026-08-11T04:58:00.000Z",
+      "id": "2087040814677725262",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 164,
+        "impression": 288252,
+        "like": 1695,
+        "quote": 57,
+        "reply": 120,
+        "retweet": 98
+      },
+      "text": "ZCode now has 1 million users. As a thank-you to our community, we’ve reset usage limits for all GLM Coding Plan users.\n\nWe’re also rolling out an update that helps turn long-horizon capabilities into completed work:\n\n- More intelligence in real engineering workflows\n- 98% cache hit rate, providing around 1.8x more usage\n\nDownload: https://t.co/kDfUn4gXq6\nJoin the community: https://t.co/lpec2zKTGJ",
+      "url": "https://x.com/Zai_org/status/2087040814677725262"
+    },
+    {
+      "created_at": "2026-07-01T15:59:47.000Z",
+      "id": "2072349457866265054",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 13,
+        "impression": 64033,
+        "like": 152,
+        "quote": 3,
+        "reply": 6,
+        "retweet": 6
+      },
+      "text": "Follow @zcode_ai for the latest updates. \nSee the full changelog: https://t.co/UJ0e3me4gG",
+      "url": "https://x.com/Zai_org/status/2072349457866265054"
+    },
+    {
+      "created_at": "2026-07-01T15:59:46.000Z",
+      "id": "2072349453361557898",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 2375,
+        "impression": 1474347,
+        "like": 5853,
+        "quote": 211,
+        "reply": 394,
+        "retweet": 610
+      },
+      "text": "Introducing ZCode, the official development environment for GLM-5.2\n\n- GLM Coding Plan subscribers: now 1.5x usage quota in ZCode\n- BYOK supported: works with your existing subscriptions and APIs\n- Available on macOS, Windows, and Linux\n\nDownload now: https://t.co/Peepqv4XSx",
+      "url": "https://x.com/Zai_org/status/2072349453361557898"
+    },
+    {
+      "created_at": "2026-06-19T03:05:56.000Z",
+      "id": "2067806055598264695",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 86,
+        "impression": 88907,
+        "like": 887,
+        "quote": 1,
+        "reply": 37,
+        "retweet": 58
+      },
+      "text": "Long-horizon is more than a concept. It should live in real-world scenarios, empowering AI builders to solve the problems that matter. \n\nAnd more scenarios are on the way. https://t.co/dwYZHd8fqr",
+      "url": "https://x.com/Zai_org/status/2067806055598264695"
+    }
+  ],
+  "user_id": "1726486879456096256"
+}

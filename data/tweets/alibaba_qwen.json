@@ -1,0 +1,381 @@
+{
+  "handle": "alibaba_qwen",
+  "tweets": [
+    {
+      "created_at": "2026-10-12T13:11:38.000Z",
+      "id": "2109633089211416820",
+      "lang": "",
+      "metrics": {
+        "bookmark": 11,
+        "impression": 17807,
+        "like": 115,
+        "quote": 2,
+        "reply": 10,
+        "retweet": 4
+      },
+      "text": "QwenGyre addresses two challenges of XLong-horizon agentic RL. https://t.co/v5sIbZmz0S",
+      "url": "https://x.com/Alibaba_Qwen/status/2109633089211416820"
+    },
+    {
+      "created_at": "2026-10-12T13:11:37.000Z",
+      "id": "2109633085658808515",
+      "lang": "",
+      "metrics": {
+        "bookmark": 1168,
+        "impression": 172487,
+        "like": 2889,
+        "quote": 104,
+        "reply": 125,
+        "retweet": 274
+      },
+      "text": "Introducing QwenGyre, bringing elastic RL to extreme-long-horizon (XLong) agent training. ✨\n\nIt launches with two core designs: 🥳\n- Elastic Scheduler: reallocates GPUs between rollout &amp; training as demand shifts—live executions never interrupted. Up to 1.85× speedup over https://t.co/wMDoJOuP2j",
+      "url": "https://x.com/Alibaba_Qwen/status/2109633085658808515"
+    },
+    {
+      "created_at": "2026-10-09T13:24:10.000Z",
+      "id": "2108549082474225741",
+      "lang": "",
+      "metrics": {
+        "bookmark": 12,
+        "impression": 26175,
+        "like": 112,
+        "quote": 1,
+        "reply": 2,
+        "retweet": 2
+      },
+      "text": "Edit: https://t.co/xQ9ftFg4Hy",
+      "url": "https://x.com/Alibaba_Qwen/status/2108549082474225741"
+    },
+    {
+      "created_at": "2026-10-09T13:24:09.000Z",
+      "id": "2108549078456148283",
+      "lang": "",
+      "metrics": {
+        "bookmark": 28,
+        "impression": 42256,
+        "like": 187,
+        "quote": 2,
+        "reply": 14,
+        "retweet": 6
+      },
+      "text": "Pics: https://t.co/thKNW8wr4W",
+      "url": "https://x.com/Alibaba_Qwen/status/2108549078456148283"
+    },
+    {
+      "created_at": "2026-10-09T13:24:09.000Z",
+      "id": "2108549075218120949",
+      "lang": "",
+      "metrics": {
+        "bookmark": 4075,
+        "impression": 703622,
+        "like": 5291,
+        "quote": 213,
+        "reply": 209,
+        "retweet": 534
+      },
+      "text": "🚀 Meet Qwen-Image-2.1-Turbo — create and edit images in just 8 denoising steps! Open weights now available!\n\nBuilt on Qwen-Image-2.1, Turbo is an accelerated checkpoint on the same 7B visual generation architecture. \n\nFewer steps does not mean lower quality: it still generates https://t.co/NgtAbGdDlC",
+      "url": "https://x.com/Alibaba_Qwen/status/2108549075218120949"
+    },
+    {
+      "created_at": "2026-10-09T06:03:19.000Z",
+      "id": "2108438135676022798",
+      "lang": "",
+      "metrics": {
+        "bookmark": 1,
+        "impression": 15479,
+        "like": 37,
+        "quote": 0,
+        "reply": 4,
+        "retweet": 0
+      },
+      "text": "Thanks for the support! @gmi_cloud",
+      "url": "https://x.com/Alibaba_Qwen/status/2108438135676022798"
+    },
+    {
+      "created_at": "2026-10-09T03:36:58.000Z",
+      "id": "2108401307577090259",
+      "lang": "",
+      "metrics": {
+        "bookmark": 566,
+        "impression": 127244,
+        "like": 1175,
+        "quote": 30,
+        "reply": 70,
+        "retweet": 67
+      },
+      "text": "A week of free access to Qwen3.8-Max, Qwen3.8-Flash, and Wan3.0 on @gmi_cloudis live. Explore what you can build with us now. 🙌 https://t.co/NqT3iLwNP9",
+      "url": "https://x.com/Alibaba_Qwen/status/2108401307577090259"
+    },
+    {
+      "created_at": "2026-09-30T11:18:51.000Z",
+      "id": "2105256053403508849",
+      "lang": "",
+      "metrics": {
+        "bookmark": 38,
+        "impression": 66725,
+        "like": 343,
+        "quote": 4,
+        "reply": 66,
+        "retweet": 16
+      },
+      "text": "Qwen3.8-27B is now accessible via @nebiustf. Whether you are building agents or doing deep research, this 27B dense model is ready for your multi-step workflows! 🥳 https://t.co/GOK2UjsJ3I",
+      "url": "https://x.com/Alibaba_Qwen/status/2105256053403508849"
+    },
+    {
+      "created_at": "2026-09-23T11:50:58.000Z",
+      "id": "2102727421128810774",
+      "lang": "",
+      "metrics": {
+        "bookmark": 4,
+        "impression": 15618,
+        "like": 46,
+        "quote": 1,
+        "reply": 2,
+        "retweet": 0
+      },
+      "text": "Benchmark suite: https://t.co/aYhcCvwv82",
+      "url": "https://x.com/Alibaba_Qwen/status/2102727421128810774"
+    },
+    {
+      "created_at": "2026-09-23T11:50:57.000Z",
+      "id": "2102727417781772404",
+      "lang": "",
+      "metrics": {
+        "bookmark": 2,
+        "impression": 15772,
+        "like": 46,
+        "quote": 0,
+        "reply": 1,
+        "retweet": 1
+      },
+      "text": "Performance of Mobile Creative Agent: https://t.co/vZcKCFRkU5",
+      "url": "https://x.com/Alibaba_Qwen/status/2102727417781772404"
+    },
+    {
+      "created_at": "2026-09-23T11:50:57.000Z",
+      "id": "2102727414317199671",
+      "lang": "",
+      "metrics": {
+        "bookmark": 4,
+        "impression": 11705,
+        "like": 58,
+        "quote": 0,
+        "reply": 3,
+        "retweet": 2
+      },
+      "text": "Performance of Mobile-Use Agent: https://t.co/yYFYe3jjIb",
+      "url": "https://x.com/Alibaba_Qwen/status/2102727414317199671"
+    },
+    {
+      "created_at": "2026-09-23T11:50:56.000Z",
+      "id": "2102727410093601172",
+      "lang": "",
+      "metrics": {
+        "bookmark": 16,
+        "impression": 54480,
+        "like": 114,
+        "quote": 1,
+        "reply": 9,
+        "retweet": 1
+      },
+      "text": "Performance of Mobile Planner Agent: https://t.co/wOScXsGX26",
+      "url": "https://x.com/Alibaba_Qwen/status/2102727410093601172"
+    },
+    {
+      "created_at": "2026-09-23T11:50:54.000Z",
+      "id": "2102727405198876753",
+      "lang": "",
+      "metrics": {
+        "bookmark": 1279,
+        "impression": 245792,
+        "like": 2958,
+        "quote": 97,
+        "reply": 149,
+        "retweet": 303
+      },
+      "text": "Introducing Qwen Intelligence, bringing personal intelligence within everyone's reach. 📱✨\n\nIt launches with three SOTA agents: 🥳\n- Mobile Planner Agent: plans, decomposes &amp; orchestrates complex tasks. #1 on MobilePA-Bench, MobilePA-Bench Business &amp; Memory.\n- Mobile-Use Agent: https://t.co/OgCLpxDJgj",
+      "url": "https://x.com/Alibaba_Qwen/status/2102727405198876753"
+    },
+    {
+      "created_at": "2026-09-23T09:11:23.000Z",
+      "id": "2102687258990026993",
+      "lang": "",
+      "metrics": {
+        "bookmark": 2418,
+        "impression": 276847,
+        "like": 4040,
+        "quote": 113,
+        "reply": 138,
+        "retweet": 359
+      },
+      "text": "⚡ Meet Qwen-Audio-3.1! ASR, TTS &amp; Realtime are fully upgraded, joined by two new models: TTS-Next for audio creation and ASR-Next for audio understanding.\n\nFive models, one complete audio stack: understanding, generation, interaction &amp; creation. \n\nPlus big price cuts across the https://t.co/Qcbvcw0q9C",
+      "url": "https://x.com/Alibaba_Qwen/status/2102687258990026993"
+    },
+    {
+      "created_at": "2026-09-23T01:24:44.000Z",
+      "id": "2102569821997346912",
+      "lang": "",
+      "metrics": {
+        "bookmark": 60,
+        "impression": 62042,
+        "like": 550,
+        "quote": 3,
+        "reply": 33,
+        "retweet": 27
+      },
+      "text": "Thanks @arena for the recognition! 🏆 Qwen-Image-2.1 is now the #1 open-source model in both the Image Edit and Text-to-Image Arenas. Try it now and show us what you create! 🎨 https://t.co/hQY2kRxg5D",
+      "url": "https://x.com/Alibaba_Qwen/status/2102569821997346912"
+    },
+    {
+      "created_at": "2026-09-22T04:08:20.000Z",
+      "id": "2102248609106514355",
+      "lang": "",
+      "metrics": {
+        "bookmark": 26,
+        "impression": 53075,
+        "like": 277,
+        "quote": 4,
+        "reply": 10,
+        "retweet": 7
+      },
+      "text": "Day-0 OpenVINO support from @inteldevs! 🥳 Qwen-Image-2.1 is ready to run optimized on Intel hardware. One open-weight checkpoint for both generation and editing. 👇 https://t.co/GULXxCQgzt",
+      "url": "https://x.com/Alibaba_Qwen/status/2102248609106514355"
+    },
+    {
+      "created_at": "2026-09-21T02:50:43.000Z",
+      "id": "2101866688425984233",
+      "lang": "",
+      "metrics": {
+        "bookmark": 35,
+        "impression": 56160,
+        "like": 310,
+        "quote": 2,
+        "reply": 28,
+        "retweet": 11
+      },
+      "text": "Thanks @sgl_project for the day-0 support! 🙌 SGLang-Diffusion now serves Qwen-Image-2.1: text-to-image generation, multi-image editing, and transparent RGBA output. Try it out! 🎨 https://t.co/32IjeuFl4b",
+      "url": "https://x.com/Alibaba_Qwen/status/2101866688425984233"
+    },
+    {
+      "created_at": "2026-09-21T02:50:40.000Z",
+      "id": "2101866671900401913",
+      "lang": "",
+      "metrics": {
+        "bookmark": 84,
+        "impression": 57044,
+        "like": 350,
+        "quote": 7,
+        "reply": 15,
+        "retweet": 16
+      },
+      "text": "Qwen-Image-2.1 × @HuggingApps: live demo on Spaces! 🖼 One single checkpoint for generation and editing. Try it in your browser, no setup needed. 👇 https://t.co/wxSiIzyJfK",
+      "url": "https://x.com/Alibaba_Qwen/status/2101866671900401913"
+    },
+    {
+      "created_at": "2026-09-20T13:52:24.000Z",
+      "id": "2101670814953455780",
+      "lang": "",
+      "metrics": {
+        "bookmark": 307,
+        "impression": 113177,
+        "like": 1286,
+        "quote": 13,
+        "reply": 46,
+        "retweet": 83
+      },
+      "text": "Qwen-Image-2.1 is now supported in ComfyUI! Try it now and share your creations! 🖼️ https://t.co/VHjOl0oLJu",
+      "url": "https://x.com/Alibaba_Qwen/status/2101670814953455780"
+    },
+    {
+      "created_at": "2026-09-20T13:52:21.000Z",
+      "id": "2101670804794884242",
+      "lang": "",
+      "metrics": {
+        "bookmark": 35,
+        "impression": 51985,
+        "like": 372,
+        "quote": 2,
+        "reply": 23,
+        "retweet": 18
+      },
+      "text": "Thanks @vllm_project for the day-0 support! 🙌 Generate, edit, transparent output — one model, ready to serve. Details 👇 https://t.co/L7kT6dbS20",
+      "url": "https://x.com/Alibaba_Qwen/status/2101670804794884242"
+    },
+    {
+      "created_at": "2026-09-20T13:06:44.000Z",
+      "id": "2101659324980625533",
+      "lang": "",
+      "metrics": {
+        "bookmark": 54,
+        "impression": 46625,
+        "like": 238,
+        "quote": 2,
+        "reply": 4,
+        "retweet": 4
+      },
+      "text": "Qwen-Image-2.1 also improves visual quality over its predecessor, particularly in the aesthetics of text and portraits. Below are several examples of text rendering. https://t.co/wzoZmyBWv9",
+      "url": "https://x.com/Alibaba_Qwen/status/2101659324980625533"
+    },
+    {
+      "created_at": "2026-09-20T13:06:43.000Z",
+      "id": "2101659321549660610",
+      "lang": "",
+      "metrics": {
+        "bookmark": 123,
+        "impression": 134665,
+        "like": 271,
+        "quote": 7,
+        "reply": 5,
+        "retweet": 10
+      },
+      "text": "Qwen-Image-2.1 supports a variety of editing tasks while balancing performance across them. For example, given a three-view character reference, the model generates a complete storyboard. https://t.co/CKELeRLyhH",
+      "url": "https://x.com/Alibaba_Qwen/status/2101659321549660610"
+    },
+    {
+      "created_at": "2026-09-20T13:06:43.000Z",
+      "id": "2101659318001287305",
+      "lang": "",
+      "metrics": {
+        "bookmark": 52,
+        "impression": 46264,
+        "like": 279,
+        "quote": 1,
+        "reply": 4,
+        "retweet": 3
+      },
+      "text": "Qwen-Image-2.1 supports several ways to specify local edits. The example below uses circles to identify three regions and asks the model to “remove the metal watch in the blue circle, change the hair in the red circle to black, and replace the area in the green circle with gray https://t.co/K7oQ7aBS8p",
+      "url": "https://x.com/Alibaba_Qwen/status/2101659318001287305"
+    },
+    {
+      "created_at": "2026-09-20T13:06:42.000Z",
+      "id": "2101659314180280769",
+      "lang": "",
+      "metrics": {
+        "bookmark": 42,
+        "impression": 42444,
+        "like": 286,
+        "quote": 1,
+        "reply": 2,
+        "retweet": 5
+      },
+      "text": "Qwen-Image-2.1 supports up to 10 reference images and can produce high-quality results. https://t.co/TuTvzEGhy8",
+      "url": "https://x.com/Alibaba_Qwen/status/2101659314180280769"
+    },
+    {
+      "created_at": "2026-09-20T13:06:41.000Z",
+      "id": "2101659310598361194",
+      "lang": "",
+      "metrics": {
+        "bookmark": 32,
+        "impression": 51281,
+        "like": 374,
+        "quote": 5,
+        "reply": 6,
+        "retweet": 4
+      },
+      "text": "Qwen-Image-2.1 now supports transparent image generation natively, and naturally supports editing transparent images as well. https://t.co/U7kpwnrGHE",
+      "url": "https://x.com/Alibaba_Qwen/status/2101659310598361194"
+    }
+  ],
+  "user_id": "1753339277386342400"
+}

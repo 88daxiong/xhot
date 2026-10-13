@@ -1,0 +1,381 @@
+{
+  "handle": "hwchase17",
+  "tweets": [
+    {
+      "created_at": "2026-10-12T10:03:36.000Z",
+      "id": "2109585768649990218",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 361,
+        "impression": 38484,
+        "like": 245,
+        "quote": 2,
+        "reply": 56,
+        "retweet": 9
+      },
+      "text": "Ha gave this take to our team last week\n\nWill share some (very basic) stuff I vibe coded around this shortly\n\nLots to be explored here! https://t.co/hqT2og2utR",
+      "url": "https://x.com/hwchase17/status/2109585768649990218"
+    },
+    {
+      "created_at": "2026-10-11T15:38:40.000Z",
+      "id": "2109307704346853833",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 504,
+        "impression": 21648,
+        "like": 384,
+        "quote": 7,
+        "reply": 54,
+        "retweet": 40
+      },
+      "text": "this is the summary slide that describes how all agents in the future will look\n\nvery much aligns with our vision for managed deepagents https://t.co/VFsgW1OFjF\n\ndurable workflows: builds on LangGraph/LSD https://t.co/SOJPBqx8q2\n\ncan use a computer: uses Langsmith Sandboxes https://t.co/oKZ3n6dhtK\n\nmemory and skills: langsmith context hub https://t.co/rgD1p31nCb\n\nTriggers and scheduled jobs: schedules https://t.co/w6r7Cfr8Xx\n\nconnectors and auth https://t.co/kTfxQbm7al \n\ntext and voice channels https://t.co/G2iy7jMeKB\n\npayments and identity - only one missing!\n\nevals https://t.co/mcNsaWhTt4\n\nobservability: massively, through langsmith https://t.co/SdVkVnjR8y",
+      "url": "https://x.com/hwchase17/status/2109307704346853833"
+    },
+    {
+      "created_at": "2026-10-11T14:57:04.000Z",
+      "id": "2109297234864971878",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 453,
+        "impression": 28934,
+        "like": 262,
+        "quote": 2,
+        "reply": 18,
+        "retweet": 27
+      },
+      "text": "this is a great talk\n\nif you want to just follow along in slides, extracted screenshots here to make it easy\n\nwriting up thoughts as we speak\n\nhttps://t.co/e95nUE4Un4 https://t.co/FivPNMTJ8Q",
+      "url": "https://x.com/hwchase17/status/2109297234864971878"
+    },
+    {
+      "created_at": "2026-10-11T13:09:43.000Z",
+      "id": "2109270222163066890",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 58,
+        "impression": 18155,
+        "like": 106,
+        "quote": 6,
+        "reply": 52,
+        "retweet": 1
+      },
+      "text": "historically, most of our internal agents (openswe for coding, gtm agent for outreach) have acted \"on behalf of\" whoever is using them\n\nbut as they start to do more proactive, background work... I wonder if that should change. eg i really like the idea Hone put forward of agents that are striving towards a goal (https://t.co/L8LHdb27vb)... these kind of seem like coworkers, and i wonder if they should be treated as such",
+      "url": "https://x.com/hwchase17/status/2109270222163066890"
+    },
+    {
+      "created_at": "2026-10-11T13:05:59.000Z",
+      "id": "2109269280231739408",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 22,
+        "impression": 20219,
+        "like": 61,
+        "quote": 9,
+        "reply": 95,
+        "retweet": 5
+      },
+      "text": "what is the future of building internal company agents? how will their identity work?\n\n1. fixed set of credentials\n2. \"on behalf of\" flow (uses credentials of whoever is using it)\n3. some fixed credentials, others \"on behalf of\"",
+      "url": "https://x.com/hwchase17/status/2109269280231739408"
+    },
+    {
+      "created_at": "2026-10-10T04:31:37.000Z",
+      "id": "2108777449622245793",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 57,
+        "impression": 12049,
+        "like": 106,
+        "quote": 4,
+        "reply": 77,
+        "retweet": 10
+      },
+      "text": "agree - most orchestration steps don't need a frontier model\n\nfor Open SWE we moved model choice into the harness, so each task goes to the cheapest model that still does the job, tested against quality. median cost per task dropped 64%\n\nhttps://t.co/pHUDDCF6zs\n\nhttps://t.co/B4iKNXM5RW",
+      "url": "https://x.com/hwchase17/status/2108777449622245793"
+    },
+    {
+      "created_at": "2026-10-10T04:31:10.000Z",
+      "id": "2108777335650476163",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 227,
+        "impression": 20354,
+        "like": 176,
+        "quote": 3,
+        "reply": 31,
+        "retweet": 16
+      },
+      "text": "good framing from @ch3nweiii - a lot of agent steps are yes/no calls, not generation\n\nJev answers those as typed questions with calibrated probabilities, so the frontier model sticks to the hard work\n\nwhere those calls sit in a harness: https://t.co/xZMxbATLHd\n\nhttps://t.co/Z3DGL8hTdS",
+      "url": "https://x.com/hwchase17/status/2108777335650476163"
+    },
+    {
+      "created_at": "2026-10-09T08:28:18.000Z",
+      "id": "2108474622966444102",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 84,
+        "impression": 11202,
+        "like": 130,
+        "quote": 4,
+        "reply": 77,
+        "retweet": 12
+      },
+      "text": "This is great point\n\nGoodharts law: when a measure becomes a target, it ceases to be a good measure\n\nInitial take: eval driven development works for narrowly scoped things, but for more autonomous agents it doesn’t\n\nSo then - how do you hill climb those? https://t.co/p3F59oinmi",
+      "url": "https://x.com/hwchase17/status/2108474622966444102"
+    },
+    {
+      "created_at": "2026-10-09T07:50:53.000Z",
+      "id": "2108465208297476157",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 185,
+        "impression": 29005,
+        "like": 268,
+        "quote": 4,
+        "reply": 19,
+        "retweet": 21
+      },
+      "text": "eval driven development https://t.co/Zf0YrUw4Bp",
+      "url": "https://x.com/hwchase17/status/2108465208297476157"
+    },
+    {
+      "created_at": "2026-10-09T07:06:01.000Z",
+      "id": "2108453917277254058",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 98,
+        "impression": 11400,
+        "like": 116,
+        "quote": 3,
+        "reply": 39,
+        "retweet": 6
+      },
+      "text": "trajectory labeling is really several questions, not one pass/fail - nice framing here\n\nthat's how Jev as a judge works in LangSmith evals: difficulty and correctness each get their own typed answer, in one pass, on every trace\n\nhttps://t.co/jlD2ywtlOT\n\nhttps://t.co/QgQpQFpZ26",
+      "url": "https://x.com/hwchase17/status/2108453917277254058"
+    },
+    {
+      "created_at": "2026-10-08T19:03:23.000Z",
+      "id": "2108272060141301908",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 17,
+        "impression": 6636,
+        "like": 32,
+        "quote": 1,
+        "reply": 20,
+        "retweet": 9
+      },
+      "text": "Sam on where decision models fit in a harness and how to use Jev with LangChain\n\nhttps://t.co/TgYoOiLJXd\n\n https://t.co/pRYMKQuLGq",
+      "url": "https://x.com/hwchase17/status/2108272060141301908"
+    },
+    {
+      "created_at": "2026-10-07T19:51:15.000Z",
+      "id": "2107921716605517953",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 1,
+        "impression": 5996,
+        "like": 43,
+        "quote": 0,
+        "reply": 15,
+        "retweet": 8
+      },
+      "text": "interrupt london is next tuesday\n\nreally looking forward to hearing from Orange and OVO on what's actually working with agents in production. we're also running hands-on workshops on Deep Agents and Engine\n\nhttps://t.co/5oClaWhAA6",
+      "url": "https://x.com/hwchase17/status/2107921716605517953"
+    },
+    {
+      "created_at": "2026-10-07T18:58:29.000Z",
+      "id": "2107908436965179896",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 47,
+        "impression": 9223,
+        "like": 86,
+        "quote": 2,
+        "reply": 37,
+        "retweet": 12
+      },
+      "text": "One cool thing deepagents now supports: dynamically loading tools when is a skill is loaded\n\nSome skills require specific tools that you may not always want to have available. This now allows you to pair them \n\nWith openai/anthropic models, it’s possible to do this in a way where it doesn’t break the prompt cache!",
+      "url": "https://x.com/hwchase17/status/2107908436965179896"
+    },
+    {
+      "created_at": "2026-10-07T09:34:55.000Z",
+      "id": "2107766611646038216",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 32,
+        "impression": 17514,
+        "like": 91,
+        "quote": 1,
+        "reply": 7,
+        "retweet": 6
+      },
+      "text": "We have a really strong team :)\n\nCome join us! https://t.co/7I5kNZCkur",
+      "url": "https://x.com/hwchase17/status/2107766611646038216"
+    },
+    {
+      "created_at": "2026-10-06T04:26:37.000Z",
+      "id": "2107326639231344822",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 95,
+        "impression": 20655,
+        "like": 83,
+        "quote": 0,
+        "reply": 22,
+        "retweet": 1
+      },
+      "text": "Good take on harnesses https://t.co/VWp3jEveHG",
+      "url": "https://x.com/hwchase17/status/2107326639231344822"
+    },
+    {
+      "created_at": "2026-10-05T20:28:50.000Z",
+      "id": "2107206402078851519",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 125,
+        "impression": 17370,
+        "like": 155,
+        "quote": 3,
+        "reply": 71,
+        "retweet": 10
+      },
+      "text": "cool to see cognition doing \"dreaming\" - memory needs an offline cleanup loop, not just better retrieval, otherwise stale records pile up\n\nopen q is how inferred memories get validated before the agent uses them\n\nglad it's an open standard too - memory should be open\n\nhttps://t.co/H8lAlzQBQB",
+      "url": "https://x.com/hwchase17/status/2107206402078851519"
+    },
+    {
+      "created_at": "2026-10-04T10:39:18.000Z",
+      "id": "2106695651169800418",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 116,
+        "impression": 18487,
+        "like": 180,
+        "quote": 9,
+        "reply": 95,
+        "retweet": 15
+      },
+      "text": "we're seeing our coding agent costs decrease significantly for second month in row\n\nlonger blog on this later, but three quick steps we took\n\n1/ cost visibility. you cant control what you cant measure. Start tracking everything to langsmith. This gives us super granular visibility into who is using what, how they are using it, etc. LangSmith supports first party integrations with all main coding harnesses https://t.co/zPHBAWaRVS\n\n2/ cost controls. Through our LLM gateway, set user level cost caps. (You can increase your cap by talking to our VPE). This helps curb unexpected or accidental spend. https://t.co/YhvxFjTfxi\n\n3/ optimize the harness. Obviously 3rd party harnesses are tougher to optimize, but we are doing more and more coding through OpenSWE, our open source cloud agent harness. Things like model routing help bring the cost down https://t.co/pHUDDCF6zs\n\nfeel free to reach out if you want help implementing these at your co!",
+      "url": "https://x.com/hwchase17/status/2106695651169800418"
+    },
+    {
+      "created_at": "2026-10-03T20:05:50.000Z",
+      "id": "2106475835964477533",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 141,
+        "impression": 28225,
+        "like": 190,
+        "quote": 8,
+        "reply": 93,
+        "retweet": 11
+      },
+      "text": "specialized agents or one mega agent?\n\nwe're having this debate internally... https://t.co/xlDRNi3bEg",
+      "url": "https://x.com/hwchase17/status/2106475835964477533"
+    },
+    {
+      "created_at": "2026-10-03T20:05:10.000Z",
+      "id": "2106475668804657555",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 63,
+        "impression": 11442,
+        "like": 89,
+        "quote": 1,
+        "reply": 22,
+        "retweet": 15
+      },
+      "text": "cool project by @dbreunig\n\nin langchain this is ModelRouterMiddleware - jev reads the first message, picks the model, and that model handles the whole run\n\njev is cheap enough that you can also re-pick after each tool result with a custom hook\n\ndocs: https://t.co/T2OwFGxocd\n\nhttps://t.co/oYrDHho4t5",
+      "url": "https://x.com/hwchase17/status/2106475668804657555"
+    },
+    {
+      "created_at": "2026-10-02T17:42:10.000Z",
+      "id": "2106077292678246697",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 76,
+        "impression": 10388,
+        "like": 99,
+        "quote": 6,
+        "reply": 35,
+        "retweet": 9
+      },
+      "text": "good pattern from this google paper\n\nthe verifier starts from a clean context, so the explorer's reasoning can't talk it into a bad proof\n\nso the explorer can try wild ideas and the verifier tosses the wrong ones\n\nsame reason deepagents subagents get their own context\n\nhttps://t.co/w177WWAdqY",
+      "url": "https://x.com/hwchase17/status/2106077292678246697"
+    },
+    {
+      "created_at": "2026-10-02T17:33:45.000Z",
+      "id": "2106075174793863630",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 17,
+        "impression": 6640,
+        "like": 46,
+        "quote": 0,
+        "reply": 16,
+        "retweet": 2
+      },
+      "text": "every agent team ends up wanting its own review ui over their traces - LangSmith Custom Apps lets you build it on your own data and ship it right into the workspace\n\nhttps://t.co/SuWCfBFvg9",
+      "url": "https://x.com/hwchase17/status/2106075174793863630"
+    },
+    {
+      "created_at": "2026-10-02T16:13:18.000Z",
+      "id": "2106054930041872693",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 65,
+        "impression": 12797,
+        "like": 92,
+        "quote": 2,
+        "reply": 27,
+        "retweet": 9
+      },
+      "text": "Memory is hard to get working well, especially in a company setting\n\nMaking some improvements to how we memory in managed deepagents! https://t.co/dHRQ2JhRV4",
+      "url": "https://x.com/hwchase17/status/2106054930041872693"
+    },
+    {
+      "created_at": "2026-10-01T23:45:36.000Z",
+      "id": "2105806366405484628",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 36,
+        "impression": 10869,
+        "like": 64,
+        "quote": 1,
+        "reply": 18,
+        "retweet": 8
+      },
+      "text": "congrats @AravSrinivas! more entrants in the decision model class, and this one is open weights\n\ncheap typed answers for the small calls inside a harness (routing, approvals, judging), big model for the rest\n\nhttps://t.co/GkGAUacsmV",
+      "url": "https://x.com/hwchase17/status/2105806366405484628"
+    },
+    {
+      "created_at": "2026-10-01T22:45:58.000Z",
+      "id": "2105791360796397954",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 215,
+        "impression": 38702,
+        "like": 303,
+        "quote": 5,
+        "reply": 44,
+        "retweet": 15
+      },
+      "text": "pretty clear every agent harness needs a durable runtime\n\npi :: pi-durable\n\ndeepagents :: langgraph https://t.co/kYRF0nqdOo",
+      "url": "https://x.com/hwchase17/status/2105791360796397954"
+    },
+    {
+      "created_at": "2026-10-01T17:37:40.000Z",
+      "id": "2105713773084569666",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 72,
+        "impression": 14782,
+        "like": 114,
+        "quote": 3,
+        "reply": 20,
+        "retweet": 11
+      },
+      "text": "decision model season indeed\n\nsaid there'd be more entrants before long - now open weights too, nice work @ritakozlov + the cloudflare team\n\nyour harness should be able to swap its decision model as easily as its main model\n\n https://t.co/vGcHvb6RaN",
+      "url": "https://x.com/hwchase17/status/2105713773084569666"
+    }
+  ],
+  "user_id": "2728439146"
+}

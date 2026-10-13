@@ -1,0 +1,381 @@
+{
+  "handle": "simonw",
+  "tweets": [
+    {
+      "created_at": "2026-10-12T18:22:02.000Z",
+      "id": "2109711203077619768",
+      "lang": "",
+      "metrics": {
+        "bookmark": 156,
+        "impression": 37529,
+        "like": 396,
+        "quote": 3,
+        "reply": 63,
+        "retweet": 24
+      },
+      "text": "Shared some notes on Python 3.15, using it with uv, and features from Python 3.11 I'm excited to use now that 3.10 is no longer the minimum supported version for my own projects https://t.co/rlGKf8WI62",
+      "url": "https://x.com/simonw/status/2109711203077619768"
+    },
+    {
+      "created_at": "2026-10-09T17:21:37.000Z",
+      "id": "2108608837175701514",
+      "lang": "",
+      "metrics": {
+        "bookmark": 11,
+        "impression": 15592,
+        "like": 67,
+        "quote": 0,
+        "reply": 28,
+        "retweet": 1
+      },
+      "text": "I like Qwen3.5-35B-A3B for this, wondering what else is out there that might be a bit more recent and pack a little more of a punch",
+      "url": "https://x.com/simonw/status/2108608837175701514"
+    },
+    {
+      "created_at": "2026-10-09T17:20:12.000Z",
+      "id": "2108608482442449261",
+      "lang": "",
+      "metrics": {
+        "bookmark": 153,
+        "impression": 64048,
+        "like": 335,
+        "quote": 3,
+        "reply": 159,
+        "retweet": 8
+      },
+      "text": "What's the best open weight Mixture-of-Experts LLM for coding that fits in less than 60GB of RAM?\n\nI think MoE might be necessary to get reasonably interactive speeds on the hardware I have access to - I want something faster than 12 tokens/second",
+      "url": "https://x.com/simonw/status/2108608482442449261"
+    },
+    {
+      "created_at": "2026-10-09T13:18:30.000Z",
+      "id": "2108547654083039700",
+      "lang": "",
+      "metrics": {
+        "bookmark": 7,
+        "impression": 14337,
+        "like": 43,
+        "quote": 5,
+        "reply": 8,
+        "retweet": 3
+      },
+      "text": "Example prompt: https://t.co/qSsBnLwly5",
+      "url": "https://x.com/simonw/status/2108547654083039700"
+    },
+    {
+      "created_at": "2026-10-09T13:16:10.000Z",
+      "id": "2108547065634844839",
+      "lang": "",
+      "metrics": {
+        "bookmark": 132,
+        "impression": 52929,
+        "like": 378,
+        "quote": 26,
+        "reply": 211,
+        "retweet": 15
+      },
+      "text": "I built a new feature for my blog entirely by voice with Codex Desktop, while I was cooking dinner https://t.co/dQwOlgFeKT",
+      "url": "https://x.com/simonw/status/2108547065634844839"
+    },
+    {
+      "created_at": "2026-10-09T00:01:31.000Z",
+      "id": "2108347087985480107",
+      "lang": "",
+      "metrics": {
+        "bookmark": 3,
+        "impression": 10529,
+        "like": 37,
+        "quote": 0,
+        "reply": 5,
+        "retweet": 1
+      },
+      "text": "Admittedly I guess this is a pretty incredible troll targeted at people who say \"it shouldn't be called artificial intelligent because it's not actually intelligent\"\n\nDo they now feel obliged to defend the old name against the new one?",
+      "url": "https://x.com/simonw/status/2108347087985480107"
+    },
+    {
+      "created_at": "2026-10-08T23:58:36.000Z",
+      "id": "2108346352090636583",
+      "lang": "",
+      "metrics": {
+        "bookmark": 1,
+        "impression": 13052,
+        "like": 39,
+        "quote": 0,
+        "reply": 2,
+        "retweet": 0
+      },
+      "text": "Note that their press release from when he pleaded guilty back on March 19th used \"North Carolina Man Pleads Guilty To Music Streaming Fraud Aided By Artificial Intelligence\" because of course it did https://t.co/iJktn2sq2a",
+      "url": "https://x.com/simonw/status/2108346352090636583"
+    },
+    {
+      "created_at": "2026-10-08T23:58:08.000Z",
+      "id": "2108346237619732553",
+      "lang": "",
+      "metrics": {
+        "bookmark": 5,
+        "impression": 12478,
+        "like": 60,
+        "quote": 1,
+        "reply": 4,
+        "retweet": 3
+      },
+      "text": "This tweet inspired by the justice department headline from October 6th: \"North Carolina Man Sentenced To 18 Months In Prison For Super Intelligence-Assisted Music Streaming Fraud\" https://t.co/h9IVfQZuWY",
+      "url": "https://x.com/simonw/status/2108346237619732553"
+    },
+    {
+      "created_at": "2026-10-08T23:57:30.000Z",
+      "id": "2108346075874734127",
+      "lang": "",
+      "metrics": {
+        "bookmark": 47,
+        "impression": 111819,
+        "like": 1851,
+        "quote": 13,
+        "reply": 150,
+        "retweet": 80
+      },
+      "text": "This \"Super Intelligence\" thing is just so, so, so stupid\n\nI can't even",
+      "url": "https://x.com/simonw/status/2108346075874734127"
+    },
+    {
+      "created_at": "2026-10-08T15:56:30.000Z",
+      "id": "2108225028299034638",
+      "lang": "",
+      "metrics": {
+        "bookmark": 17,
+        "impression": 6397,
+        "like": 32,
+        "quote": 0,
+        "reply": 10,
+        "retweet": 1
+      },
+      "text": "AWS have a new open source sandbox too, must be something in the air https://t.co/S7ibfwjQ87",
+      "url": "https://x.com/simonw/status/2108225028299034638"
+    },
+    {
+      "created_at": "2026-10-08T15:29:46.000Z",
+      "id": "2108218301654749218",
+      "lang": "",
+      "metrics": {
+        "bookmark": 53,
+        "impression": 11416,
+        "like": 63,
+        "quote": 2,
+        "reply": 14,
+        "retweet": 9
+      },
+      "text": "Related new project from Microsoft is Quicksand, a Python library that bundles QEMU and uses it to run eg an Alpine Linux container - this one is really neat, I've tried it on macOS and Windows and Linux: https://t.co/AcYTphiwRN",
+      "url": "https://x.com/simonw/status/2108218301654749218"
+    },
+    {
+      "created_at": "2026-10-08T15:23:37.000Z",
+      "id": "2108216753604248000",
+      "lang": "",
+      "metrics": {
+        "bookmark": 782,
+        "impression": 70931,
+        "like": 1129,
+        "quote": 18,
+        "reply": 142,
+        "retweet": 104
+      },
+      "text": "New open source cross-platform (Windows, macOS, Linux) sandboxing library from Microsoft - looks very promising, uses processcontainer/bubblewrap/seatbelt under the hood https://t.co/WMW0AXeBoG https://t.co/1xXIohaD5g",
+      "url": "https://x.com/simonw/status/2108216753604248000"
+    },
+    {
+      "created_at": "2026-10-07T21:00:32.000Z",
+      "id": "2107939154122404015",
+      "lang": "",
+      "metrics": {
+        "bookmark": 1,
+        "impression": 11644,
+        "like": 29,
+        "quote": 1,
+        "reply": 14,
+        "retweet": 1
+      },
+      "text": "Haiku 5.5 is SO MUCH better at drawing pelicans riding bicycles than Claude Haiku 4.5, released almost a year ago and costing 10x more. Here's Haiku 4.5's attempt: https://t.co/2TxatCzXfz",
+      "url": "https://x.com/simonw/status/2107939154122404015"
+    },
+    {
+      "created_at": "2026-10-07T20:58:38.000Z",
+      "id": "2107938675405586713",
+      "lang": "",
+      "metrics": {
+        "bookmark": 61,
+        "impression": 36295,
+        "like": 245,
+        "quote": 5,
+        "reply": 95,
+        "retweet": 14
+      },
+      "text": "Pelicans and a bunch of notes on the pricing of the new Claude Haiku 5.5 https://t.co/F3Sob8WvsG",
+      "url": "https://x.com/simonw/status/2107938675405586713"
+    },
+    {
+      "created_at": "2026-10-07T00:32:42.000Z",
+      "id": "2107630159927062921",
+      "lang": "",
+      "metrics": {
+        "bookmark": 181,
+        "impression": 32523,
+        "like": 260,
+        "quote": 5,
+        "reply": 87,
+        "retweet": 12
+      },
+      "text": "I released an LLM plugin for sending prompts to OpenAI's new Jev-clone decision model that's based on GPT-6 Luna https://t.co/rsnHCKpk84",
+      "url": "https://x.com/simonw/status/2107630159927062921"
+    },
+    {
+      "created_at": "2026-10-06T23:33:28.000Z",
+      "id": "2107615251818750390",
+      "lang": "",
+      "metrics": {
+        "bookmark": 3,
+        "impression": 6559,
+        "like": 28,
+        "quote": 0,
+        "reply": 13,
+        "retweet": 0
+      },
+      "text": "One thing I'd LOVE to understand is how Claude \"knows\" what the music from Secret of Monkey Island sounds like\n\nMaybe Anthropic crawled a whole bunch of online music discussion forums with text-based renditions of classic game music?",
+      "url": "https://x.com/simonw/status/2107615251818750390"
+    },
+    {
+      "created_at": "2026-10-06T17:00:55.000Z",
+      "id": "2107516463250821166",
+      "lang": "",
+      "metrics": {
+        "bookmark": 18,
+        "impression": 15470,
+        "like": 33,
+        "quote": 0,
+        "reply": 8,
+        "retweet": 2
+      },
+      "text": "Here's a benchmark that uses Lilypond https://t.co/6yWiT7tG9e",
+      "url": "https://x.com/simonw/status/2107516463250821166"
+    },
+    {
+      "created_at": "2026-10-06T15:40:03.000Z",
+      "id": "2107496114299822393",
+      "lang": "",
+      "metrics": {
+        "bookmark": 168,
+        "impression": 38977,
+        "like": 311,
+        "quote": 9,
+        "reply": 134,
+        "retweet": 17
+      },
+      "text": "Anyone know when the models started being able to compose competent music? I had Opus 5.5 \"write some computer game music for me\" and the results were much better than I had expected\nhttps://t.co/vFhfgHh7B3",
+      "url": "https://x.com/simonw/status/2107496114299822393"
+    },
+    {
+      "created_at": "2026-10-06T14:35:18.000Z",
+      "id": "2107479817780400577",
+      "lang": "",
+      "metrics": {
+        "bookmark": 28,
+        "impression": 32420,
+        "like": 758,
+        "quote": 7,
+        "reply": 81,
+        "retweet": 29
+      },
+      "text": "Mistral can pelican now! https://t.co/Mvtss5e5ay https://t.co/A2GQpvhEF0 https://t.co/IIX0xYBU9z",
+      "url": "https://x.com/simonw/status/2107479817780400577"
+    },
+    {
+      "created_at": "2026-10-05T17:19:20.000Z",
+      "id": "2107158711798218848",
+      "lang": "",
+      "metrics": {
+        "bookmark": 168,
+        "impression": 52388,
+        "like": 478,
+        "quote": 10,
+        "reply": 115,
+        "retweet": 30
+      },
+      "text": "I re-ran an experiment @colin_fraser ran against GPT-4o a while back to see how good it was at adding long numbers, only this time I tried Qwen 3.8 27B running locally in both reasoning and non-reasoning modes https://t.co/IOufJIA4N9 https://t.co/4kB33NCPcO",
+      "url": "https://x.com/simonw/status/2107158711798218848"
+    },
+    {
+      "created_at": "2026-10-03T23:35:55.000Z",
+      "id": "2106528704902164855",
+      "lang": "",
+      "metrics": {
+        "bookmark": 519,
+        "impression": 122798,
+        "like": 919,
+        "quote": 60,
+        "reply": 256,
+        "retweet": 47
+      },
+      "text": "Just published this post about how we’re going to need default hard budget caps on pretty much everything https://t.co/L6XEYpF4uZ",
+      "url": "https://x.com/simonw/status/2106528704902164855"
+    },
+    {
+      "created_at": "2026-10-03T21:43:53.000Z",
+      "id": "2106500511465869380",
+      "lang": "",
+      "metrics": {
+        "bookmark": 97,
+        "impression": 88528,
+        "like": 465,
+        "quote": 13,
+        "reply": 181,
+        "retweet": 3
+      },
+      "text": "Now that we've had a few days with it, how are people differentiating between Dot and regular ChatGPT?\n\nI'm having trouble deciding when I should prompt Dot vs using ChatGPT - my Dot seems to afford a single conversation, but I like controlling my context across multiple threads",
+      "url": "https://x.com/simonw/status/2106500511465869380"
+    },
+    {
+      "created_at": "2026-09-29T16:54:44.000Z",
+      "id": "2104978193946124370",
+      "lang": "",
+      "metrics": {
+        "bookmark": 209,
+        "impression": 127164,
+        "like": 525,
+        "quote": 13,
+        "reply": 84,
+        "retweet": 35
+      },
+      "text": "I'm at OpenAI's DevDay event in San Francisco today - as I have for the past three DevDay events, I'm running a live blog where I'll be posting updates during the keynote, which starts in five minutes https://t.co/X9DLSS0xbR",
+      "url": "https://x.com/simonw/status/2104978193946124370"
+    },
+    {
+      "created_at": "2026-09-29T03:24:37.000Z",
+      "id": "2104774320656646160",
+      "lang": "",
+      "metrics": {
+        "bookmark": 9,
+        "impression": 14818,
+        "like": 52,
+        "quote": 0,
+        "reply": 15,
+        "retweet": 3
+      },
+      "text": "More on Sonnet 5.5 https://t.co/efd6KqvkqU",
+      "url": "https://x.com/simonw/status/2104774320656646160"
+    },
+    {
+      "created_at": "2026-09-28T21:18:41.000Z",
+      "id": "2104682232522944909",
+      "lang": "",
+      "metrics": {
+        "bookmark": 222,
+        "impression": 268579,
+        "like": 1802,
+        "quote": 23,
+        "reply": 188,
+        "retweet": 82
+      },
+      "text": "The most important thing about Sonnet 5.5 is that it's now the model that powers the free tier on https://t.co/f1IGIsU4Hc - so all of this stuff can be done by free users\n\nChatGPT's free tier is still GPT-5.6 Luna, which is a lot less capable https://t.co/DcoygdAlCv",
+      "url": "https://x.com/simonw/status/2104682232522944909"
+    }
+  ],
+  "user_id": "12497"
+}

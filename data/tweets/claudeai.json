@@ -1,0 +1,381 @@
+{
+  "handle": "claudeai",
+  "tweets": [
+    {
+      "created_at": "2026-10-09T03:49:54.000Z",
+      "id": "2108404561413349695",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 114,
+        "impression": 287705,
+        "like": 337,
+        "quote": 145,
+        "reply": 160,
+        "retweet": 17
+      },
+      "text": "We’ve loved seeing so many founders join the Claude Startups program. Unfortunately, we underestimated demand for the program, and we need to pause the Claude Team and $1,000 API credit offers.\n\nWith hundreds of thousands of applicants, we're re-reviewing applications so the program can serve as many startups as possible.\n\nIf you’ve already claimed the Claude offers, they’ll still remain in your account.\n\nIf you applied or were approved and haven’t claimed the offer, we're re-reviewing your application. Unfortunately, this means that some accounts who had already been approved will not get access to the offer. We know this is disappointing and we’re very sorry.\n\nAll accepted program members still have access to the Startup Stack and Applied AI office hours. If you're on a Claude Max or Team plan, your monthly API credits are available in Console as usual.\n\nWe appreciate your patience, and we're working to get you building as quickly as we can.\nhttps://t.co/cq6ce8VKlE",
+      "url": "https://x.com/claudeai/status/2108404561413349695"
+    },
+    {
+      "created_at": "2026-10-08T19:01:24.000Z",
+      "id": "2108271561337606300",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 532,
+        "impression": 268372,
+        "like": 887,
+        "quote": 2,
+        "reply": 23,
+        "retweet": 30
+      },
+      "text": "When a question needs deeper analysis, send the dashboard to your analytics tool. When an animation needs finishing touches, open it in your video editor.\n\nSee the full list of supported tools: https://t.co/9PSMNUDtDg",
+      "url": "https://x.com/claudeai/status/2108271561337606300"
+    },
+    {
+      "created_at": "2026-10-08T19:01:24.000Z",
+      "id": "2108271559928389679",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 229,
+        "impression": 304429,
+        "like": 1385,
+        "quote": 22,
+        "reply": 25,
+        "retweet": 47
+      },
+      "text": "Starting today, Claude Docs, Slides, and Design are out of beta and available on every plan including Free.\n\nYour team and Claude can edit the same doc, deck, or design together.",
+      "url": "https://x.com/claudeai/status/2108271559928389679"
+    },
+    {
+      "created_at": "2026-10-08T19:01:23.000Z",
+      "id": "2108271558170976743",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 767,
+        "impression": 391000,
+        "like": 2152,
+        "quote": 56,
+        "reply": 54,
+        "retweet": 83
+      },
+      "text": "Claude Motion turns reports, charts, or product walkthroughs into short animations. Claude writes each one as code, with no video model involved, so you can change any word, number, or timing, then export an MP4.\n\nIn beta on Team and Enterprise plans. https://t.co/dPhRu3xM0F",
+      "url": "https://x.com/claudeai/status/2108271558170976743"
+    },
+    {
+      "created_at": "2026-10-08T19:01:23.000Z",
+      "id": "2108271555822092483",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 1155,
+        "impression": 874192,
+        "like": 3221,
+        "quote": 73,
+        "reply": 87,
+        "retweet": 143
+      },
+      "text": "With Claude Dashboards, connect a data platform or CRM tool and ask a question in plain language. Claude writes the query and builds a dashboard that updates as your data changes, and every chart shows that query.\n\nIn beta on paid plans. https://t.co/ICE2IkWmIy",
+      "url": "https://x.com/claudeai/status/2108271555822092483"
+    },
+    {
+      "created_at": "2026-10-08T19:01:22.000Z",
+      "id": "2108271552991252810",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 39926,
+        "impression": 11063745,
+        "like": 60116,
+        "quote": 2586,
+        "reply": 1147,
+        "retweet": 4577
+      },
+      "text": "Claude Dashboards and Claude Motion are in beta today.\n\nAsk Claude to turn your data into live dashboards and your ideas into animated explainers. https://t.co/V3fU4lMnzp",
+      "url": "https://x.com/claudeai/status/2108271552991252810"
+    },
+    {
+      "created_at": "2026-10-07T18:01:21.000Z",
+      "id": "2107894060229034197",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 1041,
+        "impression": 1554948,
+        "like": 11885,
+        "quote": 392,
+        "reply": 221,
+        "retweet": 591
+      },
+      "text": "One more thing: we’re halving the price of cache reads on Claude Sonnet 5.5, to $0.10 per million tokens. That makes Sonnet 5.5 around 20% cheaper to run on most long-running work.",
+      "url": "https://x.com/claudeai/status/2107894060229034197"
+    },
+    {
+      "created_at": "2026-10-07T18:01:20.000Z",
+      "id": "2107894057615987198",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 70,
+        "impression": 311980,
+        "like": 1595,
+        "quote": 11,
+        "reply": 18,
+        "retweet": 36
+      },
+      "text": "Haiku 5.5 is available now on all platforms, including Amazon Web Services, Google Cloud, and Microsoft Azure.\n\nRead more: https://t.co/InzZXcEcRP",
+      "url": "https://x.com/claudeai/status/2107894057615987198"
+    },
+    {
+      "created_at": "2026-10-07T18:01:19.000Z",
+      "id": "2107894054142787877",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 31,
+        "impression": 206706,
+        "like": 1652,
+        "quote": 1,
+        "reply": 20,
+        "retweet": 27
+      },
+      "text": "Haiku 5.5 shows major improvements across almost all of our alignment evaluations relative to Haiku 4.5, with far fewer instances of misaligned behavior.",
+      "url": "https://x.com/claudeai/status/2107894054142787877"
+    },
+    {
+      "created_at": "2026-10-07T18:01:19.000Z",
+      "id": "2107894052041490537",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 200,
+        "impression": 368403,
+        "like": 2840,
+        "quote": 130,
+        "reply": 41,
+        "retweet": 84
+      },
+      "text": "Haiku 5.5 is especially good value on tasks under 100,000 tokens, which make up around 90% of requests to our previous Haiku model. https://t.co/Qu8BZlizaj",
+      "url": "https://x.com/claudeai/status/2107894052041490537"
+    },
+    {
+      "created_at": "2026-10-07T18:01:18.000Z",
+      "id": "2107894048753164362",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 151,
+        "impression": 269959,
+        "like": 2384,
+        "quote": 44,
+        "reply": 36,
+        "retweet": 66
+      },
+      "text": "Haiku 5.5 is our first Haiku model with an adjustable effort setting, so you can decide whether to optimize for cost or intelligence on each task. https://t.co/r98hSNIUIj",
+      "url": "https://x.com/claudeai/status/2107894048753164362"
+    },
+    {
+      "created_at": "2026-10-07T18:01:18.000Z",
+      "id": "2107894046433689987",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 190,
+        "impression": 279285,
+        "like": 3484,
+        "quote": 12,
+        "reply": 34,
+        "retweet": 54
+      },
+      "text": "Haiku 5.5 is designed for high-volume, cost-sensitive tasks. It reliably handles repetitive work like summaries and classification, and pairs well with Claude Opus 5.5 and Sonnet 5.5 as a subagent on coding work.\n\nIt’s also fast enough for live customer support and browser use.",
+      "url": "https://x.com/claudeai/status/2107894046433689987"
+    },
+    {
+      "created_at": "2026-10-07T18:01:17.000Z",
+      "id": "2107894042235166750",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 507,
+        "impression": 829687,
+        "like": 6327,
+        "quote": 398,
+        "reply": 153,
+        "retweet": 346
+      },
+      "text": "Haiku 5.5 is a significant step up over Haiku 4.5 across coding, computer use, and knowledge work. https://t.co/9m45nEJfYZ",
+      "url": "https://x.com/claudeai/status/2107894042235166750"
+    },
+    {
+      "created_at": "2026-10-07T18:01:16.000Z",
+      "id": "2107894039626277339",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 5065,
+        "impression": 6492418,
+        "like": 45029,
+        "quote": 2408,
+        "reply": 1583,
+        "retweet": 3269
+      },
+      "text": "Introducing Claude Haiku 5.5: the cheapest, fastest, and most capable small model we’ve ever released.\n\nOn average, it costs around 75% less to run than Claude Haiku 4.5. https://t.co/jm06cZJfkV",
+      "url": "https://x.com/claudeai/status/2107894039626277339"
+    },
+    {
+      "created_at": "2026-10-06T20:50:20.000Z",
+      "id": "2107574198482927900",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 101,
+        "impression": 180889,
+        "like": 189,
+        "quote": 0,
+        "reply": 10,
+        "retweet": 14
+      },
+      "text": "Watch the full conversation with @danshipper and Willie Williams on how they built it: https://t.co/PUfvXR90Ox",
+      "url": "https://x.com/claudeai/status/2107574198482927900"
+    },
+    {
+      "created_at": "2026-10-06T20:50:19.000Z",
+      "id": "2107574195978641911",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 675,
+        "impression": 366339,
+        "like": 2554,
+        "quote": 41,
+        "reply": 184,
+        "retweet": 139
+      },
+      "text": "The Every team runs as much work as possible through agents. To help the whole team share skills when a new model comes out, they built a company agent on Claude Managed Agents that everyone uses in Slack.\n\nOnce it caught on internally, they released it to their subscribers. https://t.co/sKAhBei27k",
+      "url": "https://x.com/claudeai/status/2107574195978641911"
+    },
+    {
+      "created_at": "2026-10-06T17:25:18.000Z",
+      "id": "2107522599530139767",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 494,
+        "impression": 599239,
+        "like": 1582,
+        "quote": 7,
+        "reply": 17,
+        "retweet": 62
+      },
+      "text": "In Claude, paste a Google file link or ask for a new doc, sheet, or deck, and it opens beside the chat for you and Claude to edit together. Access follows your Google sharing permissions.\n\nIn beta on all paid plans. Give it a try: https://t.co/2PehYZKjTm",
+      "url": "https://x.com/claudeai/status/2107522599530139767"
+    },
+    {
+      "created_at": "2026-10-06T17:25:17.000Z",
+      "id": "2107522596845822135",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 21010,
+        "impression": 13220297,
+        "like": 54356,
+        "quote": 2054,
+        "reply": 845,
+        "retweet": 4300
+      },
+      "text": "Claude now works inside Google Docs, Sheets, and Slides, and those files also open inside Claude.\n\nIn Google Workspace, Claude sits in a sidebar next to your file, reads what you have open, and edits it in place. You can approve each edit before it lands. https://t.co/se9wIS7vK1",
+      "url": "https://x.com/claudeai/status/2107522596845822135"
+    },
+    {
+      "created_at": "2026-10-06T17:20:43.000Z",
+      "id": "2107521446570303997",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 353,
+        "impression": 291046,
+        "like": 837,
+        "quote": 1,
+        "reply": 33,
+        "retweet": 18
+      },
+      "text": "You'll also receive up to $7,000 in Claude products and credits to build with.  \n\nThat includes a free year of Claude Team for companies new to Team, plus $1,000 in API credits as soon as you’re approved.",
+      "url": "https://x.com/claudeai/status/2107521446570303997"
+    },
+    {
+      "created_at": "2026-10-06T16:49:09.000Z",
+      "id": "2107513501576999318",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 1380,
+        "impression": 325695,
+        "like": 973,
+        "quote": 10,
+        "reply": 23,
+        "retweet": 36
+      },
+      "text": "You can also book virtual office hours with Anthropic’s Applied AI team, and join Claude Startups events like Founder House, hackathons, and meetups as space allows.\n\nStartups founded in the last five years or funded in the last two are eligible to apply: https://t.co/niD82RXHTN",
+      "url": "https://x.com/claudeai/status/2107513501576999318"
+    },
+    {
+      "created_at": "2026-10-06T16:49:08.000Z",
+      "id": "2107513497420710203",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 572,
+        "impression": 405787,
+        "like": 1208,
+        "quote": 21,
+        "reply": 45,
+        "retweet": 38
+      },
+      "text": "The new Claude Startup Stack brings together offers from companies building with Claude, including Linear, Lovable, ElevenLabs, Granola, and Hex.\n\nYou’ll get discounts and credits worth up to $45,000 on tools for sales, design, data engineering, and more. https://t.co/yZBotW454D",
+      "url": "https://x.com/claudeai/status/2107513497420710203"
+    },
+    {
+      "created_at": "2026-10-06T16:49:07.000Z",
+      "id": "2107513494493179954",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 19474,
+        "impression": 5727733,
+        "like": 18770,
+        "quote": 908,
+        "reply": 735,
+        "retweet": 1236
+      },
+      "text": "The Claude Startups program is expanding to more founders.\n\nMembers can get a year of Claude Team, API credits, special offers on the tools a startup runs on, and office hours with Anthropic’s Applied AI team. https://t.co/3MUg1whIfl",
+      "url": "https://x.com/claudeai/status/2107513494493179954"
+    },
+    {
+      "created_at": "2026-10-02T20:53:39.000Z",
+      "id": "2106125480193913276",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 30,
+        "impression": 99876,
+        "like": 305,
+        "quote": 5,
+        "reply": 89,
+        "retweet": 2
+      },
+      "text": "What are you exploring with Claude this weekend?",
+      "url": "https://x.com/claudeai/status/2106125480193913276"
+    },
+    {
+      "created_at": "2026-10-02T20:53:38.000Z",
+      "id": "2106125478956507480",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 697,
+        "impression": 255695,
+        "like": 1582,
+        "quote": 27,
+        "reply": 21,
+        "retweet": 87
+      },
+      "text": "A jet engine in interactive 3D you can cut away and pull apart, made with Opus 5.5.\nhttps://t.co/0q8bZJAi4T",
+      "url": "https://x.com/claudeai/status/2106125478956507480"
+    },
+    {
+      "created_at": "2026-10-02T20:53:38.000Z",
+      "id": "2106125477710901276",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 130,
+        "impression": 53750,
+        "like": 370,
+        "quote": 1,
+        "reply": 9,
+        "retweet": 10
+      },
+      "text": "A pop-up city where each building is a paper fold drawn on a flat canvas, Sonnet 5.5.\nhttps://t.co/04cupOr4Tg",
+      "url": "https://x.com/claudeai/status/2106125477710901276"
+    }
+  ],
+  "user_id": "1943306828697550848"
+}

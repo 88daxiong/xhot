@@ -1,0 +1,381 @@
+{
+  "handle": "github",
+  "tweets": [
+    {
+      "created_at": "2026-10-12T18:06:47.000Z",
+      "id": "2109707366539424017",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 5,
+        "impression": 7456,
+        "like": 8,
+        "quote": 0,
+        "reply": 2,
+        "retweet": 0
+      },
+      "text": "Open the worst pull request you’ve got and try it out 👇\nhttps://t.co/sTqDfD0F2C",
+      "url": "https://x.com/github/status/2109707366539424017"
+    },
+    {
+      "created_at": "2026-10-12T18:06:47.000Z",
+      "id": "2109707365335625989",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 1,
+        "impression": 7168,
+        "like": 3,
+        "quote": 0,
+        "reply": 1,
+        "retweet": 0
+      },
+      "text": "Any “is the user interacting?” check has to distinguish real user input from scrolls caused by your own side effects.",
+      "url": "https://x.com/github/status/2109707365335625989"
+    },
+    {
+      "created_at": "2026-10-12T18:06:46.000Z",
+      "id": "2109707363976675751",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 1,
+        "impression": 1054,
+        "like": 1,
+        "quote": 0,
+        "reply": 1,
+        "retweet": 0
+      },
+      "text": "One bug that held us back was “don’t correct while you’re scrolling.” It was a timestamp guard, and our own programmatic scrolls refreshed it.\n\nToggle the sidebar, and the diff pane changes width. Wrapped lines reflow, and the surface emits a small scroll as it settles. The guard read that as your input and skipped the correction meant to keep your place. The file you were reading drifted off screen.",
+      "url": "https://x.com/github/status/2109707363976675751"
+    },
+    {
+      "created_at": "2026-10-12T18:06:46.000Z",
+      "id": "2109707362110198016",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 1,
+        "impression": 1183,
+        "like": 2,
+        "quote": 0,
+        "reply": 1,
+        "retweet": 0
+      },
+      "text": "What we shipped is a recurring measurement pass, gated on idle and scoped to roughly 2400px around the viewport. Mounted blocks are ground truth. Observers normally only flag a block for the pass. They don’t write heights themselves.\n\nThere’s one exception: a visible block resizing because of the user’s action can apply one synchronous correction before paint. That keeps the comment and code below it moving together without reopening the feedback loop.",
+      "url": "https://x.com/github/status/2109707362110198016"
+    },
+    {
+      "created_at": "2026-10-12T18:06:45.000Z",
+      "id": "2109707360587612546",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 1,
+        "impression": 2573,
+        "like": 9,
+        "quote": 0,
+        "reply": 1,
+        "retweet": 0
+      },
+      "text": "For the first design, we gave every dynamic block a ResizeObserver that wrote measured heights back into the layout.\n\nWe built it, then rejected it. An observer that writes a height back into the layout it’s watching can retrigger itself, and the cost grows with every mounted block.",
+      "url": "https://x.com/github/status/2109707360587612546"
+    },
+    {
+      "created_at": "2026-10-12T18:06:45.000Z",
+      "id": "2109707359190954204",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 2,
+        "impression": 3487,
+        "like": 14,
+        "quote": 0,
+        "reply": 2,
+        "retweet": 0
+      },
+      "text": "A code row is a line at a known height. You can compute the whole geometry up front and never have to correct it.\n\nComments don’t have a predictable height. So we stopped forcing one geometry to serve both, and split the document into two independent height domains.",
+      "url": "https://x.com/github/status/2109707359190954204"
+    },
+    {
+      "created_at": "2026-10-12T18:06:45.000Z",
+      "id": "2109707357857218667",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 69,
+        "impression": 66447,
+        "like": 261,
+        "quote": 9,
+        "reply": 40,
+        "retweet": 12
+      },
+      "text": "Rendering a million-line diff is the easy part. 👀\n\nComments are what break it. Their height depends on markdown wrapping, expanded details, open reply boxes, and images still loading (none of which you know until you render).\n\nHere's how we rebuilt the PR view in the GitHub Copilot app 🧵",
+      "url": "https://x.com/github/status/2109707357857218667"
+    },
+    {
+      "created_at": "2026-10-11T19:25:01.000Z",
+      "id": "2109364666237350135",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 66,
+        "impression": 60485,
+        "like": 267,
+        "quote": 20,
+        "reply": 59,
+        "retweet": 26
+      },
+      "text": "Continuous fuzzing finds real bugs, but it still needs someone to write harnesses, watch coverage, and triage every crash.\n\nThe GitHub Security Lab built the Fuzzing Taskflow to give that loop to an agent. You point it at a C or C++ repository, and it identifies entrypoints, analyzes the build, crafts harnesses, runs the AFL++ fuzzer, reads coverage, and creates a vulnerability report for each unique bug.\n\nCheck out how the pipeline works end to end 🔍\nhttps://t.co/IQhu6ZMmyh",
+      "url": "https://x.com/github/status/2109364666237350135"
+    },
+    {
+      "created_at": "2026-10-10T17:00:14.000Z",
+      "id": "2108965844931768440",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 26,
+        "impression": 52252,
+        "like": 207,
+        "quote": 6,
+        "reply": 37,
+        "retweet": 19
+      },
+      "text": "In a new survey of 1,039 GitHub users conducted by GitHub and the Yale Program on Climate Change Communication, we found:\n• 80% were interested in tools for writing more energy-efficient code\n• 78% wanted to learn best practices for reducing software’s environmental footprint\n• 74% wanted ways to measure the environmental impact of their software or development process\n\nDevelopers want more efficient software. What many lack is a clear way to find waste, measure improvements, and make the case for fixing it.\n\nThere’s an opportunity to turn that interest into normal engineering work. 💡\nhttps://t.co/KiNHc9EN0y",
+      "url": "https://x.com/github/status/2108965844931768440"
+    },
+    {
+      "created_at": "2026-10-09T22:35:08.000Z",
+      "id": "2108687734734827803",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 35,
+        "impression": 75249,
+        "like": 326,
+        "quote": 6,
+        "reply": 23,
+        "retweet": 32
+      },
+      "text": "GitHub Universe is typing...\n\nCooking up something fun for you to build ⌨️ Make sure you grab your in-person pass ⬇️\nhttps://t.co/dEAi3Xv1Nt https://t.co/gBWlEjyDUM",
+      "url": "https://x.com/github/status/2108687734734827803"
+    },
+    {
+      "created_at": "2026-10-09T17:57:37.000Z",
+      "id": "2108617898751045649",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 37,
+        "impression": 57892,
+        "like": 209,
+        "quote": 6,
+        "reply": 27,
+        "retweet": 15
+      },
+      "text": "Ever been to a hackathon? Follow participants throughout their day, from badge to the final demo. \n\nWhat you can learn from attending a hackathon ⬇️\nhttps://t.co/e2o6EmOBU4 https://t.co/0PQvBBgVmK",
+      "url": "https://x.com/github/status/2108617898751045649"
+    },
+    {
+      "created_at": "2026-10-09T00:50:01.000Z",
+      "id": "2108359291329446124",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 10,
+        "impression": 30340,
+        "like": 102,
+        "quote": 0,
+        "reply": 17,
+        "retweet": 9
+      },
+      "text": "#GitHubUniverse is just around the corner. 👀 What will you be adding to your agenda?\n\nFrom verifying AI-written code to securing npm dependencies, here are the sessions to keep in mind at this year's event. ⬇️\nhttps://t.co/20XSRpDNxG",
+      "url": "https://x.com/github/status/2108359291329446124"
+    },
+    {
+      "created_at": "2026-10-08T17:50:03.000Z",
+      "id": "2108253604305887470",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 35,
+        "impression": 42521,
+        "like": 238,
+        "quote": 11,
+        "reply": 42,
+        "retweet": 20
+      },
+      "text": "Devs and agents are moving faster than ever. Secret protection needs to keep pace.\n\nGitHub’s new context-aware classifier checks candidate secrets in under 2 milliseconds and could more than double the number of secrets push protection prevents before they enter repository history.\nhttps://t.co/7LeAg7nnAm",
+      "url": "https://x.com/github/status/2108253604305887470"
+    },
+    {
+      "created_at": "2026-10-08T15:06:32.000Z",
+      "id": "2108212456388448383",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 6,
+        "impression": 24924,
+        "like": 72,
+        "quote": 2,
+        "reply": 13,
+        "retweet": 8
+      },
+      "text": "What happens when low-quality contributions become one of the biggest pain points for open source maintainers?\n\nCamilla Moraes from GitHub’s Tiny Wins team joins the latest GitHub Podcast to talk about tackling the AI slop problem, listening to maintainers, and deciding what to fix next.\n\nWatch the full GitHub Podcast on YouTube, listen to it wherever you find your podcasts, or find it at https://t.co/AHLv9ebgw5",
+      "url": "https://x.com/github/status/2108212456388448383"
+    },
+    {
+      "created_at": "2026-10-07T20:40:31.000Z",
+      "id": "2107934117581189271",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 34,
+        "impression": 63032,
+        "like": 328,
+        "quote": 14,
+        "reply": 34,
+        "retweet": 34
+      },
+      "text": "⚡️ @AnthropicAI's Claude Haiku 5.5 is now generally available in GitHub Copilot.\n\n➡️ It's a lightweight model designed for fast, high-volume work like subagents, quick edits, and terminal tasks.\n➡️ Our early testing showed that it matched Claude Sonnet 5 on many coding tasks while using significantly fewer tokens and steps.\n\nTry it out in the GitHub Copilot app, CLI, or @code.\nhttps://t.co/aJXg4oAAz8",
+      "url": "https://x.com/github/status/2107934117581189271"
+    },
+    {
+      "created_at": "2026-10-07T19:26:01.000Z",
+      "id": "2107915368358404147",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 115,
+        "impression": 68795,
+        "like": 397,
+        "quote": 15,
+        "reply": 40,
+        "retweet": 50
+      },
+      "text": "Local sandboxing for GitHub Copilot is now generally available 🙌\n\nThis allows Copilot to run commands in an isolated environment with controlled access to files, networks, system capabilities, and credentials so you have more granular control. It also gives enterprise teams a way to centrally manage policies.\n\nTry it out in GitHub Copilot CLI, GitHub Copilot app or @code. https://t.co/7OzoKyUDF3",
+      "url": "https://x.com/github/status/2107915368358404147"
+    },
+    {
+      "created_at": "2026-10-07T18:12:43.000Z",
+      "id": "2107896919116927242",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 4,
+        "impression": 8286,
+        "like": 15,
+        "quote": 2,
+        "reply": 2,
+        "retweet": 2
+      },
+      "text": "Learn more about how we are bringing local models and sandboxed tools to GitHub Copilot to help you maintain both choice and control over your workflows ⬇️\nhttps://t.co/Gr9KITnZlx",
+      "url": "https://x.com/github/status/2107896919116927242"
+    },
+    {
+      "created_at": "2026-10-07T18:12:42.000Z",
+      "id": "2107896916595884177",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 103,
+        "impression": 95664,
+        "like": 522,
+        "quote": 25,
+        "reply": 53,
+        "retweet": 64
+      },
+      "text": "📣 Coming soon to GitHub Copilot: intelligent local model routing.\n\nWe are excited to announce the next step in our Project HydraFusion vision. GitHub Copilot will soon be able to automatically route tasks to a local model when it's most suitable, helping you save on AI credits. https://t.co/lvjtnBswex",
+      "url": "https://x.com/github/status/2107896916595884177"
+    },
+    {
+      "created_at": "2026-10-07T01:30:04.000Z",
+      "id": "2107644597258047597",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 48,
+        "impression": 81670,
+        "like": 293,
+        "quote": 11,
+        "reply": 21,
+        "retweet": 22
+      },
+      "text": "2022 ➡️ 2026\n\nHere's your sneak peek at this year's #GitHubUniverse programmable badge. Grab your in-person pass and secure a badge ⬇️\nhttps://t.co/sbzDvnqvcc https://t.co/yyqRxomhsf",
+      "url": "https://x.com/github/status/2107644597258047597"
+    },
+    {
+      "created_at": "2026-10-06T21:49:39.000Z",
+      "id": "2107589127051063771",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 352,
+        "impression": 106750,
+        "like": 554,
+        "quote": 42,
+        "reply": 68,
+        "retweet": 51
+      },
+      "text": "Git activity more than doubled between September 2025 and August 2026, reaching 473.3B events per month.\n\nWe’re rebuilding our Git infrastructure while GitHub keeps running, creating a foundation for agent-scale software development. https://t.co/H5J2qxCqMT",
+      "url": "https://x.com/github/status/2107589127051063771"
+    },
+    {
+      "created_at": "2026-10-06T18:35:01.000Z",
+      "id": "2107540144949473754",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 147,
+        "impression": 68931,
+        "like": 226,
+        "quote": 15,
+        "reply": 46,
+        "retweet": 20
+      },
+      "text": "How do you know whether an AI code reviewer catches the issues that matter without adding noise?\n\nReviewBench is a new open benchmark shaped by analysis of 103.9M GitHub pull requests, with 219 PRs across 19 languages.\n\nBring your own code review agent, evaluate it, and submit your results ⬇️\nhttps://t.co/YVa464lyfx",
+      "url": "https://x.com/github/status/2107540144949473754"
+    },
+    {
+      "created_at": "2026-10-04T17:10:02.000Z",
+      "id": "2106793980801261895",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 139,
+        "impression": 94951,
+        "like": 966,
+        "quote": 21,
+        "reply": 58,
+        "retweet": 116
+      },
+      "text": "Git 2.56 is here. ⚡ The new git add --resolved stages only paths that are still marked as conflicted, and refuses to stage them if conflict markers remain. One merge-base case dropped from 0.68s to 0.01s. \n\nThe highlights 👇\nhttps://t.co/CxbNfofYrf",
+      "url": "https://x.com/github/status/2106793980801261895"
+    },
+    {
+      "created_at": "2026-10-03T18:05:31.000Z",
+      "id": "2106445557535220101",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 80,
+        "impression": 92784,
+        "like": 305,
+        "quote": 14,
+        "reply": 41,
+        "retweet": 33
+      },
+      "text": "Cool it on the tab hopping 🐇\n\nReviewing agent code usually means switching tabs. The GitHub Copilot app puts the diff, terminal, and browser side by side to check, run, and preview.\nhttps://t.co/NCWK8hUeFf https://t.co/Mi6tyyCDs4",
+      "url": "https://x.com/github/status/2106445557535220101"
+    },
+    {
+      "created_at": "2026-10-02T20:37:01.000Z",
+      "id": "2106121295653937582",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 35,
+        "impression": 58162,
+        "like": 123,
+        "quote": 0,
+        "reply": 11,
+        "retweet": 19
+      },
+      "text": "💾 Save the date: GitHub Game Off returns November 1.\n\nThe theme? █████\n\nJoin the jam now and be the first to know the theme when the clock strikes 13:37 PT.\nhttps://t.co/tXWnhlbjNh",
+      "url": "https://x.com/github/status/2106121295653937582"
+    },
+    {
+      "created_at": "2026-10-02T16:42:34.000Z",
+      "id": "2106062293499068721",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 26,
+        "impression": 68276,
+        "like": 148,
+        "quote": 1,
+        "reply": 26,
+        "retweet": 12
+      },
+      "text": "Project HydraFusion and new models arrived in the Copilot model picker. Have you tried them out? 👀 https://t.co/F2HnBFKo10",
+      "url": "https://x.com/github/status/2106062293499068721"
+    }
+  ],
+  "user_id": "13334762"
+}

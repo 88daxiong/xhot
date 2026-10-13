@@ -1,0 +1,381 @@
+{
+  "handle": "aravsrinivas",
+  "tweets": [
+    {
+      "created_at": "2026-10-12T20:09:52.000Z",
+      "id": "2109738344011972893",
+      "lang": "",
+      "metrics": {
+        "bookmark": 228,
+        "impression": 33823,
+        "like": 457,
+        "quote": 7,
+        "reply": 74,
+        "retweet": 39
+      },
+      "text": "Every Perplexity Project is a Git repo. We built a Git forge for agents, without the GitHub bloat, since no human has to approve anything.\n\nEach agent gets its own short-lived sandbox and commits to a shared repo on S3. Fewer than 2% of submissions collide.\n\nAgents search with https://t.co/9NNNOPPYUN",
+      "url": "https://x.com/AravSrinivas/status/2109738344011972893"
+    },
+    {
+      "created_at": "2026-10-12T18:15:13.000Z",
+      "id": "2109709489935126752",
+      "lang": "",
+      "metrics": {
+        "bookmark": 80,
+        "impression": 63679,
+        "like": 933,
+        "quote": 2,
+        "reply": 32,
+        "retweet": 31
+      },
+      "text": "Congrats to Meta for training a frontier-grade model! Watermelon compares favorably to Fable 5.1 on WANDR evals. https://t.co/j5kwPwpZ3A",
+      "url": "https://x.com/AravSrinivas/status/2109709489935126752"
+    },
+    {
+      "created_at": "2026-10-12T15:26:11.000Z",
+      "id": "2109666949836017732",
+      "lang": "",
+      "metrics": {
+        "bookmark": 53,
+        "impression": 30228,
+        "like": 245,
+        "quote": 0,
+        "reply": 21,
+        "retweet": 18
+      },
+      "text": "Was a fun chat! Thanks for having me @MollySOShea! https://t.co/3nCFmHc4GQ",
+      "url": "https://x.com/AravSrinivas/status/2109666949836017732"
+    },
+    {
+      "created_at": "2026-10-08T16:42:23.000Z",
+      "id": "2108236575859753460",
+      "lang": "",
+      "metrics": {
+        "bookmark": 66,
+        "impression": 40018,
+        "like": 330,
+        "quote": 5,
+        "reply": 45,
+        "retweet": 34
+      },
+      "text": "Perplexity Decider ranks first on DecisionBench (and lowest cost too) https://t.co/veAAoA8C1o",
+      "url": "https://x.com/AravSrinivas/status/2108236575859753460"
+    },
+    {
+      "created_at": "2026-10-08T15:03:25.000Z",
+      "id": "2108211672028704842",
+      "lang": "",
+      "metrics": {
+        "bookmark": 90,
+        "impression": 33669,
+        "like": 353,
+        "quote": 2,
+        "reply": 43,
+        "retweet": 27
+      },
+      "text": "perplexity’s open weights decision model the best quality and lowest cost for clinical decisions https://t.co/PQFEYMLhxZ",
+      "url": "https://x.com/AravSrinivas/status/2108211672028704842"
+    },
+    {
+      "created_at": "2026-10-07T22:25:20.000Z",
+      "id": "2107960494757929146",
+      "lang": "",
+      "metrics": {
+        "bookmark": 42,
+        "impression": 46764,
+        "like": 227,
+        "quote": 5,
+        "reply": 19,
+        "retweet": 12
+      },
+      "text": "Cool demo of Perplexity Decider! https://t.co/JjBChdMskg",
+      "url": "https://x.com/AravSrinivas/status/2107960494757929146"
+    },
+    {
+      "created_at": "2026-10-07T20:02:33.000Z",
+      "id": "2107924563493621977",
+      "lang": "",
+      "metrics": {
+        "bookmark": 34,
+        "impression": 38000,
+        "like": 220,
+        "quote": 1,
+        "reply": 25,
+        "retweet": 9
+      },
+      "text": "AI is the work operating system https://t.co/Zi5OFH1qOc",
+      "url": "https://x.com/AravSrinivas/status/2107924563493621977"
+    },
+    {
+      "created_at": "2026-10-07T16:33:02.000Z",
+      "id": "2107871834205196784",
+      "lang": "",
+      "metrics": {
+        "bookmark": 443,
+        "impression": 53110,
+        "like": 858,
+        "quote": 11,
+        "reply": 90,
+        "retweet": 82
+      },
+      "text": "We’re open-sourcing pplx-embed-v2-late, multi-vector embeddings for text and images, 9B and 0.6B, in one shared embedding space. You can use these to index multimodal data with 9B, and query on device with 0.6B. This also enables you to search over PDF pages with no OCR. And https://t.co/O1Ga7lAr96",
+      "url": "https://x.com/AravSrinivas/status/2107871834205196784"
+    },
+    {
+      "created_at": "2026-10-07T14:36:51.000Z",
+      "id": "2107842595183575127",
+      "lang": "",
+      "metrics": {
+        "bookmark": 36,
+        "impression": 37692,
+        "like": 237,
+        "quote": 1,
+        "reply": 31,
+        "retweet": 17
+      },
+      "text": "We’re living in incredible times! https://t.co/ei5G8qPGlv",
+      "url": "https://x.com/AravSrinivas/status/2107842595183575127"
+    },
+    {
+      "created_at": "2026-10-06T20:46:21.000Z",
+      "id": "2107573198145663233",
+      "lang": "",
+      "metrics": {
+        "bookmark": 72,
+        "impression": 37288,
+        "like": 370,
+        "quote": 2,
+        "reply": 36,
+        "retweet": 14
+      },
+      "text": "Also, Perplexity Decision API pricing was cut by half, now to 2 cents per million input tokens. Enjoy! https://t.co/NkwOyfYivp",
+      "url": "https://x.com/AravSrinivas/status/2107573198145663233"
+    },
+    {
+      "created_at": "2026-10-06T20:35:02.000Z",
+      "id": "2107570346459353257",
+      "lang": "",
+      "metrics": {
+        "bookmark": 187,
+        "impression": 63392,
+        "like": 452,
+        "quote": 5,
+        "reply": 28,
+        "retweet": 21
+      },
+      "text": "Engineering Design as a service https://t.co/JaYrc7B2Zh",
+      "url": "https://x.com/AravSrinivas/status/2107570346459353257"
+    },
+    {
+      "created_at": "2026-10-06T17:25:53.000Z",
+      "id": "2107522748167954442",
+      "lang": "",
+      "metrics": {
+        "bookmark": 132,
+        "impression": 46812,
+        "like": 605,
+        "quote": 6,
+        "reply": 56,
+        "retweet": 36
+      },
+      "text": "Perplexity wins on Hugging Face Decision Index (benchmark for decision models). Our model is open-weights and accessible to all! https://t.co/NkwOyfYivp",
+      "url": "https://x.com/AravSrinivas/status/2107522748167954442"
+    },
+    {
+      "created_at": "2026-10-06T15:17:44.000Z",
+      "id": "2107490495492743571",
+      "lang": "",
+      "metrics": {
+        "bookmark": 85,
+        "impression": 42230,
+        "like": 413,
+        "quote": 2,
+        "reply": 38,
+        "retweet": 30
+      },
+      "text": "Perplexity Decider is the best decision model https://t.co/k0k2rcDazb",
+      "url": "https://x.com/AravSrinivas/status/2107490495492743571"
+    },
+    {
+      "created_at": "2026-10-06T14:24:06.000Z",
+      "id": "2107477001108078661",
+      "lang": "",
+      "metrics": {
+        "bookmark": 34,
+        "impression": 37511,
+        "like": 301,
+        "quote": 8,
+        "reply": 58,
+        "retweet": 23
+      },
+      "text": "We got Computer playing StarCraft against Computer, in real time. No pausing. The game keeps running while each agent thinks.\n\nBlue 2 – Red 5\n\nFinal match. Blue builds up safely, reaches 41 Dragoons, and moves out. Red is waiting with High Templar and hits the army with Psionic https://t.co/fU1hbYiTSW",
+      "url": "https://x.com/AravSrinivas/status/2107477001108078661"
+    },
+    {
+      "created_at": "2026-10-05T23:25:25.000Z",
+      "id": "2107250838553182453",
+      "lang": "",
+      "metrics": {
+        "bookmark": 15,
+        "impression": 37336,
+        "like": 138,
+        "quote": 3,
+        "reply": 28,
+        "retweet": 3
+      },
+      "text": "A spatial canvas for heavy duty multi-tasking. https://t.co/b40goeX2Lj",
+      "url": "https://x.com/AravSrinivas/status/2107250838553182453"
+    },
+    {
+      "created_at": "2026-10-04T19:20:15.000Z",
+      "id": "2106826752169312760",
+      "lang": "",
+      "metrics": {
+        "bookmark": 79,
+        "impression": 39046,
+        "like": 346,
+        "quote": 1,
+        "reply": 34,
+        "retweet": 24
+      },
+      "text": "You can build custom vertical AI apps inside Computer, eg: guess spatial location of an image with 3D and satellite view. https://t.co/rLzam2L4sH",
+      "url": "https://x.com/AravSrinivas/status/2106826752169312760"
+    },
+    {
+      "created_at": "2026-10-04T10:10:44.000Z",
+      "id": "2106688463542333795",
+      "lang": "",
+      "metrics": {
+        "bookmark": 78,
+        "impression": 39687,
+        "like": 324,
+        "quote": 21,
+        "reply": 60,
+        "retweet": 17
+      },
+      "text": "Pokémon FireRed’s Elite Four + Champion, cleared in one shot - with decision-making powered by Perplexity’s Decisions API.\n\nThe actual run stats:\n\n592 ms median API response \n987 ms p95 - 96.4% of responses under one second \n$0.028 estimated inference cost, 137 live API calls https://t.co/xM40AY34dv",
+      "url": "https://x.com/AravSrinivas/status/2106688463542333795"
+    },
+    {
+      "created_at": "2026-10-03T19:17:55.000Z",
+      "id": "2106463779131167189",
+      "lang": "",
+      "metrics": {
+        "bookmark": 341,
+        "impression": 71976,
+        "like": 827,
+        "quote": 11,
+        "reply": 41,
+        "retweet": 62
+      },
+      "text": "Try “Visualize….” in Computer and ask for whatever you want to learn visually. You will now get an inline viz with rich educative and interactive widgets and animations! Have fun! Best experienced on Standard or High effort. https://t.co/f7Xbh3aG2U",
+      "url": "https://x.com/AravSrinivas/status/2106463779131167189"
+    },
+    {
+      "created_at": "2026-10-03T09:19:53.000Z",
+      "id": "2106313275797352674",
+      "lang": "",
+      "metrics": {
+        "bookmark": 47,
+        "impression": 45720,
+        "like": 460,
+        "quote": 7,
+        "reply": 45,
+        "retweet": 31
+      },
+      "text": "Our goal is to vertically integrate our agentic infrastructure: own our sandboxes, and optimize the sandbox for the best silicon. Vera is far better than x86. Look forward to sharing more soon as we begin to rollout deployment of Perplexity Computer on Vera. https://t.co/3xzKZlpOJx",
+      "url": "https://x.com/AravSrinivas/status/2106313275797352674"
+    },
+    {
+      "created_at": "2026-10-02T21:05:24.000Z",
+      "id": "2106128438507532492",
+      "lang": "",
+      "metrics": {
+        "bookmark": 253,
+        "impression": 70083,
+        "like": 729,
+        "quote": 0,
+        "reply": 48,
+        "retweet": 55
+      },
+      "text": "Your creativity is the limit in terms of what you can have Computer do for you. This is the kind of project that you can let an agent run for hours to come back with something great. https://t.co/OAG3HxZK8v",
+      "url": "https://x.com/AravSrinivas/status/2106128438507532492"
+    },
+    {
+      "created_at": "2026-10-02T20:29:30.000Z",
+      "id": "2106119404433908149",
+      "lang": "",
+      "metrics": {
+        "bookmark": 157,
+        "impression": 44802,
+        "like": 491,
+        "quote": 12,
+        "reply": 32,
+        "retweet": 31
+      },
+      "text": "a few open source contributions from perplexity recently:\n\n•pplx-decider-v1-27b: SoTA multimodal decision model. 85.7% average across 11 benchmarks, ahead of Jev.\n•pplx-embed-v2-context-9b-preview: SoTA contextual embeddings, best on ConTEB and turbopuffer context-bench.",
+      "url": "https://x.com/AravSrinivas/status/2106119404433908149"
+    },
+    {
+      "created_at": "2026-10-02T12:52:00.000Z",
+      "id": "2106004271728927135",
+      "lang": "",
+      "metrics": {
+        "bookmark": 15,
+        "impression": 38475,
+        "like": 164,
+        "quote": 1,
+        "reply": 26,
+        "retweet": 6
+      },
+      "text": "We would love to hear how we can improve our developer platform! https://t.co/adHEmJvjS0",
+      "url": "https://x.com/AravSrinivas/status/2106004271728927135"
+    },
+    {
+      "created_at": "2026-10-01T21:37:36.000Z",
+      "id": "2105774153903268288",
+      "lang": "",
+      "metrics": {
+        "bookmark": 670,
+        "impression": 135601,
+        "like": 1497,
+        "quote": 28,
+        "reply": 81,
+        "retweet": 87
+      },
+      "text": "We’re open sourcing a state of the art multimodal Decision Model, pplx-decider-27b, and are offering it in a new Decisions API at 4 cents per million input tokens and free output tokens. We intend to bring down the price even further over the coming days. Enjoy! https://t.co/0pX4zAMdFA",
+      "url": "https://x.com/AravSrinivas/status/2105774153903268288"
+    },
+    {
+      "created_at": "2026-10-01T16:24:05.000Z",
+      "id": "2105695254578172032",
+      "lang": "",
+      "metrics": {
+        "bookmark": 41,
+        "impression": 38732,
+        "like": 334,
+        "quote": 0,
+        "reply": 28,
+        "retweet": 15
+      },
+      "text": "We’re rolling out inline charts, diagrams, visualizations in Computer. Including contextual financial charts from @tradingview https://t.co/O2c2t1L1sz",
+      "url": "https://x.com/AravSrinivas/status/2105695254578172032"
+    },
+    {
+      "created_at": "2026-10-01T15:23:18.000Z",
+      "id": "2105679959453032810",
+      "lang": "",
+      "metrics": {
+        "bookmark": 80,
+        "impression": 40933,
+        "like": 307,
+        "quote": 3,
+        "reply": 19,
+        "retweet": 8
+      },
+      "text": "Seedance inside Computer is quite incredible for marketing and brand teams! https://t.co/tVvW0atXw5",
+      "url": "https://x.com/AravSrinivas/status/2105679959453032810"
+    }
+  ],
+  "user_id": "759894532649545732"
+}

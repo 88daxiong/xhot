@@ -1,0 +1,381 @@
+{
+  "handle": "alexalbert__",
+  "tweets": [
+    {
+      "created_at": "2026-10-07T19:15:42.000Z",
+      "id": "2107912771568554415",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 25,
+        "impression": 21632,
+        "like": 471,
+        "quote": 2,
+        "reply": 70,
+        "retweet": 20
+      },
+      "text": "For reference, Haiku 4.5 came out on October 15th, 2025 so these two columns are less than a year apart. \n\nand oh yeah Haiku 5.5 is also much faster and 75% cheaper... https://t.co/1Zt19kdTYC",
+      "url": "https://x.com/alexalbert__/status/2107912771568554415"
+    },
+    {
+      "created_at": "2026-09-28T18:06:47.000Z",
+      "id": "2104633937280811010",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 35,
+        "impression": 44873,
+        "like": 850,
+        "quote": 3,
+        "reply": 84,
+        "retweet": 15
+      },
+      "text": "Sonnet 5.5 has the same feel I liked about Opus 5.5. It writes clearly, it's very fast, and it's a major capabilities jump over Sonnet 5. Really great model to iterate with. https://t.co/g3jF3djPRv",
+      "url": "https://x.com/alexalbert__/status/2104633937280811010"
+    },
+    {
+      "created_at": "2026-09-22T18:34:16.000Z",
+      "id": "2102466524934271381",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 121,
+        "impression": 13015,
+        "like": 104,
+        "quote": 2,
+        "reply": 10,
+        "retweet": 4
+      },
+      "text": "Prompt in Claude Tag\n\n\"Recreate Market Street, San Francisco as it stood on April 17, 1906, the afternoon before the earthquake, in Blender.\n\nScope: the Ferry Building up Market to Fifth Street, including the Palace Hotel, the Call Building, the Chronicle Building, Lotta's Fountain and the Emporium.\n\nBefore modeling anything, build a source file from: the 1899-1905 Sanborn fire insurance maps (footprints, heights, materials, occupants), the Miles Brothers film \"A Trip Down Market Street\" (April 1906), period photographs from OpenSFHistory, the Library of Congress and the David Rumsey collection, and USGS topography. Record every building with footprint, height, facade material, occupant, and the source for each fact with a confidence level.\n\nBuild everything in Blender Python. No downloaded meshes, textures or HDRIs. Write reusable generators (Victorian commercial facade, mansard roof, bay windows, awnings, painted signage, gas and electric street lamps, cable car, horse-drawn wagon, early automobile) and assemble the street from the source file, so every building traces back to data.\n\nProvide a 10 second video up the street.\"",
+      "url": "https://x.com/alexalbert__/status/2102466524934271381"
+    },
+    {
+      "created_at": "2026-09-22T18:34:15.000Z",
+      "id": "2102466523164274839",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 433,
+        "impression": 160185,
+        "like": 1158,
+        "quote": 33,
+        "reply": 97,
+        "retweet": 49
+      },
+      "text": "I've been on a Blender kick with Opus 5.5. Its better 3D modeling and vision mean you can build an entire world from a single prompt.\n\nHistorically accurate San Francisco Market street in 1906, pre-earthquake https://t.co/aisvFLFGy3",
+      "url": "https://x.com/alexalbert__/status/2102466523164274839"
+    },
+    {
+      "created_at": "2026-09-22T18:01:47.000Z",
+      "id": "2102458350348935454",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 8,
+        "impression": 15614,
+        "like": 45,
+        "quote": 0,
+        "reply": 3,
+        "retweet": 1
+      },
+      "text": "need to make sure you've been updated to this (rolling out to everyone soon if you haven't!) https://t.co/fjCAQKazVs",
+      "url": "https://x.com/alexalbert__/status/2102458350348935454"
+    },
+    {
+      "created_at": "2026-09-22T18:01:46.000Z",
+      "id": "2102458348511879448",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 1583,
+        "impression": 266897,
+        "like": 2643,
+        "quote": 35,
+        "reply": 107,
+        "retweet": 109
+      },
+      "text": "I just realized Opus 5.5 can use Blender to make claymations with just a single prompt in claude dot ai now https://t.co/hPMwidwkvw",
+      "url": "https://x.com/alexalbert__/status/2102458348511879448"
+    },
+    {
+      "created_at": "2026-09-22T17:04:43.000Z",
+      "id": "2102443989941223527",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 72,
+        "impression": 84724,
+        "like": 1245,
+        "quote": 6,
+        "reply": 30,
+        "retweet": 23
+      },
+      "text": "Lots more coming soon. Today is just the start! https://t.co/Ctn7hM8AzZ",
+      "url": "https://x.com/alexalbert__/status/2102443989941223527"
+    },
+    {
+      "created_at": "2026-09-22T16:39:59.000Z",
+      "id": "2102437766114275842",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 181,
+        "impression": 97204,
+        "like": 2612,
+        "quote": 12,
+        "reply": 77,
+        "retweet": 77
+      },
+      "text": "Using Opus 5.5 feels like hitting every green light on your drive home, drinking a cold glass of water when you're thirsty, and a hot shower after a long day.\n\nIt's super smart, it writes clearly, it's fast, and it costs way less. It's a very good model. https://t.co/ZPUdCsrXlw",
+      "url": "https://x.com/alexalbert__/status/2102437766114275842"
+    },
+    {
+      "created_at": "2026-09-16T18:48:24.000Z",
+      "id": "2100295757953917120",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 21,
+        "impression": 35350,
+        "like": 225,
+        "quote": 2,
+        "reply": 25,
+        "retweet": 7
+      },
+      "text": "The team did an amazing job with this merge. The resulting UX feels so much better than chat or Cowork did on their own.\n\nAnd the new slides/docs/design integrations work very well. https://t.co/YyZYsf8OFE",
+      "url": "https://x.com/alexalbert__/status/2100295757953917120"
+    },
+    {
+      "created_at": "2026-09-12T16:41:47.000Z",
+      "id": "2098814342443761909",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 29,
+        "impression": 28070,
+        "like": 189,
+        "quote": 6,
+        "reply": 57,
+        "retweet": 8
+      },
+      "text": "Worth spending a few minutes this weekend to read this essay in full. \n\nEmbedded evaluators might sound unusual in tech but it's pretty normal in other industries. Big banks have federal examiners with desks in the building and every nuclear plant in the US has inspectors who work on site full time. I think frontier AI labs should work the same way and this is a very practical first step.",
+      "url": "https://x.com/alexalbert__/status/2098814342443761909"
+    },
+    {
+      "created_at": "2026-09-01T20:45:01.000Z",
+      "id": "2094889286990446769",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 74,
+        "impression": 59334,
+        "like": 282,
+        "quote": 3,
+        "reply": 43,
+        "retweet": 17
+      },
+      "text": "One non-model thing I'm very excited we announced today with Fable 5.1 is Enterprise Frontier Safeguards (EFS).\n\nEven if you're not a CEO/CISO, this blog post is a look into how big companies are thinking about AI adoption which is important to understand if you're interested in how AI might diffuse across industry.\n\nCompanies are giving agents more and more access to internal systems. With traditional zero data retention, there's been no way to spot patterns in what agents might be doing across sessions on these systems.\n\nEFS is ZDR++. It's ZDR built for a world with agents. A company's data stays in its own cloud, and an automated monitoring layer we built flags risky patterns to its team.\n\nI think of this as an observability and risk mitigation layer for agents. My guess is it will become a standard requirement from enterprises for running increasingly powerful AI on their systems.",
+      "url": "https://x.com/alexalbert__/status/2094889286990446769"
+    },
+    {
+      "created_at": "2026-09-01T18:49:24.000Z",
+      "id": "2094860189316899083",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 301,
+        "impression": 68680,
+        "like": 998,
+        "quote": 4,
+        "reply": 34,
+        "retweet": 17
+      },
+      "text": "using blender headless btw",
+      "url": "https://x.com/alexalbert__/status/2094860189316899083"
+    },
+    {
+      "created_at": "2026-09-01T18:49:24.000Z",
+      "id": "2094860187743986169",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 5550,
+        "impression": 1294650,
+        "like": 8614,
+        "quote": 200,
+        "reply": 390,
+        "retweet": 453
+      },
+      "text": "Fable 5.1 is a beast at many things but one thing in particular I have been having a ton of fun with is generating videos through code. \n\nFor this one I gave it a picture of a property lot. It designed a house for the lot, rendered it, and produced a cinematic walkthrough. https://t.co/eBIaCmaav8",
+      "url": "https://x.com/alexalbert__/status/2094860187743986169"
+    },
+    {
+      "created_at": "2026-09-01T18:10:16.000Z",
+      "id": "2094850341049078023",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 5,
+        "impression": 6921,
+        "like": 53,
+        "quote": 0,
+        "reply": 5,
+        "retweet": 0
+      },
+      "text": "...it's also the reason I have been pretty offline here the past few weeks😅",
+      "url": "https://x.com/alexalbert__/status/2094850341049078023"
+    },
+    {
+      "created_at": "2026-09-01T18:08:45.000Z",
+      "id": "2094849958025306330",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 111,
+        "impression": 111183,
+        "like": 1053,
+        "quote": 6,
+        "reply": 98,
+        "retweet": 20
+      },
+      "text": "The way I keep describing Fable 5.1 to people is that it just works.\n\nI explain what I want in a few vague, messy sentences, and it figures out the rest. It fills in the gaps the way I would have. It's a truly impressive model in so many ways and I hope you enjoy using it! https://t.co/8FvA6NrvqU",
+      "url": "https://x.com/alexalbert__/status/2094849958025306330"
+    },
+    {
+      "created_at": "2026-07-24T19:08:56.000Z",
+      "id": "2080731979528679617",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 1738,
+        "impression": 739402,
+        "like": 3795,
+        "quote": 50,
+        "reply": 114,
+        "retweet": 205
+      },
+      "text": "Just over 6 months later, Opus 5 now produces near-superhuman level spreadsheets and slide decks that match what a consultant would make. Things are changing fast. https://t.co/HKpFPP4hrM https://t.co/qv8OJoPXcf",
+      "url": "https://x.com/alexalbert__/status/2080731979528679617"
+    },
+    {
+      "created_at": "2026-07-24T17:14:15.000Z",
+      "id": "2080703118086693121",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 64,
+        "impression": 61980,
+        "like": 695,
+        "quote": 11,
+        "reply": 52,
+        "retweet": 36
+      },
+      "text": "Some of my favorite graphs from Opus 5 launch. We put a ton of work into making this model token efficient across domains while still raising the intelligence bar. \n\nIt feels very smooth to use and I prefer it over Fable 5 for  many coding tasks. https://t.co/bScX0FgtLq",
+      "url": "https://x.com/alexalbert__/status/2080703118086693121"
+    },
+    {
+      "created_at": "2026-07-24T17:09:49.000Z",
+      "id": "2080702002120757562",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 5,
+        "impression": 22574,
+        "like": 309,
+        "quote": 1,
+        "reply": 19,
+        "retweet": 5
+      },
+      "text": "Welcome to the world, Opus 5. https://t.co/uLgA9FqQjR",
+      "url": "https://x.com/alexalbert__/status/2080702002120757562"
+    },
+    {
+      "created_at": "2026-07-09T18:25:48.000Z",
+      "id": "2075285305096343583",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 12,
+        "impression": 51064,
+        "like": 676,
+        "quote": 1,
+        "reply": 46,
+        "retweet": 8
+      },
+      "text": "More Fable! https://t.co/ovN0VJX6K1",
+      "url": "https://x.com/alexalbert__/status/2075285305096343583"
+    },
+    {
+      "created_at": "2026-07-01T19:39:22.000Z",
+      "id": "2072404717490360727",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 14,
+        "impression": 50865,
+        "like": 588,
+        "quote": 1,
+        "reply": 30,
+        "retweet": 10
+      },
+      "text": "Welcome back to the world Fable!! https://t.co/krcdkuYId8",
+      "url": "https://x.com/alexalbert__/status/2072404717490360727"
+    },
+    {
+      "created_at": "2026-06-23T17:19:24.000Z",
+      "id": "2069470389391241314",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 172,
+        "impression": 138881,
+        "like": 556,
+        "quote": 4,
+        "reply": 45,
+        "retweet": 14
+      },
+      "text": "This has completely changed how I work with Claude. It feels less like using a tool and more like managing a team. https://t.co/JaUllMPTJW",
+      "url": "https://x.com/alexalbert__/status/2069470389391241314"
+    },
+    {
+      "created_at": "2026-06-12T17:55:38.000Z",
+      "id": "2065493242158924031",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 114,
+        "impression": 11777,
+        "like": 103,
+        "quote": 1,
+        "reply": 8,
+        "retweet": 6
+      },
+      "text": "Pulled this from our prompting guide which has many more tips for working with Fable: https://t.co/xHvvfIY0Ex",
+      "url": "https://x.com/alexalbert__/status/2065493242158924031"
+    },
+    {
+      "created_at": "2026-06-12T17:55:35.000Z",
+      "id": "2065493229760565758",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 935,
+        "impression": 70696,
+        "like": 1027,
+        "quote": 9,
+        "reply": 77,
+        "retweet": 30
+      },
+      "text": "Fable feels superhuman at working over long agentic conversations, sometimes to the point where I can't keep up with what it's telling me 😅\n\nThis prompt snippet has been the best fix I've found for getting it to write clearly and drop any jargon: https://t.co/9mS57mR7jq",
+      "url": "https://x.com/alexalbert__/status/2065493229760565758"
+    },
+    {
+      "created_at": "2026-06-09T22:00:20.000Z",
+      "id": "2064467657483829441",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 1660,
+        "impression": 390342,
+        "like": 2934,
+        "quote": 52,
+        "reply": 147,
+        "retweet": 166
+      },
+      "text": "We've reset usage limits across our products! \n\nFor those just starting to test Fable, here's four tips for using it more effectively:\n1. Give it bigger, more ambitious tasks than what previous models could handle.\n2. Use xhigh/high effort as your default for best performance, med for faster interactive sessions.\n3. Rework your skills and CLAUDE.mds. Instructions written for prior models anchor Fable to stale patterns, let it use its own judgment first.\n4. Move from providing tasks to providing objectives. Describe what done looks like and how to verify it, then let Fable find the path (/loop and /goal are built for this)",
+      "url": "https://x.com/alexalbert__/status/2064467657483829441"
+    },
+    {
+      "created_at": "2026-06-09T17:09:16.000Z",
+      "id": "2064394410004304003",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 559,
+        "impression": 611236,
+        "like": 3241,
+        "quote": 28,
+        "reply": 189,
+        "retweet": 127
+      },
+      "text": "I've been at Anthropic through every model launch. There's been a few cases I can remember of a launch that stands out and marks a step-change in how we use models:\n- Claude Opus 3\n- Claude Sonnet 3.5\n- Claude Opus 4.5\n\nAnd now Claude Fable 5.\n\nWith Fable, the model stopped feeling like a tool I direct and started feeling more like something I collaborate with.",
+      "url": "https://x.com/alexalbert__/status/2064394410004304003"
+    }
+  ],
+  "user_id": "1380719534970040322"
+}

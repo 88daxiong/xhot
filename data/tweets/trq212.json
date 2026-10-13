@@ -1,0 +1,381 @@
+{
+  "handle": "trq212",
+  "tweets": [
+    {
+      "created_at": "2026-10-12T18:46:14.000Z",
+      "id": "2109717295631372628",
+      "lang": "",
+      "metrics": {
+        "bookmark": 454,
+        "impression": 110319,
+        "like": 1866,
+        "quote": 3,
+        "reply": 33,
+        "retweet": 66
+      },
+      "text": "evergreen https://t.co/vypABFN6PU",
+      "url": "https://x.com/trq212/status/2109717295631372628"
+    },
+    {
+      "created_at": "2026-10-11T17:05:15.000Z",
+      "id": "2109329495341867391",
+      "lang": "",
+      "metrics": {
+        "bookmark": 315,
+        "impression": 114460,
+        "like": 1436,
+        "quote": 41,
+        "reply": 241,
+        "retweet": 73
+      },
+      "text": "I think Terrence Tao is directionally correct, we shouldn’t settle for a super intelligence that is opaque.\n\nA key signal of intelligence is communication. We should strive to make products and models that build understanding with humans instead of disintermediating them. https://t.co/p44dDROehA",
+      "url": "https://x.com/trq212/status/2109329495341867391"
+    },
+    {
+      "created_at": "2026-10-10T06:12:29.000Z",
+      "id": "2108802833986552174",
+      "lang": "",
+      "metrics": {
+        "bookmark": 336,
+        "impression": 76140,
+        "like": 658,
+        "quote": 5,
+        "reply": 85,
+        "retweet": 16
+      },
+      "text": "honestly pretty cool to have this on my new tab page \n\njust merged in some PRs by others too! https://t.co/OOzflxL3N7 https://t.co/3AE65z3VqK",
+      "url": "https://x.com/trq212/status/2108802833986552174"
+    },
+    {
+      "created_at": "2026-10-09T22:40:34.000Z",
+      "id": "2108689101503566319",
+      "lang": "",
+      "metrics": {
+        "bookmark": 815,
+        "impression": 160327,
+        "like": 1596,
+        "quote": 5,
+        "reply": 107,
+        "retweet": 46
+      },
+      "text": "before I joined Anthropic, I spent about 2 weeks hacking on this as a side project with Opus 4. It used the Agent SDK so it needed a constantly running process &amp; didnt work that well\n\nbut one prompt to Opus 5.5 ported it to Claude Managed Agents &amp; made it way more reliable https://t.co/3AE65z3VqK",
+      "url": "https://x.com/trq212/status/2108689101503566319"
+    },
+    {
+      "created_at": "2026-10-08T21:45:05.000Z",
+      "id": "2108312751202537946",
+      "lang": "",
+      "metrics": {
+        "bookmark": 27,
+        "impression": 23502,
+        "like": 49,
+        "quote": 0,
+        "reply": 4,
+        "retweet": 1
+      },
+      "text": "here's what I got today https://t.co/ua7zBXbpDP",
+      "url": "https://x.com/trq212/status/2108312751202537946"
+    },
+    {
+      "created_at": "2026-10-08T21:44:13.000Z",
+      "id": "2108312534222778407",
+      "lang": "",
+      "metrics": {
+        "bookmark": 2291,
+        "impression": 236919,
+        "like": 1882,
+        "quote": 12,
+        "reply": 78,
+        "retweet": 73
+      },
+      "text": "whoops I hit send and went to a meeting, didn't realize the repo wasnt public- it is now! \n\nit's a chrome extension I use every day now https://t.co/OroAeTafj0 https://t.co/3AE65z3VqK",
+      "url": "https://x.com/trq212/status/2108312534222778407"
+    },
+    {
+      "created_at": "2026-10-08T21:01:03.000Z",
+      "id": "2108301672409960922",
+      "lang": "",
+      "metrics": {
+        "bookmark": 201,
+        "impression": 32503,
+        "like": 169,
+        "quote": 0,
+        "reply": 9,
+        "retweet": 6
+      },
+      "text": "and read more about how to enable the API credits for yourself here: https://t.co/dXXsfLbxH6",
+      "url": "https://x.com/trq212/status/2108301672409960922"
+    },
+    {
+      "created_at": "2026-10-08T21:01:03.000Z",
+      "id": "2108301670451163390",
+      "lang": "",
+      "metrics": {
+        "bookmark": 533,
+        "impression": 48616,
+        "like": 401,
+        "quote": 1,
+        "reply": 21,
+        "retweet": 17
+      },
+      "text": "it's built on top of Claude Managed Agents, doing code generation in the cloud sandbo, using Sonnet 5.5 each run costs ~$0.75\n\nyou can try it yourself here: https://t.co/Q2zzOYeX9k",
+      "url": "https://x.com/trq212/status/2108301670451163390"
+    },
+    {
+      "created_at": "2026-10-08T21:01:02.000Z",
+      "id": "2108301668828004396",
+      "lang": "",
+      "metrics": {
+        "bookmark": 2325,
+        "impression": 579855,
+        "like": 3223,
+        "quote": 60,
+        "reply": 220,
+        "retweet": 148
+      },
+      "text": "you now get Claude API credits with your MAX plans ($100, or 200 matching your plan) every month, use this to build more personal AI for yourself! \n\nI made an AI homepage that's generated everyday based on sites I read and replaces my 'new tab' page in Chrome https://t.co/VJ6KyOlel8",
+      "url": "https://x.com/trq212/status/2108301668828004396"
+    },
+    {
+      "created_at": "2026-10-08T17:22:10.000Z",
+      "id": "2108246587638202860",
+      "lang": "",
+      "metrics": {
+        "bookmark": 72,
+        "impression": 174549,
+        "like": 538,
+        "quote": 0,
+        "reply": 5,
+        "retweet": 4
+      },
+      "text": "oh the OP's also on Twitter: https://t.co/MLmngNLZBb",
+      "url": "https://x.com/trq212/status/2108246587638202860"
+    },
+    {
+      "created_at": "2026-10-08T17:21:07.000Z",
+      "id": "2108246323707383961",
+      "lang": "",
+      "metrics": {
+        "bookmark": 1576,
+        "impression": 1426436,
+        "like": 11818,
+        "quote": 67,
+        "reply": 137,
+        "retweet": 380
+      },
+      "text": "we should be more ambitious https://t.co/peknhqAn5m",
+      "url": "https://x.com/trq212/status/2108246323707383961"
+    },
+    {
+      "created_at": "2026-10-08T02:26:45.000Z",
+      "id": "2108021248966135891",
+      "lang": "",
+      "metrics": {
+        "bookmark": 54,
+        "impression": 22805,
+        "like": 341,
+        "quote": 4,
+        "reply": 38,
+        "retweet": 13
+      },
+      "text": "and because agents make it easier, almost everyone is operating outside their expertise at some point\n\nbut luckily, you can just ask the model to teach you what you don't know",
+      "url": "https://x.com/trq212/status/2108021248966135891"
+    },
+    {
+      "created_at": "2026-10-08T02:26:45.000Z",
+      "id": "2108021247301062894",
+      "lang": "",
+      "metrics": {
+        "bookmark": 1012,
+        "impression": 214758,
+        "like": 3393,
+        "quote": 51,
+        "reply": 179,
+        "retweet": 136
+      },
+      "text": "the most common failure case I see is when people are working outside their domain of expertise and don't know how to be precise with their prompts and plans, so they have to spend a lot of turns iterating imprecisely https://t.co/mRT3knojCP",
+      "url": "https://x.com/trq212/status/2108021247301062894"
+    },
+    {
+      "created_at": "2026-10-07T22:12:16.000Z",
+      "id": "2107957206327173484",
+      "lang": "",
+      "metrics": {
+        "bookmark": 131,
+        "impression": 46954,
+        "like": 580,
+        "quote": 2,
+        "reply": 49,
+        "retweet": 19
+      },
+      "text": "I think it's probably an incredible time to be a game dev content creator, for many people making games is a form of having fun and they're willing to pay for it! https://t.co/iS08bGZZnJ",
+      "url": "https://x.com/trq212/status/2107957206327173484"
+    },
+    {
+      "created_at": "2026-10-07T18:18:58.000Z",
+      "id": "2107898493234982968",
+      "lang": "",
+      "metrics": {
+        "bookmark": 165,
+        "impression": 117056,
+        "like": 2631,
+        "quote": 10,
+        "reply": 159,
+        "retweet": 60
+      },
+      "text": "We've heard how much people love Haiku and it's back in 5.5, cheaper, faster than ever before. \n\nIn fact it's 10x cheaper than Haiku 4.5 under 100k tokens.\n\nTry it with computer use, workflows and in the API. https://t.co/Jkoed6A3sH",
+      "url": "https://x.com/trq212/status/2107898493234982968"
+    },
+    {
+      "created_at": "2026-10-06T21:16:31.000Z",
+      "id": "2107580787277340835",
+      "lang": "",
+      "metrics": {
+        "bookmark": 7,
+        "impression": 14312,
+        "like": 54,
+        "quote": 1,
+        "reply": 14,
+        "retweet": 1
+      },
+      "text": "there are some tricky technical problems to figure out! \n\nif Claude can only access your files when your computer is online, it might be effectively blocked on doing work until your computer is back on, so perhaps you want some sort of sync but there are edge cases there",
+      "url": "https://x.com/trq212/status/2107580787277340835"
+    },
+    {
+      "created_at": "2026-10-06T21:16:30.000Z",
+      "id": "2107580785456976085",
+      "lang": "",
+      "metrics": {
+        "bookmark": 412,
+        "impression": 97909,
+        "like": 969,
+        "quote": 32,
+        "reply": 130,
+        "retweet": 34
+      },
+      "text": "we're increasingly going to be moving towards Claude's \"brains\" in the cloud and giving Claude \"local hands\" to operate on your computer\n\nI talked about this a bit on latent space https://t.co/m6NVHyweBp",
+      "url": "https://x.com/trq212/status/2107580785456976085"
+    },
+    {
+      "created_at": "2026-10-06T16:14:05.000Z",
+      "id": "2107504677143368163",
+      "lang": "",
+      "metrics": {
+        "bookmark": 933,
+        "impression": 354699,
+        "like": 5632,
+        "quote": 89,
+        "reply": 303,
+        "retweet": 417
+      },
+      "text": "working at a higher level of abstraction has always required understanding the lower level ones, I don't think coding agents changes this",
+      "url": "https://x.com/trq212/status/2107504677143368163"
+    },
+    {
+      "created_at": "2026-10-06T05:22:36.000Z",
+      "id": "2107340728380870868",
+      "lang": "",
+      "metrics": {
+        "bookmark": 544,
+        "impression": 59675,
+        "like": 540,
+        "quote": 4,
+        "reply": 19,
+        "retweet": 19
+      },
+      "text": "if you're getting into game design, there are so many good resources out there to learn from! https://t.co/j3vAtf7nd1",
+      "url": "https://x.com/trq212/status/2107340728380870868"
+    },
+    {
+      "created_at": "2026-10-06T02:18:54.000Z",
+      "id": "2107294499282293017",
+      "lang": "",
+      "metrics": {
+        "bookmark": 2149,
+        "impression": 200118,
+        "like": 1959,
+        "quote": 8,
+        "reply": 100,
+        "retweet": 69
+      },
+      "text": "a big advantage of doing planning like this is that it’s a lot more token efficient compared to raw HTML-\n\nthe model doesn’t need to remake the components or logic to do common things like state machines, diagrams, code snippets, etc. https://t.co/z2LsVJ9D3W",
+      "url": "https://x.com/trq212/status/2107294499282293017"
+    },
+    {
+      "created_at": "2026-10-05T22:00:33.000Z",
+      "id": "2107229483015258493",
+      "lang": "",
+      "metrics": {
+        "bookmark": 617,
+        "impression": 119656,
+        "like": 1276,
+        "quote": 16,
+        "reply": 128,
+        "retweet": 36
+      },
+      "text": "my favorite name for this pattern is \"local hands\", Claude runs in the cloud but can access your files locally- also coming to cowork https://t.co/fLX963TUxY",
+      "url": "https://x.com/trq212/status/2107229483015258493"
+    },
+    {
+      "created_at": "2026-10-05T19:49:50.000Z",
+      "id": "2107196587021840760",
+      "lang": "",
+      "metrics": {
+        "bookmark": 122,
+        "impression": 38273,
+        "like": 185,
+        "quote": 1,
+        "reply": 13,
+        "retweet": 3
+      },
+      "text": "I particularly like the call stacks (got this from @dillon_mulroy) and ability to annotate code snippets https://t.co/t5s7hSdSdx",
+      "url": "https://x.com/trq212/status/2107196587021840760"
+    },
+    {
+      "created_at": "2026-10-05T19:35:29.000Z",
+      "id": "2107192972983075241",
+      "lang": "",
+      "metrics": {
+        "bookmark": 1269,
+        "impression": 56238,
+        "like": 613,
+        "quote": 3,
+        "reply": 25,
+        "retweet": 28
+      },
+      "text": "install it and give me feedback with:\n\nclaude plugin marketplace add anthropics/claude-plugins-community\n\nclaude plugin install html-plan@claude-community\n\nhere's an example: https://t.co/z7yYpPGFe8",
+      "url": "https://x.com/trq212/status/2107192972983075241"
+    },
+    {
+      "created_at": "2026-10-05T19:35:12.000Z",
+      "id": "2107192901537329354",
+      "lang": "",
+      "metrics": {
+        "bookmark": 4739,
+        "impression": 524819,
+        "like": 4665,
+        "quote": 74,
+        "reply": 304,
+        "retweet": 200
+      },
+      "text": "I've been working on a skill that makes better HTML plans in Claude Code. \n\nIt uses simple language, shows code snippets, surfaces questions &amp; makes mockups. Linting reduces the normal failure cases that Claude runs into.\n\nWould love your feedback before shipping more broadly! https://t.co/U2Gb1K37vl",
+      "url": "https://x.com/trq212/status/2107192901537329354"
+    },
+    {
+      "created_at": "2026-10-02T20:29:05.000Z",
+      "id": "2106119299484221762",
+      "lang": "",
+      "metrics": {
+        "bookmark": 1613,
+        "impression": 229463,
+        "like": 2051,
+        "quote": 5,
+        "reply": 107,
+        "retweet": 80
+      },
+      "text": "\"You should know\" is a great way of staying on top of what's possible with Claude and also a great example of the kind of things mods enable.\n\nYou can really make Claude Code yours. https://t.co/En0OhotxQL",
+      "url": "https://x.com/trq212/status/2106119299484221762"
+    }
+  ],
+  "user_id": "352806502"
+}

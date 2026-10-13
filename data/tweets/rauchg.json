@@ -1,0 +1,366 @@
+{
+  "handle": "rauchg",
+  "tweets": [
+    {
+      "created_at": "2026-10-12T22:21:01.000Z",
+      "id": "2109771347064922255",
+      "lang": "",
+      "metrics": {
+        "bookmark": 22,
+        "impression": 17976,
+        "like": 134,
+        "quote": 0,
+        "reply": 15,
+        "retweet": 1
+      },
+      "text": "This is amazing 😂 https://t.co/wuwbLHuLl5",
+      "url": "https://x.com/rauchg/status/2109771347064922255"
+    },
+    {
+      "created_at": "2026-10-12T19:55:39.000Z",
+      "id": "2109734766107099312",
+      "lang": "",
+      "metrics": {
+        "bookmark": 319,
+        "impression": 38766,
+        "like": 569,
+        "quote": 13,
+        "reply": 106,
+        "retweet": 28
+      },
+      "text": "Coding CLIs keep getting more complicated. Daemons, 3 layers of TUIs, client-server architectures.\n\nThe whole point of a CLI is to deliver intelligence with zero friction, and be unix-like.\n\n💾 Try https://t.co/3Z4NESzNKd. It's 6mb, starts in milliseconds, model-agnostic. It's",
+      "url": "https://x.com/rauchg/status/2109734766107099312"
+    },
+    {
+      "created_at": "2026-10-12T18:54:04.000Z",
+      "id": "2109719267344261375",
+      "lang": "",
+      "metrics": {
+        "bookmark": 22,
+        "impression": 18825,
+        "like": 179,
+        "quote": 4,
+        "reply": 28,
+        "retweet": 5
+      },
+      "text": "Muse Wonder on Vercel AI Gateway\nTry with 𝚏𝚡 --𝚖𝚘𝚍𝚎𝚕 𝚖𝚎𝚝𝚊/𝚖𝚞𝚜𝚎-𝚠𝚘𝚗𝚍𝚎𝚛-𝟷.𝟶 https://t.co/OI8lTDKnyZ https://t.co/Ckx651xYUJ",
+      "url": "https://x.com/rauchg/status/2109719267344261375"
+    },
+    {
+      "created_at": "2026-10-12T18:14:35.000Z",
+      "id": "2109709329846984839",
+      "lang": "",
+      "metrics": {
+        "bookmark": 43,
+        "impression": 30822,
+        "like": 288,
+        "quote": 6,
+        "reply": 46,
+        "retweet": 4
+      },
+      "text": "We can do better than Rust https://t.co/1bWTlRiP6O",
+      "url": "https://x.com/rauchg/status/2109709329846984839"
+    },
+    {
+      "created_at": "2026-10-12T17:25:17.000Z",
+      "id": "2109696922189730126",
+      "lang": "",
+      "metrics": {
+        "bookmark": 64,
+        "impression": 64039,
+        "like": 808,
+        "quote": 0,
+        "reply": 39,
+        "retweet": 14
+      },
+      "text": "Incredibly fast progress by Meta https://t.co/NaMTEoDRCs",
+      "url": "https://x.com/rauchg/status/2109696922189730126"
+    },
+    {
+      "created_at": "2026-10-11T14:58:51.000Z",
+      "id": "2109297685392175488",
+      "lang": "",
+      "metrics": {
+        "bookmark": 2260,
+        "impression": 220384,
+        "like": 3309,
+        "quote": 8,
+        "reply": 76,
+        "retweet": 137
+      },
+      "text": "So cool. The future of learning https://t.co/cT6crizjKp",
+      "url": "https://x.com/rauchg/status/2109297685392175488"
+    },
+    {
+      "created_at": "2026-10-10T21:49:28.000Z",
+      "id": "2109038632518782989",
+      "lang": "",
+      "metrics": {
+        "bookmark": 410,
+        "impression": 136999,
+        "like": 4029,
+        "quote": 64,
+        "reply": 239,
+        "retweet": 253
+      },
+      "text": "All plausible science fiction will be realized within our lifetime. If you’re reading this, you’re one of the luckiest humans to have ever been born (if we play our cards right.)",
+      "url": "https://x.com/rauchg/status/2109038632518782989"
+    },
+    {
+      "created_at": "2026-10-10T01:35:12.000Z",
+      "id": "2108733051283050964",
+      "lang": "",
+      "metrics": {
+        "bookmark": 128,
+        "impression": 59447,
+        "like": 619,
+        "quote": 34,
+        "reply": 160,
+        "retweet": 37
+      },
+      "text": "Some interesting machine &amp; agent Vercel traffic stats.\n\n• Across the entire Vercel network, 58.18% traffic is bot-originated (last 30d). This was 32% in Jan 2024.\n\n• 60%+ of deployments on Vercel are now agentic, up from ~3% in Jan 2026.\n\n• Up to 83% of pageviews are now",
+      "url": "https://x.com/rauchg/status/2108733051283050964"
+    },
+    {
+      "created_at": "2026-10-09T21:20:47.000Z",
+      "id": "2108669027363295323",
+      "lang": "",
+      "metrics": {
+        "bookmark": 210,
+        "impression": 48964,
+        "like": 595,
+        "quote": 28,
+        "reply": 120,
+        "retweet": 32
+      },
+      "text": "It's incredible to watch a new kind of economy be born. Agents purchasing infrastructure products and services. We've been shocked by how often they buy from our marketplace via our CLI already. We're now extending this to domains.\n\nAgents can now go full stack, from idea to https://t.co/jMLKzDX9dy",
+      "url": "https://x.com/rauchg/status/2108669027363295323"
+    },
+    {
+      "created_at": "2026-10-09T03:29:25.000Z",
+      "id": "2108399406009798764",
+      "lang": "",
+      "metrics": {
+        "bookmark": 129,
+        "impression": 70883,
+        "like": 1504,
+        "quote": 20,
+        "reply": 91,
+        "retweet": 56
+      },
+      "text": "Few things more enjoyable in work and life than discovering new talent. Seeing greatness in people, sometimes even before they fully see it themselves.",
+      "url": "https://x.com/rauchg/status/2108399406009798764"
+    },
+    {
+      "created_at": "2026-10-07T22:32:37.000Z",
+      "id": "2107962327169675566",
+      "lang": "",
+      "metrics": {
+        "bookmark": 251,
+        "impression": 52159,
+        "like": 946,
+        "quote": 23,
+        "reply": 156,
+        "retweet": 53
+      },
+      "text": "One thing the engineering community will (re)discover is that every program can be ① hardened (edge cases squashed, inputs tightened, errors handled) and ② optimized (profiled, benchmarked, rewritten) basically ad infinitum.\n\nThere are real costs in every direction: time,",
+      "url": "https://x.com/rauchg/status/2107962327169675566"
+    },
+    {
+      "created_at": "2026-10-07T15:50:46.000Z",
+      "id": "2107861196506595398",
+      "lang": "",
+      "metrics": {
+        "bookmark": 30,
+        "impression": 48984,
+        "like": 917,
+        "quote": 5,
+        "reply": 60,
+        "retweet": 14
+      },
+      "text": "gm from the best city in the world https://t.co/aPDFNR7KhT",
+      "url": "https://x.com/rauchg/status/2107861196506595398"
+    },
+    {
+      "created_at": "2026-10-06T22:57:41.000Z",
+      "id": "2107606246350266469",
+      "lang": "",
+      "metrics": {
+        "bookmark": 102,
+        "impression": 30941,
+        "like": 285,
+        "quote": 4,
+        "reply": 72,
+        "retweet": 11
+      },
+      "text": "“Thinking fast and s̶l̶o̶w̶ a bit less fast under a confidence threshold.”\n\nA very simple feature that I think will be extremely impactful for at-scale AI decision-making. https://t.co/ivWDKynSpm",
+      "url": "https://x.com/rauchg/status/2107606246350266469"
+    },
+    {
+      "created_at": "2026-10-06T12:35:04.000Z",
+      "id": "2107449561451274688",
+      "lang": "",
+      "metrics": {
+        "bookmark": 149,
+        "impression": 216598,
+        "like": 7296,
+        "quote": 70,
+        "reply": 300,
+        "retweet": 291
+      },
+      "text": "At this rate AI will get us GTA 7 before GTA 6",
+      "url": "https://x.com/rauchg/status/2107449561451274688"
+    },
+    {
+      "created_at": "2026-10-05T14:44:46.000Z",
+      "id": "2107119811444748555",
+      "lang": "",
+      "metrics": {
+        "bookmark": 2925,
+        "impression": 285729,
+        "like": 2506,
+        "quote": 48,
+        "reply": 181,
+        "retweet": 134
+      },
+      "text": "Introducing gdp-ts: Ghosts of Departed Proofs for TypeScript.\n\ngdp-ts is a library, linter and AI skill for safer API design. Under this contract, sensitive functions require 'proofs' that the caller performed an authorization check.\n\nThe typechecker verifies these proofs at https://t.co/99MazN9CsB",
+      "url": "https://x.com/rauchg/status/2107119811444748555"
+    },
+    {
+      "created_at": "2026-10-04T23:13:31.000Z",
+      "id": "2106885457212825983",
+      "lang": "",
+      "metrics": {
+        "bookmark": 108,
+        "impression": 46225,
+        "like": 351,
+        "quote": 2,
+        "reply": 67,
+        "retweet": 11
+      },
+      "text": "It’s hard to fathom https://t.co/3Z4NESzNKd getting even faster, but it’s now… much faster 😂\n\nAs models speed up (as with Astra 𝚞𝚕𝚝𝚛𝚊𝚏𝚊𝚜𝚝), harness overhead matters more and more.\n\nNext release will feature even better performance for session storage and retrieval, and https://t.co/6ld7QRnhrZ",
+      "url": "https://x.com/rauchg/status/2106885457212825983"
+    },
+    {
+      "created_at": "2026-10-04T21:47:38.000Z",
+      "id": "2106863842450133114",
+      "lang": "",
+      "metrics": {
+        "bookmark": 984,
+        "impression": 356730,
+        "like": 3194,
+        "quote": 65,
+        "reply": 186,
+        "retweet": 151
+      },
+      "text": "DHH is fundamentally right about Rust. For context, Vercel has been undergoing a Rust-ification (carcinization, technically 🦀) for a while.\n\nOne of the first projects we migrated was Turborepo, from Go to Rust¹. The migration completed, but the RoI was actually quite",
+      "url": "https://x.com/rauchg/status/2106863842450133114"
+    },
+    {
+      "created_at": "2026-10-04T20:45:01.000Z",
+      "id": "2106848085267902815",
+      "lang": "",
+      "metrics": {
+        "bookmark": 363,
+        "impression": 113689,
+        "like": 1681,
+        "quote": 26,
+        "reply": 180,
+        "retweet": 67
+      },
+      "text": "Working on a new little project. The 𝚁𝙴𝙰𝙳𝙼𝙴 is fully written by hand, because it's for human consumption. The documentation internals are AI English, because they're for agents.\n\nThis little rule of thumb can make the world better. Blogs, tweets, READMEs: human",
+      "url": "https://x.com/rauchg/status/2106848085267902815"
+    },
+    {
+      "created_at": "2026-10-03T23:18:16.000Z",
+      "id": "2106524265034162421",
+      "lang": "",
+      "metrics": {
+        "bookmark": 63,
+        "impression": 110695,
+        "like": 1402,
+        "quote": 6,
+        "reply": 66,
+        "retweet": 15
+      },
+      "text": "Summer is finally here! 🌞⛱️ https://t.co/ZBeqhh3ZwF",
+      "url": "https://x.com/rauchg/status/2106524265034162421"
+    },
+    {
+      "created_at": "2026-10-03T22:47:34.000Z",
+      "id": "2106516538836856945",
+      "lang": "",
+      "metrics": {
+        "bookmark": 333,
+        "impression": 91839,
+        "like": 1039,
+        "quote": 37,
+        "reply": 144,
+        "retweet": 76
+      },
+      "text": "Security will become a larger and larger function in software companies. Security is verification engineering (eg: “my code is probably memory-safe”), as well as capital allocation (“what surface should I throw most tokens at?”)\n\nFor startups, it’s a challenge and opportunity. As",
+      "url": "https://x.com/rauchg/status/2106516538836856945"
+    },
+    {
+      "created_at": "2026-10-03T21:55:36.000Z",
+      "id": "2106503460384538793",
+      "lang": "",
+      "metrics": {
+        "bookmark": 688,
+        "impression": 507891,
+        "like": 6049,
+        "quote": 226,
+        "reply": 687,
+        "retweet": 379
+      },
+      "text": "AI will make everything free, including itself. The last domino to fall will be free energy, which is humanity’s final frontier.",
+      "url": "https://x.com/rauchg/status/2106503460384538793"
+    },
+    {
+      "created_at": "2026-10-03T16:52:26.000Z",
+      "id": "2106427165818687499",
+      "lang": "",
+      "metrics": {
+        "bookmark": 12,
+        "impression": 20356,
+        "like": 93,
+        "quote": 0,
+        "reply": 3,
+        "retweet": 2
+      },
+      "text": "This\nhttps://t.co/JNupoTzcXG",
+      "url": "https://x.com/rauchg/status/2106427165818687499"
+    },
+    {
+      "created_at": "2026-10-03T15:12:32.000Z",
+      "id": "2106402024804020657",
+      "lang": "",
+      "metrics": {
+        "bookmark": 533,
+        "impression": 247608,
+        "like": 2065,
+        "quote": 46,
+        "reply": 107,
+        "retweet": 150
+      },
+      "text": "We’ve confirmed a KVM 0day through our Vercel Sandbox bounty program. Affecting the industry’s gold standard solution for Linux virtualization. \n\n2026 is wild! Thankful to Paulos and other researchers helping us make the most secure sandbox for agents. Full writeup coming. https://t.co/75dXWh9okX",
+      "url": "https://x.com/rauchg/status/2106402024804020657"
+    },
+    {
+      "created_at": "2026-10-02T21:48:35.000Z",
+      "id": "2106139305131569178",
+      "lang": "",
+      "metrics": {
+        "bookmark": 150,
+        "impression": 49915,
+        "like": 361,
+        "quote": 1,
+        "reply": 23,
+        "retweet": 12
+      },
+      "text": "Wonderful writeup on Jev + Python https://t.co/imdwexC2nn",
+      "url": "https://x.com/rauchg/status/2106139305131569178"
+    }
+  ],
+  "user_id": "15540222"
+}

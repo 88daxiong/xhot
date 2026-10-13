@@ -1,0 +1,306 @@
+{
+  "handle": "kimi_moonshot",
+  "tweets": [
+    {
+      "created_at": "2026-09-22T12:20:52.000Z",
+      "id": "2102372557190230244",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 215,
+        "impression": 84044,
+        "like": 992,
+        "quote": 24,
+        "reply": 71,
+        "retweet": 71
+      },
+      "text": "Meet the new Kimi Browser Extension, formerly Kimi WebBridge.\n\nFrom your browser sidebar, you can chat with Kimi to navigate websites, fill out forms, and get things done.\n\nFor repetitive tasks, record your steps once and save them as a skill. Kimi can take it from there next time.\n\nAvailable now on https://t.co/3u29cgYcJQ and the Chrome Web Store.",
+      "url": "https://x.com/Kimi_Moonshot/status/2102372557190230244"
+    },
+    {
+      "created_at": "2026-09-22T03:51:03.000Z",
+      "id": "2102244258531213596",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 83,
+        "impression": 979431,
+        "like": 958,
+        "quote": 17,
+        "reply": 38,
+        "retweet": 57
+      },
+      "text": "Kimi K3 is now on Amazon Bedrock!\n\nRun coding, document analysis, and extended agent workflows with Bedrock's access, encryption, and auditing controls.  Explicit prompt caching supported.\n\nStart building with K3 on AWS 👉 https://t.co/vm32dU0TN1 https://t.co/GxEGrgFAwL",
+      "url": "https://x.com/Kimi_Moonshot/status/2102244258531213596"
+    },
+    {
+      "created_at": "2026-09-09T10:40:56.000Z",
+      "id": "2097636366544937067",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 144,
+        "impression": 91685,
+        "like": 1055,
+        "quote": 18,
+        "reply": 100,
+        "retweet": 87
+      },
+      "text": "Remote Control is now live in Kimi Work.\n\nLeave Kimi Work running on your computer and keep things moving from your phone. Work anywhere, anytime with Kimi Work. https://t.co/L1aFNfxq9Z",
+      "url": "https://x.com/Kimi_Moonshot/status/2097636366544937067"
+    },
+    {
+      "created_at": "2026-08-19T07:35:22.000Z",
+      "id": "2089979521412034787",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 398,
+        "impression": 110526,
+        "like": 1189,
+        "quote": 12,
+        "reply": 88,
+        "retweet": 77
+      },
+      "text": "Kimi Work for Financial Analysts - Tutorial #2\n\nUse Kimi Work for 3 common investment research tasks:\n- Build a live investor dashboard\n- Update financial models in spreadsheet\n- Process and generate reports in batch\n\nStay tuned for more Kimi Work workflows! https://t.co/nnvBnapqVu",
+      "url": "https://x.com/Kimi_Moonshot/status/2089979521412034787"
+    },
+    {
+      "created_at": "2026-08-11T08:20:58.000Z",
+      "id": "2087091895822631178",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 92,
+        "impression": 140893,
+        "like": 1225,
+        "quote": 8,
+        "reply": 51,
+        "retweet": 60
+      },
+      "text": "Kimi K3 is now live on @databricks! https://t.co/wo5FGV8kzz https://t.co/2RIlJPFH9n",
+      "url": "https://x.com/Kimi_Moonshot/status/2087091895822631178"
+    },
+    {
+      "created_at": "2026-08-03T11:51:51.000Z",
+      "id": "2084245860339298423",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 907,
+        "impression": 223808,
+        "like": 2896,
+        "quote": 54,
+        "reply": 167,
+        "retweet": 231
+      },
+      "text": "Build Slides with Kimi Work - Tutorial #1.\n\nKimi Slides handles the entire slide-building process:\n- Clear structure and research, powered by Kimi K3\n- Cohesive design, including polished charts and SmartArts\n- Editable and ready to download\n\nLet us know what you'd like to see next in the comments!",
+      "url": "https://x.com/Kimi_Moonshot/status/2084245860339298423"
+    },
+    {
+      "created_at": "2026-07-28T15:00:02.000Z",
+      "id": "2082118893741490284",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 732,
+        "impression": 250969,
+        "like": 2408,
+        "quote": 64,
+        "reply": 191,
+        "retweet": 196
+      },
+      "text": "It takes a crew to land a moonshot. Join the Kimi Ambassador Program.\n\nAnyone who's turned an untested idea into reality knows: moonshots are never a solo mission. It takes a crew.\n\nThe Kimi Global Ambassador Program finds likeminded individuals on the same path, bringing the crew together. We hope that you:\n\n🌙 Are influential in your own community, whether it be in tech, entrepreneurship, content creation, or on campus\n🌙 Have implemented Kimi K3 into products, agents, workflows, teams, and communities\n🌙 Are willing to share your experiences and passions to a broader community\n\nApply here: https://t.co/4IqlGEbfIx",
+      "url": "https://x.com/Kimi_Moonshot/status/2082118893741490284"
+    },
+    {
+      "created_at": "2026-07-27T18:45:20.000Z",
+      "id": "2081813202514681878",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 588,
+        "impression": 154722,
+        "like": 2453,
+        "quote": 37,
+        "reply": 71,
+        "retweet": 232
+      },
+      "text": "We are releasing PerceptionBench, a benchmark that isolates visual perception and evaluates it as a set of atomic capabilities - discovered from how today's models fail, rather than defined in advance. \n\nFrom frontier-model failures across 42 benchmarks, we derive 10 atomic perceptual capabilities and construct 3,000 verified questions, each isolating a single capability and answerable by looking, with no reasoning or external knowledge required.  \n\nBlog: https://t.co/I1QU83CiYv \nGitHub: https://t.co/F5E0VjYgh0\nHugingface: https://t.co/zMdyQD8HO4",
+      "url": "https://x.com/Kimi_Moonshot/status/2081813202514681878"
+    },
+    {
+      "created_at": "2026-07-27T18:12:28.000Z",
+      "id": "2081804933188501886",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 138,
+        "impression": 133751,
+        "like": 1472,
+        "quote": 10,
+        "reply": 43,
+        "retweet": 108
+      },
+      "text": "Kimi K3 is now live on @togethercompute!  \n\nHappy to have Together AI as our day0 launch partner, giving developers immediate access to K3 through high-throughput inference optimized for coding agents and production workloads.  \n\nA huge thank-you to the Together AI team for moving fast and making this launch possible!",
+      "url": "https://x.com/Kimi_Moonshot/status/2081804933188501886"
+    },
+    {
+      "created_at": "2026-07-27T16:29:25.000Z",
+      "id": "2081778998494007793",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 93,
+        "impression": 103120,
+        "like": 913,
+        "quote": 13,
+        "reply": 30,
+        "retweet": 70
+      },
+      "text": "Kimi K3 is now available on @digitalocean 's Serverless Inference!  \nDevelopers can start building with our most capable model in minutes. https://t.co/mDDv2zBpJg https://t.co/rsSBJ6f9MZ",
+      "url": "https://x.com/Kimi_Moonshot/status/2081778998494007793"
+    },
+    {
+      "created_at": "2026-07-27T15:59:28.000Z",
+      "id": "2081771462676123810",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 109,
+        "impression": 142381,
+        "like": 1484,
+        "quote": 10,
+        "reply": 27,
+        "retweet": 95
+      },
+      "text": "Kimi K3 is now available on @nebiustf!\n\nExcited to have Nebius as our Day 0 launch partner and bring fast, reliable access to Kimi K3 to more users. https://t.co/0GgBHGYaSL https://t.co/O22KeSo2HU",
+      "url": "https://x.com/Kimi_Moonshot/status/2081771462676123810"
+    },
+    {
+      "created_at": "2026-07-27T15:45:31.000Z",
+      "id": "2081767950588223507",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 155,
+        "impression": 150879,
+        "like": 1616,
+        "quote": 10,
+        "reply": 33,
+        "retweet": 111
+      },
+      "text": "Happy to have @FireworksAI_HQ as our day0 launch partner and bring Kimi K3 to more developers.\n\nWith Fireworks, you can now deploy and fine-tune the 2.8T Kimi K3 model with just a few clicks! https://t.co/mwQKjvXGdl https://t.co/vXnaBtbSFA",
+      "url": "https://x.com/Kimi_Moonshot/status/2081767950588223507"
+    },
+    {
+      "created_at": "2026-07-27T15:44:55.000Z",
+      "id": "2081767800419520647",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 68,
+        "impression": 87035,
+        "like": 851,
+        "quote": 2,
+        "reply": 17,
+        "retweet": 50
+      },
+      "text": "Excited to have @baseten as our Day 0 launch partner and bring K3 to more users!\n\nBaseten's Model APIs provide fast, reliable access to Kimi K3. https://t.co/2il914s8hb https://t.co/X9lz0WoapY",
+      "url": "https://x.com/Kimi_Moonshot/status/2081767800419520647"
+    },
+    {
+      "created_at": "2026-07-27T15:44:05.000Z",
+      "id": "2081767591887122564",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 128,
+        "impression": 131288,
+        "like": 1631,
+        "quote": 6,
+        "reply": 25,
+        "retweet": 87
+      },
+      "text": "Excited to have @modal as Day 0 launch partner for Kimi K3!\n\nThey trained a custom DFlash speculator for K3's architecture, delivering faster inference with no quality loss. https://t.co/AnimaEaadx https://t.co/Fh7KT2R6rh",
+      "url": "https://x.com/Kimi_Moonshot/status/2081767591887122564"
+    },
+    {
+      "created_at": "2026-07-27T15:26:11.000Z",
+      "id": "2081763086281973847",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 1073,
+        "impression": 409851,
+        "like": 4031,
+        "quote": 63,
+        "reply": 65,
+        "retweet": 480
+      },
+      "text": "We've open-sourced MoonEP, our high-performance communication library for distributed MoE workloads.\n \nBuilt to make expert-parallel communication more efficient at scale, MoonEP helps reduce communication overhead in large MoE training and inference systems.\n\nExplore on GitHub: \nhttps://t.co/h2Rcwg88dQ",
+      "url": "https://x.com/Kimi_Moonshot/status/2081763086281973847"
+    },
+    {
+      "created_at": "2026-07-27T15:25:45.000Z",
+      "id": "2081762978391843020",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 1553,
+        "impression": 192651,
+        "like": 3694,
+        "quote": 49,
+        "reply": 61,
+        "retweet": 472
+      },
+      "text": "We've open-sourced AgentENV in collaboration with kvcache-ai.\n\nAgentENV is a distributed system for running agent environments at scale. Its components power agentic RL training for Kimi K3, with fast snapshot, resume, and fork support for large-scale parallel agent workflows.\n\nExplore on GitHub: \nhttps://t.co/Dsxyw5rLqm",
+      "url": "https://x.com/Kimi_Moonshot/status/2081762978391843020"
+    },
+    {
+      "created_at": "2026-07-27T15:25:03.000Z",
+      "id": "2081762799202746420",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 859,
+        "impression": 176771,
+        "like": 4078,
+        "quote": 42,
+        "reply": 53,
+        "retweet": 414
+      },
+      "text": "We've open-sourced FlashKDA, our high-performance CUTLASS-based implementation of Kimi Delta Attention kernels.\n\nIt delivers 1.72×–2.22× prefill speedup over the flash-linear-attention baseline on H20, and works as a drop-in backend for flash-linear-attention.\n\nExplore on GitHub: \nhttps://t.co/QScjWsJqSy",
+      "url": "https://x.com/Kimi_Moonshot/status/2081762799202746420"
+    },
+    {
+      "created_at": "2026-07-27T15:14:40.000Z",
+      "id": "2081760186235289764",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 14085,
+        "impression": 14633833,
+        "like": 45864,
+        "quote": 2338,
+        "reply": 1534,
+        "retweet": 7183
+      },
+      "text": "Releasing the model weights and technical report of Kimi K3.\n\nKimi K3 is our most capable model: a 2.8T MoE model with native visual understanding and a 1M-token context window.\n\nNew model architecture: 2.5x the intelligence per unit of compute, not just more params.\n\nAlongside Kimi K3, we're opening up more of the stack behind it — high-performance attention kernels, MoE communication library, and infrastructure for running agent environments at scale.\n\nModel weights: https://t.co/7m7eEg6Y0B\nTech report:  https://t.co/yeu6cjpMCT\nTech blog: https://t.co/YTfiMSNM1f",
+      "url": "https://x.com/Kimi_Moonshot/status/2081760186235289764"
+    },
+    {
+      "created_at": "2026-07-27T15:03:18.000Z",
+      "id": "2081757327146045450",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 1242,
+        "impression": 1123132,
+        "like": 13689,
+        "quote": 384,
+        "reply": 422,
+        "retweet": 996
+      },
+      "text": "Kimi K3 (open weights, coming soon) https://t.co/paxyDz2pEv",
+      "url": "https://x.com/Kimi_Moonshot/status/2081757327146045450"
+    },
+    {
+      "created_at": "2026-07-19T14:52:55.000Z",
+      "id": "2078855608565207130",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 4428,
+        "impression": 14161637,
+        "like": 38201,
+        "quote": 2083,
+        "reply": 1542,
+        "retweet": 2616
+      },
+      "text": "Kimi K3 has received far more love than we expected, and our GPUs are feeling it.\n\nOver the past 48 hours, demand has pushed close to the limits of our current capacity. To protect the experience of existing subscribers, we're temporarily pausing new subscriptions and prioritizing compute for current members. Existing subscribed users are not affected.\n\nWe're adding capacity as fast as we can and will reopen new subscription spots in batches.\n\nGoing forward, we'll also split membership into two more focused plans: Kimi Membership for Kimi Web, App, and Work; and Kimi Code Membership for coding workflows. This will help us match compute more precisely and keep the experience stable.\n\nThank you for your patience and understanding!",
+      "url": "https://x.com/Kimi_Moonshot/status/2078855608565207130"
+    }
+  ],
+  "user_id": "1863959670169501696"
+}

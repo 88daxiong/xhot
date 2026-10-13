@@ -1,0 +1,1882 @@
+{
+  "accounts": [
+    {
+      "domains": [
+        "ai"
+      ],
+      "followers": 99621,
+      "followers_ts": "20261013_145656",
+      "groups": [
+        "Agent 实战派"
+      ],
+      "handle": "_catwu",
+      "name": "cat",
+      "tweets_stored": 22,
+      "user_id": "974757274206978049",
+      "zh": false
+    },
+    {
+      "domains": [
+        "money"
+      ],
+      "followers": 69072,
+      "followers_ts": "20261013_141448",
+      "groups": [],
+      "handle": "ai_jasonyu",
+      "name": "鱼总聊AI",
+      "tweets_stored": 25,
+      "user_id": "756319701861601281",
+      "zh": true
+    },
+    {
+      "domains": [
+        "ai"
+      ],
+      "followers": 864132,
+      "followers_ts": "20261013_145656",
+      "groups": [
+        "官方机构"
+      ],
+      "handle": "aiatmeta",
+      "name": "AI at Meta",
+      "tweets_stored": 24,
+      "user_id": "1034844617261248512",
+      "zh": false
+    },
+    {
+      "domains": [
+        "ai",
+        "money"
+      ],
+      "followers": 67691,
+      "followers_ts": "20261013_145656",
+      "groups": [
+        "Agent 实战派"
+      ],
+      "handle": "alchainhust",
+      "name": "花叔",
+      "tweets_stored": 25,
+      "user_id": "232519529",
+      "zh": true
+    },
+    {
+      "domains": [
+        "ai"
+      ],
+      "followers": 152336,
+      "followers_ts": "20261013_145656",
+      "groups": [
+        "领军人物"
+      ],
+      "handle": "alexalbert__",
+      "name": "Alex Albert",
+      "tweets_stored": 25,
+      "user_id": "1380719534970040322",
+      "zh": false
+    },
+    {
+      "domains": [
+        "money"
+      ],
+      "followers": 1080291,
+      "followers_ts": "20261013_135532",
+      "groups": [],
+      "handle": "alexhormozi",
+      "name": "Alex Hormozi",
+      "tweets_stored": 20,
+      "user_id": "1417686048579018753",
+      "zh": false
+    },
+    {
+      "domains": [
+        "growth"
+      ],
+      "followers": 356221,
+      "followers_ts": "20261013_135532",
+      "groups": [],
+      "handle": "aliabdaal",
+      "name": "Ali Abdaal",
+      "tweets_stored": 24,
+      "user_id": "30436279",
+      "zh": false
+    },
+    {
+      "domains": [
+        "ai"
+      ],
+      "followers": 296131,
+      "followers_ts": "20261013_145656",
+      "groups": [
+        "官方机构"
+      ],
+      "handle": "alibaba_qwen",
+      "name": "Qwen",
+      "tweets_stored": 25,
+      "user_id": "1753339277386342400",
+      "zh": false
+    },
+    {
+      "domains": [
+        "ai"
+      ],
+      "followers": 497956,
+      "followers_ts": "20261013_145656",
+      "groups": [
+        "Agent 实战派"
+      ],
+      "handle": "amasad",
+      "name": "Amjad Masad",
+      "tweets_stored": 25,
+      "user_id": "166138615",
+      "zh": false
+    },
+    {
+      "domains": [
+        "ai"
+      ],
+      "followers": 1924619,
+      "followers_ts": "20261013_145656",
+      "groups": [
+        "领军人物"
+      ],
+      "handle": "andrewyng",
+      "name": "Andrew Ng",
+      "tweets_stored": 25,
+      "user_id": "216939636",
+      "zh": false
+    },
+    {
+      "domains": [
+        "ai"
+      ],
+      "followers": 1791826,
+      "followers_ts": "20261013_145656",
+      "groups": [
+        "官方机构"
+      ],
+      "handle": "anthropicai",
+      "name": "Anthropic",
+      "tweets_stored": 25,
+      "user_id": "1353836358901501952",
+      "zh": false
+    },
+    {
+      "domains": [
+        "ai"
+      ],
+      "followers": 1167997,
+      "followers_ts": "20261013_145656",
+      "groups": [
+        "领军人物"
+      ],
+      "handle": "aravsrinivas",
+      "name": "Aravind Srinivas",
+      "tweets_stored": 25,
+      "user_id": "759894532649545732",
+      "zh": false
+    },
+    {
+      "domains": [
+        "ai"
+      ],
+      "followers": 601327,
+      "followers_ts": "20261013_145656",
+      "groups": [
+        "领军人物"
+      ],
+      "handle": "bcherny",
+      "name": "Boris Cherny",
+      "tweets_stored": 25,
+      "user_id": "159337660",
+      "zh": false
+    },
+    {
+      "domains": [
+        "growth"
+      ],
+      "followers": 499028,
+      "followers_ts": "20261013_135532",
+      "groups": [],
+      "handle": "briantracy",
+      "name": "Brian Tracy",
+      "tweets_stored": 25,
+      "user_id": "16534711",
+      "zh": false
+    },
+    {
+      "domains": [
+        "growth"
+      ],
+      "followers": 34543,
+      "followers_ts": "20261013_141448",
+      "groups": [],
+      "handle": "cellinlab",
+      "name": "Cell 细胞",
+      "tweets_stored": 25,
+      "user_id": "1131442257675083777",
+      "zh": true
+    },
+    {
+      "domains": [
+        "ai"
+      ],
+      "followers": 751339,
+      "followers_ts": "20261013_145656",
+      "groups": [
+        "官方机构"
+      ],
+      "handle": "chatgpt",
+      "name": "ChatGPT",
+      "tweets_stored": 25,
+      "user_id": "1714438092655149056",
+      "zh": false
+    },
+    {
+      "domains": [
+        "ai"
+      ],
+      "followers": 48514,
+      "followers_ts": "20261013_145656",
+      "groups": [
+        "官方机构"
+      ],
+      "handle": "claude_code",
+      "name": "Claude Code Community",
+      "tweets_stored": 25,
+      "user_id": "1903660637177470976",
+      "zh": false
+    },
+    {
+      "domains": [
+        "ai"
+      ],
+      "followers": 1898255,
+      "followers_ts": "20261013_145656",
+      "groups": [
+        "官方机构"
+      ],
+      "handle": "claudeai",
+      "name": "Claude",
+      "tweets_stored": 25,
+      "user_id": "1943306828697550848",
+      "zh": false
+    },
+    {
+      "domains": [
+        "ai"
+      ],
+      "followers": 83803,
+      "followers_ts": "20261013_145656",
+      "groups": [
+        "官方机构"
+      ],
+      "handle": "claudecodelog",
+      "name": "Claude Code Changelog",
+      "tweets_stored": 25,
+      "user_id": "1952842390525693952",
+      "zh": false
+    },
+    {
+      "domains": [
+        "ai"
+      ],
+      "followers": 727229,
+      "followers_ts": "20261013_145656",
+      "groups": [
+        "领军人物"
+      ],
+      "handle": "clementdelangue",
+      "name": "clem 🤗",
+      "tweets_stored": 11,
+      "user_id": "186420551",
+      "zh": false
+    },
+    {
+      "domains": [
+        "money"
+      ],
+      "followers": 715773,
+      "followers_ts": "20261013_135532",
+      "groups": [],
+      "handle": "codie_sanchez",
+      "name": "Codie Sanchez",
+      "tweets_stored": 24,
+      "user_id": "258512916",
+      "zh": false
+    },
+    {
+      "domains": [
+        "ai"
+      ],
+      "followers": 488241,
+      "followers_ts": "20261013_145656",
+      "groups": [
+        "官方机构"
+      ],
+      "handle": "cursor_ai",
+      "name": "Cursor",
+      "tweets_stored": 25,
+      "user_id": "1695890961094909952",
+      "zh": false
+    },
+    {
+      "domains": [
+        "money"
+      ],
+      "followers": 12995761,
+      "followers_ts": "20261013_135532",
+      "groups": [],
+      "handle": "cz_binance",
+      "name": "CZ 🔶 BNB",
+      "tweets_stored": 24,
+      "user_id": "902926941413453824",
+      "zh": false
+    },
+    {
+      "domains": [
+        "ai"
+      ],
+      "followers": 847099,
+      "followers_ts": "20261013_145656",
+      "groups": [
+        "领军人物"
+      ],
+      "handle": "darioamodei",
+      "name": "Dario Amodei",
+      "tweets_stored": 23,
+      "user_id": "874126509245476864",
+      "zh": false
+    },
+    {
+      "domains": [
+        "growth"
+      ],
+      "followers": 480747,
+      "followers_ts": "20261013_135532",
+      "groups": [],
+      "handle": "david_perell",
+      "name": "David Perell",
+      "tweets_stored": 11,
+      "user_id": "240049622",
+      "zh": false
+    },
+    {
+      "domains": [
+        "money"
+      ],
+      "followers": 43947,
+      "followers_ts": "20261013_141448",
+      "groups": [],
+      "handle": "decohack",
+      "name": "viggo",
+      "tweets_stored": 25,
+      "user_id": "2913570330",
+      "zh": true
+    },
+    {
+      "domains": [
+        "ai"
+      ],
+      "followers": 1141154,
+      "followers_ts": "20261013_145656",
+      "groups": [
+        "官方机构"
+      ],
+      "handle": "deepseek_ai",
+      "name": "DeepSeek",
+      "tweets_stored": 25,
+      "user_id": "1714580962569588736",
+      "zh": false
+    },
+    {
+      "domains": [
+        "ai"
+      ],
+      "followers": 1951121,
+      "followers_ts": "20261013_145656",
+      "groups": [
+        "领军人物"
+      ],
+      "handle": "demishassabis",
+      "name": "Demis Hassabis",
+      "tweets_stored": 22,
+      "user_id": "1482581556",
+      "zh": false
+    },
+    {
+      "domains": [
+        "money"
+      ],
+      "followers": 446884,
+      "followers_ts": "20261013_135532",
+      "groups": [],
+      "handle": "dickiebush",
+      "name": "Dickie Bush",
+      "tweets_stored": 25,
+      "user_id": "1286341463597604864",
+      "zh": false
+    },
+    {
+      "domains": [
+        "ai"
+      ],
+      "followers": 258183,
+      "followers_ts": "20261013_145656",
+      "groups": [
+        "AI 博主"
+      ],
+      "handle": "dotey",
+      "name": "宝玉",
+      "tweets_stored": 24,
+      "user_id": "3178231",
+      "zh": true
+    },
+    {
+      "domains": [
+        "ai"
+      ],
+      "followers": 597938,
+      "followers_ts": "20261013_145656",
+      "groups": [
+        "领军人物"
+      ],
+      "handle": "drjimfan",
+      "name": "Jim Fan",
+      "tweets_stored": 25,
+      "user_id": "1007413134",
+      "zh": false
+    },
+    {
+      "domains": [
+        "money"
+      ],
+      "followers": 205465,
+      "followers_ts": "20261013_135532",
+      "groups": [],
+      "handle": "dvassallo",
+      "name": "Daniel Vassallo",
+      "tweets_stored": 25,
+      "user_id": "24179991",
+      "zh": false
+    },
+    {
+      "domains": [
+        "ai"
+      ],
+      "followers": 241507236,
+      "followers_ts": "20261013_145656",
+      "groups": [
+        "领军人物"
+      ],
+      "handle": "elonmusk",
+      "name": "Elon Musk",
+      "tweets_stored": 25,
+      "user_id": "44196397",
+      "zh": false
+    },
+    {
+      "domains": [
+        "ai"
+      ],
+      "followers": 402605,
+      "followers_ts": "20261013_145656",
+      "groups": [
+        "AI 博主"
+      ],
+      "handle": "emollick",
+      "name": "Ethan Mollick",
+      "tweets_stored": 25,
+      "user_id": "39125788",
+      "zh": false
+    },
+    {
+      "domains": [
+        "ai"
+      ],
+      "followers": 94851,
+      "followers_ts": "20261013_145656",
+      "groups": [
+        "Agent 实战派"
+      ],
+      "handle": "ericzakariasson",
+      "name": "eric zakariasson",
+      "tweets_stored": 25,
+      "user_id": "505835394",
+      "zh": false
+    },
+    {
+      "domains": [
+        "money"
+      ],
+      "followers": 3096225,
+      "followers_ts": "20261013_135532",
+      "groups": [],
+      "handle": "garyvee",
+      "name": "Gary Vaynerchuk",
+      "tweets_stored": 25,
+      "user_id": "5768872",
+      "zh": false
+    },
+    {
+      "domains": [
+        "ai"
+      ],
+      "followers": 1069945,
+      "followers_ts": "20261013_145656",
+      "groups": [
+        "领军人物"
+      ],
+      "handle": "gdb",
+      "name": "Greg Brockman",
+      "tweets_stored": 20,
+      "user_id": "162124540",
+      "zh": false
+    },
+    {
+      "domains": [
+        "money"
+      ],
+      "followers": 64772,
+      "followers_ts": "20261013_141448",
+      "groups": [],
+      "handle": "gefei55",
+      "name": "哥飞",
+      "tweets_stored": 24,
+      "user_id": "362252075",
+      "zh": true
+    },
+    {
+      "domains": [
+        "ai"
+      ],
+      "followers": 587786,
+      "followers_ts": "20261013_145656",
+      "groups": [
+        "官方机构"
+      ],
+      "handle": "geminiapp",
+      "name": "Google Gemini",
+      "tweets_stored": 25,
+      "user_id": "1806359170830172162",
+      "zh": false
+    },
+    {
+      "domains": [
+        "growth"
+      ],
+      "followers": 310632,
+      "followers_ts": "20261013_135532",
+      "groups": [],
+      "handle": "george__mack",
+      "name": "George Mack",
+      "tweets_stored": 25,
+      "user_id": "2166434343",
+      "zh": false
+    },
+    {
+      "domains": [
+        "ai"
+      ],
+      "followers": 2719150,
+      "followers_ts": "20261013_145656",
+      "groups": [
+        "官方机构"
+      ],
+      "handle": "github",
+      "name": "GitHub",
+      "tweets_stored": 25,
+      "user_id": "13334762",
+      "zh": false
+    },
+    {
+      "domains": [
+        "money"
+      ],
+      "followers": 25199,
+      "followers_ts": "20261013_141448",
+      "groups": [],
+      "handle": "goan999999",
+      "name": "govin.eth | G哥",
+      "tweets_stored": 25,
+      "user_id": "1466773942371520514",
+      "zh": true
+    },
+    {
+      "domains": [
+        "ai"
+      ],
+      "followers": 31895035,
+      "followers_ts": "20261013_145656",
+      "groups": [
+        "官方机构"
+      ],
+      "handle": "google",
+      "name": "Google",
+      "tweets_stored": 25,
+      "user_id": "20536157",
+      "zh": false
+    },
+    {
+      "domains": [
+        "ai"
+      ],
+      "followers": 2471928,
+      "followers_ts": "20261013_145656",
+      "groups": [
+        "官方机构"
+      ],
+      "handle": "googleai",
+      "name": "Google AI",
+      "tweets_stored": 25,
+      "user_id": "33838201",
+      "zh": false
+    },
+    {
+      "domains": [
+        "ai"
+      ],
+      "followers": 1567104,
+      "followers_ts": "20261013_145656",
+      "groups": [
+        "官方机构"
+      ],
+      "handle": "googledeepmind",
+      "name": "Google DeepMind",
+      "tweets_stored": 25,
+      "user_id": "4783690002",
+      "zh": false
+    },
+    {
+      "domains": [
+        "ai"
+      ],
+      "followers": 227254,
+      "followers_ts": "20261013_145656",
+      "groups": [
+        "官方机构"
+      ],
+      "handle": "googlelabs",
+      "name": "Google Labs",
+      "tweets_stored": 23,
+      "user_id": "163975783",
+      "zh": false
+    },
+    {
+      "domains": [
+        "ai"
+      ],
+      "followers": 68176,
+      "followers_ts": "20261013_145656",
+      "groups": [
+        "AI 博主"
+      ],
+      "handle": "gorden_sun",
+      "name": "Gorden Sun",
+      "tweets_stored": 25,
+      "user_id": "1657474831",
+      "zh": true
+    },
+    {
+      "domains": [
+        "money"
+      ],
+      "followers": 38014,
+      "followers_ts": "20261013_141448",
+      "groups": [],
+      "handle": "gosailglobal",
+      "name": "Jason Zhu",
+      "tweets_stored": 25,
+      "user_id": "1928711169419956224",
+      "zh": true
+    },
+    {
+      "domains": [
+        "money"
+      ],
+      "followers": 729529,
+      "followers_ts": "20261013_135532",
+      "groups": [],
+      "handle": "gregisenberg",
+      "name": "GREG ISENBERG",
+      "tweets_stored": 18,
+      "user_id": "14642331",
+      "zh": false
+    },
+    {
+      "domains": [
+        "growth"
+      ],
+      "followers": 155709,
+      "followers_ts": "20261013_141448",
+      "groups": [],
+      "handle": "hecaitou",
+      "name": "和菜头",
+      "tweets_stored": 0,
+      "user_id": "1777511",
+      "zh": true
+    },
+    {
+      "domains": [
+        "money"
+      ],
+      "followers": 646243,
+      "followers_ts": "20261013_135532",
+      "groups": [],
+      "handle": "heyibinance",
+      "name": "Yi He",
+      "tweets_stored": 25,
+      "user_id": "1003840309166366721",
+      "zh": false
+    },
+    {
+      "domains": [
+        "growth"
+      ],
+      "followers": 53216,
+      "followers_ts": "20261013_141448",
+      "groups": [],
+      "handle": "howie_serious",
+      "name": "howie.serious",
+      "tweets_stored": 23,
+      "user_id": "709787332254117888",
+      "zh": true
+    },
+    {
+      "domains": [
+        "growth"
+      ],
+      "followers": 1893670,
+      "followers_ts": "20261013_135532",
+      "groups": [],
+      "handle": "hubermanlab",
+      "name": "Andrew D. Huberman, Ph.D.",
+      "tweets_stored": 24,
+      "user_id": "4416456732",
+      "zh": false
+    },
+    {
+      "domains": [
+        "ai"
+      ],
+      "followers": 815980,
+      "followers_ts": "20261013_145656",
+      "groups": [
+        "官方机构"
+      ],
+      "handle": "huggingface",
+      "name": "Hugging Face",
+      "tweets_stored": 2,
+      "user_id": "778764142412984320",
+      "zh": false
+    },
+    {
+      "domains": [
+        "ai"
+      ],
+      "followers": 134206,
+      "followers_ts": "20261013_145656",
+      "groups": [
+        "Agent 实战派"
+      ],
+      "handle": "hwchase17",
+      "name": "Harrison Chase",
+      "tweets_stored": 25,
+      "user_id": "2728439146",
+      "zh": false
+    },
+    {
+      "domains": [
+        "ai"
+      ],
+      "followers": 931004,
+      "followers_ts": "20261013_145656",
+      "groups": [
+        "领军人物"
+      ],
+      "handle": "ilyasut",
+      "name": "Ilya Sutskever",
+      "tweets_stored": 23,
+      "user_id": "1720046887",
+      "zh": false
+    },
+    {
+      "domains": [
+        "money"
+      ],
+      "followers": 353224,
+      "followers_ts": "20261013_135532",
+      "groups": [],
+      "handle": "jackbutcher",
+      "name": "@jackbutcher",
+      "tweets_stored": 25,
+      "user_id": "52188203",
+      "zh": false
+    },
+    {
+      "domains": [
+        "ai"
+      ],
+      "followers": 152051,
+      "followers_ts": "20261013_145656",
+      "groups": [
+        "领军人物"
+      ],
+      "handle": "jackclarksf",
+      "name": "Jack Clark",
+      "tweets_stored": 25,
+      "user_id": "86351835",
+      "zh": false
+    },
+    {
+      "domains": [
+        "growth"
+      ],
+      "followers": 1434737,
+      "followers_ts": "20261013_135532",
+      "groups": [],
+      "handle": "jamesclear",
+      "name": "James Clear",
+      "tweets_stored": 25,
+      "user_id": "226428094",
+      "zh": false
+    },
+    {
+      "domains": [
+        "ai"
+      ],
+      "followers": 529796,
+      "followers_ts": "20261013_145656",
+      "groups": [
+        "领军人物"
+      ],
+      "handle": "jeffdean",
+      "name": "Jeff Dean",
+      "tweets_stored": 24,
+      "user_id": "911297187664949248",
+      "zh": false
+    },
+    {
+      "domains": [
+        "ai"
+      ],
+      "followers": 330484,
+      "followers_ts": "20261013_145656",
+      "groups": [
+        "领军人物"
+      ],
+      "handle": "jeremyphoward",
+      "name": "Jeremy Howard",
+      "tweets_stored": 11,
+      "user_id": "175282603",
+      "zh": false
+    },
+    {
+      "domains": [
+        "growth"
+      ],
+      "followers": 6167355,
+      "followers_ts": "20261013_135532",
+      "groups": [],
+      "handle": "jordanbpeterson",
+      "name": "Dr Jordan B Peterson",
+      "tweets_stored": 23,
+      "user_id": "95092020",
+      "zh": false
+    },
+    {
+      "domains": [
+        "money"
+      ],
+      "followers": 4299467,
+      "followers_ts": "20261013_135532",
+      "groups": [],
+      "handle": "justinsuntron",
+      "name": "H.E. Justin Sun 👨‍🚀 🌞",
+      "tweets_stored": 25,
+      "user_id": "902839045356744704",
+      "zh": false
+    },
+    {
+      "domains": [
+        "ai"
+      ],
+      "followers": 4356547,
+      "followers_ts": "20261013_145656",
+      "groups": [
+        "领军人物"
+      ],
+      "handle": "karpathy",
+      "name": "Andrej Karpathy",
+      "tweets_stored": 24,
+      "user_id": "33836629",
+      "zh": false
+    },
+    {
+      "domains": [
+        "ai"
+      ],
+      "followers": 365394,
+      "followers_ts": "20261013_145656",
+      "groups": [
+        "官方机构"
+      ],
+      "handle": "kimi_moonshot",
+      "name": "Kimi.ai",
+      "tweets_stored": 20,
+      "user_id": "1863959670169501696",
+      "zh": false
+    },
+    {
+      "domains": [
+        "money"
+      ],
+      "followers": 214170,
+      "followers_ts": "20261013_141448",
+      "groups": [],
+      "handle": "laobaishare",
+      "name": "老白（每日 AI 干货✊）",
+      "tweets_stored": 25,
+      "user_id": "1398934230407606278",
+      "zh": true
+    },
+    {
+      "domains": [
+        "ai"
+      ],
+      "followers": 296897,
+      "followers_ts": "20261013_145656",
+      "groups": [
+        "Agent 实战派"
+      ],
+      "handle": "leerob",
+      "name": "Lee Robinson",
+      "tweets_stored": 25,
+      "user_id": "81712767",
+      "zh": false
+    },
+    {
+      "domains": [
+        "ai",
+        "money"
+      ],
+      "followers": 974191,
+      "followers_ts": "20261013_145656",
+      "groups": [
+        "Agent 实战派"
+      ],
+      "handle": "levelsio",
+      "name": "@levelsio",
+      "tweets_stored": 22,
+      "user_id": "1577241403",
+      "zh": false
+    },
+    {
+      "domains": [
+        "growth"
+      ],
+      "followers": 47920,
+      "followers_ts": "20261013_141448",
+      "groups": [],
+      "handle": "lifesinger",
+      "name": "Frank Wang 玉伯",
+      "tweets_stored": 19,
+      "user_id": "16681326",
+      "zh": true
+    },
+    {
+      "domains": [
+        "ai"
+      ],
+      "followers": 56216,
+      "followers_ts": "20261013_145656",
+      "groups": [
+        "Agent 实战派"
+      ],
+      "handle": "lijigang",
+      "name": "李继刚",
+      "tweets_stored": 25,
+      "user_id": "1474067654",
+      "zh": true
+    },
+    {
+      "domains": [
+        "money"
+      ],
+      "followers": 107555,
+      "followers_ts": "20261013_141448",
+      "groups": [],
+      "handle": "lxfater",
+      "name": "铁锤人",
+      "tweets_stored": 25,
+      "user_id": "452072245",
+      "zh": true
+    },
+    {
+      "domains": [
+        "ai"
+      ],
+      "followers": 149389,
+      "followers_ts": "20261013_145656",
+      "groups": [
+        "AI 博主"
+      ],
+      "handle": "matthewberman",
+      "name": "Matthew Berman",
+      "tweets_stored": 25,
+      "user_id": "6681172",
+      "zh": false
+    },
+    {
+      "domains": [
+        "ai"
+      ],
+      "followers": 397915,
+      "followers_ts": "20261013_145656",
+      "groups": [
+        "AI 博主"
+      ],
+      "handle": "mattshumer_",
+      "name": "Matt Shumer",
+      "tweets_stored": 25,
+      "user_id": "1194889317388374016",
+      "zh": false
+    },
+    {
+      "domains": [
+        "ai"
+      ],
+      "followers": 228420,
+      "followers_ts": "20261013_145656",
+      "groups": [
+        "Agent 实战派"
+      ],
+      "handle": "mckaywrigley",
+      "name": "Mckay Wrigley",
+      "tweets_stored": 25,
+      "user_id": "2786431437",
+      "zh": false
+    },
+    {
+      "domains": [
+        "ai"
+      ],
+      "followers": 9867280,
+      "followers_ts": "20261013_145656",
+      "groups": [
+        "官方机构"
+      ],
+      "handle": "meta",
+      "name": "Meta",
+      "tweets_stored": 22,
+      "user_id": "2425151",
+      "zh": false
+    },
+    {
+      "domains": [
+        "ai"
+      ],
+      "followers": 13065361,
+      "followers_ts": "20261013_145656",
+      "groups": [
+        "官方机构"
+      ],
+      "handle": "microsoft",
+      "name": "Microsoft",
+      "tweets_stored": 18,
+      "user_id": "74286565",
+      "zh": false
+    },
+    {
+      "domains": [
+        "ai"
+      ],
+      "followers": 123686,
+      "followers_ts": "20261013_145656",
+      "groups": [
+        "官方机构"
+      ],
+      "handle": "minimax_ai",
+      "name": "MiniMax (official)",
+      "tweets_stored": 22,
+      "user_id": "1875078099538423808",
+      "zh": false
+    },
+    {
+      "domains": [
+        "ai"
+      ],
+      "followers": 1035021,
+      "followers_ts": "20261013_145656",
+      "groups": [
+        "领军人物"
+      ],
+      "handle": "miramurati",
+      "name": "Mira Murati",
+      "tweets_stored": 23,
+      "user_id": "180115578",
+      "zh": false
+    },
+    {
+      "domains": [
+        "ai"
+      ],
+      "followers": 222602,
+      "followers_ts": "20261013_145656",
+      "groups": [
+        "官方机构"
+      ],
+      "handle": "mistralai",
+      "name": "Mistral AI",
+      "tweets_stored": 24,
+      "user_id": "1667249535519805451",
+      "zh": false
+    },
+    {
+      "domains": [
+        "growth"
+      ],
+      "followers": 710597,
+      "followers_ts": "20261013_135532",
+      "groups": [],
+      "handle": "morganhousel",
+      "name": "Morgan Housel",
+      "tweets_stored": 25,
+      "user_id": "284278132",
+      "zh": false
+    },
+    {
+      "domains": [
+        "money"
+      ],
+      "followers": 34987992,
+      "followers_ts": "20261013_135532",
+      "groups": [],
+      "handle": "mrbeast",
+      "name": "MrBeast",
+      "tweets_stored": 25,
+      "user_id": "2455740283",
+      "zh": false
+    },
+    {
+      "domains": [
+        "ai"
+      ],
+      "followers": 120725,
+      "followers_ts": "20261013_145656",
+      "groups": [
+        "AI 博主"
+      ],
+      "handle": "mreflow",
+      "name": "Matt Wolfe",
+      "tweets_stored": 25,
+      "user_id": "1544387652811493377",
+      "zh": false
+    },
+    {
+      "domains": [
+        "ai"
+      ],
+      "followers": 555086,
+      "followers_ts": "20261013_145656",
+      "groups": [
+        "官方机构"
+      ],
+      "handle": "msftresearch",
+      "name": "Microsoft Research",
+      "tweets_stored": 25,
+      "user_id": "21457289",
+      "zh": false
+    },
+    {
+      "domains": [
+        "ai"
+      ],
+      "followers": 1170390,
+      "followers_ts": "20261013_145656",
+      "groups": [
+        "领军人物"
+      ],
+      "handle": "mustafasuleyman",
+      "name": "Mustafa Suleyman",
+      "tweets_stored": 24,
+      "user_id": "2314443930",
+      "zh": false
+    },
+    {
+      "domains": [
+        "growth"
+      ],
+      "followers": 4111361,
+      "followers_ts": "20261013_135532",
+      "groups": [],
+      "handle": "naval",
+      "name": "Naval",
+      "tweets_stored": 22,
+      "user_id": "745273",
+      "zh": false
+    },
+    {
+      "domains": [
+        "money"
+      ],
+      "followers": 228027,
+      "followers_ts": "20261013_135532",
+      "groups": [],
+      "handle": "nicolascole77",
+      "name": "Nicolas Cole 🚢👻",
+      "tweets_stored": 25,
+      "user_id": "617073276",
+      "zh": false
+    },
+    {
+      "domains": [
+        "ai"
+      ],
+      "followers": 102334,
+      "followers_ts": "20261013_145656",
+      "groups": [
+        "Agent 实战派"
+      ],
+      "handle": "nutlope",
+      "name": "Hassan",
+      "tweets_stored": 25,
+      "user_id": "3246815913",
+      "zh": false
+    },
+    {
+      "domains": [
+        "ai"
+      ],
+      "followers": 2677391,
+      "followers_ts": "20261013_145656",
+      "groups": [
+        "官方机构"
+      ],
+      "handle": "nvidia",
+      "name": "NVIDIA",
+      "tweets_stored": 25,
+      "user_id": "61559439",
+      "zh": false
+    },
+    {
+      "domains": [
+        "ai"
+      ],
+      "followers": 347844,
+      "followers_ts": "20261013_145656",
+      "groups": [
+        "官方机构"
+      ],
+      "handle": "nvidiaai",
+      "name": "NVIDIA AI",
+      "tweets_stored": 25,
+      "user_id": "740238495952736256",
+      "zh": false
+    },
+    {
+      "domains": [
+        "ai"
+      ],
+      "followers": 377691,
+      "followers_ts": "20261013_145656",
+      "groups": [
+        "领军人物"
+      ],
+      "handle": "officiallogank",
+      "name": "Logan Kilpatrick",
+      "tweets_stored": 25,
+      "user_id": "284333988",
+      "zh": false
+    },
+    {
+      "domains": [
+        "ai"
+      ],
+      "followers": 180228,
+      "followers_ts": "20261013_145656",
+      "groups": [
+        "AI 博主"
+      ],
+      "handle": "op7418",
+      "name": "歸藏(guizang.ai)",
+      "tweets_stored": 25,
+      "user_id": "1669276256",
+      "zh": true
+    },
+    {
+      "domains": [
+        "ai"
+      ],
+      "followers": 5429035,
+      "followers_ts": "20261013_145656",
+      "groups": [
+        "官方机构"
+      ],
+      "handle": "openai",
+      "name": "OpenAI",
+      "tweets_stored": 25,
+      "user_id": "4398626122",
+      "zh": false
+    },
+    {
+      "domains": [
+        "ai"
+      ],
+      "followers": 456634,
+      "followers_ts": "20261013_145656",
+      "groups": [
+        "官方机构"
+      ],
+      "handle": "openaidevs",
+      "name": "OpenAI Developers",
+      "tweets_stored": 25,
+      "user_id": "1633874951508721686",
+      "zh": false
+    },
+    {
+      "domains": [
+        "ai"
+      ],
+      "followers": 153505,
+      "followers_ts": "20261013_145656",
+      "groups": [
+        "官方机构"
+      ],
+      "handle": "openrouter",
+      "name": "OpenRouter",
+      "tweets_stored": 25,
+      "user_id": "1681349314797240320",
+      "zh": false
+    },
+    {
+      "domains": [
+        "ai"
+      ],
+      "followers": 184478,
+      "followers_ts": "20261013_145656",
+      "groups": [
+        "Agent 实战派"
+      ],
+      "handle": "oran_ge",
+      "name": "Orange AI",
+      "tweets_stored": 25,
+      "user_id": "6782882",
+      "zh": true
+    },
+    {
+      "domains": [
+        "money"
+      ],
+      "followers": 5441564,
+      "followers_ts": "20261013_135532",
+      "groups": [],
+      "handle": "paulg",
+      "name": "Paul Graham",
+      "tweets_stored": 25,
+      "user_id": "183749519",
+      "zh": false
+    },
+    {
+      "domains": [
+        "ai"
+      ],
+      "followers": 507703,
+      "followers_ts": "20261013_145656",
+      "groups": [
+        "官方机构"
+      ],
+      "handle": "perplexity_ai",
+      "name": "Perplexity",
+      "tweets_stored": 25,
+      "user_id": "1599587232175849472",
+      "zh": false
+    },
+    {
+      "domains": [
+        "ai"
+      ],
+      "followers": 287458,
+      "followers_ts": "20261013_145656",
+      "groups": [
+        "Agent 实战派"
+      ],
+      "handle": "petergyang",
+      "name": "Peter Yang",
+      "tweets_stored": 23,
+      "user_id": "84490044",
+      "zh": false
+    },
+    {
+      "domains": [
+        "money"
+      ],
+      "followers": 49441,
+      "followers_ts": "20261013_141448",
+      "groups": [],
+      "handle": "pluvio9yte",
+      "name": "雪踏乌云",
+      "tweets_stored": 22,
+      "user_id": "1667439202357899267",
+      "zh": true
+    },
+    {
+      "domains": [
+        "ai"
+      ],
+      "followers": 909441,
+      "followers_ts": "20261013_145656",
+      "groups": [
+        "Agent 实战派"
+      ],
+      "handle": "rauchg",
+      "name": "Guillermo Rauch",
+      "tweets_stored": 24,
+      "user_id": "15540222",
+      "zh": false
+    },
+    {
+      "domains": [
+        "money"
+      ],
+      "followers": 11554,
+      "followers_ts": "20261013_141448",
+      "groups": [],
+      "handle": "realcoreychiu",
+      "name": "Corey Chiu",
+      "tweets_stored": 25,
+      "user_id": "800710502351409154",
+      "zh": true
+    },
+    {
+      "domains": [
+        "growth"
+      ],
+      "followers": 610245,
+      "followers_ts": "20261013_135532",
+      "groups": [],
+      "handle": "robinsharma",
+      "name": "Robin Sharma",
+      "tweets_stored": 25,
+      "user_id": "26244629",
+      "zh": false
+    },
+    {
+      "domains": [
+        "ai"
+      ],
+      "followers": 600872,
+      "followers_ts": "20261013_145656",
+      "groups": [
+        "AI 博主"
+      ],
+      "handle": "rowancheung",
+      "name": "Rowan Cheung",
+      "tweets_stored": 24,
+      "user_id": "1314686042",
+      "zh": false
+    },
+    {
+      "domains": [
+        "growth"
+      ],
+      "followers": 208966,
+      "followers_ts": "20261013_141448",
+      "groups": [],
+      "handle": "ruanyf",
+      "name": "ruanyf",
+      "tweets_stored": 25,
+      "user_id": "1580781",
+      "zh": true
+    },
+    {
+      "domains": [
+        "ai"
+      ],
+      "followers": 187246,
+      "followers_ts": "20261013_145656",
+      "groups": [
+        "Agent 实战派"
+      ],
+      "handle": "ryancarson",
+      "name": "Ryan Carson",
+      "tweets_stored": 25,
+      "user_id": "14763",
+      "zh": false
+    },
+    {
+      "domains": [
+        "growth"
+      ],
+      "followers": 1042328,
+      "followers_ts": "20261013_135532",
+      "groups": [],
+      "handle": "ryanholiday",
+      "name": "Ryan Holiday",
+      "tweets_stored": 25,
+      "user_id": "3764301",
+      "zh": false
+    },
+    {
+      "domains": [
+        "growth"
+      ],
+      "followers": 1188500,
+      "followers_ts": "20261013_135532",
+      "groups": [],
+      "handle": "sahilbloom",
+      "name": "Sahil Bloom",
+      "tweets_stored": 25,
+      "user_id": "312681953",
+      "zh": false
+    },
+    {
+      "domains": [
+        "ai"
+      ],
+      "followers": 6372559,
+      "followers_ts": "20261013_145656",
+      "groups": [
+        "领军人物"
+      ],
+      "handle": "sama",
+      "name": "Sam Altman",
+      "tweets_stored": 25,
+      "user_id": "1605",
+      "zh": false
+    },
+    {
+      "domains": [
+        "ai"
+      ],
+      "followers": 9650910,
+      "followers_ts": "20261013_145656",
+      "groups": [
+        "领军人物"
+      ],
+      "handle": "satyanadella",
+      "name": "Satya Nadella",
+      "tweets_stored": 25,
+      "user_id": "20571756",
+      "zh": false
+    },
+    {
+      "domains": [
+        "money"
+      ],
+      "followers": 477093,
+      "followers_ts": "20261013_135532",
+      "groups": [],
+      "handle": "shaanvp",
+      "name": "Shaan Puri",
+      "tweets_stored": 25,
+      "user_id": "101354595",
+      "zh": false
+    },
+    {
+      "domains": [
+        "ai"
+      ],
+      "followers": 237788,
+      "followers_ts": "20261013_145656",
+      "groups": [
+        "AI 博主"
+      ],
+      "handle": "simonw",
+      "name": "Simon Willison",
+      "tweets_stored": 25,
+      "user_id": "12497",
+      "zh": false
+    },
+    {
+      "domains": [
+        "growth"
+      ],
+      "followers": 35106,
+      "followers_ts": "20261013_141448",
+      "groups": [],
+      "handle": "soulsloop99",
+      "name": "心灵书舫 | SoulSloop",
+      "tweets_stored": 24,
+      "user_id": "1891330878393167872",
+      "zh": true
+    },
+    {
+      "domains": [
+        "ai"
+      ],
+      "followers": 603074,
+      "followers_ts": "20261013_145656",
+      "groups": [
+        "Agent 实战派"
+      ],
+      "handle": "steipete",
+      "name": "Peter Steinberger 🦞",
+      "tweets_stored": 18,
+      "user_id": "25401953",
+      "zh": false
+    },
+    {
+      "domains": [
+        "ai"
+      ],
+      "followers": 11911164,
+      "followers_ts": "20261013_145656",
+      "groups": [
+        "领军人物"
+      ],
+      "handle": "sundarpichai",
+      "name": "Sundar Pichai",
+      "tweets_stored": 25,
+      "user_id": "14130366",
+      "zh": false
+    },
+    {
+      "domains": [
+        "growth"
+      ],
+      "followers": 56188,
+      "followers_ts": "20261013_141448",
+      "groups": [],
+      "handle": "suu766",
+      "name": "Suu",
+      "tweets_stored": 25,
+      "user_id": "1875420384247640064",
+      "zh": true
+    },
+    {
+      "domains": [
+        "ai"
+      ],
+      "followers": 202013,
+      "followers_ts": "20261013_145656",
+      "groups": [
+        "AI 博主"
+      ],
+      "handle": "swyx",
+      "name": "swyx 🗽 @aiDotEngineer",
+      "tweets_stored": 24,
+      "user_id": "33521530",
+      "zh": false
+    },
+    {
+      "domains": [
+        "growth"
+      ],
+      "followers": 1989623,
+      "followers_ts": "20261013_135532",
+      "groups": [],
+      "handle": "tferriss",
+      "name": "Tim Ferriss",
+      "tweets_stored": 25,
+      "user_id": "11740902",
+      "zh": false
+    },
+    {
+      "domains": [
+        "growth"
+      ],
+      "followers": 1038388,
+      "followers_ts": "20261013_135532",
+      "groups": [],
+      "handle": "thedankoe",
+      "name": "DAN KOE",
+      "tweets_stored": 25,
+      "user_id": "256523056",
+      "zh": false
+    },
+    {
+      "domains": [
+        "ai"
+      ],
+      "followers": 229695,
+      "followers_ts": "20261013_145656",
+      "groups": [
+        "AI 博主"
+      ],
+      "handle": "therundownai",
+      "name": "The Rundown AI",
+      "tweets_stored": 25,
+      "user_id": "731917653506318336",
+      "zh": false
+    },
+    {
+      "domains": [
+        "money"
+      ],
+      "followers": 387414,
+      "followers_ts": "20261013_135532",
+      "groups": [],
+      "handle": "thesamparr",
+      "name": "Sam Parr",
+      "tweets_stored": 25,
+      "user_id": "625733783",
+      "zh": false
+    },
+    {
+      "domains": [
+        "ai"
+      ],
+      "followers": 851673,
+      "followers_ts": "20261013_145656",
+      "groups": [
+        "领军人物"
+      ],
+      "handle": "thsottiaux",
+      "name": "Tibo",
+      "tweets_stored": 25,
+      "user_id": "1953337039510003712",
+      "zh": false
+    },
+    {
+      "domains": [
+        "money"
+      ],
+      "followers": 212799,
+      "followers_ts": "20261013_135532",
+      "groups": [],
+      "handle": "tibo_maker",
+      "name": "Tibo",
+      "tweets_stored": 25,
+      "user_id": "470129898",
+      "zh": false
+    },
+    {
+      "domains": [
+        "growth"
+      ],
+      "followers": 196324,
+      "followers_ts": "20261013_141448",
+      "groups": [],
+      "handle": "tinyfool",
+      "name": "Tinyfool",
+      "tweets_stored": 24,
+      "user_id": "5967912",
+      "zh": true
+    },
+    {
+      "domains": [
+        "ai"
+      ],
+      "followers": 368404,
+      "followers_ts": "20261013_145656",
+      "groups": [
+        "Agent 实战派"
+      ],
+      "handle": "trq212",
+      "name": "Thariq",
+      "tweets_stored": 25,
+      "user_id": "352806502",
+      "zh": false
+    },
+    {
+      "domains": [
+        "ai"
+      ],
+      "followers": 131154,
+      "followers_ts": "20261013_145656",
+      "groups": [
+        "Agent 实战派"
+      ],
+      "handle": "vista8",
+      "name": "向阳乔木",
+      "tweets_stored": 24,
+      "user_id": "6690032",
+      "zh": true
+    },
+    {
+      "domains": [
+        "money"
+      ],
+      "followers": 557791,
+      "followers_ts": "20261013_135532",
+      "groups": [],
+      "handle": "wublockchain",
+      "name": "Wu Blockchain",
+      "tweets_stored": 24,
+      "user_id": "111533746",
+      "zh": false
+    },
+    {
+      "domains": [
+        "growth"
+      ],
+      "followers": 11637,
+      "followers_ts": "20261013_141448",
+      "groups": [],
+      "handle": "y1cxmm",
+      "name": "月落知秋",
+      "tweets_stored": 24,
+      "user_id": "1406138092767956996",
+      "zh": true
+    },
+    {
+      "domains": [
+        "money"
+      ],
+      "followers": 37320,
+      "followers_ts": "20261013_141448",
+      "groups": [],
+      "handle": "yanhua1010",
+      "name": "Yanhua",
+      "tweets_stored": 25,
+      "user_id": "1932935705711513600",
+      "zh": true
+    },
+    {
+      "domains": [
+        "money"
+      ],
+      "followers": 25944,
+      "followers_ts": "20261013_141448",
+      "groups": [],
+      "handle": "yhslgg",
+      "name": "老杨啊 | AI产品商业化",
+      "tweets_stored": 24,
+      "user_id": "173484971",
+      "zh": true
+    },
+    {
+      "domains": [
+        "growth"
+      ],
+      "followers": 80445,
+      "followers_ts": "20261013_141448",
+      "groups": [],
+      "handle": "yihong0618",
+      "name": "yihong0618",
+      "tweets_stored": 20,
+      "user_id": "1017648622668795904",
+      "zh": true
+    },
+    {
+      "domains": [
+        "ai"
+      ],
+      "followers": 1324329,
+      "followers_ts": "20261013_145656",
+      "groups": [
+        "领军人物"
+      ],
+      "handle": "ylecun",
+      "name": "Yann LeCun",
+      "tweets_stored": 0,
+      "user_id": "48008938",
+      "zh": false
+    },
+    {
+      "domains": [
+        "ai"
+      ],
+      "followers": 164496,
+      "followers_ts": "20261013_145656",
+      "groups": [
+        "官方机构"
+      ],
+      "handle": "zai_org",
+      "name": "Z.ai",
+      "tweets_stored": 22,
+      "user_id": "1726486879456096256",
+      "zh": false
+    }
+  ]
+}

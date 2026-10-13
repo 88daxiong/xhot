@@ -1,0 +1,381 @@
+{
+  "handle": "googledeepmind",
+  "tweets": [
+    {
+      "created_at": "2026-10-07T14:03:42.000Z",
+      "id": "2107834254222581862",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 11,
+        "impression": 20171,
+        "like": 64,
+        "quote": 2,
+        "reply": 12,
+        "retweet": 4
+      },
+      "text": "SynthID Detector can quickly identify our watermarks in video, audio and images – even after edits, like adding filters. ✂️\n\nYou can also use existing AI identification features found in @GoogleChrome, @Google Search, and the @GeminiApp. https://t.co/VglUeteVIL",
+      "url": "https://x.com/GoogleDeepMind/status/2107834254222581862"
+    },
+    {
+      "created_at": "2026-10-07T14:03:41.000Z",
+      "id": "2107834249680499136",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 462,
+        "impression": 187646,
+        "like": 1466,
+        "quote": 144,
+        "reply": 257,
+        "retweet": 271
+      },
+      "text": "SynthID Detector is now available to everyone. 🌐\n\nCheck whether online content was generated using @GoogleAI, or with tools from our industry partners – including @OpenAI, @NVIDIA, Kakao and coming soon, @Apple.\n\nTry it out → https://t.co/cPW2aNnqr6 https://t.co/TGYA0uZ0dx",
+      "url": "https://x.com/GoogleDeepMind/status/2107834249680499136"
+    },
+    {
+      "created_at": "2026-10-06T16:04:36.000Z",
+      "id": "2107502289652982118",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 334,
+        "impression": 66003,
+        "like": 571,
+        "quote": 5,
+        "reply": 37,
+        "retweet": 44
+      },
+      "text": "At 740M parameters, it’s competitive across benchmarks – even outperforming some specialist models more than twice its size.\n\nDevelopers can use it to add multimodal search to their apps – like finding moments in a video using a voice memo – or pair it with Gemma 4 for private, on-device RAG.\n\nEmbeddingGemma 2 is released under an Apache 2.0 license. Check out the weights on @HuggingFace and @Kaggle.\n\nFind out more → https://t.co/lRsjbvR5VB",
+      "url": "https://x.com/GoogleDeepMind/status/2107502289652982118"
+    },
+    {
+      "created_at": "2026-10-06T16:04:35.000Z",
+      "id": "2107502286758895878",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 2732,
+        "impression": 842681,
+        "like": 4466,
+        "quote": 224,
+        "reply": 284,
+        "retweet": 534
+      },
+      "text": "Meet EmbeddingGemma 2, our first natively multimodal open model for on-device embeddings.\n\nIt expands beyond text to unify code, images, audio, and video in a shared space. 🧵",
+      "url": "https://x.com/GoogleDeepMind/status/2107502286758895878"
+    },
+    {
+      "created_at": "2026-10-01T17:11:07.000Z",
+      "id": "2105707090547478914",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 10,
+        "impression": 41475,
+        "like": 50,
+        "quote": 0,
+        "reply": 9,
+        "retweet": 6
+      },
+      "text": "Watch → https://t.co/vaJzQEEPPs\nSpotify → https://t.co/dCRx0EnHK0\nApple Podcasts → https://t.co/SoXfo37VgP\n\nOr listen wherever you get your podcasts! 🎧",
+      "url": "https://x.com/GoogleDeepMind/status/2105707090547478914"
+    },
+    {
+      "created_at": "2026-10-01T17:11:05.000Z",
+      "id": "2105707085287567709",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 164,
+        "impression": 92902,
+        "like": 585,
+        "quote": 32,
+        "reply": 138,
+        "retweet": 61
+      },
+      "text": "When AI-generated content has become so realistic, how do we verify what's made by human, machine, or nature?\n\nWe explore the vital role of provenance – and how imperceptible watermarking can safeguard both digital media and biological designs – on our podcast. ↓\n\nTimecodes:\n00:00 Introduction\n00:34 What is a watermark?\n04:35 SynthID\n15:16 Images and video\n19:28 SynthID Bio\n28:00 Future of resilience",
+      "url": "https://x.com/GoogleDeepMind/status/2105707085287567709"
+    },
+    {
+      "created_at": "2026-10-01T11:43:34.000Z",
+      "id": "2105624661912392028",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 10,
+        "impression": 19075,
+        "like": 80,
+        "quote": 1,
+        "reply": 9,
+        "retweet": 5
+      },
+      "text": "As AI accelerates scientific discovery, we’re helping researchers keep pace by quickly authenticating if biological designs are created with built-in safeguards, without stalling crucial work. 🔬\n\nWe’re releasing these tools on an open basis for research use to strengthen safeguards → https://t.co/OF3iCxAOyx",
+      "url": "https://x.com/GoogleDeepMind/status/2105624661912392028"
+    },
+    {
+      "created_at": "2026-10-01T11:43:33.000Z",
+      "id": "2105624658951176323",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 9,
+        "impression": 32617,
+        "like": 120,
+        "quote": 3,
+        "reply": 17,
+        "retweet": 8
+      },
+      "text": "Acting like a digital ID card, the watermark can help DNA labs verify synthetic proteins and keep sequence databases accurate.\n\nAs these requests increasingly scale, verifying if designs come from AI with built-in safeguards will help labs automate and strengthen biosecurity. 🛡️ https://t.co/nvNRT7RQ2n",
+      "url": "https://x.com/GoogleDeepMind/status/2105624658951176323"
+    },
+    {
+      "created_at": "2026-10-01T11:43:33.000Z",
+      "id": "2105624656170643854",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 184,
+        "impression": 536927,
+        "like": 852,
+        "quote": 127,
+        "reply": 211,
+        "retweet": 121
+      },
+      "text": "SynthID Bio is our new family of watermarking methods made for AI-generated biological designs.\n\nIn a world first, we can now embed an imperceptible signature directly into protein sequences without affecting their biological function. 🧵 https://t.co/R2bM7Jn5Qu",
+      "url": "https://x.com/GoogleDeepMind/status/2105624656170643854"
+    },
+    {
+      "created_at": "2026-09-30T20:03:30.000Z",
+      "id": "2105388087367127256",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 254,
+        "impression": 384801,
+        "like": 2906,
+        "quote": 100,
+        "reply": 93,
+        "retweet": 97
+      },
+      "text": "With a 1M token output limit, Argon adds a deeper level of reasoning to tackle long, multi-step problems in one go.\n\nFeedback from early testers will help us strengthen our systems before we roll out more broadly to developers, enterprises, and consumers soon.\n\nFind out more → https://t.co/ME8aonkOOj",
+      "url": "https://x.com/GoogleDeepMind/status/2105388087367127256"
+    },
+    {
+      "created_at": "2026-09-30T20:03:30.000Z",
+      "id": "2105388084154056939",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 6233,
+        "impression": 8962351,
+        "like": 42969,
+        "quote": 4528,
+        "reply": 1991,
+        "retweet": 4650
+      },
+      "text": "Introducing Gemini 4 Argon – our new frontier model.\n\nIt’s built for complex workflows across coding, enterprise knowledge work, and cybersecurity defense – rolling out today to a set of trusted testers through our Fairwind Program.",
+      "url": "https://x.com/GoogleDeepMind/status/2105388084154056939"
+    },
+    {
+      "created_at": "2026-09-23T15:25:59.000Z",
+      "id": "2102781533274734801",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 19,
+        "impression": 36267,
+        "like": 97,
+        "quote": 7,
+        "reply": 33,
+        "retweet": 15
+      },
+      "text": "Fine-tune the delivery line by line, shaping pacing, emotion, and cues like laughs or pauses. \n\nAll generated audio is watermarked with SynthID so it can be reliably identified as AI-generated. \n\nStart building with the Gemini API via @GoogleAIStudio. Find out more → https://t.co/F93tMO9Fxt",
+      "url": "https://x.com/GoogleDeepMind/status/2102781533274734801"
+    },
+    {
+      "created_at": "2026-09-23T15:25:59.000Z",
+      "id": "2102781530867126505",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 196,
+        "impression": 151194,
+        "like": 705,
+        "quote": 46,
+        "reply": 191,
+        "retweet": 86
+      },
+      "text": "Create and deploy custom audio with our new text-to-speech models:\n\n🔵 Gemini 3.8 Flash TTS: Design unique voices with distinct accents and characteristics.\n\n🔵 Gemini 3.8 Flash-Lite TTS: Built for efficiency and scale, choose from your created styles or our expansive production-ready library.",
+      "url": "https://x.com/GoogleDeepMind/status/2102781530867126505"
+    },
+    {
+      "created_at": "2026-09-17T14:04:47.000Z",
+      "id": "2100586770572177551",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 8,
+        "impression": 15471,
+        "like": 54,
+        "quote": 0,
+        "reply": 46,
+        "retweet": 6
+      },
+      "text": "These discoveries are just the beginning.\n\nAlphaGenome Atlas is freely accessible to empower researchers everywhere to decode the genetic causes of disease. Explore the database → https://t.co/j1T7iTF1K6",
+      "url": "https://x.com/GoogleDeepMind/status/2100586770572177551"
+    },
+    {
+      "created_at": "2026-09-17T14:04:47.000Z",
+      "id": "2100586768248562157",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 7,
+        "impression": 17048,
+        "like": 62,
+        "quote": 1,
+        "reply": 29,
+        "retweet": 3
+      },
+      "text": "Every second, millions of genome switches dictate how our cells function and adapt. 🧬\n\nWorking with @ScienceStowers, Atlas mapped 2,500+ regulatory patterns uncovering the DNA sequences that act as biological switches and volume dials to turn gene activity up or down across hundreds of cell types.",
+      "url": "https://x.com/GoogleDeepMind/status/2100586768248562157"
+    },
+    {
+      "created_at": "2026-09-17T14:04:46.000Z",
+      "id": "2100586765614514553",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 11,
+        "impression": 15412,
+        "like": 61,
+        "quote": 2,
+        "reply": 23,
+        "retweet": 2
+      },
+      "text": "In collaboration with the @UniofExeter, researchers used AlphaGenome Atlas to analyze data from 54,000+ @uk_biobank participants. They found:\n📈 A 22%+ boost in detecting rare genetic signals\n🎯 It uncovered new DNA variants influencing the abundance of PLA2G7, a protein linked to metabolic health.",
+      "url": "https://x.com/GoogleDeepMind/status/2100586765614514553"
+    },
+    {
+      "created_at": "2026-09-17T14:04:46.000Z",
+      "id": "2100586763341222176",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 4,
+        "impression": 20676,
+        "like": 79,
+        "quote": 2,
+        "reply": 20,
+        "retweet": 2
+      },
+      "text": "Scientists at @BroadInstitute search for the underlying causes of unexplained rare disease cases, but the list of possible mutations is vast.\n\nUsing Atlas, researchers pinpointed a critical mutation in the DNM1 gene, which was confirmed and validated in the lab. https://t.co/OIsV3TCOuO",
+      "url": "https://x.com/GoogleDeepMind/status/2100586763341222176"
+    },
+    {
+      "created_at": "2026-09-17T14:04:45.000Z",
+      "id": "2100586760036143330",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 118,
+        "impression": 138232,
+        "like": 804,
+        "quote": 21,
+        "reply": 180,
+        "retweet": 83
+      },
+      "text": "Researchers at @BroadInstitute, @UniofExeter, and beyond are already using AlphaGenome Atlas to better identify potential disease-causing DNA variants and interpret their role. 🧵 https://t.co/j4OuSz0Djv",
+      "url": "https://x.com/GoogleDeepMind/status/2100586760036143330"
+    },
+    {
+      "created_at": "2026-09-15T17:05:24.000Z",
+      "id": "2099907447313899684",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 296,
+        "impression": 120889,
+        "like": 571,
+        "quote": 27,
+        "reply": 100,
+        "retweet": 44
+      },
+      "text": "Watch how we used 3.8 Live Extended Thinking to act as a programming tutor.\n\nBoth models feature:\n🔵 Upgraded reasoning\n🔵 Near real-time visual understanding\n🔵 Automatic detection for 97 languages\n🔵 Background tool calling without disrupting your chat\n\nFor your most difficult tasks, 3.8 Live Extended Thinking adds increased performance and precision – narrating task progress to keep the conversation going.\n\nTry it now in Gemini Live in the @GeminiApp or start building with the Gemini API via @GoogleAIStudio.\n\nFind out more → https://t.co/b0vG4bO6fK",
+      "url": "https://x.com/GoogleDeepMind/status/2099907447313899684"
+    },
+    {
+      "created_at": "2026-09-15T17:05:22.000Z",
+      "id": "2099907440422830269",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 768,
+        "impression": 676979,
+        "like": 3653,
+        "quote": 214,
+        "reply": 362,
+        "retweet": 382
+      },
+      "text": "We’re introducing Gemini 3.8 Live and 3.8 Live Extended Thinking – our best conversational AI.\n\nThe models talk, think, and handle tasks in the background without breaking your flow. 🧵",
+      "url": "https://x.com/GoogleDeepMind/status/2099907440422830269"
+    },
+    {
+      "created_at": "2026-09-14T19:05:26.000Z",
+      "id": "2099575265068249217",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 10,
+        "impression": 18530,
+        "like": 55,
+        "quote": 0,
+        "reply": 6,
+        "retweet": 1
+      },
+      "text": "Giving teams a look ahead at rapidly changing weather helps them balance power grids and match clean energy to everyday consumer demand. 🌍\n\nFind out more about WeatherNext 3 → https://t.co/L0Aj0dracJ",
+      "url": "https://x.com/GoogleDeepMind/status/2099575265068249217"
+    },
+    {
+      "created_at": "2026-09-14T19:05:25.000Z",
+      "id": "2099575262807478493",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 7,
+        "impression": 31662,
+        "like": 85,
+        "quote": 0,
+        "reply": 25,
+        "retweet": 10
+      },
+      "text": "Because conditions can shift quickly, WeatherNext 3 updates every single hour:\n\n💨 For wind farms: Predicts speed and direction at turbines as high as 100m to project power generation.\n☀️ For solar farms: Forecasts cloud cover and radiation to estimate sunlight levels reaching solar panels.",
+      "url": "https://x.com/GoogleDeepMind/status/2099575262807478493"
+    },
+    {
+      "created_at": "2026-09-14T19:04:34.000Z",
+      "id": "2099575049929802053",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 95,
+        "impression": 81071,
+        "like": 702,
+        "quote": 18,
+        "reply": 104,
+        "retweet": 80
+      },
+      "text": "Weather forecasts play a critical role in the transition to renewables.\n\nWeatherNext 3 provides grid operators as well as wind and solar power producers with predictions for turbine-height wind speeds and solar radiation, enabling smarter, cleaner energy planning. 🧵",
+      "url": "https://x.com/GoogleDeepMind/status/2099575049929802053"
+    },
+    {
+      "created_at": "2026-09-11T14:26:44.000Z",
+      "id": "2098417966647808219",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 462,
+        "impression": 281665,
+        "like": 1356,
+        "quote": 64,
+        "reply": 150,
+        "retweet": 131
+      },
+      "text": "How can we reconstruct a memory that was never filmed?\n\nOur team paired restored archival photos with pose control models to capture the mannerisms and micro-expressions of Burt and Ethelle.\n\nThis helped bring the day they first met to life for Love, Rendered, a new documentary in collaboration with @PrimordialSoup_ and @StorySyndicate_.\n\nWatch the full film on YouTube → https://t.co/x4R6lBIl9j",
+      "url": "https://x.com/GoogleDeepMind/status/2098417966647808219"
+    },
+    {
+      "created_at": "2026-09-09T18:36:49.000Z",
+      "id": "2097756126829764886",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 7,
+        "impression": 49221,
+        "like": 48,
+        "quote": 0,
+        "reply": 9,
+        "retweet": 11
+      },
+      "text": "Watch → https://t.co/1heRBBrone\nSpotify → https://t.co/3jogHOlV8S\nApple Podcasts → https://t.co/Rbi4PKzxTP\n\nOr listen wherever you get your podcasts! 🎧",
+      "url": "https://x.com/GoogleDeepMind/status/2097756126829764886"
+    }
+  ],
+  "user_id": "4783690002"
+}

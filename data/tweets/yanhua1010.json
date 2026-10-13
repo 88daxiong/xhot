@@ -1,0 +1,381 @@
+{
+  "handle": "yanhua1010",
+  "tweets": [
+    {
+      "created_at": "2026-10-13T06:51:38.000Z",
+      "id": "2109899848678052298",
+      "lang": "",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 168,
+        "like": 0,
+        "quote": 0,
+        "reply": 0,
+        "retweet": 0
+      },
+      "text": "原文：https://t.co/Jb5EbLgR43",
+      "url": "https://x.com/yanhua1010/status/2109899848678052298"
+    },
+    {
+      "created_at": "2026-10-13T06:51:37.000Z",
+      "id": "2109899845788127518",
+      "lang": "",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 983,
+        "like": 1,
+        "quote": 0,
+        "reply": 2,
+        "retweet": 0
+      },
+      "text": "感谢A➗：GLM-5.3 是迄今为止发布的网络能力最强的开放权重模型。 https://t.co/SMSXDu6wVz",
+      "url": "https://x.com/yanhua1010/status/2109899845788127518"
+    },
+    {
+      "created_at": "2026-10-13T05:57:28.000Z",
+      "id": "2109886216007188801",
+      "lang": "",
+      "metrics": {
+        "bookmark": 6,
+        "impression": 3376,
+        "like": 3,
+        "quote": 0,
+        "reply": 4,
+        "retweet": 0
+      },
+      "text": "已经升级的朋友，记得去https://t.co/7Vx2sVMpIo 激活订阅。\n\n然后我cursor又下载回来了🤡 https://t.co/xXkYfG79GS https://t.co/PVyRioN52V",
+      "url": "https://x.com/yanhua1010/status/2109886216007188801"
+    },
+    {
+      "created_at": "2026-10-13T03:25:32.000Z",
+      "id": "2109847981923152175",
+      "lang": "",
+      "metrics": {
+        "bookmark": 5,
+        "impression": 4764,
+        "like": 6,
+        "quote": 1,
+        "reply": 1,
+        "retweet": 0
+      },
+      "text": "X Premium+ 升级X Subscription Premium省钱版教程来了👇\n\n1. 订阅 - Manage your subscription - 查看计划\n2. 选择Premium，年度计划（$25）也比老的P+ 优惠$7\n3. 结算即可 （注意选择一个免税州地址，不用交税）\n\nPS：现在新订阅成功后老订阅不会自动取消，不确定是不是X bug https://t.co/RNxsnbQh2L https://t.co/hmOgrJwCPt",
+      "url": "https://x.com/yanhua1010/status/2109847981923152175"
+    },
+    {
+      "created_at": "2026-10-13T01:36:14.000Z",
+      "id": "2109820475350425815",
+      "lang": "",
+      "metrics": {
+        "bookmark": 3,
+        "impression": 3936,
+        "like": 6,
+        "quote": 1,
+        "reply": 7,
+        "retweet": 1
+      },
+      "text": "马斯克要一统天下了。\n\nGrok、Cursor、X 会员，现在合成一个订阅，叫 The X Subscription。\n\n30美元一个月，X Premium+、SuperGrok、Cursor Pro、Grok Bot 全有。以前分开买差不多要 90美元。\n\n最便宜的 8美元起，最贵的 Ultra 200美元。\n\n这下本来混乱的XAI，更多混乱了。你还分得清丁是丁，卯是卯吗 https://t.co/ZuWF0wfv6i https://t.co/6in9n5wQ3S",
+      "url": "https://x.com/yanhua1010/status/2109820475350425815"
+    },
+    {
+      "created_at": "2026-10-13T00:22:17.000Z",
+      "id": "2109801866695692481",
+      "lang": "",
+      "metrics": {
+        "bookmark": 1,
+        "impression": 899,
+        "like": 2,
+        "quote": 0,
+        "reply": 2,
+        "retweet": 0
+      },
+      "text": "Meta 宣称新模型全面超越 Claude。\n\n我只想说：benchmark 都不统一，这种对比毫无意义。\n\n翻开 Meta 自己的模型卡：\n1. 一半基准是自家出题\n2. 没有第三方数据，就挑最高分拼凑\n3. 竞品不调优，测试环境完全不一样\n\n自己出题，自己阅卷，自己宣布第一🤡\n\n换成第三方统一标准（Artificial https://t.co/zZKsMh3y5H https://t.co/olNXtfwh0t",
+      "url": "https://x.com/yanhua1010/status/2109801866695692481"
+    },
+    {
+      "created_at": "2026-10-12T08:18:42.000Z",
+      "id": "2109559369914564968",
+      "lang": "",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 1950,
+        "like": 2,
+        "quote": 0,
+        "reply": 8,
+        "retweet": 0
+      },
+      "text": "实测下来，小红书是国内几个平台里面风控最严格的。 https://t.co/DUotjyO9i8",
+      "url": "https://x.com/yanhua1010/status/2109559369914564968"
+    },
+    {
+      "created_at": "2026-10-12T04:02:54.000Z",
+      "id": "2109494995325686018",
+      "lang": "",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 1401,
+        "like": 4,
+        "quote": 0,
+        "reply": 4,
+        "retweet": 0
+      },
+      "text": "根据AI大神karpathy最新数据：95%的人对AI的使用还停留在chat bot阶段，所以软件并没有死，仍然大有可为。\n\n@levelsio 说的是趋势，但不是事实。 https://t.co/kxKtlPqMsS",
+      "url": "https://x.com/yanhua1010/status/2109494995325686018"
+    },
+    {
+      "created_at": "2026-10-12T02:40:15.000Z",
+      "id": "2109474199647707599",
+      "lang": "",
+      "metrics": {
+        "bookmark": 7,
+        "impression": 6364,
+        "like": 8,
+        "quote": 0,
+        "reply": 7,
+        "retweet": 2
+      },
+      "text": "aha，迄今为止，最有秘书体感的personal agent！\n\n这不喊我去看脱口秀呢，surprise, mother f*ker https://t.co/k5ALaIlNOm",
+      "url": "https://x.com/yanhua1010/status/2109474199647707599"
+    },
+    {
+      "created_at": "2026-10-12T00:08:13.000Z",
+      "id": "2109435938254573957",
+      "lang": "",
+      "metrics": {
+        "bookmark": 23,
+        "impression": 5864,
+        "like": 37,
+        "quote": 0,
+        "reply": 10,
+        "retweet": 5
+      },
+      "text": "同一时刻，世界上有四种完全不同的 AI。\n\nKarpathy 刚发了一条长推，把全人类按\"见过的 AI\"分成了四层：\n\n🟤 约 60 亿人：几乎没碰过 LLM\n ⚪ 10–20 亿人：用过免费版，觉得它就是个\"有点呆的聊天机器人\"\n 🟠 约 2000 万人：在写代码、做数学，几周的项目一句 prompt 交给 agent\n 🔴 约 5000 https://t.co/jbZfoCyI0p https://t.co/7jkr8X1upo",
+      "url": "https://x.com/yanhua1010/status/2109435938254573957"
+    },
+    {
+      "created_at": "2026-10-11T14:05:14.000Z",
+      "id": "2109284191821275522",
+      "lang": "",
+      "metrics": {
+        "bookmark": 5,
+        "impression": 734,
+        "like": 2,
+        "quote": 0,
+        "reply": 0,
+        "retweet": 0
+      },
+      "text": "微信情报库：\nhttps://t.co/FYC24oa0PM",
+      "url": "https://x.com/yanhua1010/status/2109284191821275522"
+    },
+    {
+      "created_at": "2026-10-11T14:05:14.000Z",
+      "id": "2109284189657080293",
+      "lang": "",
+      "metrics": {
+        "bookmark": 7,
+        "impression": 946,
+        "like": 2,
+        "quote": 0,
+        "reply": 1,
+        "retweet": 0
+      },
+      "text": "将微信聊天记录同步AI agent：\nhttps://t.co/FTJpFttY1v",
+      "url": "https://x.com/yanhua1010/status/2109284189657080293"
+    },
+    {
+      "created_at": "2026-10-11T14:05:13.000Z",
+      "id": "2109284187303972982",
+      "lang": "",
+      "metrics": {
+        "bookmark": 4,
+        "impression": 815,
+        "like": 2,
+        "quote": 0,
+        "reply": 1,
+        "retweet": 0
+      },
+      "text": "将grok bot接入微信：\nhttps://t.co/MA2QPkyyUw",
+      "url": "https://x.com/yanhua1010/status/2109284187303972982"
+    },
+    {
+      "created_at": "2026-10-11T14:05:13.000Z",
+      "id": "2109284185282392210",
+      "lang": "",
+      "metrics": {
+        "bookmark": 49,
+        "impression": 7425,
+        "like": 19,
+        "quote": 0,
+        "reply": 4,
+        "retweet": 5
+      },
+      "text": "时至今日，微信还是很封闭的生态。\n\n但国人最大的上下文就在微信里，导致的结果就是各路大神想方设法的将微信接入AI agent。\n\n下面是最近看到的几个比较火的项目👇，有相关需求的可以收藏。",
+      "url": "https://x.com/yanhua1010/status/2109284185282392210"
+    },
+    {
+      "created_at": "2026-10-11T06:29:11.000Z",
+      "id": "2109169423580008684",
+      "lang": "",
+      "metrics": {
+        "bookmark": 1,
+        "impression": 546,
+        "like": 2,
+        "quote": 0,
+        "reply": 0,
+        "retweet": 0
+      },
+      "text": "https://t.co/DBXarZpa8i",
+      "url": "https://x.com/yanhua1010/status/2109169423580008684"
+    },
+    {
+      "created_at": "2026-10-11T06:29:11.000Z",
+      "id": "2109169421071864238",
+      "lang": "",
+      "metrics": {
+        "bookmark": 39,
+        "impression": 4514,
+        "like": 29,
+        "quote": 0,
+        "reply": 5,
+        "retweet": 4
+      },
+      "text": "自媒体内容创作工作流继续更新👇\n\n1. 新增解说视频的叙事风格\n\n2. 一键多平台发布：接入开源的 social-auto-upload，一条命令把发布包推到抖音/视频号/小红书/YouTube草稿箱。\n\n欢迎大家star，持续更新中。 https://t.co/j1RZANTgrm https://t.co/oCzg6yHZnb",
+      "url": "https://x.com/yanhua1010/status/2109169421071864238"
+    },
+    {
+      "created_at": "2026-10-11T03:33:56.000Z",
+      "id": "2109125320758722921",
+      "lang": "",
+      "metrics": {
+        "bookmark": 293,
+        "impression": 22017,
+        "like": 195,
+        "quote": 1,
+        "reply": 33,
+        "retweet": 28
+      },
+      "text": "总结一下，推荐收藏\n\nClaude Code目前最爽用法：主 Agent + 哑子 Agent 架构。\n\n1. 子 Agent：只管生成，绝不试错\n规则：不 Build、不 Test、不 Typecheck，早提交早返回。\n本质：剥离验证环节，防止大模型陷入“越修越乱”的幻觉循环，把上下文消耗压到最低。\n\n2. 任务拆解：正交隔离 https://t.co/aLrAqZvwYM",
+      "url": "https://x.com/yanhua1010/status/2109125320758722921"
+    },
+    {
+      "created_at": "2026-10-10T14:46:31.000Z",
+      "id": "2108932191225073801",
+      "lang": "",
+      "metrics": {
+        "bookmark": 162,
+        "impression": 17951,
+        "like": 90,
+        "quote": 2,
+        "reply": 11,
+        "retweet": 22
+      },
+      "text": "半年 6 万 Star 的项目“逆向一切”，我一开始以为又是标题党。\n\nAI Agent 干活有个前提：得有源码。\n\n一个装好的 App、安卓安装包或压缩过的前端代码，它看不懂也碰不了。REA 把这个限制去掉了，它把专业逆向工程师用的那套工具全接到了 Agent 上。\n\n你跟 Claude Code 说一句：“搞清楚 Notes",
+      "url": "https://x.com/yanhua1010/status/2108932191225073801"
+    },
+    {
+      "created_at": "2026-10-10T11:45:54.000Z",
+      "id": "2108886738697671046",
+      "lang": "",
+      "metrics": {
+        "bookmark": 1,
+        "impression": 16324,
+        "like": 1,
+        "quote": 0,
+        "reply": 0,
+        "retweet": 0
+      },
+      "text": "https://t.co/7nfkSWnxJO",
+      "url": "https://x.com/yanhua1010/status/2108886738697671046"
+    },
+    {
+      "created_at": "2026-10-10T10:12:24.000Z",
+      "id": "2108863208899629114",
+      "lang": "",
+      "metrics": {
+        "bookmark": 5,
+        "impression": 32361,
+        "like": 29,
+        "quote": 1,
+        "reply": 48,
+        "retweet": 3
+      },
+      "text": "我特么无语，现在claude新号要么注册不了， 要么一进来要kyc。\n\n用一个claude真的太难了😢 https://t.co/RQTplBdn01 https://t.co/1GIvP1drtp",
+      "url": "https://x.com/yanhua1010/status/2108863208899629114"
+    },
+    {
+      "created_at": "2026-10-10T09:38:08.000Z",
+      "id": "2108854587239346494",
+      "lang": "",
+      "metrics": {
+        "bookmark": 26,
+        "impression": 122691,
+        "like": 86,
+        "quote": 7,
+        "reply": 74,
+        "retweet": 1
+      },
+      "text": "wtf... Claude 目前暂不向新用户开放。 https://t.co/TastYiy4NK",
+      "url": "https://x.com/yanhua1010/status/2108854587239346494"
+    },
+    {
+      "created_at": "2026-10-10T04:35:47.000Z",
+      "id": "2108778496915030026",
+      "lang": "",
+      "metrics": {
+        "bookmark": 9,
+        "impression": 16444,
+        "like": 22,
+        "quote": 0,
+        "reply": 19,
+        "retweet": 0
+      },
+      "text": "我承认是我是渣男。\n\n今天将ChatGPT订阅由pro降到了plus，主要是Opus 5.5现在太好用了，GPT就用来生图了。\n\n然后就发现plus订阅没有dots，不过我还有Grok Bot 和Muse✌️ https://t.co/C8icLMmemF",
+      "url": "https://x.com/yanhua1010/status/2108778496915030026"
+    },
+    {
+      "created_at": "2026-10-10T02:24:30.000Z",
+      "id": "2108745459904975305",
+      "lang": "",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 1251,
+        "like": 1,
+        "quote": 0,
+        "reply": 1,
+        "retweet": 0
+      },
+      "text": "@bot https://t.co/sS3UHQ9NGi",
+      "url": "https://x.com/yanhua1010/status/2108745459904975305"
+    },
+    {
+      "created_at": "2026-10-09T23:35:19.000Z",
+      "id": "2108702880953925787",
+      "lang": "",
+      "metrics": {
+        "bookmark": 44,
+        "impression": 20041,
+        "like": 38,
+        "quote": 0,
+        "reply": 29,
+        "retweet": 5
+      },
+      "text": "Grok Bot可以申请📮了，赶紧申请注册。晚一步你的邮箱名就被别人注册了。\n\n操作也很简单：直接@bot 申领即可 https://t.co/dEdWVAeV6r https://t.co/i3J2YtPoyv",
+      "url": "https://x.com/yanhua1010/status/2108702880953925787"
+    },
+    {
+      "created_at": "2026-10-09T14:37:17.000Z",
+      "id": "2108567482755952822",
+      "lang": "",
+      "metrics": {
+        "bookmark": 4,
+        "impression": 1505,
+        "like": 7,
+        "quote": 0,
+        "reply": 4,
+        "retweet": 1
+      },
+      "text": "woc，才发现原来OpenCode上有这么多免费模型可以使用：\n\nStep 5 Preview\nMiMo-V2.6-Flash\nMuse Spark 1.3 https://t.co/ipKaHIcKE3 https://t.co/nFhtkH9YG2",
+      "url": "https://x.com/yanhua1010/status/2108567482755952822"
+    }
+  ],
+  "user_id": "1932935705711513600"
+}

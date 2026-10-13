@@ -1,0 +1,381 @@
+{
+  "handle": "therundownai",
+  "tweets": [
+    {
+      "created_at": "2026-10-12T20:56:13.000Z",
+      "id": "2109750007415091267",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 1379,
+        "like": 0,
+        "quote": 0,
+        "reply": 0,
+        "retweet": 0
+      },
+      "text": "Full guide in The Rundown University: https://t.co/XYDifTpNj7",
+      "url": "https://x.com/TheRundownAI/status/2109750007415091267"
+    },
+    {
+      "created_at": "2026-10-12T20:56:12.000Z",
+      "id": "2109750003313037547",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 5,
+        "impression": 5255,
+        "like": 20,
+        "quote": 1,
+        "reply": 14,
+        "retweet": 2
+      },
+      "text": "Grok Bot can now claim its own email address, so we tested it with several project emails, one of which changed a deadline.\n\nIt caught the new date, summarized what changed, and drafted a reply marked \"Needs approval.\"\n\nHere’s how to try it:\n\n-> Ask your Grok Bot to claim an address in the desktop app\n\n-> Send it a few project updates from an account you control\n\n-> Ask what changed and what’s still unanswered\n\n-> Have it draft one reply, and check every recipient before anything sends",
+      "url": "https://x.com/TheRundownAI/status/2109750003313037547"
+    },
+    {
+      "created_at": "2026-10-12T17:21:43.000Z",
+      "id": "2109696026735227303",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 5,
+        "impression": 5417,
+        "like": 33,
+        "quote": 3,
+        "reply": 7,
+        "retweet": 1
+      },
+      "text": "NEW: Meta released Muse Wonder (codenamed Watermelon), its new family of AI models, with scores that push the company to the frontier.\n\nThe top version, Wonder Full, scores 56 on Artificial Analysis’ Intelligence Index, behind only Claude Opus 5.5 at 58.\n\nIt also leads rivals on:\n\n- Legal work (Harvey LAB): 13.1 vs. 8.6 for GPT-6 Astra\n- Long coding projects (SWE-Marathon): 57.5 vs. 46.3 for Opus 5.5\n- Coding tasks (DeepSWE): 79.0 vs. 74.2 for Opus 5.5\n- Remembering context (MemoryBench): 85.5 vs. 81.5 for Opus 5.5\n\nMuse Wonder is live today in the Meta Model API and Muse Code, with Wonder Full open to paying Muse Code users.",
+      "url": "https://x.com/TheRundownAI/status/2109696026735227303"
+    },
+    {
+      "created_at": "2026-10-12T16:52:24.000Z",
+      "id": "2109688649151393968",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 1077,
+        "like": 1,
+        "quote": 0,
+        "reply": 0,
+        "retweet": 0
+      },
+      "text": "Every day we feature a top community workflow in The Rundown AI newsletter.\n\nShare what you've built and 2M+ readers might see it next: https://t.co/YWknu7pgDu",
+      "url": "https://x.com/TheRundownAI/status/2109688649151393968"
+    },
+    {
+      "created_at": "2026-10-12T16:52:24.000Z",
+      "id": "2109688647339348044",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 1125,
+        "like": 1,
+        "quote": 0,
+        "reply": 1,
+        "retweet": 0
+      },
+      "text": "The paper-trail detective\n\nMarty rebuilt 20+ years of scattered professional work, including 250+ records recovered from old publications, broken links, and archives.\n\nEvery find gets sorted as verified, probable, or rejected, same-name strangers get ruled out, and missing years stay marked as gaps instead of getting made up.\n\nCredit to Marty Weil: https://t.co/VFSj4qrZ0v",
+      "url": "https://x.com/TheRundownAI/status/2109688647339348044"
+    },
+    {
+      "created_at": "2026-10-12T16:52:23.000Z",
+      "id": "2109688644919542086",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 63,
+        "like": 0,
+        "quote": 0,
+        "reply": 1,
+        "retweet": 0
+      },
+      "text": "The one-person record label\n\nAdriana built a full music release pipeline out of AI tools: lyrics and mood in ChatGPT, the track in Suno, cover art from ChatGPT, and the video cut in Clipchamp.\n\nA ChatGPT agent handles the downloads and archiving. Then each song ships to YouTube, TikTok, Facebook, LinkedIn, and X.\n\nCredit to Adriana Pausenwein: https://t.co/GjMD48CGF0",
+      "url": "https://x.com/TheRundownAI/status/2109688644919542086"
+    },
+    {
+      "created_at": "2026-10-12T16:52:22.000Z",
+      "id": "2109688641505079451",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 73,
+        "like": 0,
+        "quote": 0,
+        "reply": 1,
+        "retweet": 0
+      },
+      "text": "The add-on bouncer\n\nPatrick built agent-guard, a free tool that checks the add-ons you give AI agents like Claude Code and Codex for malware and password theft before they install.\n\nIt runs security scanners from NVIDIA, Cisco, and Datadog, returns a plain safe-or-blocked verdict, and installs only the exact version it checked.\n\nCredit to Patrick Illian: https://t.co/6uzLuSuNJY",
+      "url": "https://x.com/TheRundownAI/status/2109688641505079451"
+    },
+    {
+      "created_at": "2026-10-12T16:52:22.000Z",
+      "id": "2109688639147876522",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 129,
+        "like": 0,
+        "quote": 0,
+        "reply": 1,
+        "retweet": 0
+      },
+      "text": "The ruin hunter\n\nGil turned a month of unused ChatGPT tokens into an archaeology dig.\n\nA team of agents on Raft scans LiDAR maps of dense Slovenian forest for anything that looks man-made, pauses when the tokens run out, and picks back up after the reset. Any finds go to Slovenian authorities.\n\nCredit to Gil: https://t.co/YZrNOjvfec",
+      "url": "https://x.com/TheRundownAI/status/2109688639147876522"
+    },
+    {
+      "created_at": "2026-10-12T16:52:21.000Z",
+      "id": "2109688636937568694",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 215,
+        "like": 1,
+        "quote": 0,
+        "reply": 3,
+        "retweet": 0
+      },
+      "text": "The listing director\n\nMatt built a site that turns property photos into cinematic listing videos.\n\nA civil engineer and videographer, not a developer, Matt used ChatGPT, Gemini, and Claude Code to code in real editing rules like kitchens and living rooms staying together, bedrooms sitting next to their bathrooms, and every clip having movement.\n\nCredit to Matt Aromando: https://t.co/cJVDheqEEx",
+      "url": "https://x.com/TheRundownAI/status/2109688636937568694"
+    },
+    {
+      "created_at": "2026-10-12T16:52:21.000Z",
+      "id": "2109688634349920350",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 1,
+        "impression": 5393,
+        "like": 4,
+        "quote": 0,
+        "reply": 1,
+        "retweet": 2
+      },
+      "text": "2M+ people read The Rundown. More of them are building with AI every day.\n\nSome of the recent top posts from our Community Workflow Hub: an engineer's AI listing-video studio, a one-person AI record label, and agents hunting for lost ruins in Slovenia 🧵 https://t.co/SDlxis4gvc",
+      "url": "https://x.com/TheRundownAI/status/2109688634349920350"
+    },
+    {
+      "created_at": "2026-10-12T15:59:06.000Z",
+      "id": "2109675234752069805",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 1,
+        "impression": 4753,
+        "like": 22,
+        "quote": 2,
+        "reply": 3,
+        "retweet": 3
+      },
+      "text": "NEW: Microsoft introduced its new Maia 300 chip, with Satya Nadella calling it the \"biggest bet yet on our own silicon.\"\n\nThe company says it gets 40% more AI work out of the same power than top chips today, and it will start running Microsoft's AI in 2027. https://t.co/iE8ySMgrhx",
+      "url": "https://x.com/TheRundownAI/status/2109675234752069805"
+    },
+    {
+      "created_at": "2026-10-12T14:30:53.000Z",
+      "id": "2109653034305224918",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 1434,
+        "like": 1,
+        "quote": 0,
+        "reply": 0,
+        "retweet": 0
+      },
+      "text": "Read more: https://t.co/7W5PifgOgW",
+      "url": "https://x.com/TheRundownAI/status/2109653034305224918"
+    },
+    {
+      "created_at": "2026-10-12T14:30:52.000Z",
+      "id": "2109653028726780292",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 3,
+        "impression": 4721,
+        "like": 21,
+        "quote": 1,
+        "reply": 4,
+        "retweet": 1
+      },
+      "text": "Top stories in robotics today:\n\n- UCLA turns old phones into mini-humanoids\n- Tesla seeks patent on robot skin\n- Robots hit the gym to learn real work\n- Tiny motors could give clothes muscle https://t.co/53uexjur5A",
+      "url": "https://x.com/TheRundownAI/status/2109653028726780292"
+    },
+    {
+      "created_at": "2026-10-12T10:30:30.000Z",
+      "id": "2109592540617789471",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 1897,
+        "like": 5,
+        "quote": 0,
+        "reply": 0,
+        "retweet": 0
+      },
+      "text": "Read more: https://t.co/JwZ0BSXRAY",
+      "url": "https://x.com/TheRundownAI/status/2109592540617789471"
+    },
+    {
+      "created_at": "2026-10-12T10:30:29.000Z",
+      "id": "2109592535572037979",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 5,
+        "impression": 5981,
+        "like": 22,
+        "quote": 1,
+        "reply": 8,
+        "retweet": 3
+      },
+      "text": "Top stories in AI today:\n\n- Atomic Machines’ AI turns code into tiny machines\n- The Rundown Roundtable: Our AI use cases\n- Turn a product photo into three matching ads\n- Microsoft CEO: Treat AI like it’s already been hacked https://t.co/kARtwrhbVR",
+      "url": "https://x.com/TheRundownAI/status/2109592535572037979"
+    },
+    {
+      "created_at": "2026-10-09T14:31:11.000Z",
+      "id": "2108565945866231815",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 1920,
+        "like": 3,
+        "quote": 0,
+        "reply": 0,
+        "retweet": 0
+      },
+      "text": "Read more: https://t.co/2kN6CDyvxo",
+      "url": "https://x.com/TheRundownAI/status/2108565945866231815"
+    },
+    {
+      "created_at": "2026-10-09T14:31:10.000Z",
+      "id": "2108565940677787997",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 2,
+        "impression": 6890,
+        "like": 26,
+        "quote": 1,
+        "reply": 9,
+        "retweet": 1
+      },
+      "text": "Top stories in tech today: \n\n- Apple’s next act: smart homes and touchscreen Macs\n- Amazon retires Fire for an Alexa reboot\n- SpaceX wins approval for 15K phone satellites\n- The feds want headlights to stop blinding you https://t.co/4xuUZOv0d1",
+      "url": "https://x.com/TheRundownAI/status/2108565940677787997"
+    },
+    {
+      "created_at": "2026-10-09T10:30:55.000Z",
+      "id": "2108505482314805308",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 2171,
+        "like": 5,
+        "quote": 0,
+        "reply": 0,
+        "retweet": 0
+      },
+      "text": "Read more: https://t.co/UYuB6A67PM",
+      "url": "https://x.com/TheRundownAI/status/2108505482314805308"
+    },
+    {
+      "created_at": "2026-10-09T10:30:53.000Z",
+      "id": "2108505474702221448",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 8,
+        "impression": 6657,
+        "like": 22,
+        "quote": 1,
+        "reply": 12,
+        "retweet": 0
+      },
+      "text": "Top stories in AI today:\n\n- Fired OpenAI researchers flag ‘shifting lines’\n- Rowan’s Corner: I tested every personal AI agent\n- Clean up a messy Excel report with Claude\n- Anthropic prohibits abuse or cruelty against Claude https://t.co/djRI8kyW3G",
+      "url": "https://x.com/TheRundownAI/status/2108505474702221448"
+    },
+    {
+      "created_at": "2026-10-08T19:29:08.000Z",
+      "id": "2108278538482659767",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 7,
+        "impression": 6308,
+        "like": 21,
+        "quote": 3,
+        "reply": 7,
+        "retweet": 0
+      },
+      "text": "\"OpenAI cannot make AI safe on its own.\"\n\nThat's the title of a letter from the three safety researchers OpenAI fired last week, addressed to its safety committees.\n\nOpenAI has said they mishandled confidential information.\n\nOne of them, Mikita Balesni, says they were fired for \"prioritizing safety over the near-term interests of OpenAI as a corporation.\" \n\nTheir letter says the firing has \"made our former colleagues afraid to speak.\"",
+      "url": "https://x.com/TheRundownAI/status/2108278538482659767"
+    },
+    {
+      "created_at": "2026-10-08T16:51:50.000Z",
+      "id": "2108238952989663365",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 8,
+        "impression": 7826,
+        "like": 24,
+        "quote": 3,
+        "reply": 11,
+        "retweet": 1
+      },
+      "text": "NEW: U.S. President Donald Trump, on Truth Social:\n\n\"The White House considers anyone that uses the term, 'Artificial Intelligence,' as opposed to the highly accepted new and more accurate term, 'Super Intelligence,' THE ENEMY!\" https://t.co/ZRPzNkIrQu",
+      "url": "https://x.com/TheRundownAI/status/2108238952989663365"
+    },
+    {
+      "created_at": "2026-10-08T16:15:59.000Z",
+      "id": "2108229930366435436",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 6,
+        "impression": 7121,
+        "like": 48,
+        "quote": 3,
+        "reply": 12,
+        "retweet": 10
+      },
+      "text": "You can just do things with AI, astronomy edition:\n\nPavel Rabtsevich says he used Claude Code and Codex to find a planet NASA's own software missed in its data for years.\n\nNASA now plans to watch the star closely when its TESS telescope passes over in November. https://t.co/N66EpvhoZV",
+      "url": "https://x.com/TheRundownAI/status/2108229930366435436"
+    },
+    {
+      "created_at": "2026-10-08T15:16:38.000Z",
+      "id": "2108214995087396923",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 7,
+        "impression": 5658,
+        "like": 23,
+        "quote": 3,
+        "reply": 5,
+        "retweet": 3
+      },
+      "text": "The Association for Human Mathematics, on OpenAI's 722-paper release: \"Mathematicians did not ask for this work to be done.\"\n\nIt also urged mathematicians \"to discontinue their work with OpenAI.\"\n\nFields Medalist Terence Tao reposted the statement on his blog as a guest post, and X has since run with it as Tao's own words. \n\nOpenAI has also withdrawn 3 of the papers, and 14 more have been revised since the release.\n\nOpenAI's README on the drop did say that \"some of the unformalized results could have issues. We will endeavor to fix any such issues quickly.\"",
+      "url": "https://x.com/TheRundownAI/status/2108214995087396923"
+    },
+    {
+      "created_at": "2026-10-08T14:30:44.000Z",
+      "id": "2108203445165424748",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 1,
+        "impression": 1370,
+        "like": 1,
+        "quote": 0,
+        "reply": 0,
+        "retweet": 0
+      },
+      "text": "Read more: https://t.co/l25OHy5A6v",
+      "url": "https://x.com/TheRundownAI/status/2108203445165424748"
+    },
+    {
+      "created_at": "2026-10-08T14:30:43.000Z",
+      "id": "2108203439343693993",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 2,
+        "impression": 4969,
+        "like": 14,
+        "quote": 1,
+        "reply": 6,
+        "retweet": 1
+      },
+      "text": "Top stories in robotics today: \n\n- Minerva builds a bomb-disposal humanoid\n- Agilink teaches a robot hand embroidery\n- Every step charges this tiny robot\n- MIT gives drones a mathematical survival instinct https://t.co/GRREDYfDPh",
+      "url": "https://x.com/TheRundownAI/status/2108203439343693993"
+    }
+  ],
+  "user_id": "731917653506318336"
+}

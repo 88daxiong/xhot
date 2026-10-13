@@ -1,0 +1,381 @@
+{
+  "handle": "sundarpichai",
+  "tweets": [
+    {
+      "created_at": "2026-10-08T22:50:26.000Z",
+      "id": "2108329198955958339",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 433,
+        "impression": 397827,
+        "like": 1750,
+        "quote": 68,
+        "reply": 245,
+        "retweet": 305
+      },
+      "text": "Today @TheLancet published our AMIE study with @BIDMC_Medicine, the first prospective study of patient-facing conversational diagnostics in a real clinic.\n\nAMIE is a research system people can chat with before doctors appointments. Testing AMIE outside the lab with real urgent care patients showed how technology can help gather medical histories safely. Clinicians reported that the summaries helped them prepare for visits in 75% of cases and influenced their approach to care in more than half. AMIE’s differential diagnoses also matched the doctors’ final diagnoses 90% of the time giving clinicians more time to focus on patient care.\n\nIt’s Google’s first-ever paper in The Lancet’s main journal!",
+      "url": "https://x.com/sundarpichai/status/2108329198955958339"
+    },
+    {
+      "created_at": "2026-10-08T18:05:25.000Z",
+      "id": "2108257472553386059",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 377,
+        "impression": 373216,
+        "like": 4029,
+        "quote": 106,
+        "reply": 314,
+        "retweet": 401
+      },
+      "text": "Great to be with 700+ @googlecloud  customers at the historic NASA Hangar One for Gemini at Work! \n\nToday, we introduced the new Gemini agent, a single, universal agent for work that has all of your business context and answers your questions, handles your knowledge work, creates your images and media, and writes and runs code - all from a single prompt box. It is connected to your personal workflows, your systems of record, and your enterprise controls.\n\nIt’s built around a few core architectural principles:\n\nUnified Agent: Gemini can answer questions, do knowledge work and generate code from a single prompt box.\n\nAccess: Gemini is web-based and can be accessed from any device and integrated into third-party applications. It can also operate without a dedicated user interface.\n\nPersistent Execution: It runs in the cloud, which means it maintains a single set of memories, context and one personalization graph no matter where you access it.\n\nMulti-Agent Orchestration: Gemini can create sub-agents to tackle multi-step tasks and can also act as a coworker agent with a defined role and its own dedicated identity\n\nContext: Gemini knows your tools, data, and work history and learns how you work the more you use it.\nModel Choice Flexibility: It orchestrates across multiple models to deliver optimal quality and lower your costs.\n\nRead more in our blog: https://t.co/bd1ekBR74Q",
+      "url": "https://x.com/sundarpichai/status/2108257472553386059"
+    },
+    {
+      "created_at": "2026-10-06T16:03:21.000Z",
+      "id": "2107501975671890211",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 3019,
+        "impression": 802102,
+        "like": 8749,
+        "quote": 185,
+        "reply": 447,
+        "retweet": 866
+      },
+      "text": "Introducing EmbeddingGemma 2, a new open multimodal model that sets the standard for on-device efficiency.\n\n- our first open, natively multimodal embedding model\n- handles text, code, image, video, and audio tasks within a lightweight, modular 740M parameter form factor\n- ideal for offline, privacy-first RAG when paired with Gemma 4\n- outperforms some specialist models more than twice its size\n\nWeights available now on Hugging Face.",
+      "url": "https://x.com/sundarpichai/status/2107501975671890211"
+    },
+    {
+      "created_at": "2026-10-02T01:12:06.000Z",
+      "id": "2105828136428691774",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 128,
+        "impression": 409553,
+        "like": 1439,
+        "quote": 26,
+        "reply": 248,
+        "retweet": 102
+      },
+      "text": "In a busy week, SynthID Bio, our watermarking tech for AI-designed proteins, was a big big step forward for scientific integrity and biosecurity! Congrats to the team @GoogleDeepMind https://t.co/IrCue2hxdK",
+      "url": "https://x.com/sundarpichai/status/2105828136428691774"
+    },
+    {
+      "created_at": "2026-10-02T00:30:29.000Z",
+      "id": "2105817662651777367",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 734,
+        "impression": 1201349,
+        "like": 11703,
+        "quote": 155,
+        "reply": 477,
+        "retweet": 1085
+      },
+      "text": "I remember the first meeting where the team pitched the idea of putting compute in space - exciting idea!\n\nToday's successful launch with our partner @planet prototype satellite shows how far we've come...and how far there is to go. Thanks for the lift, @SpaceX, another spectacular booster landing too🚀",
+      "url": "https://x.com/sundarpichai/status/2105817662651777367"
+    },
+    {
+      "created_at": "2026-09-30T20:02:59.000Z",
+      "id": "2105387954474746264",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 170,
+        "impression": 300096,
+        "like": 2468,
+        "quote": 44,
+        "reply": 118,
+        "retweet": 118
+      },
+      "text": "Importantly Argon has frontier safeguards and we are rolling it out responsibly - it’s with the US gov’t and going to a set of trusted cyber defenders through our Fairwind Program today.\n\nWe’re going to make it available as soon as we can and as safely as we can. So hold tight, lots more coming, and you’re going to see us iterating rapidly.\n\nhttps://t.co/8MiXIfXIKr",
+      "url": "https://x.com/sundarpichai/status/2105387954474746264"
+    },
+    {
+      "created_at": "2026-09-30T20:02:58.000Z",
+      "id": "2105387952478277979",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 2415,
+        "impression": 3886785,
+        "like": 25933,
+        "quote": 1224,
+        "reply": 1383,
+        "retweet": 2312
+      },
+      "text": "Lots of discussion out there about our next model(!), so I wanted to give an early look as soon as possible. Introducing Gemini 4 Argon!\n\nIt shows frontier performance in complex workflows, cyber defense and software engineering. Teams are using it extensively at Google, from coding to quantum computing, great feedback. \n\nHere’s a look at the benchmarks:",
+      "url": "https://x.com/sundarpichai/status/2105387952478277979"
+    },
+    {
+      "created_at": "2026-09-30T02:25:14.000Z",
+      "id": "2105121763176894804",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 1226,
+        "impression": 1850454,
+        "like": 12555,
+        "quote": 429,
+        "reply": 1726,
+        "retweet": 1463
+      },
+      "text": "Great to meet today with @POTUS, @JDVance, @SpeakerJohnson and Administration + tech leaders. Important conversation and we signed today the White House Accord on Super Intelligence.\n\nAs I shared today, Google has invested hundreds of billions in the last two years alone, with more to come, across the entire stack, to deliver benefits for America and the world.  We’re working to build products that deliver real value for people and businesses, invest in local communities, and build trust in the technology.\n\nIndustry also has to innovate responsibly. Google’s focused on building the right way, with appropriate testing, evaluations, red-teaming, and other safeguards against misuse and misalignment – and releasing models or products only after they’ve been thoroughly reviewed.\n\nWe are committed to working with other industry leaders to establish norms and build public confidence. The White House Accord and the Joint Commitment on Frontier Responsibilities signed today is a solid basis for moving forward - it contains real tangible steps to promote safe development, while delivering the economic and scientific benefits of this technology.",
+      "url": "https://x.com/sundarpichai/status/2105121763176894804"
+    },
+    {
+      "created_at": "2026-09-24T19:45:15.000Z",
+      "id": "2103209164072010051",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 1280,
+        "impression": 4191409,
+        "like": 12895,
+        "quote": 448,
+        "reply": 617,
+        "retweet": 1382
+      },
+      "text": "Can our TPUs survive and operate in space? Well, we're going to find out.\n\nProject Suncatcher is hitching a ride aboard @SpaceX's Transporter-18 mission, testing a prototype satellite built in partnership with @planet\n\nOne small step for TPUs.... https://t.co/FuZoj7c0Hl",
+      "url": "https://x.com/sundarpichai/status/2103209164072010051"
+    },
+    {
+      "created_at": "2026-09-21T16:52:59.000Z",
+      "id": "2102078648505487756",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 813,
+        "impression": 1169977,
+        "like": 7135,
+        "quote": 75,
+        "reply": 396,
+        "retweet": 386
+      },
+      "text": "Feeling good about this one:) https://t.co/sM82nOZ6Bg https://t.co/IemFN2d2JR",
+      "url": "https://x.com/sundarpichai/status/2102078648505487756"
+    },
+    {
+      "created_at": "2026-09-15T17:22:07.000Z",
+      "id": "2099911653395685765",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 1048,
+        "impression": 811378,
+        "like": 6296,
+        "quote": 113,
+        "reply": 440,
+        "retweet": 684
+      },
+      "text": "Today we have set out how we’re building AI to accelerate science and improve people’s lives. Just some examples in the last week or so:\n\n- Mapped all 9B possible single letter genetic changes across the human genome with AlphaGenome Atlas and made it openly available to researchers.\n- Billions of decisions depend on weather predictions so we introduced WeatherNext 3, our most accurate and capable global weather AI model to date.\n- We published AI & Economy ATLAS, a comprehensive open-access look at how people are using AI globally.\n- AI has enabled extraordinary advances in language translation. Today our services are available in nearly 300 languages, spoken by 7B people\n\nWe’re focusing our efforts on four key areas: health, natural disaster and weather resilience, learning, and economic opportunity. https://t.co/DDKcUTYj54",
+      "url": "https://x.com/sundarpichai/status/2099911653395685765"
+    },
+    {
+      "created_at": "2026-09-08T14:09:12.000Z",
+      "id": "2097326390765109627",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 523,
+        "impression": 438091,
+        "like": 3996,
+        "quote": 40,
+        "reply": 272,
+        "retweet": 460
+      },
+      "text": "AlphaGenome Atlas is an interactive resource, mapping the predicted impact of all 9 billion DNA variants. \n\nIt works in a regular web browser, without any coding required, and is free for academic researchers. Excited for the discoveries to come. https://t.co/JPF9tLqxcL",
+      "url": "https://x.com/sundarpichai/status/2097326390765109627"
+    },
+    {
+      "created_at": "2026-09-03T17:47:27.000Z",
+      "id": "2095569375373984139",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 271,
+        "impression": 742996,
+        "like": 6707,
+        "quote": 11,
+        "reply": 300,
+        "retweet": 325
+      },
+      "text": "Congrats @JensenHuang @ClementDelangue for this great outcome! We were investors in Huggingface and continue to be partners and this will strengthen the open model ecosystem! https://t.co/Iql1HMMK5q",
+      "url": "https://x.com/sundarpichai/status/2095569375373984139"
+    },
+    {
+      "created_at": "2026-09-03T16:39:35.000Z",
+      "id": "2095552297099198689",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 579,
+        "impression": 427990,
+        "like": 3581,
+        "quote": 64,
+        "reply": 243,
+        "retweet": 320
+      },
+      "text": "New Gemini voice capabilities are rolling out so you can search your Gmail inbox, organize thoughts and tasks in Keep, and create new Docs, all conversationally. Rolling out now for Google AI subscribers!\n\nDocs Live going to be super helpful in particular - see it in action below, and read more here: https://t.co/sO7agTSs4s",
+      "url": "https://x.com/sundarpichai/status/2095552297099198689"
+    },
+    {
+      "created_at": "2026-09-02T16:17:58.000Z",
+      "id": "2095184468059492457",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 28,
+        "impression": 60451,
+        "like": 279,
+        "quote": 2,
+        "reply": 54,
+        "retweet": 32
+      },
+      "text": "Beyond benchmarks, we’re seeing impressive real-world use cases. For example, in evaluations on real Chrome security bugs, 3.8 Flash Cyber produced 2.6x more correct patches for vulnerabilities than larger models.\n\nBecause of its advanced capabilities, we're giving Government agencies & cybersecurity partners access through the Fairwind program, read more: https://t.co/9glOjT0XvX",
+      "url": "https://x.com/sundarpichai/status/2095184468059492457"
+    },
+    {
+      "created_at": "2026-09-02T16:17:57.000Z",
+      "id": "2095184464800526655",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 380,
+        "impression": 415535,
+        "like": 4561,
+        "quote": 88,
+        "reply": 339,
+        "retweet": 402
+      },
+      "text": "We’re also introducing Gemini 3.8 Flash Cyber, our most capable cybersecurity model. It shows frontier-level performance in discovering vulnerabilities and patching them at scale, with Flash-level speed & pricing.\n\nThat includes achieving 86.2% on the important CyberGym industry benchmark, plus 47.2% on CWE-Bench for patching. We saw a 70%+ success rate in discovering vulnerabilities across 20 programming languages on our internal benchmark.",
+      "url": "https://x.com/sundarpichai/status/2095184464800526655"
+    },
+    {
+      "created_at": "2026-09-02T16:07:14.000Z",
+      "id": "2095181765082292334",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 645,
+        "impression": 567673,
+        "like": 8788,
+        "quote": 236,
+        "reply": 552,
+        "retweet": 767
+      },
+      "text": "Today we’re introducing a new 3.8 Flash model, our 3rd Flash release in just 6 wks.\n\nIt delivers significant leaps from 3.7 Flash across software engineering, agentic tasks, and multi-step reasoning. On DeepSWE v1.1, it outperforms most larger frontier models in autonomously solving complex engineering problems end to end, at a fraction of the cost.\n\nMore details here: https://t.co/4YkKkdKQvu",
+      "url": "https://x.com/sundarpichai/status/2095181765082292334"
+    },
+    {
+      "created_at": "2026-08-26T17:04:31.000Z",
+      "id": "2092659467284517088",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 1231,
+        "impression": 568337,
+        "like": 4590,
+        "quote": 129,
+        "reply": 523,
+        "retweet": 398
+      },
+      "text": "Say hello to Gemini 3.5 Transcribe!\n\n- Build apps that understand user speech / intent, even w/ multiple speakers!\n- Auto-detection of 85+ languages out of the box\n- Custom vocab adaptation for specialized jargon... SGTM:)\n\nAPI available now in @GoogleAIStudio and Gemini Enterprise, or try it in the Gemini app on macOS or Rambler on Android! \n\nMore details: https://t.co/AduutCb3M7",
+      "url": "https://x.com/sundarpichai/status/2092659467284517088"
+    },
+    {
+      "created_at": "2026-08-25T23:54:17.000Z",
+      "id": "2092400201596330108",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 63,
+        "impression": 406748,
+        "like": 2884,
+        "quote": 10,
+        "reply": 138,
+        "retweet": 152
+      },
+      "text": "It was incredible how Dolly Parton transcended generations and made a lasting impact on the world. May she RIP https://t.co/DosJYbQDXV",
+      "url": "https://x.com/sundarpichai/status/2092400201596330108"
+    },
+    {
+      "created_at": "2026-08-22T03:37:28.000Z",
+      "id": "2091006815295373717",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 251,
+        "impression": 686103,
+        "like": 3869,
+        "quote": 62,
+        "reply": 356,
+        "retweet": 299
+      },
+      "text": "Gemini 3.7 Flash smashed previous Gemini growth records in its first week, making it our fastest growing model yet. Great to see the huge excitement from our developer community! Now running in Search and @Geminiapp too. https://t.co/IPbBu5Jdto",
+      "url": "https://x.com/sundarpichai/status/2091006815295373717"
+    },
+    {
+      "created_at": "2026-08-19T20:05:45.000Z",
+      "id": "2090168359564546160",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 67,
+        "impression": 78788,
+        "like": 358,
+        "quote": 4,
+        "reply": 36,
+        "retweet": 39
+      },
+      "text": "(It’s J BTW :) See more of the learning features we’re dropping today, plus free Google AI subscriptions for college students in 140+ countries! https://t.co/Gry1VlW5sH",
+      "url": "https://x.com/sundarpichai/status/2090168359564546160"
+    },
+    {
+      "created_at": "2026-08-19T20:05:44.000Z",
+      "id": "2090168358411108738",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 239,
+        "impression": 407881,
+        "like": 2572,
+        "quote": 34,
+        "reply": 433,
+        "retweet": 136
+      },
+      "text": "Fill in the blank: Search can now help with test prep for _________.\n\nA. SAT\nB. ACT\nC. AP\nD. ENEM\nE. GRE\nF. JEE\nG. LSAT\nH. MCAT\nI. NEET\nJ. All of the above!",
+      "url": "https://x.com/sundarpichai/status/2090168358411108738"
+    },
+    {
+      "created_at": "2026-08-13T17:05:09.000Z",
+      "id": "2087948583890985263",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 300,
+        "impression": 589182,
+        "like": 4523,
+        "quote": 99,
+        "reply": 442,
+        "retweet": 419
+      },
+      "text": "Our Flash models are workhorses that offer performance at a great price. So, we're shipping updates fast to get them in developers’ hands. And now just 3 weeks after launching 3.6 Flash, 3.7 Flash shows significant gains including in coding and agentic work. \n\nIt delivers substantial improvements across software engineering, knowledge work, and web development, all with an introductory price at half the original cost of 3.6 Flash.\n\nWe've gotten positive feedback from early users, including our own engineers using 3.7 in @Antigravity, and we’re excited for you to try it there. Also available via Gemini API in @GoogleAIStudio, Gemini Enterprise & more, full list and details here: https://t.co/u2P2nEMM8F",
+      "url": "https://x.com/sundarpichai/status/2087948583890985263"
+    },
+    {
+      "created_at": "2026-08-12T17:38:02.000Z",
+      "id": "2087594472008003850",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 371,
+        "impression": 534541,
+        "like": 4568,
+        "quote": 88,
+        "reply": 263,
+        "retweet": 442
+      },
+      "text": "One of the most important updates coming out of Made by Google today is our new sign-to-text feature in Gboard & Live Transcribe. \n\nBuilt in partnership with the Deaf community, this can help people who sign ASL communicate more seamlessly with their phone or with those who don't sign, like in this Live Transcribe demo:",
+      "url": "https://x.com/sundarpichai/status/2087594472008003850"
+    },
+    {
+      "created_at": "2026-08-12T14:48:32.000Z",
+      "id": "2087551816904974672",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 97,
+        "impression": 384662,
+        "like": 2077,
+        "quote": 28,
+        "reply": 150,
+        "retweet": 169
+      },
+      "text": "The new Pixel 11 line up is here, designed for Gemini Intelligence and with lots of new helpful features. \n\nA few I’m excited about: Rambler, a new voice input built for how you actually talk. Magic Capture for effortless photos. And HiLight, a subtle glow when your phone is face down that lets you know when important people in your life are trying to call you.",
+      "url": "https://x.com/sundarpichai/status/2087551816904974672"
+    }
+  ],
+  "user_id": "14130366"
+}
