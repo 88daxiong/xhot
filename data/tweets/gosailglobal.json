@@ -2,6 +2,96 @@
   "handle": "gosailglobal",
   "tweets": [
     {
+      "created_at": "2026-10-13T10:22:44.000Z",
+      "id": "2109952974684561722",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 333,
+        "like": 1,
+        "quote": 0,
+        "reply": 0,
+        "retweet": 0
+      },
+      "text": "预告一下 ，下一个外链难题\n\n我来踹翻一些导航站🫣 https://t.co/6ksfvaJdMD",
+      "url": "https://x.com/GoSailGlobal/status/2109952974684561722"
+    },
+    {
+      "created_at": "2026-10-13T09:53:04.000Z",
+      "id": "2109945508496388310",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 350,
+        "like": 1,
+        "quote": 0,
+        "reply": 1,
+        "retweet": 0
+      },
+      "text": "做海外产品还在找 PMF 的时候：\n\n入门的做法：先找一小批真正反复使用、愿意付费的用户；逐个问他们解决了什么反复出现的问题\n\n标准的做法：看留存曲线是否逐渐趋于稳定，不要只看总用户数、收入增长或一次性激活\n\n进阶的做法：用 Brian Balfour 的同期群模型，看曲线和趋平后是否还有持续价值\n\n抠细节的做法：把实际留存和代理指标分开，内容消费、课程完成、活跃订阅只能辅助判断\n\n怎么验证：同时看留存、变现和可扩展性，不能用单次问卷替代真实使用",
+      "url": "https://x.com/GoSailGlobal/status/2109945508496388310"
+    },
+    {
+      "created_at": "2026-10-13T08:38:59.000Z",
+      "id": "2109926864571736453",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 144,
+        "like": 1,
+        "quote": 0,
+        "reply": 0,
+        "retweet": 0
+      },
+      "text": "用法三种：命令行加定时任务、3 个 Agent Skill、MCP 服务器。\n\nnpx skills add zhuyansen/new-term-radar\n\n付费数据都走 AIsa，一个 key 就行，按示例配置每月约 15 美元。\n\n感谢 @CoderJeffLee 提出「名字 + 通用词放一张表」的思路，以及 @fantexi997 的 GoAnyAPI 提供相关查询数据。 https://t.co/bIQGdysmIM",
+      "url": "https://x.com/GoSailGlobal/status/2109926864571736453"
+    },
+    {
+      "created_at": "2026-10-13T08:38:58.000Z",
+      "id": "2109926860834718153",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 191,
+        "like": 0,
+        "quote": 0,
+        "reply": 1,
+        "retweet": 0
+      },
+      "text": "几个我觉得该说清楚的地方：\n\n· 每条线索 14 天后会用 Google Trends 复盘，按信号统计命中率。我自己的复盘刚开始，现在还没有命中率数字\n· 新东西发布后大家先搜名字，通用词动得晚、动得少\n· 某个数据源挂了，表照出，但会在表头写明「不完整」\n\nREADME 里专门有一节写它做不到什么。",
+      "url": "https://x.com/GoSailGlobal/status/2109926860834718153"
+    },
+    {
+      "created_at": "2026-10-13T08:38:58.000Z",
+      "id": "2109926858171301925",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 135,
+        "like": 1,
+        "quote": 0,
+        "reply": 1,
+        "retweet": 0
+      },
+      "text": "光有名字不够。名字寿命短，还是别人的品牌；它做的那件事才是大家长期搜的词。\n\n所以每个新名字会再读一遍：搜高赞推文和 README，找出它背后的通用词，查搜索量和 Trends，最后一张表给结论。\n\n今天的例子：\nPhotoCraft（开源修图，5.5 万星）估算每天近万次搜索；它背后的「photoshop alternative」在美国也跟着涨。",
+      "url": "https://x.com/GoSailGlobal/status/2109926858171301925"
+    },
+    {
+      "created_at": "2026-10-13T08:38:57.000Z",
+      "id": "2109926853855363503",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 15,
+        "impression": 4726,
+        "like": 8,
+        "quote": 0,
+        "reply": 9,
+        "retweet": 0
+      },
+      "text": "开源了我自己每天在用的 AI 新词雷达：new-term-radar\n\n更新上了skills和MCP的方式，更易用\n\n关键词工具看到一个新词时，通常已经晚了一两周\n\n这个雷达去新词最早出现的地方抓：\n\n① X 上实验室和博主第一次说出的名字\n② Hugging Face 新进热门榜的模型\n③ GitHub 上单个仓库的爆发\n④ 竞品 sitemap 的新页面\n\nhttps://t.co/HjWsRqn0zl",
+      "url": "https://x.com/GoSailGlobal/status/2109926853855363503"
+    },
+    {
       "created_at": "2026-10-13T06:56:26.000Z",
       "id": "2109901056583065831",
       "lang": "zh",

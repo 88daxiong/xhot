@@ -2,6 +2,36 @@
   "handle": "wublockchain",
   "tweets": [
     {
+      "created_at": "2026-10-13T09:12:33.000Z",
+      "id": "2109935311589671362",
+      "lang": "",
+      "metrics": {
+        "bookmark": 1,
+        "impression": 1644,
+        "like": 1,
+        "quote": 0,
+        "reply": 1,
+        "retweet": 0
+      },
+      "text": "Source: https://t.co/GigSM4bn6B",
+      "url": "https://x.com/WuBlockchain/status/2109935311589671362"
+    },
+    {
+      "created_at": "2026-10-13T09:04:27.000Z",
+      "id": "2109933273480867877",
+      "lang": "",
+      "metrics": {
+        "bookmark": 3,
+        "impression": 12330,
+        "like": 43,
+        "quote": 3,
+        "reply": 27,
+        "retweet": 6
+      },
+      "text": "K33: U.S. Government's 17,733 BTC Transfers Likely Custody-Related, Not Sales\n\nK33 Research reported that U.S. government-linked wallets transferred approximately 17,733 BTC to Coinbase Prime in early October, including 12,267 BTC tied to the Bitfinex hack. Labeled government https://t.co/BL8ci8F90P",
+      "url": "https://x.com/WuBlockchain/status/2109933273480867877"
+    },
+    {
       "created_at": "2026-10-13T06:50:01.000Z",
       "id": "2109899440010248378",
       "lang": "",

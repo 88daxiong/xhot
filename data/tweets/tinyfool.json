@@ -2,6 +2,21 @@
   "handle": "tinyfool",
   "tweets": [
     {
+      "created_at": "2026-10-13T10:58:57.000Z",
+      "id": "2109962086222840267",
+      "lang": "",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 201,
+        "like": 0,
+        "quote": 0,
+        "reply": 1,
+        "retweet": 0
+      },
+      "text": "薄都进去那么多年了，黄也要去陪了？",
+      "url": "https://x.com/tinyfool/status/2109962086222840267"
+    },
+    {
       "created_at": "2026-10-13T02:29:41.000Z",
       "id": "2109833927603200271",
       "lang": "",

@@ -2,6 +2,36 @@
   "handle": "therundownai",
   "tweets": [
     {
+      "created_at": "2026-10-13T10:30:37.000Z",
+      "id": "2109954955960291359",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 497,
+        "like": 0,
+        "quote": 0,
+        "reply": 0,
+        "retweet": 0
+      },
+      "text": "Read more: https://t.co/R1Dp2XNBab",
+      "url": "https://x.com/TheRundownAI/status/2109954955960291359"
+    },
+    {
+      "created_at": "2026-10-13T10:30:35.000Z",
+      "id": "2109954950637769058",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 1828,
+        "like": 4,
+        "quote": 1,
+        "reply": 3,
+        "retweet": 0
+      },
+      "text": "Top stories in AI today:\n\n- Meta’s Muse Wonder lands at the frontier\n- Andrej Karpathy sketches AI’s ‘sharp funnel’\n- Put Meta’s new Muse Wonder to work\n- Microsoft’s Maia 300 takes aim at Nvidia https://t.co/SpJmTKfs96",
+      "url": "https://x.com/TheRundownAI/status/2109954950637769058"
+    },
+    {
       "created_at": "2026-10-12T20:56:13.000Z",
       "id": "2109750007415091267",
       "lang": "en",

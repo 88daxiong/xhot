@@ -2,6 +2,21 @@
   "handle": "laobaishare",
   "tweets": [
     {
+      "created_at": "2026-10-13T09:05:01.000Z",
+      "id": "2109933415378403619",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 12,
+        "impression": 1295,
+        "like": 3,
+        "quote": 0,
+        "reply": 3,
+        "retweet": 0
+      },
+      "text": "这些 Grok Bot 指南基本就是免费的操作手册，教你搭出一整支机器人团队。\n\n我把 17 篇全看了一遍，留下这 6 篇，里面的配置你直接就能照抄：\n\n1. Grok Bot 101\n一个 DevRel 机器人扫 X 书签，起草原型提示词，交给 Cursor，然后带着一段剪辑开一个 PR。\n\n https://t.co/YJwmF2gv5y \n\n2. Grok Bot for Work\n四个机器人管收件箱、日历和情报，一个 Bot Boss 每天汇报两次。没有批准，什么都不会发出去。\n\n https://t.co/EvsYbmI3V7 \n\n3. Grok Bot for Marketing\n六个专业机器人负责调研、定位、广告、落地页和效果决策。\n\n https://t.co/E1216z29MU \n\n4. Grok Bot for Founder-Led Sales\n一个幕僚长加 8 个专家，早上 8 点前就把外联、通话简报和支持回复准备好。\n\n https://t.co/1RUtotq20O \n\n5. Grok Bot for Engineering\n一支机器人队伍从约 15 个云端编码代理扩到 200 多个，每 30 分钟做一次 PR 检查，夜里还有清理审计。\n\n https://t.co/a71b4tvqwF \n\n6. Grok Bot for Mobile App Development\n六个机器人运营一家手游工作室，作者说找到更好的广告切入点后，CPI 从 15 美元降到了 1 美元。\n\n https://t.co/Kg5Fhb5bCT \n\n按顺序读，读到第 6 篇，你就有自己第一支机器人团队的蓝图了。",
+      "url": "https://x.com/laobaishare/status/2109933415378403619"
+    },
+    {
       "created_at": "2026-10-13T04:15:03.000Z",
       "id": "2109860441409397238",
       "lang": "",

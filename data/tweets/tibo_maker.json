@@ -2,6 +2,36 @@
   "handle": "tibo_maker",
   "tweets": [
     {
+      "created_at": "2026-10-13T09:30:18.000Z",
+      "id": "2109939777403306444",
+      "lang": "",
+      "metrics": {
+        "bookmark": 3,
+        "impression": 1280,
+        "like": 3,
+        "quote": 0,
+        "reply": 3,
+        "retweet": 0
+      },
+      "text": "ref: https://t.co/OWW0DkOscp",
+      "url": "https://x.com/tibo_maker/status/2109939777403306444"
+    },
+    {
+      "created_at": "2026-10-13T09:30:17.000Z",
+      "id": "2109939775121637600",
+      "lang": "",
+      "metrics": {
+        "bookmark": 80,
+        "impression": 5057,
+        "like": 62,
+        "quote": 2,
+        "reply": 33,
+        "retweet": 3
+      },
+      "text": "how Anthropic engineers prompt Claude Code https://t.co/5bTguoO197",
+      "url": "https://x.com/tibo_maker/status/2109939775121637600"
+    },
+    {
       "created_at": "2026-10-12T16:05:02.000Z",
       "id": "2109676726057836778",
       "lang": "en",

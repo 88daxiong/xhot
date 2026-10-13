@@ -2,6 +2,21 @@
   "handle": "hwchase17",
   "tweets": [
     {
+      "created_at": "2026-10-13T09:23:50.000Z",
+      "id": "2109938151472890070",
+      "lang": "",
+      "metrics": {
+        "bookmark": 21,
+        "impression": 3676,
+        "like": 49,
+        "quote": 2,
+        "reply": 56,
+        "retweet": 2
+      },
+      "text": "we are thinking a lot about how to make deepagents more async native. specifically about making async subagents work better/more prominent\n\none key question is how does a finished subagent \"notify\" the parent agent? some default behaviors we're considering for when the parent is",
+      "url": "https://x.com/hwchase17/status/2109938151472890070"
+    },
+    {
       "created_at": "2026-10-12T10:03:36.000Z",
       "id": "2109585768649990218",
       "lang": "en",

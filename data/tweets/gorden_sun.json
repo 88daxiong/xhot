@@ -2,6 +2,66 @@
   "handle": "gorden_sun",
   "tweets": [
     {
+      "created_at": "2026-10-13T10:23:34.000Z",
+      "id": "2109953181950324953",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 1,
+        "impression": 483,
+        "like": 0,
+        "quote": 1,
+        "reply": 2,
+        "retweet": 0
+      },
+      "text": "Meta发布X-AgentRed：帮个人AI助手排查跨软件操作的安全隐患\n\n个人AI助手在跨软件处理正常请求时，多个工具接力调用可能会意外造成隐私泄漏等风险。\n\nMeta提出的X-AgentRed通过构建工具依赖图谱，逆向推导出潜在的危害路径，再根据真实执行反馈自动替换工具或修复受阻步骤。\n\n在包含30个服务和914个工具的测试中，它发现危害路径的效率达到基线方法的1.77倍，覆盖了更多冷门工具与长调用链。\n\n后续会开源。\n项目地址：https://t.co/5EzRUJZ2wy",
+      "url": "https://x.com/Gorden_Sun/status/2109953181950324953"
+    },
+    {
+      "created_at": "2026-10-13T09:23:38.000Z",
+      "id": "2109938100982161484",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 1,
+        "impression": 1130,
+        "like": 3,
+        "quote": 0,
+        "reply": 1,
+        "retweet": 0
+      },
+      "text": "请欣赏歌曲：《我不是大肥鱼》\n演唱者：大肥鱼 https://t.co/ciTklTs5i1",
+      "url": "https://x.com/Gorden_Sun/status/2109938100982161484"
+    },
+    {
+      "created_at": "2026-10-13T09:20:00.000Z",
+      "id": "2109937184900063249",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 56,
+        "impression": 4191,
+        "like": 51,
+        "quote": 2,
+        "reply": 11,
+        "retweet": 7
+      },
+      "text": "谁把教材上传Arxiv了？\n\n《Agentic Large Language Models》（智能体大语言模型）：来自荷兰莱顿大学的AI教材，内容涵盖大模型工作原理、Agent原理等相关AI内容，共472页。\n\n地址：https://t.co/Z183K5j9K9",
+      "url": "https://x.com/Gorden_Sun/status/2109937184900063249"
+    },
+    {
+      "created_at": "2026-10-13T08:29:37.000Z",
+      "id": "2109924507469393955",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 3,
+        "impression": 1137,
+        "like": 4,
+        "quote": 0,
+        "reply": 2,
+        "retweet": 1
+      },
+      "text": "Prompteina：用自然语言直接设计蛋白质结构\n\n文本驱动的全原子蛋白质结构生成模型，允许用户直接用日常自然语言描述所期望的形状、折叠方式与表面性质，从而一键生成对应的结构。\n\n它支持单体与结合蛋白的设计，并能搭配AI智能体自动完成目标调研与参数配置，在真实实验中成功筛选出针对疾病靶点的高结合力蛋白。\n\nGithub：https://t.co/Szi8TX2OJD",
+      "url": "https://x.com/Gorden_Sun/status/2109924507469393955"
+    },
+    {
       "created_at": "2026-10-13T05:11:23.000Z",
       "id": "2109874619234877513",
       "lang": "zh",
