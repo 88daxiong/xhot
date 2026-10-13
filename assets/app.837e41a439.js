@@ -22,7 +22,7 @@ var hd='<div class="pm"><span class="heat">🔥 '+fmt(r[8])+'</span><time dateti
 hd=who?'<header>'+avh(who[0],who[1],who[4],who[5],pref)+'<div class="who"><a href="'+pref+'p/'+who[0]+'.html">'+esc(who[1])+'</a><small>@'+esc(who[2])+'</small></div>'+hd+'</header>':'<header><span class="tag">'+(r[1]>=week?'近一周':'更早')+'</span><div class="who"></div>'+hd+'</header>';
 return '<article class="post" style="--dc:'+DC[dom]+'" data-k="'+r[0]+'">'+hd+'<div class="pt ptc">'+lnk(t)+'</div><footer><div class="act"><button class="btn ex" type="button" aria-expanded="false"'+(lg?'':' hidden')+'>展开</button><button class="btn cp" type="button">复制原文</button><a class="btn op" href="'+esc(r[9])+'" target="_blank" rel="noopener">在 X 打开 ↗</a></div><div class="met"><span title="点赞"><i aria-hidden="true">♥</i>'+fmt(r[3])+'</span><span title="转发"><i aria-hidden="true">⇄</i>'+fmt(r[4])+'</span><span title="评论"><i aria-hidden="true">💬</i>'+fmt(r[5])+'</span><span title="浏览"><i aria-hidden="true">👁</i>'+fmt(r[7])+'</span></div></footer></article>'}
 /* 展开按钮：只有真溢出才显示 */
-function fixEx(root){$$('.post',root).forEach(function(p){var pt=$('.ptc',p),b=$('.ex',p);if(!pt||!b||p.classList.contains('open'))return;b.hidden=pt.scrollHeight<=pt.clientHeight+2})}
+function fixEx(root){$$('.post',root).forEach(function(p){var pt=$('.ptc,.nbc',p),b=$('.ex',p);if(!pt||!b||p.classList.contains('open'))return;b.hidden=pt.scrollHeight<=pt.clientHeight+2;pt.classList.toggle('fit',b.hidden)})}
 /* 复制 */
 var TXT={};
 function fb(t){var a=document.createElement('textarea');a.value=t;a.setAttribute('readonly','');a.style.cssText='position:fixed;top:-1000px;opacity:0';document.body.appendChild(a);a.select();var ok=false;try{ok=document.execCommand('copy')}catch(e){}document.body.removeChild(a);return ok}
@@ -59,7 +59,7 @@ $$('[data-asort]').forEach(function(b){b.addEventListener('click',function(){as.
 $$('button[data-dom]').forEach(function(b){b.addEventListener('click',function(){as.dom=b.dataset.dom;arender()})});
 aq.addEventListener('input',arender);var a0=hget();if(a0.dom||a0.sort){as.dom=H0ok(a0.dom,['all','ai','money','growth'],'all');as.sort=H0ok(a0.sort,['grp','f','d'],'grp');arender()}}
 /* ===== 资讯 ===== */
-if(!ag&&!(feed)&&$('button[data-dom]')){var ns={dom:'all'};function nr(){seg('data-dom',ns.dom);domFilter(ns.dom);hset(ns)}
+if($('.nbc'))fixEx(document);if(!ag&&!(feed)&&$('button[data-dom]')){var ns={dom:'all'};function nr(){seg('data-dom',ns.dom);domFilter(ns.dom);hset(ns)}
 $$('button[data-dom]').forEach(function(b){b.addEventListener('click',function(){ns.dom=b.dataset.dom;nr()})});var n0=hget();if(n0.dom){ns.dom=H0ok(n0.dom,['all','ai','money','growth'],'all');nr()}}
 /* ===== 个人页 ===== */
 var mt=$('#tw-meta');if(!mt)return;M=JSON.parse(mt.textContent);var D=null,ps={sort:feed.dataset.mode,_def:feed.dataset.mode},pl=[],pshown=+feed.dataset.pre,q=$('#q'),all=$('#alll'),first=true;
