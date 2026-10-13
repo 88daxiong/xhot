@@ -2,6 +2,141 @@
   "handle": "gorden_sun",
   "tweets": [
     {
+      "created_at": "2026-10-13T17:01:50.000Z",
+      "id": "2110053408531177671",
+      "lang": "",
+      "metrics": {
+        "bookmark": 2,
+        "impression": 266,
+        "like": 3,
+        "quote": 0,
+        "reply": 2,
+        "retweet": 0
+      },
+      "text": "Anthropic 放弃行业通用的代码管理工具 Git，转而自己开发了一套名为 Scion 的新系统。\n\n在 Anthropic 内部，AI（Claude）承担了大量的编程工作，写代码的速度远超人类。这导致每天需要合并保存的代码量暴增，从 5 月份的每天 2,500 次猛增到 9 月份的每天 30,000 次以上。传统软件开发中常用的 https://t.co/L5pAFNGers https://t.co/HSRZpOqENc",
+      "url": "https://x.com/Gorden_Sun/status/2110053408531177671"
+    },
+    {
+      "created_at": "2026-10-13T16:08:20.000Z",
+      "id": "2110039945318649920",
+      "lang": "",
+      "metrics": {
+        "bookmark": 1,
+        "impression": 952,
+        "like": 1,
+        "quote": 1,
+        "reply": 2,
+        "retweet": 0
+      },
+      "text": "Gemini 4 Argon正式上线了！反重力里只有Ultra用户能用，APP里Pro用户就能用。 https://t.co/MDX68dCP0R",
+      "url": "https://x.com/Gorden_Sun/status/2110039945318649920"
+    },
+    {
+      "created_at": "2026-10-13T15:50:09.000Z",
+      "id": "2110035368255090890",
+      "lang": "",
+      "metrics": {
+        "bookmark": 4,
+        "impression": 1084,
+        "like": 5,
+        "quote": 1,
+        "reply": 2,
+        "retweet": 0
+      },
+      "text": "恭喜Manus，接到了大单子！\nManus公告：https://t.co/1yDoX30yR3 https://t.co/HWxQQKWQeV",
+      "url": "https://x.com/Gorden_Sun/status/2110035368255090890"
+    },
+    {
+      "created_at": "2026-10-13T15:49:05.000Z",
+      "id": "2110035102806016381",
+      "lang": "",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 1325,
+        "like": 0,
+        "quote": 0,
+        "reply": 3,
+        "retweet": 0
+      },
+      "text": "Gemini 4 Argon已经上线了，部分Ultra订阅用户已经可以在反重力使用了。希望哈基米这次代码能力给力些，写作和小说已经验过牌是Top级别了。",
+      "url": "https://x.com/Gorden_Sun/status/2110035102806016381"
+    },
+    {
+      "created_at": "2026-10-13T15:14:23.000Z",
+      "id": "2110026367962366188",
+      "lang": "",
+      "metrics": {
+        "bookmark": 1,
+        "impression": 1842,
+        "like": 8,
+        "quote": 2,
+        "reply": 8,
+        "retweet": 2
+      },
+      "text": "Character AI 要倒闭了\n\n目前处于“破产重组与寻求出售”阶段，尚未直接关停，但确实存在最终倒闭的风险。\n\n如果找到买家接盘，平台就会由买方接手并继续维持运营。\n如果出售失败，平台将启动关停流程，正式终止运营。\n\n官方公告：https://t.co/ygy8RZ0881 https://t.co/HjXLgW7bE5",
+      "url": "https://x.com/Gorden_Sun/status/2110026367962366188"
+    },
+    {
+      "created_at": "2026-10-13T14:58:12.000Z",
+      "id": "2110022297490985242",
+      "lang": "",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 832,
+        "like": 2,
+        "quote": 1,
+        "reply": 1,
+        "retweet": 0
+      },
+      "text": "苹果发布AI家居中枢，看起来是AI版小度小度\n官网介绍：https://t.co/kvFNBHljR7 https://t.co/Bl7msgWas1",
+      "url": "https://x.com/Gorden_Sun/status/2110022297490985242"
+    },
+    {
+      "created_at": "2026-10-13T14:47:44.000Z",
+      "id": "2110019664181133577",
+      "lang": "",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 854,
+        "like": 1,
+        "quote": 0,
+        "reply": 0,
+        "retweet": 0
+      },
+      "text": "新的Apple TV终于发布了，上一代都成了理财产品，我三四年前1100买的，前几天闲鱼价是1300。\n新一代价格翻倍了，299美元。 https://t.co/ZLkuaZJXwx",
+      "url": "https://x.com/Gorden_Sun/status/2110019664181133577"
+    },
+    {
+      "created_at": "2026-10-13T14:43:09.000Z",
+      "id": "2110018507526250561",
+      "lang": "",
+      "metrics": {
+        "bookmark": 41,
+        "impression": 4010,
+        "like": 34,
+        "quote": 0,
+        "reply": 5,
+        "retweet": 5
+      },
+      "text": "我的PPT Skill上线快半年，已经3600星，现在还天天有人加我，做了个视频再介绍一下\nGithub：https://t.co/V3Gtbq7b09 https://t.co/Fdx1OURR8W",
+      "url": "https://x.com/Gorden_Sun/status/2110018507526250561"
+    },
+    {
+      "created_at": "2026-10-13T14:16:34.000Z",
+      "id": "2110011820518023453",
+      "lang": "",
+      "metrics": {
+        "bookmark": 4,
+        "impression": 2060,
+        "like": 6,
+        "quote": 0,
+        "reply": 2,
+        "retweet": 1
+      },
+      "text": "太强了，手搓游戏的时代终于来了！ https://t.co/xu5hjeRNPP",
+      "url": "https://x.com/Gorden_Sun/status/2110011820518023453"
+    },
+    {
       "created_at": "2026-10-13T10:23:34.000Z",
       "id": "2109953181950324953",
       "lang": "zh",

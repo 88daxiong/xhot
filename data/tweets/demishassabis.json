@@ -2,6 +2,51 @@
   "handle": "demishassabis",
   "tweets": [
     {
+      "created_at": "2026-10-13T16:59:56.000Z",
+      "id": "2110052933698019330",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 4,
+        "impression": 4526,
+        "like": 68,
+        "quote": 0,
+        "reply": 13,
+        "retweet": 3
+      },
+      "text": "maybe I should go back and try to build a laser in the lab with the help of Gemini 4 Argon... 🤔",
+      "url": "https://x.com/demishassabis/status/2110052933698019330"
+    },
+    {
+      "created_at": "2026-10-13T16:59:56.000Z",
+      "id": "2110052931110318464",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 17,
+        "impression": 19119,
+        "like": 251,
+        "quote": 2,
+        "reply": 20,
+        "retweet": 15
+      },
+      "text": "I love lasers (really wanted to work on them as a kid)… especially Argon lasers 😀 reminded me of this scene from one of my fave films: ‘synthesize excited bromide in an argon matrix… but that would be hotter than the sun’ 😂 Val Kilmer was so cool https://t.co/A7BKAJDJhm https://t.co/dpj3TAeK6m",
+      "url": "https://x.com/demishassabis/status/2110052931110318464"
+    },
+    {
+      "created_at": "2026-10-13T16:12:33.000Z",
+      "id": "2110041008100843835",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 175,
+        "impression": 59842,
+        "like": 1489,
+        "quote": 30,
+        "reply": 123,
+        "retweet": 159
+      },
+      "text": "Gemini 4 Argon is amazing for knowledge work and coding - and it’s super fun to build with! We asked it to create this wizard chess game and it's so cool to see Argon's physics understanding & 3D modelling capabilities, makes me nostalgic for Battlechess on the Amiga - fun times!\n\nArgon is rolling out today to Google Ultra and Pro subscribers in the @GeminiApp and Search, and Ultra subscribers in @antigravity! More info & full availability in the blog: https://t.co/7d3791mRNH",
+      "url": "https://x.com/demishassabis/status/2110041008100843835"
+    },
+    {
       "created_at": "2026-10-13T01:09:37.000Z",
       "id": "2109813775377563908",
       "lang": "en",

@@ -2,6 +2,21 @@
   "handle": "ericzakariasson",
   "tweets": [
     {
+      "created_at": "2026-10-13T17:17:53.000Z",
+      "id": "2110057450850435451",
+      "lang": "",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 379,
+        "like": 8,
+        "quote": 0,
+        "reply": 0,
+        "retweet": 0
+      },
+      "text": "grok @bot 0.70.2 is rolling out!\n\n- each bot can claim its own email address at @mail.grokbot.com and draft emails for you to send\n- apps like Figma, Notion and Canva show up as live cards right in the chat\n- bots can search X and read public posts and profiles without connecting https://t.co/E13jIjCVb8",
+      "url": "https://x.com/ericzakariasson/status/2110057450850435451"
+    },
+    {
       "created_at": "2026-10-12T23:17:45.000Z",
       "id": "2109785624874037433",
       "lang": "",

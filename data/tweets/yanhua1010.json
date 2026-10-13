@@ -2,6 +2,81 @@
   "handle": "yanhua1010",
   "tweets": [
     {
+      "created_at": "2026-10-13T14:39:35.000Z",
+      "id": "2110017609672671506",
+      "lang": "ja",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 1150,
+        "like": 0,
+        "quote": 0,
+        "reply": 0,
+        "retweet": 0
+      },
+      "text": "用的是zenmux:\nhttps://t.co/xXyT8vBbYv",
+      "url": "https://x.com/yanhua1010/status/2110017609672671506"
+    },
+    {
+      "created_at": "2026-10-13T14:39:34.000Z",
+      "id": "2110017606572990677",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 13395,
+        "like": 17,
+        "quote": 5,
+        "reply": 7,
+        "retweet": 0
+      },
+      "text": "Argon第一时间评测来了👇\n\n老规矩：鹈鹕骑车，生成速度是真的快。 https://t.co/PKxOfnQW1q https://t.co/nDvxvRNs2l",
+      "url": "https://x.com/yanhua1010/status/2110017606572990677"
+    },
+    {
+      "created_at": "2026-10-13T14:11:50.000Z",
+      "id": "2110010629788729380",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 3,
+        "impression": 7284,
+        "like": 6,
+        "quote": 1,
+        "reply": 2,
+        "retweet": 1
+      },
+      "text": "卧槽，Gemini 4 Argon真的要来了， Google Cloud 的API配额模型筛选已经出现了gemini-4-argon https://t.co/tQO72hqFDP https://t.co/IlHNvY46Ty",
+      "url": "https://x.com/yanhua1010/status/2110010629788729380"
+    },
+    {
+      "created_at": "2026-10-13T12:27:56.000Z",
+      "id": "2109984479347605933",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 21,
+        "impression": 5046,
+        "like": 14,
+        "quote": 0,
+        "reply": 1,
+        "retweet": 5
+      },
+      "text": "这效果太牛了，将3D剧情游戏直接砸穿了。\n\ntripo负责3D，blender建模，再加上Opus 5.5 的智能就是王炸。 https://t.co/n55HzutpM6",
+      "url": "https://x.com/yanhua1010/status/2109984479347605933"
+    },
+    {
+      "created_at": "2026-10-13T12:14:00.000Z",
+      "id": "2109980973312229799",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 1,
+        "impression": 8781,
+        "like": 10,
+        "quote": 1,
+        "reply": 6,
+        "retweet": 0
+      },
+      "text": "Google 这波 💯 是 Gemini 4 Argon，在不来个重量级更新，Google真要被遗忘了。\n\n希望给力点，我钱包准备好了。 https://t.co/o63NpAn5Vq https://t.co/6G6IRsYDB3",
+      "url": "https://x.com/yanhua1010/status/2109980973312229799"
+    },
+    {
       "created_at": "2026-10-13T10:06:18.000Z",
       "id": "2109948837972615335",
       "lang": "",

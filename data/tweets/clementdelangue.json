@@ -2,6 +2,51 @@
   "handle": "clementdelangue",
   "tweets": [
     {
+      "created_at": "2026-10-13T16:02:08.000Z",
+      "id": "2110038387360923744",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 1602,
+        "like": 7,
+        "quote": 0,
+        "reply": 0,
+        "retweet": 0
+      },
+      "text": "Two announcements today for the visit of @JensenHuang in France:  \n\nhttps://t.co/X5YVevcHKG with @Inria\n\nhttps://t.co/TdT38Q9zny by @nvidia",
+      "url": "https://x.com/ClementDelangue/status/2110038387360923744"
+    },
+    {
+      "created_at": "2026-10-13T15:34:40.000Z",
+      "id": "2110031473483071838",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 6,
+        "impression": 6643,
+        "like": 42,
+        "quote": 0,
+        "reply": 7,
+        "retweet": 3
+      },
+      "text": "You don't want to miss this if you're in SF Friday. Hearing there are A LOT of surprises! https://t.co/GK5eWzlcyT https://t.co/kQsC5aLjhp",
+      "url": "https://x.com/ClementDelangue/status/2110031473483071838"
+    },
+    {
+      "created_at": "2026-10-13T14:11:39.000Z",
+      "id": "2110010580278853800",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 36,
+        "impression": 12541,
+        "like": 380,
+        "quote": 5,
+        "reply": 42,
+        "retweet": 37
+      },
+      "text": "I can't wait to do much much much more in France with @huggingface @nvidia in the coming years. France has the talent & the energy to become the third country in the world for datacenters and AI in general, especially thanks to their strong open-source AI ecosystem. Let's do it 🇫🇷🇫🇷🇫🇷!",
+      "url": "https://x.com/ClementDelangue/status/2110010580278853800"
+    },
+    {
       "created_at": "2026-10-12T16:02:47.000Z",
       "id": "2109676163333554684",
       "lang": "en",

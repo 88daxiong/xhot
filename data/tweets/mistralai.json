@@ -2,6 +2,21 @@
   "handle": "mistralai",
   "tweets": [
     {
+      "created_at": "2026-10-13T13:25:20.000Z",
+      "id": "2109998925037859091",
+      "lang": "",
+      "metrics": {
+        "bookmark": 33,
+        "impression": 15542,
+        "like": 447,
+        "quote": 14,
+        "reply": 36,
+        "retweet": 39
+      },
+      "text": "Look up! Mistral models are in orbit 🌍. \n\nProud to join @orbitworksspace and @LoftOrbital's first-of-its-kind AI satellite constellation with @NVIDIAAIInfra. https://t.co/ZiOnYBjNmP",
+      "url": "https://x.com/MistralAI/status/2109998925037859091"
+    },
+    {
       "created_at": "2026-10-12T16:49:28.000Z",
       "id": "2109687910962208848",
       "lang": "en",

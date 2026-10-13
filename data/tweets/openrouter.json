@@ -2,6 +2,66 @@
   "handle": "openrouter",
   "tweets": [
     {
+      "created_at": "2026-10-13T16:43:46.000Z",
+      "id": "2110048861763109303",
+      "lang": "",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 1339,
+        "like": 10,
+        "quote": 0,
+        "reply": 0,
+        "retweet": 1
+      },
+      "text": "It can also write up to 1M tokens in a single response with long decode, using continuation tokens to run past the per-request output limit.\n\nLearn more in our migration guide: https://t.co/8UnhgjMaWp",
+      "url": "https://x.com/OpenRouter/status/2110048861763109303"
+    },
+    {
+      "created_at": "2026-10-13T16:26:18.000Z",
+      "id": "2110044466468082024",
+      "lang": "",
+      "metrics": {
+        "bookmark": 1,
+        "impression": 3084,
+        "like": 19,
+        "quote": 0,
+        "reply": 1,
+        "retweet": 1
+      },
+      "text": "Google's new frontier model is built for long, multi-step work. It ranks #1 on the Vals Index across finance, legal, coding and tax, and sets a new high on DeepSWE v1.1 for real-world software engineering.\n\nRead Google's announcement: https://t.co/9ALwauyZjy",
+      "url": "https://x.com/OpenRouter/status/2110044466468082024"
+    },
+    {
+      "created_at": "2026-10-13T16:26:15.000Z",
+      "id": "2110044453977403412",
+      "lang": "",
+      "metrics": {
+        "bookmark": 21,
+        "impression": 12994,
+        "like": 228,
+        "quote": 10,
+        "reply": 17,
+        "retweet": 20
+      },
+      "text": "Gemini 4 Argon from @GoogleDeepMind is live on OpenRouter, via Google AI Studio and @googlecloud.\n\nIt tops AutomationBench (51.3%) and LVBench (91.7%) and ties for first on CWE-bench v1 (68%).\n\n$2/M input, $10/M output (introductory pricing).\n\nTry it now: https://t.co/AQNjS8Mbjy https://t.co/iIClZh3Klw",
+      "url": "https://x.com/OpenRouter/status/2110044453977403412"
+    },
+    {
+      "created_at": "2026-10-13T12:49:00.000Z",
+      "id": "2109989782302716140",
+      "lang": "",
+      "metrics": {
+        "bookmark": 96,
+        "impression": 14039,
+        "like": 166,
+        "quote": 7,
+        "reply": 11,
+        "retweet": 6
+      },
+      "text": "A family of constrained-decoding models from @scaledown_team is live on OpenRouter, each one purpose-built for a single task:\n\n• Summarize: turns long text, images, and PDFs into short, consistent summaries for context compaction and transcript digests\n• Extract: describe the https://t.co/B4zqQtSI7U",
+      "url": "https://x.com/OpenRouter/status/2109989782302716140"
+    },
+    {
       "created_at": "2026-10-12T17:23:28.000Z",
       "id": "2109696468038865207",
       "lang": "en",

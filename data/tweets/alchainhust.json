@@ -2,6 +2,51 @@
   "handle": "alchainhust",
   "tweets": [
     {
+      "created_at": "2026-10-13T14:35:39.000Z",
+      "id": "2110016620869673386",
+      "lang": "",
+      "metrics": {
+        "bookmark": 7,
+        "impression": 3553,
+        "like": 15,
+        "quote": 0,
+        "reply": 2,
+        "retweet": 0
+      },
+      "text": "我也试过AI建模做小王子游戏，讲道理这精细度比我高1000%。太猛了 https://t.co/dKrgEkhyLN",
+      "url": "https://x.com/AlchainHust/status/2110016620869673386"
+    },
+    {
+      "created_at": "2026-10-13T12:54:31.000Z",
+      "id": "2109991172814889013",
+      "lang": "",
+      "metrics": {
+        "bookmark": 71,
+        "impression": 6922,
+        "like": 50,
+        "quote": 5,
+        "reply": 18,
+        "retweet": 7
+      },
+      "text": "踩了无数坑后，实践出来的Claude Code省token小技巧👇\n\n其实Opus5.5整体还挺耐用的，但是需要对默认设置稍微做点调整： https://t.co/Z1znAUvhxA",
+      "url": "https://x.com/AlchainHust/status/2109991172814889013"
+    },
+    {
+      "created_at": "2026-10-13T11:17:25.000Z",
+      "id": "2109966734769995838",
+      "lang": "",
+      "metrics": {
+        "bookmark": 1,
+        "impression": 3662,
+        "like": 10,
+        "quote": 0,
+        "reply": 9,
+        "retweet": 0
+      },
+      "text": "现在初创公司还是别想着去找太大的赛道，想要定义新品类了。\n\n像年初OpenClaw都火成啥样了？现在personal agent不还是Grok bots、Muse、dots？\n\nAnthropic和Google都还没出手了。\n\n其实模型公司现阶段都不需要把产品比小公司的好多少，只需要订阅制供给的token单价远低于开放出来的API价格就可以了。",
+      "url": "https://x.com/AlchainHust/status/2109966734769995838"
+    },
+    {
       "created_at": "2026-10-13T05:17:20.000Z",
       "id": "2109876116370735242",
       "lang": "zh",

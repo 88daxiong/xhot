@@ -2,6 +2,21 @@
   "handle": "rauchg",
   "tweets": [
     {
+      "created_at": "2026-10-13T16:25:03.000Z",
+      "id": "2110044152482365747",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 45,
+        "impression": 22008,
+        "like": 525,
+        "quote": 4,
+        "reply": 45,
+        "retweet": 17
+      },
+      "text": "Congrats Gemini team. Never bet against Google, the company that brought us Transformers and has overwhelming data, engineering talent, and compute.\n\nEveryone has, rightfully, pivoted back to coding. Coding agents are the killer app of AI. We're firmly at an elysium for developers and builders.\n\nIncidentally, getting Muse Wonder and Gemini Argon back-to-back is a reminder why you as an individual, and your company, should stay model agnostic and gateway-maxxx / fx-maxxx.",
+      "url": "https://x.com/rauchg/status/2110044152482365747"
+    },
+    {
       "created_at": "2026-10-12T22:21:01.000Z",
       "id": "2109771347064922255",
       "lang": "",

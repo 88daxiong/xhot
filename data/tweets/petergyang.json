@@ -2,6 +2,21 @@
   "handle": "petergyang",
   "tweets": [
     {
+      "created_at": "2026-10-13T17:07:36.000Z",
+      "id": "2110054862339924129",
+      "lang": "",
+      "metrics": {
+        "bookmark": 3,
+        "impression": 1252,
+        "like": 8,
+        "quote": 0,
+        "reply": 5,
+        "retweet": 0
+      },
+      "text": "Is AI now a 4-horse race? I tested the new Gemini 4 and Muse Wonder head to head against GPT-6 Astra and Opus 5.5 across 5 use cases, including:\n\n→ 3D models and games\n→ Animated video shorts\n→ Website design, writing, and research\n\nOpus still wins on 3D, but Gemini 4",
+      "url": "https://x.com/petergyang/status/2110054862339924129"
+    },
+    {
       "created_at": "2026-10-13T01:44:43.000Z",
       "id": "2109822610637017218",
       "lang": "en",

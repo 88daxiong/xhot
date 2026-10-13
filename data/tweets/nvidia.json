@@ -2,6 +2,51 @@
   "handle": "nvidia",
   "tweets": [
     {
+      "created_at": "2026-10-13T17:04:39.000Z",
+      "id": "2110054117595066796",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 7991,
+        "like": 56,
+        "quote": 3,
+        "reply": 7,
+        "retweet": 5
+      },
+      "text": "An evening in Paris with Jensen and the founders, researchers, and partners shaping AI across France. 🇫🇷 https://t.co/ATi6RJLThD",
+      "url": "https://x.com/nvidia/status/2110054117595066796"
+    },
+    {
+      "created_at": "2026-10-13T14:01:04.000Z",
+      "id": "2110007917583990791",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 6,
+        "impression": 9759,
+        "like": 101,
+        "quote": 0,
+        "reply": 4,
+        "retweet": 7
+      },
+      "text": "Signed, @JensenHuang ✍️ https://t.co/j5yrP8qS0w",
+      "url": "https://x.com/nvidia/status/2110007917583990791"
+    },
+    {
+      "created_at": "2026-10-13T14:00:58.000Z",
+      "id": "2110007892313321595",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 23,
+        "impression": 27663,
+        "like": 365,
+        "quote": 5,
+        "reply": 49,
+        "retweet": 31
+      },
+      "text": "Let’s get building, Paris. 🦞\n\n@JensenHuang stopped by Build-A-Claw, where developers and startups are getting hands-on with open models to build AI agents of their own. https://t.co/ipezGKUz0X",
+      "url": "https://x.com/nvidia/status/2110007892313321595"
+    },
+    {
       "created_at": "2026-10-13T05:01:57.000Z",
       "id": "2109872247267610694",
       "lang": "",

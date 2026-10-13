@@ -2,6 +2,126 @@
   "handle": "wublockchain",
   "tweets": [
     {
+      "created_at": "2026-10-13T17:11:28.000Z",
+      "id": "2110055835569377742",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 1,
+        "impression": 5850,
+        "like": 8,
+        "quote": 1,
+        "reply": 5,
+        "retweet": 2
+      },
+      "text": "Leading Global Online Broker Interactive Brokers Launches ETH Staking Powered by zerohash\n\nLeading global online broker Interactive Brokers (NASDAQ: IBKR) has launched cryptocurrency staking, with services provided by digital asset infrastructure firm zerohash. Initially, eligible Interactive Brokers LLC clients can stake ETH through the Staking Dashboard in IBKR’s Client Portal, where they can submit staking and unstaking requests and monitor pending activity. Rewards, when earned, are credited as additional staked cryptocurrency and can compound while the position remains staked.",
+      "url": "https://x.com/WuBlockchain/status/2110055835569377742"
+    },
+    {
+      "created_at": "2026-10-13T17:01:37.000Z",
+      "id": "2110053355687125016",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 774,
+        "like": 0,
+        "quote": 0,
+        "reply": 2,
+        "retweet": 0
+      },
+      "text": "For the complete article and weekly curated reports, subscribe to our Substack: https://t.co/SzM6R0FL0k",
+      "url": "https://x.com/WuBlockchain/status/2110053355687125016"
+    },
+    {
+      "created_at": "2026-10-13T16:13:19.000Z",
+      "id": "2110041202276151615",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 3,
+        "impression": 9143,
+        "like": 20,
+        "quote": 0,
+        "reply": 19,
+        "retweet": 3
+      },
+      "text": "September 2026 Exchange Spot Volume Report: total $696.7 billion, MoM increased 36.5%\n\nWuBlockchain data show that spot trading volume across 14 major cryptocurrency exchanges reached USD 696.7 billion in September 2026, up 36.5% from USD 510.4 billion in August. All 14 exchanges recorded month-over-month increases.\n\nBinance ranked first with USD 307.8 billion in trading volume (44.2% market share), followed by OKX at USD 65.8 billion (9.5%) and Coinbase at USD 61.3 billion (8.8%). The top three exchanges accounted for 62.4% of total volume, down from 64.8% in August.",
+      "url": "https://x.com/WuBlockchain/status/2110041202276151615"
+    },
+    {
+      "created_at": "2026-10-13T14:05:59.000Z",
+      "id": "2110009156082303008",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 1726,
+        "like": 2,
+        "quote": 0,
+        "reply": 0,
+        "retweet": 1
+      },
+      "text": "Source: https://t.co/Mhjyqvsz4s",
+      "url": "https://x.com/WuBlockchain/status/2110009156082303008"
+    },
+    {
+      "created_at": "2026-10-13T14:05:33.000Z",
+      "id": "2110009048691249227",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 7,
+        "impression": 14076,
+        "like": 119,
+        "quote": 6,
+        "reply": 15,
+        "retweet": 16
+      },
+      "text": "Sui Devnet Adds Post-Quantum Signature Support, Targets Mainnet Rollout in Q1 2027\n\nMysten Labs co-founder and chief cryptographer Kostas Chalkias announced that Sui Devnet has successfully processed its first native quantum-safe transaction, sharing the on-chain transaction record. Sui's core developer Mysten Labs has introduced ML-DSA-65 post-quantum signature support in Devnet release v1.82.0, allowing signed transactions to be submitted through the ExecuteTransaction API and verified through the VerifySignature API.\n\nML-DSA-65 is also supported in multisignature transactions, with additional integration into GraphQL and the Rust SDK. According to Sui's previously announced roadmap, native ML-DSA-65 accounts are expected to reach Testnet by the end of 2026, with native account authentication on Mainnet targeted for Q1 2027, subject to security audits and testing results.",
+      "url": "https://x.com/WuBlockchain/status/2110009048691249227"
+    },
+    {
+      "created_at": "2026-10-13T13:30:58.000Z",
+      "id": "2110000341735673997",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 1681,
+        "like": 2,
+        "quote": 0,
+        "reply": 0,
+        "retweet": 0
+      },
+      "text": "Source: https://t.co/CnFuJueL7i",
+      "url": "https://x.com/WuBlockchain/status/2110000341735673997"
+    },
+    {
+      "created_at": "2026-10-13T13:20:44.000Z",
+      "id": "2109997768311976357",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 1,
+        "impression": 13299,
+        "like": 32,
+        "quote": 1,
+        "reply": 16,
+        "retweet": 5
+      },
+      "text": "Strive Acquires 3,311 BTC, Bringing Total Holdings to 32,773 BTC\n\nBitcoin treasury company Strive (NASDAQ: ASST) reported purchasing an additional 3,311 BTC last week, bringing its total holdings to 32,773 BTC, valued at approximately $2.697 billion based on a BTC price of $82,300 on October 9. The company also disclosed that approximately $208 million in warrants had been exercised, with $15.3 million remaining set to expire on October 13 at 5:00 PM ET. Additionally, Strive formalized SATA perpetual preferred stock's $100 minimum issuance price as a binding restriction in its governing documents.",
+      "url": "https://x.com/WuBlockchain/status/2109997768311976357"
+    },
+    {
+      "created_at": "2026-10-13T12:13:24.000Z",
+      "id": "2109980821759393907",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 7,
+        "impression": 15530,
+        "like": 49,
+        "quote": 0,
+        "reply": 39,
+        "retweet": 12
+      },
+      "text": "Wintermute: Crypto Is Losing Its Flow Support as ETF Outflows Mount\n\nWintermute said crypto is losing support from capital flows, while equities remain backed by earnings expectations. Last week, BTC fell 3.2% and ETH dropped 7.0%, with U.S. spot BTC and ETH ETFs recording $679M and $542M in net outflows, respectively. BTC ETF outflows were the largest weekly total since late June.\n\nWintermute said a sustained recovery requires long-term Treasury yields to stabilize and spot ETF flows to turn positive. Until then, BTC remains vulnerable to volatility and downside risks, while low-quality altcoin rallies should be approached cautiously. The firm remains constructive long term but would turn more cautious if the U.S. 30-year Treasury yield exceeds 5.64% or BTC repeatedly fails to break above $82,500.",
+      "url": "https://x.com/WuBlockchain/status/2109980821759393907"
+    },
+    {
       "created_at": "2026-10-13T09:12:33.000Z",
       "id": "2109935311589671362",
       "lang": "",

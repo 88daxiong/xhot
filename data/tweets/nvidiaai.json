@@ -2,6 +2,36 @@
   "handle": "nvidiaai",
   "tweets": [
     {
+      "created_at": "2026-10-13T17:00:15.000Z",
+      "id": "2110053012903518630",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 5,
+        "impression": 2140,
+        "like": 21,
+        "quote": 0,
+        "reply": 1,
+        "retweet": 4
+      },
+      "text": "Customizing Vertical Voice Agents with ASR and LLM Fine-Tuning https://t.co/dBSfkUiKeX",
+      "url": "https://x.com/NVIDIAAI/status/2110053012903518630"
+    },
+    {
+      "created_at": "2026-10-13T13:41:33.000Z",
+      "id": "2110003005911101714",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 6,
+        "impression": 13641,
+        "like": 95,
+        "quote": 1,
+        "reply": 4,
+        "retweet": 10
+      },
+      "text": "Barcelona showed up ready to build 🦞.\n\nThe road to #NVIDIAGTC Berlin is officially underway. https://t.co/SumnDGk4WE",
+      "url": "https://x.com/NVIDIAAI/status/2110003005911101714"
+    },
+    {
       "created_at": "2026-10-12T18:27:04.000Z",
       "id": "2109712471254761741",
       "lang": "",

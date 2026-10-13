@@ -2,6 +2,141 @@
   "handle": "op7418",
   "tweets": [
     {
+      "created_at": "2026-10-13T16:10:26.000Z",
+      "id": "2110040473524109782",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 1,
+        "impression": 2008,
+        "like": 1,
+        "quote": 0,
+        "reply": 1,
+        "retweet": 0
+      },
+      "text": "Gemini APP 和 Antigravity 都已经有了 https://t.co/CP5hDzw5Xb",
+      "url": "https://x.com/op7418/status/2110040473524109782"
+    },
+    {
+      "created_at": "2026-10-13T16:08:15.000Z",
+      "id": "2110039924435288217",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 6,
+        "impression": 9337,
+        "like": 32,
+        "quote": 0,
+        "reply": 13,
+        "retweet": 1
+      },
+      "text": "来了，Gemini 4 Argon正式发布！\n\n在 Gemini API 下，Gemini APP 的 Pro 和 Ultra 用户。\n\n然后 Google AI Ultra 会员的 Antigravity  和 AI Studio 也可以用。 https://t.co/3UGORMdSuU",
+      "url": "https://x.com/op7418/status/2110039924435288217"
+    },
+    {
+      "created_at": "2026-10-13T16:01:01.000Z",
+      "id": "2110038105151713368",
+      "lang": "ja",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 923,
+        "like": 3,
+        "quote": 0,
+        "reply": 1,
+        "retweet": 0
+      },
+      "text": "以及还有哪些需求想要做成 Skill 或者软件的也可以聊聊",
+      "url": "https://x.com/op7418/status/2110038105151713368"
+    },
+    {
+      "created_at": "2026-10-13T15:46:40.000Z",
+      "id": "2110034493419725049",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 2,
+        "impression": 1064,
+        "like": 1,
+        "quote": 0,
+        "reply": 0,
+        "retweet": 0
+      },
+      "text": "这玩意儿搭配“即览”，用起来实在是太舒服了\n\n刚好，GrokBot 给的是那种带图片素材和 HTML 一起的压缩包，当时就支持了这个，就是为这个 skill 的需求做的 https://t.co/zUtpQ9FglR",
+      "url": "https://x.com/op7418/status/2110034493419725049"
+    },
+    {
+      "created_at": "2026-10-13T15:39:56.000Z",
+      "id": "2110032798656676194",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 3,
+        "impression": 9361,
+        "like": 11,
+        "quote": 3,
+        "reply": 15,
+        "retweet": 0
+      },
+      "text": "太狠了，京东自己当黄牛了。\n\n这 7999 只是你有购买的资格，你手机的钱还是得另付 https://t.co/ugZeN6lPkt",
+      "url": "https://x.com/op7418/status/2110032798656676194"
+    },
+    {
+      "created_at": "2026-10-13T15:33:56.000Z",
+      "id": "2110031290020110454",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 21,
+        "impression": 4687,
+        "like": 29,
+        "quote": 1,
+        "reply": 24,
+        "retweet": 1
+      },
+      "text": "哎呀，突然想到自己还有很多 skill 没发\n\n看大家想要哪个：\n\n1. 口播视频字幕生成和剪辑 skill\n2. 视频包装 skill\n3. 微信公众号排版 skill\n4. HTML 文档排版 skill\n5. 半成品 Personal Agent 个人上下文挂载工具",
+      "url": "https://x.com/op7418/status/2110031290020110454"
+    },
+    {
+      "created_at": "2026-10-13T15:27:20.000Z",
+      "id": "2110029627263709637",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 66,
+        "impression": 6939,
+        "like": 61,
+        "quote": 2,
+        "reply": 8,
+        "retweet": 8
+      },
+      "text": "让我想起来还有个 skill 没发过，就是将复杂内容排版成非常优秀的 HTML 页面帮你阅读的 skill。\n\n刚好搭配 GrokBot，太爽了！\n\n不想看的长视频，直接让它转成排版非常优秀的长文去阅读 https://t.co/v9XtXbyZWg https://t.co/vrOWKizS9W",
+      "url": "https://x.com/op7418/status/2110029627263709637"
+    },
+    {
+      "created_at": "2026-10-13T12:27:34.000Z",
+      "id": "2109984387274309766",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 1,
+        "impression": 2455,
+        "like": 1,
+        "quote": 0,
+        "reply": 1,
+        "retweet": 0
+      },
+      "text": "跑了一下风暴怕死队：https://t.co/3h1xAhwkzv",
+      "url": "https://x.com/op7418/status/2109984387274309766"
+    },
+    {
+      "created_at": "2026-10-13T12:16:02.000Z",
+      "id": "2109981486393016590",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 6,
+        "impression": 7505,
+        "like": 12,
+        "quote": 1,
+        "reply": 6,
+        "retweet": 0
+      },
+      "text": "试了一下《风暴怕死队》，还行，而且我在玩这个游戏的时候还开着内录呢，也没怎么卡 https://t.co/RgicpLQREA https://t.co/8QXbITIowh",
+      "url": "https://x.com/op7418/status/2109981486393016590"
+    },
+    {
       "created_at": "2026-10-13T09:39:45.000Z",
       "id": "2109942154957373508",
       "lang": "zh",

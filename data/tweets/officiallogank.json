@@ -2,6 +2,51 @@
   "handle": "officiallogank",
   "tweets": [
     {
+      "created_at": "2026-10-13T16:11:52.000Z",
+      "id": "2110040833995215273",
+      "lang": "",
+      "metrics": {
+        "bookmark": 3,
+        "impression": 7086,
+        "like": 123,
+        "quote": 5,
+        "reply": 21,
+        "retweet": 9
+      },
+      "text": "4 Argon is now available : )",
+      "url": "https://x.com/OfficialLoganK/status/2110040833995215273"
+    },
+    {
+      "created_at": "2026-10-13T16:06:01.000Z",
+      "id": "2110039361706393636",
+      "lang": "",
+      "metrics": {
+        "bookmark": 30,
+        "impression": 28051,
+        "like": 276,
+        "quote": 4,
+        "reply": 17,
+        "retweet": 11
+      },
+      "text": "So many great examples of Argon in action already from inside Google, our customers, and partners:\nhttps://t.co/xM4z9uGWMd",
+      "url": "https://x.com/OfficialLoganK/status/2110039361706393636"
+    },
+    {
+      "created_at": "2026-10-13T16:04:20.000Z",
+      "id": "2110038940841545827",
+      "lang": "",
+      "metrics": {
+        "bookmark": 480,
+        "impression": 221665,
+        "like": 5260,
+        "quote": 244,
+        "reply": 643,
+        "retweet": 409
+      },
+      "text": "Today we are rolling out Gemini 4 Argon globally in the Gemini API, to Pro + Ultra in Gemini App, and Ultra subs in Antigravity!\n\nArgon is a huge step forward for Gemini, and a labor of love. This model has been battle tested by over 100,000 people at Google over the last month,",
+      "url": "https://x.com/OfficialLoganK/status/2110038940841545827"
+    },
+    {
       "created_at": "2026-10-13T02:39:51.000Z",
       "id": "2109836485981778260",
       "lang": "",

@@ -2,6 +2,21 @@
   "handle": "anthropicai",
   "tweets": [
     {
+      "created_at": "2026-10-13T16:36:41.000Z",
+      "id": "2110047081414987957",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 1200,
+        "impression": 120113,
+        "like": 2256,
+        "quote": 104,
+        "reply": 171,
+        "retweet": 183
+      },
+      "text": "New on our Engineering blog: Creating in-house source control. \n\nIn May, we merged around 2,500 code changes per day. In September, we merged more than 30,000 per day. As a result, we became bottlenecked by developer infrastructure built for human (rather than agent) scale.  \n\nHere, we share how we built a new version control system—and fully migrated our monorepo from git—in five months: https://t.co/wzNkwHs7IN",
+      "url": "https://x.com/AnthropicAI/status/2110047081414987957"
+    },
+    {
       "created_at": "2026-10-12T23:58:35.000Z",
       "id": "2109795898909950247",
       "lang": "",
