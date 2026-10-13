@@ -2,6 +2,81 @@
   "handle": "openrouter",
   "tweets": [
     {
+      "created_at": "2026-10-13T19:00:44.000Z",
+      "id": "2110083333409640842",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 1804,
+        "like": 2,
+        "quote": 0,
+        "reply": 0,
+        "retweet": 0
+      },
+      "text": "Read more insights from 600+ trillion monthly tokens in Inferred, our data newsletter. Subscribe for free today:\n\nhttps://t.co/1YoGzgl1KR",
+      "url": "https://x.com/OpenRouter/status/2110083333409640842"
+    },
+    {
+      "created_at": "2026-10-13T19:00:41.000Z",
+      "id": "2110083318478000430",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 12,
+        "impression": 8185,
+        "like": 151,
+        "quote": 3,
+        "reply": 17,
+        "retweet": 8
+      },
+      "text": "OpenRouter users are loving Anthropic's Opus 5.5\n\nIt is the #1 model in share of spending across the platform and has led a rebound for Anthropic in the competition with OpenAI\n\nSonnet 5.5 and Haiku 5.5 have also seen strong launch periods https://t.co/UVV4Lss2c5",
+      "url": "https://x.com/OpenRouter/status/2110083318478000430"
+    },
+    {
+      "created_at": "2026-10-13T18:00:03.000Z",
+      "id": "2110068061055435051",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 1,
+        "impression": 1857,
+        "like": 7,
+        "quote": 0,
+        "reply": 1,
+        "retweet": 1
+      },
+      "text": "Try it now: https://t.co/cLnK9l7fy6",
+      "url": "https://x.com/OpenRouter/status/2110068061055435051"
+    },
+    {
+      "created_at": "2026-10-13T18:00:00.000Z",
+      "id": "2110068048749355303",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 7,
+        "impression": 6318,
+        "like": 65,
+        "quote": 0,
+        "reply": 5,
+        "retweet": 7
+      },
+      "text": "LFM2.5-24B-A2B from @liquidai is now on OpenRouter.\n\nA 24B MoE with 2B active parameters that reasons before it answers, built for agents and tool use. https://t.co/J3sLIreCci",
+      "url": "https://x.com/OpenRouter/status/2110068048749355303"
+    },
+    {
+      "created_at": "2026-10-13T17:25:28.000Z",
+      "id": "2110059359279694284",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 10,
+        "impression": 6536,
+        "like": 67,
+        "quote": 2,
+        "reply": 5,
+        "retweet": 10
+      },
+      "text": "Mercury Decide from @_inception_ai now accepts image input on OpenRouter\n\nPut images alongside text in the state of a Decisions request, and Mercury Decide answers your typed questions from what's in the image: a choice, a score, or a yes/no with a probability attached\n\nPricing is unchanged: free endpoint, or $0.02/M input with zero data retention. Images bill as input tokens\n\nhttps://t.co/5sumvRshSm",
+      "url": "https://x.com/OpenRouter/status/2110059359279694284"
+    },
+    {
       "created_at": "2026-10-13T16:43:46.000Z",
       "id": "2110048861763109303",
       "lang": "",

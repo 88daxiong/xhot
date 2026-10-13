@@ -2,6 +2,96 @@
   "handle": "dotey",
   "tweets": [
     {
+      "created_at": "2026-10-13T22:02:49.000Z",
+      "id": "2110129154272207315",
+      "lang": "",
+      "metrics": {
+        "bookmark": 11,
+        "impression": 3229,
+        "like": 12,
+        "quote": 0,
+        "reply": 9,
+        "retweet": 0
+      },
+      "text": "Gemini 4 Argon 在 Antigravity 中，通过一条包含详细工作流程的提示，在 Blender 里生成了日本寺庙建筑群。核心做法是：提供建造规则与视觉参考，让多个智能体分工、检查并反复修改。「单条提示」背后包含完整流程，动画与音效则是后续追加的要求。 https://t.co/0UwuoI0R8e https://t.co/NyeI6vpYLd",
+      "url": "https://x.com/dotey/status/2110129154272207315"
+    },
+    {
+      "created_at": "2026-10-13T21:55:47.000Z",
+      "id": "2110127384099795127",
+      "lang": "",
+      "metrics": {
+        "bookmark": 25,
+        "impression": 2898,
+        "like": 21,
+        "quote": 0,
+        "reply": 6,
+        "retweet": 3
+      },
+      "text": "BaoCut 3.5 集成了 Qwen Image 2.1 Turbo，你在本地就可以生成图片了，而不用通过服务器，我的 Mac Mini M2 1080 的图片大约3-5分钟就可以，2K 的则要将近 20 分钟。\n\n另外我没想到它可以直接生成 NSFW 的图片😅\n\n可以让 Agent 去调用本机生成图片服务生成图片。 https://t.co/horlmFLDPt",
+      "url": "https://x.com/dotey/status/2110127384099795127"
+    },
+    {
+      "created_at": "2026-10-13T21:19:51.000Z",
+      "id": "2110118341771718675",
+      "lang": "",
+      "metrics": {
+        "bookmark": 42,
+        "impression": 20165,
+        "like": 52,
+        "quote": 3,
+        "reply": 9,
+        "retweet": 8
+      },
+      "text": "OpenAI 沙特员工在公司执行会议室植入录音设备后被捕\n\n2026年10月13日，美国司法部（DOJ）与加州北区联邦检察官办公室解封了一份引发硅谷震动的刑事起诉书：现年35岁的沙特阿拉伯籍OpenAI产品团队工程主管阿卜杜勒拉赫曼·阿尔福赞（Abdulrahman https://t.co/Jt0Enxojct https://t.co/ol54p9EbOi",
+      "url": "https://x.com/dotey/status/2110118341771718675"
+    },
+    {
+      "created_at": "2026-10-13T20:34:28.000Z",
+      "id": "2110106922322120937",
+      "lang": "",
+      "metrics": {
+        "bookmark": 69,
+        "impression": 8448,
+        "like": 68,
+        "quote": 3,
+        "reply": 17,
+        "retweet": 14
+      },
+      "text": "Google Play 开放“个人 App”：用 AI Studio 手搓的安卓应用，不用注册开发者也能直接装进自己手机\n\n10 月 13 日，Google 宣布了一项对普通玩家非常友好的更新：你在 Google AI Studio 里让 AI 写出来的安卓 App，现在可以直接通过 Google Play 安装到自己的手机上运行了。整个过程只需要一个普通的 https://t.co/jmZcT96O0b",
+      "url": "https://x.com/dotey/status/2110106922322120937"
+    },
+    {
+      "created_at": "2026-10-13T19:17:44.000Z",
+      "id": "2110087612048552046",
+      "lang": "",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 1488,
+        "like": 1,
+        "quote": 0,
+        "reply": 1,
+        "retweet": 0
+      },
+      "text": "Pro 也能用，不过要等几个小时\nhttps://t.co/kCl4jcjZZd",
+      "url": "https://x.com/dotey/status/2110087612048552046"
+    },
+    {
+      "created_at": "2026-10-13T19:04:57.000Z",
+      "id": "2110084393255514268",
+      "lang": "",
+      "metrics": {
+        "bookmark": 252,
+        "impression": 12941,
+        "like": 166,
+        "quote": 3,
+        "reply": 32,
+        "retweet": 33
+      },
+      "text": "前一段 Loop Engineering 不是很火么，不过真做好的也不多。\n\n知名开源开发者 yetone 在 X 上公开了他维护 Magpie 的工作流：用 Claude Code 加官方的 Opus 5.5 模型，同时开 3 个 /loop 循环任务，让 AI 自己盯 GitHub issue 和 PR、Discord 社区和推特反馈，修 https://t.co/RxBtWmHV1N",
+      "url": "https://x.com/dotey/status/2110084393255514268"
+    },
+    {
       "created_at": "2026-10-13T17:04:09.000Z",
       "id": "2110053992554238391",
       "lang": "zh",

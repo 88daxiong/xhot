@@ -2,6 +2,21 @@
   "handle": "googleai",
   "tweets": [
     {
+      "created_at": "2026-10-13T19:03:06.000Z",
+      "id": "2110083927620591769",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 33,
+        "impression": 22794,
+        "like": 359,
+        "quote": 5,
+        "reply": 40,
+        "retweet": 37
+      },
+      "text": "We’ve been exploring the potential of using Gemini 4 Argon to accelerate research @Google. One of our tests was using videos of humans performing fun tasks (game of bags, anyone?) to autonomously spin up training simulations, rather than relying entirely on manual programming.\n\nHear from our research team and see the results in action as our humanoid robot studies the videos, runs the simulations, and masters the game of cornhole.",
+      "url": "https://x.com/GoogleAI/status/2110083927620591769"
+    },
+    {
       "created_at": "2026-10-13T16:08:02.000Z",
       "id": "2110039868910735565",
       "lang": "en",

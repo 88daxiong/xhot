@@ -2,6 +2,21 @@
   "handle": "github",
   "tweets": [
     {
+      "created_at": "2026-10-13T19:07:50.000Z",
+      "id": "2110085117041594750",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 33,
+        "impression": 25891,
+        "like": 264,
+        "quote": 8,
+        "reply": 36,
+        "retweet": 21
+      },
+      "text": "🚀 @GoogleAI's Gemini 4 Argon is now generally available in GitHub Copilot.\n\nWhat we learned from early testing ⬇️\n• It solved more tasks than previous Gemini models on every coding benchmark, with its largest gains in Copilot CLI.\n• It checks its work thoroughly, testing edge cases before it finishes.\n\nUse Gemini 4 Argon for complex coding, agentic, and reasoning tasks. Find it in the GitHub Copilot app, CLI, and @code.\nhttps://t.co/ArPCQ3HkCB",
+      "url": "https://x.com/github/status/2110085117041594750"
+    },
+    {
       "created_at": "2026-10-12T18:06:47.000Z",
       "id": "2109707366539424017",
       "lang": "en",

@@ -2,6 +2,21 @@
   "handle": "nvidiaai",
   "tweets": [
     {
+      "created_at": "2026-10-13T18:56:15.000Z",
+      "id": "2110082205666165160",
+      "lang": "",
+      "metrics": {
+        "bookmark": 1,
+        "impression": 1545,
+        "like": 10,
+        "quote": 0,
+        "reply": 0,
+        "retweet": 2
+      },
+      "text": "@huggingface We just shared how we post-trained Nemotron for this result, plus IMO gold-level performance. \n\nCheck out the recipe 👉 https://t.co/7vcigQ09yk https://t.co/wQu3RAADFG",
+      "url": "https://x.com/NVIDIAAI/status/2110082205666165160"
+    },
+    {
       "created_at": "2026-10-13T17:00:15.000Z",
       "id": "2110053012903518630",
       "lang": "en",

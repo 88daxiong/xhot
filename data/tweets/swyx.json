@@ -2,6 +2,21 @@
   "handle": "swyx",
   "tweets": [
     {
+      "created_at": "2026-10-13T17:50:11.000Z",
+      "id": "2110065576764686421",
+      "lang": "",
+      "metrics": {
+        "bookmark": 20,
+        "impression": 9155,
+        "like": 63,
+        "quote": 7,
+        "reply": 83,
+        "retweet": 5
+      },
+      "text": "🆕 How to Kill Your SaaS \n\nhttps://t.co/EDWkyXne3U\n\nA lot of people talk about the death of SaaS but mostly in theoretical terms. We took a real $43,000/year SaaS we use and launched a global hackathon to clone it in a weekend, with both AI and REAL HUMAN evals, using any models",
+      "url": "https://x.com/swyx/status/2110065576764686421"
+    },
+    {
       "created_at": "2026-10-13T13:08:43.000Z",
       "id": "2109994742998303191",
       "lang": "en",

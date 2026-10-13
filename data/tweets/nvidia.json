@@ -2,6 +2,21 @@
   "handle": "nvidia",
   "tweets": [
     {
+      "created_at": "2026-10-13T19:34:52.000Z",
+      "id": "2110091922337415564",
+      "lang": "",
+      "metrics": {
+        "bookmark": 19,
+        "impression": 28771,
+        "like": 308,
+        "quote": 9,
+        "reply": 39,
+        "retweet": 37
+      },
+      "text": ".@JensenHuang wrapped up his Paris visit at the Élysée with President @EmmanuelMacron, discussing NVIDIA’s investments in France’s AI ecosystem, open source, and AI safety.\n\nOur road to #NVIDIAGTC Berlin continues. https://t.co/CGYw6B8UFl",
+      "url": "https://x.com/nvidia/status/2110091922337415564"
+    },
+    {
       "created_at": "2026-10-13T17:04:39.000Z",
       "id": "2110054117595066796",
       "lang": "en",

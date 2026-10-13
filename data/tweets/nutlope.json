@@ -2,6 +2,36 @@
   "handle": "nutlope",
   "tweets": [
     {
+      "created_at": "2026-10-13T20:45:22.000Z",
+      "id": "2110109663769592025",
+      "lang": "",
+      "metrics": {
+        "bookmark": 1,
+        "impression": 371,
+        "like": 5,
+        "quote": 0,
+        "reply": 1,
+        "retweet": 0
+      },
+      "text": "Now planning to launch Gloss tomorrow! Been making a few final improvements based on all the great feedback from early testers.\n\nExcited to share it with everyone soon!",
+      "url": "https://x.com/nutlope/status/2110109663769592025"
+    },
+    {
+      "created_at": "2026-10-13T20:25:38.000Z",
+      "id": "2110104697222672724",
+      "lang": "",
+      "metrics": {
+        "bookmark": 137,
+        "impression": 9362,
+        "like": 165,
+        "quote": 3,
+        "reply": 32,
+        "retweet": 6
+      },
+      "text": "I got tired of CleanShot, so I built my own Mac screenshot app.\n\nIt's called Matte. More backgrounds, better customization, automatic hiding of sensitive info, and all the little features I personally wanted.\n\nWe're entering the age of personal software. https://t.co/5BkGJybRsm",
+      "url": "https://x.com/nutlope/status/2110104697222672724"
+    },
+    {
       "created_at": "2026-10-12T16:53:09.000Z",
       "id": "2109688836158599254",
       "lang": "en",

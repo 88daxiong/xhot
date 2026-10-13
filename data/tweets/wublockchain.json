@@ -2,6 +2,81 @@
   "handle": "wublockchain",
   "tweets": [
     {
+      "created_at": "2026-10-13T19:22:10.000Z",
+      "id": "2110088725791408378",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 1889,
+        "like": 4,
+        "quote": 0,
+        "reply": 1,
+        "retweet": 0
+      },
+      "text": "Source: https://t.co/Q3vGm4JzPe",
+      "url": "https://x.com/WuBlockchain/status/2110088725791408378"
+    },
+    {
+      "created_at": "2026-10-13T19:00:00.000Z",
+      "id": "2110083146486071326",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 5,
+        "impression": 11591,
+        "like": 22,
+        "quote": 1,
+        "reply": 16,
+        "retweet": 1
+      },
+      "text": "Aave, Ethena and Hyperliquid Founders on Their Biggest Competitors (Archive Video)\n\nAt a TOKEN2049 Singapore roundtable on October 14, 2025, Aave founder Stani Kulechov @StaniKulechov  , Ethena founder Guy Young @gdog97_ , and Hyperliquid co-founder Jeff Yan @chameleon_jeff   were asked who they saw as their biggest competitors. Their answers were \"the banks,\" \"Circle,\" and \"nobody,\" respectively. \n\nWhen asked what DeFi founders most often get wrong, they pointed to focusing on infrastructure too early, looking too narrowly at DeFi's existing small user base, and not putting enough emphasis on composability. The three also showed clear differences in how they viewed tokenized stocks, liquidity mining, and intents.",
+      "url": "https://x.com/WuBlockchain/status/2110083146486071326"
+    },
+    {
+      "created_at": "2026-10-13T18:57:53.000Z",
+      "id": "2110082613868437876",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 3,
+        "impression": 11476,
+        "like": 26,
+        "quote": 2,
+        "reply": 16,
+        "retweet": 2
+      },
+      "text": "Coinbase, Which Holds About 5% of Existing BTC in Custody, Outlines Bitcoin Post-Quantum Security Recommendations\n\nCoinbase, which holds approximately 5% of all existing BTC in custody, outlined technical considerations for Bitcoin’s transition to post-quantum security. The company warned that the migration could take years and urged early preparations. Coinbase suggested exploring flexible output designs such as BIP-360 (P2MR) and P2TRv2, alongside a phased transition supporting both classical and post-quantum signature mechanisms. It also emphasized that questions surrounding dormant funds, lost private keys, and wallets that fail to migrate should be addressed separately to avoid delaying broader post-quantum security upgrades.",
+      "url": "https://x.com/WuBlockchain/status/2110082613868437876"
+    },
+    {
+      "created_at": "2026-10-13T18:04:35.000Z",
+      "id": "2110069200610042338",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 3,
+        "impression": 11509,
+        "like": 28,
+        "quote": 3,
+        "reply": 20,
+        "retweet": 4
+      },
+      "text": "Solana’s Alpenglow Upgrade Scheduled for October 21, Targets Finality Cut from 12.8 Seconds to 150ms\n\nSolana core developer Anza announced that the Alpenglow consensus upgrade is scheduled to go live on Solana mainnet-beta on October 21 at approximately 14:50 UTC. The upgrade will replace the existing TowerBFT consensus mechanism with Votor, aiming to reduce transaction finality from approximately 12.8 seconds to 150 milliseconds. Under the new mechanism, validators will exchange votes directly instead of submitting them as onchain transactions, potentially causing a significant decline in reported transaction totals that include validator votes. Alpenglow was previously activated on testnet on September 24 and devnet on September 25.",
+      "url": "https://x.com/WuBlockchain/status/2110069200610042338"
+    },
+    {
+      "created_at": "2026-10-13T17:49:10.000Z",
+      "id": "2110065319830224935",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 1,
+        "impression": 1835,
+        "like": 3,
+        "quote": 0,
+        "reply": 2,
+        "retweet": 1
+      },
+      "text": "Source: https://t.co/bvVVJM5LeJ",
+      "url": "https://x.com/WuBlockchain/status/2110065319830224935"
+    },
+    {
       "created_at": "2026-10-13T17:11:28.000Z",
       "id": "2110055835569377742",
       "lang": "en",

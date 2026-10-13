@@ -2,6 +2,51 @@
   "handle": "matthewberman",
   "tweets": [
     {
+      "created_at": "2026-10-13T21:56:56.000Z",
+      "id": "2110127674828157080",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 3,
+        "impression": 4316,
+        "like": 28,
+        "quote": 0,
+        "reply": 5,
+        "retweet": 1
+      },
+      "text": "1 hour turnaround.\n\nWhile wearing the OpenAI hoodie. https://t.co/gUUFcfSZBk",
+      "url": "https://x.com/MatthewBerman/status/2110127674828157080"
+    },
+    {
+      "created_at": "2026-10-13T20:27:23.000Z",
+      "id": "2110105139248037986",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 50,
+        "impression": 39919,
+        "like": 504,
+        "quote": 2,
+        "reply": 46,
+        "retweet": 21
+      },
+      "text": "OpenAI found a \"sophisticated\" recording device in their office!!\n\nAnd then used their models to figure out where it came from. \n\nThis is a movie. https://t.co/ttMP0yrshi",
+      "url": "https://x.com/MatthewBerman/status/2110105139248037986"
+    },
+    {
+      "created_at": "2026-10-13T17:52:08.000Z",
+      "id": "2110066066500272310",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 44,
+        "impression": 29194,
+        "like": 220,
+        "quote": 2,
+        "reply": 41,
+        "retweet": 6
+      },
+      "text": "This scammer reached out to me as well. \n\nSo I used my @bot to reply to him to try to waste his time. \n\nPrompt: you're a scam beater bot. i got a DM from this guy: [redacted]\n\nit's obviously a scam to get me to click on the fake calendly link, which will give him my auth credentials. your job is to keep him talking to me for as long as possible. check every 5 mintues for a new response from him. be nice, inquisitive, and deflect his attempts to get on a call.",
+      "url": "https://x.com/MatthewBerman/status/2110066066500272310"
+    },
+    {
       "created_at": "2026-10-13T16:37:31.000Z",
       "id": "2110047292070023658",
       "lang": "",

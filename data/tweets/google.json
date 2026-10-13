@@ -2,6 +2,141 @@
   "handle": "google",
   "tweets": [
     {
+      "created_at": "2026-10-13T21:04:24.000Z",
+      "id": "2110114452955926759",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 4,
+        "impression": 11940,
+        "like": 42,
+        "quote": 0,
+        "reply": 0,
+        "retweet": 3
+      },
+      "text": "💨 Interactive physics\n\n@TheBuggedDev created a fluffy 3D pumpkin with interactive fur physics, built entirely in Three.js and GLSL https://t.co/gjmqUt3hG0",
+      "url": "https://x.com/Google/status/2110114452955926759"
+    },
+    {
+      "created_at": "2026-10-13T21:04:23.000Z",
+      "id": "2110114449579552817",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 6,
+        "impression": 12278,
+        "like": 32,
+        "quote": 2,
+        "reply": 1,
+        "retweet": 1
+      },
+      "text": "🦋 Text-to-3D\n\n@doe_naps rendered a butterfly museum from scratch https://t.co/F1fDT8OJ7d",
+      "url": "https://x.com/Google/status/2110114449579552817"
+    },
+    {
+      "created_at": "2026-10-13T21:04:22.000Z",
+      "id": "2110114447595389193",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 4,
+        "impression": 2527,
+        "like": 29,
+        "quote": 0,
+        "reply": 1,
+        "retweet": 1
+      },
+      "text": "🤖 Physical robotics\n\n@ai_for_success built a Rubik's cube-solving robot in @Antigravity end-to-end: modeling the robot arms in Blender, running the real-time 3D simulation in Three.js, and using the Interactions API to solve the cube https://t.co/5vCe4PYNfb",
+      "url": "https://x.com/Google/status/2110114447595389193"
+    },
+    {
+      "created_at": "2026-10-13T21:04:22.000Z",
+      "id": "2110114445628162512",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 6,
+        "impression": 4488,
+        "like": 35,
+        "quote": 2,
+        "reply": 3,
+        "retweet": 2
+      },
+      "text": "🐝 Complex 3D Visualizations\n\n@thtbee_ visualized \"the daily life of a bee\" using Argon’s 3D modeling and spatial reasoning capabilities in @Antigravity https://t.co/xedolJzWo4",
+      "url": "https://x.com/Google/status/2110114445628162512"
+    },
+    {
+      "created_at": "2026-10-13T21:04:22.000Z",
+      "id": "2110114443497500678",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 4,
+        "impression": 3195,
+        "like": 37,
+        "quote": 1,
+        "reply": 1,
+        "retweet": 1
+      },
+      "text": "📈 Synthesize complex data\n\n@venturetwins synthesized insights across large, complex datasets into an interactive deck with Argon in @Antigravity https://t.co/3lrdg8wXjZ",
+      "url": "https://x.com/Google/status/2110114443497500678"
+    },
+    {
+      "created_at": "2026-10-13T21:04:21.000Z",
+      "id": "2110114440993808719",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 11,
+        "impression": 4162,
+        "like": 68,
+        "quote": 0,
+        "reply": 5,
+        "retweet": 5
+      },
+      "text": "📹 Code to video\n\n@kickingkeys created rich, complex visuals entirely from code using Argon in @GoogleAIStudio https://t.co/UTHNbQKSCv",
+      "url": "https://x.com/Google/status/2110114440993808719"
+    },
+    {
+      "created_at": "2026-10-13T21:04:20.000Z",
+      "id": "2110114439227724041",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 92,
+        "impression": 72934,
+        "like": 832,
+        "quote": 18,
+        "reply": 60,
+        "retweet": 62
+      },
+      "text": "Gemini 4 Argon began rolling out today. See how devs are already putting Argon to work ↓",
+      "url": "https://x.com/Google/status/2110114439227724041"
+    },
+    {
+      "created_at": "2026-10-13T19:34:15.000Z",
+      "id": "2110091768683274444",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 6,
+        "impression": 17263,
+        "like": 37,
+        "quote": 0,
+        "reply": 6,
+        "retweet": 4
+      },
+      "text": "Learn more about Gemini 4 Argon ↓ https://t.co/ra421j9MIe",
+      "url": "https://x.com/Google/status/2110091768683274444"
+    },
+    {
+      "created_at": "2026-10-13T19:34:15.000Z",
+      "id": "2110091767211078119",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 167,
+        "impression": 204347,
+        "like": 1166,
+        "quote": 15,
+        "reply": 53,
+        "retweet": 81
+      },
+      "text": "Our engineers used Gemini 4 Argon to eliminate an entire category of browser crashes in @GoogleChrome.\n\nArgon helped separate core webpage handling from a 6-million line legacy folder in Chromium's 40-million line codebase, completing months of work in just weeks. Here's how ↓ https://t.co/CpXBW1w7f2",
+      "url": "https://x.com/Google/status/2110091767211078119"
+    },
+    {
       "created_at": "2026-10-13T16:13:45.000Z",
       "id": "2110041308257493356",
       "lang": "en",

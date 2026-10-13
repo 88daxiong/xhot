@@ -2,6 +2,36 @@
   "handle": "googledeepmind",
   "tweets": [
     {
+      "created_at": "2026-10-13T18:47:42.000Z",
+      "id": "2110080053409116660",
+      "lang": "",
+      "metrics": {
+        "bookmark": 10,
+        "impression": 12089,
+        "like": 58,
+        "quote": 0,
+        "reply": 5,
+        "retweet": 3
+      },
+      "text": "@Apptronik By turning video into a training ground for physical AI, Argon compresses weeks of manual modeling into just a few hours. ↓\n\nhttps://t.co/8tQ2r21lcC",
+      "url": "https://x.com/GoogleDeepMind/status/2110080053409116660"
+    },
+    {
+      "created_at": "2026-10-13T18:41:04.000Z",
+      "id": "2110078384617464201",
+      "lang": "",
+      "metrics": {
+        "bookmark": 183,
+        "impression": 87804,
+        "like": 1226,
+        "quote": 55,
+        "reply": 131,
+        "retweet": 150
+      },
+      "text": "Gemini 4 Argon taught a robot to play cornhole just by watching a video.\n\nIt mapped the physics, coded its own simulation, and taught @Apptronik's Apollo humanoid to sink 7 throws in a row. https://t.co/JIyoKnVc4q",
+      "url": "https://x.com/GoogleDeepMind/status/2110078384617464201"
+    },
+    {
       "created_at": "2026-10-13T16:05:41.000Z",
       "id": "2110039277442682916",
       "lang": "",

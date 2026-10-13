@@ -2,6 +2,66 @@
   "handle": "cursor_ai",
   "tweets": [
     {
+      "created_at": "2026-10-13T19:17:44.000Z",
+      "id": "2110087611763368271",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 181,
+        "impression": 95032,
+        "like": 2115,
+        "quote": 48,
+        "reply": 123,
+        "retweet": 96
+      },
+      "text": "Gemini 4 Argon is now available in Cursor!\n\nIt scores 52.8% on CursorBench at default effort, on par with Opus 5.5.\n\nPriced at $2/M input and $10/M output tokens. https://t.co/1wOk4NvgFJ",
+      "url": "https://x.com/cursor_ai/status/2110087611763368271"
+    },
+    {
+      "created_at": "2026-10-13T18:30:09.000Z",
+      "id": "2110075636094242941",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 11,
+        "impression": 7584,
+        "like": 51,
+        "quote": 0,
+        "reply": 1,
+        "retweet": 1
+      },
+      "text": "Read the publishing guide: https://t.co/5IMQn5eOFF\n\nTry Origin with the tools you already use: https://t.co/BkJ1MGNV6g",
+      "url": "https://x.com/cursor_ai/status/2110075636094242941"
+    },
+    {
+      "created_at": "2026-10-13T18:30:06.000Z",
+      "id": "2110075624253751796",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 1,
+        "impression": 8772,
+        "like": 85,
+        "quote": 0,
+        "reply": 5,
+        "retweet": 4
+      },
+      "text": "The marketplace is now open to public submissions, so any team making developer tools can publish an app.",
+      "url": "https://x.com/cursor_ai/status/2110075624253751796"
+    },
+    {
+      "created_at": "2026-10-13T18:30:03.000Z",
+      "id": "2110075611633074295",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 126,
+        "impression": 55844,
+        "like": 1178,
+        "quote": 48,
+        "reply": 104,
+        "retweet": 87
+      },
+      "text": "Origin, Cursor’s code hosting platform, now supports over 20 integrations.\n\nConnect your repos to tools for CI, deployments, code review, security, monitoring, and project management. https://t.co/Xq8LpS6Fa7",
+      "url": "https://x.com/cursor_ai/status/2110075611633074295"
+    },
+    {
       "created_at": "2026-10-12T23:10:49.000Z",
       "id": "2109783879490191502",
       "lang": "",
