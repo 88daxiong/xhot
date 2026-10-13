@@ -1,0 +1,534 @@
+<!doctype html><html lang="zh-CN" data-theme="light" data-pref="auto"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><title>Google Labs (@GoogleLabs) · XHOT</title><script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('xhot-theme')}catch(e){}t=(t==='light'||t==='dark')?t:'auto';d.setAttribute('data-pref',t);d.setAttribute('data-theme',t==='auto'?(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'):t)})();
+</script><style>:root{--bg:#f7f7f8;--card:#fff;--bd:#e4e4e7;--bd2:#f0f0f2;--zebra:#fafafa;--hov:#f4f4f6;--tx:#18181b;--tx2:#3f3f46;--mu:#71717a;--mu2:#a1a1aa;--ac:#4f46e5;--acbg:#eef2ff;--actx:#4338ca;--up:#16a34a;--upbg:#f0fdf4;--dn:#dc2626;--dnbg:#fef2f2;--r:8px;--sh:0 1px 2px rgba(24,24,27,.04)}
+html[data-theme=dark]{--bg:#09090b;--card:#131316;--bd:#27272a;--bd2:#1c1c20;--zebra:#16161a;--hov:#1d1d22;--tx:#f4f4f5;--tx2:#d4d4d8;--mu:#a1a1aa;--mu2:#71717a;--ac:#818cf8;--acbg:#1e1b4b;--actx:#a5b4fc;--up:#4ade80;--upbg:#0f2a1a;--dn:#f87171;--dnbg:#2d1214;--sh:none}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--tx);font:400 13px/1.5 "Inter","PingFang SC","HarmonyOS Sans SC","Noto Sans SC","Noto Sans CJK SC",-apple-system,BlinkMacSystemFont,"Microsoft YaHei",sans-serif;-webkit-font-smoothing:antialiased;font-feature-settings:"cv11","ss01"}
+a{color:inherit;text-decoration:none}button{font:inherit}
+.num,.f,.d,.r,.sv,.nc,.heat,.pc,.tr3,.kv dd,.post footer{font-variant-numeric:tabular-nums}
+/* 顶栏 */
+.top{position:sticky;top:0;z-index:30;background:color-mix(in srgb,var(--card) 92%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--bd)}
+.ti2{max-width:1440px;margin:auto;height:56px;padding:0 24px;display:flex;align-items:center;gap:16px}
+.lg{display:flex;align-items:center;gap:8px;font-weight:600;font-size:16px;letter-spacing:-.01em}.lg i{width:24px;height:24px;border-radius:6px;background:var(--ac);display:grid;place-items:center;font-style:normal;color:#fff;font-size:12px}.lg span{font-weight:400;font-size:13px;color:var(--mu);margin-left:4px;padding-left:12px;border-left:1px solid var(--bd)}
+.mtabs{display:none}
+.tg{margin-left:auto;display:flex;border:1px solid var(--bd);border-radius:var(--r);padding:2px;background:var(--card)}.tg button{border:0;background:none;color:var(--mu);height:28px;padding:0 10px;border-radius:6px;cursor:pointer;font-size:12px}.tg button.on{background:var(--hov);color:var(--tx);font-weight:500}
+/* 12 列网格 */
+.wrap{max-width:1440px;margin:auto;padding:24px 24px 32px}
+.stats,.shell{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:16px}.shell{align-items:start}
+.stats{margin-bottom:24px}.st{grid-column:span 2}
+.left{grid-column:span 2}.content{grid-column:span 10;min-width:0}
+.cols{display:grid;grid-template-columns:repeat(10,minmax(0,1fr));gap:16px;align-items:start}.mid{grid-column:span 7;min-width:0}.right{grid-column:span 3;min-width:0}
+/* 统计条 */
+.st{background:var(--card);border:1px solid var(--bd);border-radius:var(--r);padding:12px 16px;min-width:0;box-shadow:var(--sh)}
+.sl{font-size:12px;color:var(--mu);line-height:16px}.sv{font-size:20px;font-weight:600;line-height:28px;letter-spacing:-.01em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.ss{font-size:12px;color:var(--mu);line-height:16px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.st:nth-child(3) .sv{color:var(--ac)}
+/* 区块标题：统一 24px 行高，底部 8px */
+.bh{display:flex;align-items:center;gap:8px;height:24px;margin:0 0 8px}.bh h2{font-size:14px;font-weight:600;margin:0;line-height:24px}.hint{font-size:12px;color:var(--mu)}.credit{margin-left:auto;font-size:12px;font-weight:500;color:var(--ac)}.credit:hover{text-decoration:underline}
+.blk{margin-bottom:24px}
+/* 左栏 */
+.left{position:sticky;top:80px;display:flex;flex-direction:column;gap:16px}.left>.bh{margin-bottom:-8px}
+.lcard{background:var(--card);border:1px solid var(--bd);border-radius:var(--r);padding:8px;box-shadow:var(--sh)}
+.nav{display:flex;flex-direction:column;gap:2px}.nv{display:grid;grid-template-columns:24px minmax(0,1fr) auto;align-items:center;gap:8px;height:36px;border:0;background:none;color:var(--tx2);padding:0 8px;border-radius:6px;cursor:pointer;text-align:left;font-size:13px;font-weight:500}
+.nv:hover{background:var(--hov)}.nv.on{background:var(--acbg);color:var(--actx)}.ni{width:24px;height:24px;border-radius:6px;display:grid;place-items:center;background:var(--bd2);color:var(--mu);font-size:12px}.nv.on .ni{background:var(--ac);color:#fff}.nc{font-size:12px;color:var(--mu)}
+.kv{margin:0}.kv div{display:flex;justify-content:space-between;align-items:center;height:32px;padding:0 8px;border-bottom:1px solid var(--bd2);font-size:13px}.kv div:last-child{border-bottom:0}.kv dt{color:var(--mu)}.kv dd{margin:0;font-weight:500}
+.mini{padding:8px;border-top:1px solid var(--bd2)}.mt{font-size:12px;color:var(--mu);line-height:16px;margin-bottom:4px}.mv{font-weight:500;display:flex;align-items:center;justify-content:space-between;gap:8px}.mv2{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;font-size:13px;font-weight:500}.mv2:hover{color:var(--ac)}.mm{font-size:12px;color:var(--mu)}
+.mini .sp{height:24px;margin-top:8px}
+.tl{list-style:none;margin:0;padding:0}.tl li a{display:grid;grid-template-columns:16px minmax(0,1fr) auto;gap:8px;align-items:center;height:28px;padding:0 4px;border-radius:4px;font-size:13px}.tl li a:hover{background:var(--hov)}.tl .k{color:var(--mu2);font-size:12px;text-align:right}.tl .n{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.lnote{font-size:12px;color:var(--mu);padding:12px}.lnote b{display:block;color:var(--tx2);font-weight:500;margin-bottom:4px}.lnote p{margin:0 0 4px}.lnote a{color:var(--ac)}
+/* 涨跌徽章：唯一使用红绿的地方 */
+.pc{display:inline-flex;align-items:center;gap:2px;height:20px;font-size:12px;font-weight:500;padding:0 6px;border-radius:4px;white-space:nowrap}.pc.up{color:var(--up);background:var(--upbg)}.pc.dn{color:var(--dn);background:var(--dnbg)}
+.sp{display:block;width:100%;fill:none;stroke-width:1.5;stroke-linejoin:round;stroke-linecap:round}.sp.up,.tile.up .sp{stroke:var(--up)}.sp.dn,.tile.dn .sp{stroke:var(--dn)}
+/* 趋势 */
+.pane{display:none}.pane.on{display:block}
+.tiles{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
+.tile{background:var(--card);border:1px solid var(--bd);border-radius:var(--r);padding:8px 12px;height:88px;display:grid;grid-template-rows:20px 1fr 16px;gap:4px;box-shadow:var(--sh);min-width:0}
+.tile:hover{border-color:var(--mu2)}.tr1{display:grid;grid-template-columns:16px minmax(0,1fr) auto;gap:8px;align-items:center}.tk{font-size:12px;color:var(--mu2);text-align:right}.tn{font-size:13px;font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tile .sp{height:100%;opacity:.9}.tr3{display:flex;justify-content:space-between;font-size:12px;line-height:16px;color:var(--mu)}.tr3 b{color:var(--tx2);font-weight:500}
+/* 热帖 */
+.feed{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.post{background:var(--card);border:1px solid var(--bd);border-radius:var(--r);padding:12px 16px 8px;display:flex;flex-direction:column;min-width:0;box-shadow:var(--sh)}.post:hover{border-color:var(--mu2)}
+.post header{display:grid;grid-template-columns:32px minmax(0,1fr) auto;gap:8px;align-items:center;height:32px}
+.av{--h:220;width:32px;height:32px;border-radius:50%;display:inline-grid;place-items:center;flex:none;font-weight:600;font-size:13px;color:hsl(var(--h) 30% 32%);background:hsl(var(--h) 30% 92%)}
+html[data-theme=dark] .av{color:hsl(var(--h) 35% 80%);background:hsl(var(--h) 15% 22%)}
+.av.s{width:24px;height:24px;font-size:11px}.av.xs{width:20px;height:20px;font-size:10px;margin-left:-6px;border:2px solid var(--card)}.av.xs:first-child{margin-left:0}
+.who{min-width:0;line-height:16px}.nm{display:flex;align-items:center;gap:6px;font-size:13px;font-weight:600;min-width:0}.nm a{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.nm a:hover{color:var(--ac)}.hd{font-size:12px;color:var(--mu);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.heat{font-size:12px;font-weight:500;color:var(--mu);height:20px;line-height:20px;padding:0 6px;border:1px solid var(--bd);border-radius:4px}
+.pt{flex:1;margin:8px 0;font-size:13px;line-height:1.6;color:var(--tx2);white-space:pre-wrap;word-break:break-word}.xp .xf{display:none}.xp.open .xs{display:none}.xp.open .xf{display:inline}
+.post footer{display:flex;align-items:center;gap:10px;height:32px;font-size:12px;color:var(--mu);border-top:1px solid var(--bd2);white-space:nowrap;overflow:hidden}.sp1{flex:1}
+.cp,.ex{height:24px;border:1px solid var(--bd);background:var(--card);color:var(--tx2);font-size:12px;font-weight:500;padding:0 8px;border-radius:6px;cursor:pointer}.cp:hover,.ex:hover{border-color:var(--ac);color:var(--ac)}.cp.ok{border-color:var(--up);color:var(--up)}
+.op{width:24px;height:24px;display:grid;place-items:center;border-radius:6px;color:var(--mu)}.op:hover{background:var(--hov);color:var(--ac)}
+.zh{font-size:11px;font-weight:500;color:var(--mu);border:1px solid var(--bd);border-radius:4px;padding:0 4px;line-height:16px;flex:none}
+/* 右栏 */
+.right{display:flex;flex-direction:column;gap:24px;position:sticky;top:80px}
+.rcard,.acard{background:var(--card);border:1px solid var(--bd);border-radius:var(--r);box-shadow:var(--sh);min-width:0;overflow:hidden}
+.rhd{display:flex;align-items:center;gap:8px;height:24px;margin-bottom:8px}
+.rcard .tw{max-height:560px;overflow:auto}
+/* 表格 */
+table{width:100%;border-collapse:separate;border-spacing:0;font-size:13px}
+th{height:32px;font-size:12px;font-weight:500;color:var(--mu);text-align:left;padding:0 12px;background:var(--zebra);border-bottom:1px solid var(--bd);white-space:nowrap}
+thead th{position:sticky;top:0;z-index:2}
+td{height:36px;padding:0 12px;border-bottom:1px solid var(--bd2);vertical-align:middle}tbody tr:last-child td{border-bottom:0}
+tbody tr:not(.g):hover td{background:var(--hov)}
+th.num,td.num,th.f,td.f,th.d,td.d{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}th.r,td.r{width:40px;text-align:right;color:var(--mu2);padding-right:4px;font-variant-numeric:tabular-nums}
+.lbt{table-layout:fixed}.lbt th.r,.lbt td.r{width:36px}.lbt th.f,.lbt td.f{width:72px;font-weight:500}.lbt th.d,.lbt td.d{width:64px;color:var(--mu);font-size:12px;padding-left:0}
+.lbt td.n a{display:flex;align-items:center;gap:8px;min-width:0}.lbt .nt{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:500}.lbt td.n a:hover .nt{color:var(--ac)}
+tr.g th{position:sticky;top:32px;z-index:1;height:28px;background:var(--card);color:var(--tx2);font-size:12px;font-weight:600;border-bottom:1px solid var(--bd2)}tr.g th span{color:var(--mu);font-weight:400;margin-left:4px}
+.news{list-style:none;margin:0;padding:0 12px}.news li{border-top:1px solid var(--bd2)}.news li:first-child{border-top:0}.news a{display:block;padding:8px 0}.news .t{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;font-weight:500;font-size:13px;line-height:20px}.news a:hover .t{color:var(--ac)}.news .m{display:block;font-size:12px;color:var(--mu);line-height:16px;margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+/* 卡片内标题：所有卡片头 48px */
+.rcard>.bh,.acard>.bh{height:48px;margin:0;padding:0 12px;border-bottom:1px solid var(--bd)}
+/* AIHOT */
+.ahsec{margin-top:8px;padding-top:24px;border-top:1px solid var(--bd)}
+.ahh{display:flex;align-items:center;gap:12px;height:28px;margin-bottom:16px}.ahh .k{font-size:12px;font-weight:600;letter-spacing:.08em;color:var(--ac)}.ahh h2{margin:0;font-size:20px;font-weight:600;letter-spacing:-.01em}.ahh a{margin-left:auto;font-size:12px;font-weight:500;color:var(--ac)}
+.agrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.acard.wide{grid-column:1/-1}
+.ht{table-layout:fixed}.ht td.ti a{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:500}.ht td.ti a:hover{color:var(--ac)}.ht th:nth-child(3),.ht td.sv{width:104px}.ht th:nth-child(4),.ht td.hb{width:160px}.ht th.num,.ht td.num{width:72px}
+.rk{display:inline-grid;place-items:center;width:20px;height:20px;border-radius:4px;color:var(--mu);font-weight:500;font-size:12px}.rk.top{background:var(--acbg);color:var(--actx);font-weight:600}
+.bar{display:block;height:4px;border-radius:2px;background:var(--bd2);overflow:hidden}.bar i{display:block;height:100%;border-radius:2px;background:var(--ac);opacity:.75}
+.lead{display:block;margin:12px;padding:12px 16px;border-radius:6px;background:var(--zebra);border:1px solid var(--bd2)}.lead b{display:block;font-size:16px;font-weight:600;line-height:24px}.lead span{display:block;font-size:13px;color:var(--tx2);margin-top:4px}.lead:hover b{color:var(--ac)}
+.dg{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:16px;padding:0 12px 12px}.dl{font-size:12px;font-weight:600;color:var(--tx2);height:28px;line-height:28px;border-bottom:1px solid var(--bd)}.ds ul{list-style:none;margin:0;padding:0}.ds li a{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;font-size:13px;line-height:20px;padding:6px 0;border-bottom:1px solid var(--bd2);color:var(--tx2)}.ds li a:hover{color:var(--ac)}
+.exg{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:var(--bd2)}.exc{display:grid;grid-template-rows:auto 1fr auto;gap:4px;padding:12px 16px;background:var(--card);min-height:132px}.exc:hover{background:var(--hov)}
+.et{display:flex;gap:8px;align-items:flex-start}.et span{flex:1;font-weight:600;font-size:13px;line-height:20px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}.sc{font-size:12px;font-weight:500;color:var(--actx);background:var(--acbg);border-radius:4px;padding:0 6px;line-height:20px;font-variant-numeric:tabular-nums}
+.exc p{margin:0;font-size:12px;color:var(--mu);line-height:18px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}.em{font-size:12px;color:var(--mu2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.mtb .mn{font-weight:500}.mtb td{white-space:nowrap}.scc{width:180px}td.scc{text-align:right}.scc .bar{display:inline-block;width:96px;vertical-align:middle;margin-right:12px}.scc b{font-weight:600;font-variant-numeric:tabular-nums;display:inline-block;width:36px;text-align:right}
+.chips{display:flex;flex-wrap:wrap;gap:8px;padding:12px}.chips a{height:28px;line-height:26px;font-size:12px;padding:0 12px;border-radius:14px;color:var(--tx2);border:1px solid var(--bd)}.chips a:hover{border-color:var(--ac);color:var(--ac)}
+footer{max-width:1440px;margin:24px auto 0;padding-top:16px;border-top:1px solid var(--bd);font-size:12px;color:var(--mu)}footer a{color:var(--ac)}
+/* 响应式 */
+@media(max-width:1600px){.post footer .rp{display:none}}@media(max-width:1360px){.lbt th.f,.lbt td.f{width:64px}.lbt th.d,.lbt td.d{width:52px}.lbt th.r,.lbt td.r{width:28px}td,th{padding:0 8px}.tiles{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:1180px){.left{display:none}.content{grid-column:1/-1}.st{grid-column:span 4}.mtabs{display:flex;gap:4px}.mt1{height:32px;border:0;background:none;color:var(--tx2);padding:0 12px;border-radius:6px;cursor:pointer;font-weight:500;font-size:13px}.mt1.on{background:var(--acbg);color:var(--actx)}}
+@media(max-width:900px){.cols{grid-template-columns:1fr}.mid,.right{grid-column:1/-1}.right{position:static}.agrid{grid-template-columns:1fr}.dg{grid-template-columns:repeat(2,minmax(0,1fr))}.exg{grid-template-columns:1fr 1fr}}
+@media(max-width:640px){.ti2{flex-wrap:wrap;height:auto;padding:8px 16px;gap:8px}.lg span{display:none}.mtabs{order:3;width:100%}.mt1{flex:1}.wrap{padding:16px 12px 24px}
+.stats{gap:8px;margin-bottom:16px}.st{grid-column:span 6;padding:8px 12px}.sv{font-size:16px;line-height:24px}.tiles{grid-template-columns:repeat(2,minmax(0,1fr))}.feed{grid-template-columns:1fr}.exg{grid-template-columns:1fr}
+.ht th:nth-child(3),.ht td.sv,.ht th:nth-child(4),.ht td.hb,.ht th:nth-child(6),.ht td:nth-child(6){display:none}.mtb th:nth-child(3),.mtb td:nth-child(3),.mtb th:nth-child(4),.mtb td:nth-child(4),.mtb th:nth-child(5),.mtb td:nth-child(5){display:none}.scc{width:auto}.scc .bar{display:none}.ahh{height:auto;flex-wrap:wrap}.ahh a{margin-left:0}.dg{grid-template-columns:1fr}}
+/* ===== v5 color layer ===== */
+:root{--ac:#7c3aed;--acbg:#f3e8ff;--actx:#6d28d9;--g1:#7c3aed;--g2:#db2777;--g3:#f97316;--bg:#f6f5fb;--glow:rgba(124,58,237,.18)}
+html[data-theme=dark]{--bg:#110d2e;--card:#1a1640;--bd:#2a2652;--bd2:#1e1b40;--zebra:#171536;--hov:#1f1c45;--mu:#a5a3c9;--mu2:#77749e;--ac:#c084fc;--acbg:#2e1a5c;--actx:#e9d5ff;--up:#4ade80;--dn:#fb7185;--glow:rgba(192,132,252,.28)}
+html[data-theme=dark],html[data-theme=dark] body{background-attachment:fixed;background:radial-gradient(1200px 600px at 10% -10%,#2a1660 0,transparent 60%),radial-gradient(900px 500px at 100% 0,#3b0d4a 0,transparent 55%),var(--bg)}
+.lg i{background:linear-gradient(135deg,var(--g1),var(--g2))!important;color:#fff!important}
+.stats{background:linear-gradient(110deg,#6d28d9 0%,#a21caf 50%,#db2777 85%,#f97316 120%);border-radius:12px;padding:16px;box-shadow:0 8px 24px -8px rgba(162,28,175,.45)}
+html[data-theme=dark] .stats{background:linear-gradient(110deg,#4c1d95 0%,#86198f 55%,#be185d 100%);box-shadow:0 0 0 1px rgba(232,121,249,.25),0 10px 30px -10px rgba(217,70,239,.5)}
+.stats .st{background:rgba(255,255,255,.12)!important;border:1px solid rgba(255,255,255,.22)!important;box-shadow:none!important;backdrop-filter:blur(4px)}
+.stats .st *{color:#fff!important}
+.stats .st .sl,.stats .st .ss{color:rgba(255,255,255,.82)!important}
+/* heat tiles */
+.tile{position:relative;overflow:hidden;transition:transform .15s,box-shadow .15s}
+.tile.up{background:linear-gradient(135deg,rgba(249,115,22,calc(var(--a)*.10 + .03)),rgba(239,68,68,calc(var(--a)*.28 + .04))),var(--card);border-color:rgba(239,68,68,calc(var(--a)*.45 + .12))}
+.tile.dn{background:linear-gradient(135deg,rgba(56,189,248,.05),rgba(59,130,246,calc(var(--a)*.22 + .05))),var(--card);border-color:rgba(59,130,246,.25)}
+.tile.up .sp{stroke:#ea580c}.tile.dn .sp{stroke:#2563eb}
+html[data-theme=dark] .tile.up .sp{stroke:#fb923c}html[data-theme=dark] .tile.dn .sp{stroke:#60a5fa}
+.tile:hover{transform:translateY(-1px);box-shadow:0 6px 18px -6px rgba(239,68,68,.35)}
+/* domain chips */
+.nv[data-t=ai] .ni,.mtabs [data-t=ai]{--dc:#7c3aed}
+.nv[data-t=money] .ni,.mtabs [data-t=money]{--dc:#f59e0b}
+.nv[data-t=growth] .ni,.mtabs [data-t=growth]{--dc:#14b8a6}
+.nv[data-t=ai]{--dc:#7c3aed;--dc2:#c026d3}.nv[data-t=money]{--dc:#f59e0b;--dc2:#ea580c}.nv[data-t=growth]{--dc:#14b8a6;--dc2:#22c55e}
+.nv .ni{background:linear-gradient(135deg,var(--dc),var(--dc2))!important;color:#fff!important}
+.nv.on{background:color-mix(in srgb,var(--dc) 12%,var(--card))!important;color:var(--tx)!important;box-shadow:inset 3px 0 0 var(--dc)}
+.nv.on .nc{color:var(--dc)}
+/* gradient avatars */
+.av{background:linear-gradient(135deg,hsl(var(--h) 85% 62%),hsl(calc(var(--h) + 50) 80% 52%))!important;color:#fff!important;text-shadow:0 1px 1px rgba(0,0,0,.2)}
+/* cards accents + glow */
+.lcard,.rcard,.post,.acard{transition:box-shadow .15s,border-color .15s}
+.post{border-top:2px solid color-mix(in srgb,var(--ac) 45%,transparent)!important}
+.post:hover,.rcard:hover,.acard:hover{border-color:color-mix(in srgb,var(--ac) 50%,var(--bd))!important;box-shadow:0 0 0 3px var(--glow)}
+.bh h2{position:relative;padding-left:10px}
+.bh h2::before{content:"";position:absolute;left:0;top:5px;bottom:5px;width:3px;border-radius:2px;background:linear-gradient(var(--g1),var(--g2))}
+a{color:var(--actx)}
+/* ===== v6 layout ===== */
+.mtabs{display:flex!important;gap:4px}
+.mt1{height:32px;border:0;background:none;color:var(--tx2);padding:0 12px;border-radius:6px;cursor:pointer;font-weight:500;font-size:13px}
+.mt1.on{background:color-mix(in srgb,var(--dc) 14%,var(--card));color:var(--tx);box-shadow:inset 0 -2px 0 var(--dc)}
+.ti2{display:flex;align-items:center;gap:16px}
+.ti2 .sp1{flex:1}
+.ahl{font-size:13px;font-weight:500;color:var(--actx);text-decoration:none;padding:0 8px;height:32px;display:inline-flex;align-items:center;border-radius:6px}
+.ahl:hover{background:var(--acbg)}
+.stats.sm{padding:8px 16px;grid-template-columns:repeat(12,minmax(0,1fr))}
+.stats.sm .st{grid-column:span 2;padding:8px 12px;height:auto}
+.stats.sm .sv{font-size:20px;line-height:1.3}
+.g6{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:16px;align-items:start}
+.c-l{grid-column:span 3;min-width:0}.c-m{grid-column:span 6;min-width:0}.c-r{grid-column:span 3;min-width:0;display:flex;flex-direction:column;gap:24px}
+.c-l,.c-r{position:sticky;top:80px;max-height:calc(100vh - 96px);overflow:auto;scrollbar-width:thin}
+.feed1{display:flex;flex-direction:column;gap:8px}
+.post .pt{white-space:pre-wrap;word-break:break-word}
+.post .tm{color:var(--mu);font-variant-numeric:tabular-nums}
+.lbt td.n a{display:flex;align-items:center;gap:8px;min-width:0;color:var(--tx);text-decoration:none}
+.lbt td.n a:hover .nt{color:var(--actx);text-decoration:underline}
+.rlist{list-style:none;margin:0;padding:0}
+.rlist li{border-top:1px solid var(--bd2)}
+.rlist li:first-child{border-top:0}
+.rlist a{display:block;padding:8px 12px;color:var(--tx);text-decoration:none}
+.rlist a:hover{background:var(--hov)}
+.gh .rn{font-weight:600;font-size:13px;color:var(--actx);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.gh .rd{font-size:12px;color:var(--tx2);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;margin:2px 0 4px}
+.gh .rm{display:flex;gap:12px;font-size:12px;color:var(--mu);font-variant-numeric:tabular-nums}
+.gh .rm .td{margin-left:auto;color:#ea580c;font-weight:600}
+html[data-theme=dark] .gh .rm .td{color:#fb923c}
+.gh .lg2{display:inline-flex;align-items:center;gap:4px}.gh .lg2 i{width:8px;height:8px;border-radius:50%;background:hsl(var(--h) 70% 55%)}
+.nws .t{font-size:13px;font-weight:500;line-height:1.5;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.nws .m{font-size:12px;color:var(--mu);margin-top:2px;display:flex;gap:8px}
+.src{display:inline-block;padding:0 6px;border-radius:4px;font-size:12px;font-weight:500;line-height:18px}
+.src.x{background:#e0f2fe;color:#0369a1}.src.d{background:#f3e8ff;color:#7e22ce}.src.s{background:#fce7f3;color:#be185d}
+html[data-theme=dark] .src.x{background:#0c2a44;color:#7dd3fc}html[data-theme=dark] .src.d{background:#2e1a5c;color:#d8b4fe}html[data-theme=dark] .src.s{background:#4a0d2e;color:#f9a8d4}
+.tl2{list-style:none;margin:0;padding:4px 0}
+.tl2 a{display:grid;grid-template-columns:24px 1fr auto;align-items:center;height:32px;padding:0 12px;color:var(--tx);text-decoration:none;gap:8px}
+.tl2 a:hover{background:var(--hov)}
+.tl2 .k{color:var(--mu);font-variant-numeric:tabular-nums;font-size:12px}
+.tl2 .n{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+/* person page */
+.ph{display:grid;grid-template-columns:80px 1fr auto;gap:16px;align-items:center;padding:24px;border-radius:12px;background:linear-gradient(110deg,#6d28d9 0%,#a21caf 55%,#db2777 100%);color:#fff;box-shadow:0 8px 24px -8px rgba(162,28,175,.45)}
+.ph .av.xl{width:80px;height:80px;border-radius:50%;font-size:28px;font-weight:600;display:flex;align-items:center;justify-content:center;border:3px solid rgba(255,255,255,.6)}
+.ph h1{font-size:28px;line-height:1.3;margin:0;font-weight:600}
+.ph .hd{opacity:.85;font-size:14px}
+.ph .bio{margin:8px 0 0;font-size:14px;opacity:.95;white-space:pre-wrap;max-width:720px}
+.ph .fs{text-align:right}
+.ph .fs b{display:block;font-size:28px;font-weight:600;font-variant-numeric:tabular-nums;line-height:1.3}
+.ph .fs span{font-size:12px;opacity:.85}
+.ph .xb{display:inline-flex;margin-top:8px;height:32px;align-items:center;padding:0 12px;border-radius:6px;background:rgba(255,255,255,.18);color:#fff;text-decoration:none;font-weight:500;border:1px solid rgba(255,255,255,.35)}
+.ptool{display:flex;align-items:center;gap:16px;margin:24px 0 8px}
+.ptool input{flex:1;height:40px;border:1px solid var(--bd);border-radius:8px;background:var(--card);color:var(--tx);padding:0 12px;font:inherit;font-size:14px;outline:none}
+.ptool input:focus{border-color:var(--ac);box-shadow:0 0 0 3px var(--glow)}
+.ptool .cnt{color:var(--mu);font-variant-numeric:tabular-nums;white-space:nowrap}
+.pwrap{max-width:880px;margin:0 auto}
+.back{font-size:13px;color:var(--actx);text-decoration:none;display:inline-flex;height:32px;align-items:center;margin-bottom:8px}
+mark{background:#fde68a;color:inherit;border-radius:2px}
+html[data-theme=dark] mark{background:#854d0e}
+@media(max-width:1180px){.c-l{grid-column:span 4}.c-m{grid-column:span 8}.c-r{grid-column:1/-1;position:static;max-height:none;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}}
+@media(max-width:900px){.g6{grid-template-columns:1fr}.c-l,.c-m,.c-r{grid-column:1/-1;position:static;max-height:none}.c-m{order:1}.c-r{order:2;display:flex}.c-l{order:3}.stats.sm .st{grid-column:span 4}}
+@media(max-width:640px){.ti2{flex-wrap:wrap;gap:8px}.mtabs{order:3;width:100%}.mt1{flex:1}.ahl{margin-left:auto}.ti2 .sp1{display:none}.stats.sm{display:none}.ph{grid-template-columns:56px 1fr;padding:16px}.ph .av.xl{width:56px;height:56px;font-size:20px}.ph h1{font-size:20px}.ph .fs{grid-column:1/-1;text-align:left}}
+.post footer{margin:0!important;width:auto!important;max-width:none!important;padding:0!important;text-align:left!important;justify-content:flex-start}
+.c-l .tw{max-height:none;overflow:visible}
+.ph .hd,.ph .hd *{color:rgba(255,255,255,.85)!important}
+/* ===== v6b card consistency ===== */
+.post.c6{padding:16px;gap:0;border:1px solid var(--bd)!important;border-top:3px solid color-mix(in srgb,var(--ac) 55%,transparent)!important;border-radius:10px;background:var(--card)}
+.post.c6 header{display:grid;grid-template-columns:32px minmax(0,1fr) auto;gap:12px;align-items:center;height:40px}
+.post.c6 .who{min-width:0}
+.post.c6 .nm{font-weight:600;font-size:14px;line-height:20px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.post.c6 .nm a{color:var(--tx);text-decoration:none}.post.c6 .nm a:hover{color:var(--actx)}
+.post.c6 .hd{font-size:12px;line-height:18px;color:var(--mu)}
+.post.c6 .tm{text-align:right;font-size:12px;line-height:18px;color:var(--tx2);font-variant-numeric:tabular-nums;white-space:nowrap}
+.post.c6 .tm small{display:block;color:var(--mu);font-size:12px}
+.post.c6 .pt{margin:12px 0;font-size:14px;line-height:1.5;color:var(--tx)}
+.post.c6 footer{display:flex!important;align-items:center;justify-content:space-between!important;height:40px;border-top:1px solid var(--bd2);gap:8px}
+.post.c6 .act{display:flex;gap:8px;align-items:center}
+.post.c6 .op{font-size:12px;color:var(--mu);text-decoration:none;height:28px;display:inline-flex;align-items:center;padding:0 8px;border:1px solid var(--bd);border-radius:6px}
+.post.c6 .op:hover{color:var(--actx);border-color:var(--ac)}
+.post.c6 .met{display:grid;grid-template-columns:repeat(4,64px);gap:0}
+.post.c6 .mc{text-align:right;font-variant-numeric:tabular-nums;color:var(--mu);font-size:12px}
+.post.c6 .mc i{font-style:normal;margin-right:4px;opacity:.75}
+.feed1{gap:12px}
+.ph{grid-template-columns:80px minmax(0,1fr) auto;padding:24px}
+.ph .pi{min-width:0}.ph .bio.dim{opacity:.7}
+.ph .xb{margin:0;align-self:start}
+.pstat{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:12px}
+.psb{background:var(--card);border:1px solid var(--bd);border-radius:10px;padding:12px 16px;border-top:3px solid var(--dcx,#a21caf)}
+.psb:nth-child(1){--dcx:#7c3aed}.psb:nth-child(2){--dcx:#db2777}.psb:nth-child(3){--dcx:#f97316}.psb:nth-child(4){--dcx:#14b8a6}
+.psb .sl{font-size:12px;color:var(--mu)}.psb .sv{font-size:20px;font-weight:600;line-height:1.4;font-variant-numeric:tabular-nums;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.psb .ss{font-size:12px;color:var(--mu)}
+.tgl{display:inline-flex;align-items:center;gap:6px;font-size:13px;color:var(--tx2);white-space:nowrap;cursor:pointer}
+.empty{padding:24px;color:var(--mu)}
+@media(max-width:640px){.pstat{grid-template-columns:repeat(2,minmax(0,1fr))}.ph{grid-template-columns:56px minmax(0,1fr)}.ph .xb{grid-column:1/-1;justify-self:start}.ptool{flex-wrap:wrap;gap:8px}.ptool input{flex-basis:100%}
+.post.c6 .met{grid-template-columns:repeat(4,auto);gap:10px}.post.c6 footer{height:auto;min-height:40px;flex-wrap:wrap;padding:6px 0!important}.post.c6 .rp,.post.c6 .mc:nth-child(3){display:none}}
+.post.c6 .met{grid-template-columns:64px 64px 72px 84px}@media(max-width:640px){.post.c6 .met{grid-template-columns:repeat(4,auto);gap:10px}}
+</style></head><body><header class="top"><div class="ti2"><div class="lg"><i>⚡</i>XHOT<span>X 热点雷达</span></div><span class="sp1"></span><a class="ahl" href="https://aihot.news" target="_blank">来自 AIHOT ↗</a><div class="tg"><button data-set-theme="light" title="浅色">☀</button><button data-set-theme="dark" title="深色">☾</button><button data-set-theme="auto">自动</button></div></div></header>
+<div class="wrap"><div class="pwrap"><a class="back" href="../index.html">← 返回首页</a>
+<section class="ph"><span class="av xl" style="--h:168">G</span><div class="pi"><h1>Google Labs</h1><div class="hd">@GoogleLabs</div><p class="bio">Google’s home for our latest AI tools and experiments.</p></div><a class="xb" href="https://x.com/GoogleLabs" target="_blank">在 X 查看 ↗</a></section>
+<div class="pstat"><div class="psb"><div class="sl">粉丝</div><div class="sv">22.7万</div><div class="ss">227,254</div></div><div class="psb"><div class="sl">较上次</div><div class="sv">—</div><div class="ss">粉丝变化</div></div><div class="psb"><div class="sl">已存推文</div><div class="sv">23</div><div class="ss">最多 200 条</div></div><div class="psb"><div class="sl">最新发帖</div><div class="sv">10-07 19:48</div><div class="ss">5 天前</div></div></div>
+<div class="ptool"><input id="q" type="search" placeholder="搜索 Google Labs 的推文关键词…" autocomplete="off"><span class="cnt" id="cnt">23 条</span></div>
+<div class="bh"><h2>推文时间线</h2><span class="hint">最新在前 · 默认只显示中文/英文</span></div><div class="feed1"><article class="post c6" data-s="🚨new experiment 🚨
+
+playground is an experimental gaming platform that lets you create your own games with zero coding experience. if you can think it, you can play it.
+
+go to https://t.co/fruukpuoqm to learn more! available to users 18+ in the us. https://t.co/p0x8jr7jmn"><header><span class="av" style="--h:168">G</span><div class="who"><div class="nm"><span>Google Labs</span></div><div class="hd">@GoogleLabs</div></div><time class="tm" title="10-07 19:48 北京时间">10-07 19:48<small>5 天前</small></time></header><div class="pt">🚨NEW EXPERIMENT 🚨
+
+Playground is an experimental gaming platform that lets you create your own games with zero coding experience. If you can think it, you can play it.
+
+Go to https://t.co/fRUukpuoqM to learn more! Available to users 18+ in the US. https://t.co/p0X8JR7JMn</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="🚨NEW EXPERIMENT 🚨
+
+Playground is an experimental gaming platform that lets you create your own games with zero coding experience. If you can think it, you can play it.
+
+Go to https://t.co/fRUukpuoqM to learn more! Available to users 18+ in the US. https://t.co/p0X8JR7JMn
+— Google Labs (@GoogleLabs)
+https://x.com/GoogleLabs/status/2107800195748737042">复制原文</button><a class="op" href="https://x.com/GoogleLabs/status/2107800195748737042" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>3.5万</span><span class="mc" title="转发"><i>⇄</i>3,690</span><span class="mc" title="评论"><i>💬</i>1,197</span><span class="mc" title="浏览"><i>👁</i>693.5万</span></div></footer></article><article class="post c6" data-s="💠 opal shines on in skills! 💠
+
+when we launched opal in google labs, it was an experiment to learn how you customize your workflows. your incredible creativity taught us so much — first inspiring gems made by labs, and today, supporting the global launch of skills in"><header><span class="av" style="--h:168">G</span><div class="who"><div class="nm"><span>Google Labs</span></div><div class="hd">@GoogleLabs</div></div><time class="tm" title="10-01 01:43 北京时间">10-01 01:43<small>12 天前</small></time></header><div class="pt">💠 Opal shines on in Skills! 💠
+
+When we launched Opal in Google Labs, it was an experiment to learn how you customize your workflows. Your incredible creativity taught us so much — first inspiring Gems made by Labs, and today, supporting the global launch of skills in</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="💠 Opal shines on in Skills! 💠
+
+When we launched Opal in Google Labs, it was an experiment to learn how you customize your workflows. Your incredible creativity taught us so much — first inspiring Gems made by Labs, and today, supporting the global launch of skills in
+— Google Labs (@GoogleLabs)
+https://x.com/GoogleLabs/status/2105352889665564838">复制原文</button><a class="op" href="https://x.com/GoogleLabs/status/2105352889665564838" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>489</span><span class="mc" title="转发"><i>⇄</i>34</span><span class="mc" title="评论"><i>💬</i>13</span><span class="mc" title="浏览"><i>👁</i>3.9万</span></div></footer></article><article class="post c6" data-s="cc the entire fam 🤝!
+
+today, we’re announcing the new cc – an ai agent built for families to spend less time on logistics and more time together.
+
+you can now:
+
+👤 add up to 5 members to your cc agent
+☀️ start mornings aligned with a shared &quot;your day ahead&quot; brief email
+🗓️ https://t.co/yqfbjjljuz"><header><span class="av" style="--h:168">G</span><div class="who"><div class="nm"><span>Google Labs</span></div><div class="hd">@GoogleLabs</div></div><time class="tm" title="09-18 02:31 北京时间">09-18 02:31<small>25 天前</small></time></header><div class="pt xp"><span class="xs">CC the entire fam 🤝!
+
+Today, we’re announcing the new CC – an AI agent built for families to spend less time on logistics and more time together.
+
+You can now:
+
+👤 Add up to 5 members to your CC agent
+☀️ Start mornings aligned with a shared &quot;Your Day Ahead&quot; brief email
+🗓️ https://…</span><span class="xf">CC the entire fam 🤝!
+
+Today, we’re announcing the new CC – an AI agent built for families to spend less time on logistics and more time together.
+
+You can now:
+
+👤 Add up to 5 members to your CC agent
+☀️ Start mornings aligned with a shared &quot;Your Day Ahead&quot; brief email
+🗓️ https://t.co/YQfbjJLjuz</span></div>
+<footer><div class="act"><button class="ex" type="button">展开</button><button class="cp" type="button" data-copy="CC the entire fam 🤝!
+
+Today, we’re announcing the new CC – an AI agent built for families to spend less time on logistics and more time together.
+
+You can now:
+
+👤 Add up to 5 members to your CC agent
+☀️ Start mornings aligned with a shared &quot;Your Day Ahead&quot; brief email
+🗓️ https://t.co/YQfbjJLjuz
+— Google Labs (@GoogleLabs)
+https://x.com/GoogleLabs/status/2100653821907366366">复制原文</button><a class="op" href="https://x.com/GoogleLabs/status/2100653821907366366" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>1,215</span><span class="mc" title="转发"><i>⇄</i>112</span><span class="mc" title="评论"><i>💬</i>84</span><span class="mc" title="浏览"><i>👁</i>70.9万</span></div></footer></article><article class="post c6" data-s="it’s time to ☁️ dream bigger ☁️
+
+dreambeans is officially available to all us users (18+) on ios and android, free of charge. no subscription required.
+
+you can also now connect @geminiapp to dreambeans. dreambeans will build off the nuance and understanding from your chats to https://t.co/irwt0hrx9i"><header><span class="av" style="--h:168">G</span><div class="who"><div class="nm"><span>Google Labs</span></div><div class="hd">@GoogleLabs</div></div><time class="tm" title="09-11 02:03 北京时间">09-11 02:03<small>32 天前</small></time></header><div class="pt xp"><span class="xs">It’s time to ☁️ dream bigger ☁️
+
+Dreambeans is officially available to all US users (18+) on iOS and Android, free of charge. No subscription required.
+
+You can also now connect @Geminiapp to Dreambeans. Dreambeans will build off the nuance and understanding from your chats to ht…</span><span class="xf">It’s time to ☁️ dream bigger ☁️
+
+Dreambeans is officially available to all US users (18+) on iOS and Android, free of charge. No subscription required.
+
+You can also now connect @Geminiapp to Dreambeans. Dreambeans will build off the nuance and understanding from your chats to https://t.co/iRWT0hrX9i</span></div>
+<footer><div class="act"><button class="ex" type="button">展开</button><button class="cp" type="button" data-copy="It’s time to ☁️ dream bigger ☁️
+
+Dreambeans is officially available to all US users (18+) on iOS and Android, free of charge. No subscription required.
+
+You can also now connect @Geminiapp to Dreambeans. Dreambeans will build off the nuance and understanding from your chats to https://t.co/iRWT0hrX9i
+— Google Labs (@GoogleLabs)
+https://x.com/GoogleLabs/status/2098110018289803558">复制原文</button><a class="op" href="https://x.com/GoogleLabs/status/2098110018289803558" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>614</span><span class="mc" title="转发"><i>⇄</i>67</span><span class="mc" title="评论"><i>💬</i>22</span><span class="mc" title="浏览"><i>👁</i>5.8万</span></div></footer></article><article class="post c6" data-s="🚨 new labs experiment 🚨
+
+great minds t̵h̵i̵n̵k̵  play alike!
+
+play with putty is a collaborative vibe coding tool that lets you build tools and websites together in real time. 🫟
+
+ready for your imagination to go multiplayer? join the waitlist at https://t.co/bpkwccsvtk and https://t.co/apixl9agf3"><header><span class="av" style="--h:168">G</span><div class="who"><div class="nm"><span>Google Labs</span></div><div class="hd">@GoogleLabs</div></div><time class="tm" title="08-26 00:50 北京时间">08-26 00:50<small>48 天前</small></time></header><div class="pt xp"><span class="xs">🚨 NEW LABS EXPERIMENT 🚨
+
+Great minds t̵h̵i̵n̵k̵  play alike!
+
+Play with Putty is a collaborative vibe coding tool that lets you build tools and websites together in real time. 🫟
+
+Ready for your imagination to go multiplayer? Join the waitlist at https://t.co/BpkWccSvTK and https:…</span><span class="xf">🚨 NEW LABS EXPERIMENT 🚨
+
+Great minds t̵h̵i̵n̵k̵  play alike!
+
+Play with Putty is a collaborative vibe coding tool that lets you build tools and websites together in real time. 🫟
+
+Ready for your imagination to go multiplayer? Join the waitlist at https://t.co/BpkWccSvTK and https://t.co/apiXl9AGf3</span></div>
+<footer><div class="act"><button class="ex" type="button">展开</button><button class="cp" type="button" data-copy="🚨 NEW LABS EXPERIMENT 🚨
+
+Great minds t̵h̵i̵n̵k̵  play alike!
+
+Play with Putty is a collaborative vibe coding tool that lets you build tools and websites together in real time. 🫟
+
+Ready for your imagination to go multiplayer? Join the waitlist at https://t.co/BpkWccSvTK and https://t.co/apiXl9AGf3
+— Google Labs (@GoogleLabs)
+https://x.com/GoogleLabs/status/2092293667688173593">复制原文</button><a class="op" href="https://x.com/GoogleLabs/status/2092293667688173593" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>1,781</span><span class="mc" title="转发"><i>⇄</i>159</span><span class="mc" title="评论"><i>💬</i>74</span><span class="mc" title="浏览"><i>👁</i>14.3万</span></div></footer></article><article class="post c6" data-s="do you c what i c?
+
+⦿ cc, our experimental ai productivity agent in gmail, has now opened up a waitlist in australia and new zealand! 🌏
+
+⦿ we&#x27;re also expanding availability in the us and canada. if you&#x27;ve been on the waitlist, we&#x27;re rolling out invitations to get access https://t.co/zzflthroup"><header><span class="av" style="--h:168">G</span><div class="who"><div class="nm"><span>Google Labs</span></div><div class="hd">@GoogleLabs</div></div><time class="tm" title="08-19 04:31 北京时间">08-19 04:31<small>55 天前</small></time></header><div class="pt xp"><span class="xs">Do you C what I C?
+
+⦿ CC, our experimental AI productivity agent in Gmail, has now opened up a waitlist in Australia and New Zealand! 🌏
+
+⦿ We&#x27;re also expanding availability in the US and Canada. If you&#x27;ve been on the waitlist, we&#x27;re rolling out invitations to get access https://t…</span><span class="xf">Do you C what I C?
+
+⦿ CC, our experimental AI productivity agent in Gmail, has now opened up a waitlist in Australia and New Zealand! 🌏
+
+⦿ We&#x27;re also expanding availability in the US and Canada. If you&#x27;ve been on the waitlist, we&#x27;re rolling out invitations to get access https://t.co/zzfLthroUP</span></div>
+<footer><div class="act"><button class="ex" type="button">展开</button><button class="cp" type="button" data-copy="Do you C what I C?
+
+⦿ CC, our experimental AI productivity agent in Gmail, has now opened up a waitlist in Australia and New Zealand! 🌏
+
+⦿ We&#x27;re also expanding availability in the US and Canada. If you&#x27;ve been on the waitlist, we&#x27;re rolling out invitations to get access https://t.co/zzfLthroUP
+— Google Labs (@GoogleLabs)
+https://x.com/GoogleLabs/status/2089812430885208361">复制原文</button><a class="op" href="https://x.com/GoogleLabs/status/2089812430885208361" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>458</span><span class="mc" title="转发"><i>⇄</i>49</span><span class="mc" title="评论"><i>💬</i>21</span><span class="mc" title="浏览"><i>👁</i>5.9万</span></div></footer></article><article class="post c6" data-s="in the lab, we’re always tinkering 🧪– from the experiments we graduate to the ones still brewing, we bring the best of our ai models to all kinds of users. try out these two (if you haven&#x27;t already!):
+
+@pomellibygoogle - build captivating marketing campaigns tailored to your https://t.co/pbwnxyzbel"><header><span class="av" style="--h:168">G</span><div class="who"><div class="nm"><span>Google Labs</span></div><div class="hd">@GoogleLabs</div></div><time class="tm" title="08-15 00:50 北京时间">08-15 00:50<small>59 天前</small></time></header><div class="pt xp"><span class="xs">In the Lab, we’re always tinkering 🧪– from the experiments we graduate to the ones still brewing, we bring the best of our AI models to all kinds of users. Try out these two (if you haven&#x27;t already!):
+
+@PomellibyGoogle - build captivating marketing campaigns tailored to your http…</span><span class="xf">In the Lab, we’re always tinkering 🧪– from the experiments we graduate to the ones still brewing, we bring the best of our AI models to all kinds of users. Try out these two (if you haven&#x27;t already!):
+
+@PomellibyGoogle - build captivating marketing campaigns tailored to your https://t.co/pBwnxyzBEl</span></div>
+<footer><div class="act"><button class="ex" type="button">展开</button><button class="cp" type="button" data-copy="In the Lab, we’re always tinkering 🧪– from the experiments we graduate to the ones still brewing, we bring the best of our AI models to all kinds of users. Try out these two (if you haven&#x27;t already!):
+
+@PomellibyGoogle - build captivating marketing campaigns tailored to your https://t.co/pBwnxyzBEl
+— Google Labs (@GoogleLabs)
+https://x.com/GoogleLabs/status/2088307370787328223">复制原文</button><a class="op" href="https://x.com/GoogleLabs/status/2088307370787328223" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>159</span><span class="mc" title="转发"><i>⇄</i>17</span><span class="mc" title="评论"><i>💬</i>12</span><span class="mc" title="浏览"><i>👁</i>2.3万</span></div></footer></article><article class="post c6" data-s="we love to test new ideas, get quick feedback from you, and learn. with this, we&#x27;ve gathered so many great insights from our portraits experiment and are concluding it on september 14.
+
+we’ll be taking what we learned about expert-grounded ai and weaving it into other google"><header><span class="av" style="--h:168">G</span><div class="who"><div class="nm"><span>Google Labs</span></div><div class="hd">@GoogleLabs</div></div><time class="tm" title="08-11 06:04 北京时间">08-11 06:04<small>63 天前</small></time></header><div class="pt">We love to test new ideas, get quick feedback from you, and learn. With this, we&#x27;ve gathered so many great insights from our Portraits experiment and are concluding it on September 14.
+
+We’ll be taking what we learned about expert-grounded AI and weaving it into other Google</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="We love to test new ideas, get quick feedback from you, and learn. With this, we&#x27;ve gathered so many great insights from our Portraits experiment and are concluding it on September 14.
+
+We’ll be taking what we learned about expert-grounded AI and weaving it into other Google
+— Google Labs (@GoogleLabs)
+https://x.com/GoogleLabs/status/2086936798710923603">复制原文</button><a class="op" href="https://x.com/GoogleLabs/status/2086936798710923603" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>293</span><span class="mc" title="转发"><i>⇄</i>26</span><span class="mc" title="评论"><i>💬</i>10</span><span class="mc" title="浏览"><i>👁</i>3.4万</span></div></footer></article><article class="post c6" data-s="time to spill the (dream)beans.
+
+dreambeans is expanding! joining our us-based ai ultra users, ai pro subscribers in the us can now also get in on the action.
+
+get ready for your fresh, daily collection of personalized stories. we’re surfacing the deep dives and hidden gems you https://t.co/cbvenyne90"><header><span class="av" style="--h:168">G</span><div class="who"><div class="nm"><span>Google Labs</span></div><div class="hd">@GoogleLabs</div></div><time class="tm" title="08-06 01:02 北京时间">08-06 01:02<small>68 天前</small></time></header><div class="pt xp"><span class="xs">Time to spill the (Dream)beans.
+
+Dreambeans is expanding! Joining our US-based AI Ultra users, AI Pro subscribers in the US can now also get in on the action.
+
+Get ready for your fresh, daily collection of personalized stories. We’re surfacing the deep dives and hidden gems you h…</span><span class="xf">Time to spill the (Dream)beans.
+
+Dreambeans is expanding! Joining our US-based AI Ultra users, AI Pro subscribers in the US can now also get in on the action.
+
+Get ready for your fresh, daily collection of personalized stories. We’re surfacing the deep dives and hidden gems you https://t.co/CBvENYNe90</span></div>
+<footer><div class="act"><button class="ex" type="button">展开</button><button class="cp" type="button" data-copy="Time to spill the (Dream)beans.
+
+Dreambeans is expanding! Joining our US-based AI Ultra users, AI Pro subscribers in the US can now also get in on the action.
+
+Get ready for your fresh, daily collection of personalized stories. We’re surfacing the deep dives and hidden gems you https://t.co/CBvENYNe90
+— Google Labs (@GoogleLabs)
+https://x.com/GoogleLabs/status/2085048743322345545">复制原文</button><a class="op" href="https://x.com/GoogleLabs/status/2085048743322345545" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>598</span><span class="mc" title="转发"><i>⇄</i>56</span><span class="mc" title="评论"><i>💬</i>28</span><span class="mc" title="浏览"><i>👁</i>9.4万</span></div></footer></article><article class="post c6" data-s="expecting a minor update? we prefer to b major. 🎶
+
+@googledeepmind just released lyria 3.5, and we’ve plugged it directly into @googleflowmusic to power your next session.
+
+what this means for your tracks:
+
+✨ better prompt adherence: flow music understands your creative https://t.co/mxikwiqc6i"><header><span class="av" style="--h:168">G</span><div class="who"><div class="nm"><span>Google Labs</span></div><div class="hd">@GoogleLabs</div></div><time class="tm" title="07-30 00:19 北京时间">07-30 00:19<small>75 天前</small></time></header><div class="pt xp"><span class="xs">Expecting A Minor update? We prefer to B Major. 🎶
+
+@GoogleDeepMind just released Lyria 3.5, and we’ve plugged it directly into @GoogleFlowMusic to power your next session.
+
+What this means for your tracks:
+
+✨ Better prompt adherence: Flow Music understands your creative https://t…</span><span class="xf">Expecting A Minor update? We prefer to B Major. 🎶
+
+@GoogleDeepMind just released Lyria 3.5, and we’ve plugged it directly into @GoogleFlowMusic to power your next session.
+
+What this means for your tracks:
+
+✨ Better prompt adherence: Flow Music understands your creative https://t.co/mXikwIqC6I</span></div>
+<footer><div class="act"><button class="ex" type="button">展开</button><button class="cp" type="button" data-copy="Expecting A Minor update? We prefer to B Major. 🎶
+
+@GoogleDeepMind just released Lyria 3.5, and we’ve plugged it directly into @GoogleFlowMusic to power your next session.
+
+What this means for your tracks:
+
+✨ Better prompt adherence: Flow Music understands your creative https://t.co/mXikwIqC6I
+— Google Labs (@GoogleLabs)
+https://x.com/GoogleLabs/status/2082501360466174163">复制原文</button><a class="op" href="https://x.com/GoogleLabs/status/2082501360466174163" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>393</span><span class="mc" title="转发"><i>⇄</i>55</span><span class="mc" title="评论"><i>💬</i>24</span><span class="mc" title="浏览"><i>👁</i>6.0万</span></div></footer></article><article class="post c6" data-s="who remembers when project tailwind was just a little, baby labs experiment? well, eventually that became notebooklm. and today - many congrats to the team on becoming @gemini_notebook! https://t.co/nmezzjunei"><header><span class="av" style="--h:168">G</span><div class="who"><div class="nm"><span>Google Labs</span></div><div class="hd">@GoogleLabs</div></div><time class="tm" title="07-17 03:07 北京时间">07-17 03:07<small>88 天前</small></time></header><div class="pt">Who remembers when Project Tailwind was just a little, baby Labs experiment? Well, eventually that became NotebookLM. And today - many congrats to the team on becoming @Gemini_Notebook! https://t.co/NmEzZJUnEi</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="Who remembers when Project Tailwind was just a little, baby Labs experiment? Well, eventually that became NotebookLM. And today - many congrats to the team on becoming @Gemini_Notebook! https://t.co/NmEzZJUnEi
+— Google Labs (@GoogleLabs)
+https://x.com/GoogleLabs/status/2077832590132949268">复制原文</button><a class="op" href="https://x.com/GoogleLabs/status/2077832590132949268" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>922</span><span class="mc" title="转发"><i>⇄</i>66</span><span class="mc" title="评论"><i>💬</i>26</span><span class="mc" title="浏览"><i>👁</i>7.1万</span></div></footer></article><article class="post c6" data-s="every good chord progression needs a resolution. 🎹
+
+to focus on building @googleflowmusic - our tool for creating, sharing, and remixing original music - we will be saying a fond farewell to musicfx and musicfx dj on july 31, 2026.
+
+these early experiments pushed the boundaries"><header><span class="av" style="--h:168">G</span><div class="who"><div class="nm"><span>Google Labs</span></div><div class="hd">@GoogleLabs</div></div><time class="tm" title="07-02 04:28 北京时间">07-02 04:28<small>103 天前</small></time></header><div class="pt">Every good chord progression needs a resolution. 🎹
+
+To focus on building @GoogleFlowMusic - our tool for creating, sharing, and remixing original music - we will be saying a fond farewell to MusicFX and MusicFX DJ on July 31, 2026.
+
+These early experiments pushed the boundaries</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="Every good chord progression needs a resolution. 🎹
+
+To focus on building @GoogleFlowMusic - our tool for creating, sharing, and remixing original music - we will be saying a fond farewell to MusicFX and MusicFX DJ on July 31, 2026.
+
+These early experiments pushed the boundaries
+— Google Labs (@GoogleLabs)
+https://x.com/GoogleLabs/status/2072417166952136789">复制原文</button><a class="op" href="https://x.com/GoogleLabs/status/2072417166952136789" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>312</span><span class="mc" title="转发"><i>⇄</i>32</span><span class="mc" title="评论"><i>💬</i>14</span><span class="mc" title="浏览"><i>👁</i>4.2万</span></div></footer></article><article class="post c6" data-s="we are honored to share that project genie has won the cannes lions grand prix for ai craft! 🏆 to our awesome labs community, thank you for being on this journey with us! https://t.co/fn5nx19g68"><header><span class="av" style="--h:168">G</span><div class="who"><div class="nm"><span>Google Labs</span></div><div class="hd">@GoogleLabs</div></div><time class="tm" title="06-25 00:59 北京时间">06-25 00:59<small>110 天前</small></time></header><div class="pt">We are honored to share that Project Genie has won the Cannes Lions Grand Prix for AI Craft! 🏆 To our awesome Labs community, thank you for being on this journey with us! https://t.co/FN5nx19g68</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="We are honored to share that Project Genie has won the Cannes Lions Grand Prix for AI Craft! 🏆 To our awesome Labs community, thank you for being on this journey with us! https://t.co/FN5nx19g68
+— Google Labs (@GoogleLabs)
+https://x.com/GoogleLabs/status/2069827839826809042">复制原文</button><a class="op" href="https://x.com/GoogleLabs/status/2069827839826809042" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>324</span><span class="mc" title="转发"><i>⇄</i>34</span><span class="mc" title="评论"><i>💬</i>16</span><span class="mc" title="浏览"><i>👁</i>2.8万</span></div></footer></article><article class="post c6" data-s="🌍 project genie access is expanding even more! starting today, google ai ultra 5x subscribers (our latest tier!) globally can access project genie.
+
+try it out here! https://t.co/4bfyhsiamv https://t.co/vl4mcvc44b"><header><span class="av" style="--h:168">G</span><div class="who"><div class="nm"><span>Google Labs</span></div><div class="hd">@GoogleLabs</div></div><time class="tm" title="06-11 04:08 北京时间">06-11 04:08<small>124 天前</small></time></header><div class="pt">🌍 Project Genie access is expanding even more! Starting today, Google AI Ultra 5X subscribers (our latest tier!) globally can access Project Genie.
+
+Try it out here! https://t.co/4BFYHSiAMv https://t.co/VL4MCvc44B</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="🌍 Project Genie access is expanding even more! Starting today, Google AI Ultra 5X subscribers (our latest tier!) globally can access Project Genie.
+
+Try it out here! https://t.co/4BFYHSiAMv https://t.co/VL4MCvc44B
+— Google Labs (@GoogleLabs)
+https://x.com/GoogleLabs/status/2064801929339752527">复制原文</button><a class="op" href="https://x.com/GoogleLabs/status/2064801929339752527" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>753</span><span class="mc" title="转发"><i>⇄</i>118</span><span class="mc" title="评论"><i>💬</i>33</span><span class="mc" title="浏览"><i>👁</i>93.8万</span></div></footer></article><article class="post c6" data-s="🚨 new experiment 🚨
+
+dreambeans is a new, experimental mobile app that uses personal intelligence to connect to your google apps. every day, it delivers collections of personalized stories, surfacing things you might otherwise miss, alongside topics that are relevant to you, to https://t.co/8uresuvezf"><header><span class="av" style="--h:168">G</span><div class="who"><div class="nm"><span>Google Labs</span></div><div class="hd">@GoogleLabs</div></div><time class="tm" title="06-04 00:15 北京时间">06-04 00:15<small>131 天前</small></time></header><div class="pt xp"><span class="xs">🚨 NEW EXPERIMENT 🚨
+
+Dreambeans is a new, experimental mobile app that uses Personal Intelligence to connect to your Google apps. Every day, it delivers collections of personalized stories, surfacing things you might otherwise miss, alongside topics that are relevant to you, to ht…</span><span class="xf">🚨 NEW EXPERIMENT 🚨
+
+Dreambeans is a new, experimental mobile app that uses Personal Intelligence to connect to your Google apps. Every day, it delivers collections of personalized stories, surfacing things you might otherwise miss, alongside topics that are relevant to you, to https://t.co/8urEsuVEzf</span></div>
+<footer><div class="act"><button class="ex" type="button">展开</button><button class="cp" type="button" data-copy="🚨 NEW EXPERIMENT 🚨
+
+Dreambeans is a new, experimental mobile app that uses Personal Intelligence to connect to your Google apps. Every day, it delivers collections of personalized stories, surfacing things you might otherwise miss, alongside topics that are relevant to you, to https://t.co/8urEsuVEzf
+— Google Labs (@GoogleLabs)
+https://x.com/GoogleLabs/status/2062206479026069544">复制原文</button><a class="op" href="https://x.com/GoogleLabs/status/2062206479026069544" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>1,491</span><span class="mc" title="转发"><i>⇄</i>156</span><span class="mc" title="评论"><i>💬</i>68</span><span class="mc" title="浏览"><i>👁</i>44.4万</span></div></footer></article><article class="post c6" data-s="last week at i/o, we got to hear from the writers, designers, coders, and filmmakers behind products like @flowbygoogle, project genie, and @googleflowmusic.
+
+a key theme: “see technology as a blank canvas… it&#x27;s really the human imagination that shapes the technology into new https://t.co/p9nucbbhyt"><header><span class="av" style="--h:168">G</span><div class="who"><div class="nm"><span>Google Labs</span></div><div class="hd">@GoogleLabs</div></div><time class="tm" title="05-28 01:54 北京时间">05-28 01:54<small>138 天前</small></time></header><div class="pt xp"><span class="xs">Last week at I/O, we got to hear from the writers, designers, coders, and filmmakers behind products like @FlowbyGoogle, Project Genie, and @GoogleFlowMusic.
+
+A key theme: “See technology as a blank canvas… it&#x27;s really the human imagination that shapes the technology into new htt…</span><span class="xf">Last week at I/O, we got to hear from the writers, designers, coders, and filmmakers behind products like @FlowbyGoogle, Project Genie, and @GoogleFlowMusic.
+
+A key theme: “See technology as a blank canvas… it&#x27;s really the human imagination that shapes the technology into new https://t.co/P9NUcBBHYT</span></div>
+<footer><div class="act"><button class="ex" type="button">展开</button><button class="cp" type="button" data-copy="Last week at I/O, we got to hear from the writers, designers, coders, and filmmakers behind products like @FlowbyGoogle, Project Genie, and @GoogleFlowMusic.
+
+A key theme: “See technology as a blank canvas… it&#x27;s really the human imagination that shapes the technology into new https://t.co/P9NUcBBHYT
+— Google Labs (@GoogleLabs)
+https://x.com/GoogleLabs/status/2059694641864421566">复制原文</button><a class="op" href="https://x.com/GoogleLabs/status/2059694641864421566" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>116</span><span class="mc" title="转发"><i>⇄</i>17</span><span class="mc" title="评论"><i>💬</i>15</span><span class="mc" title="浏览"><i>👁</i>1.5万</span></div></footer></article><article class="post c6" data-s="take a quick break from scrolling and check out https://t.co/a8phv40fhh. 👀 we had a bit of a refresh! our goal was simply to make sure you can easily find the latest and greatest innovations from the lab, including those we just announced at i/o.
+
+explore our portfolio, test a https://t.co/4twdvvobf8"><header><span class="av" style="--h:168">G</span><div class="who"><div class="nm"><span>Google Labs</span></div><div class="hd">@GoogleLabs</div></div><time class="tm" title="05-23 02:00 北京时间">05-23 02:00<small>143 天前</small></time></header><div class="pt xp"><span class="xs">Take a quick break from scrolling and check out https://t.co/a8Phv40FhH. 👀 We had a bit of a refresh! Our goal was simply to make sure you can easily find the latest and greatest innovations from the Lab, including those we just announced at I/O.
+
+Explore our portfolio, test a ht…</span><span class="xf">Take a quick break from scrolling and check out https://t.co/a8Phv40FhH. 👀 We had a bit of a refresh! Our goal was simply to make sure you can easily find the latest and greatest innovations from the Lab, including those we just announced at I/O.
+
+Explore our portfolio, test a https://t.co/4tWDvVobF8</span></div>
+<footer><div class="act"><button class="ex" type="button">展开</button><button class="cp" type="button" data-copy="Take a quick break from scrolling and check out https://t.co/a8Phv40FhH. 👀 We had a bit of a refresh! Our goal was simply to make sure you can easily find the latest and greatest innovations from the Lab, including those we just announced at I/O.
+
+Explore our portfolio, test a https://t.co/4tWDvVobF8
+— Google Labs (@GoogleLabs)
+https://x.com/GoogleLabs/status/2057884277384360416">复制原文</button><a class="op" href="https://x.com/GoogleLabs/status/2057884277384360416" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>536</span><span class="mc" title="转发"><i>⇄</i>67</span><span class="mc" title="评论"><i>💬</i>19</span><span class="mc" title="浏览"><i>👁</i>3.3万</span></div></footer></article><article class="post c6" data-s="check out these experiments features at https://t.co/a8phv40fhh"><header><span class="av" style="--h:168">G</span><div class="who"><div class="nm"><span>Google Labs</span></div><div class="hd">@GoogleLabs</div></div><time class="tm" title="05-23 00:38 北京时间">05-23 00:38<small>143 天前</small></time></header><div class="pt">Check out these experiments features at https://t.co/a8Phv40FhH</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="Check out these experiments features at https://t.co/a8Phv40FhH
+— Google Labs (@GoogleLabs)
+https://x.com/GoogleLabs/status/2057863566787752154">复制原文</button><a class="op" href="https://x.com/GoogleLabs/status/2057863566787752154" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>20</span><span class="mc" title="转发"><i>⇄</i>6</span><span class="mc" title="评论"><i>💬</i>0</span><span class="mc" title="浏览"><i>👁</i>6,754</span></div></footer></article><article class="post c6" data-s="we asked the team: what’s the most underrated or surprising feature from their product?
+
+here’s what they said. 👇 https://t.co/zzfopyyvix"><header><span class="av" style="--h:168">G</span><div class="who"><div class="nm"><span>Google Labs</span></div><div class="hd">@GoogleLabs</div></div><time class="tm" title="05-23 00:38 北京时间">05-23 00:38<small>143 天前</small></time></header><div class="pt">We asked the team: What’s the most underrated or surprising feature from their product?
+
+Here’s what they said. 👇 https://t.co/ZzFOPyyvIX</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="We asked the team: What’s the most underrated or surprising feature from their product?
+
+Here’s what they said. 👇 https://t.co/ZzFOPyyvIX
+— Google Labs (@GoogleLabs)
+https://x.com/GoogleLabs/status/2057863565328134604">复制原文</button><a class="op" href="https://x.com/GoogleLabs/status/2057863565328134604" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>125</span><span class="mc" title="转发"><i>⇄</i>14</span><span class="mc" title="评论"><i>💬</i>15</span><span class="mc" title="浏览"><i>👁</i>1.6万</span></div></footer></article><article class="post c6" data-s="(5/5) discover our latest experiments and help shape the future of ai technology at https://t.co/a8phv40fhh
+
+share what you create! we want to see!"><header><span class="av" style="--h:168">G</span><div class="who"><div class="nm"><span>Google Labs</span></div><div class="hd">@GoogleLabs</div></div><time class="tm" title="05-22 00:02 北京时间">05-22 00:02<small>144 天前</small></time></header><div class="pt">(5/5) Discover our latest experiments and help shape the future of AI technology at https://t.co/a8Phv40FhH
+
+Share what you create! We want to see!</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="(5/5) Discover our latest experiments and help shape the future of AI technology at https://t.co/a8Phv40FhH
+
+Share what you create! We want to see!
+— Google Labs (@GoogleLabs)
+https://x.com/GoogleLabs/status/2057492242911404443">复制原文</button><a class="op" href="https://x.com/GoogleLabs/status/2057492242911404443" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>28</span><span class="mc" title="转发"><i>⇄</i>3</span><span class="mc" title="评论"><i>💬</i>2</span><span class="mc" title="浏览"><i>👁</i>8,145</span></div></footer></article><article class="post c6" data-s="(4/5) and then, we took our labster to the grand canyon with project genie. https://t.co/3xm2bepwmq"><header><span class="av" style="--h:168">G</span><div class="who"><div class="nm"><span>Google Labs</span></div><div class="hd">@GoogleLabs</div></div><time class="tm" title="05-22 00:02 北京时间">05-22 00:02<small>144 天前</small></time></header><div class="pt">(4/5) And then, we took our Labster to the Grand Canyon with Project Genie. https://t.co/3xM2bePwMQ</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="(4/5) And then, we took our Labster to the Grand Canyon with Project Genie. https://t.co/3xM2bePwMQ
+— Google Labs (@GoogleLabs)
+https://x.com/GoogleLabs/status/2057492241472729543">复制原文</button><a class="op" href="https://x.com/GoogleLabs/status/2057492241472729543" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>41</span><span class="mc" title="转发"><i>⇄</i>3</span><span class="mc" title="评论"><i>💬</i>3</span><span class="mc" title="浏览"><i>👁</i>9,146</span></div></footer></article><article class="post c6" data-s="(3/5) a vibe-designed website from @stitchbygoogle ft. our labs experiments as mini games, and our very own 8-bit “labster.” https://t.co/pj1u0l6llu"><header><span class="av" style="--h:168">G</span><div class="who"><div class="nm"><span>Google Labs</span></div><div class="hd">@GoogleLabs</div></div><time class="tm" title="05-22 00:02 北京时间">05-22 00:02<small>144 天前</small></time></header><div class="pt">(3/5) A vibe-designed website from @StitchbyGoogle ft. our Labs experiments as mini games, and our very own 8-bit “Labster.” https://t.co/pJ1U0l6LLU</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="(3/5) A vibe-designed website from @StitchbyGoogle ft. our Labs experiments as mini games, and our very own 8-bit “Labster.” https://t.co/pJ1U0l6LLU
+— Google Labs (@GoogleLabs)
+https://x.com/GoogleLabs/status/2057492239656562792">复制原文</button><a class="op" href="https://x.com/GoogleLabs/status/2057492239656562792" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>60</span><span class="mc" title="转发"><i>⇄</i>2</span><span class="mc" title="评论"><i>💬</i>3</span><span class="mc" title="浏览"><i>👁</i>2.9万</span></div></footer></article><article class="post c6" data-s="(2/5) a music track made in @googleflowmusic, “step into the lab.” https://t.co/yvhoh2rsgi"><header><span class="av" style="--h:168">G</span><div class="who"><div class="nm"><span>Google Labs</span></div><div class="hd">@GoogleLabs</div></div><time class="tm" title="05-22 00:02 北京时间">05-22 00:02<small>144 天前</small></time></header><div class="pt">(2/5) A music track made in @GoogleFlowMusic, “Step into the Lab.” https://t.co/YvHOH2RsgI</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="(2/5) A music track made in @GoogleFlowMusic, “Step into the Lab.” https://t.co/YvHOH2RsgI
+— Google Labs (@GoogleLabs)
+https://x.com/GoogleLabs/status/2057492238155067432">复制原文</button><a class="op" href="https://x.com/GoogleLabs/status/2057492238155067432" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>51</span><span class="mc" title="转发"><i>⇄</i>2</span><span class="mc" title="评论"><i>💬</i>3</span><span class="mc" title="浏览"><i>👁</i>1.1万</span></div></footer></article></div></div>
+<footer>数据：X API get_users_posts · 生成于 2026-10-13 16:21 北京时间</footer></div><script>
+(function(){var d=document.documentElement,mq=matchMedia('(prefers-color-scheme: dark)');
+function sync(){document.querySelectorAll('[data-set-theme]').forEach(function(b){b.classList.toggle('on',b.dataset.setTheme===d.dataset.pref)})}
+function theme(){var p=d.dataset.pref;d.dataset.theme=p==='auto'?(mq.matches?'dark':'light'):p}
+document.querySelectorAll('[data-set-theme]').forEach(function(b){b.onclick=function(){d.dataset.pref=b.dataset.setTheme;try{localStorage.setItem('xhot-theme',b.dataset.setTheme)}catch(e){}theme();sync()}});
+(mq.addEventListener?mq.addEventListener('change',theme):mq.addListener(theme));
+document.querySelectorAll('[data-t]').forEach(function(b){b.onclick=function(){var t=b.dataset.t;
+document.querySelectorAll('[data-t]').forEach(function(x){x.classList.toggle('on',x.dataset.t===t)});
+document.querySelectorAll('.pane').forEach(function(x){x.classList.toggle('on',x.dataset.p===t)});
+document.querySelectorAll('.li-d').forEach(function(x){x.hidden=x.dataset.p!==t});scrollTo({top:0})}});sync();
+function fb(t){var a=document.createElement('textarea');a.value=t;a.setAttribute('readonly','');a.style.cssText='position:fixed;top:-1000px;opacity:0';document.body.appendChild(a);a.select();var ok=false;try{ok=document.execCommand('copy')}catch(e){}document.body.removeChild(a);return ok}
+document.addEventListener('click',function(ev){var b=ev.target.closest('.cp');if(b){var t=b.getAttribute('data-copy');
+function done(ok){b.textContent=ok?'已复制 ✓':'复制失败';b.classList.toggle('ok',ok);clearTimeout(b._t);b._t=setTimeout(function(){b.textContent='复制原文';b.classList.remove('ok')},1600)}
+if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(t).then(function(){done(true)},function(){done(fb(t))})}else done(fb(t));return}
+var x=ev.target.closest('.ex');if(x){var c=x.closest('.post').querySelector('.xp');var o=c.classList.toggle('open');x.textContent=o?'收起':'展开'}})})();
+</script><script>(function(){var q=document.getElementById('q'),c=document.getElementById('cnt'),a=document.getElementById('alll'),ps=[].slice.call(document.querySelectorAll('.feed1 .post'));
+function run(){var v=q.value.trim().toLowerCase(),all=a&&a.checked,k=0,n=0;ps.forEach(function(p){var lo=!p.dataset.ol||all;if(lo)n++;var ok=lo&&(!v||p.dataset.s.indexOf(v)>=0);p.hidden=!ok;if(ok)k++});c.textContent=v?('匹配 '+k+' / '+n+' 条'):(n+' 条')}
+q.addEventListener('input',run);if(a)a.addEventListener('change',run)})();</script></body></html>

@@ -1,0 +1,545 @@
+<!doctype html><html lang="zh-CN" data-theme="light" data-pref="auto"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><title>雪踏乌云 (@Pluvio9yte) · XHOT</title><script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('xhot-theme')}catch(e){}t=(t==='light'||t==='dark')?t:'auto';d.setAttribute('data-pref',t);d.setAttribute('data-theme',t==='auto'?(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'):t)})();
+</script><style>:root{--bg:#f7f7f8;--card:#fff;--bd:#e4e4e7;--bd2:#f0f0f2;--zebra:#fafafa;--hov:#f4f4f6;--tx:#18181b;--tx2:#3f3f46;--mu:#71717a;--mu2:#a1a1aa;--ac:#4f46e5;--acbg:#eef2ff;--actx:#4338ca;--up:#16a34a;--upbg:#f0fdf4;--dn:#dc2626;--dnbg:#fef2f2;--r:8px;--sh:0 1px 2px rgba(24,24,27,.04)}
+html[data-theme=dark]{--bg:#09090b;--card:#131316;--bd:#27272a;--bd2:#1c1c20;--zebra:#16161a;--hov:#1d1d22;--tx:#f4f4f5;--tx2:#d4d4d8;--mu:#a1a1aa;--mu2:#71717a;--ac:#818cf8;--acbg:#1e1b4b;--actx:#a5b4fc;--up:#4ade80;--upbg:#0f2a1a;--dn:#f87171;--dnbg:#2d1214;--sh:none}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--tx);font:400 13px/1.5 "Inter","PingFang SC","HarmonyOS Sans SC","Noto Sans SC","Noto Sans CJK SC",-apple-system,BlinkMacSystemFont,"Microsoft YaHei",sans-serif;-webkit-font-smoothing:antialiased;font-feature-settings:"cv11","ss01"}
+a{color:inherit;text-decoration:none}button{font:inherit}
+.num,.f,.d,.r,.sv,.nc,.heat,.pc,.tr3,.kv dd,.post footer{font-variant-numeric:tabular-nums}
+/* 顶栏 */
+.top{position:sticky;top:0;z-index:30;background:color-mix(in srgb,var(--card) 92%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--bd)}
+.ti2{max-width:1440px;margin:auto;height:56px;padding:0 24px;display:flex;align-items:center;gap:16px}
+.lg{display:flex;align-items:center;gap:8px;font-weight:600;font-size:16px;letter-spacing:-.01em}.lg i{width:24px;height:24px;border-radius:6px;background:var(--ac);display:grid;place-items:center;font-style:normal;color:#fff;font-size:12px}.lg span{font-weight:400;font-size:13px;color:var(--mu);margin-left:4px;padding-left:12px;border-left:1px solid var(--bd)}
+.mtabs{display:none}
+.tg{margin-left:auto;display:flex;border:1px solid var(--bd);border-radius:var(--r);padding:2px;background:var(--card)}.tg button{border:0;background:none;color:var(--mu);height:28px;padding:0 10px;border-radius:6px;cursor:pointer;font-size:12px}.tg button.on{background:var(--hov);color:var(--tx);font-weight:500}
+/* 12 列网格 */
+.wrap{max-width:1440px;margin:auto;padding:24px 24px 32px}
+.stats,.shell{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:16px}.shell{align-items:start}
+.stats{margin-bottom:24px}.st{grid-column:span 2}
+.left{grid-column:span 2}.content{grid-column:span 10;min-width:0}
+.cols{display:grid;grid-template-columns:repeat(10,minmax(0,1fr));gap:16px;align-items:start}.mid{grid-column:span 7;min-width:0}.right{grid-column:span 3;min-width:0}
+/* 统计条 */
+.st{background:var(--card);border:1px solid var(--bd);border-radius:var(--r);padding:12px 16px;min-width:0;box-shadow:var(--sh)}
+.sl{font-size:12px;color:var(--mu);line-height:16px}.sv{font-size:20px;font-weight:600;line-height:28px;letter-spacing:-.01em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.ss{font-size:12px;color:var(--mu);line-height:16px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.st:nth-child(3) .sv{color:var(--ac)}
+/* 区块标题：统一 24px 行高，底部 8px */
+.bh{display:flex;align-items:center;gap:8px;height:24px;margin:0 0 8px}.bh h2{font-size:14px;font-weight:600;margin:0;line-height:24px}.hint{font-size:12px;color:var(--mu)}.credit{margin-left:auto;font-size:12px;font-weight:500;color:var(--ac)}.credit:hover{text-decoration:underline}
+.blk{margin-bottom:24px}
+/* 左栏 */
+.left{position:sticky;top:80px;display:flex;flex-direction:column;gap:16px}.left>.bh{margin-bottom:-8px}
+.lcard{background:var(--card);border:1px solid var(--bd);border-radius:var(--r);padding:8px;box-shadow:var(--sh)}
+.nav{display:flex;flex-direction:column;gap:2px}.nv{display:grid;grid-template-columns:24px minmax(0,1fr) auto;align-items:center;gap:8px;height:36px;border:0;background:none;color:var(--tx2);padding:0 8px;border-radius:6px;cursor:pointer;text-align:left;font-size:13px;font-weight:500}
+.nv:hover{background:var(--hov)}.nv.on{background:var(--acbg);color:var(--actx)}.ni{width:24px;height:24px;border-radius:6px;display:grid;place-items:center;background:var(--bd2);color:var(--mu);font-size:12px}.nv.on .ni{background:var(--ac);color:#fff}.nc{font-size:12px;color:var(--mu)}
+.kv{margin:0}.kv div{display:flex;justify-content:space-between;align-items:center;height:32px;padding:0 8px;border-bottom:1px solid var(--bd2);font-size:13px}.kv div:last-child{border-bottom:0}.kv dt{color:var(--mu)}.kv dd{margin:0;font-weight:500}
+.mini{padding:8px;border-top:1px solid var(--bd2)}.mt{font-size:12px;color:var(--mu);line-height:16px;margin-bottom:4px}.mv{font-weight:500;display:flex;align-items:center;justify-content:space-between;gap:8px}.mv2{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;font-size:13px;font-weight:500}.mv2:hover{color:var(--ac)}.mm{font-size:12px;color:var(--mu)}
+.mini .sp{height:24px;margin-top:8px}
+.tl{list-style:none;margin:0;padding:0}.tl li a{display:grid;grid-template-columns:16px minmax(0,1fr) auto;gap:8px;align-items:center;height:28px;padding:0 4px;border-radius:4px;font-size:13px}.tl li a:hover{background:var(--hov)}.tl .k{color:var(--mu2);font-size:12px;text-align:right}.tl .n{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.lnote{font-size:12px;color:var(--mu);padding:12px}.lnote b{display:block;color:var(--tx2);font-weight:500;margin-bottom:4px}.lnote p{margin:0 0 4px}.lnote a{color:var(--ac)}
+/* 涨跌徽章：唯一使用红绿的地方 */
+.pc{display:inline-flex;align-items:center;gap:2px;height:20px;font-size:12px;font-weight:500;padding:0 6px;border-radius:4px;white-space:nowrap}.pc.up{color:var(--up);background:var(--upbg)}.pc.dn{color:var(--dn);background:var(--dnbg)}
+.sp{display:block;width:100%;fill:none;stroke-width:1.5;stroke-linejoin:round;stroke-linecap:round}.sp.up,.tile.up .sp{stroke:var(--up)}.sp.dn,.tile.dn .sp{stroke:var(--dn)}
+/* 趋势 */
+.pane{display:none}.pane.on{display:block}
+.tiles{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
+.tile{background:var(--card);border:1px solid var(--bd);border-radius:var(--r);padding:8px 12px;height:88px;display:grid;grid-template-rows:20px 1fr 16px;gap:4px;box-shadow:var(--sh);min-width:0}
+.tile:hover{border-color:var(--mu2)}.tr1{display:grid;grid-template-columns:16px minmax(0,1fr) auto;gap:8px;align-items:center}.tk{font-size:12px;color:var(--mu2);text-align:right}.tn{font-size:13px;font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tile .sp{height:100%;opacity:.9}.tr3{display:flex;justify-content:space-between;font-size:12px;line-height:16px;color:var(--mu)}.tr3 b{color:var(--tx2);font-weight:500}
+/* 热帖 */
+.feed{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.post{background:var(--card);border:1px solid var(--bd);border-radius:var(--r);padding:12px 16px 8px;display:flex;flex-direction:column;min-width:0;box-shadow:var(--sh)}.post:hover{border-color:var(--mu2)}
+.post header{display:grid;grid-template-columns:32px minmax(0,1fr) auto;gap:8px;align-items:center;height:32px}
+.av{--h:220;width:32px;height:32px;border-radius:50%;display:inline-grid;place-items:center;flex:none;font-weight:600;font-size:13px;color:hsl(var(--h) 30% 32%);background:hsl(var(--h) 30% 92%)}
+html[data-theme=dark] .av{color:hsl(var(--h) 35% 80%);background:hsl(var(--h) 15% 22%)}
+.av.s{width:24px;height:24px;font-size:11px}.av.xs{width:20px;height:20px;font-size:10px;margin-left:-6px;border:2px solid var(--card)}.av.xs:first-child{margin-left:0}
+.who{min-width:0;line-height:16px}.nm{display:flex;align-items:center;gap:6px;font-size:13px;font-weight:600;min-width:0}.nm a{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.nm a:hover{color:var(--ac)}.hd{font-size:12px;color:var(--mu);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.heat{font-size:12px;font-weight:500;color:var(--mu);height:20px;line-height:20px;padding:0 6px;border:1px solid var(--bd);border-radius:4px}
+.pt{flex:1;margin:8px 0;font-size:13px;line-height:1.6;color:var(--tx2);white-space:pre-wrap;word-break:break-word}.xp .xf{display:none}.xp.open .xs{display:none}.xp.open .xf{display:inline}
+.post footer{display:flex;align-items:center;gap:10px;height:32px;font-size:12px;color:var(--mu);border-top:1px solid var(--bd2);white-space:nowrap;overflow:hidden}.sp1{flex:1}
+.cp,.ex{height:24px;border:1px solid var(--bd);background:var(--card);color:var(--tx2);font-size:12px;font-weight:500;padding:0 8px;border-radius:6px;cursor:pointer}.cp:hover,.ex:hover{border-color:var(--ac);color:var(--ac)}.cp.ok{border-color:var(--up);color:var(--up)}
+.op{width:24px;height:24px;display:grid;place-items:center;border-radius:6px;color:var(--mu)}.op:hover{background:var(--hov);color:var(--ac)}
+.zh{font-size:11px;font-weight:500;color:var(--mu);border:1px solid var(--bd);border-radius:4px;padding:0 4px;line-height:16px;flex:none}
+/* 右栏 */
+.right{display:flex;flex-direction:column;gap:24px;position:sticky;top:80px}
+.rcard,.acard{background:var(--card);border:1px solid var(--bd);border-radius:var(--r);box-shadow:var(--sh);min-width:0;overflow:hidden}
+.rhd{display:flex;align-items:center;gap:8px;height:24px;margin-bottom:8px}
+.rcard .tw{max-height:560px;overflow:auto}
+/* 表格 */
+table{width:100%;border-collapse:separate;border-spacing:0;font-size:13px}
+th{height:32px;font-size:12px;font-weight:500;color:var(--mu);text-align:left;padding:0 12px;background:var(--zebra);border-bottom:1px solid var(--bd);white-space:nowrap}
+thead th{position:sticky;top:0;z-index:2}
+td{height:36px;padding:0 12px;border-bottom:1px solid var(--bd2);vertical-align:middle}tbody tr:last-child td{border-bottom:0}
+tbody tr:not(.g):hover td{background:var(--hov)}
+th.num,td.num,th.f,td.f,th.d,td.d{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}th.r,td.r{width:40px;text-align:right;color:var(--mu2);padding-right:4px;font-variant-numeric:tabular-nums}
+.lbt{table-layout:fixed}.lbt th.r,.lbt td.r{width:36px}.lbt th.f,.lbt td.f{width:72px;font-weight:500}.lbt th.d,.lbt td.d{width:64px;color:var(--mu);font-size:12px;padding-left:0}
+.lbt td.n a{display:flex;align-items:center;gap:8px;min-width:0}.lbt .nt{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:500}.lbt td.n a:hover .nt{color:var(--ac)}
+tr.g th{position:sticky;top:32px;z-index:1;height:28px;background:var(--card);color:var(--tx2);font-size:12px;font-weight:600;border-bottom:1px solid var(--bd2)}tr.g th span{color:var(--mu);font-weight:400;margin-left:4px}
+.news{list-style:none;margin:0;padding:0 12px}.news li{border-top:1px solid var(--bd2)}.news li:first-child{border-top:0}.news a{display:block;padding:8px 0}.news .t{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;font-weight:500;font-size:13px;line-height:20px}.news a:hover .t{color:var(--ac)}.news .m{display:block;font-size:12px;color:var(--mu);line-height:16px;margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+/* 卡片内标题：所有卡片头 48px */
+.rcard>.bh,.acard>.bh{height:48px;margin:0;padding:0 12px;border-bottom:1px solid var(--bd)}
+/* AIHOT */
+.ahsec{margin-top:8px;padding-top:24px;border-top:1px solid var(--bd)}
+.ahh{display:flex;align-items:center;gap:12px;height:28px;margin-bottom:16px}.ahh .k{font-size:12px;font-weight:600;letter-spacing:.08em;color:var(--ac)}.ahh h2{margin:0;font-size:20px;font-weight:600;letter-spacing:-.01em}.ahh a{margin-left:auto;font-size:12px;font-weight:500;color:var(--ac)}
+.agrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.acard.wide{grid-column:1/-1}
+.ht{table-layout:fixed}.ht td.ti a{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:500}.ht td.ti a:hover{color:var(--ac)}.ht th:nth-child(3),.ht td.sv{width:104px}.ht th:nth-child(4),.ht td.hb{width:160px}.ht th.num,.ht td.num{width:72px}
+.rk{display:inline-grid;place-items:center;width:20px;height:20px;border-radius:4px;color:var(--mu);font-weight:500;font-size:12px}.rk.top{background:var(--acbg);color:var(--actx);font-weight:600}
+.bar{display:block;height:4px;border-radius:2px;background:var(--bd2);overflow:hidden}.bar i{display:block;height:100%;border-radius:2px;background:var(--ac);opacity:.75}
+.lead{display:block;margin:12px;padding:12px 16px;border-radius:6px;background:var(--zebra);border:1px solid var(--bd2)}.lead b{display:block;font-size:16px;font-weight:600;line-height:24px}.lead span{display:block;font-size:13px;color:var(--tx2);margin-top:4px}.lead:hover b{color:var(--ac)}
+.dg{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:16px;padding:0 12px 12px}.dl{font-size:12px;font-weight:600;color:var(--tx2);height:28px;line-height:28px;border-bottom:1px solid var(--bd)}.ds ul{list-style:none;margin:0;padding:0}.ds li a{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;font-size:13px;line-height:20px;padding:6px 0;border-bottom:1px solid var(--bd2);color:var(--tx2)}.ds li a:hover{color:var(--ac)}
+.exg{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:var(--bd2)}.exc{display:grid;grid-template-rows:auto 1fr auto;gap:4px;padding:12px 16px;background:var(--card);min-height:132px}.exc:hover{background:var(--hov)}
+.et{display:flex;gap:8px;align-items:flex-start}.et span{flex:1;font-weight:600;font-size:13px;line-height:20px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}.sc{font-size:12px;font-weight:500;color:var(--actx);background:var(--acbg);border-radius:4px;padding:0 6px;line-height:20px;font-variant-numeric:tabular-nums}
+.exc p{margin:0;font-size:12px;color:var(--mu);line-height:18px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}.em{font-size:12px;color:var(--mu2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.mtb .mn{font-weight:500}.mtb td{white-space:nowrap}.scc{width:180px}td.scc{text-align:right}.scc .bar{display:inline-block;width:96px;vertical-align:middle;margin-right:12px}.scc b{font-weight:600;font-variant-numeric:tabular-nums;display:inline-block;width:36px;text-align:right}
+.chips{display:flex;flex-wrap:wrap;gap:8px;padding:12px}.chips a{height:28px;line-height:26px;font-size:12px;padding:0 12px;border-radius:14px;color:var(--tx2);border:1px solid var(--bd)}.chips a:hover{border-color:var(--ac);color:var(--ac)}
+footer{max-width:1440px;margin:24px auto 0;padding-top:16px;border-top:1px solid var(--bd);font-size:12px;color:var(--mu)}footer a{color:var(--ac)}
+/* 响应式 */
+@media(max-width:1600px){.post footer .rp{display:none}}@media(max-width:1360px){.lbt th.f,.lbt td.f{width:64px}.lbt th.d,.lbt td.d{width:52px}.lbt th.r,.lbt td.r{width:28px}td,th{padding:0 8px}.tiles{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:1180px){.left{display:none}.content{grid-column:1/-1}.st{grid-column:span 4}.mtabs{display:flex;gap:4px}.mt1{height:32px;border:0;background:none;color:var(--tx2);padding:0 12px;border-radius:6px;cursor:pointer;font-weight:500;font-size:13px}.mt1.on{background:var(--acbg);color:var(--actx)}}
+@media(max-width:900px){.cols{grid-template-columns:1fr}.mid,.right{grid-column:1/-1}.right{position:static}.agrid{grid-template-columns:1fr}.dg{grid-template-columns:repeat(2,minmax(0,1fr))}.exg{grid-template-columns:1fr 1fr}}
+@media(max-width:640px){.ti2{flex-wrap:wrap;height:auto;padding:8px 16px;gap:8px}.lg span{display:none}.mtabs{order:3;width:100%}.mt1{flex:1}.wrap{padding:16px 12px 24px}
+.stats{gap:8px;margin-bottom:16px}.st{grid-column:span 6;padding:8px 12px}.sv{font-size:16px;line-height:24px}.tiles{grid-template-columns:repeat(2,minmax(0,1fr))}.feed{grid-template-columns:1fr}.exg{grid-template-columns:1fr}
+.ht th:nth-child(3),.ht td.sv,.ht th:nth-child(4),.ht td.hb,.ht th:nth-child(6),.ht td:nth-child(6){display:none}.mtb th:nth-child(3),.mtb td:nth-child(3),.mtb th:nth-child(4),.mtb td:nth-child(4),.mtb th:nth-child(5),.mtb td:nth-child(5){display:none}.scc{width:auto}.scc .bar{display:none}.ahh{height:auto;flex-wrap:wrap}.ahh a{margin-left:0}.dg{grid-template-columns:1fr}}
+/* ===== v5 color layer ===== */
+:root{--ac:#7c3aed;--acbg:#f3e8ff;--actx:#6d28d9;--g1:#7c3aed;--g2:#db2777;--g3:#f97316;--bg:#f6f5fb;--glow:rgba(124,58,237,.18)}
+html[data-theme=dark]{--bg:#110d2e;--card:#1a1640;--bd:#2a2652;--bd2:#1e1b40;--zebra:#171536;--hov:#1f1c45;--mu:#a5a3c9;--mu2:#77749e;--ac:#c084fc;--acbg:#2e1a5c;--actx:#e9d5ff;--up:#4ade80;--dn:#fb7185;--glow:rgba(192,132,252,.28)}
+html[data-theme=dark],html[data-theme=dark] body{background-attachment:fixed;background:radial-gradient(1200px 600px at 10% -10%,#2a1660 0,transparent 60%),radial-gradient(900px 500px at 100% 0,#3b0d4a 0,transparent 55%),var(--bg)}
+.lg i{background:linear-gradient(135deg,var(--g1),var(--g2))!important;color:#fff!important}
+.stats{background:linear-gradient(110deg,#6d28d9 0%,#a21caf 50%,#db2777 85%,#f97316 120%);border-radius:12px;padding:16px;box-shadow:0 8px 24px -8px rgba(162,28,175,.45)}
+html[data-theme=dark] .stats{background:linear-gradient(110deg,#4c1d95 0%,#86198f 55%,#be185d 100%);box-shadow:0 0 0 1px rgba(232,121,249,.25),0 10px 30px -10px rgba(217,70,239,.5)}
+.stats .st{background:rgba(255,255,255,.12)!important;border:1px solid rgba(255,255,255,.22)!important;box-shadow:none!important;backdrop-filter:blur(4px)}
+.stats .st *{color:#fff!important}
+.stats .st .sl,.stats .st .ss{color:rgba(255,255,255,.82)!important}
+/* heat tiles */
+.tile{position:relative;overflow:hidden;transition:transform .15s,box-shadow .15s}
+.tile.up{background:linear-gradient(135deg,rgba(249,115,22,calc(var(--a)*.10 + .03)),rgba(239,68,68,calc(var(--a)*.28 + .04))),var(--card);border-color:rgba(239,68,68,calc(var(--a)*.45 + .12))}
+.tile.dn{background:linear-gradient(135deg,rgba(56,189,248,.05),rgba(59,130,246,calc(var(--a)*.22 + .05))),var(--card);border-color:rgba(59,130,246,.25)}
+.tile.up .sp{stroke:#ea580c}.tile.dn .sp{stroke:#2563eb}
+html[data-theme=dark] .tile.up .sp{stroke:#fb923c}html[data-theme=dark] .tile.dn .sp{stroke:#60a5fa}
+.tile:hover{transform:translateY(-1px);box-shadow:0 6px 18px -6px rgba(239,68,68,.35)}
+/* domain chips */
+.nv[data-t=ai] .ni,.mtabs [data-t=ai]{--dc:#7c3aed}
+.nv[data-t=money] .ni,.mtabs [data-t=money]{--dc:#f59e0b}
+.nv[data-t=growth] .ni,.mtabs [data-t=growth]{--dc:#14b8a6}
+.nv[data-t=ai]{--dc:#7c3aed;--dc2:#c026d3}.nv[data-t=money]{--dc:#f59e0b;--dc2:#ea580c}.nv[data-t=growth]{--dc:#14b8a6;--dc2:#22c55e}
+.nv .ni{background:linear-gradient(135deg,var(--dc),var(--dc2))!important;color:#fff!important}
+.nv.on{background:color-mix(in srgb,var(--dc) 12%,var(--card))!important;color:var(--tx)!important;box-shadow:inset 3px 0 0 var(--dc)}
+.nv.on .nc{color:var(--dc)}
+/* gradient avatars */
+.av{background:linear-gradient(135deg,hsl(var(--h) 85% 62%),hsl(calc(var(--h) + 50) 80% 52%))!important;color:#fff!important;text-shadow:0 1px 1px rgba(0,0,0,.2)}
+/* cards accents + glow */
+.lcard,.rcard,.post,.acard{transition:box-shadow .15s,border-color .15s}
+.post{border-top:2px solid color-mix(in srgb,var(--ac) 45%,transparent)!important}
+.post:hover,.rcard:hover,.acard:hover{border-color:color-mix(in srgb,var(--ac) 50%,var(--bd))!important;box-shadow:0 0 0 3px var(--glow)}
+.bh h2{position:relative;padding-left:10px}
+.bh h2::before{content:"";position:absolute;left:0;top:5px;bottom:5px;width:3px;border-radius:2px;background:linear-gradient(var(--g1),var(--g2))}
+a{color:var(--actx)}
+/* ===== v6 layout ===== */
+.mtabs{display:flex!important;gap:4px}
+.mt1{height:32px;border:0;background:none;color:var(--tx2);padding:0 12px;border-radius:6px;cursor:pointer;font-weight:500;font-size:13px}
+.mt1.on{background:color-mix(in srgb,var(--dc) 14%,var(--card));color:var(--tx);box-shadow:inset 0 -2px 0 var(--dc)}
+.ti2{display:flex;align-items:center;gap:16px}
+.ti2 .sp1{flex:1}
+.ahl{font-size:13px;font-weight:500;color:var(--actx);text-decoration:none;padding:0 8px;height:32px;display:inline-flex;align-items:center;border-radius:6px}
+.ahl:hover{background:var(--acbg)}
+.stats.sm{padding:8px 16px;grid-template-columns:repeat(12,minmax(0,1fr))}
+.stats.sm .st{grid-column:span 2;padding:8px 12px;height:auto}
+.stats.sm .sv{font-size:20px;line-height:1.3}
+.g6{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:16px;align-items:start}
+.c-l{grid-column:span 3;min-width:0}.c-m{grid-column:span 6;min-width:0}.c-r{grid-column:span 3;min-width:0;display:flex;flex-direction:column;gap:24px}
+.c-l,.c-r{position:sticky;top:80px;max-height:calc(100vh - 96px);overflow:auto;scrollbar-width:thin}
+.feed1{display:flex;flex-direction:column;gap:8px}
+.post .pt{white-space:pre-wrap;word-break:break-word}
+.post .tm{color:var(--mu);font-variant-numeric:tabular-nums}
+.lbt td.n a{display:flex;align-items:center;gap:8px;min-width:0;color:var(--tx);text-decoration:none}
+.lbt td.n a:hover .nt{color:var(--actx);text-decoration:underline}
+.rlist{list-style:none;margin:0;padding:0}
+.rlist li{border-top:1px solid var(--bd2)}
+.rlist li:first-child{border-top:0}
+.rlist a{display:block;padding:8px 12px;color:var(--tx);text-decoration:none}
+.rlist a:hover{background:var(--hov)}
+.gh .rn{font-weight:600;font-size:13px;color:var(--actx);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.gh .rd{font-size:12px;color:var(--tx2);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;margin:2px 0 4px}
+.gh .rm{display:flex;gap:12px;font-size:12px;color:var(--mu);font-variant-numeric:tabular-nums}
+.gh .rm .td{margin-left:auto;color:#ea580c;font-weight:600}
+html[data-theme=dark] .gh .rm .td{color:#fb923c}
+.gh .lg2{display:inline-flex;align-items:center;gap:4px}.gh .lg2 i{width:8px;height:8px;border-radius:50%;background:hsl(var(--h) 70% 55%)}
+.nws .t{font-size:13px;font-weight:500;line-height:1.5;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.nws .m{font-size:12px;color:var(--mu);margin-top:2px;display:flex;gap:8px}
+.src{display:inline-block;padding:0 6px;border-radius:4px;font-size:12px;font-weight:500;line-height:18px}
+.src.x{background:#e0f2fe;color:#0369a1}.src.d{background:#f3e8ff;color:#7e22ce}.src.s{background:#fce7f3;color:#be185d}
+html[data-theme=dark] .src.x{background:#0c2a44;color:#7dd3fc}html[data-theme=dark] .src.d{background:#2e1a5c;color:#d8b4fe}html[data-theme=dark] .src.s{background:#4a0d2e;color:#f9a8d4}
+.tl2{list-style:none;margin:0;padding:4px 0}
+.tl2 a{display:grid;grid-template-columns:24px 1fr auto;align-items:center;height:32px;padding:0 12px;color:var(--tx);text-decoration:none;gap:8px}
+.tl2 a:hover{background:var(--hov)}
+.tl2 .k{color:var(--mu);font-variant-numeric:tabular-nums;font-size:12px}
+.tl2 .n{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+/* person page */
+.ph{display:grid;grid-template-columns:80px 1fr auto;gap:16px;align-items:center;padding:24px;border-radius:12px;background:linear-gradient(110deg,#6d28d9 0%,#a21caf 55%,#db2777 100%);color:#fff;box-shadow:0 8px 24px -8px rgba(162,28,175,.45)}
+.ph .av.xl{width:80px;height:80px;border-radius:50%;font-size:28px;font-weight:600;display:flex;align-items:center;justify-content:center;border:3px solid rgba(255,255,255,.6)}
+.ph h1{font-size:28px;line-height:1.3;margin:0;font-weight:600}
+.ph .hd{opacity:.85;font-size:14px}
+.ph .bio{margin:8px 0 0;font-size:14px;opacity:.95;white-space:pre-wrap;max-width:720px}
+.ph .fs{text-align:right}
+.ph .fs b{display:block;font-size:28px;font-weight:600;font-variant-numeric:tabular-nums;line-height:1.3}
+.ph .fs span{font-size:12px;opacity:.85}
+.ph .xb{display:inline-flex;margin-top:8px;height:32px;align-items:center;padding:0 12px;border-radius:6px;background:rgba(255,255,255,.18);color:#fff;text-decoration:none;font-weight:500;border:1px solid rgba(255,255,255,.35)}
+.ptool{display:flex;align-items:center;gap:16px;margin:24px 0 8px}
+.ptool input{flex:1;height:40px;border:1px solid var(--bd);border-radius:8px;background:var(--card);color:var(--tx);padding:0 12px;font:inherit;font-size:14px;outline:none}
+.ptool input:focus{border-color:var(--ac);box-shadow:0 0 0 3px var(--glow)}
+.ptool .cnt{color:var(--mu);font-variant-numeric:tabular-nums;white-space:nowrap}
+.pwrap{max-width:880px;margin:0 auto}
+.back{font-size:13px;color:var(--actx);text-decoration:none;display:inline-flex;height:32px;align-items:center;margin-bottom:8px}
+mark{background:#fde68a;color:inherit;border-radius:2px}
+html[data-theme=dark] mark{background:#854d0e}
+@media(max-width:1180px){.c-l{grid-column:span 4}.c-m{grid-column:span 8}.c-r{grid-column:1/-1;position:static;max-height:none;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}}
+@media(max-width:900px){.g6{grid-template-columns:1fr}.c-l,.c-m,.c-r{grid-column:1/-1;position:static;max-height:none}.c-m{order:1}.c-r{order:2;display:flex}.c-l{order:3}.stats.sm .st{grid-column:span 4}}
+@media(max-width:640px){.ti2{flex-wrap:wrap;gap:8px}.mtabs{order:3;width:100%}.mt1{flex:1}.ahl{margin-left:auto}.ti2 .sp1{display:none}.stats.sm{display:none}.ph{grid-template-columns:56px 1fr;padding:16px}.ph .av.xl{width:56px;height:56px;font-size:20px}.ph h1{font-size:20px}.ph .fs{grid-column:1/-1;text-align:left}}
+.post footer{margin:0!important;width:auto!important;max-width:none!important;padding:0!important;text-align:left!important;justify-content:flex-start}
+.c-l .tw{max-height:none;overflow:visible}
+.ph .hd,.ph .hd *{color:rgba(255,255,255,.85)!important}
+/* ===== v6b card consistency ===== */
+.post.c6{padding:16px;gap:0;border:1px solid var(--bd)!important;border-top:3px solid color-mix(in srgb,var(--ac) 55%,transparent)!important;border-radius:10px;background:var(--card)}
+.post.c6 header{display:grid;grid-template-columns:32px minmax(0,1fr) auto;gap:12px;align-items:center;height:40px}
+.post.c6 .who{min-width:0}
+.post.c6 .nm{font-weight:600;font-size:14px;line-height:20px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.post.c6 .nm a{color:var(--tx);text-decoration:none}.post.c6 .nm a:hover{color:var(--actx)}
+.post.c6 .hd{font-size:12px;line-height:18px;color:var(--mu)}
+.post.c6 .tm{text-align:right;font-size:12px;line-height:18px;color:var(--tx2);font-variant-numeric:tabular-nums;white-space:nowrap}
+.post.c6 .tm small{display:block;color:var(--mu);font-size:12px}
+.post.c6 .pt{margin:12px 0;font-size:14px;line-height:1.5;color:var(--tx)}
+.post.c6 footer{display:flex!important;align-items:center;justify-content:space-between!important;height:40px;border-top:1px solid var(--bd2);gap:8px}
+.post.c6 .act{display:flex;gap:8px;align-items:center}
+.post.c6 .op{font-size:12px;color:var(--mu);text-decoration:none;height:28px;display:inline-flex;align-items:center;padding:0 8px;border:1px solid var(--bd);border-radius:6px}
+.post.c6 .op:hover{color:var(--actx);border-color:var(--ac)}
+.post.c6 .met{display:grid;grid-template-columns:repeat(4,64px);gap:0}
+.post.c6 .mc{text-align:right;font-variant-numeric:tabular-nums;color:var(--mu);font-size:12px}
+.post.c6 .mc i{font-style:normal;margin-right:4px;opacity:.75}
+.feed1{gap:12px}
+.ph{grid-template-columns:80px minmax(0,1fr) auto;padding:24px}
+.ph .pi{min-width:0}.ph .bio.dim{opacity:.7}
+.ph .xb{margin:0;align-self:start}
+.pstat{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:12px}
+.psb{background:var(--card);border:1px solid var(--bd);border-radius:10px;padding:12px 16px;border-top:3px solid var(--dcx,#a21caf)}
+.psb:nth-child(1){--dcx:#7c3aed}.psb:nth-child(2){--dcx:#db2777}.psb:nth-child(3){--dcx:#f97316}.psb:nth-child(4){--dcx:#14b8a6}
+.psb .sl{font-size:12px;color:var(--mu)}.psb .sv{font-size:20px;font-weight:600;line-height:1.4;font-variant-numeric:tabular-nums;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.psb .ss{font-size:12px;color:var(--mu)}
+.tgl{display:inline-flex;align-items:center;gap:6px;font-size:13px;color:var(--tx2);white-space:nowrap;cursor:pointer}
+.empty{padding:24px;color:var(--mu)}
+@media(max-width:640px){.pstat{grid-template-columns:repeat(2,minmax(0,1fr))}.ph{grid-template-columns:56px minmax(0,1fr)}.ph .xb{grid-column:1/-1;justify-self:start}.ptool{flex-wrap:wrap;gap:8px}.ptool input{flex-basis:100%}
+.post.c6 .met{grid-template-columns:repeat(4,auto);gap:10px}.post.c6 footer{height:auto;min-height:40px;flex-wrap:wrap;padding:6px 0!important}.post.c6 .rp,.post.c6 .mc:nth-child(3){display:none}}
+.post.c6 .met{grid-template-columns:64px 64px 72px 84px}@media(max-width:640px){.post.c6 .met{grid-template-columns:repeat(4,auto);gap:10px}}
+</style></head><body><header class="top"><div class="ti2"><div class="lg"><i>⚡</i>XHOT<span>X 热点雷达</span></div><span class="sp1"></span><a class="ahl" href="https://aihot.news" target="_blank">来自 AIHOT ↗</a><div class="tg"><button data-set-theme="light" title="浅色">☀</button><button data-set-theme="dark" title="深色">☾</button><button data-set-theme="auto">自动</button></div></div></header>
+<div class="wrap"><div class="pwrap"><a class="back" href="../index.html">← 返回首页</a>
+<section class="ph"><span class="av xl" style="--h:24">雪</span><div class="pi"><h1>雪踏乌云</h1><div class="hd">@Pluvio9yte</div><p class="bio">📌 聚焦：AI &amp; Vibe coding &amp; Prompt &amp; Agent 
+🌏 在做：创业 | Web出海 | Web3
+🌊 持续分享AI编程、AI工具、出海干货和创业经验
+✉️ 合作私信</p></div><a class="xb" href="https://x.com/Pluvio9yte" target="_blank">在 X 查看 ↗</a></section>
+<div class="pstat"><div class="psb"><div class="sl">粉丝</div><div class="sv">4.9万</div><div class="ss">49,441</div></div><div class="psb"><div class="sl">较上次</div><div class="sv">—</div><div class="ss">粉丝变化</div></div><div class="psb"><div class="sl">已存推文</div><div class="sv">22</div><div class="ss">最多 200 条</div></div><div class="psb"><div class="sl">最新发帖</div><div class="sv">10-13 11:46</div><div class="ss">4 小时前</div></div></div>
+<div class="ptool"><input id="q" type="search" placeholder="搜索 雪踏乌云 的推文关键词…" autocomplete="off"><span class="cnt" id="cnt">22 条</span></div>
+<div class="bh"><h2>推文时间线</h2><span class="hint">最新在前 · 默认只显示中文/英文</span></div><div class="feed1"><article class="post c6" data-s="又叒杀死比赛了，这应该是迄今为止市面上最系统、效率最高的 ai 剪辑工具 skill，搭配opus5.5简直是剪辑效率神器。
+
+1、80+ broll 模板，涵盖转场切换、人物变换、多种模板样式，让你的视频彻底告别 ppt 感  
+
+2、完整的工作台，每一段分镜的特效、样式都能高度自定义，支持 ai https://t.co/yqu8jfeouj https://t.co/8vfiivdzqb"><header><span class="av" style="--h:24">雪</span><div class="who"><div class="nm"><span>雪踏乌云</span></div><div class="hd">@Pluvio9yte</div></div><time class="tm" title="10-13 11:46 北京时间">10-13 11:46<small>4 小时前</small></time></header><div class="pt">又叒杀死比赛了，这应该是迄今为止市面上最系统、效率最高的 AI 剪辑工具 skill，搭配Opus5.5简直是剪辑效率神器。
+
+1、80+ broll 模板，涵盖转场切换、人物变换、多种模板样式，让你的视频彻底告别 PPT 感  
+
+2、完整的工作台，每一段分镜的特效、样式都能高度自定义，支持 AI https://t.co/yQU8JfEoUJ https://t.co/8VFiIvDZqB</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="又叒杀死比赛了，这应该是迄今为止市面上最系统、效率最高的 AI 剪辑工具 skill，搭配Opus5.5简直是剪辑效率神器。
+
+1、80+ broll 模板，涵盖转场切换、人物变换、多种模板样式，让你的视频彻底告别 PPT 感  
+
+2、完整的工作台，每一段分镜的特效、样式都能高度自定义，支持 AI https://t.co/yQU8JfEoUJ https://t.co/8VFiIvDZqB
+— 雪踏乌云 (@Pluvio9yte)
+https://x.com/Pluvio9yte/status/2109853323235111211">复制原文</button><a class="op" href="https://x.com/Pluvio9yte/status/2109853323235111211" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>40</span><span class="mc" title="转发"><i>⇄</i>7</span><span class="mc" title="评论"><i>💬</i>3</span><span class="mc" title="浏览"><i>👁</i>5,771</span></div></footer></article><article class="post c6" data-s="用户体验和生态方面x直接杀死比赛，以后x的30刀的 premium订阅性价比将会空前高，一个订阅能够使用四个服务。
+
+x 刚把订阅全部合并了，新的统一订阅叫 the x subscription
+
+具体变化是这些：
+free 免费：每天能用 grok，cursor 里的 agent 只有少量试用额度，x 是普通账号。
+
+plus 每月 $8：包括 grok https://t.co/ssbuvh8lhx"><header><span class="av" style="--h:24">雪</span><div class="who"><div class="nm"><span>雪踏乌云</span></div><div class="hd">@Pluvio9yte</div></div><time class="tm" title="10-13 09:43 北京时间">10-13 09:43<small>6 小时前</small></time></header><div class="pt">用户体验和生态方面X直接杀死比赛，以后X的30刀的 Premium订阅性价比将会空前高，一个订阅能够使用四个服务。
+
+X 刚把订阅全部合并了，新的统一订阅叫 The X Subscription
+
+具体变化是这些：
+Free 免费：每天能用 Grok，Cursor 里的 agent 只有少量试用额度，X 是普通账号。
+
+Plus 每月 $8：包括 Grok https://t.co/SsbUvH8lhX</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="用户体验和生态方面X直接杀死比赛，以后X的30刀的 Premium订阅性价比将会空前高，一个订阅能够使用四个服务。
+
+X 刚把订阅全部合并了，新的统一订阅叫 The X Subscription
+
+具体变化是这些：
+Free 免费：每天能用 Grok，Cursor 里的 agent 只有少量试用额度，X 是普通账号。
+
+Plus 每月 $8：包括 Grok https://t.co/SsbUvH8lhX
+— 雪踏乌云 (@Pluvio9yte)
+https://x.com/Pluvio9yte/status/2109822269564567740">复制原文</button><a class="op" href="https://x.com/Pluvio9yte/status/2109822269564567740" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>12</span><span class="mc" title="转发"><i>⇄</i>0</span><span class="mc" title="评论"><i>💬</i>24</span><span class="mc" title="浏览"><i>👁</i>7,865</span></div></footer></article><article class="post c6" data-s="我觉得每一个想用ai去做剪辑的人，都值得去学习大师的ai小灶 @dashiaixz 的工作流程
+
+我也遇到了同样直接丢素材或者口播稿，剪辑出来的视频没办法看的问题，但是我对审美和剪辑的功底太差了，于是我想出来了一个另辟蹊径的方法，蒸馏 https://t.co/qyp72xmqg8"><header><span class="av" style="--h:24">雪</span><div class="who"><div class="nm"><span>雪踏乌云</span></div><div class="hd">@Pluvio9yte</div></div><time class="tm" title="10-13 08:30 北京时间">10-13 08:30<small>7 小时前</small></time></header><div class="pt">我觉得每一个想用AI去做剪辑的人，都值得去学习大师的ai小灶 @dashiAIxz 的工作流程
+
+我也遇到了同样直接丢素材或者口播稿，剪辑出来的视频没办法看的问题，但是我对审美和剪辑的功底太差了，于是我想出来了一个另辟蹊径的方法，蒸馏 https://t.co/qyP72xmQG8</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="我觉得每一个想用AI去做剪辑的人，都值得去学习大师的ai小灶 @dashiAIxz 的工作流程
+
+我也遇到了同样直接丢素材或者口播稿，剪辑出来的视频没办法看的问题，但是我对审美和剪辑的功底太差了，于是我想出来了一个另辟蹊径的方法，蒸馏 https://t.co/qyP72xmQG8
+— 雪踏乌云 (@Pluvio9yte)
+https://x.com/Pluvio9yte/status/2109803806162907278">复制原文</button><a class="op" href="https://x.com/Pluvio9yte/status/2109803806162907278" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>50</span><span class="mc" title="转发"><i>⇄</i>4</span><span class="mc" title="评论"><i>💬</i>14</span><span class="mc" title="浏览"><i>👁</i>8,179</span></div></footer></article><article class="post c6" data-s="grok bot或muse爆火的很大原因是易用
+
+openclaw和hermes自定义强，但是终究不适合大多数人。
+
+大部分人都会想比如我花点钱就能用到cursor+grokbot甚至还有免费的muse，为啥要去用时不时崩溃的openclaw找不痛快。
+
+花点钱，就能享受老马团队的顶级服务😂"><header><span class="av" style="--h:24">雪</span><div class="who"><div class="nm"><span>雪踏乌云</span></div><div class="hd">@Pluvio9yte</div></div><time class="tm" title="10-13 01:51 北京时间">10-13 01:51<small>14 小时前</small></time></header><div class="pt">grok bot或muse爆火的很大原因是易用
+
+openclaw和hermes自定义强，但是终究不适合大多数人。
+
+大部分人都会想比如我花点钱就能用到cursor+grokbot甚至还有免费的muse，为啥要去用时不时崩溃的openclaw找不痛快。
+
+花点钱，就能享受老马团队的顶级服务😂</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="grok bot或muse爆火的很大原因是易用
+
+openclaw和hermes自定义强，但是终究不适合大多数人。
+
+大部分人都会想比如我花点钱就能用到cursor+grokbot甚至还有免费的muse，为啥要去用时不时崩溃的openclaw找不痛快。
+
+花点钱，就能享受老马团队的顶级服务😂
+— 雪踏乌云 (@Pluvio9yte)
+https://x.com/Pluvio9yte/status/2109703634275672175">复制原文</button><a class="op" href="https://x.com/Pluvio9yte/status/2109703634275672175" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>7</span><span class="mc" title="转发"><i>⇄</i>0</span><span class="mc" title="评论"><i>💬</i>12</span><span class="mc" title="浏览"><i>👁</i>3,595</span></div></footer></article><article class="post c6" data-s="https://t.co/znefqgn6vk"><header><span class="av" style="--h:24">雪</span><div class="who"><div class="nm"><span>雪踏乌云</span></div><div class="hd">@Pluvio9yte</div></div><time class="tm" title="10-10 21:37 北京时间">10-10 21:37<small>2 天前</small></time></header><div class="pt">https://t.co/zNefqGN6Vk</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="https://t.co/zNefqGN6Vk
+— 雪踏乌云 (@Pluvio9yte)
+https://x.com/Pluvio9yte/status/2108914756354797668">复制原文</button><a class="op" href="https://x.com/Pluvio9yte/status/2108914756354797668" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>64</span><span class="mc" title="转发"><i>⇄</i>8</span><span class="mc" title="评论"><i>💬</i>10</span><span class="mc" title="浏览"><i>👁</i>2.1万</span></div></footer></article><article class="post c6" data-s="兄弟们，窗口期能行动的，一定要抓紧行动起来呀，别再问怎么解决支付了，这教程味道嘴边了。
+
+就拿 stripe 来说，之前还能通过 stripe 开通微信、支付宝收款，现在又变严了。我有个新站要开通微信收款，跟客服掰扯了很久，客服也没给我通过。在这之前，去年还是秒开的，现在就要信誉积累了。 https://t.co/osfepwetsy"><header><span class="av" style="--h:24">雪</span><div class="who"><div class="nm"><span>雪踏乌云</span></div><div class="hd">@Pluvio9yte</div></div><time class="tm" title="10-10 18:42 北京时间">10-10 18:42<small>2 天前</small></time></header><div class="pt">兄弟们，窗口期能行动的，一定要抓紧行动起来呀，别再问怎么解决支付了，这教程味道嘴边了。
+
+就拿 Stripe 来说，之前还能通过 Stripe 开通微信、支付宝收款，现在又变严了。我有个新站要开通微信收款，跟客服掰扯了很久，客服也没给我通过。在这之前，去年还是秒开的，现在就要信誉积累了。 https://t.co/OsfepWetSy</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="兄弟们，窗口期能行动的，一定要抓紧行动起来呀，别再问怎么解决支付了，这教程味道嘴边了。
+
+就拿 Stripe 来说，之前还能通过 Stripe 开通微信、支付宝收款，现在又变严了。我有个新站要开通微信收款，跟客服掰扯了很久，客服也没给我通过。在这之前，去年还是秒开的，现在就要信誉积累了。 https://t.co/OsfepWetSy
+— 雪踏乌云 (@Pluvio9yte)
+https://x.com/Pluvio9yte/status/2108870748416991678">复制原文</button><a class="op" href="https://x.com/Pluvio9yte/status/2108870748416991678" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>106</span><span class="mc" title="转发"><i>⇄</i>14</span><span class="mc" title="评论"><i>💬</i>7</span><span class="mc" title="浏览"><i>👁</i>1.4万</span></div></footer></article><article class="post c6" data-s="https://t.co/h5nglzjty8"><header><span class="av" style="--h:24">雪</span><div class="who"><div class="nm"><span>雪踏乌云</span></div><div class="hd">@Pluvio9yte</div></div><time class="tm" title="10-10 11:50 北京时间">10-10 11:50<small>3 天前</small></time></header><div class="pt">https://t.co/h5nGLzJTY8</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="https://t.co/h5nGLzJTY8
+— 雪踏乌云 (@Pluvio9yte)
+https://x.com/Pluvio9yte/status/2108767026210841079">复制原文</button><a class="op" href="https://x.com/Pluvio9yte/status/2108767026210841079" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>0</span><span class="mc" title="转发"><i>⇄</i>0</span><span class="mc" title="评论"><i>💬</i>0</span><span class="mc" title="浏览"><i>👁</i>1,123</span></div></footer></article><article class="post c6" data-s="原来claude cli也能够丝滑操控chrome浏览器，而且比codex更加灵性(速度稍慢但是更聪明)
+
+用法为
+
+1.安装claude浏览器官方插件，链接有点长放在评论区了
+
+2.打开claude cli，输入 /chrome，如果是enabled就代表连接成功了，后面只需要通过自由语言让claude控制浏览器即可。 https://t.co/gigpbpdcev"><header><span class="av" style="--h:24">雪</span><div class="who"><div class="nm"><span>雪踏乌云</span></div><div class="hd">@Pluvio9yte</div></div><time class="tm" title="10-10 11:50 北京时间">10-10 11:50<small>3 天前</small></time></header><div class="pt">原来Claude CLI也能够丝滑操控Chrome浏览器，而且比Codex更加灵性(速度稍慢但是更聪明)
+
+用法为
+
+1.安装Claude浏览器官方插件，链接有点长放在评论区了
+
+2.打开Claude CLI，输入 /chrome，如果是enabled就代表连接成功了，后面只需要通过自由语言让Claude控制浏览器即可。 https://t.co/GIGPBpDCev</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="原来Claude CLI也能够丝滑操控Chrome浏览器，而且比Codex更加灵性(速度稍慢但是更聪明)
+
+用法为
+
+1.安装Claude浏览器官方插件，链接有点长放在评论区了
+
+2.打开Claude CLI，输入 /chrome，如果是enabled就代表连接成功了，后面只需要通过自由语言让Claude控制浏览器即可。 https://t.co/GIGPBpDCev
+— 雪踏乌云 (@Pluvio9yte)
+https://x.com/Pluvio9yte/status/2108767013720170849">复制原文</button><a class="op" href="https://x.com/Pluvio9yte/status/2108767013720170849" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>18</span><span class="mc" title="转发"><i>⇄</i>2</span><span class="mc" title="评论"><i>💬</i>30</span><span class="mc" title="浏览"><i>👁</i>8,203</span></div></footer></article><article class="post c6" data-s="才发现自己都保存了一千多条书签了，不过一次也没有回看过...真是一直在保存从未在学习啊
+
+所以我给自己做了一个本地书签保存工具，名字叫 x bookmarks archive skill，把自己账号里目前能看到的书签保存到电脑。
+
+下载到本地后直接交给ai进行分类，使用teamily ai或者任意agent都可以进行重新学习。 https://t.co/hxqrelf12x"><header><span class="av" style="--h:24">雪</span><div class="who"><div class="nm"><span>雪踏乌云</span></div><div class="hd">@Pluvio9yte</div></div><time class="tm" title="10-10 00:57 北京时间">10-10 00:57<small>3 天前</small></time></header><div class="pt">才发现自己都保存了一千多条书签了，不过一次也没有回看过...真是一直在保存从未在学习啊
+
+所以我给自己做了一个本地书签保存工具，名字叫 X Bookmarks Archive Skill，把自己账号里目前能看到的书签保存到电脑。
+
+下载到本地后直接交给AI进行分类，使用Teamily AI或者任意Agent都可以进行重新学习。 https://t.co/HXqreLF12X</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="才发现自己都保存了一千多条书签了，不过一次也没有回看过...真是一直在保存从未在学习啊
+
+所以我给自己做了一个本地书签保存工具，名字叫 X Bookmarks Archive Skill，把自己账号里目前能看到的书签保存到电脑。
+
+下载到本地后直接交给AI进行分类，使用Teamily AI或者任意Agent都可以进行重新学习。 https://t.co/HXqreLF12X
+— 雪踏乌云 (@Pluvio9yte)
+https://x.com/Pluvio9yte/status/2108602731858645501">复制原文</button><a class="op" href="https://x.com/Pluvio9yte/status/2108602731858645501" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>33</span><span class="mc" title="转发"><i>⇄</i>5</span><span class="mc" title="评论"><i>💬</i>11</span><span class="mc" title="浏览"><i>👁</i>7,028</span></div></footer></article><article class="post c6" data-s="牛逼，ai操控iphone的开源项目来了
+
+之前一直觉得codex操控mac的iphone镜像太慢，这下问题直接被这个开源项目解决了
+
+开源地址：https://t.co/4h7snfmx2b https://t.co/fo9qo1pks3 https://t.co/ylvpvksqal"><header><span class="av" style="--h:24">雪</span><div class="who"><div class="nm"><span>雪踏乌云</span></div><div class="hd">@Pluvio9yte</div></div><time class="tm" title="10-10 00:46 北京时间">10-10 00:46<small>3 天前</small></time></header><div class="pt">牛逼，AI操控IPhone的开源项目来了
+
+之前一直觉得Codex操控Mac的IPhone镜像太慢，这下问题直接被这个开源项目解决了
+
+开源地址：https://t.co/4h7snFmX2B https://t.co/fO9qO1pkS3 https://t.co/YLVPVkSQAL</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="牛逼，AI操控IPhone的开源项目来了
+
+之前一直觉得Codex操控Mac的IPhone镜像太慢，这下问题直接被这个开源项目解决了
+
+开源地址：https://t.co/4h7snFmX2B https://t.co/fO9qO1pkS3 https://t.co/YLVPVkSQAL
+— 雪踏乌云 (@Pluvio9yte)
+https://x.com/Pluvio9yte/status/2108600084640518223">复制原文</button><a class="op" href="https://x.com/Pluvio9yte/status/2108600084640518223" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>1,209</span><span class="mc" title="转发"><i>⇄</i>186</span><span class="mc" title="评论"><i>💬</i>41</span><span class="mc" title="浏览"><i>👁</i>14.5万</span></div></footer></article><article class="post c6" data-s="ai做ppt还是得用ppt master这个开源项目啊，目前已经五万多star了
+
+测了很多个开源项目，还是这个效果最好。无论是给codex claude还是workbuddy，都很好用
+
+开源地址 https://t.co/thr7ivhyw2 https://t.co/gz5omanbvp"><header><span class="av" style="--h:24">雪</span><div class="who"><div class="nm"><span>雪踏乌云</span></div><div class="hd">@Pluvio9yte</div></div><time class="tm" title="10-09 17:35 北京时间">10-09 17:35<small>3 天前</small></time></header><div class="pt">AI做PPT还是得用ppt master这个开源项目啊，目前已经五万多star了
+
+测了很多个开源项目，还是这个效果最好。无论是给Codex Claude还是Workbuddy，都很好用
+
+开源地址 https://t.co/ThR7iVhyW2 https://t.co/gZ5oMANbVP</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="AI做PPT还是得用ppt master这个开源项目啊，目前已经五万多star了
+
+测了很多个开源项目，还是这个效果最好。无论是给Codex Claude还是Workbuddy，都很好用
+
+开源地址 https://t.co/ThR7iVhyW2 https://t.co/gZ5oMANbVP
+— 雪踏乌云 (@Pluvio9yte)
+https://x.com/Pluvio9yte/status/2108491461847359571">复制原文</button><a class="op" href="https://x.com/Pluvio9yte/status/2108491461847359571" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>326</span><span class="mc" title="转发"><i>⇄</i>58</span><span class="mc" title="评论"><i>💬</i>13</span><span class="mc" title="浏览"><i>👁</i>3.0万</span></div></footer></article><article class="post c6" data-s="grok bot接入微信看起来很丝滑啊 https://t.co/1ge1c5flo7"><header><span class="av" style="--h:24">雪</span><div class="who"><div class="nm"><span>雪踏乌云</span></div><div class="hd">@Pluvio9yte</div></div><time class="tm" title="10-09 12:09 北京时间">10-09 12:09<small>4 天前</small></time></header><div class="pt">Grok Bot接入微信看起来很丝滑啊 https://t.co/1gE1c5FLo7</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="Grok Bot接入微信看起来很丝滑啊 https://t.co/1gE1c5FLo7
+— 雪踏乌云 (@Pluvio9yte)
+https://x.com/Pluvio9yte/status/2108409368001790240">复制原文</button><a class="op" href="https://x.com/Pluvio9yte/status/2108409368001790240" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>17</span><span class="mc" title="转发"><i>⇄</i>6</span><span class="mc" title="评论"><i>💬</i>4</span><span class="mc" title="浏览"><i>👁</i>9,429</span></div></footer></article><article class="post c6" data-s="https://t.co/furxwslp20"><header><span class="av" style="--h:24">雪</span><div class="who"><div class="nm"><span>雪踏乌云</span></div><div class="hd">@Pluvio9yte</div></div><time class="tm" title="10-09 08:01 北京时间">10-09 08:01<small>4 天前</small></time></header><div class="pt">https://t.co/FurxwSLp20</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="https://t.co/FurxwSLp20
+— 雪踏乌云 (@Pluvio9yte)
+https://x.com/Pluvio9yte/status/2108346962986909740">复制原文</button><a class="op" href="https://x.com/Pluvio9yte/status/2108346962986909740" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>337</span><span class="mc" title="转发"><i>⇄</i>55</span><span class="mc" title="评论"><i>💬</i>17</span><span class="mc" title="浏览"><i>👁</i>5.8万</span></div></footer></article><article class="post c6" data-s="牛二壁纸，我把codex的gpt-6-astra反代出来给哥飞agent用了，大大减少了积分消耗用量。
+
+原本要不就只能用哥飞agent里面的模型，要不就用自己的api比如deepseek，但是deepseek说实话有点傻。 https://t.co/avmcanyysj https://t.co/rh7c1qi9wk"><header><span class="av" style="--h:24">雪</span><div class="who"><div class="nm"><span>雪踏乌云</span></div><div class="hd">@Pluvio9yte</div></div><time class="tm" title="10-08 23:47 北京时间">10-08 23:47<small>4 天前</small></time></header><div class="pt">牛二壁纸，我把Codex的GPT-6-Astra反代出来给哥飞Agent用了，大大减少了积分消耗用量。
+
+原本要不就只能用哥飞agent里面的模型，要不就用自己的api比如DeepSeek，但是DeepSeek说实话有点傻。 https://t.co/avmCAnYYSj https://t.co/RH7c1QI9wk</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="牛二壁纸，我把Codex的GPT-6-Astra反代出来给哥飞Agent用了，大大减少了积分消耗用量。
+
+原本要不就只能用哥飞agent里面的模型，要不就用自己的api比如DeepSeek，但是DeepSeek说实话有点傻。 https://t.co/avmCAnYYSj https://t.co/RH7c1QI9wk
+— 雪踏乌云 (@Pluvio9yte)
+https://x.com/Pluvio9yte/status/2108222774976315439">复制原文</button><a class="op" href="https://x.com/Pluvio9yte/status/2108222774976315439" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>31</span><span class="mc" title="转发"><i>⇄</i>3</span><span class="mc" title="评论"><i>💬</i>6</span><span class="mc" title="浏览"><i>👁</i>7,353</span></div></footer></article><article class="post c6" data-s="兄弟们，这么好的文章不火，真的是太可惜了，不看真的错过了几个亿，比ai写的网络泔水强多了
+
+无论你是想用 ai 开发，还是做开源项目蹭热点，或者是想知道如何通过开源项目变现，我保证你绝对绝对能够从这篇文章里学到东西。
+
+谁说开源项目无法变现？目前我直接告诉大家两种变现的途径：
+
+1. https://t.co/qycw0ju9ap"><header><span class="av" style="--h:24">雪</span><div class="who"><div class="nm"><span>雪踏乌云</span></div><div class="hd">@Pluvio9yte</div></div><time class="tm" title="10-08 20:19 北京时间">10-08 20:19<small>4 天前</small></time></header><div class="pt">兄弟们，这么好的文章不火，真的是太可惜了，不看真的错过了几个亿，比AI写的网络泔水强多了
+
+无论你是想用 AI 开发，还是做开源项目蹭热点，或者是想知道如何通过开源项目变现，我保证你绝对绝对能够从这篇文章里学到东西。
+
+谁说开源项目无法变现？目前我直接告诉大家两种变现的途径：
+
+1. https://t.co/QyCW0Ju9AP</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="兄弟们，这么好的文章不火，真的是太可惜了，不看真的错过了几个亿，比AI写的网络泔水强多了
+
+无论你是想用 AI 开发，还是做开源项目蹭热点，或者是想知道如何通过开源项目变现，我保证你绝对绝对能够从这篇文章里学到东西。
+
+谁说开源项目无法变现？目前我直接告诉大家两种变现的途径：
+
+1. https://t.co/QyCW0Ju9AP
+— 雪踏乌云 (@Pluvio9yte)
+https://x.com/Pluvio9yte/status/2108170499734093911">复制原文</button><a class="op" href="https://x.com/Pluvio9yte/status/2108170499734093911" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>18</span><span class="mc" title="转发"><i>⇄</i>3</span><span class="mc" title="评论"><i>💬</i>3</span><span class="mc" title="浏览"><i>👁</i>3,777</span></div></footer></article><article class="post c6" data-s="想出站建站赚美金的兄弟们真是有福了，去年哪能想到现在这么容易
+
+现在claude/codex+哥飞社群配套工具+aisa直接把门槛大大打下来了
+
+去年这个时候还要学一堆，现在只需要自己有个基本的判断力再用哥飞agent就能上站了。
+
+直接给大家盘点我目前用的基础设施
+
+1.哥飞社群
+https://t.co/egwwloixuc https://t.co/awiwbr4skh"><header><span class="av" style="--h:24">雪</span><div class="who"><div class="nm"><span>雪踏乌云</span></div><div class="hd">@Pluvio9yte</div></div><time class="tm" title="10-08 20:11 北京时间">10-08 20:11<small>4 天前</small></time></header><div class="pt">想出站建站赚美金的兄弟们真是有福了，去年哪能想到现在这么容易
+
+现在Claude/Codex+哥飞社群配套工具+aisa直接把门槛大大打下来了
+
+去年这个时候还要学一堆，现在只需要自己有个基本的判断力再用哥飞Agent就能上站了。
+
+直接给大家盘点我目前用的基础设施
+
+1.哥飞社群
+https://t.co/egWwlOixuc https://t.co/AWIwbR4skH</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="想出站建站赚美金的兄弟们真是有福了，去年哪能想到现在这么容易
+
+现在Claude/Codex+哥飞社群配套工具+aisa直接把门槛大大打下来了
+
+去年这个时候还要学一堆，现在只需要自己有个基本的判断力再用哥飞Agent就能上站了。
+
+直接给大家盘点我目前用的基础设施
+
+1.哥飞社群
+https://t.co/egWwlOixuc https://t.co/AWIwbR4skH
+— 雪踏乌云 (@Pluvio9yte)
+https://x.com/Pluvio9yte/status/2108168429660156180">复制原文</button><a class="op" href="https://x.com/Pluvio9yte/status/2108168429660156180" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>188</span><span class="mc" title="转发"><i>⇄</i>24</span><span class="mc" title="评论"><i>💬</i>17</span><span class="mc" title="浏览"><i>👁</i>2.5万</span></div></footer></article><article class="post c6" data-s="偷偷运营了一个月代充网站了，营业额近3w，订单103单，几乎纯私域转化。
+
+招募代理的同时，直接告诉大家小白都能上手的转化焚决。
+
+渠道来源：朋友圈、各大社媒平台、高校圈子
+
+高校圈子真的是被大大低估了。绝对是一个宝藏。很多高校都有所谓的互助群，或者是 qq 圈子(一个类似于论坛的qq应用)。 https://t.co/izjwhf4qus https://t.co/1p9pz2p4wk"><header><span class="av" style="--h:24">雪</span><div class="who"><div class="nm"><span>雪踏乌云</span></div><div class="hd">@Pluvio9yte</div></div><time class="tm" title="10-08 20:09 北京时间">10-08 20:09<small>4 天前</small></time></header><div class="pt">偷偷运营了一个月代充网站了，营业额近3w，订单103单，几乎纯私域转化。
+
+招募代理的同时，直接告诉大家小白都能上手的转化焚决。
+
+渠道来源：朋友圈、各大社媒平台、高校圈子
+
+高校圈子真的是被大大低估了。绝对是一个宝藏。很多高校都有所谓的互助群，或者是 QQ 圈子(一个类似于论坛的QQ应用)。 https://t.co/IzjwHf4qUs https://t.co/1p9pZ2P4wK</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="偷偷运营了一个月代充网站了，营业额近3w，订单103单，几乎纯私域转化。
+
+招募代理的同时，直接告诉大家小白都能上手的转化焚决。
+
+渠道来源：朋友圈、各大社媒平台、高校圈子
+
+高校圈子真的是被大大低估了。绝对是一个宝藏。很多高校都有所谓的互助群，或者是 QQ 圈子(一个类似于论坛的QQ应用)。 https://t.co/IzjwHf4qUs https://t.co/1p9pZ2P4wK
+— 雪踏乌云 (@Pluvio9yte)
+https://x.com/Pluvio9yte/status/2108167814247059642">复制原文</button><a class="op" href="https://x.com/Pluvio9yte/status/2108167814247059642" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>156</span><span class="mc" title="转发"><i>⇄</i>15</span><span class="mc" title="评论"><i>💬</i>37</span><span class="mc" title="浏览"><i>👁</i>2.6万</span></div></footer></article><article class="post c6" data-s="@riverjke  为什么一言不发选择了屏蔽我呢？因为我的话让你无法反驳，又恰好显露了你的无知，所以你只能屏蔽我对吗"><header><span class="av" style="--h:24">雪</span><div class="who"><div class="nm"><span>雪踏乌云</span></div><div class="hd">@Pluvio9yte</div></div><time class="tm" title="10-08 01:41 北京时间">10-08 01:41<small>5 天前</small></time></header><div class="pt">@riverjke  为什么一言不发选择了屏蔽我呢？因为我的话让你无法反驳，又恰好显露了你的无知，所以你只能屏蔽我对吗</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="@riverjke  为什么一言不发选择了屏蔽我呢？因为我的话让你无法反驳，又恰好显露了你的无知，所以你只能屏蔽我对吗
+— 雪踏乌云 (@Pluvio9yte)
+https://x.com/Pluvio9yte/status/2107889153090404785">复制原文</button><a class="op" href="https://x.com/Pluvio9yte/status/2107889153090404785" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>0</span><span class="mc" title="转发"><i>⇄</i>0</span><span class="mc" title="评论"><i>💬</i>0</span><span class="mc" title="浏览"><i>👁</i>425</span></div></footer></article><article class="post c6" data-s="怀疑评论区喷子根本看不懂帖子，本质上还是调dot只是添加了入口
+
+说什么会薅秃的，建议好好读完一遍再过来叫。
+
+openai都成啥样了，降智，暗砍额度，送重置装好人，还一堆人洗呢，o➗脑残卫兵别进我的评论区🤣"><header><span class="av" style="--h:24">雪</span><div class="who"><div class="nm"><span>雪踏乌云</span></div><div class="hd">@Pluvio9yte</div></div><time class="tm" title="10-08 00:04 北京时间">10-08 00:04<small>5 天前</small></time></header><div class="pt">怀疑评论区喷子根本看不懂帖子，本质上还是调dot只是添加了入口
+
+说什么会薅秃的，建议好好读完一遍再过来叫。
+
+OpenAI都成啥样了，降智，暗砍额度，送重置装好人，还一堆人洗呢，O➗脑残卫兵别进我的评论区🤣</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="怀疑评论区喷子根本看不懂帖子，本质上还是调dot只是添加了入口
+
+说什么会薅秃的，建议好好读完一遍再过来叫。
+
+OpenAI都成啥样了，降智，暗砍额度，送重置装好人，还一堆人洗呢，O➗脑残卫兵别进我的评论区🤣
+— 雪踏乌云 (@Pluvio9yte)
+https://x.com/Pluvio9yte/status/2107864583818154373">复制原文</button><a class="op" href="https://x.com/Pluvio9yte/status/2107864583818154373" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>15</span><span class="mc" title="转发"><i>⇄</i>0</span><span class="mc" title="评论"><i>💬</i>0</span><span class="mc" title="浏览"><i>👁</i>5,507</span></div></footer></article><article class="post c6" data-s="最近一个月的复盘贴，也发点思考大干货
+
+推特几乎没涨粉，因为除了一开始的打通codex和chatgpt pro的教程之外没有发什么干货。剩下的时间我一直在做抖音，迭代优化代充网站代码，并思考自媒体、流量和商业变现之间的关系。"><header><span class="av" style="--h:24">雪</span><div class="who"><div class="nm"><span>雪踏乌云</span></div><div class="hd">@Pluvio9yte</div></div><time class="tm" title="10-07 23:42 北京时间">10-07 23:42<small>5 天前</small></time></header><div class="pt">最近一个月的复盘贴，也发点思考大干货
+
+推特几乎没涨粉，因为除了一开始的打通Codex和ChatGPT Pro的教程之外没有发什么干货。剩下的时间我一直在做抖音，迭代优化代充网站代码，并思考自媒体、流量和商业变现之间的关系。</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="最近一个月的复盘贴，也发点思考大干货
+
+推特几乎没涨粉，因为除了一开始的打通Codex和ChatGPT Pro的教程之外没有发什么干货。剩下的时间我一直在做抖音，迭代优化代充网站代码，并思考自媒体、流量和商业变现之间的关系。
+— 雪踏乌云 (@Pluvio9yte)
+https://x.com/Pluvio9yte/status/2107859163087086062">复制原文</button><a class="op" href="https://x.com/Pluvio9yte/status/2107859163087086062" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>49</span><span class="mc" title="转发"><i>⇄</i>3</span><span class="mc" title="评论"><i>💬</i>30</span><span class="mc" title="浏览"><i>👁</i>9,677</span></div></footer></article><article class="post c6" data-s="大更新！
+再次给大家盘点一下马斯克的慷慨！x premium、cursor、grok bot、grok build全打通
+
+也就是说一个付费能直接享受四个工具。
+
+现在grok bot也支持opus midjourney 和suno等一系列各领域顶尖模型了。
+
+感觉bot也到斩杀线了，从今之后只有两种bot     grok bot和muse https://t.co/srynpnumny"><header><span class="av" style="--h:24">雪</span><div class="who"><div class="nm"><span>雪踏乌云</span></div><div class="hd">@Pluvio9yte</div></div><time class="tm" title="10-07 22:49 北京时间">10-07 22:49<small>5 天前</small></time></header><div class="pt">大更新！
+再次给大家盘点一下马斯克的慷慨！X premium、cursor、grok bot、grok build全打通
+
+也就是说一个付费能直接享受四个工具。
+
+现在grok bot也支持opus midjourney 和suno等一系列各领域顶尖模型了。
+
+感觉bot也到斩杀线了，从今之后只有两种bot     grok bot和muse https://t.co/SRYnPNumnY</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="大更新！
+再次给大家盘点一下马斯克的慷慨！X premium、cursor、grok bot、grok build全打通
+
+也就是说一个付费能直接享受四个工具。
+
+现在grok bot也支持opus midjourney 和suno等一系列各领域顶尖模型了。
+
+感觉bot也到斩杀线了，从今之后只有两种bot     grok bot和muse https://t.co/SRYnPNumnY
+— 雪踏乌云 (@Pluvio9yte)
+https://x.com/Pluvio9yte/status/2107845895102620074">复制原文</button><a class="op" href="https://x.com/Pluvio9yte/status/2107845895102620074" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>23</span><span class="mc" title="转发"><i>⇄</i>1</span><span class="mc" title="评论"><i>💬</i>5</span><span class="mc" title="浏览"><i>👁</i>1.4万</span></div></footer></article><article class="post c6" data-s="这里说的商业模式是一年能够直接变现 7 位数以上的。如果 7 位数以下，那说实话其实很容易了，哪怕几万粉丝的博主，做一个命中核心需求的产品去反复引流宣传，都能够比较容易地达到"><header><span class="av" style="--h:24">雪</span><div class="who"><div class="nm"><span>雪踏乌云</span></div><div class="hd">@Pluvio9yte</div></div><time class="tm" title="10-07 20:54 北京时间">10-07 20:54<small>5 天前</small></time></header><div class="pt">这里说的商业模式是一年能够直接变现 7 位数以上的。如果 7 位数以下，那说实话其实很容易了，哪怕几万粉丝的博主，做一个命中核心需求的产品去反复引流宣传，都能够比较容易地达到</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="这里说的商业模式是一年能够直接变现 7 位数以上的。如果 7 位数以下，那说实话其实很容易了，哪怕几万粉丝的博主，做一个命中核心需求的产品去反复引流宣传，都能够比较容易地达到
+— 雪踏乌云 (@Pluvio9yte)
+https://x.com/Pluvio9yte/status/2107816885828125006">复制原文</button><a class="op" href="https://x.com/Pluvio9yte/status/2107816885828125006" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>5</span><span class="mc" title="转发"><i>⇄</i>0</span><span class="mc" title="评论"><i>💬</i>1</span><span class="mc" title="浏览"><i>👁</i>1,538</span></div></footer></article></div></div>
+<footer>数据：X API get_users_posts · 生成于 2026-10-13 16:21 北京时间</footer></div><script>
+(function(){var d=document.documentElement,mq=matchMedia('(prefers-color-scheme: dark)');
+function sync(){document.querySelectorAll('[data-set-theme]').forEach(function(b){b.classList.toggle('on',b.dataset.setTheme===d.dataset.pref)})}
+function theme(){var p=d.dataset.pref;d.dataset.theme=p==='auto'?(mq.matches?'dark':'light'):p}
+document.querySelectorAll('[data-set-theme]').forEach(function(b){b.onclick=function(){d.dataset.pref=b.dataset.setTheme;try{localStorage.setItem('xhot-theme',b.dataset.setTheme)}catch(e){}theme();sync()}});
+(mq.addEventListener?mq.addEventListener('change',theme):mq.addListener(theme));
+document.querySelectorAll('[data-t]').forEach(function(b){b.onclick=function(){var t=b.dataset.t;
+document.querySelectorAll('[data-t]').forEach(function(x){x.classList.toggle('on',x.dataset.t===t)});
+document.querySelectorAll('.pane').forEach(function(x){x.classList.toggle('on',x.dataset.p===t)});
+document.querySelectorAll('.li-d').forEach(function(x){x.hidden=x.dataset.p!==t});scrollTo({top:0})}});sync();
+function fb(t){var a=document.createElement('textarea');a.value=t;a.setAttribute('readonly','');a.style.cssText='position:fixed;top:-1000px;opacity:0';document.body.appendChild(a);a.select();var ok=false;try{ok=document.execCommand('copy')}catch(e){}document.body.removeChild(a);return ok}
+document.addEventListener('click',function(ev){var b=ev.target.closest('.cp');if(b){var t=b.getAttribute('data-copy');
+function done(ok){b.textContent=ok?'已复制 ✓':'复制失败';b.classList.toggle('ok',ok);clearTimeout(b._t);b._t=setTimeout(function(){b.textContent='复制原文';b.classList.remove('ok')},1600)}
+if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(t).then(function(){done(true)},function(){done(fb(t))})}else done(fb(t));return}
+var x=ev.target.closest('.ex');if(x){var c=x.closest('.post').querySelector('.xp');var o=c.classList.toggle('open');x.textContent=o?'收起':'展开'}})})();
+</script><script>(function(){var q=document.getElementById('q'),c=document.getElementById('cnt'),a=document.getElementById('alll'),ps=[].slice.call(document.querySelectorAll('.feed1 .post'));
+function run(){var v=q.value.trim().toLowerCase(),all=a&&a.checked,k=0,n=0;ps.forEach(function(p){var lo=!p.dataset.ol||all;if(lo)n++;var ok=lo&&(!v||p.dataset.s.indexOf(v)>=0);p.hidden=!ok;if(ok)k++});c.textContent=v?('匹配 '+k+' / '+n+' 条'):(n+' 条')}
+q.addEventListener('input',run);if(a)a.addEventListener('change',run)})();</script></body></html>

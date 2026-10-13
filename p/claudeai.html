@@ -1,0 +1,459 @@
+<!doctype html><html lang="zh-CN" data-theme="light" data-pref="auto"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><title>Claude (@claudeai) · XHOT</title><script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('xhot-theme')}catch(e){}t=(t==='light'||t==='dark')?t:'auto';d.setAttribute('data-pref',t);d.setAttribute('data-theme',t==='auto'?(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'):t)})();
+</script><style>:root{--bg:#f7f7f8;--card:#fff;--bd:#e4e4e7;--bd2:#f0f0f2;--zebra:#fafafa;--hov:#f4f4f6;--tx:#18181b;--tx2:#3f3f46;--mu:#71717a;--mu2:#a1a1aa;--ac:#4f46e5;--acbg:#eef2ff;--actx:#4338ca;--up:#16a34a;--upbg:#f0fdf4;--dn:#dc2626;--dnbg:#fef2f2;--r:8px;--sh:0 1px 2px rgba(24,24,27,.04)}
+html[data-theme=dark]{--bg:#09090b;--card:#131316;--bd:#27272a;--bd2:#1c1c20;--zebra:#16161a;--hov:#1d1d22;--tx:#f4f4f5;--tx2:#d4d4d8;--mu:#a1a1aa;--mu2:#71717a;--ac:#818cf8;--acbg:#1e1b4b;--actx:#a5b4fc;--up:#4ade80;--upbg:#0f2a1a;--dn:#f87171;--dnbg:#2d1214;--sh:none}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--tx);font:400 13px/1.5 "Inter","PingFang SC","HarmonyOS Sans SC","Noto Sans SC","Noto Sans CJK SC",-apple-system,BlinkMacSystemFont,"Microsoft YaHei",sans-serif;-webkit-font-smoothing:antialiased;font-feature-settings:"cv11","ss01"}
+a{color:inherit;text-decoration:none}button{font:inherit}
+.num,.f,.d,.r,.sv,.nc,.heat,.pc,.tr3,.kv dd,.post footer{font-variant-numeric:tabular-nums}
+/* 顶栏 */
+.top{position:sticky;top:0;z-index:30;background:color-mix(in srgb,var(--card) 92%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--bd)}
+.ti2{max-width:1440px;margin:auto;height:56px;padding:0 24px;display:flex;align-items:center;gap:16px}
+.lg{display:flex;align-items:center;gap:8px;font-weight:600;font-size:16px;letter-spacing:-.01em}.lg i{width:24px;height:24px;border-radius:6px;background:var(--ac);display:grid;place-items:center;font-style:normal;color:#fff;font-size:12px}.lg span{font-weight:400;font-size:13px;color:var(--mu);margin-left:4px;padding-left:12px;border-left:1px solid var(--bd)}
+.mtabs{display:none}
+.tg{margin-left:auto;display:flex;border:1px solid var(--bd);border-radius:var(--r);padding:2px;background:var(--card)}.tg button{border:0;background:none;color:var(--mu);height:28px;padding:0 10px;border-radius:6px;cursor:pointer;font-size:12px}.tg button.on{background:var(--hov);color:var(--tx);font-weight:500}
+/* 12 列网格 */
+.wrap{max-width:1440px;margin:auto;padding:24px 24px 32px}
+.stats,.shell{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:16px}.shell{align-items:start}
+.stats{margin-bottom:24px}.st{grid-column:span 2}
+.left{grid-column:span 2}.content{grid-column:span 10;min-width:0}
+.cols{display:grid;grid-template-columns:repeat(10,minmax(0,1fr));gap:16px;align-items:start}.mid{grid-column:span 7;min-width:0}.right{grid-column:span 3;min-width:0}
+/* 统计条 */
+.st{background:var(--card);border:1px solid var(--bd);border-radius:var(--r);padding:12px 16px;min-width:0;box-shadow:var(--sh)}
+.sl{font-size:12px;color:var(--mu);line-height:16px}.sv{font-size:20px;font-weight:600;line-height:28px;letter-spacing:-.01em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.ss{font-size:12px;color:var(--mu);line-height:16px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.st:nth-child(3) .sv{color:var(--ac)}
+/* 区块标题：统一 24px 行高，底部 8px */
+.bh{display:flex;align-items:center;gap:8px;height:24px;margin:0 0 8px}.bh h2{font-size:14px;font-weight:600;margin:0;line-height:24px}.hint{font-size:12px;color:var(--mu)}.credit{margin-left:auto;font-size:12px;font-weight:500;color:var(--ac)}.credit:hover{text-decoration:underline}
+.blk{margin-bottom:24px}
+/* 左栏 */
+.left{position:sticky;top:80px;display:flex;flex-direction:column;gap:16px}.left>.bh{margin-bottom:-8px}
+.lcard{background:var(--card);border:1px solid var(--bd);border-radius:var(--r);padding:8px;box-shadow:var(--sh)}
+.nav{display:flex;flex-direction:column;gap:2px}.nv{display:grid;grid-template-columns:24px minmax(0,1fr) auto;align-items:center;gap:8px;height:36px;border:0;background:none;color:var(--tx2);padding:0 8px;border-radius:6px;cursor:pointer;text-align:left;font-size:13px;font-weight:500}
+.nv:hover{background:var(--hov)}.nv.on{background:var(--acbg);color:var(--actx)}.ni{width:24px;height:24px;border-radius:6px;display:grid;place-items:center;background:var(--bd2);color:var(--mu);font-size:12px}.nv.on .ni{background:var(--ac);color:#fff}.nc{font-size:12px;color:var(--mu)}
+.kv{margin:0}.kv div{display:flex;justify-content:space-between;align-items:center;height:32px;padding:0 8px;border-bottom:1px solid var(--bd2);font-size:13px}.kv div:last-child{border-bottom:0}.kv dt{color:var(--mu)}.kv dd{margin:0;font-weight:500}
+.mini{padding:8px;border-top:1px solid var(--bd2)}.mt{font-size:12px;color:var(--mu);line-height:16px;margin-bottom:4px}.mv{font-weight:500;display:flex;align-items:center;justify-content:space-between;gap:8px}.mv2{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;font-size:13px;font-weight:500}.mv2:hover{color:var(--ac)}.mm{font-size:12px;color:var(--mu)}
+.mini .sp{height:24px;margin-top:8px}
+.tl{list-style:none;margin:0;padding:0}.tl li a{display:grid;grid-template-columns:16px minmax(0,1fr) auto;gap:8px;align-items:center;height:28px;padding:0 4px;border-radius:4px;font-size:13px}.tl li a:hover{background:var(--hov)}.tl .k{color:var(--mu2);font-size:12px;text-align:right}.tl .n{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.lnote{font-size:12px;color:var(--mu);padding:12px}.lnote b{display:block;color:var(--tx2);font-weight:500;margin-bottom:4px}.lnote p{margin:0 0 4px}.lnote a{color:var(--ac)}
+/* 涨跌徽章：唯一使用红绿的地方 */
+.pc{display:inline-flex;align-items:center;gap:2px;height:20px;font-size:12px;font-weight:500;padding:0 6px;border-radius:4px;white-space:nowrap}.pc.up{color:var(--up);background:var(--upbg)}.pc.dn{color:var(--dn);background:var(--dnbg)}
+.sp{display:block;width:100%;fill:none;stroke-width:1.5;stroke-linejoin:round;stroke-linecap:round}.sp.up,.tile.up .sp{stroke:var(--up)}.sp.dn,.tile.dn .sp{stroke:var(--dn)}
+/* 趋势 */
+.pane{display:none}.pane.on{display:block}
+.tiles{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
+.tile{background:var(--card);border:1px solid var(--bd);border-radius:var(--r);padding:8px 12px;height:88px;display:grid;grid-template-rows:20px 1fr 16px;gap:4px;box-shadow:var(--sh);min-width:0}
+.tile:hover{border-color:var(--mu2)}.tr1{display:grid;grid-template-columns:16px minmax(0,1fr) auto;gap:8px;align-items:center}.tk{font-size:12px;color:var(--mu2);text-align:right}.tn{font-size:13px;font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tile .sp{height:100%;opacity:.9}.tr3{display:flex;justify-content:space-between;font-size:12px;line-height:16px;color:var(--mu)}.tr3 b{color:var(--tx2);font-weight:500}
+/* 热帖 */
+.feed{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.post{background:var(--card);border:1px solid var(--bd);border-radius:var(--r);padding:12px 16px 8px;display:flex;flex-direction:column;min-width:0;box-shadow:var(--sh)}.post:hover{border-color:var(--mu2)}
+.post header{display:grid;grid-template-columns:32px minmax(0,1fr) auto;gap:8px;align-items:center;height:32px}
+.av{--h:220;width:32px;height:32px;border-radius:50%;display:inline-grid;place-items:center;flex:none;font-weight:600;font-size:13px;color:hsl(var(--h) 30% 32%);background:hsl(var(--h) 30% 92%)}
+html[data-theme=dark] .av{color:hsl(var(--h) 35% 80%);background:hsl(var(--h) 15% 22%)}
+.av.s{width:24px;height:24px;font-size:11px}.av.xs{width:20px;height:20px;font-size:10px;margin-left:-6px;border:2px solid var(--card)}.av.xs:first-child{margin-left:0}
+.who{min-width:0;line-height:16px}.nm{display:flex;align-items:center;gap:6px;font-size:13px;font-weight:600;min-width:0}.nm a{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.nm a:hover{color:var(--ac)}.hd{font-size:12px;color:var(--mu);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.heat{font-size:12px;font-weight:500;color:var(--mu);height:20px;line-height:20px;padding:0 6px;border:1px solid var(--bd);border-radius:4px}
+.pt{flex:1;margin:8px 0;font-size:13px;line-height:1.6;color:var(--tx2);white-space:pre-wrap;word-break:break-word}.xp .xf{display:none}.xp.open .xs{display:none}.xp.open .xf{display:inline}
+.post footer{display:flex;align-items:center;gap:10px;height:32px;font-size:12px;color:var(--mu);border-top:1px solid var(--bd2);white-space:nowrap;overflow:hidden}.sp1{flex:1}
+.cp,.ex{height:24px;border:1px solid var(--bd);background:var(--card);color:var(--tx2);font-size:12px;font-weight:500;padding:0 8px;border-radius:6px;cursor:pointer}.cp:hover,.ex:hover{border-color:var(--ac);color:var(--ac)}.cp.ok{border-color:var(--up);color:var(--up)}
+.op{width:24px;height:24px;display:grid;place-items:center;border-radius:6px;color:var(--mu)}.op:hover{background:var(--hov);color:var(--ac)}
+.zh{font-size:11px;font-weight:500;color:var(--mu);border:1px solid var(--bd);border-radius:4px;padding:0 4px;line-height:16px;flex:none}
+/* 右栏 */
+.right{display:flex;flex-direction:column;gap:24px;position:sticky;top:80px}
+.rcard,.acard{background:var(--card);border:1px solid var(--bd);border-radius:var(--r);box-shadow:var(--sh);min-width:0;overflow:hidden}
+.rhd{display:flex;align-items:center;gap:8px;height:24px;margin-bottom:8px}
+.rcard .tw{max-height:560px;overflow:auto}
+/* 表格 */
+table{width:100%;border-collapse:separate;border-spacing:0;font-size:13px}
+th{height:32px;font-size:12px;font-weight:500;color:var(--mu);text-align:left;padding:0 12px;background:var(--zebra);border-bottom:1px solid var(--bd);white-space:nowrap}
+thead th{position:sticky;top:0;z-index:2}
+td{height:36px;padding:0 12px;border-bottom:1px solid var(--bd2);vertical-align:middle}tbody tr:last-child td{border-bottom:0}
+tbody tr:not(.g):hover td{background:var(--hov)}
+th.num,td.num,th.f,td.f,th.d,td.d{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}th.r,td.r{width:40px;text-align:right;color:var(--mu2);padding-right:4px;font-variant-numeric:tabular-nums}
+.lbt{table-layout:fixed}.lbt th.r,.lbt td.r{width:36px}.lbt th.f,.lbt td.f{width:72px;font-weight:500}.lbt th.d,.lbt td.d{width:64px;color:var(--mu);font-size:12px;padding-left:0}
+.lbt td.n a{display:flex;align-items:center;gap:8px;min-width:0}.lbt .nt{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:500}.lbt td.n a:hover .nt{color:var(--ac)}
+tr.g th{position:sticky;top:32px;z-index:1;height:28px;background:var(--card);color:var(--tx2);font-size:12px;font-weight:600;border-bottom:1px solid var(--bd2)}tr.g th span{color:var(--mu);font-weight:400;margin-left:4px}
+.news{list-style:none;margin:0;padding:0 12px}.news li{border-top:1px solid var(--bd2)}.news li:first-child{border-top:0}.news a{display:block;padding:8px 0}.news .t{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;font-weight:500;font-size:13px;line-height:20px}.news a:hover .t{color:var(--ac)}.news .m{display:block;font-size:12px;color:var(--mu);line-height:16px;margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+/* 卡片内标题：所有卡片头 48px */
+.rcard>.bh,.acard>.bh{height:48px;margin:0;padding:0 12px;border-bottom:1px solid var(--bd)}
+/* AIHOT */
+.ahsec{margin-top:8px;padding-top:24px;border-top:1px solid var(--bd)}
+.ahh{display:flex;align-items:center;gap:12px;height:28px;margin-bottom:16px}.ahh .k{font-size:12px;font-weight:600;letter-spacing:.08em;color:var(--ac)}.ahh h2{margin:0;font-size:20px;font-weight:600;letter-spacing:-.01em}.ahh a{margin-left:auto;font-size:12px;font-weight:500;color:var(--ac)}
+.agrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.acard.wide{grid-column:1/-1}
+.ht{table-layout:fixed}.ht td.ti a{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:500}.ht td.ti a:hover{color:var(--ac)}.ht th:nth-child(3),.ht td.sv{width:104px}.ht th:nth-child(4),.ht td.hb{width:160px}.ht th.num,.ht td.num{width:72px}
+.rk{display:inline-grid;place-items:center;width:20px;height:20px;border-radius:4px;color:var(--mu);font-weight:500;font-size:12px}.rk.top{background:var(--acbg);color:var(--actx);font-weight:600}
+.bar{display:block;height:4px;border-radius:2px;background:var(--bd2);overflow:hidden}.bar i{display:block;height:100%;border-radius:2px;background:var(--ac);opacity:.75}
+.lead{display:block;margin:12px;padding:12px 16px;border-radius:6px;background:var(--zebra);border:1px solid var(--bd2)}.lead b{display:block;font-size:16px;font-weight:600;line-height:24px}.lead span{display:block;font-size:13px;color:var(--tx2);margin-top:4px}.lead:hover b{color:var(--ac)}
+.dg{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:16px;padding:0 12px 12px}.dl{font-size:12px;font-weight:600;color:var(--tx2);height:28px;line-height:28px;border-bottom:1px solid var(--bd)}.ds ul{list-style:none;margin:0;padding:0}.ds li a{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;font-size:13px;line-height:20px;padding:6px 0;border-bottom:1px solid var(--bd2);color:var(--tx2)}.ds li a:hover{color:var(--ac)}
+.exg{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:var(--bd2)}.exc{display:grid;grid-template-rows:auto 1fr auto;gap:4px;padding:12px 16px;background:var(--card);min-height:132px}.exc:hover{background:var(--hov)}
+.et{display:flex;gap:8px;align-items:flex-start}.et span{flex:1;font-weight:600;font-size:13px;line-height:20px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}.sc{font-size:12px;font-weight:500;color:var(--actx);background:var(--acbg);border-radius:4px;padding:0 6px;line-height:20px;font-variant-numeric:tabular-nums}
+.exc p{margin:0;font-size:12px;color:var(--mu);line-height:18px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}.em{font-size:12px;color:var(--mu2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.mtb .mn{font-weight:500}.mtb td{white-space:nowrap}.scc{width:180px}td.scc{text-align:right}.scc .bar{display:inline-block;width:96px;vertical-align:middle;margin-right:12px}.scc b{font-weight:600;font-variant-numeric:tabular-nums;display:inline-block;width:36px;text-align:right}
+.chips{display:flex;flex-wrap:wrap;gap:8px;padding:12px}.chips a{height:28px;line-height:26px;font-size:12px;padding:0 12px;border-radius:14px;color:var(--tx2);border:1px solid var(--bd)}.chips a:hover{border-color:var(--ac);color:var(--ac)}
+footer{max-width:1440px;margin:24px auto 0;padding-top:16px;border-top:1px solid var(--bd);font-size:12px;color:var(--mu)}footer a{color:var(--ac)}
+/* 响应式 */
+@media(max-width:1600px){.post footer .rp{display:none}}@media(max-width:1360px){.lbt th.f,.lbt td.f{width:64px}.lbt th.d,.lbt td.d{width:52px}.lbt th.r,.lbt td.r{width:28px}td,th{padding:0 8px}.tiles{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:1180px){.left{display:none}.content{grid-column:1/-1}.st{grid-column:span 4}.mtabs{display:flex;gap:4px}.mt1{height:32px;border:0;background:none;color:var(--tx2);padding:0 12px;border-radius:6px;cursor:pointer;font-weight:500;font-size:13px}.mt1.on{background:var(--acbg);color:var(--actx)}}
+@media(max-width:900px){.cols{grid-template-columns:1fr}.mid,.right{grid-column:1/-1}.right{position:static}.agrid{grid-template-columns:1fr}.dg{grid-template-columns:repeat(2,minmax(0,1fr))}.exg{grid-template-columns:1fr 1fr}}
+@media(max-width:640px){.ti2{flex-wrap:wrap;height:auto;padding:8px 16px;gap:8px}.lg span{display:none}.mtabs{order:3;width:100%}.mt1{flex:1}.wrap{padding:16px 12px 24px}
+.stats{gap:8px;margin-bottom:16px}.st{grid-column:span 6;padding:8px 12px}.sv{font-size:16px;line-height:24px}.tiles{grid-template-columns:repeat(2,minmax(0,1fr))}.feed{grid-template-columns:1fr}.exg{grid-template-columns:1fr}
+.ht th:nth-child(3),.ht td.sv,.ht th:nth-child(4),.ht td.hb,.ht th:nth-child(6),.ht td:nth-child(6){display:none}.mtb th:nth-child(3),.mtb td:nth-child(3),.mtb th:nth-child(4),.mtb td:nth-child(4),.mtb th:nth-child(5),.mtb td:nth-child(5){display:none}.scc{width:auto}.scc .bar{display:none}.ahh{height:auto;flex-wrap:wrap}.ahh a{margin-left:0}.dg{grid-template-columns:1fr}}
+/* ===== v5 color layer ===== */
+:root{--ac:#7c3aed;--acbg:#f3e8ff;--actx:#6d28d9;--g1:#7c3aed;--g2:#db2777;--g3:#f97316;--bg:#f6f5fb;--glow:rgba(124,58,237,.18)}
+html[data-theme=dark]{--bg:#110d2e;--card:#1a1640;--bd:#2a2652;--bd2:#1e1b40;--zebra:#171536;--hov:#1f1c45;--mu:#a5a3c9;--mu2:#77749e;--ac:#c084fc;--acbg:#2e1a5c;--actx:#e9d5ff;--up:#4ade80;--dn:#fb7185;--glow:rgba(192,132,252,.28)}
+html[data-theme=dark],html[data-theme=dark] body{background-attachment:fixed;background:radial-gradient(1200px 600px at 10% -10%,#2a1660 0,transparent 60%),radial-gradient(900px 500px at 100% 0,#3b0d4a 0,transparent 55%),var(--bg)}
+.lg i{background:linear-gradient(135deg,var(--g1),var(--g2))!important;color:#fff!important}
+.stats{background:linear-gradient(110deg,#6d28d9 0%,#a21caf 50%,#db2777 85%,#f97316 120%);border-radius:12px;padding:16px;box-shadow:0 8px 24px -8px rgba(162,28,175,.45)}
+html[data-theme=dark] .stats{background:linear-gradient(110deg,#4c1d95 0%,#86198f 55%,#be185d 100%);box-shadow:0 0 0 1px rgba(232,121,249,.25),0 10px 30px -10px rgba(217,70,239,.5)}
+.stats .st{background:rgba(255,255,255,.12)!important;border:1px solid rgba(255,255,255,.22)!important;box-shadow:none!important;backdrop-filter:blur(4px)}
+.stats .st *{color:#fff!important}
+.stats .st .sl,.stats .st .ss{color:rgba(255,255,255,.82)!important}
+/* heat tiles */
+.tile{position:relative;overflow:hidden;transition:transform .15s,box-shadow .15s}
+.tile.up{background:linear-gradient(135deg,rgba(249,115,22,calc(var(--a)*.10 + .03)),rgba(239,68,68,calc(var(--a)*.28 + .04))),var(--card);border-color:rgba(239,68,68,calc(var(--a)*.45 + .12))}
+.tile.dn{background:linear-gradient(135deg,rgba(56,189,248,.05),rgba(59,130,246,calc(var(--a)*.22 + .05))),var(--card);border-color:rgba(59,130,246,.25)}
+.tile.up .sp{stroke:#ea580c}.tile.dn .sp{stroke:#2563eb}
+html[data-theme=dark] .tile.up .sp{stroke:#fb923c}html[data-theme=dark] .tile.dn .sp{stroke:#60a5fa}
+.tile:hover{transform:translateY(-1px);box-shadow:0 6px 18px -6px rgba(239,68,68,.35)}
+/* domain chips */
+.nv[data-t=ai] .ni,.mtabs [data-t=ai]{--dc:#7c3aed}
+.nv[data-t=money] .ni,.mtabs [data-t=money]{--dc:#f59e0b}
+.nv[data-t=growth] .ni,.mtabs [data-t=growth]{--dc:#14b8a6}
+.nv[data-t=ai]{--dc:#7c3aed;--dc2:#c026d3}.nv[data-t=money]{--dc:#f59e0b;--dc2:#ea580c}.nv[data-t=growth]{--dc:#14b8a6;--dc2:#22c55e}
+.nv .ni{background:linear-gradient(135deg,var(--dc),var(--dc2))!important;color:#fff!important}
+.nv.on{background:color-mix(in srgb,var(--dc) 12%,var(--card))!important;color:var(--tx)!important;box-shadow:inset 3px 0 0 var(--dc)}
+.nv.on .nc{color:var(--dc)}
+/* gradient avatars */
+.av{background:linear-gradient(135deg,hsl(var(--h) 85% 62%),hsl(calc(var(--h) + 50) 80% 52%))!important;color:#fff!important;text-shadow:0 1px 1px rgba(0,0,0,.2)}
+/* cards accents + glow */
+.lcard,.rcard,.post,.acard{transition:box-shadow .15s,border-color .15s}
+.post{border-top:2px solid color-mix(in srgb,var(--ac) 45%,transparent)!important}
+.post:hover,.rcard:hover,.acard:hover{border-color:color-mix(in srgb,var(--ac) 50%,var(--bd))!important;box-shadow:0 0 0 3px var(--glow)}
+.bh h2{position:relative;padding-left:10px}
+.bh h2::before{content:"";position:absolute;left:0;top:5px;bottom:5px;width:3px;border-radius:2px;background:linear-gradient(var(--g1),var(--g2))}
+a{color:var(--actx)}
+/* ===== v6 layout ===== */
+.mtabs{display:flex!important;gap:4px}
+.mt1{height:32px;border:0;background:none;color:var(--tx2);padding:0 12px;border-radius:6px;cursor:pointer;font-weight:500;font-size:13px}
+.mt1.on{background:color-mix(in srgb,var(--dc) 14%,var(--card));color:var(--tx);box-shadow:inset 0 -2px 0 var(--dc)}
+.ti2{display:flex;align-items:center;gap:16px}
+.ti2 .sp1{flex:1}
+.ahl{font-size:13px;font-weight:500;color:var(--actx);text-decoration:none;padding:0 8px;height:32px;display:inline-flex;align-items:center;border-radius:6px}
+.ahl:hover{background:var(--acbg)}
+.stats.sm{padding:8px 16px;grid-template-columns:repeat(12,minmax(0,1fr))}
+.stats.sm .st{grid-column:span 2;padding:8px 12px;height:auto}
+.stats.sm .sv{font-size:20px;line-height:1.3}
+.g6{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:16px;align-items:start}
+.c-l{grid-column:span 3;min-width:0}.c-m{grid-column:span 6;min-width:0}.c-r{grid-column:span 3;min-width:0;display:flex;flex-direction:column;gap:24px}
+.c-l,.c-r{position:sticky;top:80px;max-height:calc(100vh - 96px);overflow:auto;scrollbar-width:thin}
+.feed1{display:flex;flex-direction:column;gap:8px}
+.post .pt{white-space:pre-wrap;word-break:break-word}
+.post .tm{color:var(--mu);font-variant-numeric:tabular-nums}
+.lbt td.n a{display:flex;align-items:center;gap:8px;min-width:0;color:var(--tx);text-decoration:none}
+.lbt td.n a:hover .nt{color:var(--actx);text-decoration:underline}
+.rlist{list-style:none;margin:0;padding:0}
+.rlist li{border-top:1px solid var(--bd2)}
+.rlist li:first-child{border-top:0}
+.rlist a{display:block;padding:8px 12px;color:var(--tx);text-decoration:none}
+.rlist a:hover{background:var(--hov)}
+.gh .rn{font-weight:600;font-size:13px;color:var(--actx);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.gh .rd{font-size:12px;color:var(--tx2);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;margin:2px 0 4px}
+.gh .rm{display:flex;gap:12px;font-size:12px;color:var(--mu);font-variant-numeric:tabular-nums}
+.gh .rm .td{margin-left:auto;color:#ea580c;font-weight:600}
+html[data-theme=dark] .gh .rm .td{color:#fb923c}
+.gh .lg2{display:inline-flex;align-items:center;gap:4px}.gh .lg2 i{width:8px;height:8px;border-radius:50%;background:hsl(var(--h) 70% 55%)}
+.nws .t{font-size:13px;font-weight:500;line-height:1.5;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.nws .m{font-size:12px;color:var(--mu);margin-top:2px;display:flex;gap:8px}
+.src{display:inline-block;padding:0 6px;border-radius:4px;font-size:12px;font-weight:500;line-height:18px}
+.src.x{background:#e0f2fe;color:#0369a1}.src.d{background:#f3e8ff;color:#7e22ce}.src.s{background:#fce7f3;color:#be185d}
+html[data-theme=dark] .src.x{background:#0c2a44;color:#7dd3fc}html[data-theme=dark] .src.d{background:#2e1a5c;color:#d8b4fe}html[data-theme=dark] .src.s{background:#4a0d2e;color:#f9a8d4}
+.tl2{list-style:none;margin:0;padding:4px 0}
+.tl2 a{display:grid;grid-template-columns:24px 1fr auto;align-items:center;height:32px;padding:0 12px;color:var(--tx);text-decoration:none;gap:8px}
+.tl2 a:hover{background:var(--hov)}
+.tl2 .k{color:var(--mu);font-variant-numeric:tabular-nums;font-size:12px}
+.tl2 .n{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+/* person page */
+.ph{display:grid;grid-template-columns:80px 1fr auto;gap:16px;align-items:center;padding:24px;border-radius:12px;background:linear-gradient(110deg,#6d28d9 0%,#a21caf 55%,#db2777 100%);color:#fff;box-shadow:0 8px 24px -8px rgba(162,28,175,.45)}
+.ph .av.xl{width:80px;height:80px;border-radius:50%;font-size:28px;font-weight:600;display:flex;align-items:center;justify-content:center;border:3px solid rgba(255,255,255,.6)}
+.ph h1{font-size:28px;line-height:1.3;margin:0;font-weight:600}
+.ph .hd{opacity:.85;font-size:14px}
+.ph .bio{margin:8px 0 0;font-size:14px;opacity:.95;white-space:pre-wrap;max-width:720px}
+.ph .fs{text-align:right}
+.ph .fs b{display:block;font-size:28px;font-weight:600;font-variant-numeric:tabular-nums;line-height:1.3}
+.ph .fs span{font-size:12px;opacity:.85}
+.ph .xb{display:inline-flex;margin-top:8px;height:32px;align-items:center;padding:0 12px;border-radius:6px;background:rgba(255,255,255,.18);color:#fff;text-decoration:none;font-weight:500;border:1px solid rgba(255,255,255,.35)}
+.ptool{display:flex;align-items:center;gap:16px;margin:24px 0 8px}
+.ptool input{flex:1;height:40px;border:1px solid var(--bd);border-radius:8px;background:var(--card);color:var(--tx);padding:0 12px;font:inherit;font-size:14px;outline:none}
+.ptool input:focus{border-color:var(--ac);box-shadow:0 0 0 3px var(--glow)}
+.ptool .cnt{color:var(--mu);font-variant-numeric:tabular-nums;white-space:nowrap}
+.pwrap{max-width:880px;margin:0 auto}
+.back{font-size:13px;color:var(--actx);text-decoration:none;display:inline-flex;height:32px;align-items:center;margin-bottom:8px}
+mark{background:#fde68a;color:inherit;border-radius:2px}
+html[data-theme=dark] mark{background:#854d0e}
+@media(max-width:1180px){.c-l{grid-column:span 4}.c-m{grid-column:span 8}.c-r{grid-column:1/-1;position:static;max-height:none;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}}
+@media(max-width:900px){.g6{grid-template-columns:1fr}.c-l,.c-m,.c-r{grid-column:1/-1;position:static;max-height:none}.c-m{order:1}.c-r{order:2;display:flex}.c-l{order:3}.stats.sm .st{grid-column:span 4}}
+@media(max-width:640px){.ti2{flex-wrap:wrap;gap:8px}.mtabs{order:3;width:100%}.mt1{flex:1}.ahl{margin-left:auto}.ti2 .sp1{display:none}.stats.sm{display:none}.ph{grid-template-columns:56px 1fr;padding:16px}.ph .av.xl{width:56px;height:56px;font-size:20px}.ph h1{font-size:20px}.ph .fs{grid-column:1/-1;text-align:left}}
+.post footer{margin:0!important;width:auto!important;max-width:none!important;padding:0!important;text-align:left!important;justify-content:flex-start}
+.c-l .tw{max-height:none;overflow:visible}
+.ph .hd,.ph .hd *{color:rgba(255,255,255,.85)!important}
+/* ===== v6b card consistency ===== */
+.post.c6{padding:16px;gap:0;border:1px solid var(--bd)!important;border-top:3px solid color-mix(in srgb,var(--ac) 55%,transparent)!important;border-radius:10px;background:var(--card)}
+.post.c6 header{display:grid;grid-template-columns:32px minmax(0,1fr) auto;gap:12px;align-items:center;height:40px}
+.post.c6 .who{min-width:0}
+.post.c6 .nm{font-weight:600;font-size:14px;line-height:20px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.post.c6 .nm a{color:var(--tx);text-decoration:none}.post.c6 .nm a:hover{color:var(--actx)}
+.post.c6 .hd{font-size:12px;line-height:18px;color:var(--mu)}
+.post.c6 .tm{text-align:right;font-size:12px;line-height:18px;color:var(--tx2);font-variant-numeric:tabular-nums;white-space:nowrap}
+.post.c6 .tm small{display:block;color:var(--mu);font-size:12px}
+.post.c6 .pt{margin:12px 0;font-size:14px;line-height:1.5;color:var(--tx)}
+.post.c6 footer{display:flex!important;align-items:center;justify-content:space-between!important;height:40px;border-top:1px solid var(--bd2);gap:8px}
+.post.c6 .act{display:flex;gap:8px;align-items:center}
+.post.c6 .op{font-size:12px;color:var(--mu);text-decoration:none;height:28px;display:inline-flex;align-items:center;padding:0 8px;border:1px solid var(--bd);border-radius:6px}
+.post.c6 .op:hover{color:var(--actx);border-color:var(--ac)}
+.post.c6 .met{display:grid;grid-template-columns:repeat(4,64px);gap:0}
+.post.c6 .mc{text-align:right;font-variant-numeric:tabular-nums;color:var(--mu);font-size:12px}
+.post.c6 .mc i{font-style:normal;margin-right:4px;opacity:.75}
+.feed1{gap:12px}
+.ph{grid-template-columns:80px minmax(0,1fr) auto;padding:24px}
+.ph .pi{min-width:0}.ph .bio.dim{opacity:.7}
+.ph .xb{margin:0;align-self:start}
+.pstat{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:12px}
+.psb{background:var(--card);border:1px solid var(--bd);border-radius:10px;padding:12px 16px;border-top:3px solid var(--dcx,#a21caf)}
+.psb:nth-child(1){--dcx:#7c3aed}.psb:nth-child(2){--dcx:#db2777}.psb:nth-child(3){--dcx:#f97316}.psb:nth-child(4){--dcx:#14b8a6}
+.psb .sl{font-size:12px;color:var(--mu)}.psb .sv{font-size:20px;font-weight:600;line-height:1.4;font-variant-numeric:tabular-nums;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.psb .ss{font-size:12px;color:var(--mu)}
+.tgl{display:inline-flex;align-items:center;gap:6px;font-size:13px;color:var(--tx2);white-space:nowrap;cursor:pointer}
+.empty{padding:24px;color:var(--mu)}
+@media(max-width:640px){.pstat{grid-template-columns:repeat(2,minmax(0,1fr))}.ph{grid-template-columns:56px minmax(0,1fr)}.ph .xb{grid-column:1/-1;justify-self:start}.ptool{flex-wrap:wrap;gap:8px}.ptool input{flex-basis:100%}
+.post.c6 .met{grid-template-columns:repeat(4,auto);gap:10px}.post.c6 footer{height:auto;min-height:40px;flex-wrap:wrap;padding:6px 0!important}.post.c6 .rp,.post.c6 .mc:nth-child(3){display:none}}
+.post.c6 .met{grid-template-columns:64px 64px 72px 84px}@media(max-width:640px){.post.c6 .met{grid-template-columns:repeat(4,auto);gap:10px}}
+</style></head><body><header class="top"><div class="ti2"><div class="lg"><i>⚡</i>XHOT<span>X 热点雷达</span></div><span class="sp1"></span><a class="ahl" href="https://aihot.news" target="_blank">来自 AIHOT ↗</a><div class="tg"><button data-set-theme="light" title="浅色">☀</button><button data-set-theme="dark" title="深色">☾</button><button data-set-theme="auto">自动</button></div></div></header>
+<div class="wrap"><div class="pwrap"><a class="back" href="../index.html">← 返回首页</a>
+<section class="ph"><span class="av xl" style="--h:46">C</span><div class="pi"><h1>Claude</h1><div class="hd">@claudeai</div><p class="bio">Claude is an AI assistant built by @anthropicai to be safe, accurate, and secure. Talk to Claude on https://t.co/ZhTwG8d1e5 or download the app.</p></div><a class="xb" href="https://x.com/claudeai" target="_blank">在 X 查看 ↗</a></section>
+<div class="pstat"><div class="psb"><div class="sl">粉丝</div><div class="sv">189.8万</div><div class="ss">1,898,255</div></div><div class="psb"><div class="sl">较上次</div><div class="sv">+67</div><div class="ss">粉丝变化</div></div><div class="psb"><div class="sl">已存推文</div><div class="sv">25</div><div class="ss">最多 200 条</div></div><div class="psb"><div class="sl">最新发帖</div><div class="sv">10-09 11:49</div><div class="ss">4 天前</div></div></div>
+<div class="ptool"><input id="q" type="search" placeholder="搜索 Claude 的推文关键词…" autocomplete="off"><span class="cnt" id="cnt">25 条</span></div>
+<div class="bh"><h2>推文时间线</h2><span class="hint">最新在前 · 默认只显示中文/英文</span></div><div class="feed1"><article class="post c6" data-s="we’ve loved seeing so many founders join the claude startups program. unfortunately, we underestimated demand for the program, and we need to pause the claude team and $1,000 api credit offers.
+
+with hundreds of thousands of applicants, we&#x27;re re-reviewing applications so the program can serve as many startups as possible.
+
+if you’ve already claimed the claude offers, they’ll still remain in your account.
+
+if you applied or were approved and haven’t claimed the offer, we&#x27;re re-reviewing your application. unfortunately, this means that some accounts who had already been approved will not get access to the offer. we know this is disappointing and we’re very sorry.
+
+all accepted program members still have access to the startup stack and applied ai office hours. if you&#x27;re on a claude max or team plan, your monthly api credits are available in console as usual.
+
+we appreciate your patience, and we&#x27;re working to get you building as quickly as we can.
+https://t.co/cq6ce8vkle"><header><span class="av" style="--h:46">C</span><div class="who"><div class="nm"><span>Claude</span></div><div class="hd">@claudeai</div></div><time class="tm" title="10-09 11:49 北京时间">10-09 11:49<small>4 天前</small></time></header><div class="pt xp"><span class="xs">We’ve loved seeing so many founders join the Claude Startups program. Unfortunately, we underestimated demand for the program, and we need to pause the Claude Team and $1,000 API credit offers.
+
+With hundreds of thousands of applicants, we&#x27;re re-reviewing applications so the prog…</span><span class="xf">We’ve loved seeing so many founders join the Claude Startups program. Unfortunately, we underestimated demand for the program, and we need to pause the Claude Team and $1,000 API credit offers.
+
+With hundreds of thousands of applicants, we&#x27;re re-reviewing applications so the program can serve as many startups as possible.
+
+If you’ve already claimed the Claude offers, they’ll still remain in your account.
+
+If you applied or were approved and haven’t claimed the offer, we&#x27;re re-reviewing your application. Unfortunately, this means that some accounts who had already been approved will not get access to the offer. We know this is disappointing and we’re very sorry.
+
+All accepted program members still have access to the Startup Stack and Applied AI office hours. If you&#x27;re on a Claude Max or Team plan, your monthly API credits are available in Console as usual.
+
+We appreciate your patience, and we&#x27;re working to get you building as quickly as we can.
+https://t.co/cq6ce8VKlE</span></div>
+<footer><div class="act"><button class="ex" type="button">展开</button><button class="cp" type="button" data-copy="We’ve loved seeing so many founders join the Claude Startups program. Unfortunately, we underestimated demand for the program, and we need to pause the Claude Team and $1,000 API credit offers.
+
+With hundreds of thousands of applicants, we&#x27;re re-reviewing applications so the program can serve as many startups as possible.
+
+If you’ve already claimed the Claude offers, they’ll still remain in your account.
+
+If you applied or were approved and haven’t claimed the offer, we&#x27;re re-reviewing your application. Unfortunately, this means that some accounts who had already been approved will not get access to the offer. We know this is disappointing and we’re very sorry.
+
+All accepted program members still have access to the Startup Stack and Applied AI office hours. If you&#x27;re on a Claude Max or Team plan, your monthly API credits are available in Console as usual.
+
+We appreciate your patience, and we&#x27;re working to get you building as quickly as we can.
+https://t.co/cq6ce8VKlE
+— Claude (@claudeai)
+https://x.com/claudeai/status/2108404561413349695">复制原文</button><a class="op" href="https://x.com/claudeai/status/2108404561413349695" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>337</span><span class="mc" title="转发"><i>⇄</i>17</span><span class="mc" title="评论"><i>💬</i>160</span><span class="mc" title="浏览"><i>👁</i>28.8万</span></div></footer></article><article class="post c6" data-s="when a question needs deeper analysis, send the dashboard to your analytics tool. when an animation needs finishing touches, open it in your video editor.
+
+see the full list of supported tools: https://t.co/9psmnudtdg"><header><span class="av" style="--h:46">C</span><div class="who"><div class="nm"><span>Claude</span></div><div class="hd">@claudeai</div></div><time class="tm" title="10-09 03:01 北京时间">10-09 03:01<small>4 天前</small></time></header><div class="pt">When a question needs deeper analysis, send the dashboard to your analytics tool. When an animation needs finishing touches, open it in your video editor.
+
+See the full list of supported tools: https://t.co/9PSMNUDtDg</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="When a question needs deeper analysis, send the dashboard to your analytics tool. When an animation needs finishing touches, open it in your video editor.
+
+See the full list of supported tools: https://t.co/9PSMNUDtDg
+— Claude (@claudeai)
+https://x.com/claudeai/status/2108271561337606300">复制原文</button><a class="op" href="https://x.com/claudeai/status/2108271561337606300" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>887</span><span class="mc" title="转发"><i>⇄</i>30</span><span class="mc" title="评论"><i>💬</i>23</span><span class="mc" title="浏览"><i>👁</i>26.8万</span></div></footer></article><article class="post c6" data-s="starting today, claude docs, slides, and design are out of beta and available on every plan including free.
+
+your team and claude can edit the same doc, deck, or design together."><header><span class="av" style="--h:46">C</span><div class="who"><div class="nm"><span>Claude</span></div><div class="hd">@claudeai</div></div><time class="tm" title="10-09 03:01 北京时间">10-09 03:01<small>4 天前</small></time></header><div class="pt">Starting today, Claude Docs, Slides, and Design are out of beta and available on every plan including Free.
+
+Your team and Claude can edit the same doc, deck, or design together.</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="Starting today, Claude Docs, Slides, and Design are out of beta and available on every plan including Free.
+
+Your team and Claude can edit the same doc, deck, or design together.
+— Claude (@claudeai)
+https://x.com/claudeai/status/2108271559928389679">复制原文</button><a class="op" href="https://x.com/claudeai/status/2108271559928389679" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>1,385</span><span class="mc" title="转发"><i>⇄</i>47</span><span class="mc" title="评论"><i>💬</i>25</span><span class="mc" title="浏览"><i>👁</i>30.4万</span></div></footer></article><article class="post c6" data-s="claude motion turns reports, charts, or product walkthroughs into short animations. claude writes each one as code, with no video model involved, so you can change any word, number, or timing, then export an mp4.
+
+in beta on team and enterprise plans. https://t.co/dphru3xm0f"><header><span class="av" style="--h:46">C</span><div class="who"><div class="nm"><span>Claude</span></div><div class="hd">@claudeai</div></div><time class="tm" title="10-09 03:01 北京时间">10-09 03:01<small>4 天前</small></time></header><div class="pt">Claude Motion turns reports, charts, or product walkthroughs into short animations. Claude writes each one as code, with no video model involved, so you can change any word, number, or timing, then export an MP4.
+
+In beta on Team and Enterprise plans. https://t.co/dPhRu3xM0F</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="Claude Motion turns reports, charts, or product walkthroughs into short animations. Claude writes each one as code, with no video model involved, so you can change any word, number, or timing, then export an MP4.
+
+In beta on Team and Enterprise plans. https://t.co/dPhRu3xM0F
+— Claude (@claudeai)
+https://x.com/claudeai/status/2108271558170976743">复制原文</button><a class="op" href="https://x.com/claudeai/status/2108271558170976743" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>2,152</span><span class="mc" title="转发"><i>⇄</i>83</span><span class="mc" title="评论"><i>💬</i>54</span><span class="mc" title="浏览"><i>👁</i>39.1万</span></div></footer></article><article class="post c6" data-s="with claude dashboards, connect a data platform or crm tool and ask a question in plain language. claude writes the query and builds a dashboard that updates as your data changes, and every chart shows that query.
+
+in beta on paid plans. https://t.co/ice2ikwmiy"><header><span class="av" style="--h:46">C</span><div class="who"><div class="nm"><span>Claude</span></div><div class="hd">@claudeai</div></div><time class="tm" title="10-09 03:01 北京时间">10-09 03:01<small>4 天前</small></time></header><div class="pt">With Claude Dashboards, connect a data platform or CRM tool and ask a question in plain language. Claude writes the query and builds a dashboard that updates as your data changes, and every chart shows that query.
+
+In beta on paid plans. https://t.co/ICE2IkWmIy</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="With Claude Dashboards, connect a data platform or CRM tool and ask a question in plain language. Claude writes the query and builds a dashboard that updates as your data changes, and every chart shows that query.
+
+In beta on paid plans. https://t.co/ICE2IkWmIy
+— Claude (@claudeai)
+https://x.com/claudeai/status/2108271555822092483">复制原文</button><a class="op" href="https://x.com/claudeai/status/2108271555822092483" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>3,221</span><span class="mc" title="转发"><i>⇄</i>143</span><span class="mc" title="评论"><i>💬</i>87</span><span class="mc" title="浏览"><i>👁</i>87.4万</span></div></footer></article><article class="post c6" data-s="claude dashboards and claude motion are in beta today.
+
+ask claude to turn your data into live dashboards and your ideas into animated explainers. https://t.co/v3fu4lmnzp"><header><span class="av" style="--h:46">C</span><div class="who"><div class="nm"><span>Claude</span></div><div class="hd">@claudeai</div></div><time class="tm" title="10-09 03:01 北京时间">10-09 03:01<small>4 天前</small></time></header><div class="pt">Claude Dashboards and Claude Motion are in beta today.
+
+Ask Claude to turn your data into live dashboards and your ideas into animated explainers. https://t.co/V3fU4lMnzp</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="Claude Dashboards and Claude Motion are in beta today.
+
+Ask Claude to turn your data into live dashboards and your ideas into animated explainers. https://t.co/V3fU4lMnzp
+— Claude (@claudeai)
+https://x.com/claudeai/status/2108271552991252810">复制原文</button><a class="op" href="https://x.com/claudeai/status/2108271552991252810" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>6.0万</span><span class="mc" title="转发"><i>⇄</i>4,577</span><span class="mc" title="评论"><i>💬</i>1,147</span><span class="mc" title="浏览"><i>👁</i>1106.4万</span></div></footer></article><article class="post c6" data-s="one more thing: we’re halving the price of cache reads on claude sonnet 5.5, to $0.10 per million tokens. that makes sonnet 5.5 around 20% cheaper to run on most long-running work."><header><span class="av" style="--h:46">C</span><div class="who"><div class="nm"><span>Claude</span></div><div class="hd">@claudeai</div></div><time class="tm" title="10-08 02:01 北京时间">10-08 02:01<small>5 天前</small></time></header><div class="pt">One more thing: we’re halving the price of cache reads on Claude Sonnet 5.5, to $0.10 per million tokens. That makes Sonnet 5.5 around 20% cheaper to run on most long-running work.</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="One more thing: we’re halving the price of cache reads on Claude Sonnet 5.5, to $0.10 per million tokens. That makes Sonnet 5.5 around 20% cheaper to run on most long-running work.
+— Claude (@claudeai)
+https://x.com/claudeai/status/2107894060229034197">复制原文</button><a class="op" href="https://x.com/claudeai/status/2107894060229034197" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>1.2万</span><span class="mc" title="转发"><i>⇄</i>591</span><span class="mc" title="评论"><i>💬</i>221</span><span class="mc" title="浏览"><i>👁</i>155.5万</span></div></footer></article><article class="post c6" data-s="haiku 5.5 is available now on all platforms, including amazon web services, google cloud, and microsoft azure.
+
+read more: https://t.co/inzzxcecrp"><header><span class="av" style="--h:46">C</span><div class="who"><div class="nm"><span>Claude</span></div><div class="hd">@claudeai</div></div><time class="tm" title="10-08 02:01 北京时间">10-08 02:01<small>5 天前</small></time></header><div class="pt">Haiku 5.5 is available now on all platforms, including Amazon Web Services, Google Cloud, and Microsoft Azure.
+
+Read more: https://t.co/InzZXcEcRP</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="Haiku 5.5 is available now on all platforms, including Amazon Web Services, Google Cloud, and Microsoft Azure.
+
+Read more: https://t.co/InzZXcEcRP
+— Claude (@claudeai)
+https://x.com/claudeai/status/2107894057615987198">复制原文</button><a class="op" href="https://x.com/claudeai/status/2107894057615987198" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>1,595</span><span class="mc" title="转发"><i>⇄</i>36</span><span class="mc" title="评论"><i>💬</i>18</span><span class="mc" title="浏览"><i>👁</i>31.2万</span></div></footer></article><article class="post c6" data-s="haiku 5.5 shows major improvements across almost all of our alignment evaluations relative to haiku 4.5, with far fewer instances of misaligned behavior."><header><span class="av" style="--h:46">C</span><div class="who"><div class="nm"><span>Claude</span></div><div class="hd">@claudeai</div></div><time class="tm" title="10-08 02:01 北京时间">10-08 02:01<small>5 天前</small></time></header><div class="pt">Haiku 5.5 shows major improvements across almost all of our alignment evaluations relative to Haiku 4.5, with far fewer instances of misaligned behavior.</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="Haiku 5.5 shows major improvements across almost all of our alignment evaluations relative to Haiku 4.5, with far fewer instances of misaligned behavior.
+— Claude (@claudeai)
+https://x.com/claudeai/status/2107894054142787877">复制原文</button><a class="op" href="https://x.com/claudeai/status/2107894054142787877" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>1,652</span><span class="mc" title="转发"><i>⇄</i>27</span><span class="mc" title="评论"><i>💬</i>20</span><span class="mc" title="浏览"><i>👁</i>20.7万</span></div></footer></article><article class="post c6" data-s="haiku 5.5 is especially good value on tasks under 100,000 tokens, which make up around 90% of requests to our previous haiku model. https://t.co/qu8bzlizaj"><header><span class="av" style="--h:46">C</span><div class="who"><div class="nm"><span>Claude</span></div><div class="hd">@claudeai</div></div><time class="tm" title="10-08 02:01 北京时间">10-08 02:01<small>5 天前</small></time></header><div class="pt">Haiku 5.5 is especially good value on tasks under 100,000 tokens, which make up around 90% of requests to our previous Haiku model. https://t.co/Qu8BZlizaj</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="Haiku 5.5 is especially good value on tasks under 100,000 tokens, which make up around 90% of requests to our previous Haiku model. https://t.co/Qu8BZlizaj
+— Claude (@claudeai)
+https://x.com/claudeai/status/2107894052041490537">复制原文</button><a class="op" href="https://x.com/claudeai/status/2107894052041490537" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>2,840</span><span class="mc" title="转发"><i>⇄</i>84</span><span class="mc" title="评论"><i>💬</i>41</span><span class="mc" title="浏览"><i>👁</i>36.8万</span></div></footer></article><article class="post c6" data-s="haiku 5.5 is our first haiku model with an adjustable effort setting, so you can decide whether to optimize for cost or intelligence on each task. https://t.co/r98hsniuij"><header><span class="av" style="--h:46">C</span><div class="who"><div class="nm"><span>Claude</span></div><div class="hd">@claudeai</div></div><time class="tm" title="10-08 02:01 北京时间">10-08 02:01<small>5 天前</small></time></header><div class="pt">Haiku 5.5 is our first Haiku model with an adjustable effort setting, so you can decide whether to optimize for cost or intelligence on each task. https://t.co/r98hSNIUIj</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="Haiku 5.5 is our first Haiku model with an adjustable effort setting, so you can decide whether to optimize for cost or intelligence on each task. https://t.co/r98hSNIUIj
+— Claude (@claudeai)
+https://x.com/claudeai/status/2107894048753164362">复制原文</button><a class="op" href="https://x.com/claudeai/status/2107894048753164362" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>2,384</span><span class="mc" title="转发"><i>⇄</i>66</span><span class="mc" title="评论"><i>💬</i>36</span><span class="mc" title="浏览"><i>👁</i>27.0万</span></div></footer></article><article class="post c6" data-s="haiku 5.5 is designed for high-volume, cost-sensitive tasks. it reliably handles repetitive work like summaries and classification, and pairs well with claude opus 5.5 and sonnet 5.5 as a subagent on coding work.
+
+it’s also fast enough for live customer support and browser use."><header><span class="av" style="--h:46">C</span><div class="who"><div class="nm"><span>Claude</span></div><div class="hd">@claudeai</div></div><time class="tm" title="10-08 02:01 北京时间">10-08 02:01<small>5 天前</small></time></header><div class="pt">Haiku 5.5 is designed for high-volume, cost-sensitive tasks. It reliably handles repetitive work like summaries and classification, and pairs well with Claude Opus 5.5 and Sonnet 5.5 as a subagent on coding work.
+
+It’s also fast enough for live customer support and browser use.</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="Haiku 5.5 is designed for high-volume, cost-sensitive tasks. It reliably handles repetitive work like summaries and classification, and pairs well with Claude Opus 5.5 and Sonnet 5.5 as a subagent on coding work.
+
+It’s also fast enough for live customer support and browser use.
+— Claude (@claudeai)
+https://x.com/claudeai/status/2107894046433689987">复制原文</button><a class="op" href="https://x.com/claudeai/status/2107894046433689987" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>3,484</span><span class="mc" title="转发"><i>⇄</i>54</span><span class="mc" title="评论"><i>💬</i>34</span><span class="mc" title="浏览"><i>👁</i>27.9万</span></div></footer></article><article class="post c6" data-s="haiku 5.5 is a significant step up over haiku 4.5 across coding, computer use, and knowledge work. https://t.co/9m45nejfyz"><header><span class="av" style="--h:46">C</span><div class="who"><div class="nm"><span>Claude</span></div><div class="hd">@claudeai</div></div><time class="tm" title="10-08 02:01 北京时间">10-08 02:01<small>5 天前</small></time></header><div class="pt">Haiku 5.5 is a significant step up over Haiku 4.5 across coding, computer use, and knowledge work. https://t.co/9m45nEJfYZ</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="Haiku 5.5 is a significant step up over Haiku 4.5 across coding, computer use, and knowledge work. https://t.co/9m45nEJfYZ
+— Claude (@claudeai)
+https://x.com/claudeai/status/2107894042235166750">复制原文</button><a class="op" href="https://x.com/claudeai/status/2107894042235166750" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>6,327</span><span class="mc" title="转发"><i>⇄</i>346</span><span class="mc" title="评论"><i>💬</i>153</span><span class="mc" title="浏览"><i>👁</i>83.0万</span></div></footer></article><article class="post c6" data-s="introducing claude haiku 5.5: the cheapest, fastest, and most capable small model we’ve ever released.
+
+on average, it costs around 75% less to run than claude haiku 4.5. https://t.co/jm06czjfkv"><header><span class="av" style="--h:46">C</span><div class="who"><div class="nm"><span>Claude</span></div><div class="hd">@claudeai</div></div><time class="tm" title="10-08 02:01 北京时间">10-08 02:01<small>5 天前</small></time></header><div class="pt">Introducing Claude Haiku 5.5: the cheapest, fastest, and most capable small model we’ve ever released.
+
+On average, it costs around 75% less to run than Claude Haiku 4.5. https://t.co/jm06cZJfkV</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="Introducing Claude Haiku 5.5: the cheapest, fastest, and most capable small model we’ve ever released.
+
+On average, it costs around 75% less to run than Claude Haiku 4.5. https://t.co/jm06cZJfkV
+— Claude (@claudeai)
+https://x.com/claudeai/status/2107894039626277339">复制原文</button><a class="op" href="https://x.com/claudeai/status/2107894039626277339" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>4.5万</span><span class="mc" title="转发"><i>⇄</i>3,269</span><span class="mc" title="评论"><i>💬</i>1,583</span><span class="mc" title="浏览"><i>👁</i>649.2万</span></div></footer></article><article class="post c6" data-s="watch the full conversation with @danshipper and willie williams on how they built it: https://t.co/pufvxr90ox"><header><span class="av" style="--h:46">C</span><div class="who"><div class="nm"><span>Claude</span></div><div class="hd">@claudeai</div></div><time class="tm" title="10-07 04:50 北京时间">10-07 04:50<small>6 天前</small></time></header><div class="pt">Watch the full conversation with @danshipper and Willie Williams on how they built it: https://t.co/PUfvXR90Ox</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="Watch the full conversation with @danshipper and Willie Williams on how they built it: https://t.co/PUfvXR90Ox
+— Claude (@claudeai)
+https://x.com/claudeai/status/2107574198482927900">复制原文</button><a class="op" href="https://x.com/claudeai/status/2107574198482927900" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>189</span><span class="mc" title="转发"><i>⇄</i>14</span><span class="mc" title="评论"><i>💬</i>10</span><span class="mc" title="浏览"><i>👁</i>18.1万</span></div></footer></article><article class="post c6" data-s="the every team runs as much work as possible through agents. to help the whole team share skills when a new model comes out, they built a company agent on claude managed agents that everyone uses in slack.
+
+once it caught on internally, they released it to their subscribers. https://t.co/skahbei27k"><header><span class="av" style="--h:46">C</span><div class="who"><div class="nm"><span>Claude</span></div><div class="hd">@claudeai</div></div><time class="tm" title="10-07 04:50 北京时间">10-07 04:50<small>6 天前</small></time></header><div class="pt xp"><span class="xs">The Every team runs as much work as possible through agents. To help the whole team share skills when a new model comes out, they built a company agent on Claude Managed Agents that everyone uses in Slack.
+
+Once it caught on internally, they released it to their subscribers. http…</span><span class="xf">The Every team runs as much work as possible through agents. To help the whole team share skills when a new model comes out, they built a company agent on Claude Managed Agents that everyone uses in Slack.
+
+Once it caught on internally, they released it to their subscribers. https://t.co/sKAhBei27k</span></div>
+<footer><div class="act"><button class="ex" type="button">展开</button><button class="cp" type="button" data-copy="The Every team runs as much work as possible through agents. To help the whole team share skills when a new model comes out, they built a company agent on Claude Managed Agents that everyone uses in Slack.
+
+Once it caught on internally, they released it to their subscribers. https://t.co/sKAhBei27k
+— Claude (@claudeai)
+https://x.com/claudeai/status/2107574195978641911">复制原文</button><a class="op" href="https://x.com/claudeai/status/2107574195978641911" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>2,554</span><span class="mc" title="转发"><i>⇄</i>139</span><span class="mc" title="评论"><i>💬</i>184</span><span class="mc" title="浏览"><i>👁</i>36.6万</span></div></footer></article><article class="post c6" data-s="in claude, paste a google file link or ask for a new doc, sheet, or deck, and it opens beside the chat for you and claude to edit together. access follows your google sharing permissions.
+
+in beta on all paid plans. give it a try: https://t.co/2pehyzkjtm"><header><span class="av" style="--h:46">C</span><div class="who"><div class="nm"><span>Claude</span></div><div class="hd">@claudeai</div></div><time class="tm" title="10-07 01:25 北京时间">10-07 01:25<small>6 天前</small></time></header><div class="pt">In Claude, paste a Google file link or ask for a new doc, sheet, or deck, and it opens beside the chat for you and Claude to edit together. Access follows your Google sharing permissions.
+
+In beta on all paid plans. Give it a try: https://t.co/2PehYZKjTm</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="In Claude, paste a Google file link or ask for a new doc, sheet, or deck, and it opens beside the chat for you and Claude to edit together. Access follows your Google sharing permissions.
+
+In beta on all paid plans. Give it a try: https://t.co/2PehYZKjTm
+— Claude (@claudeai)
+https://x.com/claudeai/status/2107522599530139767">复制原文</button><a class="op" href="https://x.com/claudeai/status/2107522599530139767" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>1,582</span><span class="mc" title="转发"><i>⇄</i>62</span><span class="mc" title="评论"><i>💬</i>17</span><span class="mc" title="浏览"><i>👁</i>59.9万</span></div></footer></article><article class="post c6" data-s="claude now works inside google docs, sheets, and slides, and those files also open inside claude.
+
+in google workspace, claude sits in a sidebar next to your file, reads what you have open, and edits it in place. you can approve each edit before it lands. https://t.co/se9wis7vk1"><header><span class="av" style="--h:46">C</span><div class="who"><div class="nm"><span>Claude</span></div><div class="hd">@claudeai</div></div><time class="tm" title="10-07 01:25 北京时间">10-07 01:25<small>6 天前</small></time></header><div class="pt">Claude now works inside Google Docs, Sheets, and Slides, and those files also open inside Claude.
+
+In Google Workspace, Claude sits in a sidebar next to your file, reads what you have open, and edits it in place. You can approve each edit before it lands. https://t.co/se9wIS7vK1</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="Claude now works inside Google Docs, Sheets, and Slides, and those files also open inside Claude.
+
+In Google Workspace, Claude sits in a sidebar next to your file, reads what you have open, and edits it in place. You can approve each edit before it lands. https://t.co/se9wIS7vK1
+— Claude (@claudeai)
+https://x.com/claudeai/status/2107522596845822135">复制原文</button><a class="op" href="https://x.com/claudeai/status/2107522596845822135" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>5.4万</span><span class="mc" title="转发"><i>⇄</i>4,300</span><span class="mc" title="评论"><i>💬</i>845</span><span class="mc" title="浏览"><i>👁</i>1322.0万</span></div></footer></article><article class="post c6" data-s="you&#x27;ll also receive up to $7,000 in claude products and credits to build with.  
+
+that includes a free year of claude team for companies new to team, plus $1,000 in api credits as soon as you’re approved."><header><span class="av" style="--h:46">C</span><div class="who"><div class="nm"><span>Claude</span></div><div class="hd">@claudeai</div></div><time class="tm" title="10-07 01:20 北京时间">10-07 01:20<small>6 天前</small></time></header><div class="pt">You&#x27;ll also receive up to $7,000 in Claude products and credits to build with.  
+
+That includes a free year of Claude Team for companies new to Team, plus $1,000 in API credits as soon as you’re approved.</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="You&#x27;ll also receive up to $7,000 in Claude products and credits to build with.  
+
+That includes a free year of Claude Team for companies new to Team, plus $1,000 in API credits as soon as you’re approved.
+— Claude (@claudeai)
+https://x.com/claudeai/status/2107521446570303997">复制原文</button><a class="op" href="https://x.com/claudeai/status/2107521446570303997" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>837</span><span class="mc" title="转发"><i>⇄</i>18</span><span class="mc" title="评论"><i>💬</i>33</span><span class="mc" title="浏览"><i>👁</i>29.1万</span></div></footer></article><article class="post c6" data-s="you can also book virtual office hours with anthropic’s applied ai team, and join claude startups events like founder house, hackathons, and meetups as space allows.
+
+startups founded in the last five years or funded in the last two are eligible to apply: https://t.co/nid82rxhtn"><header><span class="av" style="--h:46">C</span><div class="who"><div class="nm"><span>Claude</span></div><div class="hd">@claudeai</div></div><time class="tm" title="10-07 00:49 北京时间">10-07 00:49<small>6 天前</small></time></header><div class="pt">You can also book virtual office hours with Anthropic’s Applied AI team, and join Claude Startups events like Founder House, hackathons, and meetups as space allows.
+
+Startups founded in the last five years or funded in the last two are eligible to apply: https://t.co/niD82RXHTN</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="You can also book virtual office hours with Anthropic’s Applied AI team, and join Claude Startups events like Founder House, hackathons, and meetups as space allows.
+
+Startups founded in the last five years or funded in the last two are eligible to apply: https://t.co/niD82RXHTN
+— Claude (@claudeai)
+https://x.com/claudeai/status/2107513501576999318">复制原文</button><a class="op" href="https://x.com/claudeai/status/2107513501576999318" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>973</span><span class="mc" title="转发"><i>⇄</i>36</span><span class="mc" title="评论"><i>💬</i>23</span><span class="mc" title="浏览"><i>👁</i>32.6万</span></div></footer></article><article class="post c6" data-s="the new claude startup stack brings together offers from companies building with claude, including linear, lovable, elevenlabs, granola, and hex.
+
+you’ll get discounts and credits worth up to $45,000 on tools for sales, design, data engineering, and more. https://t.co/yzbotw454d"><header><span class="av" style="--h:46">C</span><div class="who"><div class="nm"><span>Claude</span></div><div class="hd">@claudeai</div></div><time class="tm" title="10-07 00:49 北京时间">10-07 00:49<small>6 天前</small></time></header><div class="pt">The new Claude Startup Stack brings together offers from companies building with Claude, including Linear, Lovable, ElevenLabs, Granola, and Hex.
+
+You’ll get discounts and credits worth up to $45,000 on tools for sales, design, data engineering, and more. https://t.co/yZBotW454D</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="The new Claude Startup Stack brings together offers from companies building with Claude, including Linear, Lovable, ElevenLabs, Granola, and Hex.
+
+You’ll get discounts and credits worth up to $45,000 on tools for sales, design, data engineering, and more. https://t.co/yZBotW454D
+— Claude (@claudeai)
+https://x.com/claudeai/status/2107513497420710203">复制原文</button><a class="op" href="https://x.com/claudeai/status/2107513497420710203" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>1,208</span><span class="mc" title="转发"><i>⇄</i>38</span><span class="mc" title="评论"><i>💬</i>45</span><span class="mc" title="浏览"><i>👁</i>40.6万</span></div></footer></article><article class="post c6" data-s="the claude startups program is expanding to more founders.
+
+members can get a year of claude team, api credits, special offers on the tools a startup runs on, and office hours with anthropic’s applied ai team. https://t.co/3mug1whifl"><header><span class="av" style="--h:46">C</span><div class="who"><div class="nm"><span>Claude</span></div><div class="hd">@claudeai</div></div><time class="tm" title="10-07 00:49 北京时间">10-07 00:49<small>6 天前</small></time></header><div class="pt">The Claude Startups program is expanding to more founders.
+
+Members can get a year of Claude Team, API credits, special offers on the tools a startup runs on, and office hours with Anthropic’s Applied AI team. https://t.co/3MUg1whIfl</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="The Claude Startups program is expanding to more founders.
+
+Members can get a year of Claude Team, API credits, special offers on the tools a startup runs on, and office hours with Anthropic’s Applied AI team. https://t.co/3MUg1whIfl
+— Claude (@claudeai)
+https://x.com/claudeai/status/2107513494493179954">复制原文</button><a class="op" href="https://x.com/claudeai/status/2107513494493179954" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>1.9万</span><span class="mc" title="转发"><i>⇄</i>1,236</span><span class="mc" title="评论"><i>💬</i>735</span><span class="mc" title="浏览"><i>👁</i>572.8万</span></div></footer></article><article class="post c6" data-s="what are you exploring with claude this weekend?"><header><span class="av" style="--h:46">C</span><div class="who"><div class="nm"><span>Claude</span></div><div class="hd">@claudeai</div></div><time class="tm" title="10-03 04:53 北京时间">10-03 04:53<small>10 天前</small></time></header><div class="pt">What are you exploring with Claude this weekend?</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="What are you exploring with Claude this weekend?
+— Claude (@claudeai)
+https://x.com/claudeai/status/2106125480193913276">复制原文</button><a class="op" href="https://x.com/claudeai/status/2106125480193913276" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>305</span><span class="mc" title="转发"><i>⇄</i>2</span><span class="mc" title="评论"><i>💬</i>89</span><span class="mc" title="浏览"><i>👁</i>10.0万</span></div></footer></article><article class="post c6" data-s="a jet engine in interactive 3d you can cut away and pull apart, made with opus 5.5.
+https://t.co/0q8bzjai4t"><header><span class="av" style="--h:46">C</span><div class="who"><div class="nm"><span>Claude</span></div><div class="hd">@claudeai</div></div><time class="tm" title="10-03 04:53 北京时间">10-03 04:53<small>10 天前</small></time></header><div class="pt">A jet engine in interactive 3D you can cut away and pull apart, made with Opus 5.5.
+https://t.co/0q8bZJAi4T</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="A jet engine in interactive 3D you can cut away and pull apart, made with Opus 5.5.
+https://t.co/0q8bZJAi4T
+— Claude (@claudeai)
+https://x.com/claudeai/status/2106125478956507480">复制原文</button><a class="op" href="https://x.com/claudeai/status/2106125478956507480" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>1,582</span><span class="mc" title="转发"><i>⇄</i>87</span><span class="mc" title="评论"><i>💬</i>21</span><span class="mc" title="浏览"><i>👁</i>25.6万</span></div></footer></article><article class="post c6" data-s="a pop-up city where each building is a paper fold drawn on a flat canvas, sonnet 5.5.
+https://t.co/04cupor4tg"><header><span class="av" style="--h:46">C</span><div class="who"><div class="nm"><span>Claude</span></div><div class="hd">@claudeai</div></div><time class="tm" title="10-03 04:53 北京时间">10-03 04:53<small>10 天前</small></time></header><div class="pt">A pop-up city where each building is a paper fold drawn on a flat canvas, Sonnet 5.5.
+https://t.co/04cupOr4Tg</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="A pop-up city where each building is a paper fold drawn on a flat canvas, Sonnet 5.5.
+https://t.co/04cupOr4Tg
+— Claude (@claudeai)
+https://x.com/claudeai/status/2106125477710901276">复制原文</button><a class="op" href="https://x.com/claudeai/status/2106125477710901276" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>370</span><span class="mc" title="转发"><i>⇄</i>10</span><span class="mc" title="评论"><i>💬</i>9</span><span class="mc" title="浏览"><i>👁</i>5.4万</span></div></footer></article></div></div>
+<footer>数据：X API get_users_posts · 生成于 2026-10-13 16:21 北京时间</footer></div><script>
+(function(){var d=document.documentElement,mq=matchMedia('(prefers-color-scheme: dark)');
+function sync(){document.querySelectorAll('[data-set-theme]').forEach(function(b){b.classList.toggle('on',b.dataset.setTheme===d.dataset.pref)})}
+function theme(){var p=d.dataset.pref;d.dataset.theme=p==='auto'?(mq.matches?'dark':'light'):p}
+document.querySelectorAll('[data-set-theme]').forEach(function(b){b.onclick=function(){d.dataset.pref=b.dataset.setTheme;try{localStorage.setItem('xhot-theme',b.dataset.setTheme)}catch(e){}theme();sync()}});
+(mq.addEventListener?mq.addEventListener('change',theme):mq.addListener(theme));
+document.querySelectorAll('[data-t]').forEach(function(b){b.onclick=function(){var t=b.dataset.t;
+document.querySelectorAll('[data-t]').forEach(function(x){x.classList.toggle('on',x.dataset.t===t)});
+document.querySelectorAll('.pane').forEach(function(x){x.classList.toggle('on',x.dataset.p===t)});
+document.querySelectorAll('.li-d').forEach(function(x){x.hidden=x.dataset.p!==t});scrollTo({top:0})}});sync();
+function fb(t){var a=document.createElement('textarea');a.value=t;a.setAttribute('readonly','');a.style.cssText='position:fixed;top:-1000px;opacity:0';document.body.appendChild(a);a.select();var ok=false;try{ok=document.execCommand('copy')}catch(e){}document.body.removeChild(a);return ok}
+document.addEventListener('click',function(ev){var b=ev.target.closest('.cp');if(b){var t=b.getAttribute('data-copy');
+function done(ok){b.textContent=ok?'已复制 ✓':'复制失败';b.classList.toggle('ok',ok);clearTimeout(b._t);b._t=setTimeout(function(){b.textContent='复制原文';b.classList.remove('ok')},1600)}
+if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(t).then(function(){done(true)},function(){done(fb(t))})}else done(fb(t));return}
+var x=ev.target.closest('.ex');if(x){var c=x.closest('.post').querySelector('.xp');var o=c.classList.toggle('open');x.textContent=o?'收起':'展开'}})})();
+</script><script>(function(){var q=document.getElementById('q'),c=document.getElementById('cnt'),a=document.getElementById('alll'),ps=[].slice.call(document.querySelectorAll('.feed1 .post'));
+function run(){var v=q.value.trim().toLowerCase(),all=a&&a.checked,k=0,n=0;ps.forEach(function(p){var lo=!p.dataset.ol||all;if(lo)n++;var ok=lo&&(!v||p.dataset.s.indexOf(v)>=0);p.hidden=!ok;if(ok)k++});c.textContent=v?('匹配 '+k+' / '+n+' 条'):(n+' 条')}
+q.addEventListener('input',run);if(a)a.addEventListener('change',run)})();</script></body></html>

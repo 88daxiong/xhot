@@ -1,0 +1,646 @@
+<!doctype html><html lang="zh-CN" data-theme="light" data-pref="auto"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><title>Sundar Pichai (@sundarpichai) · XHOT</title><script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('xhot-theme')}catch(e){}t=(t==='light'||t==='dark')?t:'auto';d.setAttribute('data-pref',t);d.setAttribute('data-theme',t==='auto'?(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'):t)})();
+</script><style>:root{--bg:#f7f7f8;--card:#fff;--bd:#e4e4e7;--bd2:#f0f0f2;--zebra:#fafafa;--hov:#f4f4f6;--tx:#18181b;--tx2:#3f3f46;--mu:#71717a;--mu2:#a1a1aa;--ac:#4f46e5;--acbg:#eef2ff;--actx:#4338ca;--up:#16a34a;--upbg:#f0fdf4;--dn:#dc2626;--dnbg:#fef2f2;--r:8px;--sh:0 1px 2px rgba(24,24,27,.04)}
+html[data-theme=dark]{--bg:#09090b;--card:#131316;--bd:#27272a;--bd2:#1c1c20;--zebra:#16161a;--hov:#1d1d22;--tx:#f4f4f5;--tx2:#d4d4d8;--mu:#a1a1aa;--mu2:#71717a;--ac:#818cf8;--acbg:#1e1b4b;--actx:#a5b4fc;--up:#4ade80;--upbg:#0f2a1a;--dn:#f87171;--dnbg:#2d1214;--sh:none}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--tx);font:400 13px/1.5 "Inter","PingFang SC","HarmonyOS Sans SC","Noto Sans SC","Noto Sans CJK SC",-apple-system,BlinkMacSystemFont,"Microsoft YaHei",sans-serif;-webkit-font-smoothing:antialiased;font-feature-settings:"cv11","ss01"}
+a{color:inherit;text-decoration:none}button{font:inherit}
+.num,.f,.d,.r,.sv,.nc,.heat,.pc,.tr3,.kv dd,.post footer{font-variant-numeric:tabular-nums}
+/* 顶栏 */
+.top{position:sticky;top:0;z-index:30;background:color-mix(in srgb,var(--card) 92%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--bd)}
+.ti2{max-width:1440px;margin:auto;height:56px;padding:0 24px;display:flex;align-items:center;gap:16px}
+.lg{display:flex;align-items:center;gap:8px;font-weight:600;font-size:16px;letter-spacing:-.01em}.lg i{width:24px;height:24px;border-radius:6px;background:var(--ac);display:grid;place-items:center;font-style:normal;color:#fff;font-size:12px}.lg span{font-weight:400;font-size:13px;color:var(--mu);margin-left:4px;padding-left:12px;border-left:1px solid var(--bd)}
+.mtabs{display:none}
+.tg{margin-left:auto;display:flex;border:1px solid var(--bd);border-radius:var(--r);padding:2px;background:var(--card)}.tg button{border:0;background:none;color:var(--mu);height:28px;padding:0 10px;border-radius:6px;cursor:pointer;font-size:12px}.tg button.on{background:var(--hov);color:var(--tx);font-weight:500}
+/* 12 列网格 */
+.wrap{max-width:1440px;margin:auto;padding:24px 24px 32px}
+.stats,.shell{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:16px}.shell{align-items:start}
+.stats{margin-bottom:24px}.st{grid-column:span 2}
+.left{grid-column:span 2}.content{grid-column:span 10;min-width:0}
+.cols{display:grid;grid-template-columns:repeat(10,minmax(0,1fr));gap:16px;align-items:start}.mid{grid-column:span 7;min-width:0}.right{grid-column:span 3;min-width:0}
+/* 统计条 */
+.st{background:var(--card);border:1px solid var(--bd);border-radius:var(--r);padding:12px 16px;min-width:0;box-shadow:var(--sh)}
+.sl{font-size:12px;color:var(--mu);line-height:16px}.sv{font-size:20px;font-weight:600;line-height:28px;letter-spacing:-.01em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.ss{font-size:12px;color:var(--mu);line-height:16px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.st:nth-child(3) .sv{color:var(--ac)}
+/* 区块标题：统一 24px 行高，底部 8px */
+.bh{display:flex;align-items:center;gap:8px;height:24px;margin:0 0 8px}.bh h2{font-size:14px;font-weight:600;margin:0;line-height:24px}.hint{font-size:12px;color:var(--mu)}.credit{margin-left:auto;font-size:12px;font-weight:500;color:var(--ac)}.credit:hover{text-decoration:underline}
+.blk{margin-bottom:24px}
+/* 左栏 */
+.left{position:sticky;top:80px;display:flex;flex-direction:column;gap:16px}.left>.bh{margin-bottom:-8px}
+.lcard{background:var(--card);border:1px solid var(--bd);border-radius:var(--r);padding:8px;box-shadow:var(--sh)}
+.nav{display:flex;flex-direction:column;gap:2px}.nv{display:grid;grid-template-columns:24px minmax(0,1fr) auto;align-items:center;gap:8px;height:36px;border:0;background:none;color:var(--tx2);padding:0 8px;border-radius:6px;cursor:pointer;text-align:left;font-size:13px;font-weight:500}
+.nv:hover{background:var(--hov)}.nv.on{background:var(--acbg);color:var(--actx)}.ni{width:24px;height:24px;border-radius:6px;display:grid;place-items:center;background:var(--bd2);color:var(--mu);font-size:12px}.nv.on .ni{background:var(--ac);color:#fff}.nc{font-size:12px;color:var(--mu)}
+.kv{margin:0}.kv div{display:flex;justify-content:space-between;align-items:center;height:32px;padding:0 8px;border-bottom:1px solid var(--bd2);font-size:13px}.kv div:last-child{border-bottom:0}.kv dt{color:var(--mu)}.kv dd{margin:0;font-weight:500}
+.mini{padding:8px;border-top:1px solid var(--bd2)}.mt{font-size:12px;color:var(--mu);line-height:16px;margin-bottom:4px}.mv{font-weight:500;display:flex;align-items:center;justify-content:space-between;gap:8px}.mv2{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;font-size:13px;font-weight:500}.mv2:hover{color:var(--ac)}.mm{font-size:12px;color:var(--mu)}
+.mini .sp{height:24px;margin-top:8px}
+.tl{list-style:none;margin:0;padding:0}.tl li a{display:grid;grid-template-columns:16px minmax(0,1fr) auto;gap:8px;align-items:center;height:28px;padding:0 4px;border-radius:4px;font-size:13px}.tl li a:hover{background:var(--hov)}.tl .k{color:var(--mu2);font-size:12px;text-align:right}.tl .n{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.lnote{font-size:12px;color:var(--mu);padding:12px}.lnote b{display:block;color:var(--tx2);font-weight:500;margin-bottom:4px}.lnote p{margin:0 0 4px}.lnote a{color:var(--ac)}
+/* 涨跌徽章：唯一使用红绿的地方 */
+.pc{display:inline-flex;align-items:center;gap:2px;height:20px;font-size:12px;font-weight:500;padding:0 6px;border-radius:4px;white-space:nowrap}.pc.up{color:var(--up);background:var(--upbg)}.pc.dn{color:var(--dn);background:var(--dnbg)}
+.sp{display:block;width:100%;fill:none;stroke-width:1.5;stroke-linejoin:round;stroke-linecap:round}.sp.up,.tile.up .sp{stroke:var(--up)}.sp.dn,.tile.dn .sp{stroke:var(--dn)}
+/* 趋势 */
+.pane{display:none}.pane.on{display:block}
+.tiles{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
+.tile{background:var(--card);border:1px solid var(--bd);border-radius:var(--r);padding:8px 12px;height:88px;display:grid;grid-template-rows:20px 1fr 16px;gap:4px;box-shadow:var(--sh);min-width:0}
+.tile:hover{border-color:var(--mu2)}.tr1{display:grid;grid-template-columns:16px minmax(0,1fr) auto;gap:8px;align-items:center}.tk{font-size:12px;color:var(--mu2);text-align:right}.tn{font-size:13px;font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tile .sp{height:100%;opacity:.9}.tr3{display:flex;justify-content:space-between;font-size:12px;line-height:16px;color:var(--mu)}.tr3 b{color:var(--tx2);font-weight:500}
+/* 热帖 */
+.feed{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.post{background:var(--card);border:1px solid var(--bd);border-radius:var(--r);padding:12px 16px 8px;display:flex;flex-direction:column;min-width:0;box-shadow:var(--sh)}.post:hover{border-color:var(--mu2)}
+.post header{display:grid;grid-template-columns:32px minmax(0,1fr) auto;gap:8px;align-items:center;height:32px}
+.av{--h:220;width:32px;height:32px;border-radius:50%;display:inline-grid;place-items:center;flex:none;font-weight:600;font-size:13px;color:hsl(var(--h) 30% 32%);background:hsl(var(--h) 30% 92%)}
+html[data-theme=dark] .av{color:hsl(var(--h) 35% 80%);background:hsl(var(--h) 15% 22%)}
+.av.s{width:24px;height:24px;font-size:11px}.av.xs{width:20px;height:20px;font-size:10px;margin-left:-6px;border:2px solid var(--card)}.av.xs:first-child{margin-left:0}
+.who{min-width:0;line-height:16px}.nm{display:flex;align-items:center;gap:6px;font-size:13px;font-weight:600;min-width:0}.nm a{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.nm a:hover{color:var(--ac)}.hd{font-size:12px;color:var(--mu);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.heat{font-size:12px;font-weight:500;color:var(--mu);height:20px;line-height:20px;padding:0 6px;border:1px solid var(--bd);border-radius:4px}
+.pt{flex:1;margin:8px 0;font-size:13px;line-height:1.6;color:var(--tx2);white-space:pre-wrap;word-break:break-word}.xp .xf{display:none}.xp.open .xs{display:none}.xp.open .xf{display:inline}
+.post footer{display:flex;align-items:center;gap:10px;height:32px;font-size:12px;color:var(--mu);border-top:1px solid var(--bd2);white-space:nowrap;overflow:hidden}.sp1{flex:1}
+.cp,.ex{height:24px;border:1px solid var(--bd);background:var(--card);color:var(--tx2);font-size:12px;font-weight:500;padding:0 8px;border-radius:6px;cursor:pointer}.cp:hover,.ex:hover{border-color:var(--ac);color:var(--ac)}.cp.ok{border-color:var(--up);color:var(--up)}
+.op{width:24px;height:24px;display:grid;place-items:center;border-radius:6px;color:var(--mu)}.op:hover{background:var(--hov);color:var(--ac)}
+.zh{font-size:11px;font-weight:500;color:var(--mu);border:1px solid var(--bd);border-radius:4px;padding:0 4px;line-height:16px;flex:none}
+/* 右栏 */
+.right{display:flex;flex-direction:column;gap:24px;position:sticky;top:80px}
+.rcard,.acard{background:var(--card);border:1px solid var(--bd);border-radius:var(--r);box-shadow:var(--sh);min-width:0;overflow:hidden}
+.rhd{display:flex;align-items:center;gap:8px;height:24px;margin-bottom:8px}
+.rcard .tw{max-height:560px;overflow:auto}
+/* 表格 */
+table{width:100%;border-collapse:separate;border-spacing:0;font-size:13px}
+th{height:32px;font-size:12px;font-weight:500;color:var(--mu);text-align:left;padding:0 12px;background:var(--zebra);border-bottom:1px solid var(--bd);white-space:nowrap}
+thead th{position:sticky;top:0;z-index:2}
+td{height:36px;padding:0 12px;border-bottom:1px solid var(--bd2);vertical-align:middle}tbody tr:last-child td{border-bottom:0}
+tbody tr:not(.g):hover td{background:var(--hov)}
+th.num,td.num,th.f,td.f,th.d,td.d{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}th.r,td.r{width:40px;text-align:right;color:var(--mu2);padding-right:4px;font-variant-numeric:tabular-nums}
+.lbt{table-layout:fixed}.lbt th.r,.lbt td.r{width:36px}.lbt th.f,.lbt td.f{width:72px;font-weight:500}.lbt th.d,.lbt td.d{width:64px;color:var(--mu);font-size:12px;padding-left:0}
+.lbt td.n a{display:flex;align-items:center;gap:8px;min-width:0}.lbt .nt{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:500}.lbt td.n a:hover .nt{color:var(--ac)}
+tr.g th{position:sticky;top:32px;z-index:1;height:28px;background:var(--card);color:var(--tx2);font-size:12px;font-weight:600;border-bottom:1px solid var(--bd2)}tr.g th span{color:var(--mu);font-weight:400;margin-left:4px}
+.news{list-style:none;margin:0;padding:0 12px}.news li{border-top:1px solid var(--bd2)}.news li:first-child{border-top:0}.news a{display:block;padding:8px 0}.news .t{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;font-weight:500;font-size:13px;line-height:20px}.news a:hover .t{color:var(--ac)}.news .m{display:block;font-size:12px;color:var(--mu);line-height:16px;margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+/* 卡片内标题：所有卡片头 48px */
+.rcard>.bh,.acard>.bh{height:48px;margin:0;padding:0 12px;border-bottom:1px solid var(--bd)}
+/* AIHOT */
+.ahsec{margin-top:8px;padding-top:24px;border-top:1px solid var(--bd)}
+.ahh{display:flex;align-items:center;gap:12px;height:28px;margin-bottom:16px}.ahh .k{font-size:12px;font-weight:600;letter-spacing:.08em;color:var(--ac)}.ahh h2{margin:0;font-size:20px;font-weight:600;letter-spacing:-.01em}.ahh a{margin-left:auto;font-size:12px;font-weight:500;color:var(--ac)}
+.agrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.acard.wide{grid-column:1/-1}
+.ht{table-layout:fixed}.ht td.ti a{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:500}.ht td.ti a:hover{color:var(--ac)}.ht th:nth-child(3),.ht td.sv{width:104px}.ht th:nth-child(4),.ht td.hb{width:160px}.ht th.num,.ht td.num{width:72px}
+.rk{display:inline-grid;place-items:center;width:20px;height:20px;border-radius:4px;color:var(--mu);font-weight:500;font-size:12px}.rk.top{background:var(--acbg);color:var(--actx);font-weight:600}
+.bar{display:block;height:4px;border-radius:2px;background:var(--bd2);overflow:hidden}.bar i{display:block;height:100%;border-radius:2px;background:var(--ac);opacity:.75}
+.lead{display:block;margin:12px;padding:12px 16px;border-radius:6px;background:var(--zebra);border:1px solid var(--bd2)}.lead b{display:block;font-size:16px;font-weight:600;line-height:24px}.lead span{display:block;font-size:13px;color:var(--tx2);margin-top:4px}.lead:hover b{color:var(--ac)}
+.dg{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:16px;padding:0 12px 12px}.dl{font-size:12px;font-weight:600;color:var(--tx2);height:28px;line-height:28px;border-bottom:1px solid var(--bd)}.ds ul{list-style:none;margin:0;padding:0}.ds li a{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;font-size:13px;line-height:20px;padding:6px 0;border-bottom:1px solid var(--bd2);color:var(--tx2)}.ds li a:hover{color:var(--ac)}
+.exg{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:var(--bd2)}.exc{display:grid;grid-template-rows:auto 1fr auto;gap:4px;padding:12px 16px;background:var(--card);min-height:132px}.exc:hover{background:var(--hov)}
+.et{display:flex;gap:8px;align-items:flex-start}.et span{flex:1;font-weight:600;font-size:13px;line-height:20px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}.sc{font-size:12px;font-weight:500;color:var(--actx);background:var(--acbg);border-radius:4px;padding:0 6px;line-height:20px;font-variant-numeric:tabular-nums}
+.exc p{margin:0;font-size:12px;color:var(--mu);line-height:18px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}.em{font-size:12px;color:var(--mu2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.mtb .mn{font-weight:500}.mtb td{white-space:nowrap}.scc{width:180px}td.scc{text-align:right}.scc .bar{display:inline-block;width:96px;vertical-align:middle;margin-right:12px}.scc b{font-weight:600;font-variant-numeric:tabular-nums;display:inline-block;width:36px;text-align:right}
+.chips{display:flex;flex-wrap:wrap;gap:8px;padding:12px}.chips a{height:28px;line-height:26px;font-size:12px;padding:0 12px;border-radius:14px;color:var(--tx2);border:1px solid var(--bd)}.chips a:hover{border-color:var(--ac);color:var(--ac)}
+footer{max-width:1440px;margin:24px auto 0;padding-top:16px;border-top:1px solid var(--bd);font-size:12px;color:var(--mu)}footer a{color:var(--ac)}
+/* 响应式 */
+@media(max-width:1600px){.post footer .rp{display:none}}@media(max-width:1360px){.lbt th.f,.lbt td.f{width:64px}.lbt th.d,.lbt td.d{width:52px}.lbt th.r,.lbt td.r{width:28px}td,th{padding:0 8px}.tiles{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:1180px){.left{display:none}.content{grid-column:1/-1}.st{grid-column:span 4}.mtabs{display:flex;gap:4px}.mt1{height:32px;border:0;background:none;color:var(--tx2);padding:0 12px;border-radius:6px;cursor:pointer;font-weight:500;font-size:13px}.mt1.on{background:var(--acbg);color:var(--actx)}}
+@media(max-width:900px){.cols{grid-template-columns:1fr}.mid,.right{grid-column:1/-1}.right{position:static}.agrid{grid-template-columns:1fr}.dg{grid-template-columns:repeat(2,minmax(0,1fr))}.exg{grid-template-columns:1fr 1fr}}
+@media(max-width:640px){.ti2{flex-wrap:wrap;height:auto;padding:8px 16px;gap:8px}.lg span{display:none}.mtabs{order:3;width:100%}.mt1{flex:1}.wrap{padding:16px 12px 24px}
+.stats{gap:8px;margin-bottom:16px}.st{grid-column:span 6;padding:8px 12px}.sv{font-size:16px;line-height:24px}.tiles{grid-template-columns:repeat(2,minmax(0,1fr))}.feed{grid-template-columns:1fr}.exg{grid-template-columns:1fr}
+.ht th:nth-child(3),.ht td.sv,.ht th:nth-child(4),.ht td.hb,.ht th:nth-child(6),.ht td:nth-child(6){display:none}.mtb th:nth-child(3),.mtb td:nth-child(3),.mtb th:nth-child(4),.mtb td:nth-child(4),.mtb th:nth-child(5),.mtb td:nth-child(5){display:none}.scc{width:auto}.scc .bar{display:none}.ahh{height:auto;flex-wrap:wrap}.ahh a{margin-left:0}.dg{grid-template-columns:1fr}}
+/* ===== v5 color layer ===== */
+:root{--ac:#7c3aed;--acbg:#f3e8ff;--actx:#6d28d9;--g1:#7c3aed;--g2:#db2777;--g3:#f97316;--bg:#f6f5fb;--glow:rgba(124,58,237,.18)}
+html[data-theme=dark]{--bg:#110d2e;--card:#1a1640;--bd:#2a2652;--bd2:#1e1b40;--zebra:#171536;--hov:#1f1c45;--mu:#a5a3c9;--mu2:#77749e;--ac:#c084fc;--acbg:#2e1a5c;--actx:#e9d5ff;--up:#4ade80;--dn:#fb7185;--glow:rgba(192,132,252,.28)}
+html[data-theme=dark],html[data-theme=dark] body{background-attachment:fixed;background:radial-gradient(1200px 600px at 10% -10%,#2a1660 0,transparent 60%),radial-gradient(900px 500px at 100% 0,#3b0d4a 0,transparent 55%),var(--bg)}
+.lg i{background:linear-gradient(135deg,var(--g1),var(--g2))!important;color:#fff!important}
+.stats{background:linear-gradient(110deg,#6d28d9 0%,#a21caf 50%,#db2777 85%,#f97316 120%);border-radius:12px;padding:16px;box-shadow:0 8px 24px -8px rgba(162,28,175,.45)}
+html[data-theme=dark] .stats{background:linear-gradient(110deg,#4c1d95 0%,#86198f 55%,#be185d 100%);box-shadow:0 0 0 1px rgba(232,121,249,.25),0 10px 30px -10px rgba(217,70,239,.5)}
+.stats .st{background:rgba(255,255,255,.12)!important;border:1px solid rgba(255,255,255,.22)!important;box-shadow:none!important;backdrop-filter:blur(4px)}
+.stats .st *{color:#fff!important}
+.stats .st .sl,.stats .st .ss{color:rgba(255,255,255,.82)!important}
+/* heat tiles */
+.tile{position:relative;overflow:hidden;transition:transform .15s,box-shadow .15s}
+.tile.up{background:linear-gradient(135deg,rgba(249,115,22,calc(var(--a)*.10 + .03)),rgba(239,68,68,calc(var(--a)*.28 + .04))),var(--card);border-color:rgba(239,68,68,calc(var(--a)*.45 + .12))}
+.tile.dn{background:linear-gradient(135deg,rgba(56,189,248,.05),rgba(59,130,246,calc(var(--a)*.22 + .05))),var(--card);border-color:rgba(59,130,246,.25)}
+.tile.up .sp{stroke:#ea580c}.tile.dn .sp{stroke:#2563eb}
+html[data-theme=dark] .tile.up .sp{stroke:#fb923c}html[data-theme=dark] .tile.dn .sp{stroke:#60a5fa}
+.tile:hover{transform:translateY(-1px);box-shadow:0 6px 18px -6px rgba(239,68,68,.35)}
+/* domain chips */
+.nv[data-t=ai] .ni,.mtabs [data-t=ai]{--dc:#7c3aed}
+.nv[data-t=money] .ni,.mtabs [data-t=money]{--dc:#f59e0b}
+.nv[data-t=growth] .ni,.mtabs [data-t=growth]{--dc:#14b8a6}
+.nv[data-t=ai]{--dc:#7c3aed;--dc2:#c026d3}.nv[data-t=money]{--dc:#f59e0b;--dc2:#ea580c}.nv[data-t=growth]{--dc:#14b8a6;--dc2:#22c55e}
+.nv .ni{background:linear-gradient(135deg,var(--dc),var(--dc2))!important;color:#fff!important}
+.nv.on{background:color-mix(in srgb,var(--dc) 12%,var(--card))!important;color:var(--tx)!important;box-shadow:inset 3px 0 0 var(--dc)}
+.nv.on .nc{color:var(--dc)}
+/* gradient avatars */
+.av{background:linear-gradient(135deg,hsl(var(--h) 85% 62%),hsl(calc(var(--h) + 50) 80% 52%))!important;color:#fff!important;text-shadow:0 1px 1px rgba(0,0,0,.2)}
+/* cards accents + glow */
+.lcard,.rcard,.post,.acard{transition:box-shadow .15s,border-color .15s}
+.post{border-top:2px solid color-mix(in srgb,var(--ac) 45%,transparent)!important}
+.post:hover,.rcard:hover,.acard:hover{border-color:color-mix(in srgb,var(--ac) 50%,var(--bd))!important;box-shadow:0 0 0 3px var(--glow)}
+.bh h2{position:relative;padding-left:10px}
+.bh h2::before{content:"";position:absolute;left:0;top:5px;bottom:5px;width:3px;border-radius:2px;background:linear-gradient(var(--g1),var(--g2))}
+a{color:var(--actx)}
+/* ===== v6 layout ===== */
+.mtabs{display:flex!important;gap:4px}
+.mt1{height:32px;border:0;background:none;color:var(--tx2);padding:0 12px;border-radius:6px;cursor:pointer;font-weight:500;font-size:13px}
+.mt1.on{background:color-mix(in srgb,var(--dc) 14%,var(--card));color:var(--tx);box-shadow:inset 0 -2px 0 var(--dc)}
+.ti2{display:flex;align-items:center;gap:16px}
+.ti2 .sp1{flex:1}
+.ahl{font-size:13px;font-weight:500;color:var(--actx);text-decoration:none;padding:0 8px;height:32px;display:inline-flex;align-items:center;border-radius:6px}
+.ahl:hover{background:var(--acbg)}
+.stats.sm{padding:8px 16px;grid-template-columns:repeat(12,minmax(0,1fr))}
+.stats.sm .st{grid-column:span 2;padding:8px 12px;height:auto}
+.stats.sm .sv{font-size:20px;line-height:1.3}
+.g6{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:16px;align-items:start}
+.c-l{grid-column:span 3;min-width:0}.c-m{grid-column:span 6;min-width:0}.c-r{grid-column:span 3;min-width:0;display:flex;flex-direction:column;gap:24px}
+.c-l,.c-r{position:sticky;top:80px;max-height:calc(100vh - 96px);overflow:auto;scrollbar-width:thin}
+.feed1{display:flex;flex-direction:column;gap:8px}
+.post .pt{white-space:pre-wrap;word-break:break-word}
+.post .tm{color:var(--mu);font-variant-numeric:tabular-nums}
+.lbt td.n a{display:flex;align-items:center;gap:8px;min-width:0;color:var(--tx);text-decoration:none}
+.lbt td.n a:hover .nt{color:var(--actx);text-decoration:underline}
+.rlist{list-style:none;margin:0;padding:0}
+.rlist li{border-top:1px solid var(--bd2)}
+.rlist li:first-child{border-top:0}
+.rlist a{display:block;padding:8px 12px;color:var(--tx);text-decoration:none}
+.rlist a:hover{background:var(--hov)}
+.gh .rn{font-weight:600;font-size:13px;color:var(--actx);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.gh .rd{font-size:12px;color:var(--tx2);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;margin:2px 0 4px}
+.gh .rm{display:flex;gap:12px;font-size:12px;color:var(--mu);font-variant-numeric:tabular-nums}
+.gh .rm .td{margin-left:auto;color:#ea580c;font-weight:600}
+html[data-theme=dark] .gh .rm .td{color:#fb923c}
+.gh .lg2{display:inline-flex;align-items:center;gap:4px}.gh .lg2 i{width:8px;height:8px;border-radius:50%;background:hsl(var(--h) 70% 55%)}
+.nws .t{font-size:13px;font-weight:500;line-height:1.5;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.nws .m{font-size:12px;color:var(--mu);margin-top:2px;display:flex;gap:8px}
+.src{display:inline-block;padding:0 6px;border-radius:4px;font-size:12px;font-weight:500;line-height:18px}
+.src.x{background:#e0f2fe;color:#0369a1}.src.d{background:#f3e8ff;color:#7e22ce}.src.s{background:#fce7f3;color:#be185d}
+html[data-theme=dark] .src.x{background:#0c2a44;color:#7dd3fc}html[data-theme=dark] .src.d{background:#2e1a5c;color:#d8b4fe}html[data-theme=dark] .src.s{background:#4a0d2e;color:#f9a8d4}
+.tl2{list-style:none;margin:0;padding:4px 0}
+.tl2 a{display:grid;grid-template-columns:24px 1fr auto;align-items:center;height:32px;padding:0 12px;color:var(--tx);text-decoration:none;gap:8px}
+.tl2 a:hover{background:var(--hov)}
+.tl2 .k{color:var(--mu);font-variant-numeric:tabular-nums;font-size:12px}
+.tl2 .n{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+/* person page */
+.ph{display:grid;grid-template-columns:80px 1fr auto;gap:16px;align-items:center;padding:24px;border-radius:12px;background:linear-gradient(110deg,#6d28d9 0%,#a21caf 55%,#db2777 100%);color:#fff;box-shadow:0 8px 24px -8px rgba(162,28,175,.45)}
+.ph .av.xl{width:80px;height:80px;border-radius:50%;font-size:28px;font-weight:600;display:flex;align-items:center;justify-content:center;border:3px solid rgba(255,255,255,.6)}
+.ph h1{font-size:28px;line-height:1.3;margin:0;font-weight:600}
+.ph .hd{opacity:.85;font-size:14px}
+.ph .bio{margin:8px 0 0;font-size:14px;opacity:.95;white-space:pre-wrap;max-width:720px}
+.ph .fs{text-align:right}
+.ph .fs b{display:block;font-size:28px;font-weight:600;font-variant-numeric:tabular-nums;line-height:1.3}
+.ph .fs span{font-size:12px;opacity:.85}
+.ph .xb{display:inline-flex;margin-top:8px;height:32px;align-items:center;padding:0 12px;border-radius:6px;background:rgba(255,255,255,.18);color:#fff;text-decoration:none;font-weight:500;border:1px solid rgba(255,255,255,.35)}
+.ptool{display:flex;align-items:center;gap:16px;margin:24px 0 8px}
+.ptool input{flex:1;height:40px;border:1px solid var(--bd);border-radius:8px;background:var(--card);color:var(--tx);padding:0 12px;font:inherit;font-size:14px;outline:none}
+.ptool input:focus{border-color:var(--ac);box-shadow:0 0 0 3px var(--glow)}
+.ptool .cnt{color:var(--mu);font-variant-numeric:tabular-nums;white-space:nowrap}
+.pwrap{max-width:880px;margin:0 auto}
+.back{font-size:13px;color:var(--actx);text-decoration:none;display:inline-flex;height:32px;align-items:center;margin-bottom:8px}
+mark{background:#fde68a;color:inherit;border-radius:2px}
+html[data-theme=dark] mark{background:#854d0e}
+@media(max-width:1180px){.c-l{grid-column:span 4}.c-m{grid-column:span 8}.c-r{grid-column:1/-1;position:static;max-height:none;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}}
+@media(max-width:900px){.g6{grid-template-columns:1fr}.c-l,.c-m,.c-r{grid-column:1/-1;position:static;max-height:none}.c-m{order:1}.c-r{order:2;display:flex}.c-l{order:3}.stats.sm .st{grid-column:span 4}}
+@media(max-width:640px){.ti2{flex-wrap:wrap;gap:8px}.mtabs{order:3;width:100%}.mt1{flex:1}.ahl{margin-left:auto}.ti2 .sp1{display:none}.stats.sm{display:none}.ph{grid-template-columns:56px 1fr;padding:16px}.ph .av.xl{width:56px;height:56px;font-size:20px}.ph h1{font-size:20px}.ph .fs{grid-column:1/-1;text-align:left}}
+.post footer{margin:0!important;width:auto!important;max-width:none!important;padding:0!important;text-align:left!important;justify-content:flex-start}
+.c-l .tw{max-height:none;overflow:visible}
+.ph .hd,.ph .hd *{color:rgba(255,255,255,.85)!important}
+/* ===== v6b card consistency ===== */
+.post.c6{padding:16px;gap:0;border:1px solid var(--bd)!important;border-top:3px solid color-mix(in srgb,var(--ac) 55%,transparent)!important;border-radius:10px;background:var(--card)}
+.post.c6 header{display:grid;grid-template-columns:32px minmax(0,1fr) auto;gap:12px;align-items:center;height:40px}
+.post.c6 .who{min-width:0}
+.post.c6 .nm{font-weight:600;font-size:14px;line-height:20px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.post.c6 .nm a{color:var(--tx);text-decoration:none}.post.c6 .nm a:hover{color:var(--actx)}
+.post.c6 .hd{font-size:12px;line-height:18px;color:var(--mu)}
+.post.c6 .tm{text-align:right;font-size:12px;line-height:18px;color:var(--tx2);font-variant-numeric:tabular-nums;white-space:nowrap}
+.post.c6 .tm small{display:block;color:var(--mu);font-size:12px}
+.post.c6 .pt{margin:12px 0;font-size:14px;line-height:1.5;color:var(--tx)}
+.post.c6 footer{display:flex!important;align-items:center;justify-content:space-between!important;height:40px;border-top:1px solid var(--bd2);gap:8px}
+.post.c6 .act{display:flex;gap:8px;align-items:center}
+.post.c6 .op{font-size:12px;color:var(--mu);text-decoration:none;height:28px;display:inline-flex;align-items:center;padding:0 8px;border:1px solid var(--bd);border-radius:6px}
+.post.c6 .op:hover{color:var(--actx);border-color:var(--ac)}
+.post.c6 .met{display:grid;grid-template-columns:repeat(4,64px);gap:0}
+.post.c6 .mc{text-align:right;font-variant-numeric:tabular-nums;color:var(--mu);font-size:12px}
+.post.c6 .mc i{font-style:normal;margin-right:4px;opacity:.75}
+.feed1{gap:12px}
+.ph{grid-template-columns:80px minmax(0,1fr) auto;padding:24px}
+.ph .pi{min-width:0}.ph .bio.dim{opacity:.7}
+.ph .xb{margin:0;align-self:start}
+.pstat{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:12px}
+.psb{background:var(--card);border:1px solid var(--bd);border-radius:10px;padding:12px 16px;border-top:3px solid var(--dcx,#a21caf)}
+.psb:nth-child(1){--dcx:#7c3aed}.psb:nth-child(2){--dcx:#db2777}.psb:nth-child(3){--dcx:#f97316}.psb:nth-child(4){--dcx:#14b8a6}
+.psb .sl{font-size:12px;color:var(--mu)}.psb .sv{font-size:20px;font-weight:600;line-height:1.4;font-variant-numeric:tabular-nums;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.psb .ss{font-size:12px;color:var(--mu)}
+.tgl{display:inline-flex;align-items:center;gap:6px;font-size:13px;color:var(--tx2);white-space:nowrap;cursor:pointer}
+.empty{padding:24px;color:var(--mu)}
+@media(max-width:640px){.pstat{grid-template-columns:repeat(2,minmax(0,1fr))}.ph{grid-template-columns:56px minmax(0,1fr)}.ph .xb{grid-column:1/-1;justify-self:start}.ptool{flex-wrap:wrap;gap:8px}.ptool input{flex-basis:100%}
+.post.c6 .met{grid-template-columns:repeat(4,auto);gap:10px}.post.c6 footer{height:auto;min-height:40px;flex-wrap:wrap;padding:6px 0!important}.post.c6 .rp,.post.c6 .mc:nth-child(3){display:none}}
+.post.c6 .met{grid-template-columns:64px 64px 72px 84px}@media(max-width:640px){.post.c6 .met{grid-template-columns:repeat(4,auto);gap:10px}}
+</style></head><body><header class="top"><div class="ti2"><div class="lg"><i>⚡</i>XHOT<span>X 热点雷达</span></div><span class="sp1"></span><a class="ahl" href="https://aihot.news" target="_blank">来自 AIHOT ↗</a><div class="tg"><button data-set-theme="light" title="浅色">☀</button><button data-set-theme="dark" title="深色">☾</button><button data-set-theme="auto">自动</button></div></div></header>
+<div class="wrap"><div class="pwrap"><a class="back" href="../index.html">← 返回首页</a>
+<section class="ph"><span class="av xl" style="--h:116">S</span><div class="pi"><h1>Sundar Pichai</h1><div class="hd">@sundarpichai</div><p class="bio">CEO, Google and Alphabet</p></div><a class="xb" href="https://x.com/sundarpichai" target="_blank">在 X 查看 ↗</a></section>
+<div class="pstat"><div class="psb"><div class="sl">粉丝</div><div class="sv">1191.1万</div><div class="ss">11,911,164</div></div><div class="psb"><div class="sl">较上次</div><div class="sv">—</div><div class="ss">粉丝变化</div></div><div class="psb"><div class="sl">已存推文</div><div class="sv">25</div><div class="ss">最多 200 条</div></div><div class="psb"><div class="sl">最新发帖</div><div class="sv">10-09 06:50</div><div class="ss">4 天前</div></div></div>
+<div class="ptool"><input id="q" type="search" placeholder="搜索 Sundar Pichai 的推文关键词…" autocomplete="off"><span class="cnt" id="cnt">25 条</span></div>
+<div class="bh"><h2>推文时间线</h2><span class="hint">最新在前 · 默认只显示中文/英文</span></div><div class="feed1"><article class="post c6" data-s="today @thelancet published our amie study with @bidmc_medicine, the first prospective study of patient-facing conversational diagnostics in a real clinic.
+
+amie is a research system people can chat with before doctors appointments. testing amie outside the lab with real urgent care patients showed how technology can help gather medical histories safely. clinicians reported that the summaries helped them prepare for visits in 75% of cases and influenced their approach to care in more than half. amie’s differential diagnoses also matched the doctors’ final diagnoses 90% of the time giving clinicians more time to focus on patient care.
+
+it’s google’s first-ever paper in the lancet’s main journal!"><header><span class="av" style="--h:116">S</span><div class="who"><div class="nm"><span>Sundar Pichai</span></div><div class="hd">@sundarpichai</div></div><time class="tm" title="10-09 06:50 北京时间">10-09 06:50<small>4 天前</small></time></header><div class="pt xp"><span class="xs">Today @TheLancet published our AMIE study with @BIDMC_Medicine, the first prospective study of patient-facing conversational diagnostics in a real clinic.
+
+AMIE is a research system people can chat with before doctors appointments. Testing AMIE outside the lab with real urgent ca…</span><span class="xf">Today @TheLancet published our AMIE study with @BIDMC_Medicine, the first prospective study of patient-facing conversational diagnostics in a real clinic.
+
+AMIE is a research system people can chat with before doctors appointments. Testing AMIE outside the lab with real urgent care patients showed how technology can help gather medical histories safely. Clinicians reported that the summaries helped them prepare for visits in 75% of cases and influenced their approach to care in more than half. AMIE’s differential diagnoses also matched the doctors’ final diagnoses 90% of the time giving clinicians more time to focus on patient care.
+
+It’s Google’s first-ever paper in The Lancet’s main journal!</span></div>
+<footer><div class="act"><button class="ex" type="button">展开</button><button class="cp" type="button" data-copy="Today @TheLancet published our AMIE study with @BIDMC_Medicine, the first prospective study of patient-facing conversational diagnostics in a real clinic.
+
+AMIE is a research system people can chat with before doctors appointments. Testing AMIE outside the lab with real urgent care patients showed how technology can help gather medical histories safely. Clinicians reported that the summaries helped them prepare for visits in 75% of cases and influenced their approach to care in more than half. AMIE’s differential diagnoses also matched the doctors’ final diagnoses 90% of the time giving clinicians more time to focus on patient care.
+
+It’s Google’s first-ever paper in The Lancet’s main journal!
+— Sundar Pichai (@sundarpichai)
+https://x.com/sundarpichai/status/2108329198955958339">复制原文</button><a class="op" href="https://x.com/sundarpichai/status/2108329198955958339" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>1,750</span><span class="mc" title="转发"><i>⇄</i>305</span><span class="mc" title="评论"><i>💬</i>245</span><span class="mc" title="浏览"><i>👁</i>39.8万</span></div></footer></article><article class="post c6" data-s="great to be with 700+ @googlecloud  customers at the historic nasa hangar one for gemini at work! 
+
+today, we introduced the new gemini agent, a single, universal agent for work that has all of your business context and answers your questions, handles your knowledge work, creates your images and media, and writes and runs code - all from a single prompt box. it is connected to your personal workflows, your systems of record, and your enterprise controls.
+
+it’s built around a few core architectural principles:
+
+unified agent: gemini can answer questions, do knowledge work and generate code from a single prompt box.
+
+access: gemini is web-based and can be accessed from any device and integrated into third-party applications. it can also operate without a dedicated user interface.
+
+persistent execution: it runs in the cloud, which means it maintains a single set of memories, context and one personalization graph no matter where you access it.
+
+multi-agent orchestration: gemini can create sub-agents to tackle multi-step tasks and can also act as a coworker agent with a defined role and its own dedicated identity
+
+context: gemini knows your tools, data, and work history and learns how you work the more you use it.
+model choice flexibility: it orchestrates across multiple models to deliver optimal quality and lower your costs.
+
+read more in our blog: https://t.co/bd1ekbr74q"><header><span class="av" style="--h:116">S</span><div class="who"><div class="nm"><span>Sundar Pichai</span></div><div class="hd">@sundarpichai</div></div><time class="tm" title="10-09 02:05 北京时间">10-09 02:05<small>4 天前</small></time></header><div class="pt xp"><span class="xs">Great to be with 700+ @googlecloud  customers at the historic NASA Hangar One for Gemini at Work! 
+
+Today, we introduced the new Gemini agent, a single, universal agent for work that has all of your business context and answers your questions, handles your knowledge work, creates…</span><span class="xf">Great to be with 700+ @googlecloud  customers at the historic NASA Hangar One for Gemini at Work! 
+
+Today, we introduced the new Gemini agent, a single, universal agent for work that has all of your business context and answers your questions, handles your knowledge work, creates your images and media, and writes and runs code - all from a single prompt box. It is connected to your personal workflows, your systems of record, and your enterprise controls.
+
+It’s built around a few core architectural principles:
+
+Unified Agent: Gemini can answer questions, do knowledge work and generate code from a single prompt box.
+
+Access: Gemini is web-based and can be accessed from any device and integrated into third-party applications. It can also operate without a dedicated user interface.
+
+Persistent Execution: It runs in the cloud, which means it maintains a single set of memories, context and one personalization graph no matter where you access it.
+
+Multi-Agent Orchestration: Gemini can create sub-agents to tackle multi-step tasks and can also act as a coworker agent with a defined role and its own dedicated identity
+
+Context: Gemini knows your tools, data, and work history and learns how you work the more you use it.
+Model Choice Flexibility: It orchestrates across multiple models to deliver optimal quality and lower your costs.
+
+Read more in our blog: https://t.co/bd1ekBR74Q</span></div>
+<footer><div class="act"><button class="ex" type="button">展开</button><button class="cp" type="button" data-copy="Great to be with 700+ @googlecloud  customers at the historic NASA Hangar One for Gemini at Work! 
+
+Today, we introduced the new Gemini agent, a single, universal agent for work that has all of your business context and answers your questions, handles your knowledge work, creates your images and media, and writes and runs code - all from a single prompt box. It is connected to your personal workflows, your systems of record, and your enterprise controls.
+
+It’s built around a few core architectural principles:
+
+Unified Agent: Gemini can answer questions, do knowledge work and generate code from a single prompt box.
+
+Access: Gemini is web-based and can be accessed from any device and integrated into third-party applications. It can also operate without a dedicated user interface.
+
+Persistent Execution: It runs in the cloud, which means it maintains a single set of memories, context and one personalization graph no matter where you access it.
+
+Multi-Agent Orchestration: Gemini can create sub-agents to tackle multi-step tasks and can also act as a coworker agent with a defined role and its own dedicated identity
+
+Context: Gemini knows your tools, data, and work history and learns how you work the more you use it.
+Model Choice Flexibility: It orchestrates across multiple models to deliver optimal quality and lower your costs.
+
+Read more in our blog: https://t.co/bd1ekBR74Q
+— Sundar Pichai (@sundarpichai)
+https://x.com/sundarpichai/status/2108257472553386059">复制原文</button><a class="op" href="https://x.com/sundarpichai/status/2108257472553386059" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>4,029</span><span class="mc" title="转发"><i>⇄</i>401</span><span class="mc" title="评论"><i>💬</i>314</span><span class="mc" title="浏览"><i>👁</i>37.3万</span></div></footer></article><article class="post c6" data-s="introducing embeddinggemma 2, a new open multimodal model that sets the standard for on-device efficiency.
+
+- our first open, natively multimodal embedding model
+- handles text, code, image, video, and audio tasks within a lightweight, modular 740m parameter form factor
+- ideal for offline, privacy-first rag when paired with gemma 4
+- outperforms some specialist models more than twice its size
+
+weights available now on hugging face."><header><span class="av" style="--h:116">S</span><div class="who"><div class="nm"><span>Sundar Pichai</span></div><div class="hd">@sundarpichai</div></div><time class="tm" title="10-07 00:03 北京时间">10-07 00:03<small>6 天前</small></time></header><div class="pt xp"><span class="xs">Introducing EmbeddingGemma 2, a new open multimodal model that sets the standard for on-device efficiency.
+
+- our first open, natively multimodal embedding model
+- handles text, code, image, video, and audio tasks within a lightweight, modular 740M parameter form factor
+- ideal f…</span><span class="xf">Introducing EmbeddingGemma 2, a new open multimodal model that sets the standard for on-device efficiency.
+
+- our first open, natively multimodal embedding model
+- handles text, code, image, video, and audio tasks within a lightweight, modular 740M parameter form factor
+- ideal for offline, privacy-first RAG when paired with Gemma 4
+- outperforms some specialist models more than twice its size
+
+Weights available now on Hugging Face.</span></div>
+<footer><div class="act"><button class="ex" type="button">展开</button><button class="cp" type="button" data-copy="Introducing EmbeddingGemma 2, a new open multimodal model that sets the standard for on-device efficiency.
+
+- our first open, natively multimodal embedding model
+- handles text, code, image, video, and audio tasks within a lightweight, modular 740M parameter form factor
+- ideal for offline, privacy-first RAG when paired with Gemma 4
+- outperforms some specialist models more than twice its size
+
+Weights available now on Hugging Face.
+— Sundar Pichai (@sundarpichai)
+https://x.com/sundarpichai/status/2107501975671890211">复制原文</button><a class="op" href="https://x.com/sundarpichai/status/2107501975671890211" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>8,749</span><span class="mc" title="转发"><i>⇄</i>866</span><span class="mc" title="评论"><i>💬</i>447</span><span class="mc" title="浏览"><i>👁</i>80.2万</span></div></footer></article><article class="post c6" data-s="in a busy week, synthid bio, our watermarking tech for ai-designed proteins, was a big big step forward for scientific integrity and biosecurity! congrats to the team @googledeepmind https://t.co/ircue2hxdk"><header><span class="av" style="--h:116">S</span><div class="who"><div class="nm"><span>Sundar Pichai</span></div><div class="hd">@sundarpichai</div></div><time class="tm" title="10-02 09:12 北京时间">10-02 09:12<small>11 天前</small></time></header><div class="pt">In a busy week, SynthID Bio, our watermarking tech for AI-designed proteins, was a big big step forward for scientific integrity and biosecurity! Congrats to the team @GoogleDeepMind https://t.co/IrCue2hxdK</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="In a busy week, SynthID Bio, our watermarking tech for AI-designed proteins, was a big big step forward for scientific integrity and biosecurity! Congrats to the team @GoogleDeepMind https://t.co/IrCue2hxdK
+— Sundar Pichai (@sundarpichai)
+https://x.com/sundarpichai/status/2105828136428691774">复制原文</button><a class="op" href="https://x.com/sundarpichai/status/2105828136428691774" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>1,439</span><span class="mc" title="转发"><i>⇄</i>102</span><span class="mc" title="评论"><i>💬</i>248</span><span class="mc" title="浏览"><i>👁</i>41.0万</span></div></footer></article><article class="post c6" data-s="i remember the first meeting where the team pitched the idea of putting compute in space - exciting idea!
+
+today&#x27;s successful launch with our partner @planet prototype satellite shows how far we&#x27;ve come...and how far there is to go. thanks for the lift, @spacex, another spectacular booster landing too🚀"><header><span class="av" style="--h:116">S</span><div class="who"><div class="nm"><span>Sundar Pichai</span></div><div class="hd">@sundarpichai</div></div><time class="tm" title="10-02 08:30 北京时间">10-02 08:30<small>11 天前</small></time></header><div class="pt xp"><span class="xs">I remember the first meeting where the team pitched the idea of putting compute in space - exciting idea!
+
+Today&#x27;s successful launch with our partner @planet prototype satellite shows how far we&#x27;ve come...and how far there is to go. Thanks for the lift, @SpaceX, another spectacul…</span><span class="xf">I remember the first meeting where the team pitched the idea of putting compute in space - exciting idea!
+
+Today&#x27;s successful launch with our partner @planet prototype satellite shows how far we&#x27;ve come...and how far there is to go. Thanks for the lift, @SpaceX, another spectacular booster landing too🚀</span></div>
+<footer><div class="act"><button class="ex" type="button">展开</button><button class="cp" type="button" data-copy="I remember the first meeting where the team pitched the idea of putting compute in space - exciting idea!
+
+Today&#x27;s successful launch with our partner @planet prototype satellite shows how far we&#x27;ve come...and how far there is to go. Thanks for the lift, @SpaceX, another spectacular booster landing too🚀
+— Sundar Pichai (@sundarpichai)
+https://x.com/sundarpichai/status/2105817662651777367">复制原文</button><a class="op" href="https://x.com/sundarpichai/status/2105817662651777367" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>1.2万</span><span class="mc" title="转发"><i>⇄</i>1,085</span><span class="mc" title="评论"><i>💬</i>477</span><span class="mc" title="浏览"><i>👁</i>120.1万</span></div></footer></article><article class="post c6" data-s="importantly argon has frontier safeguards and we are rolling it out responsibly - it’s with the us gov’t and going to a set of trusted cyber defenders through our fairwind program today.
+
+we’re going to make it available as soon as we can and as safely as we can. so hold tight, lots more coming, and you’re going to see us iterating rapidly.
+
+https://t.co/8mixifxikr"><header><span class="av" style="--h:116">S</span><div class="who"><div class="nm"><span>Sundar Pichai</span></div><div class="hd">@sundarpichai</div></div><time class="tm" title="10-01 04:02 北京时间">10-01 04:02<small>12 天前</small></time></header><div class="pt xp"><span class="xs">Importantly Argon has frontier safeguards and we are rolling it out responsibly - it’s with the US gov’t and going to a set of trusted cyber defenders through our Fairwind Program today.
+
+We’re going to make it available as soon as we can and as safely as we can. So hold tight, l…</span><span class="xf">Importantly Argon has frontier safeguards and we are rolling it out responsibly - it’s with the US gov’t and going to a set of trusted cyber defenders through our Fairwind Program today.
+
+We’re going to make it available as soon as we can and as safely as we can. So hold tight, lots more coming, and you’re going to see us iterating rapidly.
+
+https://t.co/8MiXIfXIKr</span></div>
+<footer><div class="act"><button class="ex" type="button">展开</button><button class="cp" type="button" data-copy="Importantly Argon has frontier safeguards and we are rolling it out responsibly - it’s with the US gov’t and going to a set of trusted cyber defenders through our Fairwind Program today.
+
+We’re going to make it available as soon as we can and as safely as we can. So hold tight, lots more coming, and you’re going to see us iterating rapidly.
+
+https://t.co/8MiXIfXIKr
+— Sundar Pichai (@sundarpichai)
+https://x.com/sundarpichai/status/2105387954474746264">复制原文</button><a class="op" href="https://x.com/sundarpichai/status/2105387954474746264" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>2,468</span><span class="mc" title="转发"><i>⇄</i>118</span><span class="mc" title="评论"><i>💬</i>118</span><span class="mc" title="浏览"><i>👁</i>30.0万</span></div></footer></article><article class="post c6" data-s="lots of discussion out there about our next model(!), so i wanted to give an early look as soon as possible. introducing gemini 4 argon!
+
+it shows frontier performance in complex workflows, cyber defense and software engineering. teams are using it extensively at google, from coding to quantum computing, great feedback. 
+
+here’s a look at the benchmarks:"><header><span class="av" style="--h:116">S</span><div class="who"><div class="nm"><span>Sundar Pichai</span></div><div class="hd">@sundarpichai</div></div><time class="tm" title="10-01 04:02 北京时间">10-01 04:02<small>12 天前</small></time></header><div class="pt xp"><span class="xs">Lots of discussion out there about our next model(!), so I wanted to give an early look as soon as possible. Introducing Gemini 4 Argon!
+
+It shows frontier performance in complex workflows, cyber defense and software engineering. Teams are using it extensively at Google, from cod…</span><span class="xf">Lots of discussion out there about our next model(!), so I wanted to give an early look as soon as possible. Introducing Gemini 4 Argon!
+
+It shows frontier performance in complex workflows, cyber defense and software engineering. Teams are using it extensively at Google, from coding to quantum computing, great feedback. 
+
+Here’s a look at the benchmarks:</span></div>
+<footer><div class="act"><button class="ex" type="button">展开</button><button class="cp" type="button" data-copy="Lots of discussion out there about our next model(!), so I wanted to give an early look as soon as possible. Introducing Gemini 4 Argon!
+
+It shows frontier performance in complex workflows, cyber defense and software engineering. Teams are using it extensively at Google, from coding to quantum computing, great feedback. 
+
+Here’s a look at the benchmarks:
+— Sundar Pichai (@sundarpichai)
+https://x.com/sundarpichai/status/2105387952478277979">复制原文</button><a class="op" href="https://x.com/sundarpichai/status/2105387952478277979" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>2.6万</span><span class="mc" title="转发"><i>⇄</i>2,312</span><span class="mc" title="评论"><i>💬</i>1,383</span><span class="mc" title="浏览"><i>👁</i>388.7万</span></div></footer></article><article class="post c6" data-s="great to meet today with @potus, @jdvance, @speakerjohnson and administration + tech leaders. important conversation and we signed today the white house accord on super intelligence.
+
+as i shared today, google has invested hundreds of billions in the last two years alone, with more to come, across the entire stack, to deliver benefits for america and the world.  we’re working to build products that deliver real value for people and businesses, invest in local communities, and build trust in the technology.
+
+industry also has to innovate responsibly. google’s focused on building the right way, with appropriate testing, evaluations, red-teaming, and other safeguards against misuse and misalignment – and releasing models or products only after they’ve been thoroughly reviewed.
+
+we are committed to working with other industry leaders to establish norms and build public confidence. the white house accord and the joint commitment on frontier responsibilities signed today is a solid basis for moving forward - it contains real tangible steps to promote safe development, while delivering the economic and scientific benefits of this technology."><header><span class="av" style="--h:116">S</span><div class="who"><div class="nm"><span>Sundar Pichai</span></div><div class="hd">@sundarpichai</div></div><time class="tm" title="09-30 10:25 北京时间">09-30 10:25<small>13 天前</small></time></header><div class="pt xp"><span class="xs">Great to meet today with @POTUS, @JDVance, @SpeakerJohnson and Administration + tech leaders. Important conversation and we signed today the White House Accord on Super Intelligence.
+
+As I shared today, Google has invested hundreds of billions in the last two years alone, with mo…</span><span class="xf">Great to meet today with @POTUS, @JDVance, @SpeakerJohnson and Administration + tech leaders. Important conversation and we signed today the White House Accord on Super Intelligence.
+
+As I shared today, Google has invested hundreds of billions in the last two years alone, with more to come, across the entire stack, to deliver benefits for America and the world.  We’re working to build products that deliver real value for people and businesses, invest in local communities, and build trust in the technology.
+
+Industry also has to innovate responsibly. Google’s focused on building the right way, with appropriate testing, evaluations, red-teaming, and other safeguards against misuse and misalignment – and releasing models or products only after they’ve been thoroughly reviewed.
+
+We are committed to working with other industry leaders to establish norms and build public confidence. The White House Accord and the Joint Commitment on Frontier Responsibilities signed today is a solid basis for moving forward - it contains real tangible steps to promote safe development, while delivering the economic and scientific benefits of this technology.</span></div>
+<footer><div class="act"><button class="ex" type="button">展开</button><button class="cp" type="button" data-copy="Great to meet today with @POTUS, @JDVance, @SpeakerJohnson and Administration + tech leaders. Important conversation and we signed today the White House Accord on Super Intelligence.
+
+As I shared today, Google has invested hundreds of billions in the last two years alone, with more to come, across the entire stack, to deliver benefits for America and the world.  We’re working to build products that deliver real value for people and businesses, invest in local communities, and build trust in the technology.
+
+Industry also has to innovate responsibly. Google’s focused on building the right way, with appropriate testing, evaluations, red-teaming, and other safeguards against misuse and misalignment – and releasing models or products only after they’ve been thoroughly reviewed.
+
+We are committed to working with other industry leaders to establish norms and build public confidence. The White House Accord and the Joint Commitment on Frontier Responsibilities signed today is a solid basis for moving forward - it contains real tangible steps to promote safe development, while delivering the economic and scientific benefits of this technology.
+— Sundar Pichai (@sundarpichai)
+https://x.com/sundarpichai/status/2105121763176894804">复制原文</button><a class="op" href="https://x.com/sundarpichai/status/2105121763176894804" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>1.3万</span><span class="mc" title="转发"><i>⇄</i>1,463</span><span class="mc" title="评论"><i>💬</i>1,726</span><span class="mc" title="浏览"><i>👁</i>185.0万</span></div></footer></article><article class="post c6" data-s="can our tpus survive and operate in space? well, we&#x27;re going to find out.
+
+project suncatcher is hitching a ride aboard @spacex&#x27;s transporter-18 mission, testing a prototype satellite built in partnership with @planet
+
+one small step for tpus.... https://t.co/fuzoj7c0hl"><header><span class="av" style="--h:116">S</span><div class="who"><div class="nm"><span>Sundar Pichai</span></div><div class="hd">@sundarpichai</div></div><time class="tm" title="09-25 03:45 北京时间">09-25 03:45<small>18 天前</small></time></header><div class="pt">Can our TPUs survive and operate in space? Well, we&#x27;re going to find out.
+
+Project Suncatcher is hitching a ride aboard @SpaceX&#x27;s Transporter-18 mission, testing a prototype satellite built in partnership with @planet
+
+One small step for TPUs.... https://t.co/FuZoj7c0Hl</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="Can our TPUs survive and operate in space? Well, we&#x27;re going to find out.
+
+Project Suncatcher is hitching a ride aboard @SpaceX&#x27;s Transporter-18 mission, testing a prototype satellite built in partnership with @planet
+
+One small step for TPUs.... https://t.co/FuZoj7c0Hl
+— Sundar Pichai (@sundarpichai)
+https://x.com/sundarpichai/status/2103209164072010051">复制原文</button><a class="op" href="https://x.com/sundarpichai/status/2103209164072010051" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>1.3万</span><span class="mc" title="转发"><i>⇄</i>1,382</span><span class="mc" title="评论"><i>💬</i>617</span><span class="mc" title="浏览"><i>👁</i>419.1万</span></div></footer></article><article class="post c6" data-s="feeling good about this one:) https://t.co/sm82noz6bg https://t.co/iemfn2d2jr"><header><span class="av" style="--h:116">S</span><div class="who"><div class="nm"><span>Sundar Pichai</span></div><div class="hd">@sundarpichai</div></div><time class="tm" title="09-22 00:52 北京时间">09-22 00:52<small>21 天前</small></time></header><div class="pt">Feeling good about this one:) https://t.co/sM82nOZ6Bg https://t.co/IemFN2d2JR</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="Feeling good about this one:) https://t.co/sM82nOZ6Bg https://t.co/IemFN2d2JR
+— Sundar Pichai (@sundarpichai)
+https://x.com/sundarpichai/status/2102078648505487756">复制原文</button><a class="op" href="https://x.com/sundarpichai/status/2102078648505487756" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>7,135</span><span class="mc" title="转发"><i>⇄</i>386</span><span class="mc" title="评论"><i>💬</i>396</span><span class="mc" title="浏览"><i>👁</i>117.0万</span></div></footer></article><article class="post c6" data-s="today we have set out how we’re building ai to accelerate science and improve people’s lives. just some examples in the last week or so:
+
+- mapped all 9b possible single letter genetic changes across the human genome with alphagenome atlas and made it openly available to researchers.
+- billions of decisions depend on weather predictions so we introduced weathernext 3, our most accurate and capable global weather ai model to date.
+- we published ai &amp; economy atlas, a comprehensive open-access look at how people are using ai globally.
+- ai has enabled extraordinary advances in language translation. today our services are available in nearly 300 languages, spoken by 7b people
+
+we’re focusing our efforts on four key areas: health, natural disaster and weather resilience, learning, and economic opportunity. https://t.co/ddkcutyj54"><header><span class="av" style="--h:116">S</span><div class="who"><div class="nm"><span>Sundar Pichai</span></div><div class="hd">@sundarpichai</div></div><time class="tm" title="09-16 01:22 北京时间">09-16 01:22<small>27 天前</small></time></header><div class="pt xp"><span class="xs">Today we have set out how we’re building AI to accelerate science and improve people’s lives. Just some examples in the last week or so:
+
+- Mapped all 9B possible single letter genetic changes across the human genome with AlphaGenome Atlas and made it openly available to research…</span><span class="xf">Today we have set out how we’re building AI to accelerate science and improve people’s lives. Just some examples in the last week or so:
+
+- Mapped all 9B possible single letter genetic changes across the human genome with AlphaGenome Atlas and made it openly available to researchers.
+- Billions of decisions depend on weather predictions so we introduced WeatherNext 3, our most accurate and capable global weather AI model to date.
+- We published AI &amp; Economy ATLAS, a comprehensive open-access look at how people are using AI globally.
+- AI has enabled extraordinary advances in language translation. Today our services are available in nearly 300 languages, spoken by 7B people
+
+We’re focusing our efforts on four key areas: health, natural disaster and weather resilience, learning, and economic opportunity. https://t.co/DDKcUTYj54</span></div>
+<footer><div class="act"><button class="ex" type="button">展开</button><button class="cp" type="button" data-copy="Today we have set out how we’re building AI to accelerate science and improve people’s lives. Just some examples in the last week or so:
+
+- Mapped all 9B possible single letter genetic changes across the human genome with AlphaGenome Atlas and made it openly available to researchers.
+- Billions of decisions depend on weather predictions so we introduced WeatherNext 3, our most accurate and capable global weather AI model to date.
+- We published AI &amp; Economy ATLAS, a comprehensive open-access look at how people are using AI globally.
+- AI has enabled extraordinary advances in language translation. Today our services are available in nearly 300 languages, spoken by 7B people
+
+We’re focusing our efforts on four key areas: health, natural disaster and weather resilience, learning, and economic opportunity. https://t.co/DDKcUTYj54
+— Sundar Pichai (@sundarpichai)
+https://x.com/sundarpichai/status/2099911653395685765">复制原文</button><a class="op" href="https://x.com/sundarpichai/status/2099911653395685765" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>6,296</span><span class="mc" title="转发"><i>⇄</i>684</span><span class="mc" title="评论"><i>💬</i>440</span><span class="mc" title="浏览"><i>👁</i>81.1万</span></div></footer></article><article class="post c6" data-s="alphagenome atlas is an interactive resource, mapping the predicted impact of all 9 billion dna variants. 
+
+it works in a regular web browser, without any coding required, and is free for academic researchers. excited for the discoveries to come. https://t.co/jpf9tlqxcl"><header><span class="av" style="--h:116">S</span><div class="who"><div class="nm"><span>Sundar Pichai</span></div><div class="hd">@sundarpichai</div></div><time class="tm" title="09-08 22:09 北京时间">09-08 22:09<small>34 天前</small></time></header><div class="pt">AlphaGenome Atlas is an interactive resource, mapping the predicted impact of all 9 billion DNA variants. 
+
+It works in a regular web browser, without any coding required, and is free for academic researchers. Excited for the discoveries to come. https://t.co/JPF9tLqxcL</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="AlphaGenome Atlas is an interactive resource, mapping the predicted impact of all 9 billion DNA variants. 
+
+It works in a regular web browser, without any coding required, and is free for academic researchers. Excited for the discoveries to come. https://t.co/JPF9tLqxcL
+— Sundar Pichai (@sundarpichai)
+https://x.com/sundarpichai/status/2097326390765109627">复制原文</button><a class="op" href="https://x.com/sundarpichai/status/2097326390765109627" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>3,996</span><span class="mc" title="转发"><i>⇄</i>460</span><span class="mc" title="评论"><i>💬</i>272</span><span class="mc" title="浏览"><i>👁</i>43.8万</span></div></footer></article><article class="post c6" data-s="congrats @jensenhuang @clementdelangue for this great outcome! we were investors in huggingface and continue to be partners and this will strengthen the open model ecosystem! https://t.co/iql1hmmk5q"><header><span class="av" style="--h:116">S</span><div class="who"><div class="nm"><span>Sundar Pichai</span></div><div class="hd">@sundarpichai</div></div><time class="tm" title="09-04 01:47 北京时间">09-04 01:47<small>39 天前</small></time></header><div class="pt">Congrats @JensenHuang @ClementDelangue for this great outcome! We were investors in Huggingface and continue to be partners and this will strengthen the open model ecosystem! https://t.co/Iql1HMMK5q</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="Congrats @JensenHuang @ClementDelangue for this great outcome! We were investors in Huggingface and continue to be partners and this will strengthen the open model ecosystem! https://t.co/Iql1HMMK5q
+— Sundar Pichai (@sundarpichai)
+https://x.com/sundarpichai/status/2095569375373984139">复制原文</button><a class="op" href="https://x.com/sundarpichai/status/2095569375373984139" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>6,707</span><span class="mc" title="转发"><i>⇄</i>325</span><span class="mc" title="评论"><i>💬</i>300</span><span class="mc" title="浏览"><i>👁</i>74.3万</span></div></footer></article><article class="post c6" data-s="new gemini voice capabilities are rolling out so you can search your gmail inbox, organize thoughts and tasks in keep, and create new docs, all conversationally. rolling out now for google ai subscribers!
+
+docs live going to be super helpful in particular - see it in action below, and read more here: https://t.co/so7agtss4s"><header><span class="av" style="--h:116">S</span><div class="who"><div class="nm"><span>Sundar Pichai</span></div><div class="hd">@sundarpichai</div></div><time class="tm" title="09-04 00:39 北京时间">09-04 00:39<small>39 天前</small></time></header><div class="pt xp"><span class="xs">New Gemini voice capabilities are rolling out so you can search your Gmail inbox, organize thoughts and tasks in Keep, and create new Docs, all conversationally. Rolling out now for Google AI subscribers!
+
+Docs Live going to be super helpful in particular - see it in action below…</span><span class="xf">New Gemini voice capabilities are rolling out so you can search your Gmail inbox, organize thoughts and tasks in Keep, and create new Docs, all conversationally. Rolling out now for Google AI subscribers!
+
+Docs Live going to be super helpful in particular - see it in action below, and read more here: https://t.co/sO7agTSs4s</span></div>
+<footer><div class="act"><button class="ex" type="button">展开</button><button class="cp" type="button" data-copy="New Gemini voice capabilities are rolling out so you can search your Gmail inbox, organize thoughts and tasks in Keep, and create new Docs, all conversationally. Rolling out now for Google AI subscribers!
+
+Docs Live going to be super helpful in particular - see it in action below, and read more here: https://t.co/sO7agTSs4s
+— Sundar Pichai (@sundarpichai)
+https://x.com/sundarpichai/status/2095552297099198689">复制原文</button><a class="op" href="https://x.com/sundarpichai/status/2095552297099198689" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>3,581</span><span class="mc" title="转发"><i>⇄</i>320</span><span class="mc" title="评论"><i>💬</i>243</span><span class="mc" title="浏览"><i>👁</i>42.8万</span></div></footer></article><article class="post c6" data-s="beyond benchmarks, we’re seeing impressive real-world use cases. for example, in evaluations on real chrome security bugs, 3.8 flash cyber produced 2.6x more correct patches for vulnerabilities than larger models.
+
+because of its advanced capabilities, we&#x27;re giving government agencies &amp; cybersecurity partners access through the fairwind program, read more: https://t.co/9glojt0xvx"><header><span class="av" style="--h:116">S</span><div class="who"><div class="nm"><span>Sundar Pichai</span></div><div class="hd">@sundarpichai</div></div><time class="tm" title="09-03 00:17 北京时间">09-03 00:17<small>40 天前</small></time></header><div class="pt xp"><span class="xs">Beyond benchmarks, we’re seeing impressive real-world use cases. For example, in evaluations on real Chrome security bugs, 3.8 Flash Cyber produced 2.6x more correct patches for vulnerabilities than larger models.
+
+Because of its advanced capabilities, we&#x27;re giving Government age…</span><span class="xf">Beyond benchmarks, we’re seeing impressive real-world use cases. For example, in evaluations on real Chrome security bugs, 3.8 Flash Cyber produced 2.6x more correct patches for vulnerabilities than larger models.
+
+Because of its advanced capabilities, we&#x27;re giving Government agencies &amp; cybersecurity partners access through the Fairwind program, read more: https://t.co/9glOjT0XvX</span></div>
+<footer><div class="act"><button class="ex" type="button">展开</button><button class="cp" type="button" data-copy="Beyond benchmarks, we’re seeing impressive real-world use cases. For example, in evaluations on real Chrome security bugs, 3.8 Flash Cyber produced 2.6x more correct patches for vulnerabilities than larger models.
+
+Because of its advanced capabilities, we&#x27;re giving Government agencies &amp; cybersecurity partners access through the Fairwind program, read more: https://t.co/9glOjT0XvX
+— Sundar Pichai (@sundarpichai)
+https://x.com/sundarpichai/status/2095184468059492457">复制原文</button><a class="op" href="https://x.com/sundarpichai/status/2095184468059492457" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>279</span><span class="mc" title="转发"><i>⇄</i>32</span><span class="mc" title="评论"><i>💬</i>54</span><span class="mc" title="浏览"><i>👁</i>6.0万</span></div></footer></article><article class="post c6" data-s="we’re also introducing gemini 3.8 flash cyber, our most capable cybersecurity model. it shows frontier-level performance in discovering vulnerabilities and patching them at scale, with flash-level speed &amp; pricing.
+
+that includes achieving 86.2% on the important cybergym industry benchmark, plus 47.2% on cwe-bench for patching. we saw a 70%+ success rate in discovering vulnerabilities across 20 programming languages on our internal benchmark."><header><span class="av" style="--h:116">S</span><div class="who"><div class="nm"><span>Sundar Pichai</span></div><div class="hd">@sundarpichai</div></div><time class="tm" title="09-03 00:17 北京时间">09-03 00:17<small>40 天前</small></time></header><div class="pt xp"><span class="xs">We’re also introducing Gemini 3.8 Flash Cyber, our most capable cybersecurity model. It shows frontier-level performance in discovering vulnerabilities and patching them at scale, with Flash-level speed &amp; pricing.
+
+That includes achieving 86.2% on the important CyberGym industry…</span><span class="xf">We’re also introducing Gemini 3.8 Flash Cyber, our most capable cybersecurity model. It shows frontier-level performance in discovering vulnerabilities and patching them at scale, with Flash-level speed &amp; pricing.
+
+That includes achieving 86.2% on the important CyberGym industry benchmark, plus 47.2% on CWE-Bench for patching. We saw a 70%+ success rate in discovering vulnerabilities across 20 programming languages on our internal benchmark.</span></div>
+<footer><div class="act"><button class="ex" type="button">展开</button><button class="cp" type="button" data-copy="We’re also introducing Gemini 3.8 Flash Cyber, our most capable cybersecurity model. It shows frontier-level performance in discovering vulnerabilities and patching them at scale, with Flash-level speed &amp; pricing.
+
+That includes achieving 86.2% on the important CyberGym industry benchmark, plus 47.2% on CWE-Bench for patching. We saw a 70%+ success rate in discovering vulnerabilities across 20 programming languages on our internal benchmark.
+— Sundar Pichai (@sundarpichai)
+https://x.com/sundarpichai/status/2095184464800526655">复制原文</button><a class="op" href="https://x.com/sundarpichai/status/2095184464800526655" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>4,561</span><span class="mc" title="转发"><i>⇄</i>402</span><span class="mc" title="评论"><i>💬</i>339</span><span class="mc" title="浏览"><i>👁</i>41.6万</span></div></footer></article><article class="post c6" data-s="today we’re introducing a new 3.8 flash model, our 3rd flash release in just 6 wks.
+
+it delivers significant leaps from 3.7 flash across software engineering, agentic tasks, and multi-step reasoning. on deepswe v1.1, it outperforms most larger frontier models in autonomously solving complex engineering problems end to end, at a fraction of the cost.
+
+more details here: https://t.co/4ykkkdkqvu"><header><span class="av" style="--h:116">S</span><div class="who"><div class="nm"><span>Sundar Pichai</span></div><div class="hd">@sundarpichai</div></div><time class="tm" title="09-03 00:07 北京时间">09-03 00:07<small>40 天前</small></time></header><div class="pt xp"><span class="xs">Today we’re introducing a new 3.8 Flash model, our 3rd Flash release in just 6 wks.
+
+It delivers significant leaps from 3.7 Flash across software engineering, agentic tasks, and multi-step reasoning. On DeepSWE v1.1, it outperforms most larger frontier models in autonomously solv…</span><span class="xf">Today we’re introducing a new 3.8 Flash model, our 3rd Flash release in just 6 wks.
+
+It delivers significant leaps from 3.7 Flash across software engineering, agentic tasks, and multi-step reasoning. On DeepSWE v1.1, it outperforms most larger frontier models in autonomously solving complex engineering problems end to end, at a fraction of the cost.
+
+More details here: https://t.co/4YkKkdKQvu</span></div>
+<footer><div class="act"><button class="ex" type="button">展开</button><button class="cp" type="button" data-copy="Today we’re introducing a new 3.8 Flash model, our 3rd Flash release in just 6 wks.
+
+It delivers significant leaps from 3.7 Flash across software engineering, agentic tasks, and multi-step reasoning. On DeepSWE v1.1, it outperforms most larger frontier models in autonomously solving complex engineering problems end to end, at a fraction of the cost.
+
+More details here: https://t.co/4YkKkdKQvu
+— Sundar Pichai (@sundarpichai)
+https://x.com/sundarpichai/status/2095181765082292334">复制原文</button><a class="op" href="https://x.com/sundarpichai/status/2095181765082292334" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>8,788</span><span class="mc" title="转发"><i>⇄</i>767</span><span class="mc" title="评论"><i>💬</i>552</span><span class="mc" title="浏览"><i>👁</i>56.8万</span></div></footer></article><article class="post c6" data-s="say hello to gemini 3.5 transcribe!
+
+- build apps that understand user speech / intent, even w/ multiple speakers!
+- auto-detection of 85+ languages out of the box
+- custom vocab adaptation for specialized jargon... sgtm:)
+
+api available now in @googleaistudio and gemini enterprise, or try it in the gemini app on macos or rambler on android! 
+
+more details: https://t.co/aduutcb3m7"><header><span class="av" style="--h:116">S</span><div class="who"><div class="nm"><span>Sundar Pichai</span></div><div class="hd">@sundarpichai</div></div><time class="tm" title="08-27 01:04 北京时间">08-27 01:04<small>47 天前</small></time></header><div class="pt xp"><span class="xs">Say hello to Gemini 3.5 Transcribe!
+
+- Build apps that understand user speech / intent, even w/ multiple speakers!
+- Auto-detection of 85+ languages out of the box
+- Custom vocab adaptation for specialized jargon... SGTM:)
+
+API available now in @GoogleAIStudio and Gemini Enterpri…</span><span class="xf">Say hello to Gemini 3.5 Transcribe!
+
+- Build apps that understand user speech / intent, even w/ multiple speakers!
+- Auto-detection of 85+ languages out of the box
+- Custom vocab adaptation for specialized jargon... SGTM:)
+
+API available now in @GoogleAIStudio and Gemini Enterprise, or try it in the Gemini app on macOS or Rambler on Android! 
+
+More details: https://t.co/AduutCb3M7</span></div>
+<footer><div class="act"><button class="ex" type="button">展开</button><button class="cp" type="button" data-copy="Say hello to Gemini 3.5 Transcribe!
+
+- Build apps that understand user speech / intent, even w/ multiple speakers!
+- Auto-detection of 85+ languages out of the box
+- Custom vocab adaptation for specialized jargon... SGTM:)
+
+API available now in @GoogleAIStudio and Gemini Enterprise, or try it in the Gemini app on macOS or Rambler on Android! 
+
+More details: https://t.co/AduutCb3M7
+— Sundar Pichai (@sundarpichai)
+https://x.com/sundarpichai/status/2092659467284517088">复制原文</button><a class="op" href="https://x.com/sundarpichai/status/2092659467284517088" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>4,590</span><span class="mc" title="转发"><i>⇄</i>398</span><span class="mc" title="评论"><i>💬</i>523</span><span class="mc" title="浏览"><i>👁</i>56.8万</span></div></footer></article><article class="post c6" data-s="it was incredible how dolly parton transcended generations and made a lasting impact on the world. may she rip https://t.co/dosjybqdxv"><header><span class="av" style="--h:116">S</span><div class="who"><div class="nm"><span>Sundar Pichai</span></div><div class="hd">@sundarpichai</div></div><time class="tm" title="08-26 07:54 北京时间">08-26 07:54<small>48 天前</small></time></header><div class="pt">It was incredible how Dolly Parton transcended generations and made a lasting impact on the world. May she RIP https://t.co/DosJYbQDXV</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="It was incredible how Dolly Parton transcended generations and made a lasting impact on the world. May she RIP https://t.co/DosJYbQDXV
+— Sundar Pichai (@sundarpichai)
+https://x.com/sundarpichai/status/2092400201596330108">复制原文</button><a class="op" href="https://x.com/sundarpichai/status/2092400201596330108" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>2,884</span><span class="mc" title="转发"><i>⇄</i>152</span><span class="mc" title="评论"><i>💬</i>138</span><span class="mc" title="浏览"><i>👁</i>40.7万</span></div></footer></article><article class="post c6" data-s="gemini 3.7 flash smashed previous gemini growth records in its first week, making it our fastest growing model yet. great to see the huge excitement from our developer community! now running in search and @geminiapp too. https://t.co/ipbbu5jdto"><header><span class="av" style="--h:116">S</span><div class="who"><div class="nm"><span>Sundar Pichai</span></div><div class="hd">@sundarpichai</div></div><time class="tm" title="08-22 11:37 北京时间">08-22 11:37<small>52 天前</small></time></header><div class="pt">Gemini 3.7 Flash smashed previous Gemini growth records in its first week, making it our fastest growing model yet. Great to see the huge excitement from our developer community! Now running in Search and @Geminiapp too. https://t.co/IPbBu5Jdto</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="Gemini 3.7 Flash smashed previous Gemini growth records in its first week, making it our fastest growing model yet. Great to see the huge excitement from our developer community! Now running in Search and @Geminiapp too. https://t.co/IPbBu5Jdto
+— Sundar Pichai (@sundarpichai)
+https://x.com/sundarpichai/status/2091006815295373717">复制原文</button><a class="op" href="https://x.com/sundarpichai/status/2091006815295373717" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>3,869</span><span class="mc" title="转发"><i>⇄</i>299</span><span class="mc" title="评论"><i>💬</i>356</span><span class="mc" title="浏览"><i>👁</i>68.6万</span></div></footer></article><article class="post c6" data-s="(it’s j btw :) see more of the learning features we’re dropping today, plus free google ai subscriptions for college students in 140+ countries! https://t.co/gry1vlw5sh"><header><span class="av" style="--h:116">S</span><div class="who"><div class="nm"><span>Sundar Pichai</span></div><div class="hd">@sundarpichai</div></div><time class="tm" title="08-20 04:05 北京时间">08-20 04:05<small>54 天前</small></time></header><div class="pt">(It’s J BTW :) See more of the learning features we’re dropping today, plus free Google AI subscriptions for college students in 140+ countries! https://t.co/Gry1VlW5sH</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="(It’s J BTW :) See more of the learning features we’re dropping today, plus free Google AI subscriptions for college students in 140+ countries! https://t.co/Gry1VlW5sH
+— Sundar Pichai (@sundarpichai)
+https://x.com/sundarpichai/status/2090168359564546160">复制原文</button><a class="op" href="https://x.com/sundarpichai/status/2090168359564546160" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>358</span><span class="mc" title="转发"><i>⇄</i>39</span><span class="mc" title="评论"><i>💬</i>36</span><span class="mc" title="浏览"><i>👁</i>7.9万</span></div></footer></article><article class="post c6" data-s="fill in the blank: search can now help with test prep for _________.
+
+a. sat
+b. act
+c. ap
+d. enem
+e. gre
+f. jee
+g. lsat
+h. mcat
+i. neet
+j. all of the above!"><header><span class="av" style="--h:116">S</span><div class="who"><div class="nm"><span>Sundar Pichai</span></div><div class="hd">@sundarpichai</div></div><time class="tm" title="08-20 04:05 北京时间">08-20 04:05<small>54 天前</small></time></header><div class="pt">Fill in the blank: Search can now help with test prep for _________.
+
+A. SAT
+B. ACT
+C. AP
+D. ENEM
+E. GRE
+F. JEE
+G. LSAT
+H. MCAT
+I. NEET
+J. All of the above!</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="Fill in the blank: Search can now help with test prep for _________.
+
+A. SAT
+B. ACT
+C. AP
+D. ENEM
+E. GRE
+F. JEE
+G. LSAT
+H. MCAT
+I. NEET
+J. All of the above!
+— Sundar Pichai (@sundarpichai)
+https://x.com/sundarpichai/status/2090168358411108738">复制原文</button><a class="op" href="https://x.com/sundarpichai/status/2090168358411108738" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>2,572</span><span class="mc" title="转发"><i>⇄</i>136</span><span class="mc" title="评论"><i>💬</i>433</span><span class="mc" title="浏览"><i>👁</i>40.8万</span></div></footer></article><article class="post c6" data-s="our flash models are workhorses that offer performance at a great price. so, we&#x27;re shipping updates fast to get them in developers’ hands. and now just 3 weeks after launching 3.6 flash, 3.7 flash shows significant gains including in coding and agentic work. 
+
+it delivers substantial improvements across software engineering, knowledge work, and web development, all with an introductory price at half the original cost of 3.6 flash.
+
+we&#x27;ve gotten positive feedback from early users, including our own engineers using 3.7 in @antigravity, and we’re excited for you to try it there. also available via gemini api in @googleaistudio, gemini enterprise &amp; more, full list and details here: https://t.co/u2p2nemm8f"><header><span class="av" style="--h:116">S</span><div class="who"><div class="nm"><span>Sundar Pichai</span></div><div class="hd">@sundarpichai</div></div><time class="tm" title="08-14 01:05 北京时间">08-14 01:05<small>60 天前</small></time></header><div class="pt xp"><span class="xs">Our Flash models are workhorses that offer performance at a great price. So, we&#x27;re shipping updates fast to get them in developers’ hands. And now just 3 weeks after launching 3.6 Flash, 3.7 Flash shows significant gains including in coding and agentic work. 
+
+It delivers substan…</span><span class="xf">Our Flash models are workhorses that offer performance at a great price. So, we&#x27;re shipping updates fast to get them in developers’ hands. And now just 3 weeks after launching 3.6 Flash, 3.7 Flash shows significant gains including in coding and agentic work. 
+
+It delivers substantial improvements across software engineering, knowledge work, and web development, all with an introductory price at half the original cost of 3.6 Flash.
+
+We&#x27;ve gotten positive feedback from early users, including our own engineers using 3.7 in @Antigravity, and we’re excited for you to try it there. Also available via Gemini API in @GoogleAIStudio, Gemini Enterprise &amp; more, full list and details here: https://t.co/u2P2nEMM8F</span></div>
+<footer><div class="act"><button class="ex" type="button">展开</button><button class="cp" type="button" data-copy="Our Flash models are workhorses that offer performance at a great price. So, we&#x27;re shipping updates fast to get them in developers’ hands. And now just 3 weeks after launching 3.6 Flash, 3.7 Flash shows significant gains including in coding and agentic work. 
+
+It delivers substantial improvements across software engineering, knowledge work, and web development, all with an introductory price at half the original cost of 3.6 Flash.
+
+We&#x27;ve gotten positive feedback from early users, including our own engineers using 3.7 in @Antigravity, and we’re excited for you to try it there. Also available via Gemini API in @GoogleAIStudio, Gemini Enterprise &amp; more, full list and details here: https://t.co/u2P2nEMM8F
+— Sundar Pichai (@sundarpichai)
+https://x.com/sundarpichai/status/2087948583890985263">复制原文</button><a class="op" href="https://x.com/sundarpichai/status/2087948583890985263" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>4,523</span><span class="mc" title="转发"><i>⇄</i>419</span><span class="mc" title="评论"><i>💬</i>442</span><span class="mc" title="浏览"><i>👁</i>58.9万</span></div></footer></article><article class="post c6" data-s="one of the most important updates coming out of made by google today is our new sign-to-text feature in gboard &amp; live transcribe. 
+
+built in partnership with the deaf community, this can help people who sign asl communicate more seamlessly with their phone or with those who don&#x27;t sign, like in this live transcribe demo:"><header><span class="av" style="--h:116">S</span><div class="who"><div class="nm"><span>Sundar Pichai</span></div><div class="hd">@sundarpichai</div></div><time class="tm" title="08-13 01:38 北京时间">08-13 01:38<small>61 天前</small></time></header><div class="pt xp"><span class="xs">One of the most important updates coming out of Made by Google today is our new sign-to-text feature in Gboard &amp; Live Transcribe. 
+
+Built in partnership with the Deaf community, this can help people who sign ASL communicate more seamlessly with their phone or with those who don&#x27;t…</span><span class="xf">One of the most important updates coming out of Made by Google today is our new sign-to-text feature in Gboard &amp; Live Transcribe. 
+
+Built in partnership with the Deaf community, this can help people who sign ASL communicate more seamlessly with their phone or with those who don&#x27;t sign, like in this Live Transcribe demo:</span></div>
+<footer><div class="act"><button class="ex" type="button">展开</button><button class="cp" type="button" data-copy="One of the most important updates coming out of Made by Google today is our new sign-to-text feature in Gboard &amp; Live Transcribe. 
+
+Built in partnership with the Deaf community, this can help people who sign ASL communicate more seamlessly with their phone or with those who don&#x27;t sign, like in this Live Transcribe demo:
+— Sundar Pichai (@sundarpichai)
+https://x.com/sundarpichai/status/2087594472008003850">复制原文</button><a class="op" href="https://x.com/sundarpichai/status/2087594472008003850" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>4,568</span><span class="mc" title="转发"><i>⇄</i>442</span><span class="mc" title="评论"><i>💬</i>263</span><span class="mc" title="浏览"><i>👁</i>53.5万</span></div></footer></article><article class="post c6" data-s="the new pixel 11 line up is here, designed for gemini intelligence and with lots of new helpful features. 
+
+a few i’m excited about: rambler, a new voice input built for how you actually talk. magic capture for effortless photos. and hilight, a subtle glow when your phone is face down that lets you know when important people in your life are trying to call you."><header><span class="av" style="--h:116">S</span><div class="who"><div class="nm"><span>Sundar Pichai</span></div><div class="hd">@sundarpichai</div></div><time class="tm" title="08-12 22:48 北京时间">08-12 22:48<small>61 天前</small></time></header><div class="pt xp"><span class="xs">The new Pixel 11 line up is here, designed for Gemini Intelligence and with lots of new helpful features. 
+
+A few I’m excited about: Rambler, a new voice input built for how you actually talk. Magic Capture for effortless photos. And HiLight, a subtle glow when your phone is face…</span><span class="xf">The new Pixel 11 line up is here, designed for Gemini Intelligence and with lots of new helpful features. 
+
+A few I’m excited about: Rambler, a new voice input built for how you actually talk. Magic Capture for effortless photos. And HiLight, a subtle glow when your phone is face down that lets you know when important people in your life are trying to call you.</span></div>
+<footer><div class="act"><button class="ex" type="button">展开</button><button class="cp" type="button" data-copy="The new Pixel 11 line up is here, designed for Gemini Intelligence and with lots of new helpful features. 
+
+A few I’m excited about: Rambler, a new voice input built for how you actually talk. Magic Capture for effortless photos. And HiLight, a subtle glow when your phone is face down that lets you know when important people in your life are trying to call you.
+— Sundar Pichai (@sundarpichai)
+https://x.com/sundarpichai/status/2087551816904974672">复制原文</button><a class="op" href="https://x.com/sundarpichai/status/2087551816904974672" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>2,077</span><span class="mc" title="转发"><i>⇄</i>169</span><span class="mc" title="评论"><i>💬</i>150</span><span class="mc" title="浏览"><i>👁</i>38.5万</span></div></footer></article></div></div>
+<footer>数据：X API get_users_posts · 生成于 2026-10-13 16:21 北京时间</footer></div><script>
+(function(){var d=document.documentElement,mq=matchMedia('(prefers-color-scheme: dark)');
+function sync(){document.querySelectorAll('[data-set-theme]').forEach(function(b){b.classList.toggle('on',b.dataset.setTheme===d.dataset.pref)})}
+function theme(){var p=d.dataset.pref;d.dataset.theme=p==='auto'?(mq.matches?'dark':'light'):p}
+document.querySelectorAll('[data-set-theme]').forEach(function(b){b.onclick=function(){d.dataset.pref=b.dataset.setTheme;try{localStorage.setItem('xhot-theme',b.dataset.setTheme)}catch(e){}theme();sync()}});
+(mq.addEventListener?mq.addEventListener('change',theme):mq.addListener(theme));
+document.querySelectorAll('[data-t]').forEach(function(b){b.onclick=function(){var t=b.dataset.t;
+document.querySelectorAll('[data-t]').forEach(function(x){x.classList.toggle('on',x.dataset.t===t)});
+document.querySelectorAll('.pane').forEach(function(x){x.classList.toggle('on',x.dataset.p===t)});
+document.querySelectorAll('.li-d').forEach(function(x){x.hidden=x.dataset.p!==t});scrollTo({top:0})}});sync();
+function fb(t){var a=document.createElement('textarea');a.value=t;a.setAttribute('readonly','');a.style.cssText='position:fixed;top:-1000px;opacity:0';document.body.appendChild(a);a.select();var ok=false;try{ok=document.execCommand('copy')}catch(e){}document.body.removeChild(a);return ok}
+document.addEventListener('click',function(ev){var b=ev.target.closest('.cp');if(b){var t=b.getAttribute('data-copy');
+function done(ok){b.textContent=ok?'已复制 ✓':'复制失败';b.classList.toggle('ok',ok);clearTimeout(b._t);b._t=setTimeout(function(){b.textContent='复制原文';b.classList.remove('ok')},1600)}
+if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(t).then(function(){done(true)},function(){done(fb(t))})}else done(fb(t));return}
+var x=ev.target.closest('.ex');if(x){var c=x.closest('.post').querySelector('.xp');var o=c.classList.toggle('open');x.textContent=o?'收起':'展开'}})})();
+</script><script>(function(){var q=document.getElementById('q'),c=document.getElementById('cnt'),a=document.getElementById('alll'),ps=[].slice.call(document.querySelectorAll('.feed1 .post'));
+function run(){var v=q.value.trim().toLowerCase(),all=a&&a.checked,k=0,n=0;ps.forEach(function(p){var lo=!p.dataset.ol||all;if(lo)n++;var ok=lo&&(!v||p.dataset.s.indexOf(v)>=0);p.hidden=!ok;if(ok)k++});c.textContent=v?('匹配 '+k+' / '+n+' 条'):(n+' 条')}
+q.addEventListener('input',run);if(a)a.addEventListener('change',run)})();</script></body></html>

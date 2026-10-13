@@ -1,0 +1,356 @@
+<!doctype html><html lang="zh-CN" data-theme="light" data-pref="auto"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><title>MrBeast (@MrBeast) · XHOT</title><script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('xhot-theme')}catch(e){}t=(t==='light'||t==='dark')?t:'auto';d.setAttribute('data-pref',t);d.setAttribute('data-theme',t==='auto'?(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'):t)})();
+</script><style>:root{--bg:#f7f7f8;--card:#fff;--bd:#e4e4e7;--bd2:#f0f0f2;--zebra:#fafafa;--hov:#f4f4f6;--tx:#18181b;--tx2:#3f3f46;--mu:#71717a;--mu2:#a1a1aa;--ac:#4f46e5;--acbg:#eef2ff;--actx:#4338ca;--up:#16a34a;--upbg:#f0fdf4;--dn:#dc2626;--dnbg:#fef2f2;--r:8px;--sh:0 1px 2px rgba(24,24,27,.04)}
+html[data-theme=dark]{--bg:#09090b;--card:#131316;--bd:#27272a;--bd2:#1c1c20;--zebra:#16161a;--hov:#1d1d22;--tx:#f4f4f5;--tx2:#d4d4d8;--mu:#a1a1aa;--mu2:#71717a;--ac:#818cf8;--acbg:#1e1b4b;--actx:#a5b4fc;--up:#4ade80;--upbg:#0f2a1a;--dn:#f87171;--dnbg:#2d1214;--sh:none}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--tx);font:400 13px/1.5 "Inter","PingFang SC","HarmonyOS Sans SC","Noto Sans SC","Noto Sans CJK SC",-apple-system,BlinkMacSystemFont,"Microsoft YaHei",sans-serif;-webkit-font-smoothing:antialiased;font-feature-settings:"cv11","ss01"}
+a{color:inherit;text-decoration:none}button{font:inherit}
+.num,.f,.d,.r,.sv,.nc,.heat,.pc,.tr3,.kv dd,.post footer{font-variant-numeric:tabular-nums}
+/* 顶栏 */
+.top{position:sticky;top:0;z-index:30;background:color-mix(in srgb,var(--card) 92%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--bd)}
+.ti2{max-width:1440px;margin:auto;height:56px;padding:0 24px;display:flex;align-items:center;gap:16px}
+.lg{display:flex;align-items:center;gap:8px;font-weight:600;font-size:16px;letter-spacing:-.01em}.lg i{width:24px;height:24px;border-radius:6px;background:var(--ac);display:grid;place-items:center;font-style:normal;color:#fff;font-size:12px}.lg span{font-weight:400;font-size:13px;color:var(--mu);margin-left:4px;padding-left:12px;border-left:1px solid var(--bd)}
+.mtabs{display:none}
+.tg{margin-left:auto;display:flex;border:1px solid var(--bd);border-radius:var(--r);padding:2px;background:var(--card)}.tg button{border:0;background:none;color:var(--mu);height:28px;padding:0 10px;border-radius:6px;cursor:pointer;font-size:12px}.tg button.on{background:var(--hov);color:var(--tx);font-weight:500}
+/* 12 列网格 */
+.wrap{max-width:1440px;margin:auto;padding:24px 24px 32px}
+.stats,.shell{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:16px}.shell{align-items:start}
+.stats{margin-bottom:24px}.st{grid-column:span 2}
+.left{grid-column:span 2}.content{grid-column:span 10;min-width:0}
+.cols{display:grid;grid-template-columns:repeat(10,minmax(0,1fr));gap:16px;align-items:start}.mid{grid-column:span 7;min-width:0}.right{grid-column:span 3;min-width:0}
+/* 统计条 */
+.st{background:var(--card);border:1px solid var(--bd);border-radius:var(--r);padding:12px 16px;min-width:0;box-shadow:var(--sh)}
+.sl{font-size:12px;color:var(--mu);line-height:16px}.sv{font-size:20px;font-weight:600;line-height:28px;letter-spacing:-.01em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.ss{font-size:12px;color:var(--mu);line-height:16px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.st:nth-child(3) .sv{color:var(--ac)}
+/* 区块标题：统一 24px 行高，底部 8px */
+.bh{display:flex;align-items:center;gap:8px;height:24px;margin:0 0 8px}.bh h2{font-size:14px;font-weight:600;margin:0;line-height:24px}.hint{font-size:12px;color:var(--mu)}.credit{margin-left:auto;font-size:12px;font-weight:500;color:var(--ac)}.credit:hover{text-decoration:underline}
+.blk{margin-bottom:24px}
+/* 左栏 */
+.left{position:sticky;top:80px;display:flex;flex-direction:column;gap:16px}.left>.bh{margin-bottom:-8px}
+.lcard{background:var(--card);border:1px solid var(--bd);border-radius:var(--r);padding:8px;box-shadow:var(--sh)}
+.nav{display:flex;flex-direction:column;gap:2px}.nv{display:grid;grid-template-columns:24px minmax(0,1fr) auto;align-items:center;gap:8px;height:36px;border:0;background:none;color:var(--tx2);padding:0 8px;border-radius:6px;cursor:pointer;text-align:left;font-size:13px;font-weight:500}
+.nv:hover{background:var(--hov)}.nv.on{background:var(--acbg);color:var(--actx)}.ni{width:24px;height:24px;border-radius:6px;display:grid;place-items:center;background:var(--bd2);color:var(--mu);font-size:12px}.nv.on .ni{background:var(--ac);color:#fff}.nc{font-size:12px;color:var(--mu)}
+.kv{margin:0}.kv div{display:flex;justify-content:space-between;align-items:center;height:32px;padding:0 8px;border-bottom:1px solid var(--bd2);font-size:13px}.kv div:last-child{border-bottom:0}.kv dt{color:var(--mu)}.kv dd{margin:0;font-weight:500}
+.mini{padding:8px;border-top:1px solid var(--bd2)}.mt{font-size:12px;color:var(--mu);line-height:16px;margin-bottom:4px}.mv{font-weight:500;display:flex;align-items:center;justify-content:space-between;gap:8px}.mv2{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;font-size:13px;font-weight:500}.mv2:hover{color:var(--ac)}.mm{font-size:12px;color:var(--mu)}
+.mini .sp{height:24px;margin-top:8px}
+.tl{list-style:none;margin:0;padding:0}.tl li a{display:grid;grid-template-columns:16px minmax(0,1fr) auto;gap:8px;align-items:center;height:28px;padding:0 4px;border-radius:4px;font-size:13px}.tl li a:hover{background:var(--hov)}.tl .k{color:var(--mu2);font-size:12px;text-align:right}.tl .n{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.lnote{font-size:12px;color:var(--mu);padding:12px}.lnote b{display:block;color:var(--tx2);font-weight:500;margin-bottom:4px}.lnote p{margin:0 0 4px}.lnote a{color:var(--ac)}
+/* 涨跌徽章：唯一使用红绿的地方 */
+.pc{display:inline-flex;align-items:center;gap:2px;height:20px;font-size:12px;font-weight:500;padding:0 6px;border-radius:4px;white-space:nowrap}.pc.up{color:var(--up);background:var(--upbg)}.pc.dn{color:var(--dn);background:var(--dnbg)}
+.sp{display:block;width:100%;fill:none;stroke-width:1.5;stroke-linejoin:round;stroke-linecap:round}.sp.up,.tile.up .sp{stroke:var(--up)}.sp.dn,.tile.dn .sp{stroke:var(--dn)}
+/* 趋势 */
+.pane{display:none}.pane.on{display:block}
+.tiles{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
+.tile{background:var(--card);border:1px solid var(--bd);border-radius:var(--r);padding:8px 12px;height:88px;display:grid;grid-template-rows:20px 1fr 16px;gap:4px;box-shadow:var(--sh);min-width:0}
+.tile:hover{border-color:var(--mu2)}.tr1{display:grid;grid-template-columns:16px minmax(0,1fr) auto;gap:8px;align-items:center}.tk{font-size:12px;color:var(--mu2);text-align:right}.tn{font-size:13px;font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tile .sp{height:100%;opacity:.9}.tr3{display:flex;justify-content:space-between;font-size:12px;line-height:16px;color:var(--mu)}.tr3 b{color:var(--tx2);font-weight:500}
+/* 热帖 */
+.feed{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.post{background:var(--card);border:1px solid var(--bd);border-radius:var(--r);padding:12px 16px 8px;display:flex;flex-direction:column;min-width:0;box-shadow:var(--sh)}.post:hover{border-color:var(--mu2)}
+.post header{display:grid;grid-template-columns:32px minmax(0,1fr) auto;gap:8px;align-items:center;height:32px}
+.av{--h:220;width:32px;height:32px;border-radius:50%;display:inline-grid;place-items:center;flex:none;font-weight:600;font-size:13px;color:hsl(var(--h) 30% 32%);background:hsl(var(--h) 30% 92%)}
+html[data-theme=dark] .av{color:hsl(var(--h) 35% 80%);background:hsl(var(--h) 15% 22%)}
+.av.s{width:24px;height:24px;font-size:11px}.av.xs{width:20px;height:20px;font-size:10px;margin-left:-6px;border:2px solid var(--card)}.av.xs:first-child{margin-left:0}
+.who{min-width:0;line-height:16px}.nm{display:flex;align-items:center;gap:6px;font-size:13px;font-weight:600;min-width:0}.nm a{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.nm a:hover{color:var(--ac)}.hd{font-size:12px;color:var(--mu);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.heat{font-size:12px;font-weight:500;color:var(--mu);height:20px;line-height:20px;padding:0 6px;border:1px solid var(--bd);border-radius:4px}
+.pt{flex:1;margin:8px 0;font-size:13px;line-height:1.6;color:var(--tx2);white-space:pre-wrap;word-break:break-word}.xp .xf{display:none}.xp.open .xs{display:none}.xp.open .xf{display:inline}
+.post footer{display:flex;align-items:center;gap:10px;height:32px;font-size:12px;color:var(--mu);border-top:1px solid var(--bd2);white-space:nowrap;overflow:hidden}.sp1{flex:1}
+.cp,.ex{height:24px;border:1px solid var(--bd);background:var(--card);color:var(--tx2);font-size:12px;font-weight:500;padding:0 8px;border-radius:6px;cursor:pointer}.cp:hover,.ex:hover{border-color:var(--ac);color:var(--ac)}.cp.ok{border-color:var(--up);color:var(--up)}
+.op{width:24px;height:24px;display:grid;place-items:center;border-radius:6px;color:var(--mu)}.op:hover{background:var(--hov);color:var(--ac)}
+.zh{font-size:11px;font-weight:500;color:var(--mu);border:1px solid var(--bd);border-radius:4px;padding:0 4px;line-height:16px;flex:none}
+/* 右栏 */
+.right{display:flex;flex-direction:column;gap:24px;position:sticky;top:80px}
+.rcard,.acard{background:var(--card);border:1px solid var(--bd);border-radius:var(--r);box-shadow:var(--sh);min-width:0;overflow:hidden}
+.rhd{display:flex;align-items:center;gap:8px;height:24px;margin-bottom:8px}
+.rcard .tw{max-height:560px;overflow:auto}
+/* 表格 */
+table{width:100%;border-collapse:separate;border-spacing:0;font-size:13px}
+th{height:32px;font-size:12px;font-weight:500;color:var(--mu);text-align:left;padding:0 12px;background:var(--zebra);border-bottom:1px solid var(--bd);white-space:nowrap}
+thead th{position:sticky;top:0;z-index:2}
+td{height:36px;padding:0 12px;border-bottom:1px solid var(--bd2);vertical-align:middle}tbody tr:last-child td{border-bottom:0}
+tbody tr:not(.g):hover td{background:var(--hov)}
+th.num,td.num,th.f,td.f,th.d,td.d{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}th.r,td.r{width:40px;text-align:right;color:var(--mu2);padding-right:4px;font-variant-numeric:tabular-nums}
+.lbt{table-layout:fixed}.lbt th.r,.lbt td.r{width:36px}.lbt th.f,.lbt td.f{width:72px;font-weight:500}.lbt th.d,.lbt td.d{width:64px;color:var(--mu);font-size:12px;padding-left:0}
+.lbt td.n a{display:flex;align-items:center;gap:8px;min-width:0}.lbt .nt{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:500}.lbt td.n a:hover .nt{color:var(--ac)}
+tr.g th{position:sticky;top:32px;z-index:1;height:28px;background:var(--card);color:var(--tx2);font-size:12px;font-weight:600;border-bottom:1px solid var(--bd2)}tr.g th span{color:var(--mu);font-weight:400;margin-left:4px}
+.news{list-style:none;margin:0;padding:0 12px}.news li{border-top:1px solid var(--bd2)}.news li:first-child{border-top:0}.news a{display:block;padding:8px 0}.news .t{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;font-weight:500;font-size:13px;line-height:20px}.news a:hover .t{color:var(--ac)}.news .m{display:block;font-size:12px;color:var(--mu);line-height:16px;margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+/* 卡片内标题：所有卡片头 48px */
+.rcard>.bh,.acard>.bh{height:48px;margin:0;padding:0 12px;border-bottom:1px solid var(--bd)}
+/* AIHOT */
+.ahsec{margin-top:8px;padding-top:24px;border-top:1px solid var(--bd)}
+.ahh{display:flex;align-items:center;gap:12px;height:28px;margin-bottom:16px}.ahh .k{font-size:12px;font-weight:600;letter-spacing:.08em;color:var(--ac)}.ahh h2{margin:0;font-size:20px;font-weight:600;letter-spacing:-.01em}.ahh a{margin-left:auto;font-size:12px;font-weight:500;color:var(--ac)}
+.agrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.acard.wide{grid-column:1/-1}
+.ht{table-layout:fixed}.ht td.ti a{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:500}.ht td.ti a:hover{color:var(--ac)}.ht th:nth-child(3),.ht td.sv{width:104px}.ht th:nth-child(4),.ht td.hb{width:160px}.ht th.num,.ht td.num{width:72px}
+.rk{display:inline-grid;place-items:center;width:20px;height:20px;border-radius:4px;color:var(--mu);font-weight:500;font-size:12px}.rk.top{background:var(--acbg);color:var(--actx);font-weight:600}
+.bar{display:block;height:4px;border-radius:2px;background:var(--bd2);overflow:hidden}.bar i{display:block;height:100%;border-radius:2px;background:var(--ac);opacity:.75}
+.lead{display:block;margin:12px;padding:12px 16px;border-radius:6px;background:var(--zebra);border:1px solid var(--bd2)}.lead b{display:block;font-size:16px;font-weight:600;line-height:24px}.lead span{display:block;font-size:13px;color:var(--tx2);margin-top:4px}.lead:hover b{color:var(--ac)}
+.dg{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:16px;padding:0 12px 12px}.dl{font-size:12px;font-weight:600;color:var(--tx2);height:28px;line-height:28px;border-bottom:1px solid var(--bd)}.ds ul{list-style:none;margin:0;padding:0}.ds li a{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;font-size:13px;line-height:20px;padding:6px 0;border-bottom:1px solid var(--bd2);color:var(--tx2)}.ds li a:hover{color:var(--ac)}
+.exg{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:var(--bd2)}.exc{display:grid;grid-template-rows:auto 1fr auto;gap:4px;padding:12px 16px;background:var(--card);min-height:132px}.exc:hover{background:var(--hov)}
+.et{display:flex;gap:8px;align-items:flex-start}.et span{flex:1;font-weight:600;font-size:13px;line-height:20px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}.sc{font-size:12px;font-weight:500;color:var(--actx);background:var(--acbg);border-radius:4px;padding:0 6px;line-height:20px;font-variant-numeric:tabular-nums}
+.exc p{margin:0;font-size:12px;color:var(--mu);line-height:18px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}.em{font-size:12px;color:var(--mu2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.mtb .mn{font-weight:500}.mtb td{white-space:nowrap}.scc{width:180px}td.scc{text-align:right}.scc .bar{display:inline-block;width:96px;vertical-align:middle;margin-right:12px}.scc b{font-weight:600;font-variant-numeric:tabular-nums;display:inline-block;width:36px;text-align:right}
+.chips{display:flex;flex-wrap:wrap;gap:8px;padding:12px}.chips a{height:28px;line-height:26px;font-size:12px;padding:0 12px;border-radius:14px;color:var(--tx2);border:1px solid var(--bd)}.chips a:hover{border-color:var(--ac);color:var(--ac)}
+footer{max-width:1440px;margin:24px auto 0;padding-top:16px;border-top:1px solid var(--bd);font-size:12px;color:var(--mu)}footer a{color:var(--ac)}
+/* 响应式 */
+@media(max-width:1600px){.post footer .rp{display:none}}@media(max-width:1360px){.lbt th.f,.lbt td.f{width:64px}.lbt th.d,.lbt td.d{width:52px}.lbt th.r,.lbt td.r{width:28px}td,th{padding:0 8px}.tiles{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:1180px){.left{display:none}.content{grid-column:1/-1}.st{grid-column:span 4}.mtabs{display:flex;gap:4px}.mt1{height:32px;border:0;background:none;color:var(--tx2);padding:0 12px;border-radius:6px;cursor:pointer;font-weight:500;font-size:13px}.mt1.on{background:var(--acbg);color:var(--actx)}}
+@media(max-width:900px){.cols{grid-template-columns:1fr}.mid,.right{grid-column:1/-1}.right{position:static}.agrid{grid-template-columns:1fr}.dg{grid-template-columns:repeat(2,minmax(0,1fr))}.exg{grid-template-columns:1fr 1fr}}
+@media(max-width:640px){.ti2{flex-wrap:wrap;height:auto;padding:8px 16px;gap:8px}.lg span{display:none}.mtabs{order:3;width:100%}.mt1{flex:1}.wrap{padding:16px 12px 24px}
+.stats{gap:8px;margin-bottom:16px}.st{grid-column:span 6;padding:8px 12px}.sv{font-size:16px;line-height:24px}.tiles{grid-template-columns:repeat(2,minmax(0,1fr))}.feed{grid-template-columns:1fr}.exg{grid-template-columns:1fr}
+.ht th:nth-child(3),.ht td.sv,.ht th:nth-child(4),.ht td.hb,.ht th:nth-child(6),.ht td:nth-child(6){display:none}.mtb th:nth-child(3),.mtb td:nth-child(3),.mtb th:nth-child(4),.mtb td:nth-child(4),.mtb th:nth-child(5),.mtb td:nth-child(5){display:none}.scc{width:auto}.scc .bar{display:none}.ahh{height:auto;flex-wrap:wrap}.ahh a{margin-left:0}.dg{grid-template-columns:1fr}}
+/* ===== v5 color layer ===== */
+:root{--ac:#7c3aed;--acbg:#f3e8ff;--actx:#6d28d9;--g1:#7c3aed;--g2:#db2777;--g3:#f97316;--bg:#f6f5fb;--glow:rgba(124,58,237,.18)}
+html[data-theme=dark]{--bg:#110d2e;--card:#1a1640;--bd:#2a2652;--bd2:#1e1b40;--zebra:#171536;--hov:#1f1c45;--mu:#a5a3c9;--mu2:#77749e;--ac:#c084fc;--acbg:#2e1a5c;--actx:#e9d5ff;--up:#4ade80;--dn:#fb7185;--glow:rgba(192,132,252,.28)}
+html[data-theme=dark],html[data-theme=dark] body{background-attachment:fixed;background:radial-gradient(1200px 600px at 10% -10%,#2a1660 0,transparent 60%),radial-gradient(900px 500px at 100% 0,#3b0d4a 0,transparent 55%),var(--bg)}
+.lg i{background:linear-gradient(135deg,var(--g1),var(--g2))!important;color:#fff!important}
+.stats{background:linear-gradient(110deg,#6d28d9 0%,#a21caf 50%,#db2777 85%,#f97316 120%);border-radius:12px;padding:16px;box-shadow:0 8px 24px -8px rgba(162,28,175,.45)}
+html[data-theme=dark] .stats{background:linear-gradient(110deg,#4c1d95 0%,#86198f 55%,#be185d 100%);box-shadow:0 0 0 1px rgba(232,121,249,.25),0 10px 30px -10px rgba(217,70,239,.5)}
+.stats .st{background:rgba(255,255,255,.12)!important;border:1px solid rgba(255,255,255,.22)!important;box-shadow:none!important;backdrop-filter:blur(4px)}
+.stats .st *{color:#fff!important}
+.stats .st .sl,.stats .st .ss{color:rgba(255,255,255,.82)!important}
+/* heat tiles */
+.tile{position:relative;overflow:hidden;transition:transform .15s,box-shadow .15s}
+.tile.up{background:linear-gradient(135deg,rgba(249,115,22,calc(var(--a)*.10 + .03)),rgba(239,68,68,calc(var(--a)*.28 + .04))),var(--card);border-color:rgba(239,68,68,calc(var(--a)*.45 + .12))}
+.tile.dn{background:linear-gradient(135deg,rgba(56,189,248,.05),rgba(59,130,246,calc(var(--a)*.22 + .05))),var(--card);border-color:rgba(59,130,246,.25)}
+.tile.up .sp{stroke:#ea580c}.tile.dn .sp{stroke:#2563eb}
+html[data-theme=dark] .tile.up .sp{stroke:#fb923c}html[data-theme=dark] .tile.dn .sp{stroke:#60a5fa}
+.tile:hover{transform:translateY(-1px);box-shadow:0 6px 18px -6px rgba(239,68,68,.35)}
+/* domain chips */
+.nv[data-t=ai] .ni,.mtabs [data-t=ai]{--dc:#7c3aed}
+.nv[data-t=money] .ni,.mtabs [data-t=money]{--dc:#f59e0b}
+.nv[data-t=growth] .ni,.mtabs [data-t=growth]{--dc:#14b8a6}
+.nv[data-t=ai]{--dc:#7c3aed;--dc2:#c026d3}.nv[data-t=money]{--dc:#f59e0b;--dc2:#ea580c}.nv[data-t=growth]{--dc:#14b8a6;--dc2:#22c55e}
+.nv .ni{background:linear-gradient(135deg,var(--dc),var(--dc2))!important;color:#fff!important}
+.nv.on{background:color-mix(in srgb,var(--dc) 12%,var(--card))!important;color:var(--tx)!important;box-shadow:inset 3px 0 0 var(--dc)}
+.nv.on .nc{color:var(--dc)}
+/* gradient avatars */
+.av{background:linear-gradient(135deg,hsl(var(--h) 85% 62%),hsl(calc(var(--h) + 50) 80% 52%))!important;color:#fff!important;text-shadow:0 1px 1px rgba(0,0,0,.2)}
+/* cards accents + glow */
+.lcard,.rcard,.post,.acard{transition:box-shadow .15s,border-color .15s}
+.post{border-top:2px solid color-mix(in srgb,var(--ac) 45%,transparent)!important}
+.post:hover,.rcard:hover,.acard:hover{border-color:color-mix(in srgb,var(--ac) 50%,var(--bd))!important;box-shadow:0 0 0 3px var(--glow)}
+.bh h2{position:relative;padding-left:10px}
+.bh h2::before{content:"";position:absolute;left:0;top:5px;bottom:5px;width:3px;border-radius:2px;background:linear-gradient(var(--g1),var(--g2))}
+a{color:var(--actx)}
+/* ===== v6 layout ===== */
+.mtabs{display:flex!important;gap:4px}
+.mt1{height:32px;border:0;background:none;color:var(--tx2);padding:0 12px;border-radius:6px;cursor:pointer;font-weight:500;font-size:13px}
+.mt1.on{background:color-mix(in srgb,var(--dc) 14%,var(--card));color:var(--tx);box-shadow:inset 0 -2px 0 var(--dc)}
+.ti2{display:flex;align-items:center;gap:16px}
+.ti2 .sp1{flex:1}
+.ahl{font-size:13px;font-weight:500;color:var(--actx);text-decoration:none;padding:0 8px;height:32px;display:inline-flex;align-items:center;border-radius:6px}
+.ahl:hover{background:var(--acbg)}
+.stats.sm{padding:8px 16px;grid-template-columns:repeat(12,minmax(0,1fr))}
+.stats.sm .st{grid-column:span 2;padding:8px 12px;height:auto}
+.stats.sm .sv{font-size:20px;line-height:1.3}
+.g6{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:16px;align-items:start}
+.c-l{grid-column:span 3;min-width:0}.c-m{grid-column:span 6;min-width:0}.c-r{grid-column:span 3;min-width:0;display:flex;flex-direction:column;gap:24px}
+.c-l,.c-r{position:sticky;top:80px;max-height:calc(100vh - 96px);overflow:auto;scrollbar-width:thin}
+.feed1{display:flex;flex-direction:column;gap:8px}
+.post .pt{white-space:pre-wrap;word-break:break-word}
+.post .tm{color:var(--mu);font-variant-numeric:tabular-nums}
+.lbt td.n a{display:flex;align-items:center;gap:8px;min-width:0;color:var(--tx);text-decoration:none}
+.lbt td.n a:hover .nt{color:var(--actx);text-decoration:underline}
+.rlist{list-style:none;margin:0;padding:0}
+.rlist li{border-top:1px solid var(--bd2)}
+.rlist li:first-child{border-top:0}
+.rlist a{display:block;padding:8px 12px;color:var(--tx);text-decoration:none}
+.rlist a:hover{background:var(--hov)}
+.gh .rn{font-weight:600;font-size:13px;color:var(--actx);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.gh .rd{font-size:12px;color:var(--tx2);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;margin:2px 0 4px}
+.gh .rm{display:flex;gap:12px;font-size:12px;color:var(--mu);font-variant-numeric:tabular-nums}
+.gh .rm .td{margin-left:auto;color:#ea580c;font-weight:600}
+html[data-theme=dark] .gh .rm .td{color:#fb923c}
+.gh .lg2{display:inline-flex;align-items:center;gap:4px}.gh .lg2 i{width:8px;height:8px;border-radius:50%;background:hsl(var(--h) 70% 55%)}
+.nws .t{font-size:13px;font-weight:500;line-height:1.5;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.nws .m{font-size:12px;color:var(--mu);margin-top:2px;display:flex;gap:8px}
+.src{display:inline-block;padding:0 6px;border-radius:4px;font-size:12px;font-weight:500;line-height:18px}
+.src.x{background:#e0f2fe;color:#0369a1}.src.d{background:#f3e8ff;color:#7e22ce}.src.s{background:#fce7f3;color:#be185d}
+html[data-theme=dark] .src.x{background:#0c2a44;color:#7dd3fc}html[data-theme=dark] .src.d{background:#2e1a5c;color:#d8b4fe}html[data-theme=dark] .src.s{background:#4a0d2e;color:#f9a8d4}
+.tl2{list-style:none;margin:0;padding:4px 0}
+.tl2 a{display:grid;grid-template-columns:24px 1fr auto;align-items:center;height:32px;padding:0 12px;color:var(--tx);text-decoration:none;gap:8px}
+.tl2 a:hover{background:var(--hov)}
+.tl2 .k{color:var(--mu);font-variant-numeric:tabular-nums;font-size:12px}
+.tl2 .n{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+/* person page */
+.ph{display:grid;grid-template-columns:80px 1fr auto;gap:16px;align-items:center;padding:24px;border-radius:12px;background:linear-gradient(110deg,#6d28d9 0%,#a21caf 55%,#db2777 100%);color:#fff;box-shadow:0 8px 24px -8px rgba(162,28,175,.45)}
+.ph .av.xl{width:80px;height:80px;border-radius:50%;font-size:28px;font-weight:600;display:flex;align-items:center;justify-content:center;border:3px solid rgba(255,255,255,.6)}
+.ph h1{font-size:28px;line-height:1.3;margin:0;font-weight:600}
+.ph .hd{opacity:.85;font-size:14px}
+.ph .bio{margin:8px 0 0;font-size:14px;opacity:.95;white-space:pre-wrap;max-width:720px}
+.ph .fs{text-align:right}
+.ph .fs b{display:block;font-size:28px;font-weight:600;font-variant-numeric:tabular-nums;line-height:1.3}
+.ph .fs span{font-size:12px;opacity:.85}
+.ph .xb{display:inline-flex;margin-top:8px;height:32px;align-items:center;padding:0 12px;border-radius:6px;background:rgba(255,255,255,.18);color:#fff;text-decoration:none;font-weight:500;border:1px solid rgba(255,255,255,.35)}
+.ptool{display:flex;align-items:center;gap:16px;margin:24px 0 8px}
+.ptool input{flex:1;height:40px;border:1px solid var(--bd);border-radius:8px;background:var(--card);color:var(--tx);padding:0 12px;font:inherit;font-size:14px;outline:none}
+.ptool input:focus{border-color:var(--ac);box-shadow:0 0 0 3px var(--glow)}
+.ptool .cnt{color:var(--mu);font-variant-numeric:tabular-nums;white-space:nowrap}
+.pwrap{max-width:880px;margin:0 auto}
+.back{font-size:13px;color:var(--actx);text-decoration:none;display:inline-flex;height:32px;align-items:center;margin-bottom:8px}
+mark{background:#fde68a;color:inherit;border-radius:2px}
+html[data-theme=dark] mark{background:#854d0e}
+@media(max-width:1180px){.c-l{grid-column:span 4}.c-m{grid-column:span 8}.c-r{grid-column:1/-1;position:static;max-height:none;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}}
+@media(max-width:900px){.g6{grid-template-columns:1fr}.c-l,.c-m,.c-r{grid-column:1/-1;position:static;max-height:none}.c-m{order:1}.c-r{order:2;display:flex}.c-l{order:3}.stats.sm .st{grid-column:span 4}}
+@media(max-width:640px){.ti2{flex-wrap:wrap;gap:8px}.mtabs{order:3;width:100%}.mt1{flex:1}.ahl{margin-left:auto}.ti2 .sp1{display:none}.stats.sm{display:none}.ph{grid-template-columns:56px 1fr;padding:16px}.ph .av.xl{width:56px;height:56px;font-size:20px}.ph h1{font-size:20px}.ph .fs{grid-column:1/-1;text-align:left}}
+.post footer{margin:0!important;width:auto!important;max-width:none!important;padding:0!important;text-align:left!important;justify-content:flex-start}
+.c-l .tw{max-height:none;overflow:visible}
+.ph .hd,.ph .hd *{color:rgba(255,255,255,.85)!important}
+/* ===== v6b card consistency ===== */
+.post.c6{padding:16px;gap:0;border:1px solid var(--bd)!important;border-top:3px solid color-mix(in srgb,var(--ac) 55%,transparent)!important;border-radius:10px;background:var(--card)}
+.post.c6 header{display:grid;grid-template-columns:32px minmax(0,1fr) auto;gap:12px;align-items:center;height:40px}
+.post.c6 .who{min-width:0}
+.post.c6 .nm{font-weight:600;font-size:14px;line-height:20px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.post.c6 .nm a{color:var(--tx);text-decoration:none}.post.c6 .nm a:hover{color:var(--actx)}
+.post.c6 .hd{font-size:12px;line-height:18px;color:var(--mu)}
+.post.c6 .tm{text-align:right;font-size:12px;line-height:18px;color:var(--tx2);font-variant-numeric:tabular-nums;white-space:nowrap}
+.post.c6 .tm small{display:block;color:var(--mu);font-size:12px}
+.post.c6 .pt{margin:12px 0;font-size:14px;line-height:1.5;color:var(--tx)}
+.post.c6 footer{display:flex!important;align-items:center;justify-content:space-between!important;height:40px;border-top:1px solid var(--bd2);gap:8px}
+.post.c6 .act{display:flex;gap:8px;align-items:center}
+.post.c6 .op{font-size:12px;color:var(--mu);text-decoration:none;height:28px;display:inline-flex;align-items:center;padding:0 8px;border:1px solid var(--bd);border-radius:6px}
+.post.c6 .op:hover{color:var(--actx);border-color:var(--ac)}
+.post.c6 .met{display:grid;grid-template-columns:repeat(4,64px);gap:0}
+.post.c6 .mc{text-align:right;font-variant-numeric:tabular-nums;color:var(--mu);font-size:12px}
+.post.c6 .mc i{font-style:normal;margin-right:4px;opacity:.75}
+.feed1{gap:12px}
+.ph{grid-template-columns:80px minmax(0,1fr) auto;padding:24px}
+.ph .pi{min-width:0}.ph .bio.dim{opacity:.7}
+.ph .xb{margin:0;align-self:start}
+.pstat{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:12px}
+.psb{background:var(--card);border:1px solid var(--bd);border-radius:10px;padding:12px 16px;border-top:3px solid var(--dcx,#a21caf)}
+.psb:nth-child(1){--dcx:#7c3aed}.psb:nth-child(2){--dcx:#db2777}.psb:nth-child(3){--dcx:#f97316}.psb:nth-child(4){--dcx:#14b8a6}
+.psb .sl{font-size:12px;color:var(--mu)}.psb .sv{font-size:20px;font-weight:600;line-height:1.4;font-variant-numeric:tabular-nums;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.psb .ss{font-size:12px;color:var(--mu)}
+.tgl{display:inline-flex;align-items:center;gap:6px;font-size:13px;color:var(--tx2);white-space:nowrap;cursor:pointer}
+.empty{padding:24px;color:var(--mu)}
+@media(max-width:640px){.pstat{grid-template-columns:repeat(2,minmax(0,1fr))}.ph{grid-template-columns:56px minmax(0,1fr)}.ph .xb{grid-column:1/-1;justify-self:start}.ptool{flex-wrap:wrap;gap:8px}.ptool input{flex-basis:100%}
+.post.c6 .met{grid-template-columns:repeat(4,auto);gap:10px}.post.c6 footer{height:auto;min-height:40px;flex-wrap:wrap;padding:6px 0!important}.post.c6 .rp,.post.c6 .mc:nth-child(3){display:none}}
+.post.c6 .met{grid-template-columns:64px 64px 72px 84px}@media(max-width:640px){.post.c6 .met{grid-template-columns:repeat(4,auto);gap:10px}}
+</style></head><body><header class="top"><div class="ti2"><div class="lg"><i>⚡</i>XHOT<span>X 热点雷达</span></div><span class="sp1"></span><a class="ahl" href="https://aihot.news" target="_blank">来自 AIHOT ↗</a><div class="tg"><button data-set-theme="light" title="浅色">☀</button><button data-set-theme="dark" title="深色">☾</button><button data-set-theme="auto">自动</button></div></div></header>
+<div class="wrap"><div class="pwrap"><a class="back" href="../index.html">← 返回首页</a>
+<section class="ph"><span class="av xl" style="--h:338">M</span><div class="pi"><h1>MrBeast</h1><div class="hd">@MrBeast</div><p class="bio">I want to make the world a better place</p></div><a class="xb" href="https://x.com/MrBeast" target="_blank">在 X 查看 ↗</a></section>
+<div class="pstat"><div class="psb"><div class="sl">粉丝</div><div class="sv">3498.8万</div><div class="ss">34,987,992</div></div><div class="psb"><div class="sl">较上次</div><div class="sv">—</div><div class="ss">粉丝变化</div></div><div class="psb"><div class="sl">已存推文</div><div class="sv">25</div><div class="ss">最多 200 条</div></div><div class="psb"><div class="sl">最新发帖</div><div class="sv">10-10 07:11</div><div class="ss">3 天前</div></div></div>
+<div class="ptool"><input id="q" type="search" placeholder="搜索 MrBeast 的推文关键词…" autocomplete="off"><span class="cnt" id="cnt">25 条</span></div>
+<div class="bh"><h2>推文时间线</h2><span class="hint">最新在前 · 默认只显示中文/英文</span></div><div class="feed1"><article class="post c6" data-s="i am not giving away money on discord. if you get a message claiming so it’s a scam."><header><span class="av" style="--h:338">M</span><div class="who"><div class="nm"><span>MrBeast</span></div><div class="hd">@MrBeast</div></div><time class="tm" title="10-10 07:11 北京时间">10-10 07:11<small>3 天前</small></time></header><div class="pt">I am not giving away money on discord. If you get a message claiming so it’s a scam.</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="I am not giving away money on discord. If you get a message claiming so it’s a scam.
+— MrBeast (@MrBeast)
+https://x.com/MrBeast/status/2108696909418578012">复制原文</button><a class="op" href="https://x.com/MrBeast/status/2108696909418578012" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>10.1万</span><span class="mc" title="转发"><i>⇄</i>4,855</span><span class="mc" title="评论"><i>💬</i>4,158</span><span class="mc" title="浏览"><i>👁</i>919.1万</span></div></footer></article><article class="post c6" data-s="192,000,000 views in 5 days is insane😭❤️ https://t.co/7q5cdnf6cg"><header><span class="av" style="--h:338">M</span><div class="who"><div class="nm"><span>MrBeast</span></div><div class="hd">@MrBeast</div></div><time class="tm" title="10-09 13:37 北京时间">10-09 13:37<small>4 天前</small></time></header><div class="pt">192,000,000 views in 5 days is insane😭❤️ https://t.co/7q5cDnf6cG</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="192,000,000 views in 5 days is insane😭❤️ https://t.co/7q5cDnf6cG
+— MrBeast (@MrBeast)
+https://x.com/MrBeast/status/2108431737902477695">复制原文</button><a class="op" href="https://x.com/MrBeast/status/2108431737902477695" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>3.2万</span><span class="mc" title="转发"><i>⇄</i>807</span><span class="mc" title="评论"><i>💬</i>1,468</span><span class="mc" title="浏览"><i>👁</i>320.2万</span></div></footer></article><article class="post c6" data-s="i’ve never seen a gap this large lol
+
+also approaching 2 billion minutes watched on the video 🥰 https://t.co/nhsr6p0fkw"><header><span class="av" style="--h:338">M</span><div class="who"><div class="nm"><span>MrBeast</span></div><div class="hd">@MrBeast</div></div><time class="tm" title="10-06 14:32 北京时间">10-06 14:32<small>7 天前</small></time></header><div class="pt">I’ve never seen a gap this large lol
+
+Also approaching 2 billion minutes watched on the video 🥰 https://t.co/NhSr6p0Fkw</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="I’ve never seen a gap this large lol
+
+Also approaching 2 billion minutes watched on the video 🥰 https://t.co/NhSr6p0Fkw
+— MrBeast (@MrBeast)
+https://x.com/MrBeast/status/2107358317693853705">复制原文</button><a class="op" href="https://x.com/MrBeast/status/2107358317693853705" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>968</span><span class="mc" title="转发"><i>⇄</i>34</span><span class="mc" title="评论"><i>💬</i>237</span><span class="mc" title="浏览"><i>👁</i>29.1万</span></div></footer></article><article class="post c6" data-s="new video is our most viewed video ever in 24 hours but more importantly, it has 10,000+ comments saying it’s our best video ever (literally). even though i’ve been making content for 17 years now i still think my best days are ahead, appreciate you all ❤️❤️❤️ https://t.co/dfsuhpvstz"><header><span class="av" style="--h:338">M</span><div class="who"><div class="nm"><span>MrBeast</span></div><div class="hd">@MrBeast</div></div><time class="tm" title="10-05 00:37 北京时间">10-05 00:37<small>8 天前</small></time></header><div class="pt xp"><span class="xs">New video is our most viewed video ever in 24 hours but more importantly, it has 10,000+ comments saying it’s our BEST video ever (literally). Even though I’ve been making content for 17 years now I still think my best days are ahead, appreciate you all ❤️❤️❤️ https://t.co/dfSUHP…</span><span class="xf">New video is our most viewed video ever in 24 hours but more importantly, it has 10,000+ comments saying it’s our BEST video ever (literally). Even though I’ve been making content for 17 years now I still think my best days are ahead, appreciate you all ❤️❤️❤️ https://t.co/dfSUHPvsTZ</span></div>
+<footer><div class="act"><button class="ex" type="button">展开</button><button class="cp" type="button" data-copy="New video is our most viewed video ever in 24 hours but more importantly, it has 10,000+ comments saying it’s our BEST video ever (literally). Even though I’ve been making content for 17 years now I still think my best days are ahead, appreciate you all ❤️❤️❤️ https://t.co/dfSUHPvsTZ
+— MrBeast (@MrBeast)
+https://x.com/MrBeast/status/2106785883902874034">复制原文</button><a class="op" href="https://x.com/MrBeast/status/2106785883902874034" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>2.3万</span><span class="mc" title="转发"><i>⇄</i>671</span><span class="mc" title="评论"><i>💬</i>1,687</span><span class="mc" title="浏览"><i>👁</i>252.6万</span></div></footer></article><article class="post c6" data-s="the general consensus in the comments on the video is it’s the best i’ve ever made 👀 https://t.co/rdvi7yp3ga"><header><span class="av" style="--h:338">M</span><div class="who"><div class="nm"><span>MrBeast</span></div><div class="hd">@MrBeast</div></div><time class="tm" title="10-04 01:55 北京时间">10-04 01:55<small>9 天前</small></time></header><div class="pt">The general consensus in the comments on the video is it’s the best I’ve ever made 👀 https://t.co/rdVI7yp3gA</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="The general consensus in the comments on the video is it’s the best I’ve ever made 👀 https://t.co/rdVI7yp3gA
+— MrBeast (@MrBeast)
+https://x.com/MrBeast/status/2106443145248428161">复制原文</button><a class="op" href="https://x.com/MrBeast/status/2106443145248428161" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>1,000</span><span class="mc" title="转发"><i>⇄</i>38</span><span class="mc" title="评论"><i>💬</i>240</span><span class="mc" title="浏览"><i>👁</i>32.2万</span></div></footer></article><article class="post c6" data-s="do you think these 4 ate everything in a grocery store and won $1,000,000? it was our longest challenge ever (over 200 days) go watch! https://t.co/ckhyst3vgg"><header><span class="av" style="--h:338">M</span><div class="who"><div class="nm"><span>MrBeast</span></div><div class="hd">@MrBeast</div></div><time class="tm" title="10-04 00:23 北京时间">10-04 00:23<small>9 天前</small></time></header><div class="pt">Do you think these 4 ate everything in a grocery store and won $1,000,000? It was our longest challenge ever (over 200 days) go watch! https://t.co/CKhYST3Vgg</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="Do you think these 4 ate everything in a grocery store and won $1,000,000? It was our longest challenge ever (over 200 days) go watch! https://t.co/CKhYST3Vgg
+— MrBeast (@MrBeast)
+https://x.com/MrBeast/status/2106419935786508338">复制原文</button><a class="op" href="https://x.com/MrBeast/status/2106419935786508338" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>1.4万</span><span class="mc" title="转发"><i>⇄</i>522</span><span class="mc" title="评论"><i>💬</i>1,054</span><span class="mc" title="浏览"><i>👁</i>142.1万</span></div></footer></article><article class="post c6" data-s="eat everything in a grocery store win $1,000,000 goes live this saturday! this video is a mini movie https://t.co/0wrjcwlrsq"><header><span class="av" style="--h:338">M</span><div class="who"><div class="nm"><span>MrBeast</span></div><div class="hd">@MrBeast</div></div><time class="tm" title="09-29 04:17 北京时间">09-29 04:17<small>14 天前</small></time></header><div class="pt">Eat Everything In A Grocery Store Win $1,000,000 goes live this Saturday! This video is a mini movie https://t.co/0wRjCWlrsq</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="Eat Everything In A Grocery Store Win $1,000,000 goes live this Saturday! This video is a mini movie https://t.co/0wRjCWlrsq
+— MrBeast (@MrBeast)
+https://x.com/MrBeast/status/2104666840249381004">复制原文</button><a class="op" href="https://x.com/MrBeast/status/2104666840249381004" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>2.7万</span><span class="mc" title="转发"><i>⇄</i>710</span><span class="mc" title="评论"><i>💬</i>1,382</span><span class="mc" title="浏览"><i>👁</i>215.6万</span></div></footer></article><article class="post c6" data-s="if you want to watch it 
+
+https://t.co/gplqyqtfrh"><header><span class="av" style="--h:338">M</span><div class="who"><div class="nm"><span>MrBeast</span></div><div class="hd">@MrBeast</div></div><time class="tm" title="09-27 13:58 北京时间">09-27 13:58<small>16 天前</small></time></header><div class="pt">If you want to watch it 
+
+https://t.co/gPLqYQTFrh</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="If you want to watch it 
+
+https://t.co/gPLqYQTFrh
+— MrBeast (@MrBeast)
+https://x.com/MrBeast/status/2104088159629775087">复制原文</button><a class="op" href="https://x.com/MrBeast/status/2104088159629775087" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>1,092</span><span class="mc" title="转发"><i>⇄</i>71</span><span class="mc" title="评论"><i>💬</i>260</span><span class="mc" title="浏览"><i>👁</i>63.2万</span></div></footer></article><article class="post c6" data-s="13 years ago when i had 250 subscribers i had a minecraft let’s play series. i revisited the world for a new video and man it’s so nostalgic 😭 https://t.co/sco9ubmcun"><header><span class="av" style="--h:338">M</span><div class="who"><div class="nm"><span>MrBeast</span></div><div class="hd">@MrBeast</div></div><time class="tm" title="09-27 13:57 北京时间">09-27 13:57<small>16 天前</small></time></header><div class="pt">13 years ago when I had 250 subscribers I had a Minecraft let’s play series. I revisited the world for a new video and man it’s so nostalgic 😭 https://t.co/Sco9uBmcUn</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="13 years ago when I had 250 subscribers I had a Minecraft let’s play series. I revisited the world for a new video and man it’s so nostalgic 😭 https://t.co/Sco9uBmcUn
+— MrBeast (@MrBeast)
+https://x.com/MrBeast/status/2104088056135319815">复制原文</button><a class="op" href="https://x.com/MrBeast/status/2104088056135319815" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>1.8万</span><span class="mc" title="转发"><i>⇄</i>802</span><span class="mc" title="评论"><i>💬</i>1,067</span><span class="mc" title="浏览"><i>👁</i>173.7万</span></div></footer></article><article class="post c6" data-s="i need the best editors on the planet! click the link, pick your best edit, and record a walkthrough of how you cut it. that&#x27;s all it takes to apply to work with me. last time i tweeted a job link we hired 4 creatives from it! we watch every single submission."><header><span class="av" style="--h:338">M</span><div class="who"><div class="nm"><span>MrBeast</span></div><div class="hd">@MrBeast</div></div><time class="tm" title="09-22 23:41 北京时间">09-22 23:41<small>20 天前</small></time></header><div class="pt">I NEED the best editors on the planet! Click the link, pick your best edit, and record a walkthrough of how you cut it. That&#x27;s all it takes to apply to work with me. Last time I tweeted a job link we hired 4 creatives from it! We watch every single submission.</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="I NEED the best editors on the planet! Click the link, pick your best edit, and record a walkthrough of how you cut it. That&#x27;s all it takes to apply to work with me. Last time I tweeted a job link we hired 4 creatives from it! We watch every single submission.
+— MrBeast (@MrBeast)
+https://x.com/MrBeast/status/2102422947529150877">复制原文</button><a class="op" href="https://x.com/MrBeast/status/2102422947529150877" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>8,234</span><span class="mc" title="转发"><i>⇄</i>668</span><span class="mc" title="评论"><i>💬</i>1,196</span><span class="mc" title="浏览"><i>👁</i>190.2万</span></div></footer></article><article class="post c6" data-s="https://t.co/ufud62qdom"><header><span class="av" style="--h:338">M</span><div class="who"><div class="nm"><span>MrBeast</span></div><div class="hd">@MrBeast</div></div><time class="tm" title="09-20 00:01 北京时间">09-20 00:01<small>23 天前</small></time></header><div class="pt">https://t.co/ufUd62QDom</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="https://t.co/ufUd62QDom
+— MrBeast (@MrBeast)
+https://x.com/MrBeast/status/2101340838538383671">复制原文</button><a class="op" href="https://x.com/MrBeast/status/2101340838538383671" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>5,692</span><span class="mc" title="转发"><i>⇄</i>705</span><span class="mc" title="评论"><i>💬</i>544</span><span class="mc" title="浏览"><i>👁</i>155.4万</span></div></footer></article><article class="post c6" data-s="i built a city for kids stuck in illegal child labor and their families. this is by far my most impactful video ever, i feel like my entire 14 years on youtube has led up to this. check it out 🙏🏻"><header><span class="av" style="--h:338">M</span><div class="who"><div class="nm"><span>MrBeast</span></div><div class="hd">@MrBeast</div></div><time class="tm" title="09-20 00:00 北京时间">09-20 00:00<small>23 天前</small></time></header><div class="pt">I built a city for kids stuck in illegal child labor and their families. This is by far my most impactful video ever, i feel like my entire 14 years on Youtube has led up to this. Check it out 🙏🏻</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="I built a city for kids stuck in illegal child labor and their families. This is by far my most impactful video ever, i feel like my entire 14 years on Youtube has led up to this. Check it out 🙏🏻
+— MrBeast (@MrBeast)
+https://x.com/MrBeast/status/2101340770926317646">复制原文</button><a class="op" href="https://x.com/MrBeast/status/2101340770926317646" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>7.2万</span><span class="mc" title="转发"><i>⇄</i>4,548</span><span class="mc" title="评论"><i>💬</i>2,218</span><span class="mc" title="浏览"><i>👁</i>381.8万</span></div></footer></article><article class="post c6" data-s="it prob won’t preform that well but it’s something i care a lot about and i hope my passion for it shines through. i’m excited :d"><header><span class="av" style="--h:338">M</span><div class="who"><div class="nm"><span>MrBeast</span></div><div class="hd">@MrBeast</div></div><time class="tm" title="09-17 03:29 北京时间">09-17 03:29<small>26 天前</small></time></header><div class="pt">It prob won’t preform that well but it’s something I care a lot about and I hope my passion for it shines through. I’m excited :D</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="It prob won’t preform that well but it’s something I care a lot about and I hope my passion for it shines through. I’m excited :D
+— MrBeast (@MrBeast)
+https://x.com/MrBeast/status/2100306129259487467">复制原文</button><a class="op" href="https://x.com/MrBeast/status/2100306129259487467" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>1.5万</span><span class="mc" title="转发"><i>⇄</i>149</span><span class="mc" title="评论"><i>💬</i>443</span><span class="mc" title="浏览"><i>👁</i>111.8万</span></div></footer></article><article class="post c6" data-s="this saturday we upload our biggest youtube video ever. it’s been in the works for years, i’m personally over a thousand hours deep into it, spent around $10,000,000 on it, and i literally have dreams about the video lol"><header><span class="av" style="--h:338">M</span><div class="who"><div class="nm"><span>MrBeast</span></div><div class="hd">@MrBeast</div></div><time class="tm" title="09-17 03:21 北京时间">09-17 03:21<small>26 天前</small></time></header><div class="pt">This Saturday we upload our biggest YouTube video ever. It’s been in the works for years, I’m personally over a thousand hours deep into it, spent around $10,000,000 on it, and I literally have dreams about the video lol</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="This Saturday we upload our biggest YouTube video ever. It’s been in the works for years, I’m personally over a thousand hours deep into it, spent around $10,000,000 on it, and I literally have dreams about the video lol
+— MrBeast (@MrBeast)
+https://x.com/MrBeast/status/2100304047035089303">复制原文</button><a class="op" href="https://x.com/MrBeast/status/2100304047035089303" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>11.5万</span><span class="mc" title="转发"><i>⇄</i>2,851</span><span class="mc" title="评论"><i>💬</i>2,548</span><span class="mc" title="浏览"><i>👁</i>838.1万</span></div></footer></article><article class="post c6" data-s="been fun seeing so many people enjoy the new book, when i did a book signing  so many younger people told me it’s the first book they’ve ever read outside their school books :d https://t.co/dt4oemvarw"><header><span class="av" style="--h:338">M</span><div class="who"><div class="nm"><span>MrBeast</span></div><div class="hd">@MrBeast</div></div><time class="tm" title="09-10 09:08 北京时间">09-10 09:08<small>33 天前</small></time></header><div class="pt">Been fun seeing so many people enjoy the new book, when I did a book signing  so many younger people told me it’s the first book they’ve ever read outside their school books :D https://t.co/DT4oeMvarw</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="Been fun seeing so many people enjoy the new book, when I did a book signing  so many younger people told me it’s the first book they’ve ever read outside their school books :D https://t.co/DT4oeMvarw
+— MrBeast (@MrBeast)
+https://x.com/MrBeast/status/2097854621590987166">复制原文</button><a class="op" href="https://x.com/MrBeast/status/2097854621590987166" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>4,516</span><span class="mc" title="转发"><i>⇄</i>267</span><span class="mc" title="评论"><i>💬</i>1,011</span><span class="mc" title="浏览"><i>👁</i>237.8万</span></div></footer></article><article class="post c6" data-s="antarctic vs desert vs amazon jungle, which is harder to survive? https://t.co/yhpkncfm7f"><header><span class="av" style="--h:338">M</span><div class="who"><div class="nm"><span>MrBeast</span></div><div class="hd">@MrBeast</div></div><time class="tm" title="09-06 01:11 北京时间">09-06 01:11<small>37 天前</small></time></header><div class="pt">Antarctic vs Desert vs Amazon jungle, which is harder to survive? https://t.co/yHpkncfm7F</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="Antarctic vs Desert vs Amazon jungle, which is harder to survive? https://t.co/yHpkncfm7F
+— MrBeast (@MrBeast)
+https://x.com/MrBeast/status/2096285173788840001">复制原文</button><a class="op" href="https://x.com/MrBeast/status/2096285173788840001" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>8,450</span><span class="mc" title="转发"><i>⇄</i>421</span><span class="mc" title="评论"><i>💬</i>1,353</span><span class="mc" title="浏览"><i>👁</i>202.1万</span></div></footer></article><article class="post c6" data-s="get it here on amazon 
+
+https://t.co/ggtbbap6tg"><header><span class="av" style="--h:338">M</span><div class="who"><div class="nm"><span>MrBeast</span></div><div class="hd">@MrBeast</div></div><time class="tm" title="09-02 01:23 北京时间">09-02 01:23<small>41 天前</small></time></header><div class="pt">Get it here on Amazon 
+
+https://t.co/gGtbBAP6Tg</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="Get it here on Amazon 
+
+https://t.co/gGtbBAP6Tg
+— MrBeast (@MrBeast)
+https://x.com/MrBeast/status/2094838451686285417">复制原文</button><a class="op" href="https://x.com/MrBeast/status/2094838451686285417" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>823</span><span class="mc" title="转发"><i>⇄</i>74</span><span class="mc" title="评论"><i>💬</i>329</span><span class="mc" title="浏览"><i>👁</i>79.9万</span></div></footer></article><article class="post c6" data-s="growing up i thought books were boring, in reality i just didn’t read anything that actually interested me. which is why i teamed up with james patterson to write the most dangerous games! for many people this might be the first book they actually read (and hopefully enjoy haha) https://t.co/aory6dqhau"><header><span class="av" style="--h:338">M</span><div class="who"><div class="nm"><span>MrBeast</span></div><div class="hd">@MrBeast</div></div><time class="tm" title="09-02 01:19 北京时间">09-02 01:19<small>41 天前</small></time></header><div class="pt xp"><span class="xs">Growing up I thought books were boring, in reality I just didn’t read anything that actually interested me. Which is why I teamed up with James Patterson to write The Most Dangerous Games! For many people this might be the first book they actually read (and hopefully enjoy haha)…</span><span class="xf">Growing up I thought books were boring, in reality I just didn’t read anything that actually interested me. Which is why I teamed up with James Patterson to write The Most Dangerous Games! For many people this might be the first book they actually read (and hopefully enjoy haha) https://t.co/AorY6dqhAu</span></div>
+<footer><div class="act"><button class="ex" type="button">展开</button><button class="cp" type="button" data-copy="Growing up I thought books were boring, in reality I just didn’t read anything that actually interested me. Which is why I teamed up with James Patterson to write The Most Dangerous Games! For many people this might be the first book they actually read (and hopefully enjoy haha) https://t.co/AorY6dqhAu
+— MrBeast (@MrBeast)
+https://x.com/MrBeast/status/2094837479861792791">复制原文</button><a class="op" href="https://x.com/MrBeast/status/2094837479861792791" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>4,959</span><span class="mc" title="转发"><i>⇄</i>354</span><span class="mc" title="评论"><i>💬</i>1,557</span><span class="mc" title="浏览"><i>👁</i>545.9万</span></div></footer></article><article class="post c6" data-s="legal residents of au, mx, us (excl. md), or uk, 18+. void where prohibited. must have proof of purchase of an english print edition to participate. more details at https://t.co/9lfvcdksij"><header><span class="av" style="--h:338">M</span><div class="who"><div class="nm"><span>MrBeast</span></div><div class="hd">@MrBeast</div></div><time class="tm" title="09-01 22:24 北京时间">09-01 22:24<small>41 天前</small></time></header><div class="pt">Legal residents of AU, MX, US (excl. MD), or UK, 18+. Void where prohibited. Must have proof of purchase of an English Print Edition to participate. More details at https://t.co/9LFVcDksij</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="Legal residents of AU, MX, US (excl. MD), or UK, 18+. Void where prohibited. Must have proof of purchase of an English Print Edition to participate. More details at https://t.co/9LFVcDksij
+— MrBeast (@MrBeast)
+https://x.com/MrBeast/status/2094793488936382913">复制原文</button><a class="op" href="https://x.com/MrBeast/status/2094793488936382913" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>387</span><span class="mc" title="转发"><i>⇄</i>14</span><span class="mc" title="评论"><i>💬</i>130</span><span class="mc" title="浏览"><i>👁</i>18.8万</span></div></footer></article><article class="post c6" data-s="the comments on this vlog are 99.9% positive which is not what i was expecting tbh. i basically work 15 hours everyday and didn’t think people would find it interesting. i’ll crank another one soon 🥰 https://t.co/xpai2qslel"><header><span class="av" style="--h:338">M</span><div class="who"><div class="nm"><span>MrBeast</span></div><div class="hd">@MrBeast</div></div><time class="tm" title="08-29 06:07 北京时间">08-29 06:07<small>45 天前</small></time></header><div class="pt">The comments on this vlog are 99.9% positive which is not what I was expecting tbh. I basically work 15 hours everyday and didn’t think people would find it interesting. I’ll crank another one soon 🥰 https://t.co/Xpai2QslEL</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="The comments on this vlog are 99.9% positive which is not what I was expecting tbh. I basically work 15 hours everyday and didn’t think people would find it interesting. I’ll crank another one soon 🥰 https://t.co/Xpai2QslEL
+— MrBeast (@MrBeast)
+https://x.com/MrBeast/status/2093460376155271267">复制原文</button><a class="op" href="https://x.com/MrBeast/status/2093460376155271267" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>1.4万</span><span class="mc" title="转发"><i>⇄</i>482</span><span class="mc" title="评论"><i>💬</i>1,185</span><span class="mc" title="浏览"><i>👁</i>202.3万</span></div></footer></article><article class="post c6" data-s="if you’re curious what a week in the life of the most subscribed to youtuber is like, check out this vlog i made :d
+
+https://t.co/nprivh5swk"><header><span class="av" style="--h:338">M</span><div class="who"><div class="nm"><span>MrBeast</span></div><div class="hd">@MrBeast</div></div><time class="tm" title="08-25 02:22 北京时间">08-25 02:22<small>49 天前</small></time></header><div class="pt">If you’re curious what a week in the life of the most subscribed to YouTuber is like, check out this vlog I made :D
+
+https://t.co/NPrIVH5SwK</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="If you’re curious what a week in the life of the most subscribed to YouTuber is like, check out this vlog I made :D
+
+https://t.co/NPrIVH5SwK
+— MrBeast (@MrBeast)
+https://x.com/MrBeast/status/2091954345663246514">复制原文</button><a class="op" href="https://x.com/MrBeast/status/2091954345663246514" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>4,486</span><span class="mc" title="转发"><i>⇄</i>315</span><span class="mc" title="评论"><i>💬</i>935</span><span class="mc" title="浏览"><i>👁</i>286.6万</span></div></footer></article><article class="post c6" data-s="we rented a city and offered a real police department $500,000 if they could arrest us by the end of the day in the new video lol https://t.co/o2eh0gfbjb"><header><span class="av" style="--h:338">M</span><div class="who"><div class="nm"><span>MrBeast</span></div><div class="hd">@MrBeast</div></div><time class="tm" title="08-23 00:39 北京时间">08-23 00:39<small>51 天前</small></time></header><div class="pt">We rented a city and offered a real police department $500,000 if they could arrest us by the end of the day in the new video lol https://t.co/o2eh0GfBjb</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="We rented a city and offered a real police department $500,000 if they could arrest us by the end of the day in the new video lol https://t.co/o2eh0GfBjb
+— MrBeast (@MrBeast)
+https://x.com/MrBeast/status/2091203630686769361">复制原文</button><a class="op" href="https://x.com/MrBeast/status/2091203630686769361" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>5.8万</span><span class="mc" title="转发"><i>⇄</i>1,513</span><span class="mc" title="评论"><i>💬</i>1,905</span><span class="mc" title="浏览"><i>👁</i>420.6万</span></div></footer></article><article class="post c6" data-s="was a little worried that an hour long video might be too long but it seems like you guys like it 🥰❤️ https://t.co/w6imtskpdq"><header><span class="av" style="--h:338">M</span><div class="who"><div class="nm"><span>MrBeast</span></div><div class="hd">@MrBeast</div></div><time class="tm" title="08-10 23:09 北京时间">08-10 23:09<small>63 天前</small></time></header><div class="pt">Was a little worried that an hour long video might be TOO long but it seems like you guys like it 🥰❤️ https://t.co/w6imTSKpDQ</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="Was a little worried that an hour long video might be TOO long but it seems like you guys like it 🥰❤️ https://t.co/w6imTSKpDQ
+— MrBeast (@MrBeast)
+https://x.com/MrBeast/status/2086832337426297168">复制原文</button><a class="op" href="https://x.com/MrBeast/status/2086832337426297168" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>2.3万</span><span class="mc" title="转发"><i>⇄</i>703</span><span class="mc" title="评论"><i>💬</i>2,321</span><span class="mc" title="浏览"><i>👁</i>262.4万</span></div></footer></article><article class="post c6" data-s="i put 15 people in a mansion and whoever leaves it last keeps it, the twist though, is they all publicly make tik toks saying my videos are easy/contestants are soft/they’d never they lose a mrbeast challenge lol
+
+https://t.co/8mhamwl6rb"><header><span class="av" style="--h:338">M</span><div class="who"><div class="nm"><span>MrBeast</span></div><div class="hd">@MrBeast</div></div><time class="tm" title="08-09 00:59 北京时间">08-09 00:59<small>65 天前</small></time></header><div class="pt">I put 15 people in a mansion and whoever leaves it last keeps it, the twist though, is they all publicly make Tik Toks saying my videos are easy/contestants are soft/they’d never they lose a MrBeast challenge lol
+
+https://t.co/8MHamWl6rB</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="I put 15 people in a mansion and whoever leaves it last keeps it, the twist though, is they all publicly make Tik Toks saying my videos are easy/contestants are soft/they’d never they lose a MrBeast challenge lol
+
+https://t.co/8MHamWl6rB
+— MrBeast (@MrBeast)
+https://x.com/MrBeast/status/2086135328453115920">复制原文</button><a class="op" href="https://x.com/MrBeast/status/2086135328453115920" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>1.8万</span><span class="mc" title="转发"><i>⇄</i>430</span><span class="mc" title="评论"><i>💬</i>1,565</span><span class="mc" title="浏览"><i>👁</i>440.0万</span></div></footer></article><article class="post c6" data-s="someone on my team told me i should wear this to the met gala, thoughts? https://t.co/anqmwnr7rt"><header><span class="av" style="--h:338">M</span><div class="who"><div class="nm"><span>MrBeast</span></div><div class="hd">@MrBeast</div></div><time class="tm" title="08-08 23:09 北京时间">08-08 23:09<small>65 天前</small></time></header><div class="pt">Someone on my team told me I should wear this to the Met Gala, thoughts? https://t.co/anQMwNR7Rt</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="Someone on my team told me I should wear this to the Met Gala, thoughts? https://t.co/anQMwNR7Rt
+— MrBeast (@MrBeast)
+https://x.com/MrBeast/status/2086107642720649428">复制原文</button><a class="op" href="https://x.com/MrBeast/status/2086107642720649428" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>11.8万</span><span class="mc" title="转发"><i>⇄</i>4,129</span><span class="mc" title="评论"><i>💬</i>5,304</span><span class="mc" title="浏览"><i>👁</i>689.1万</span></div></footer></article></div></div>
+<footer>数据：X API get_users_posts · 生成于 2026-10-13 16:21 北京时间</footer></div><script>
+(function(){var d=document.documentElement,mq=matchMedia('(prefers-color-scheme: dark)');
+function sync(){document.querySelectorAll('[data-set-theme]').forEach(function(b){b.classList.toggle('on',b.dataset.setTheme===d.dataset.pref)})}
+function theme(){var p=d.dataset.pref;d.dataset.theme=p==='auto'?(mq.matches?'dark':'light'):p}
+document.querySelectorAll('[data-set-theme]').forEach(function(b){b.onclick=function(){d.dataset.pref=b.dataset.setTheme;try{localStorage.setItem('xhot-theme',b.dataset.setTheme)}catch(e){}theme();sync()}});
+(mq.addEventListener?mq.addEventListener('change',theme):mq.addListener(theme));
+document.querySelectorAll('[data-t]').forEach(function(b){b.onclick=function(){var t=b.dataset.t;
+document.querySelectorAll('[data-t]').forEach(function(x){x.classList.toggle('on',x.dataset.t===t)});
+document.querySelectorAll('.pane').forEach(function(x){x.classList.toggle('on',x.dataset.p===t)});
+document.querySelectorAll('.li-d').forEach(function(x){x.hidden=x.dataset.p!==t});scrollTo({top:0})}});sync();
+function fb(t){var a=document.createElement('textarea');a.value=t;a.setAttribute('readonly','');a.style.cssText='position:fixed;top:-1000px;opacity:0';document.body.appendChild(a);a.select();var ok=false;try{ok=document.execCommand('copy')}catch(e){}document.body.removeChild(a);return ok}
+document.addEventListener('click',function(ev){var b=ev.target.closest('.cp');if(b){var t=b.getAttribute('data-copy');
+function done(ok){b.textContent=ok?'已复制 ✓':'复制失败';b.classList.toggle('ok',ok);clearTimeout(b._t);b._t=setTimeout(function(){b.textContent='复制原文';b.classList.remove('ok')},1600)}
+if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(t).then(function(){done(true)},function(){done(fb(t))})}else done(fb(t));return}
+var x=ev.target.closest('.ex');if(x){var c=x.closest('.post').querySelector('.xp');var o=c.classList.toggle('open');x.textContent=o?'收起':'展开'}})})();
+</script><script>(function(){var q=document.getElementById('q'),c=document.getElementById('cnt'),a=document.getElementById('alll'),ps=[].slice.call(document.querySelectorAll('.feed1 .post'));
+function run(){var v=q.value.trim().toLowerCase(),all=a&&a.checked,k=0,n=0;ps.forEach(function(p){var lo=!p.dataset.ol||all;if(lo)n++;var ok=lo&&(!v||p.dataset.s.indexOf(v)>=0);p.hidden=!ok;if(ok)k++});c.textContent=v?('匹配 '+k+' / '+n+' 条'):(n+' 条')}
+q.addEventListener('input',run);if(a)a.addEventListener('change',run)})();</script></body></html>

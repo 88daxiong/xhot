@@ -1,0 +1,481 @@
+<!doctype html><html lang="zh-CN" data-theme="light" data-pref="auto"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><title>cat (@_catwu) · XHOT</title><script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('xhot-theme')}catch(e){}t=(t==='light'||t==='dark')?t:'auto';d.setAttribute('data-pref',t);d.setAttribute('data-theme',t==='auto'?(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'):t)})();
+</script><style>:root{--bg:#f7f7f8;--card:#fff;--bd:#e4e4e7;--bd2:#f0f0f2;--zebra:#fafafa;--hov:#f4f4f6;--tx:#18181b;--tx2:#3f3f46;--mu:#71717a;--mu2:#a1a1aa;--ac:#4f46e5;--acbg:#eef2ff;--actx:#4338ca;--up:#16a34a;--upbg:#f0fdf4;--dn:#dc2626;--dnbg:#fef2f2;--r:8px;--sh:0 1px 2px rgba(24,24,27,.04)}
+html[data-theme=dark]{--bg:#09090b;--card:#131316;--bd:#27272a;--bd2:#1c1c20;--zebra:#16161a;--hov:#1d1d22;--tx:#f4f4f5;--tx2:#d4d4d8;--mu:#a1a1aa;--mu2:#71717a;--ac:#818cf8;--acbg:#1e1b4b;--actx:#a5b4fc;--up:#4ade80;--upbg:#0f2a1a;--dn:#f87171;--dnbg:#2d1214;--sh:none}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--tx);font:400 13px/1.5 "Inter","PingFang SC","HarmonyOS Sans SC","Noto Sans SC","Noto Sans CJK SC",-apple-system,BlinkMacSystemFont,"Microsoft YaHei",sans-serif;-webkit-font-smoothing:antialiased;font-feature-settings:"cv11","ss01"}
+a{color:inherit;text-decoration:none}button{font:inherit}
+.num,.f,.d,.r,.sv,.nc,.heat,.pc,.tr3,.kv dd,.post footer{font-variant-numeric:tabular-nums}
+/* 顶栏 */
+.top{position:sticky;top:0;z-index:30;background:color-mix(in srgb,var(--card) 92%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--bd)}
+.ti2{max-width:1440px;margin:auto;height:56px;padding:0 24px;display:flex;align-items:center;gap:16px}
+.lg{display:flex;align-items:center;gap:8px;font-weight:600;font-size:16px;letter-spacing:-.01em}.lg i{width:24px;height:24px;border-radius:6px;background:var(--ac);display:grid;place-items:center;font-style:normal;color:#fff;font-size:12px}.lg span{font-weight:400;font-size:13px;color:var(--mu);margin-left:4px;padding-left:12px;border-left:1px solid var(--bd)}
+.mtabs{display:none}
+.tg{margin-left:auto;display:flex;border:1px solid var(--bd);border-radius:var(--r);padding:2px;background:var(--card)}.tg button{border:0;background:none;color:var(--mu);height:28px;padding:0 10px;border-radius:6px;cursor:pointer;font-size:12px}.tg button.on{background:var(--hov);color:var(--tx);font-weight:500}
+/* 12 列网格 */
+.wrap{max-width:1440px;margin:auto;padding:24px 24px 32px}
+.stats,.shell{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:16px}.shell{align-items:start}
+.stats{margin-bottom:24px}.st{grid-column:span 2}
+.left{grid-column:span 2}.content{grid-column:span 10;min-width:0}
+.cols{display:grid;grid-template-columns:repeat(10,minmax(0,1fr));gap:16px;align-items:start}.mid{grid-column:span 7;min-width:0}.right{grid-column:span 3;min-width:0}
+/* 统计条 */
+.st{background:var(--card);border:1px solid var(--bd);border-radius:var(--r);padding:12px 16px;min-width:0;box-shadow:var(--sh)}
+.sl{font-size:12px;color:var(--mu);line-height:16px}.sv{font-size:20px;font-weight:600;line-height:28px;letter-spacing:-.01em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.ss{font-size:12px;color:var(--mu);line-height:16px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.st:nth-child(3) .sv{color:var(--ac)}
+/* 区块标题：统一 24px 行高，底部 8px */
+.bh{display:flex;align-items:center;gap:8px;height:24px;margin:0 0 8px}.bh h2{font-size:14px;font-weight:600;margin:0;line-height:24px}.hint{font-size:12px;color:var(--mu)}.credit{margin-left:auto;font-size:12px;font-weight:500;color:var(--ac)}.credit:hover{text-decoration:underline}
+.blk{margin-bottom:24px}
+/* 左栏 */
+.left{position:sticky;top:80px;display:flex;flex-direction:column;gap:16px}.left>.bh{margin-bottom:-8px}
+.lcard{background:var(--card);border:1px solid var(--bd);border-radius:var(--r);padding:8px;box-shadow:var(--sh)}
+.nav{display:flex;flex-direction:column;gap:2px}.nv{display:grid;grid-template-columns:24px minmax(0,1fr) auto;align-items:center;gap:8px;height:36px;border:0;background:none;color:var(--tx2);padding:0 8px;border-radius:6px;cursor:pointer;text-align:left;font-size:13px;font-weight:500}
+.nv:hover{background:var(--hov)}.nv.on{background:var(--acbg);color:var(--actx)}.ni{width:24px;height:24px;border-radius:6px;display:grid;place-items:center;background:var(--bd2);color:var(--mu);font-size:12px}.nv.on .ni{background:var(--ac);color:#fff}.nc{font-size:12px;color:var(--mu)}
+.kv{margin:0}.kv div{display:flex;justify-content:space-between;align-items:center;height:32px;padding:0 8px;border-bottom:1px solid var(--bd2);font-size:13px}.kv div:last-child{border-bottom:0}.kv dt{color:var(--mu)}.kv dd{margin:0;font-weight:500}
+.mini{padding:8px;border-top:1px solid var(--bd2)}.mt{font-size:12px;color:var(--mu);line-height:16px;margin-bottom:4px}.mv{font-weight:500;display:flex;align-items:center;justify-content:space-between;gap:8px}.mv2{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;font-size:13px;font-weight:500}.mv2:hover{color:var(--ac)}.mm{font-size:12px;color:var(--mu)}
+.mini .sp{height:24px;margin-top:8px}
+.tl{list-style:none;margin:0;padding:0}.tl li a{display:grid;grid-template-columns:16px minmax(0,1fr) auto;gap:8px;align-items:center;height:28px;padding:0 4px;border-radius:4px;font-size:13px}.tl li a:hover{background:var(--hov)}.tl .k{color:var(--mu2);font-size:12px;text-align:right}.tl .n{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.lnote{font-size:12px;color:var(--mu);padding:12px}.lnote b{display:block;color:var(--tx2);font-weight:500;margin-bottom:4px}.lnote p{margin:0 0 4px}.lnote a{color:var(--ac)}
+/* 涨跌徽章：唯一使用红绿的地方 */
+.pc{display:inline-flex;align-items:center;gap:2px;height:20px;font-size:12px;font-weight:500;padding:0 6px;border-radius:4px;white-space:nowrap}.pc.up{color:var(--up);background:var(--upbg)}.pc.dn{color:var(--dn);background:var(--dnbg)}
+.sp{display:block;width:100%;fill:none;stroke-width:1.5;stroke-linejoin:round;stroke-linecap:round}.sp.up,.tile.up .sp{stroke:var(--up)}.sp.dn,.tile.dn .sp{stroke:var(--dn)}
+/* 趋势 */
+.pane{display:none}.pane.on{display:block}
+.tiles{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
+.tile{background:var(--card);border:1px solid var(--bd);border-radius:var(--r);padding:8px 12px;height:88px;display:grid;grid-template-rows:20px 1fr 16px;gap:4px;box-shadow:var(--sh);min-width:0}
+.tile:hover{border-color:var(--mu2)}.tr1{display:grid;grid-template-columns:16px minmax(0,1fr) auto;gap:8px;align-items:center}.tk{font-size:12px;color:var(--mu2);text-align:right}.tn{font-size:13px;font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tile .sp{height:100%;opacity:.9}.tr3{display:flex;justify-content:space-between;font-size:12px;line-height:16px;color:var(--mu)}.tr3 b{color:var(--tx2);font-weight:500}
+/* 热帖 */
+.feed{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.post{background:var(--card);border:1px solid var(--bd);border-radius:var(--r);padding:12px 16px 8px;display:flex;flex-direction:column;min-width:0;box-shadow:var(--sh)}.post:hover{border-color:var(--mu2)}
+.post header{display:grid;grid-template-columns:32px minmax(0,1fr) auto;gap:8px;align-items:center;height:32px}
+.av{--h:220;width:32px;height:32px;border-radius:50%;display:inline-grid;place-items:center;flex:none;font-weight:600;font-size:13px;color:hsl(var(--h) 30% 32%);background:hsl(var(--h) 30% 92%)}
+html[data-theme=dark] .av{color:hsl(var(--h) 35% 80%);background:hsl(var(--h) 15% 22%)}
+.av.s{width:24px;height:24px;font-size:11px}.av.xs{width:20px;height:20px;font-size:10px;margin-left:-6px;border:2px solid var(--card)}.av.xs:first-child{margin-left:0}
+.who{min-width:0;line-height:16px}.nm{display:flex;align-items:center;gap:6px;font-size:13px;font-weight:600;min-width:0}.nm a{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.nm a:hover{color:var(--ac)}.hd{font-size:12px;color:var(--mu);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.heat{font-size:12px;font-weight:500;color:var(--mu);height:20px;line-height:20px;padding:0 6px;border:1px solid var(--bd);border-radius:4px}
+.pt{flex:1;margin:8px 0;font-size:13px;line-height:1.6;color:var(--tx2);white-space:pre-wrap;word-break:break-word}.xp .xf{display:none}.xp.open .xs{display:none}.xp.open .xf{display:inline}
+.post footer{display:flex;align-items:center;gap:10px;height:32px;font-size:12px;color:var(--mu);border-top:1px solid var(--bd2);white-space:nowrap;overflow:hidden}.sp1{flex:1}
+.cp,.ex{height:24px;border:1px solid var(--bd);background:var(--card);color:var(--tx2);font-size:12px;font-weight:500;padding:0 8px;border-radius:6px;cursor:pointer}.cp:hover,.ex:hover{border-color:var(--ac);color:var(--ac)}.cp.ok{border-color:var(--up);color:var(--up)}
+.op{width:24px;height:24px;display:grid;place-items:center;border-radius:6px;color:var(--mu)}.op:hover{background:var(--hov);color:var(--ac)}
+.zh{font-size:11px;font-weight:500;color:var(--mu);border:1px solid var(--bd);border-radius:4px;padding:0 4px;line-height:16px;flex:none}
+/* 右栏 */
+.right{display:flex;flex-direction:column;gap:24px;position:sticky;top:80px}
+.rcard,.acard{background:var(--card);border:1px solid var(--bd);border-radius:var(--r);box-shadow:var(--sh);min-width:0;overflow:hidden}
+.rhd{display:flex;align-items:center;gap:8px;height:24px;margin-bottom:8px}
+.rcard .tw{max-height:560px;overflow:auto}
+/* 表格 */
+table{width:100%;border-collapse:separate;border-spacing:0;font-size:13px}
+th{height:32px;font-size:12px;font-weight:500;color:var(--mu);text-align:left;padding:0 12px;background:var(--zebra);border-bottom:1px solid var(--bd);white-space:nowrap}
+thead th{position:sticky;top:0;z-index:2}
+td{height:36px;padding:0 12px;border-bottom:1px solid var(--bd2);vertical-align:middle}tbody tr:last-child td{border-bottom:0}
+tbody tr:not(.g):hover td{background:var(--hov)}
+th.num,td.num,th.f,td.f,th.d,td.d{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}th.r,td.r{width:40px;text-align:right;color:var(--mu2);padding-right:4px;font-variant-numeric:tabular-nums}
+.lbt{table-layout:fixed}.lbt th.r,.lbt td.r{width:36px}.lbt th.f,.lbt td.f{width:72px;font-weight:500}.lbt th.d,.lbt td.d{width:64px;color:var(--mu);font-size:12px;padding-left:0}
+.lbt td.n a{display:flex;align-items:center;gap:8px;min-width:0}.lbt .nt{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:500}.lbt td.n a:hover .nt{color:var(--ac)}
+tr.g th{position:sticky;top:32px;z-index:1;height:28px;background:var(--card);color:var(--tx2);font-size:12px;font-weight:600;border-bottom:1px solid var(--bd2)}tr.g th span{color:var(--mu);font-weight:400;margin-left:4px}
+.news{list-style:none;margin:0;padding:0 12px}.news li{border-top:1px solid var(--bd2)}.news li:first-child{border-top:0}.news a{display:block;padding:8px 0}.news .t{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;font-weight:500;font-size:13px;line-height:20px}.news a:hover .t{color:var(--ac)}.news .m{display:block;font-size:12px;color:var(--mu);line-height:16px;margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+/* 卡片内标题：所有卡片头 48px */
+.rcard>.bh,.acard>.bh{height:48px;margin:0;padding:0 12px;border-bottom:1px solid var(--bd)}
+/* AIHOT */
+.ahsec{margin-top:8px;padding-top:24px;border-top:1px solid var(--bd)}
+.ahh{display:flex;align-items:center;gap:12px;height:28px;margin-bottom:16px}.ahh .k{font-size:12px;font-weight:600;letter-spacing:.08em;color:var(--ac)}.ahh h2{margin:0;font-size:20px;font-weight:600;letter-spacing:-.01em}.ahh a{margin-left:auto;font-size:12px;font-weight:500;color:var(--ac)}
+.agrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.acard.wide{grid-column:1/-1}
+.ht{table-layout:fixed}.ht td.ti a{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:500}.ht td.ti a:hover{color:var(--ac)}.ht th:nth-child(3),.ht td.sv{width:104px}.ht th:nth-child(4),.ht td.hb{width:160px}.ht th.num,.ht td.num{width:72px}
+.rk{display:inline-grid;place-items:center;width:20px;height:20px;border-radius:4px;color:var(--mu);font-weight:500;font-size:12px}.rk.top{background:var(--acbg);color:var(--actx);font-weight:600}
+.bar{display:block;height:4px;border-radius:2px;background:var(--bd2);overflow:hidden}.bar i{display:block;height:100%;border-radius:2px;background:var(--ac);opacity:.75}
+.lead{display:block;margin:12px;padding:12px 16px;border-radius:6px;background:var(--zebra);border:1px solid var(--bd2)}.lead b{display:block;font-size:16px;font-weight:600;line-height:24px}.lead span{display:block;font-size:13px;color:var(--tx2);margin-top:4px}.lead:hover b{color:var(--ac)}
+.dg{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:16px;padding:0 12px 12px}.dl{font-size:12px;font-weight:600;color:var(--tx2);height:28px;line-height:28px;border-bottom:1px solid var(--bd)}.ds ul{list-style:none;margin:0;padding:0}.ds li a{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;font-size:13px;line-height:20px;padding:6px 0;border-bottom:1px solid var(--bd2);color:var(--tx2)}.ds li a:hover{color:var(--ac)}
+.exg{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:var(--bd2)}.exc{display:grid;grid-template-rows:auto 1fr auto;gap:4px;padding:12px 16px;background:var(--card);min-height:132px}.exc:hover{background:var(--hov)}
+.et{display:flex;gap:8px;align-items:flex-start}.et span{flex:1;font-weight:600;font-size:13px;line-height:20px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}.sc{font-size:12px;font-weight:500;color:var(--actx);background:var(--acbg);border-radius:4px;padding:0 6px;line-height:20px;font-variant-numeric:tabular-nums}
+.exc p{margin:0;font-size:12px;color:var(--mu);line-height:18px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}.em{font-size:12px;color:var(--mu2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.mtb .mn{font-weight:500}.mtb td{white-space:nowrap}.scc{width:180px}td.scc{text-align:right}.scc .bar{display:inline-block;width:96px;vertical-align:middle;margin-right:12px}.scc b{font-weight:600;font-variant-numeric:tabular-nums;display:inline-block;width:36px;text-align:right}
+.chips{display:flex;flex-wrap:wrap;gap:8px;padding:12px}.chips a{height:28px;line-height:26px;font-size:12px;padding:0 12px;border-radius:14px;color:var(--tx2);border:1px solid var(--bd)}.chips a:hover{border-color:var(--ac);color:var(--ac)}
+footer{max-width:1440px;margin:24px auto 0;padding-top:16px;border-top:1px solid var(--bd);font-size:12px;color:var(--mu)}footer a{color:var(--ac)}
+/* 响应式 */
+@media(max-width:1600px){.post footer .rp{display:none}}@media(max-width:1360px){.lbt th.f,.lbt td.f{width:64px}.lbt th.d,.lbt td.d{width:52px}.lbt th.r,.lbt td.r{width:28px}td,th{padding:0 8px}.tiles{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:1180px){.left{display:none}.content{grid-column:1/-1}.st{grid-column:span 4}.mtabs{display:flex;gap:4px}.mt1{height:32px;border:0;background:none;color:var(--tx2);padding:0 12px;border-radius:6px;cursor:pointer;font-weight:500;font-size:13px}.mt1.on{background:var(--acbg);color:var(--actx)}}
+@media(max-width:900px){.cols{grid-template-columns:1fr}.mid,.right{grid-column:1/-1}.right{position:static}.agrid{grid-template-columns:1fr}.dg{grid-template-columns:repeat(2,minmax(0,1fr))}.exg{grid-template-columns:1fr 1fr}}
+@media(max-width:640px){.ti2{flex-wrap:wrap;height:auto;padding:8px 16px;gap:8px}.lg span{display:none}.mtabs{order:3;width:100%}.mt1{flex:1}.wrap{padding:16px 12px 24px}
+.stats{gap:8px;margin-bottom:16px}.st{grid-column:span 6;padding:8px 12px}.sv{font-size:16px;line-height:24px}.tiles{grid-template-columns:repeat(2,minmax(0,1fr))}.feed{grid-template-columns:1fr}.exg{grid-template-columns:1fr}
+.ht th:nth-child(3),.ht td.sv,.ht th:nth-child(4),.ht td.hb,.ht th:nth-child(6),.ht td:nth-child(6){display:none}.mtb th:nth-child(3),.mtb td:nth-child(3),.mtb th:nth-child(4),.mtb td:nth-child(4),.mtb th:nth-child(5),.mtb td:nth-child(5){display:none}.scc{width:auto}.scc .bar{display:none}.ahh{height:auto;flex-wrap:wrap}.ahh a{margin-left:0}.dg{grid-template-columns:1fr}}
+/* ===== v5 color layer ===== */
+:root{--ac:#7c3aed;--acbg:#f3e8ff;--actx:#6d28d9;--g1:#7c3aed;--g2:#db2777;--g3:#f97316;--bg:#f6f5fb;--glow:rgba(124,58,237,.18)}
+html[data-theme=dark]{--bg:#110d2e;--card:#1a1640;--bd:#2a2652;--bd2:#1e1b40;--zebra:#171536;--hov:#1f1c45;--mu:#a5a3c9;--mu2:#77749e;--ac:#c084fc;--acbg:#2e1a5c;--actx:#e9d5ff;--up:#4ade80;--dn:#fb7185;--glow:rgba(192,132,252,.28)}
+html[data-theme=dark],html[data-theme=dark] body{background-attachment:fixed;background:radial-gradient(1200px 600px at 10% -10%,#2a1660 0,transparent 60%),radial-gradient(900px 500px at 100% 0,#3b0d4a 0,transparent 55%),var(--bg)}
+.lg i{background:linear-gradient(135deg,var(--g1),var(--g2))!important;color:#fff!important}
+.stats{background:linear-gradient(110deg,#6d28d9 0%,#a21caf 50%,#db2777 85%,#f97316 120%);border-radius:12px;padding:16px;box-shadow:0 8px 24px -8px rgba(162,28,175,.45)}
+html[data-theme=dark] .stats{background:linear-gradient(110deg,#4c1d95 0%,#86198f 55%,#be185d 100%);box-shadow:0 0 0 1px rgba(232,121,249,.25),0 10px 30px -10px rgba(217,70,239,.5)}
+.stats .st{background:rgba(255,255,255,.12)!important;border:1px solid rgba(255,255,255,.22)!important;box-shadow:none!important;backdrop-filter:blur(4px)}
+.stats .st *{color:#fff!important}
+.stats .st .sl,.stats .st .ss{color:rgba(255,255,255,.82)!important}
+/* heat tiles */
+.tile{position:relative;overflow:hidden;transition:transform .15s,box-shadow .15s}
+.tile.up{background:linear-gradient(135deg,rgba(249,115,22,calc(var(--a)*.10 + .03)),rgba(239,68,68,calc(var(--a)*.28 + .04))),var(--card);border-color:rgba(239,68,68,calc(var(--a)*.45 + .12))}
+.tile.dn{background:linear-gradient(135deg,rgba(56,189,248,.05),rgba(59,130,246,calc(var(--a)*.22 + .05))),var(--card);border-color:rgba(59,130,246,.25)}
+.tile.up .sp{stroke:#ea580c}.tile.dn .sp{stroke:#2563eb}
+html[data-theme=dark] .tile.up .sp{stroke:#fb923c}html[data-theme=dark] .tile.dn .sp{stroke:#60a5fa}
+.tile:hover{transform:translateY(-1px);box-shadow:0 6px 18px -6px rgba(239,68,68,.35)}
+/* domain chips */
+.nv[data-t=ai] .ni,.mtabs [data-t=ai]{--dc:#7c3aed}
+.nv[data-t=money] .ni,.mtabs [data-t=money]{--dc:#f59e0b}
+.nv[data-t=growth] .ni,.mtabs [data-t=growth]{--dc:#14b8a6}
+.nv[data-t=ai]{--dc:#7c3aed;--dc2:#c026d3}.nv[data-t=money]{--dc:#f59e0b;--dc2:#ea580c}.nv[data-t=growth]{--dc:#14b8a6;--dc2:#22c55e}
+.nv .ni{background:linear-gradient(135deg,var(--dc),var(--dc2))!important;color:#fff!important}
+.nv.on{background:color-mix(in srgb,var(--dc) 12%,var(--card))!important;color:var(--tx)!important;box-shadow:inset 3px 0 0 var(--dc)}
+.nv.on .nc{color:var(--dc)}
+/* gradient avatars */
+.av{background:linear-gradient(135deg,hsl(var(--h) 85% 62%),hsl(calc(var(--h) + 50) 80% 52%))!important;color:#fff!important;text-shadow:0 1px 1px rgba(0,0,0,.2)}
+/* cards accents + glow */
+.lcard,.rcard,.post,.acard{transition:box-shadow .15s,border-color .15s}
+.post{border-top:2px solid color-mix(in srgb,var(--ac) 45%,transparent)!important}
+.post:hover,.rcard:hover,.acard:hover{border-color:color-mix(in srgb,var(--ac) 50%,var(--bd))!important;box-shadow:0 0 0 3px var(--glow)}
+.bh h2{position:relative;padding-left:10px}
+.bh h2::before{content:"";position:absolute;left:0;top:5px;bottom:5px;width:3px;border-radius:2px;background:linear-gradient(var(--g1),var(--g2))}
+a{color:var(--actx)}
+/* ===== v6 layout ===== */
+.mtabs{display:flex!important;gap:4px}
+.mt1{height:32px;border:0;background:none;color:var(--tx2);padding:0 12px;border-radius:6px;cursor:pointer;font-weight:500;font-size:13px}
+.mt1.on{background:color-mix(in srgb,var(--dc) 14%,var(--card));color:var(--tx);box-shadow:inset 0 -2px 0 var(--dc)}
+.ti2{display:flex;align-items:center;gap:16px}
+.ti2 .sp1{flex:1}
+.ahl{font-size:13px;font-weight:500;color:var(--actx);text-decoration:none;padding:0 8px;height:32px;display:inline-flex;align-items:center;border-radius:6px}
+.ahl:hover{background:var(--acbg)}
+.stats.sm{padding:8px 16px;grid-template-columns:repeat(12,minmax(0,1fr))}
+.stats.sm .st{grid-column:span 2;padding:8px 12px;height:auto}
+.stats.sm .sv{font-size:20px;line-height:1.3}
+.g6{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:16px;align-items:start}
+.c-l{grid-column:span 3;min-width:0}.c-m{grid-column:span 6;min-width:0}.c-r{grid-column:span 3;min-width:0;display:flex;flex-direction:column;gap:24px}
+.c-l,.c-r{position:sticky;top:80px;max-height:calc(100vh - 96px);overflow:auto;scrollbar-width:thin}
+.feed1{display:flex;flex-direction:column;gap:8px}
+.post .pt{white-space:pre-wrap;word-break:break-word}
+.post .tm{color:var(--mu);font-variant-numeric:tabular-nums}
+.lbt td.n a{display:flex;align-items:center;gap:8px;min-width:0;color:var(--tx);text-decoration:none}
+.lbt td.n a:hover .nt{color:var(--actx);text-decoration:underline}
+.rlist{list-style:none;margin:0;padding:0}
+.rlist li{border-top:1px solid var(--bd2)}
+.rlist li:first-child{border-top:0}
+.rlist a{display:block;padding:8px 12px;color:var(--tx);text-decoration:none}
+.rlist a:hover{background:var(--hov)}
+.gh .rn{font-weight:600;font-size:13px;color:var(--actx);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.gh .rd{font-size:12px;color:var(--tx2);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;margin:2px 0 4px}
+.gh .rm{display:flex;gap:12px;font-size:12px;color:var(--mu);font-variant-numeric:tabular-nums}
+.gh .rm .td{margin-left:auto;color:#ea580c;font-weight:600}
+html[data-theme=dark] .gh .rm .td{color:#fb923c}
+.gh .lg2{display:inline-flex;align-items:center;gap:4px}.gh .lg2 i{width:8px;height:8px;border-radius:50%;background:hsl(var(--h) 70% 55%)}
+.nws .t{font-size:13px;font-weight:500;line-height:1.5;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.nws .m{font-size:12px;color:var(--mu);margin-top:2px;display:flex;gap:8px}
+.src{display:inline-block;padding:0 6px;border-radius:4px;font-size:12px;font-weight:500;line-height:18px}
+.src.x{background:#e0f2fe;color:#0369a1}.src.d{background:#f3e8ff;color:#7e22ce}.src.s{background:#fce7f3;color:#be185d}
+html[data-theme=dark] .src.x{background:#0c2a44;color:#7dd3fc}html[data-theme=dark] .src.d{background:#2e1a5c;color:#d8b4fe}html[data-theme=dark] .src.s{background:#4a0d2e;color:#f9a8d4}
+.tl2{list-style:none;margin:0;padding:4px 0}
+.tl2 a{display:grid;grid-template-columns:24px 1fr auto;align-items:center;height:32px;padding:0 12px;color:var(--tx);text-decoration:none;gap:8px}
+.tl2 a:hover{background:var(--hov)}
+.tl2 .k{color:var(--mu);font-variant-numeric:tabular-nums;font-size:12px}
+.tl2 .n{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+/* person page */
+.ph{display:grid;grid-template-columns:80px 1fr auto;gap:16px;align-items:center;padding:24px;border-radius:12px;background:linear-gradient(110deg,#6d28d9 0%,#a21caf 55%,#db2777 100%);color:#fff;box-shadow:0 8px 24px -8px rgba(162,28,175,.45)}
+.ph .av.xl{width:80px;height:80px;border-radius:50%;font-size:28px;font-weight:600;display:flex;align-items:center;justify-content:center;border:3px solid rgba(255,255,255,.6)}
+.ph h1{font-size:28px;line-height:1.3;margin:0;font-weight:600}
+.ph .hd{opacity:.85;font-size:14px}
+.ph .bio{margin:8px 0 0;font-size:14px;opacity:.95;white-space:pre-wrap;max-width:720px}
+.ph .fs{text-align:right}
+.ph .fs b{display:block;font-size:28px;font-weight:600;font-variant-numeric:tabular-nums;line-height:1.3}
+.ph .fs span{font-size:12px;opacity:.85}
+.ph .xb{display:inline-flex;margin-top:8px;height:32px;align-items:center;padding:0 12px;border-radius:6px;background:rgba(255,255,255,.18);color:#fff;text-decoration:none;font-weight:500;border:1px solid rgba(255,255,255,.35)}
+.ptool{display:flex;align-items:center;gap:16px;margin:24px 0 8px}
+.ptool input{flex:1;height:40px;border:1px solid var(--bd);border-radius:8px;background:var(--card);color:var(--tx);padding:0 12px;font:inherit;font-size:14px;outline:none}
+.ptool input:focus{border-color:var(--ac);box-shadow:0 0 0 3px var(--glow)}
+.ptool .cnt{color:var(--mu);font-variant-numeric:tabular-nums;white-space:nowrap}
+.pwrap{max-width:880px;margin:0 auto}
+.back{font-size:13px;color:var(--actx);text-decoration:none;display:inline-flex;height:32px;align-items:center;margin-bottom:8px}
+mark{background:#fde68a;color:inherit;border-radius:2px}
+html[data-theme=dark] mark{background:#854d0e}
+@media(max-width:1180px){.c-l{grid-column:span 4}.c-m{grid-column:span 8}.c-r{grid-column:1/-1;position:static;max-height:none;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}}
+@media(max-width:900px){.g6{grid-template-columns:1fr}.c-l,.c-m,.c-r{grid-column:1/-1;position:static;max-height:none}.c-m{order:1}.c-r{order:2;display:flex}.c-l{order:3}.stats.sm .st{grid-column:span 4}}
+@media(max-width:640px){.ti2{flex-wrap:wrap;gap:8px}.mtabs{order:3;width:100%}.mt1{flex:1}.ahl{margin-left:auto}.ti2 .sp1{display:none}.stats.sm{display:none}.ph{grid-template-columns:56px 1fr;padding:16px}.ph .av.xl{width:56px;height:56px;font-size:20px}.ph h1{font-size:20px}.ph .fs{grid-column:1/-1;text-align:left}}
+.post footer{margin:0!important;width:auto!important;max-width:none!important;padding:0!important;text-align:left!important;justify-content:flex-start}
+.c-l .tw{max-height:none;overflow:visible}
+.ph .hd,.ph .hd *{color:rgba(255,255,255,.85)!important}
+/* ===== v6b card consistency ===== */
+.post.c6{padding:16px;gap:0;border:1px solid var(--bd)!important;border-top:3px solid color-mix(in srgb,var(--ac) 55%,transparent)!important;border-radius:10px;background:var(--card)}
+.post.c6 header{display:grid;grid-template-columns:32px minmax(0,1fr) auto;gap:12px;align-items:center;height:40px}
+.post.c6 .who{min-width:0}
+.post.c6 .nm{font-weight:600;font-size:14px;line-height:20px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.post.c6 .nm a{color:var(--tx);text-decoration:none}.post.c6 .nm a:hover{color:var(--actx)}
+.post.c6 .hd{font-size:12px;line-height:18px;color:var(--mu)}
+.post.c6 .tm{text-align:right;font-size:12px;line-height:18px;color:var(--tx2);font-variant-numeric:tabular-nums;white-space:nowrap}
+.post.c6 .tm small{display:block;color:var(--mu);font-size:12px}
+.post.c6 .pt{margin:12px 0;font-size:14px;line-height:1.5;color:var(--tx)}
+.post.c6 footer{display:flex!important;align-items:center;justify-content:space-between!important;height:40px;border-top:1px solid var(--bd2);gap:8px}
+.post.c6 .act{display:flex;gap:8px;align-items:center}
+.post.c6 .op{font-size:12px;color:var(--mu);text-decoration:none;height:28px;display:inline-flex;align-items:center;padding:0 8px;border:1px solid var(--bd);border-radius:6px}
+.post.c6 .op:hover{color:var(--actx);border-color:var(--ac)}
+.post.c6 .met{display:grid;grid-template-columns:repeat(4,64px);gap:0}
+.post.c6 .mc{text-align:right;font-variant-numeric:tabular-nums;color:var(--mu);font-size:12px}
+.post.c6 .mc i{font-style:normal;margin-right:4px;opacity:.75}
+.feed1{gap:12px}
+.ph{grid-template-columns:80px minmax(0,1fr) auto;padding:24px}
+.ph .pi{min-width:0}.ph .bio.dim{opacity:.7}
+.ph .xb{margin:0;align-self:start}
+.pstat{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:12px}
+.psb{background:var(--card);border:1px solid var(--bd);border-radius:10px;padding:12px 16px;border-top:3px solid var(--dcx,#a21caf)}
+.psb:nth-child(1){--dcx:#7c3aed}.psb:nth-child(2){--dcx:#db2777}.psb:nth-child(3){--dcx:#f97316}.psb:nth-child(4){--dcx:#14b8a6}
+.psb .sl{font-size:12px;color:var(--mu)}.psb .sv{font-size:20px;font-weight:600;line-height:1.4;font-variant-numeric:tabular-nums;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.psb .ss{font-size:12px;color:var(--mu)}
+.tgl{display:inline-flex;align-items:center;gap:6px;font-size:13px;color:var(--tx2);white-space:nowrap;cursor:pointer}
+.empty{padding:24px;color:var(--mu)}
+@media(max-width:640px){.pstat{grid-template-columns:repeat(2,minmax(0,1fr))}.ph{grid-template-columns:56px minmax(0,1fr)}.ph .xb{grid-column:1/-1;justify-self:start}.ptool{flex-wrap:wrap;gap:8px}.ptool input{flex-basis:100%}
+.post.c6 .met{grid-template-columns:repeat(4,auto);gap:10px}.post.c6 footer{height:auto;min-height:40px;flex-wrap:wrap;padding:6px 0!important}.post.c6 .rp,.post.c6 .mc:nth-child(3){display:none}}
+.post.c6 .met{grid-template-columns:64px 64px 72px 84px}@media(max-width:640px){.post.c6 .met{grid-template-columns:repeat(4,auto);gap:10px}}
+</style></head><body><header class="top"><div class="ti2"><div class="lg"><i>⚡</i>XHOT<span>X 热点雷达</span></div><span class="sp1"></span><a class="ahl" href="https://aihot.news" target="_blank">来自 AIHOT ↗</a><div class="tg"><button data-set-theme="light" title="浅色">☀</button><button data-set-theme="dark" title="深色">☾</button><button data-set-theme="auto">自动</button></div></div></header>
+<div class="wrap"><div class="pwrap"><a class="back" href="../index.html">← 返回首页</a>
+<section class="ph"><span class="av xl" style="--h:299">C</span><div class="pi"><h1>cat</h1><div class="hd">@_catwu</div><p class="bio">claude code + cowork @anthropicai, prev: @dagster, @scale_ai</p></div><a class="xb" href="https://x.com/_catwu" target="_blank">在 X 查看 ↗</a></section>
+<div class="pstat"><div class="psb"><div class="sl">粉丝</div><div class="sv">10.0万</div><div class="ss">99,621</div></div><div class="psb"><div class="sl">较上次</div><div class="sv">—</div><div class="ss">粉丝变化</div></div><div class="psb"><div class="sl">已存推文</div><div class="sv">22</div><div class="ss">最多 200 条</div></div><div class="psb"><div class="sl">最新发帖</div><div class="sv">10-08 06:52</div><div class="ss">5 天前</div></div></div>
+<div class="ptool"><input id="q" type="search" placeholder="搜索 cat 的推文关键词…" autocomplete="off"><span class="cnt" id="cnt">22 条</span></div>
+<div class="bh"><h2>推文时间线</h2><span class="hint">最新在前 · 默认只显示中文/英文</span></div><div class="feed1"><article class="post c6" data-s="one of my favorite pm use cases for claude is asking &quot;who used &amp;lt;feature&amp;gt; the most last week? make me a artifact of the top 10 by usage, then reach out and schedule 15 min to chat.&quot; it&#x27;s the fastest way to get user feedback! https://t.co/syl4joitsb"><header><span class="av" style="--h:299">C</span><div class="who"><div class="nm"><span>cat</span></div><div class="hd">@_catwu</div></div><time class="tm" title="10-08 06:52 北京时间">10-08 06:52<small>5 天前</small></time></header><div class="pt">One of my favorite PM use cases for Claude is asking &quot;who used &amp;lt;feature&amp;gt; the most last week? make me a artifact of the top 10 by usage, then reach out and schedule 15 min to chat.&quot; It&#x27;s the fastest way to get user feedback! https://t.co/SYL4JOitsB</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="One of my favorite PM use cases for Claude is asking &quot;who used &amp;lt;feature&amp;gt; the most last week? make me a artifact of the top 10 by usage, then reach out and schedule 15 min to chat.&quot; It&#x27;s the fastest way to get user feedback! https://t.co/SYL4JOitsB
+— cat (@_catwu)
+https://x.com/_catwu/status/2107967210467803152">复制原文</button><a class="op" href="https://x.com/_catwu/status/2107967210467803152" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>534</span><span class="mc" title="转发"><i>⇄</i>22</span><span class="mc" title="评论"><i>💬</i>39</span><span class="mc" title="浏览"><i>👁</i>6.0万</span></div></footer></article><article class="post c6" data-s="sonnet 5.5 is here! in claude code, users get ~30% more tasks done compared to sonnet 5. it&#x27;s smarter, so it needs fewer tokens for the same work.
+
+here it rakes a yard of leaves using tool calls. 24s faster than sonnet 5, with 6k fewer tokens. it leaves her extra time to read :) https://t.co/x5rhenqrjs https://t.co/xlyqigzw57"><header><span class="av" style="--h:299">C</span><div class="who"><div class="nm"><span>cat</span></div><div class="hd">@_catwu</div></div><time class="tm" title="09-29 02:29 北京时间">09-29 02:29<small>14 天前</small></time></header><div class="pt xp"><span class="xs">Sonnet 5.5 is here! In Claude Code, users get ~30% more tasks done compared to Sonnet 5. It&#x27;s smarter, so it needs fewer tokens for the same work.
+
+Here it rakes a yard of leaves using tool calls. 24s faster than Sonnet 5, with 6K fewer tokens. It leaves her extra time to read :)…</span><span class="xf">Sonnet 5.5 is here! In Claude Code, users get ~30% more tasks done compared to Sonnet 5. It&#x27;s smarter, so it needs fewer tokens for the same work.
+
+Here it rakes a yard of leaves using tool calls. 24s faster than Sonnet 5, with 6K fewer tokens. It leaves her extra time to read :) https://t.co/X5RHENqRjS https://t.co/xlyQigZW57</span></div>
+<footer><div class="act"><button class="ex" type="button">展开</button><button class="cp" type="button" data-copy="Sonnet 5.5 is here! In Claude Code, users get ~30% more tasks done compared to Sonnet 5. It&#x27;s smarter, so it needs fewer tokens for the same work.
+
+Here it rakes a yard of leaves using tool calls. 24s faster than Sonnet 5, with 6K fewer tokens. It leaves her extra time to read :) https://t.co/X5RHENqRjS https://t.co/xlyQigZW57
+— cat (@_catwu)
+https://x.com/_catwu/status/2104639552170377399">复制原文</button><a class="op" href="https://x.com/_catwu/status/2104639552170377399" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>504</span><span class="mc" title="转发"><i>⇄</i>11</span><span class="mc" title="评论"><i>💬</i>50</span><span class="mc" title="浏览"><i>👁</i>4.8万</span></div></footer></article><article class="post c6" data-s="if you’re looking for ways to try opus 5.5 and claude tag in slack… https://t.co/ppwztyqx2o"><header><span class="av" style="--h:299">C</span><div class="who"><div class="nm"><span>cat</span></div><div class="hd">@_catwu</div></div><time class="tm" title="09-23 09:25 北京时间">09-23 09:25<small>20 天前</small></time></header><div class="pt">If you’re looking for ways to try Opus 5.5 and Claude Tag in Slack… https://t.co/PpwztYQx2o</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="If you’re looking for ways to try Opus 5.5 and Claude Tag in Slack… https://t.co/PpwztYQx2o
+— cat (@_catwu)
+https://x.com/_catwu/status/2102569951974584612">复制原文</button><a class="op" href="https://x.com/_catwu/status/2102569951974584612" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>172</span><span class="mc" title="转发"><i>⇄</i>4</span><span class="mc" title="评论"><i>💬</i>14</span><span class="mc" title="浏览"><i>👁</i>3.4万</span></div></footer></article><article class="post c6" data-s="claude opus 5.5 is now the default model in claude code and the claude app, including cowork, for pro, max, and team plans. i’ve been using opus 5.5 as a daily driver and love its clear communication skills and ability to write in my style.
+
+we’re defaulting to effort medium across products, which is comparable to fable 5.1 on intelligence but faster. your rate limits will go 25% further on opus 5.5 compared to opus 5.
+
+give opus 5.5 an ambitious task and let us know what you think!"><header><span class="av" style="--h:299">C</span><div class="who"><div class="nm"><span>cat</span></div><div class="hd">@_catwu</div></div><time class="tm" title="09-23 00:39 北京时间">09-23 00:39<small>20 天前</small></time></header><div class="pt xp"><span class="xs">Claude Opus 5.5 is now the default model in Claude Code and the Claude app, including Cowork, for Pro, Max, and Team plans. I’ve been using Opus 5.5 as a daily driver and love its clear communication skills and ability to write in my style.
+
+We’re defaulting to effort medium acro…</span><span class="xf">Claude Opus 5.5 is now the default model in Claude Code and the Claude app, including Cowork, for Pro, Max, and Team plans. I’ve been using Opus 5.5 as a daily driver and love its clear communication skills and ability to write in my style.
+
+We’re defaulting to effort medium across products, which is comparable to Fable 5.1 on intelligence but faster. Your rate limits will go 25% further on Opus 5.5 compared to Opus 5.
+
+Give Opus 5.5 an ambitious task and let us know what you think!</span></div>
+<footer><div class="act"><button class="ex" type="button">展开</button><button class="cp" type="button" data-copy="Claude Opus 5.5 is now the default model in Claude Code and the Claude app, including Cowork, for Pro, Max, and Team plans. I’ve been using Opus 5.5 as a daily driver and love its clear communication skills and ability to write in my style.
+
+We’re defaulting to effort medium across products, which is comparable to Fable 5.1 on intelligence but faster. Your rate limits will go 25% further on Opus 5.5 compared to Opus 5.
+
+Give Opus 5.5 an ambitious task and let us know what you think!
+— cat (@_catwu)
+https://x.com/_catwu/status/2102437713781944397">复制原文</button><a class="op" href="https://x.com/_catwu/status/2102437713781944397" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>1,479</span><span class="mc" title="转发"><i>⇄</i>43</span><span class="mc" title="评论"><i>💬</i>84</span><span class="mc" title="浏览"><i>👁</i>10.3万</span></div></footer></article><article class="post c6" data-s="in the new projects experience, claude coordinates all of your sessions. 
+
+i&#x27;ve been using it every day since it lets me operate at a higher level of abstraction. i fire off a batch of tasks and move on. claude has context on everything i&#x27;m working on and can give me an aggregated status update whenever i ask. it also has long-lived memory that evolves as i use it. 
+
+we&#x27;re rolling this out over the coming weeks. let me know what you think!"><header><span class="av" style="--h:299">C</span><div class="who"><div class="nm"><span>cat</span></div><div class="hd">@_catwu</div></div><time class="tm" title="09-18 01:40 北京时间">09-18 01:40<small>25 天前</small></time></header><div class="pt xp"><span class="xs">In the new Projects experience, Claude coordinates all of your sessions. 
+
+I&#x27;ve been using it every day since it lets me operate at a higher level of abstraction. I fire off a batch of tasks and move on. Claude has context on everything I&#x27;m working on and can give me an aggregate…</span><span class="xf">In the new Projects experience, Claude coordinates all of your sessions. 
+
+I&#x27;ve been using it every day since it lets me operate at a higher level of abstraction. I fire off a batch of tasks and move on. Claude has context on everything I&#x27;m working on and can give me an aggregated status update whenever I ask. It also has long-lived memory that evolves as I use it. 
+
+We&#x27;re rolling this out over the coming weeks. Let me know what you think!</span></div>
+<footer><div class="act"><button class="ex" type="button">展开</button><button class="cp" type="button" data-copy="In the new Projects experience, Claude coordinates all of your sessions. 
+
+I&#x27;ve been using it every day since it lets me operate at a higher level of abstraction. I fire off a batch of tasks and move on. Claude has context on everything I&#x27;m working on and can give me an aggregated status update whenever I ask. It also has long-lived memory that evolves as I use it. 
+
+We&#x27;re rolling this out over the coming weeks. Let me know what you think!
+— cat (@_catwu)
+https://x.com/_catwu/status/2100641163120423057">复制原文</button><a class="op" href="https://x.com/_catwu/status/2100641163120423057" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>446</span><span class="mc" title="转发"><i>⇄</i>16</span><span class="mc" title="评论"><i>💬</i>60</span><span class="mc" title="浏览"><i>👁</i>6.3万</span></div></footer></article><article class="post c6" data-s="today, we are merging claude cowork and chat to simplify how you use claude!
+
+we are also integrating claude design so that you can ask claude to make a slide, design, or doc without needing to switch tabs or apps.
+
+many of you shared that you didn&#x27;t want to choose which claude product to use for any task. as claude models have become more capable, we&#x27;ve found that claude can handle the routing for you. based on your prompt, claude will decide whether to give a quick answer or do deeper agentic work, and what kind of output best fits the task.
+ 
+you&#x27;re in control the whole time: you can still stop, redirect, or exert finer control over claude&#x27;s effort or approach.
+ 
+give it a try and let us know what you think. we&#x27;re rolling this out slowly over the next few weeks to get it right."><header><span class="av" style="--h:299">C</span><div class="who"><div class="nm"><span>cat</span></div><div class="hd">@_catwu</div></div><time class="tm" title="09-17 00:28 北京时间">09-17 00:28<small>26 天前</small></time></header><div class="pt xp"><span class="xs">Today, we are merging Claude Cowork and chat to simplify how you use Claude!
+
+We are also integrating Claude Design so that you can ask Claude to make a Slide, Design, or Doc without needing to switch tabs or apps.
+
+Many of you shared that you didn&#x27;t want to choose which Claude p…</span><span class="xf">Today, we are merging Claude Cowork and chat to simplify how you use Claude!
+
+We are also integrating Claude Design so that you can ask Claude to make a Slide, Design, or Doc without needing to switch tabs or apps.
+
+Many of you shared that you didn&#x27;t want to choose which Claude product to use for any task. As Claude models have become more capable, we&#x27;ve found that Claude can handle the routing for you. Based on your prompt, Claude will decide whether to give a quick answer or do deeper agentic work, and what kind of output best fits the task.
+ 
+You&#x27;re in control the whole time: you can still stop, redirect, or exert finer control over Claude&#x27;s effort or approach.
+ 
+Give it a try and let us know what you think. We&#x27;re rolling this out slowly over the next few weeks to get it right.</span></div>
+<footer><div class="act"><button class="ex" type="button">展开</button><button class="cp" type="button" data-copy="Today, we are merging Claude Cowork and chat to simplify how you use Claude!
+
+We are also integrating Claude Design so that you can ask Claude to make a Slide, Design, or Doc without needing to switch tabs or apps.
+
+Many of you shared that you didn&#x27;t want to choose which Claude product to use for any task. As Claude models have become more capable, we&#x27;ve found that Claude can handle the routing for you. Based on your prompt, Claude will decide whether to give a quick answer or do deeper agentic work, and what kind of output best fits the task.
+ 
+You&#x27;re in control the whole time: you can still stop, redirect, or exert finer control over Claude&#x27;s effort or approach.
+ 
+Give it a try and let us know what you think. We&#x27;re rolling this out slowly over the next few weeks to get it right.
+— cat (@_catwu)
+https://x.com/_catwu/status/2100260655312089562">复制原文</button><a class="op" href="https://x.com/_catwu/status/2100260655312089562" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>1,374</span><span class="mc" title="转发"><i>⇄</i>63</span><span class="mc" title="评论"><i>💬</i>122</span><span class="mc" title="浏览"><i>👁</i>17.0万</span></div></footer></article><article class="post c6" data-s="with fable 5.1, our team has taken on more ambitious projects that would have previously taken months. what big bets do you want to take? 
+
+ask fable 5.1 in claude code, claude cowork, claude tag to take on the task and let us know what you think! https://t.co/lcloubwkeo"><header><span class="av" style="--h:299">C</span><div class="who"><div class="nm"><span>cat</span></div><div class="hd">@_catwu</div></div><time class="tm" title="09-02 07:41 北京时间">09-02 07:41<small>41 天前</small></time></header><div class="pt">With Fable 5.1, our team has taken on more ambitious projects that would have previously taken months. What big bets do you want to take? 
+
+Ask Fable 5.1 in Claude Code, Claude Cowork, Claude Tag to take on the task and let us know what you think! https://t.co/LCloUBWKeO</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="With Fable 5.1, our team has taken on more ambitious projects that would have previously taken months. What big bets do you want to take? 
+
+Ask Fable 5.1 in Claude Code, Claude Cowork, Claude Tag to take on the task and let us know what you think! https://t.co/LCloUBWKeO
+— cat (@_catwu)
+https://x.com/_catwu/status/2094933602228416603">复制原文</button><a class="op" href="https://x.com/_catwu/status/2094933602228416603" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>446</span><span class="mc" title="转发"><i>⇄</i>18</span><span class="mc" title="评论"><i>💬</i>61</span><span class="mc" title="浏览"><i>👁</i>4.0万</span></div></footer></article><article class="post c6" data-s="thanks to your feedback, we’ve unified memory across chat and cowork. now, you can tell claude to remember something once and it’ll have that context across surfaces!
+
+tell us what you’d like to see next :) https://t.co/0vw2o4zeab"><header><span class="av" style="--h:299">C</span><div class="who"><div class="nm"><span>cat</span></div><div class="hd">@_catwu</div></div><time class="tm" title="08-26 03:43 北京时间">08-26 03:43<small>48 天前</small></time></header><div class="pt">Thanks to your feedback, we’ve unified memory across Chat and Cowork. Now, you can tell Claude to remember something once and it’ll have that context across surfaces!
+
+Tell us what you’d like to see next :) https://t.co/0Vw2o4zeaB</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="Thanks to your feedback, we’ve unified memory across Chat and Cowork. Now, you can tell Claude to remember something once and it’ll have that context across surfaces!
+
+Tell us what you’d like to see next :) https://t.co/0Vw2o4zeaB
+— cat (@_catwu)
+https://x.com/_catwu/status/2092337156455051345">复制原文</button><a class="op" href="https://x.com/_catwu/status/2092337156455051345" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>818</span><span class="mc" title="转发"><i>⇄</i>34</span><span class="mc" title="评论"><i>💬</i>139</span><span class="mc" title="浏览"><i>👁</i>7.9万</span></div></footer></article><article class="post c6" data-s="we&#x27;d love to talk with cowork users in corporate finance and accounting roles!
+
+have ideas on how we can improve? sign up for a screen share with our team here: https://t.co/kjf5bgfx1x"><header><span class="av" style="--h:299">C</span><div class="who"><div class="nm"><span>cat</span></div><div class="hd">@_catwu</div></div><time class="tm" title="08-20 09:28 北京时间">08-20 09:28<small>54 天前</small></time></header><div class="pt">We&#x27;d love to talk with Cowork users in Corporate Finance and Accounting roles!
+
+Have ideas on how we can improve? Sign up for a screen share with our team here: https://t.co/KjF5bGFX1x</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="We&#x27;d love to talk with Cowork users in Corporate Finance and Accounting roles!
+
+Have ideas on how we can improve? Sign up for a screen share with our team here: https://t.co/KjF5bGFX1x
+— cat (@_catwu)
+https://x.com/_catwu/status/2090249465844380154">复制原文</button><a class="op" href="https://x.com/_catwu/status/2090249465844380154" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>117</span><span class="mc" title="转发"><i>⇄</i>8</span><span class="mc" title="评论"><i>💬</i>13</span><span class="mc" title="浏览"><i>👁</i>2.5万</span></div></footer></article><article class="post c6" data-s="join office hours with the cowork team 
+
+if you&#x27;re in marketing, sales, finance, legal, ops, or any non-eng role, book a 15 min slot to show us how you use cowork so we can make it better for you: https://t.co/uxokejoala
+
+thank you for sharing your feedback!"><header><span class="av" style="--h:299">C</span><div class="who"><div class="nm"><span>cat</span></div><div class="hd">@_catwu</div></div><time class="tm" title="08-14 04:55 北京时间">08-14 04:55<small>60 天前</small></time></header><div class="pt">Join office hours with the Cowork team 
+
+If you&#x27;re in marketing, sales, finance, legal, ops, or any non-eng role, book a 15 min slot to show us how you use Cowork so we can make it better for you: https://t.co/UxOKEjoala
+
+Thank you for sharing your feedback!</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="Join office hours with the Cowork team 
+
+If you&#x27;re in marketing, sales, finance, legal, ops, or any non-eng role, book a 15 min slot to show us how you use Cowork so we can make it better for you: https://t.co/UxOKEjoala
+
+Thank you for sharing your feedback!
+— cat (@_catwu)
+https://x.com/_catwu/status/2088006642189361564">复制原文</button><a class="op" href="https://x.com/_catwu/status/2088006642189361564" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>151</span><span class="mc" title="转发"><i>⇄</i>13</span><span class="mc" title="评论"><i>💬</i>20</span><span class="mc" title="浏览"><i>👁</i>3.9万</span></div></footer></article><article class="post c6" data-s="claude opus 5 is great at long-running autonomous work! try it out and let us know what you think :) https://t.co/8ltbaojjr0"><header><span class="av" style="--h:299">C</span><div class="who"><div class="nm"><span>cat</span></div><div class="hd">@_catwu</div></div><time class="tm" title="07-25 01:32 北京时间">07-25 01:32<small>80 天前</small></time></header><div class="pt">Claude Opus 5 is great at long-running autonomous work! Try it out and let us know what you think :) https://t.co/8LTbAOJJR0</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="Claude Opus 5 is great at long-running autonomous work! Try it out and let us know what you think :) https://t.co/8LTbAOJJR0
+— cat (@_catwu)
+https://x.com/_catwu/status/2080707593115516985">复制原文</button><a class="op" href="https://x.com/_catwu/status/2080707593115516985" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>773</span><span class="mc" title="转发"><i>⇄</i>27</span><span class="mc" title="评论"><i>💬</i>66</span><span class="mc" title="浏览"><i>👁</i>4.4万</span></div></footer></article><article class="post c6" data-s="i love using claude cowork to manage my calendar. here&#x27;s my prompt for it:
+
+manage my calendar for the week. requirements: 1. &lt;20 hours of meetings 2. dedupe conflicting meetings. look at past weeks to see what kinds of meetings i decline. dinners don&#x27;t count against the 20 hours. build a skill that you refine. ask me before updating invites. 
+
+what do you use cowork for?"><header><span class="av" style="--h:299">C</span><div class="who"><div class="nm"><span>cat</span></div><div class="hd">@_catwu</div></div><time class="tm" title="07-20 09:12 北京时间">07-20 09:12<small>85 天前</small></time></header><div class="pt xp"><span class="xs">I love using Claude Cowork to manage my calendar. Here&#x27;s my prompt for it:
+
+Manage my calendar for the week. Requirements: 1. &lt;20 hours of meetings 2. Dedupe conflicting meetings. Look at past weeks to see what kinds of meetings I decline. Dinners don&#x27;t count against the 20 hours…</span><span class="xf">I love using Claude Cowork to manage my calendar. Here&#x27;s my prompt for it:
+
+Manage my calendar for the week. Requirements: 1. &lt;20 hours of meetings 2. Dedupe conflicting meetings. Look at past weeks to see what kinds of meetings I decline. Dinners don&#x27;t count against the 20 hours. Build a skill that you refine. Ask me before updating invites. 
+
+What do you use Cowork for?</span></div>
+<footer><div class="act"><button class="ex" type="button">展开</button><button class="cp" type="button" data-copy="I love using Claude Cowork to manage my calendar. Here&#x27;s my prompt for it:
+
+Manage my calendar for the week. Requirements: 1. &lt;20 hours of meetings 2. Dedupe conflicting meetings. Look at past weeks to see what kinds of meetings I decline. Dinners don&#x27;t count against the 20 hours. Build a skill that you refine. Ask me before updating invites. 
+
+What do you use Cowork for?
+— cat (@_catwu)
+https://x.com/_catwu/status/2079011428380602526">复制原文</button><a class="op" href="https://x.com/_catwu/status/2079011428380602526" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>538</span><span class="mc" title="转发"><i>⇄</i>20</span><span class="mc" title="评论"><i>💬</i>53</span><span class="mc" title="浏览"><i>👁</i>5.8万</span></div></footer></article><article class="post c6" data-s="you know your workflows best. show our team how you use cowork so we can make it work better for you!
+
+if you&#x27;re in marketing, sales, finance, legal, or any non-engineering role, sign up here for a 30 min screen share with our team: https://t.co/kvc8uyzcnl"><header><span class="av" style="--h:299">C</span><div class="who"><div class="nm"><span>cat</span></div><div class="hd">@_catwu</div></div><time class="tm" title="07-17 09:49 北京时间">07-17 09:49<small>88 天前</small></time></header><div class="pt">You know your workflows best. Show our team how you use Cowork so we can make it work better for you!
+
+If you&#x27;re in marketing, sales, finance, legal, or any non-engineering role, sign up here for a 30 min screen share with our team: https://t.co/kvc8uYzcNL</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="You know your workflows best. Show our team how you use Cowork so we can make it work better for you!
+
+If you&#x27;re in marketing, sales, finance, legal, or any non-engineering role, sign up here for a 30 min screen share with our team: https://t.co/kvc8uYzcNL
+— cat (@_catwu)
+https://x.com/_catwu/status/2077933568282755145">复制原文</button><a class="op" href="https://x.com/_catwu/status/2077933568282755145" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>290</span><span class="mc" title="转发"><i>⇄</i>19</span><span class="mc" title="评论"><i>💬</i>20</span><span class="mc" title="浏览"><i>👁</i>3.4万</span></div></footer></article><article class="post c6" data-s="artifacts just got an upgrade! https://t.co/zbsvporcxh"><header><span class="av" style="--h:299">C</span><div class="who"><div class="nm"><span>cat</span></div><div class="hd">@_catwu</div></div><time class="tm" title="07-14 11:14 北京时间">07-14 11:14<small>91 天前</small></time></header><div class="pt">Artifacts just got an upgrade! https://t.co/zbSVpoRCXh</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="Artifacts just got an upgrade! https://t.co/zbSVpoRCXh
+— cat (@_catwu)
+https://x.com/_catwu/status/2076867882894684314">复制原文</button><a class="op" href="https://x.com/_catwu/status/2076867882894684314" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>351</span><span class="mc" title="转发"><i>⇄</i>9</span><span class="mc" title="评论"><i>💬</i>20</span><span class="mc" title="浏览"><i>👁</i>4.7万</span></div></footer></article><article class="post c6" data-s="enjoy! https://t.co/wjtkdbv6qm"><header><span class="av" style="--h:299">C</span><div class="who"><div class="nm"><span>cat</span></div><div class="hd">@_catwu</div></div><time class="tm" title="07-13 01:29 北京时间">07-13 01:29<small>92 天前</small></time></header><div class="pt">Enjoy! https://t.co/WJTkdBv6qM</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="Enjoy! https://t.co/WJTkdBv6qM
+— cat (@_catwu)
+https://x.com/_catwu/status/2076358263688569314">复制原文</button><a class="op" href="https://x.com/_catwu/status/2076358263688569314" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>2,107</span><span class="mc" title="转发"><i>⇄</i>46</span><span class="mc" title="评论"><i>💬</i>379</span><span class="mc" title="浏览"><i>👁</i>21.1万</span></div></footer></article><article class="post c6" data-s="claude code can now open any website inside the desktop app.
+
+claude can use your production app, open the links it sends you, check twitter, and even watch the fifa world cup! https://t.co/ejfdkmd2af"><header><span class="av" style="--h:299">C</span><div class="who"><div class="nm"><span>cat</span></div><div class="hd">@_catwu</div></div><time class="tm" title="07-11 02:24 北京时间">07-11 02:24<small>94 天前</small></time></header><div class="pt">Claude Code can now open any website inside the desktop app.
+
+Claude can use your production app, open the links it sends you, check Twitter, and even watch the FIFA World Cup! https://t.co/EjFDKMD2af</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="Claude Code can now open any website inside the desktop app.
+
+Claude can use your production app, open the links it sends you, check Twitter, and even watch the FIFA World Cup! https://t.co/EjFDKMD2af
+— cat (@_catwu)
+https://x.com/_catwu/status/2075647324790112304">复制原文</button><a class="op" href="https://x.com/_catwu/status/2075647324790112304" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>1,666</span><span class="mc" title="转发"><i>⇄</i>69</span><span class="mc" title="评论"><i>💬</i>75</span><span class="mc" title="浏览"><i>👁</i>23.2万</span></div></footer></article><article class="post c6" data-s="tomorrow at 10am pt i&#x27;m hosting a live walkthrough of how we progressed from single-player claude code to multi-player claude tag. then, we&#x27;re going deep on how claude tag actually works.
+
+ai used to finish your sentence. then, it wrote entire features. now, claude tag can monitor your channels, do proactive work for you, the whole team can steer it, and it remembers what you told it last week.
+
+register: https://t.co/d8lz61bxn4"><header><span class="av" style="--h:299">C</span><div class="who"><div class="nm"><span>cat</span></div><div class="hd">@_catwu</div></div><time class="tm" title="07-09 02:36 北京时间">07-09 02:36<small>96 天前</small></time></header><div class="pt xp"><span class="xs">Tomorrow at 10am PT I&#x27;m hosting a live walkthrough of how we progressed from single-player Claude Code to multi-player Claude Tag. Then, we&#x27;re going deep on how Claude Tag actually works.
+
+AI used to finish your sentence. Then, it wrote entire features. Now, Claude Tag can monito…</span><span class="xf">Tomorrow at 10am PT I&#x27;m hosting a live walkthrough of how we progressed from single-player Claude Code to multi-player Claude Tag. Then, we&#x27;re going deep on how Claude Tag actually works.
+
+AI used to finish your sentence. Then, it wrote entire features. Now, Claude Tag can monitor your channels, do proactive work for you, the whole team can steer it, and it remembers what you told it last week.
+
+Register: https://t.co/D8Lz61BXn4</span></div>
+<footer><div class="act"><button class="ex" type="button">展开</button><button class="cp" type="button" data-copy="Tomorrow at 10am PT I&#x27;m hosting a live walkthrough of how we progressed from single-player Claude Code to multi-player Claude Tag. Then, we&#x27;re going deep on how Claude Tag actually works.
+
+AI used to finish your sentence. Then, it wrote entire features. Now, Claude Tag can monitor your channels, do proactive work for you, the whole team can steer it, and it remembers what you told it last week.
+
+Register: https://t.co/D8Lz61BXn4
+— cat (@_catwu)
+https://x.com/_catwu/status/2074925531519468012">复制原文</button><a class="op" href="https://x.com/_catwu/status/2074925531519468012" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>604</span><span class="mc" title="转发"><i>⇄</i>43</span><span class="mc" title="评论"><i>💬</i>54</span><span class="mc" title="浏览"><i>👁</i>9.7万</span></div></footer></article><article class="post c6" data-s="a retrospective on making claude code from our early team! https://t.co/kk9mz4byxx"><header><span class="av" style="--h:299">C</span><div class="who"><div class="nm"><span>cat</span></div><div class="hd">@_catwu</div></div><time class="tm" title="07-07 06:25 北京时间">07-07 06:25<small>98 天前</small></time></header><div class="pt">a retrospective on making claude code from our early team! https://t.co/Kk9mz4BYXx</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="a retrospective on making claude code from our early team! https://t.co/Kk9mz4BYXx
+— cat (@_catwu)
+https://x.com/_catwu/status/2074258446686536167">复制原文</button><a class="op" href="https://x.com/_catwu/status/2074258446686536167" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>274</span><span class="mc" title="转发"><i>⇄</i>11</span><span class="mc" title="评论"><i>💬</i>17</span><span class="mc" title="浏览"><i>👁</i>4.5万</span></div></footer></article><article class="post c6" data-s="what are your top claude code + workflows + artifacts use cases?
+
+one of my new favorites is for sourcing candidates:
+- tell cc about the role and backgrounds i’m looking for
+- ask cc to kick off a dynamic workflow to find 100 candidates, and include linkedin, twitter, blog, podcasts, and one-line pitch for each
+- ask cc to make an artifact and email it to me. then, i lock my laptop and head out for the day
+- i review the list on the go once cc is done!"><header><span class="av" style="--h:299">C</span><div class="who"><div class="nm"><span>cat</span></div><div class="hd">@_catwu</div></div><time class="tm" title="07-06 00:30 北京时间">07-06 00:30<small>99 天前</small></time></header><div class="pt xp"><span class="xs">what are your top claude code + workflows + artifacts use cases?
+
+one of my new favorites is for sourcing candidates:
+- tell cc about the role and backgrounds i’m looking for
+- ask cc to kick off a dynamic workflow to find 100 candidates, and include linkedin, twitter, blog, podc…</span><span class="xf">what are your top claude code + workflows + artifacts use cases?
+
+one of my new favorites is for sourcing candidates:
+- tell cc about the role and backgrounds i’m looking for
+- ask cc to kick off a dynamic workflow to find 100 candidates, and include linkedin, twitter, blog, podcasts, and one-line pitch for each
+- ask cc to make an artifact and email it to me. then, i lock my laptop and head out for the day
+- i review the list on the go once cc is done!</span></div>
+<footer><div class="act"><button class="ex" type="button">展开</button><button class="cp" type="button" data-copy="what are your top claude code + workflows + artifacts use cases?
+
+one of my new favorites is for sourcing candidates:
+- tell cc about the role and backgrounds i’m looking for
+- ask cc to kick off a dynamic workflow to find 100 candidates, and include linkedin, twitter, blog, podcasts, and one-line pitch for each
+- ask cc to make an artifact and email it to me. then, i lock my laptop and head out for the day
+- i review the list on the go once cc is done!
+— cat (@_catwu)
+https://x.com/_catwu/status/2073806626965049686">复制原文</button><a class="op" href="https://x.com/_catwu/status/2073806626965049686" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>628</span><span class="mc" title="转发"><i>⇄</i>29</span><span class="mc" title="评论"><i>💬</i>100</span><span class="mc" title="浏览"><i>👁</i>8.6万</span></div></footer></article><article class="post c6" data-s="one of the things i love about claude fable 5 is that it knew to use propensity score matching (matching users on activity so you compare like with like) in my retention analysis without me asking.
+
+it’s exciting to see fable 5’s improved judgment across all of its work, from writing emails and docs in cowork to debugging complex errors in claude code"><header><span class="av" style="--h:299">C</span><div class="who"><div class="nm"><span>cat</span></div><div class="hd">@_catwu</div></div><time class="tm" title="07-05 00:12 北京时间">07-05 00:12<small>100 天前</small></time></header><div class="pt xp"><span class="xs">One of the things I love about Claude Fable 5 is that it knew to use propensity score matching (matching users on activity so you compare like with like) in my retention analysis without me asking.
+
+It’s exciting to see Fable 5’s improved judgment across all of its work, from wri…</span><span class="xf">One of the things I love about Claude Fable 5 is that it knew to use propensity score matching (matching users on activity so you compare like with like) in my retention analysis without me asking.
+
+It’s exciting to see Fable 5’s improved judgment across all of its work, from writing emails and docs in Cowork to debugging complex errors in Claude Code</span></div>
+<footer><div class="act"><button class="ex" type="button">展开</button><button class="cp" type="button" data-copy="One of the things I love about Claude Fable 5 is that it knew to use propensity score matching (matching users on activity so you compare like with like) in my retention analysis without me asking.
+
+It’s exciting to see Fable 5’s improved judgment across all of its work, from writing emails and docs in Cowork to debugging complex errors in Claude Code
+— cat (@_catwu)
+https://x.com/_catwu/status/2073439890482794966">复制原文</button><a class="op" href="https://x.com/_catwu/status/2073439890482794966" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>562</span><span class="mc" title="转发"><i>⇄</i>10</span><span class="mc" title="评论"><i>💬</i>64</span><span class="mc" title="浏览"><i>👁</i>5.3万</span></div></footer></article><article class="post c6" data-s="small tip: you can use claude code with computer use to set up claude tag. just point it to the claude tag docs and it will connect your team’s github repo, data warehouse, google drive, and other data sources for you!"><header><span class="av" style="--h:299">C</span><div class="who"><div class="nm"><span>cat</span></div><div class="hd">@_catwu</div></div><time class="tm" title="07-04 04:58 北京时间">07-04 04:58<small>101 天前</small></time></header><div class="pt">Small tip: You can use Claude Code with computer use to set up Claude Tag. Just point it to the Claude Tag docs and it will connect your team’s GitHub repo, data warehouse, google drive, and other data sources for you!</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="Small tip: You can use Claude Code with computer use to set up Claude Tag. Just point it to the Claude Tag docs and it will connect your team’s GitHub repo, data warehouse, google drive, and other data sources for you!
+— cat (@_catwu)
+https://x.com/_catwu/status/2073149354412822738">复制原文</button><a class="op" href="https://x.com/_catwu/status/2073149354412822738" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>394</span><span class="mc" title="转发"><i>⇄</i>16</span><span class="mc" title="评论"><i>💬</i>35</span><span class="mc" title="浏览"><i>👁</i>3.9万</span></div></footer></article><article class="post c6" data-s="what are you building with fable 5 this long weekend? show me your demos in the replies! https://t.co/sobb1xpcyx"><header><span class="av" style="--h:299">C</span><div class="who"><div class="nm"><span>cat</span></div><div class="hd">@_catwu</div></div><time class="tm" title="07-04 04:51 北京时间">07-04 04:51<small>101 天前</small></time></header><div class="pt">What are you building with Fable 5 this long weekend? Show me your demos in the replies! https://t.co/Sobb1XPcYX</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="What are you building with Fable 5 this long weekend? Show me your demos in the replies! https://t.co/Sobb1XPcYX
+— cat (@_catwu)
+https://x.com/_catwu/status/2073147672106873001">复制原文</button><a class="op" href="https://x.com/_catwu/status/2073147672106873001" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>763</span><span class="mc" title="转发"><i>⇄</i>31</span><span class="mc" title="评论"><i>💬</i>361</span><span class="mc" title="浏览"><i>👁</i>20.1万</span></div></footer></article></div></div>
+<footer>数据：X API get_users_posts · 生成于 2026-10-13 16:21 北京时间</footer></div><script>
+(function(){var d=document.documentElement,mq=matchMedia('(prefers-color-scheme: dark)');
+function sync(){document.querySelectorAll('[data-set-theme]').forEach(function(b){b.classList.toggle('on',b.dataset.setTheme===d.dataset.pref)})}
+function theme(){var p=d.dataset.pref;d.dataset.theme=p==='auto'?(mq.matches?'dark':'light'):p}
+document.querySelectorAll('[data-set-theme]').forEach(function(b){b.onclick=function(){d.dataset.pref=b.dataset.setTheme;try{localStorage.setItem('xhot-theme',b.dataset.setTheme)}catch(e){}theme();sync()}});
+(mq.addEventListener?mq.addEventListener('change',theme):mq.addListener(theme));
+document.querySelectorAll('[data-t]').forEach(function(b){b.onclick=function(){var t=b.dataset.t;
+document.querySelectorAll('[data-t]').forEach(function(x){x.classList.toggle('on',x.dataset.t===t)});
+document.querySelectorAll('.pane').forEach(function(x){x.classList.toggle('on',x.dataset.p===t)});
+document.querySelectorAll('.li-d').forEach(function(x){x.hidden=x.dataset.p!==t});scrollTo({top:0})}});sync();
+function fb(t){var a=document.createElement('textarea');a.value=t;a.setAttribute('readonly','');a.style.cssText='position:fixed;top:-1000px;opacity:0';document.body.appendChild(a);a.select();var ok=false;try{ok=document.execCommand('copy')}catch(e){}document.body.removeChild(a);return ok}
+document.addEventListener('click',function(ev){var b=ev.target.closest('.cp');if(b){var t=b.getAttribute('data-copy');
+function done(ok){b.textContent=ok?'已复制 ✓':'复制失败';b.classList.toggle('ok',ok);clearTimeout(b._t);b._t=setTimeout(function(){b.textContent='复制原文';b.classList.remove('ok')},1600)}
+if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(t).then(function(){done(true)},function(){done(fb(t))})}else done(fb(t));return}
+var x=ev.target.closest('.ex');if(x){var c=x.closest('.post').querySelector('.xp');var o=c.classList.toggle('open');x.textContent=o?'收起':'展开'}})})();
+</script><script>(function(){var q=document.getElementById('q'),c=document.getElementById('cnt'),a=document.getElementById('alll'),ps=[].slice.call(document.querySelectorAll('.feed1 .post'));
+function run(){var v=q.value.trim().toLowerCase(),all=a&&a.checked,k=0,n=0;ps.forEach(function(p){var lo=!p.dataset.ol||all;if(lo)n++;var ok=lo&&(!v||p.dataset.s.indexOf(v)>=0);p.hidden=!ok;if(ok)k++});c.textContent=v?('匹配 '+k+' / '+n+' 条'):(n+' 条')}
+q.addEventListener('input',run);if(a)a.addEventListener('change',run)})();</script></body></html>

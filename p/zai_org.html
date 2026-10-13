@@ -1,0 +1,619 @@
+<!doctype html><html lang="zh-CN" data-theme="light" data-pref="auto"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><title>Z.ai (@Zai_org) · XHOT</title><script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('xhot-theme')}catch(e){}t=(t==='light'||t==='dark')?t:'auto';d.setAttribute('data-pref',t);d.setAttribute('data-theme',t==='auto'?(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'):t)})();
+</script><style>:root{--bg:#f7f7f8;--card:#fff;--bd:#e4e4e7;--bd2:#f0f0f2;--zebra:#fafafa;--hov:#f4f4f6;--tx:#18181b;--tx2:#3f3f46;--mu:#71717a;--mu2:#a1a1aa;--ac:#4f46e5;--acbg:#eef2ff;--actx:#4338ca;--up:#16a34a;--upbg:#f0fdf4;--dn:#dc2626;--dnbg:#fef2f2;--r:8px;--sh:0 1px 2px rgba(24,24,27,.04)}
+html[data-theme=dark]{--bg:#09090b;--card:#131316;--bd:#27272a;--bd2:#1c1c20;--zebra:#16161a;--hov:#1d1d22;--tx:#f4f4f5;--tx2:#d4d4d8;--mu:#a1a1aa;--mu2:#71717a;--ac:#818cf8;--acbg:#1e1b4b;--actx:#a5b4fc;--up:#4ade80;--upbg:#0f2a1a;--dn:#f87171;--dnbg:#2d1214;--sh:none}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--tx);font:400 13px/1.5 "Inter","PingFang SC","HarmonyOS Sans SC","Noto Sans SC","Noto Sans CJK SC",-apple-system,BlinkMacSystemFont,"Microsoft YaHei",sans-serif;-webkit-font-smoothing:antialiased;font-feature-settings:"cv11","ss01"}
+a{color:inherit;text-decoration:none}button{font:inherit}
+.num,.f,.d,.r,.sv,.nc,.heat,.pc,.tr3,.kv dd,.post footer{font-variant-numeric:tabular-nums}
+/* 顶栏 */
+.top{position:sticky;top:0;z-index:30;background:color-mix(in srgb,var(--card) 92%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--bd)}
+.ti2{max-width:1440px;margin:auto;height:56px;padding:0 24px;display:flex;align-items:center;gap:16px}
+.lg{display:flex;align-items:center;gap:8px;font-weight:600;font-size:16px;letter-spacing:-.01em}.lg i{width:24px;height:24px;border-radius:6px;background:var(--ac);display:grid;place-items:center;font-style:normal;color:#fff;font-size:12px}.lg span{font-weight:400;font-size:13px;color:var(--mu);margin-left:4px;padding-left:12px;border-left:1px solid var(--bd)}
+.mtabs{display:none}
+.tg{margin-left:auto;display:flex;border:1px solid var(--bd);border-radius:var(--r);padding:2px;background:var(--card)}.tg button{border:0;background:none;color:var(--mu);height:28px;padding:0 10px;border-radius:6px;cursor:pointer;font-size:12px}.tg button.on{background:var(--hov);color:var(--tx);font-weight:500}
+/* 12 列网格 */
+.wrap{max-width:1440px;margin:auto;padding:24px 24px 32px}
+.stats,.shell{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:16px}.shell{align-items:start}
+.stats{margin-bottom:24px}.st{grid-column:span 2}
+.left{grid-column:span 2}.content{grid-column:span 10;min-width:0}
+.cols{display:grid;grid-template-columns:repeat(10,minmax(0,1fr));gap:16px;align-items:start}.mid{grid-column:span 7;min-width:0}.right{grid-column:span 3;min-width:0}
+/* 统计条 */
+.st{background:var(--card);border:1px solid var(--bd);border-radius:var(--r);padding:12px 16px;min-width:0;box-shadow:var(--sh)}
+.sl{font-size:12px;color:var(--mu);line-height:16px}.sv{font-size:20px;font-weight:600;line-height:28px;letter-spacing:-.01em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.ss{font-size:12px;color:var(--mu);line-height:16px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.st:nth-child(3) .sv{color:var(--ac)}
+/* 区块标题：统一 24px 行高，底部 8px */
+.bh{display:flex;align-items:center;gap:8px;height:24px;margin:0 0 8px}.bh h2{font-size:14px;font-weight:600;margin:0;line-height:24px}.hint{font-size:12px;color:var(--mu)}.credit{margin-left:auto;font-size:12px;font-weight:500;color:var(--ac)}.credit:hover{text-decoration:underline}
+.blk{margin-bottom:24px}
+/* 左栏 */
+.left{position:sticky;top:80px;display:flex;flex-direction:column;gap:16px}.left>.bh{margin-bottom:-8px}
+.lcard{background:var(--card);border:1px solid var(--bd);border-radius:var(--r);padding:8px;box-shadow:var(--sh)}
+.nav{display:flex;flex-direction:column;gap:2px}.nv{display:grid;grid-template-columns:24px minmax(0,1fr) auto;align-items:center;gap:8px;height:36px;border:0;background:none;color:var(--tx2);padding:0 8px;border-radius:6px;cursor:pointer;text-align:left;font-size:13px;font-weight:500}
+.nv:hover{background:var(--hov)}.nv.on{background:var(--acbg);color:var(--actx)}.ni{width:24px;height:24px;border-radius:6px;display:grid;place-items:center;background:var(--bd2);color:var(--mu);font-size:12px}.nv.on .ni{background:var(--ac);color:#fff}.nc{font-size:12px;color:var(--mu)}
+.kv{margin:0}.kv div{display:flex;justify-content:space-between;align-items:center;height:32px;padding:0 8px;border-bottom:1px solid var(--bd2);font-size:13px}.kv div:last-child{border-bottom:0}.kv dt{color:var(--mu)}.kv dd{margin:0;font-weight:500}
+.mini{padding:8px;border-top:1px solid var(--bd2)}.mt{font-size:12px;color:var(--mu);line-height:16px;margin-bottom:4px}.mv{font-weight:500;display:flex;align-items:center;justify-content:space-between;gap:8px}.mv2{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;font-size:13px;font-weight:500}.mv2:hover{color:var(--ac)}.mm{font-size:12px;color:var(--mu)}
+.mini .sp{height:24px;margin-top:8px}
+.tl{list-style:none;margin:0;padding:0}.tl li a{display:grid;grid-template-columns:16px minmax(0,1fr) auto;gap:8px;align-items:center;height:28px;padding:0 4px;border-radius:4px;font-size:13px}.tl li a:hover{background:var(--hov)}.tl .k{color:var(--mu2);font-size:12px;text-align:right}.tl .n{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.lnote{font-size:12px;color:var(--mu);padding:12px}.lnote b{display:block;color:var(--tx2);font-weight:500;margin-bottom:4px}.lnote p{margin:0 0 4px}.lnote a{color:var(--ac)}
+/* 涨跌徽章：唯一使用红绿的地方 */
+.pc{display:inline-flex;align-items:center;gap:2px;height:20px;font-size:12px;font-weight:500;padding:0 6px;border-radius:4px;white-space:nowrap}.pc.up{color:var(--up);background:var(--upbg)}.pc.dn{color:var(--dn);background:var(--dnbg)}
+.sp{display:block;width:100%;fill:none;stroke-width:1.5;stroke-linejoin:round;stroke-linecap:round}.sp.up,.tile.up .sp{stroke:var(--up)}.sp.dn,.tile.dn .sp{stroke:var(--dn)}
+/* 趋势 */
+.pane{display:none}.pane.on{display:block}
+.tiles{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
+.tile{background:var(--card);border:1px solid var(--bd);border-radius:var(--r);padding:8px 12px;height:88px;display:grid;grid-template-rows:20px 1fr 16px;gap:4px;box-shadow:var(--sh);min-width:0}
+.tile:hover{border-color:var(--mu2)}.tr1{display:grid;grid-template-columns:16px minmax(0,1fr) auto;gap:8px;align-items:center}.tk{font-size:12px;color:var(--mu2);text-align:right}.tn{font-size:13px;font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tile .sp{height:100%;opacity:.9}.tr3{display:flex;justify-content:space-between;font-size:12px;line-height:16px;color:var(--mu)}.tr3 b{color:var(--tx2);font-weight:500}
+/* 热帖 */
+.feed{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.post{background:var(--card);border:1px solid var(--bd);border-radius:var(--r);padding:12px 16px 8px;display:flex;flex-direction:column;min-width:0;box-shadow:var(--sh)}.post:hover{border-color:var(--mu2)}
+.post header{display:grid;grid-template-columns:32px minmax(0,1fr) auto;gap:8px;align-items:center;height:32px}
+.av{--h:220;width:32px;height:32px;border-radius:50%;display:inline-grid;place-items:center;flex:none;font-weight:600;font-size:13px;color:hsl(var(--h) 30% 32%);background:hsl(var(--h) 30% 92%)}
+html[data-theme=dark] .av{color:hsl(var(--h) 35% 80%);background:hsl(var(--h) 15% 22%)}
+.av.s{width:24px;height:24px;font-size:11px}.av.xs{width:20px;height:20px;font-size:10px;margin-left:-6px;border:2px solid var(--card)}.av.xs:first-child{margin-left:0}
+.who{min-width:0;line-height:16px}.nm{display:flex;align-items:center;gap:6px;font-size:13px;font-weight:600;min-width:0}.nm a{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.nm a:hover{color:var(--ac)}.hd{font-size:12px;color:var(--mu);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.heat{font-size:12px;font-weight:500;color:var(--mu);height:20px;line-height:20px;padding:0 6px;border:1px solid var(--bd);border-radius:4px}
+.pt{flex:1;margin:8px 0;font-size:13px;line-height:1.6;color:var(--tx2);white-space:pre-wrap;word-break:break-word}.xp .xf{display:none}.xp.open .xs{display:none}.xp.open .xf{display:inline}
+.post footer{display:flex;align-items:center;gap:10px;height:32px;font-size:12px;color:var(--mu);border-top:1px solid var(--bd2);white-space:nowrap;overflow:hidden}.sp1{flex:1}
+.cp,.ex{height:24px;border:1px solid var(--bd);background:var(--card);color:var(--tx2);font-size:12px;font-weight:500;padding:0 8px;border-radius:6px;cursor:pointer}.cp:hover,.ex:hover{border-color:var(--ac);color:var(--ac)}.cp.ok{border-color:var(--up);color:var(--up)}
+.op{width:24px;height:24px;display:grid;place-items:center;border-radius:6px;color:var(--mu)}.op:hover{background:var(--hov);color:var(--ac)}
+.zh{font-size:11px;font-weight:500;color:var(--mu);border:1px solid var(--bd);border-radius:4px;padding:0 4px;line-height:16px;flex:none}
+/* 右栏 */
+.right{display:flex;flex-direction:column;gap:24px;position:sticky;top:80px}
+.rcard,.acard{background:var(--card);border:1px solid var(--bd);border-radius:var(--r);box-shadow:var(--sh);min-width:0;overflow:hidden}
+.rhd{display:flex;align-items:center;gap:8px;height:24px;margin-bottom:8px}
+.rcard .tw{max-height:560px;overflow:auto}
+/* 表格 */
+table{width:100%;border-collapse:separate;border-spacing:0;font-size:13px}
+th{height:32px;font-size:12px;font-weight:500;color:var(--mu);text-align:left;padding:0 12px;background:var(--zebra);border-bottom:1px solid var(--bd);white-space:nowrap}
+thead th{position:sticky;top:0;z-index:2}
+td{height:36px;padding:0 12px;border-bottom:1px solid var(--bd2);vertical-align:middle}tbody tr:last-child td{border-bottom:0}
+tbody tr:not(.g):hover td{background:var(--hov)}
+th.num,td.num,th.f,td.f,th.d,td.d{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}th.r,td.r{width:40px;text-align:right;color:var(--mu2);padding-right:4px;font-variant-numeric:tabular-nums}
+.lbt{table-layout:fixed}.lbt th.r,.lbt td.r{width:36px}.lbt th.f,.lbt td.f{width:72px;font-weight:500}.lbt th.d,.lbt td.d{width:64px;color:var(--mu);font-size:12px;padding-left:0}
+.lbt td.n a{display:flex;align-items:center;gap:8px;min-width:0}.lbt .nt{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:500}.lbt td.n a:hover .nt{color:var(--ac)}
+tr.g th{position:sticky;top:32px;z-index:1;height:28px;background:var(--card);color:var(--tx2);font-size:12px;font-weight:600;border-bottom:1px solid var(--bd2)}tr.g th span{color:var(--mu);font-weight:400;margin-left:4px}
+.news{list-style:none;margin:0;padding:0 12px}.news li{border-top:1px solid var(--bd2)}.news li:first-child{border-top:0}.news a{display:block;padding:8px 0}.news .t{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;font-weight:500;font-size:13px;line-height:20px}.news a:hover .t{color:var(--ac)}.news .m{display:block;font-size:12px;color:var(--mu);line-height:16px;margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+/* 卡片内标题：所有卡片头 48px */
+.rcard>.bh,.acard>.bh{height:48px;margin:0;padding:0 12px;border-bottom:1px solid var(--bd)}
+/* AIHOT */
+.ahsec{margin-top:8px;padding-top:24px;border-top:1px solid var(--bd)}
+.ahh{display:flex;align-items:center;gap:12px;height:28px;margin-bottom:16px}.ahh .k{font-size:12px;font-weight:600;letter-spacing:.08em;color:var(--ac)}.ahh h2{margin:0;font-size:20px;font-weight:600;letter-spacing:-.01em}.ahh a{margin-left:auto;font-size:12px;font-weight:500;color:var(--ac)}
+.agrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.acard.wide{grid-column:1/-1}
+.ht{table-layout:fixed}.ht td.ti a{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:500}.ht td.ti a:hover{color:var(--ac)}.ht th:nth-child(3),.ht td.sv{width:104px}.ht th:nth-child(4),.ht td.hb{width:160px}.ht th.num,.ht td.num{width:72px}
+.rk{display:inline-grid;place-items:center;width:20px;height:20px;border-radius:4px;color:var(--mu);font-weight:500;font-size:12px}.rk.top{background:var(--acbg);color:var(--actx);font-weight:600}
+.bar{display:block;height:4px;border-radius:2px;background:var(--bd2);overflow:hidden}.bar i{display:block;height:100%;border-radius:2px;background:var(--ac);opacity:.75}
+.lead{display:block;margin:12px;padding:12px 16px;border-radius:6px;background:var(--zebra);border:1px solid var(--bd2)}.lead b{display:block;font-size:16px;font-weight:600;line-height:24px}.lead span{display:block;font-size:13px;color:var(--tx2);margin-top:4px}.lead:hover b{color:var(--ac)}
+.dg{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:16px;padding:0 12px 12px}.dl{font-size:12px;font-weight:600;color:var(--tx2);height:28px;line-height:28px;border-bottom:1px solid var(--bd)}.ds ul{list-style:none;margin:0;padding:0}.ds li a{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;font-size:13px;line-height:20px;padding:6px 0;border-bottom:1px solid var(--bd2);color:var(--tx2)}.ds li a:hover{color:var(--ac)}
+.exg{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:var(--bd2)}.exc{display:grid;grid-template-rows:auto 1fr auto;gap:4px;padding:12px 16px;background:var(--card);min-height:132px}.exc:hover{background:var(--hov)}
+.et{display:flex;gap:8px;align-items:flex-start}.et span{flex:1;font-weight:600;font-size:13px;line-height:20px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}.sc{font-size:12px;font-weight:500;color:var(--actx);background:var(--acbg);border-radius:4px;padding:0 6px;line-height:20px;font-variant-numeric:tabular-nums}
+.exc p{margin:0;font-size:12px;color:var(--mu);line-height:18px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}.em{font-size:12px;color:var(--mu2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.mtb .mn{font-weight:500}.mtb td{white-space:nowrap}.scc{width:180px}td.scc{text-align:right}.scc .bar{display:inline-block;width:96px;vertical-align:middle;margin-right:12px}.scc b{font-weight:600;font-variant-numeric:tabular-nums;display:inline-block;width:36px;text-align:right}
+.chips{display:flex;flex-wrap:wrap;gap:8px;padding:12px}.chips a{height:28px;line-height:26px;font-size:12px;padding:0 12px;border-radius:14px;color:var(--tx2);border:1px solid var(--bd)}.chips a:hover{border-color:var(--ac);color:var(--ac)}
+footer{max-width:1440px;margin:24px auto 0;padding-top:16px;border-top:1px solid var(--bd);font-size:12px;color:var(--mu)}footer a{color:var(--ac)}
+/* 响应式 */
+@media(max-width:1600px){.post footer .rp{display:none}}@media(max-width:1360px){.lbt th.f,.lbt td.f{width:64px}.lbt th.d,.lbt td.d{width:52px}.lbt th.r,.lbt td.r{width:28px}td,th{padding:0 8px}.tiles{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:1180px){.left{display:none}.content{grid-column:1/-1}.st{grid-column:span 4}.mtabs{display:flex;gap:4px}.mt1{height:32px;border:0;background:none;color:var(--tx2);padding:0 12px;border-radius:6px;cursor:pointer;font-weight:500;font-size:13px}.mt1.on{background:var(--acbg);color:var(--actx)}}
+@media(max-width:900px){.cols{grid-template-columns:1fr}.mid,.right{grid-column:1/-1}.right{position:static}.agrid{grid-template-columns:1fr}.dg{grid-template-columns:repeat(2,minmax(0,1fr))}.exg{grid-template-columns:1fr 1fr}}
+@media(max-width:640px){.ti2{flex-wrap:wrap;height:auto;padding:8px 16px;gap:8px}.lg span{display:none}.mtabs{order:3;width:100%}.mt1{flex:1}.wrap{padding:16px 12px 24px}
+.stats{gap:8px;margin-bottom:16px}.st{grid-column:span 6;padding:8px 12px}.sv{font-size:16px;line-height:24px}.tiles{grid-template-columns:repeat(2,minmax(0,1fr))}.feed{grid-template-columns:1fr}.exg{grid-template-columns:1fr}
+.ht th:nth-child(3),.ht td.sv,.ht th:nth-child(4),.ht td.hb,.ht th:nth-child(6),.ht td:nth-child(6){display:none}.mtb th:nth-child(3),.mtb td:nth-child(3),.mtb th:nth-child(4),.mtb td:nth-child(4),.mtb th:nth-child(5),.mtb td:nth-child(5){display:none}.scc{width:auto}.scc .bar{display:none}.ahh{height:auto;flex-wrap:wrap}.ahh a{margin-left:0}.dg{grid-template-columns:1fr}}
+/* ===== v5 color layer ===== */
+:root{--ac:#7c3aed;--acbg:#f3e8ff;--actx:#6d28d9;--g1:#7c3aed;--g2:#db2777;--g3:#f97316;--bg:#f6f5fb;--glow:rgba(124,58,237,.18)}
+html[data-theme=dark]{--bg:#110d2e;--card:#1a1640;--bd:#2a2652;--bd2:#1e1b40;--zebra:#171536;--hov:#1f1c45;--mu:#a5a3c9;--mu2:#77749e;--ac:#c084fc;--acbg:#2e1a5c;--actx:#e9d5ff;--up:#4ade80;--dn:#fb7185;--glow:rgba(192,132,252,.28)}
+html[data-theme=dark],html[data-theme=dark] body{background-attachment:fixed;background:radial-gradient(1200px 600px at 10% -10%,#2a1660 0,transparent 60%),radial-gradient(900px 500px at 100% 0,#3b0d4a 0,transparent 55%),var(--bg)}
+.lg i{background:linear-gradient(135deg,var(--g1),var(--g2))!important;color:#fff!important}
+.stats{background:linear-gradient(110deg,#6d28d9 0%,#a21caf 50%,#db2777 85%,#f97316 120%);border-radius:12px;padding:16px;box-shadow:0 8px 24px -8px rgba(162,28,175,.45)}
+html[data-theme=dark] .stats{background:linear-gradient(110deg,#4c1d95 0%,#86198f 55%,#be185d 100%);box-shadow:0 0 0 1px rgba(232,121,249,.25),0 10px 30px -10px rgba(217,70,239,.5)}
+.stats .st{background:rgba(255,255,255,.12)!important;border:1px solid rgba(255,255,255,.22)!important;box-shadow:none!important;backdrop-filter:blur(4px)}
+.stats .st *{color:#fff!important}
+.stats .st .sl,.stats .st .ss{color:rgba(255,255,255,.82)!important}
+/* heat tiles */
+.tile{position:relative;overflow:hidden;transition:transform .15s,box-shadow .15s}
+.tile.up{background:linear-gradient(135deg,rgba(249,115,22,calc(var(--a)*.10 + .03)),rgba(239,68,68,calc(var(--a)*.28 + .04))),var(--card);border-color:rgba(239,68,68,calc(var(--a)*.45 + .12))}
+.tile.dn{background:linear-gradient(135deg,rgba(56,189,248,.05),rgba(59,130,246,calc(var(--a)*.22 + .05))),var(--card);border-color:rgba(59,130,246,.25)}
+.tile.up .sp{stroke:#ea580c}.tile.dn .sp{stroke:#2563eb}
+html[data-theme=dark] .tile.up .sp{stroke:#fb923c}html[data-theme=dark] .tile.dn .sp{stroke:#60a5fa}
+.tile:hover{transform:translateY(-1px);box-shadow:0 6px 18px -6px rgba(239,68,68,.35)}
+/* domain chips */
+.nv[data-t=ai] .ni,.mtabs [data-t=ai]{--dc:#7c3aed}
+.nv[data-t=money] .ni,.mtabs [data-t=money]{--dc:#f59e0b}
+.nv[data-t=growth] .ni,.mtabs [data-t=growth]{--dc:#14b8a6}
+.nv[data-t=ai]{--dc:#7c3aed;--dc2:#c026d3}.nv[data-t=money]{--dc:#f59e0b;--dc2:#ea580c}.nv[data-t=growth]{--dc:#14b8a6;--dc2:#22c55e}
+.nv .ni{background:linear-gradient(135deg,var(--dc),var(--dc2))!important;color:#fff!important}
+.nv.on{background:color-mix(in srgb,var(--dc) 12%,var(--card))!important;color:var(--tx)!important;box-shadow:inset 3px 0 0 var(--dc)}
+.nv.on .nc{color:var(--dc)}
+/* gradient avatars */
+.av{background:linear-gradient(135deg,hsl(var(--h) 85% 62%),hsl(calc(var(--h) + 50) 80% 52%))!important;color:#fff!important;text-shadow:0 1px 1px rgba(0,0,0,.2)}
+/* cards accents + glow */
+.lcard,.rcard,.post,.acard{transition:box-shadow .15s,border-color .15s}
+.post{border-top:2px solid color-mix(in srgb,var(--ac) 45%,transparent)!important}
+.post:hover,.rcard:hover,.acard:hover{border-color:color-mix(in srgb,var(--ac) 50%,var(--bd))!important;box-shadow:0 0 0 3px var(--glow)}
+.bh h2{position:relative;padding-left:10px}
+.bh h2::before{content:"";position:absolute;left:0;top:5px;bottom:5px;width:3px;border-radius:2px;background:linear-gradient(var(--g1),var(--g2))}
+a{color:var(--actx)}
+/* ===== v6 layout ===== */
+.mtabs{display:flex!important;gap:4px}
+.mt1{height:32px;border:0;background:none;color:var(--tx2);padding:0 12px;border-radius:6px;cursor:pointer;font-weight:500;font-size:13px}
+.mt1.on{background:color-mix(in srgb,var(--dc) 14%,var(--card));color:var(--tx);box-shadow:inset 0 -2px 0 var(--dc)}
+.ti2{display:flex;align-items:center;gap:16px}
+.ti2 .sp1{flex:1}
+.ahl{font-size:13px;font-weight:500;color:var(--actx);text-decoration:none;padding:0 8px;height:32px;display:inline-flex;align-items:center;border-radius:6px}
+.ahl:hover{background:var(--acbg)}
+.stats.sm{padding:8px 16px;grid-template-columns:repeat(12,minmax(0,1fr))}
+.stats.sm .st{grid-column:span 2;padding:8px 12px;height:auto}
+.stats.sm .sv{font-size:20px;line-height:1.3}
+.g6{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:16px;align-items:start}
+.c-l{grid-column:span 3;min-width:0}.c-m{grid-column:span 6;min-width:0}.c-r{grid-column:span 3;min-width:0;display:flex;flex-direction:column;gap:24px}
+.c-l,.c-r{position:sticky;top:80px;max-height:calc(100vh - 96px);overflow:auto;scrollbar-width:thin}
+.feed1{display:flex;flex-direction:column;gap:8px}
+.post .pt{white-space:pre-wrap;word-break:break-word}
+.post .tm{color:var(--mu);font-variant-numeric:tabular-nums}
+.lbt td.n a{display:flex;align-items:center;gap:8px;min-width:0;color:var(--tx);text-decoration:none}
+.lbt td.n a:hover .nt{color:var(--actx);text-decoration:underline}
+.rlist{list-style:none;margin:0;padding:0}
+.rlist li{border-top:1px solid var(--bd2)}
+.rlist li:first-child{border-top:0}
+.rlist a{display:block;padding:8px 12px;color:var(--tx);text-decoration:none}
+.rlist a:hover{background:var(--hov)}
+.gh .rn{font-weight:600;font-size:13px;color:var(--actx);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.gh .rd{font-size:12px;color:var(--tx2);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;margin:2px 0 4px}
+.gh .rm{display:flex;gap:12px;font-size:12px;color:var(--mu);font-variant-numeric:tabular-nums}
+.gh .rm .td{margin-left:auto;color:#ea580c;font-weight:600}
+html[data-theme=dark] .gh .rm .td{color:#fb923c}
+.gh .lg2{display:inline-flex;align-items:center;gap:4px}.gh .lg2 i{width:8px;height:8px;border-radius:50%;background:hsl(var(--h) 70% 55%)}
+.nws .t{font-size:13px;font-weight:500;line-height:1.5;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.nws .m{font-size:12px;color:var(--mu);margin-top:2px;display:flex;gap:8px}
+.src{display:inline-block;padding:0 6px;border-radius:4px;font-size:12px;font-weight:500;line-height:18px}
+.src.x{background:#e0f2fe;color:#0369a1}.src.d{background:#f3e8ff;color:#7e22ce}.src.s{background:#fce7f3;color:#be185d}
+html[data-theme=dark] .src.x{background:#0c2a44;color:#7dd3fc}html[data-theme=dark] .src.d{background:#2e1a5c;color:#d8b4fe}html[data-theme=dark] .src.s{background:#4a0d2e;color:#f9a8d4}
+.tl2{list-style:none;margin:0;padding:4px 0}
+.tl2 a{display:grid;grid-template-columns:24px 1fr auto;align-items:center;height:32px;padding:0 12px;color:var(--tx);text-decoration:none;gap:8px}
+.tl2 a:hover{background:var(--hov)}
+.tl2 .k{color:var(--mu);font-variant-numeric:tabular-nums;font-size:12px}
+.tl2 .n{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+/* person page */
+.ph{display:grid;grid-template-columns:80px 1fr auto;gap:16px;align-items:center;padding:24px;border-radius:12px;background:linear-gradient(110deg,#6d28d9 0%,#a21caf 55%,#db2777 100%);color:#fff;box-shadow:0 8px 24px -8px rgba(162,28,175,.45)}
+.ph .av.xl{width:80px;height:80px;border-radius:50%;font-size:28px;font-weight:600;display:flex;align-items:center;justify-content:center;border:3px solid rgba(255,255,255,.6)}
+.ph h1{font-size:28px;line-height:1.3;margin:0;font-weight:600}
+.ph .hd{opacity:.85;font-size:14px}
+.ph .bio{margin:8px 0 0;font-size:14px;opacity:.95;white-space:pre-wrap;max-width:720px}
+.ph .fs{text-align:right}
+.ph .fs b{display:block;font-size:28px;font-weight:600;font-variant-numeric:tabular-nums;line-height:1.3}
+.ph .fs span{font-size:12px;opacity:.85}
+.ph .xb{display:inline-flex;margin-top:8px;height:32px;align-items:center;padding:0 12px;border-radius:6px;background:rgba(255,255,255,.18);color:#fff;text-decoration:none;font-weight:500;border:1px solid rgba(255,255,255,.35)}
+.ptool{display:flex;align-items:center;gap:16px;margin:24px 0 8px}
+.ptool input{flex:1;height:40px;border:1px solid var(--bd);border-radius:8px;background:var(--card);color:var(--tx);padding:0 12px;font:inherit;font-size:14px;outline:none}
+.ptool input:focus{border-color:var(--ac);box-shadow:0 0 0 3px var(--glow)}
+.ptool .cnt{color:var(--mu);font-variant-numeric:tabular-nums;white-space:nowrap}
+.pwrap{max-width:880px;margin:0 auto}
+.back{font-size:13px;color:var(--actx);text-decoration:none;display:inline-flex;height:32px;align-items:center;margin-bottom:8px}
+mark{background:#fde68a;color:inherit;border-radius:2px}
+html[data-theme=dark] mark{background:#854d0e}
+@media(max-width:1180px){.c-l{grid-column:span 4}.c-m{grid-column:span 8}.c-r{grid-column:1/-1;position:static;max-height:none;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}}
+@media(max-width:900px){.g6{grid-template-columns:1fr}.c-l,.c-m,.c-r{grid-column:1/-1;position:static;max-height:none}.c-m{order:1}.c-r{order:2;display:flex}.c-l{order:3}.stats.sm .st{grid-column:span 4}}
+@media(max-width:640px){.ti2{flex-wrap:wrap;gap:8px}.mtabs{order:3;width:100%}.mt1{flex:1}.ahl{margin-left:auto}.ti2 .sp1{display:none}.stats.sm{display:none}.ph{grid-template-columns:56px 1fr;padding:16px}.ph .av.xl{width:56px;height:56px;font-size:20px}.ph h1{font-size:20px}.ph .fs{grid-column:1/-1;text-align:left}}
+.post footer{margin:0!important;width:auto!important;max-width:none!important;padding:0!important;text-align:left!important;justify-content:flex-start}
+.c-l .tw{max-height:none;overflow:visible}
+.ph .hd,.ph .hd *{color:rgba(255,255,255,.85)!important}
+/* ===== v6b card consistency ===== */
+.post.c6{padding:16px;gap:0;border:1px solid var(--bd)!important;border-top:3px solid color-mix(in srgb,var(--ac) 55%,transparent)!important;border-radius:10px;background:var(--card)}
+.post.c6 header{display:grid;grid-template-columns:32px minmax(0,1fr) auto;gap:12px;align-items:center;height:40px}
+.post.c6 .who{min-width:0}
+.post.c6 .nm{font-weight:600;font-size:14px;line-height:20px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.post.c6 .nm a{color:var(--tx);text-decoration:none}.post.c6 .nm a:hover{color:var(--actx)}
+.post.c6 .hd{font-size:12px;line-height:18px;color:var(--mu)}
+.post.c6 .tm{text-align:right;font-size:12px;line-height:18px;color:var(--tx2);font-variant-numeric:tabular-nums;white-space:nowrap}
+.post.c6 .tm small{display:block;color:var(--mu);font-size:12px}
+.post.c6 .pt{margin:12px 0;font-size:14px;line-height:1.5;color:var(--tx)}
+.post.c6 footer{display:flex!important;align-items:center;justify-content:space-between!important;height:40px;border-top:1px solid var(--bd2);gap:8px}
+.post.c6 .act{display:flex;gap:8px;align-items:center}
+.post.c6 .op{font-size:12px;color:var(--mu);text-decoration:none;height:28px;display:inline-flex;align-items:center;padding:0 8px;border:1px solid var(--bd);border-radius:6px}
+.post.c6 .op:hover{color:var(--actx);border-color:var(--ac)}
+.post.c6 .met{display:grid;grid-template-columns:repeat(4,64px);gap:0}
+.post.c6 .mc{text-align:right;font-variant-numeric:tabular-nums;color:var(--mu);font-size:12px}
+.post.c6 .mc i{font-style:normal;margin-right:4px;opacity:.75}
+.feed1{gap:12px}
+.ph{grid-template-columns:80px minmax(0,1fr) auto;padding:24px}
+.ph .pi{min-width:0}.ph .bio.dim{opacity:.7}
+.ph .xb{margin:0;align-self:start}
+.pstat{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:12px}
+.psb{background:var(--card);border:1px solid var(--bd);border-radius:10px;padding:12px 16px;border-top:3px solid var(--dcx,#a21caf)}
+.psb:nth-child(1){--dcx:#7c3aed}.psb:nth-child(2){--dcx:#db2777}.psb:nth-child(3){--dcx:#f97316}.psb:nth-child(4){--dcx:#14b8a6}
+.psb .sl{font-size:12px;color:var(--mu)}.psb .sv{font-size:20px;font-weight:600;line-height:1.4;font-variant-numeric:tabular-nums;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.psb .ss{font-size:12px;color:var(--mu)}
+.tgl{display:inline-flex;align-items:center;gap:6px;font-size:13px;color:var(--tx2);white-space:nowrap;cursor:pointer}
+.empty{padding:24px;color:var(--mu)}
+@media(max-width:640px){.pstat{grid-template-columns:repeat(2,minmax(0,1fr))}.ph{grid-template-columns:56px minmax(0,1fr)}.ph .xb{grid-column:1/-1;justify-self:start}.ptool{flex-wrap:wrap;gap:8px}.ptool input{flex-basis:100%}
+.post.c6 .met{grid-template-columns:repeat(4,auto);gap:10px}.post.c6 footer{height:auto;min-height:40px;flex-wrap:wrap;padding:6px 0!important}.post.c6 .rp,.post.c6 .mc:nth-child(3){display:none}}
+.post.c6 .met{grid-template-columns:64px 64px 72px 84px}@media(max-width:640px){.post.c6 .met{grid-template-columns:repeat(4,auto);gap:10px}}
+</style></head><body><header class="top"><div class="ti2"><div class="lg"><i>⚡</i>XHOT<span>X 热点雷达</span></div><span class="sp1"></span><a class="ahl" href="https://aihot.news" target="_blank">来自 AIHOT ↗</a><div class="tg"><button data-set-theme="light" title="浅色">☀</button><button data-set-theme="dark" title="深色">☾</button><button data-set-theme="auto">自动</button></div></div></header>
+<div class="wrap"><div class="pwrap"><a class="back" href="../index.html">← 返回首页</a>
+<section class="ph"><span class="av xl" style="--h:240">Z</span><div class="pi"><h1>Z.ai</h1><div class="hd">@Zai_org</div><p class="bio">The AI Lab behind GLM models, dedicated to inspiring the development of AGI to benefit humanity.
+https://t.co/gOw7WpwkJt
+https://t.co/ot9sGVXU8x</p></div><a class="xb" href="https://x.com/Zai_org" target="_blank">在 X 查看 ↗</a></section>
+<div class="pstat"><div class="psb"><div class="sl">粉丝</div><div class="sv">16.4万</div><div class="ss">164,496</div></div><div class="psb"><div class="sl">较上次</div><div class="sv">—</div><div class="ss">粉丝变化</div></div><div class="psb"><div class="sl">已存推文</div><div class="sv">22</div><div class="ss">最多 200 条</div></div><div class="psb"><div class="sl">最新发帖</div><div class="sv">10-13 00:10</div><div class="ss">16 小时前</div></div></div>
+<div class="ptool"><input id="q" type="search" placeholder="搜索 Z.ai 的推文关键词…" autocomplete="off"><span class="cnt" id="cnt">22 条</span></div>
+<div class="bh"><h2>推文时间线</h2><span class="hint">最新在前 · 默认只显示中文/英文</span></div><div class="feed1"><article class="post c6" data-s="introducing glm-legal
+
+built on glm-5.3-flash, glm-legal matches frontier models on mainstream legal benchmarks.
+
+designed for real legal workflows: contract review, evidence analysis, compliance, and more.
+
+tech blog: https://t.co/xozfqknyqd
+apply for api access: https://t.co/dkuodrikkz
+try autoclaw: https://t.co/ageg5hqttb"><header><span class="av" style="--h:240">Z</span><div class="who"><div class="nm"><span>Z.ai</span></div><div class="hd">@Zai_org</div></div><time class="tm" title="10-13 00:10 北京时间">10-13 00:10<small>16 小时前</small></time></header><div class="pt xp"><span class="xs">Introducing GLM-Legal
+
+Built on GLM-5.3-Flash, GLM-Legal matches frontier models on mainstream legal benchmarks.
+
+Designed for real legal workflows: contract review, evidence analysis, compliance, and more.
+
+Tech Blog: https://t.co/xOzFqKNyqD
+Apply for API Access: https://t.co/dK…</span><span class="xf">Introducing GLM-Legal
+
+Built on GLM-5.3-Flash, GLM-Legal matches frontier models on mainstream legal benchmarks.
+
+Designed for real legal workflows: contract review, evidence analysis, compliance, and more.
+
+Tech Blog: https://t.co/xOzFqKNyqD
+Apply for API Access: https://t.co/dKuoDRIKKz
+Try AutoClaw: https://t.co/aGEG5HqTTb</span></div>
+<footer><div class="act"><button class="ex" type="button">展开</button><button class="cp" type="button" data-copy="Introducing GLM-Legal
+
+Built on GLM-5.3-Flash, GLM-Legal matches frontier models on mainstream legal benchmarks.
+
+Designed for real legal workflows: contract review, evidence analysis, compliance, and more.
+
+Tech Blog: https://t.co/xOzFqKNyqD
+Apply for API Access: https://t.co/dKuoDRIKKz
+Try AutoClaw: https://t.co/aGEG5HqTTb
+— Z.ai (@Zai_org)
+https://x.com/Zai_org/status/2109678174468534511">复制原文</button><a class="op" href="https://x.com/Zai_org/status/2109678174468534511" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>5,327</span><span class="mc" title="转发"><i>⇄</i>422</span><span class="mc" title="评论"><i>💬</i>229</span><span class="mc" title="浏览"><i>👁</i>33.8万</span></div></footer></article><article class="post c6" data-s="glm-5.3 is now available on amazon bedrock.
+
+bring powerful coding and agentic capabilities to your enterprise.
+
+get started: https://t.co/dastgoyqsa https://t.co/bb1qlrbvhs"><header><span class="av" style="--h:240">Z</span><div class="who"><div class="nm"><span>Z.ai</span></div><div class="hd">@Zai_org</div></div><time class="tm" title="10-06 08:49 北京时间">10-06 08:49<small>7 天前</small></time></header><div class="pt">GLM-5.3 is now available on Amazon Bedrock.
+
+Bring powerful coding and agentic capabilities to your enterprise.
+
+Get started: https://t.co/daStGOYqsA https://t.co/BB1qLRbvhS</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="GLM-5.3 is now available on Amazon Bedrock.
+
+Bring powerful coding and agentic capabilities to your enterprise.
+
+Get started: https://t.co/daStGOYqsA https://t.co/BB1qLRbvhS
+— Z.ai (@Zai_org)
+https://x.com/Zai_org/status/2107272032073437185">复制原文</button><a class="op" href="https://x.com/Zai_org/status/2107272032073437185" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>838</span><span class="mc" title="转发"><i>⇄</i>52</span><span class="mc" title="评论"><i>💬</i>76</span><span class="mc" title="浏览"><i>👁</i>9.7万</span></div></footer></article><article class="post c6" data-s="we’re sharing how glm-5.3 helped build and optimize the inference infrastructure serving glm-5.3-flash.
+
+the system went from its first successful run to production readiness in less than two weeks, with end-to-end throughput tripling relative to the initial baseline.
+
+the key was dense feedback: local correctness tests, execution traces, microbenchmarks, and end-to-end measurements that enabled targeted hypothesis testing rather than reliance on aggregate performance metrics alone.
+
+https://t.co/yuf6opjd7c"><header><span class="av" style="--h:240">Z</span><div class="who"><div class="nm"><span>Z.ai</span></div><div class="hd">@Zai_org</div></div><time class="tm" title="09-17 15:05 北京时间">09-17 15:05<small>26 天前</small></time></header><div class="pt xp"><span class="xs">We’re sharing how GLM-5.3 helped build and optimize the inference infrastructure serving GLM-5.3-Flash.
+
+The system went from its first successful run to production readiness in less than two weeks, with end-to-end throughput tripling relative to the initial baseline.
+
+The key wa…</span><span class="xf">We’re sharing how GLM-5.3 helped build and optimize the inference infrastructure serving GLM-5.3-Flash.
+
+The system went from its first successful run to production readiness in less than two weeks, with end-to-end throughput tripling relative to the initial baseline.
+
+The key was dense feedback: local correctness tests, execution traces, microbenchmarks, and end-to-end measurements that enabled targeted hypothesis testing rather than reliance on aggregate performance metrics alone.
+
+https://t.co/yUf6OpJD7c</span></div>
+<footer><div class="act"><button class="ex" type="button">展开</button><button class="cp" type="button" data-copy="We’re sharing how GLM-5.3 helped build and optimize the inference infrastructure serving GLM-5.3-Flash.
+
+The system went from its first successful run to production readiness in less than two weeks, with end-to-end throughput tripling relative to the initial baseline.
+
+The key was dense feedback: local correctness tests, execution traces, microbenchmarks, and end-to-end measurements that enabled targeted hypothesis testing rather than reliance on aggregate performance metrics alone.
+
+https://t.co/yUf6OpJD7c
+— Z.ai (@Zai_org)
+https://x.com/Zai_org/status/2100481236364079277">复制原文</button><a class="op" href="https://x.com/Zai_org/status/2100481236364079277" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>4,224</span><span class="mc" title="转发"><i>⇄</i>487</span><span class="mc" title="评论"><i>💬</i>239</span><span class="mc" title="浏览"><i>👁</i>113.2万</span></div></footer></article><article class="post c6" data-s="we’re still up."><header><span class="av" style="--h:240">Z</span><div class="who"><div class="nm"><span>Z.ai</span></div><div class="hd">@Zai_org</div></div><time class="tm" title="09-03 23:09 北京时间">09-03 23:09<small>39 天前</small></time></header><div class="pt">We’re still up.</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="We’re still up.
+— Z.ai (@Zai_org)
+https://x.com/Zai_org/status/2095529704841224490">复制原文</button><a class="op" href="https://x.com/Zai_org/status/2095529704841224490" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>1.1万</span><span class="mc" title="转发"><i>⇄</i>394</span><span class="mc" title="评论"><i>💬</i>473</span><span class="mc" title="浏览"><i>👁</i>58.4万</span></div></footer></article><article class="post c6" data-s="glm coding plan turns one year old today.
+
+to celebrate, we&#x27;re giving every current subscriber a reset card. use it to refill both your weekly and 5-hour quotas.
+
+thanks for using glm, helping shape it, and pushing it to its limits.
+
+- personal plan: https://t.co/tgzjzcwjo9
+- team plan: https://t.co/jixcgh9hur"><header><span class="av" style="--h:240">Z</span><div class="who"><div class="nm"><span>Z.ai</span></div><div class="hd">@Zai_org</div></div><time class="tm" title="09-01 20:49 北京时间">09-01 20:49<small>41 天前</small></time></header><div class="pt xp"><span class="xs">GLM Coding Plan turns one year old today.
+
+To celebrate, we&#x27;re giving every current subscriber a Reset Card. Use it to refill both your weekly and 5-hour quotas.
+
+Thanks for using GLM, helping shape it, and pushing it to its limits.
+
+- Personal plan: https://t.co/TGZjzCwjo9
+- Tea…</span><span class="xf">GLM Coding Plan turns one year old today.
+
+To celebrate, we&#x27;re giving every current subscriber a Reset Card. Use it to refill both your weekly and 5-hour quotas.
+
+Thanks for using GLM, helping shape it, and pushing it to its limits.
+
+- Personal plan: https://t.co/TGZjzCwjo9
+- Team plan: https://t.co/jiXCgh9HUR</span></div>
+<footer><div class="act"><button class="ex" type="button">展开</button><button class="cp" type="button" data-copy="GLM Coding Plan turns one year old today.
+
+To celebrate, we&#x27;re giving every current subscriber a Reset Card. Use it to refill both your weekly and 5-hour quotas.
+
+Thanks for using GLM, helping shape it, and pushing it to its limits.
+
+- Personal plan: https://t.co/TGZjzCwjo9
+- Team plan: https://t.co/jiXCgh9HUR
+— Z.ai (@Zai_org)
+https://x.com/Zai_org/status/2094769612730532172">复制原文</button><a class="op" href="https://x.com/Zai_org/status/2094769612730532172" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>2,161</span><span class="mc" title="转发"><i>⇄</i>105</span><span class="mc" title="评论"><i>💬</i>168</span><span class="mc" title="浏览"><i>👁</i>30.7万</span></div></footer></article><article class="post c6" data-s="glm-5.3 is now open-weight.
+
+our most capable model for agentic coding and cyber defense is now available to download, run, and customize.
+
+weights: https://t.co/v1ibwmxxg4
+tech blog: https://t.co/ekqko83jcv https://t.co/f8xljkskyf"><header><span class="av" style="--h:240">Z</span><div class="who"><div class="nm"><span>Z.ai</span></div><div class="hd">@Zai_org</div></div><time class="tm" title="08-28 23:04 北京时间">08-28 23:04<small>45 天前</small></time></header><div class="pt">GLM-5.3 is now open-weight.
+
+Our most capable model for agentic coding and cyber defense is now available to download, run, and customize.
+
+Weights: https://t.co/v1IbWMXxg4
+Tech blog: https://t.co/ekQkO83jCv https://t.co/f8XlJksKyf</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="GLM-5.3 is now open-weight.
+
+Our most capable model for agentic coding and cyber defense is now available to download, run, and customize.
+
+Weights: https://t.co/v1IbWMXxg4
+Tech blog: https://t.co/ekQkO83jCv https://t.co/f8XlJksKyf
+— Z.ai (@Zai_org)
+https://x.com/Zai_org/status/2093354097122455713">复制原文</button><a class="op" href="https://x.com/Zai_org/status/2093354097122455713" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>8,562</span><span class="mc" title="转发"><i>⇄</i>952</span><span class="mc" title="评论"><i>💬</i>275</span><span class="mc" title="浏览"><i>👁</i>148.5万</span></div></footer></article><article class="post c6" data-s="more good news: glm-5.3’s weights will be released tomorrow.
+
+https://t.co/v1ibwmxxg4"><header><span class="av" style="--h:240">Z</span><div class="who"><div class="nm"><span>Z.ai</span></div><div class="hd">@Zai_org</div></div><time class="tm" title="08-27 11:19 北京时间">08-27 11:19<small>47 天前</small></time></header><div class="pt">More good news: GLM-5.3’s weights will be released tomorrow.
+
+https://t.co/v1IbWMXxg4</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="More good news: GLM-5.3’s weights will be released tomorrow.
+
+https://t.co/v1IbWMXxg4
+— Z.ai (@Zai_org)
+https://x.com/Zai_org/status/2092814169263218860">复制原文</button><a class="op" href="https://x.com/Zai_org/status/2092814169263218860" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>4,830</span><span class="mc" title="转发"><i>⇄</i>403</span><span class="mc" title="评论"><i>💬</i>148</span><span class="mc" title="浏览"><i>👁</i>56.2万</span></div></footer></article><article class="post c6" data-s="architectural enhancements, combined with an optimized pre-training corpus, enable glm-5.3-flash to deliver greater intelligence with less compute. https://t.co/l0b2blpklt"><header><span class="av" style="--h:240">Z</span><div class="who"><div class="nm"><span>Z.ai</span></div><div class="hd">@Zai_org</div></div><time class="tm" title="08-26 22:12 北京时间">08-26 22:12<small>47 天前</small></time></header><div class="pt">Architectural enhancements, combined with an optimized pre-training corpus, enable GLM-5.3-Flash to deliver greater intelligence with less compute. https://t.co/L0B2bLPKlT</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="Architectural enhancements, combined with an optimized pre-training corpus, enable GLM-5.3-Flash to deliver greater intelligence with less compute. https://t.co/L0B2bLPKlT
+— Z.ai (@Zai_org)
+https://x.com/Zai_org/status/2092616225998213610">复制原文</button><a class="op" href="https://x.com/Zai_org/status/2092616225998213610" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>1,007</span><span class="mc" title="转发"><i>⇄</i>34</span><span class="mc" title="评论"><i>💬</i>6</span><span class="mc" title="浏览"><i>👁</i>15.7万</span></div></footer></article><article class="post c6" data-s="on the https://t.co/w8mhb85z4n code bench, which measures real-world coding performance, glm-5.3-flash clearly outperforms glm-5.2 at every effort level and performs on par with claude opus 4.8. https://t.co/unenxgtwfp"><header><span class="av" style="--h:240">Z</span><div class="who"><div class="nm"><span>Z.ai</span></div><div class="hd">@Zai_org</div></div><time class="tm" title="08-26 22:12 北京时间">08-26 22:12<small>47 天前</small></time></header><div class="pt">On the https://t.co/w8mHB85z4n Code Bench, which measures real-world coding performance, GLM-5.3-Flash clearly outperforms GLM-5.2 at every effort level and performs on par with Claude Opus 4.8. https://t.co/UNenXGTwfp</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="On the https://t.co/w8mHB85z4n Code Bench, which measures real-world coding performance, GLM-5.3-Flash clearly outperforms GLM-5.2 at every effort level and performs on par with Claude Opus 4.8. https://t.co/UNenXGTwfp
+— Z.ai (@Zai_org)
+https://x.com/Zai_org/status/2092616217236222149">复制原文</button><a class="op" href="https://x.com/Zai_org/status/2092616217236222149" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>1,018</span><span class="mc" title="转发"><i>⇄</i>29</span><span class="mc" title="评论"><i>💬</i>17</span><span class="mc" title="浏览"><i>👁</i>20.1万</span></div></footer></article><article class="post c6" data-s="standard api pricing for glm-5.3-flash (per 1m tokens)
+
+- input: $0.15
+- output: $0.50
+- cached input: $0.03"><header><span class="av" style="--h:240">Z</span><div class="who"><div class="nm"><span>Z.ai</span></div><div class="hd">@Zai_org</div></div><time class="tm" title="08-26 22:12 北京时间">08-26 22:12<small>47 天前</small></time></header><div class="pt">Standard API Pricing for GLM-5.3-Flash (per 1M tokens)
+
+- Input: $0.15
+- Output: $0.50
+- Cached input: $0.03</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="Standard API Pricing for GLM-5.3-Flash (per 1M tokens)
+
+- Input: $0.15
+- Output: $0.50
+- Cached input: $0.03
+— Z.ai (@Zai_org)
+https://x.com/Zai_org/status/2092616209426493766">复制原文</button><a class="op" href="https://x.com/Zai_org/status/2092616209426493766" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>2,451</span><span class="mc" title="转发"><i>⇄</i>93</span><span class="mc" title="评论"><i>💬</i>74</span><span class="mc" title="浏览"><i>👁</i>55.8万</span></div></footer></article><article class="post c6" data-s="introducing glm-5.3-flash
+
+- leading capabilities at a highly competitive price
+- natively multimodal with a 1m-token context window
+- a 320b-a18b model released under the mit license
+- previously previewed as ox alpha, running entirely on chinese ai chips
+
+blog: https://t.co/tzomb7gdzp
+
+available now across all official platforms:
+
+weights: https://t.co/9lrmahy9wa
+api: https://t.co/vcaqnzyms9
+coding plan: https://t.co/nk8y98hnhu
+zcode: https://t.co/peepqv4xsx
+chat: https://t.co/wcqwt0qcqb
+autoclaw: https://t.co/ageg5hqttb"><header><span class="av" style="--h:240">Z</span><div class="who"><div class="nm"><span>Z.ai</span></div><div class="hd">@Zai_org</div></div><time class="tm" title="08-26 22:12 北京时间">08-26 22:12<small>47 天前</small></time></header><div class="pt xp"><span class="xs">Introducing GLM-5.3-Flash
+
+- Leading capabilities at a highly competitive price
+- Natively multimodal with a 1M-token context window
+- A 320B-A18B model released under the MIT License
+- Previously previewed as Ox Alpha, running entirely on Chinese AI chips
+
+Blog: https://t.co/tzO…</span><span class="xf">Introducing GLM-5.3-Flash
+
+- Leading capabilities at a highly competitive price
+- Natively multimodal with a 1M-token context window
+- A 320B-A18B model released under the MIT License
+- Previously previewed as Ox Alpha, running entirely on Chinese AI chips
+
+Blog: https://t.co/tzOmB7gdZP
+
+Available now across all official platforms:
+
+Weights: https://t.co/9LRMahY9Wa
+API: https://t.co/VcaQnzYmS9
+Coding Plan: https://t.co/Nk8Y98HNhU
+ZCode: https://t.co/Peepqv4XSx
+Chat: https://t.co/WCqWT0qCQb
+AutoClaw: https://t.co/aGEG5HqTTb</span></div>
+<footer><div class="act"><button class="ex" type="button">展开</button><button class="cp" type="button" data-copy="Introducing GLM-5.3-Flash
+
+- Leading capabilities at a highly competitive price
+- Natively multimodal with a 1M-token context window
+- A 320B-A18B model released under the MIT License
+- Previously previewed as Ox Alpha, running entirely on Chinese AI chips
+
+Blog: https://t.co/tzOmB7gdZP
+
+Available now across all official platforms:
+
+Weights: https://t.co/9LRMahY9Wa
+API: https://t.co/VcaQnzYmS9
+Coding Plan: https://t.co/Nk8Y98HNhU
+ZCode: https://t.co/Peepqv4XSx
+Chat: https://t.co/WCqWT0qCQb
+AutoClaw: https://t.co/aGEG5HqTTb
+— Z.ai (@Zai_org)
+https://x.com/Zai_org/status/2092616204787626030">复制原文</button><a class="op" href="https://x.com/Zai_org/status/2092616204787626030" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>2.4万</span><span class="mc" title="转发"><i>⇄</i>2,614</span><span class="mc" title="评论"><i>💬</i>1,003</span><span class="mc" title="浏览"><i>👁</i>695.8万</span></div></footer></article><article class="post c6" data-s="the community has already built so many interesting projects with zcode + glm-5.3.
+
+to thank everyone for all the support, we’re turning build week into an ongoing series.
+
+from now to aug 23 at 6 pm pt, we’re giving 50,000 new zcode users 100m free glm-5.3 tokens each. https://t.co/yggybzx082"><header><span class="av" style="--h:240">Z</span><div class="who"><div class="nm"><span>Z.ai</span></div><div class="hd">@Zai_org</div></div><time class="tm" title="08-22 00:00 北京时间">08-22 00:00<small>52 天前</small></time></header><div class="pt xp"><span class="xs">The community has already built so many interesting projects with ZCode + GLM-5.3.
+
+To thank everyone for all the support, we’re turning Build Week into an ongoing series.
+
+From now to Aug 23 at 6 PM PT, we’re giving 50,000 new ZCode users 100M free GLM-5.3 tokens each. https://t…</span><span class="xf">The community has already built so many interesting projects with ZCode + GLM-5.3.
+
+To thank everyone for all the support, we’re turning Build Week into an ongoing series.
+
+From now to Aug 23 at 6 PM PT, we’re giving 50,000 new ZCode users 100M free GLM-5.3 tokens each. https://t.co/yGGYBZx082</span></div>
+<footer><div class="act"><button class="ex" type="button">展开</button><button class="cp" type="button" data-copy="The community has already built so many interesting projects with ZCode + GLM-5.3.
+
+To thank everyone for all the support, we’re turning Build Week into an ongoing series.
+
+From now to Aug 23 at 6 PM PT, we’re giving 50,000 new ZCode users 100M free GLM-5.3 tokens each. https://t.co/yGGYBZx082
+— Z.ai (@Zai_org)
+https://x.com/Zai_org/status/2090831300915556515">复制原文</button><a class="op" href="https://x.com/Zai_org/status/2090831300915556515" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>1,007</span><span class="mc" title="转发"><i>⇄</i>53</span><span class="mc" title="评论"><i>💬</i>69</span><span class="mc" title="浏览"><i>👁</i>19.8万</span></div></footer></article><article class="post c6" data-s="glm-5.3 api is now live.
+
+- built for coding, defensive cybersecurity, and long-horizon agentic tasks
+- priced the same as glm-5.2
+- available via the official api and partner model gateways
+
+get started: https://t.co/3dpy1todam https://t.co/ybzgpwtfxl"><header><span class="av" style="--h:240">Z</span><div class="who"><div class="nm"><span>Z.ai</span></div><div class="hd">@Zai_org</div></div><time class="tm" title="08-19 04:46 北京时间">08-19 04:46<small>55 天前</small></time></header><div class="pt">GLM-5.3 API is now live.
+
+- Built for coding, defensive cybersecurity, and long-horizon agentic tasks
+- Priced the same as GLM-5.2
+- Available via the official API and partner model gateways
+
+Get started: https://t.co/3Dpy1tOdaM https://t.co/yBzgPwTFxL</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="GLM-5.3 API is now live.
+
+- Built for coding, defensive cybersecurity, and long-horizon agentic tasks
+- Priced the same as GLM-5.2
+- Available via the official API and partner model gateways
+
+Get started: https://t.co/3Dpy1tOdaM https://t.co/yBzgPwTFxL
+— Z.ai (@Zai_org)
+https://x.com/Zai_org/status/2089816129011098048">复制原文</button><a class="op" href="https://x.com/Zai_org/status/2089816129011098048" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>3,780</span><span class="mc" title="转发"><i>⇄</i>327</span><span class="mc" title="评论"><i>💬</i>189</span><span class="mc" title="浏览"><i>👁</i>53.2万</span></div></footer></article><article class="post c6" data-s="https://t.co/fbjldfgkez"><header><span class="av" style="--h:240">Z</span><div class="who"><div class="nm"><span>Z.ai</span></div><div class="hd">@Zai_org</div></div><time class="tm" title="08-14 23:04 北京时间">08-14 23:04<small>59 天前</small></time></header><div class="pt">https://t.co/fbjLdFGKez</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="https://t.co/fbjLdFGKez
+— Z.ai (@Zai_org)
+https://x.com/Zai_org/status/2088280509474320693">复制原文</button><a class="op" href="https://x.com/Zai_org/status/2088280509474320693" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>1,916</span><span class="mc" title="转发"><i>⇄</i>161</span><span class="mc" title="评论"><i>💬</i>51</span><span class="mc" title="浏览"><i>👁</i>26.6万</span></div></footer></article><article class="post c6" data-s="an initial group of partners is now offering glm-5.3-powered services through our official service, with its safeguards and usage policies in place. we’re expanding partner access through a consistent and responsible process and will share updates publicly."><header><span class="av" style="--h:240">Z</span><div class="who"><div class="nm"><span>Z.ai</span></div><div class="hd">@Zai_org</div></div><time class="tm" title="08-14 13:17 北京时间">08-14 13:17<small>60 天前</small></time></header><div class="pt">An initial group of partners is now offering GLM-5.3-powered services through our official service, with its safeguards and usage policies in place. We’re expanding partner access through a consistent and responsible process and will share updates publicly.</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="An initial group of partners is now offering GLM-5.3-powered services through our official service, with its safeguards and usage policies in place. We’re expanding partner access through a consistent and responsible process and will share updates publicly.
+— Z.ai (@Zai_org)
+https://x.com/Zai_org/status/2088132978698256725">复制原文</button><a class="op" href="https://x.com/Zai_org/status/2088132978698256725" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>634</span><span class="mc" title="转发"><i>⇄</i>13</span><span class="mc" title="评论"><i>💬</i>7</span><span class="mc" title="浏览"><i>👁</i>8.6万</span></div></footer></article><article class="post c6" data-s="glm-5.3 takes agentic coding to the next level, delivering a dramatic improvement over glm-5.2 while achieving better results with fewer output tokens. https://t.co/kgc6zr7ghv"><header><span class="av" style="--h:240">Z</span><div class="who"><div class="nm"><span>Z.ai</span></div><div class="hd">@Zai_org</div></div><time class="tm" title="08-14 13:17 北京时间">08-14 13:17<small>60 天前</small></time></header><div class="pt">GLM-5.3 takes agentic coding to the next level, delivering a dramatic improvement over GLM-5.2 while achieving better results with fewer output tokens. https://t.co/KGc6ZR7GHv</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="GLM-5.3 takes agentic coding to the next level, delivering a dramatic improvement over GLM-5.2 while achieving better results with fewer output tokens. https://t.co/KGc6ZR7GHv
+— Z.ai (@Zai_org)
+https://x.com/Zai_org/status/2088132973606445208">复制原文</button><a class="op" href="https://x.com/Zai_org/status/2088132973606445208" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>910</span><span class="mc" title="转发"><i>⇄</i>38</span><span class="mc" title="评论"><i>💬</i>10</span><span class="mc" title="浏览"><i>👁</i>12.4万</span></div></footer></article><article class="post c6" data-s="glm-5.3 is available now through glm coding plan and zcode. api access and open weights will be released in stages following rigorous safety evaluations.
+
+glm coding plan: https://t.co/002j3fkzkz
+zcode: https://t.co/loy3irtgqj"><header><span class="av" style="--h:240">Z</span><div class="who"><div class="nm"><span>Z.ai</span></div><div class="hd">@Zai_org</div></div><time class="tm" title="08-14 13:17 北京时间">08-14 13:17<small>60 天前</small></time></header><div class="pt">GLM-5.3 is available now through GLM Coding Plan and ZCode. API access and open weights will be released in stages following rigorous safety evaluations.
+
+GLM Coding Plan: https://t.co/002j3FkZkZ
+ZCode: https://t.co/lOy3IRTGqJ</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="GLM-5.3 is available now through GLM Coding Plan and ZCode. API access and open weights will be released in stages following rigorous safety evaluations.
+
+GLM Coding Plan: https://t.co/002j3FkZkZ
+ZCode: https://t.co/lOy3IRTGqJ
+— Z.ai (@Zai_org)
+https://x.com/Zai_org/status/2088132969630212372">复制原文</button><a class="op" href="https://x.com/Zai_org/status/2088132969630212372" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>1,087</span><span class="mc" title="转发"><i>⇄</i>30</span><span class="mc" title="评论"><i>💬</i>28</span><span class="mc" title="浏览"><i>👁</i>14.7万</span></div></footer></article><article class="post c6" data-s="introducing glm-5.3: built to code. ready for cyber defense.
+
+- top-tier coding and agentic capabilities, achieved through post-training on the 743b base model
+- a major leap in cybersecurity, setting a new standard among open models
+
+tech blog: https://t.co/ekqko83jcv https://t.co/y3y2ab0wxr"><header><span class="av" style="--h:240">Z</span><div class="who"><div class="nm"><span>Z.ai</span></div><div class="hd">@Zai_org</div></div><time class="tm" title="08-14 13:17 北京时间">08-14 13:17<small>60 天前</small></time></header><div class="pt xp"><span class="xs">Introducing GLM-5.3: Built to Code. Ready for Cyber Defense.
+
+- Top-tier coding and agentic capabilities, achieved through post-training on the 743B base model
+- A major leap in cybersecurity, setting a new standard among open models
+
+Tech Blog: https://t.co/ekQkO83jCv https://t.…</span><span class="xf">Introducing GLM-5.3: Built to Code. Ready for Cyber Defense.
+
+- Top-tier coding and agentic capabilities, achieved through post-training on the 743B base model
+- A major leap in cybersecurity, setting a new standard among open models
+
+Tech Blog: https://t.co/ekQkO83jCv https://t.co/y3Y2AB0wxr</span></div>
+<footer><div class="act"><button class="ex" type="button">展开</button><button class="cp" type="button" data-copy="Introducing GLM-5.3: Built to Code. Ready for Cyber Defense.
+
+- Top-tier coding and agentic capabilities, achieved through post-training on the 743B base model
+- A major leap in cybersecurity, setting a new standard among open models
+
+Tech Blog: https://t.co/ekQkO83jCv https://t.co/y3Y2AB0wxr
+— Z.ai (@Zai_org)
+https://x.com/Zai_org/status/2088132965922476159">复制原文</button><a class="op" href="https://x.com/Zai_org/status/2088132965922476159" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>1.9万</span><span class="mc" title="转发"><i>⇄</i>2,361</span><span class="mc" title="评论"><i>💬</i>949</span><span class="mc" title="浏览"><i>👁</i>591.4万</span></div></footer></article><article class="post c6" data-s="zcode now has 1 million users. as a thank-you to our community, we’ve reset usage limits for all glm coding plan users.
+
+we’re also rolling out an update that helps turn long-horizon capabilities into completed work:
+
+- more intelligence in real engineering workflows
+- 98% cache hit rate, providing around 1.8x more usage
+
+download: https://t.co/kdfun4gxq6
+join the community: https://t.co/lpec2zktgj"><header><span class="av" style="--h:240">Z</span><div class="who"><div class="nm"><span>Z.ai</span></div><div class="hd">@Zai_org</div></div><time class="tm" title="08-11 12:58 北京时间">08-11 12:58<small>63 天前</small></time></header><div class="pt xp"><span class="xs">ZCode now has 1 million users. As a thank-you to our community, we’ve reset usage limits for all GLM Coding Plan users.
+
+We’re also rolling out an update that helps turn long-horizon capabilities into completed work:
+
+- More intelligence in real engineering workflows
+- 98% cache…</span><span class="xf">ZCode now has 1 million users. As a thank-you to our community, we’ve reset usage limits for all GLM Coding Plan users.
+
+We’re also rolling out an update that helps turn long-horizon capabilities into completed work:
+
+- More intelligence in real engineering workflows
+- 98% cache hit rate, providing around 1.8x more usage
+
+Download: https://t.co/kDfUn4gXq6
+Join the community: https://t.co/lpec2zKTGJ</span></div>
+<footer><div class="act"><button class="ex" type="button">展开</button><button class="cp" type="button" data-copy="ZCode now has 1 million users. As a thank-you to our community, we’ve reset usage limits for all GLM Coding Plan users.
+
+We’re also rolling out an update that helps turn long-horizon capabilities into completed work:
+
+- More intelligence in real engineering workflows
+- 98% cache hit rate, providing around 1.8x more usage
+
+Download: https://t.co/kDfUn4gXq6
+Join the community: https://t.co/lpec2zKTGJ
+— Z.ai (@Zai_org)
+https://x.com/Zai_org/status/2087040814677725262">复制原文</button><a class="op" href="https://x.com/Zai_org/status/2087040814677725262" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>1,695</span><span class="mc" title="转发"><i>⇄</i>98</span><span class="mc" title="评论"><i>💬</i>120</span><span class="mc" title="浏览"><i>👁</i>28.8万</span></div></footer></article><article class="post c6" data-s="follow @zcode_ai for the latest updates. 
+see the full changelog: https://t.co/uj0e3me4gg"><header><span class="av" style="--h:240">Z</span><div class="who"><div class="nm"><span>Z.ai</span></div><div class="hd">@Zai_org</div></div><time class="tm" title="07-01 23:59 北京时间">07-01 23:59<small>103 天前</small></time></header><div class="pt">Follow @zcode_ai for the latest updates. 
+See the full changelog: https://t.co/UJ0e3me4gG</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="Follow @zcode_ai for the latest updates. 
+See the full changelog: https://t.co/UJ0e3me4gG
+— Z.ai (@Zai_org)
+https://x.com/Zai_org/status/2072349457866265054">复制原文</button><a class="op" href="https://x.com/Zai_org/status/2072349457866265054" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>152</span><span class="mc" title="转发"><i>⇄</i>6</span><span class="mc" title="评论"><i>💬</i>6</span><span class="mc" title="浏览"><i>👁</i>6.4万</span></div></footer></article><article class="post c6" data-s="introducing zcode, the official development environment for glm-5.2
+
+- glm coding plan subscribers: now 1.5x usage quota in zcode
+- byok supported: works with your existing subscriptions and apis
+- available on macos, windows, and linux
+
+download now: https://t.co/peepqv4xsx"><header><span class="av" style="--h:240">Z</span><div class="who"><div class="nm"><span>Z.ai</span></div><div class="hd">@Zai_org</div></div><time class="tm" title="07-01 23:59 北京时间">07-01 23:59<small>103 天前</small></time></header><div class="pt">Introducing ZCode, the official development environment for GLM-5.2
+
+- GLM Coding Plan subscribers: now 1.5x usage quota in ZCode
+- BYOK supported: works with your existing subscriptions and APIs
+- Available on macOS, Windows, and Linux
+
+Download now: https://t.co/Peepqv4XSx</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="Introducing ZCode, the official development environment for GLM-5.2
+
+- GLM Coding Plan subscribers: now 1.5x usage quota in ZCode
+- BYOK supported: works with your existing subscriptions and APIs
+- Available on macOS, Windows, and Linux
+
+Download now: https://t.co/Peepqv4XSx
+— Z.ai (@Zai_org)
+https://x.com/Zai_org/status/2072349453361557898">复制原文</button><a class="op" href="https://x.com/Zai_org/status/2072349453361557898" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>5,853</span><span class="mc" title="转发"><i>⇄</i>610</span><span class="mc" title="评论"><i>💬</i>394</span><span class="mc" title="浏览"><i>👁</i>147.4万</span></div></footer></article><article class="post c6" data-s="long-horizon is more than a concept. it should live in real-world scenarios, empowering ai builders to solve the problems that matter. 
+
+and more scenarios are on the way. https://t.co/dwyzhd8fqr"><header><span class="av" style="--h:240">Z</span><div class="who"><div class="nm"><span>Z.ai</span></div><div class="hd">@Zai_org</div></div><time class="tm" title="06-19 11:05 北京时间">06-19 11:05<small>116 天前</small></time></header><div class="pt">Long-horizon is more than a concept. It should live in real-world scenarios, empowering AI builders to solve the problems that matter. 
+
+And more scenarios are on the way. https://t.co/dwYZHd8fqr</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="Long-horizon is more than a concept. It should live in real-world scenarios, empowering AI builders to solve the problems that matter. 
+
+And more scenarios are on the way. https://t.co/dwYZHd8fqr
+— Z.ai (@Zai_org)
+https://x.com/Zai_org/status/2067806055598264695">复制原文</button><a class="op" href="https://x.com/Zai_org/status/2067806055598264695" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>887</span><span class="mc" title="转发"><i>⇄</i>58</span><span class="mc" title="评论"><i>💬</i>37</span><span class="mc" title="浏览"><i>👁</i>8.9万</span></div></footer></article></div></div>
+<footer>数据：X API get_users_posts · 生成于 2026-10-13 16:21 北京时间</footer></div><script>
+(function(){var d=document.documentElement,mq=matchMedia('(prefers-color-scheme: dark)');
+function sync(){document.querySelectorAll('[data-set-theme]').forEach(function(b){b.classList.toggle('on',b.dataset.setTheme===d.dataset.pref)})}
+function theme(){var p=d.dataset.pref;d.dataset.theme=p==='auto'?(mq.matches?'dark':'light'):p}
+document.querySelectorAll('[data-set-theme]').forEach(function(b){b.onclick=function(){d.dataset.pref=b.dataset.setTheme;try{localStorage.setItem('xhot-theme',b.dataset.setTheme)}catch(e){}theme();sync()}});
+(mq.addEventListener?mq.addEventListener('change',theme):mq.addListener(theme));
+document.querySelectorAll('[data-t]').forEach(function(b){b.onclick=function(){var t=b.dataset.t;
+document.querySelectorAll('[data-t]').forEach(function(x){x.classList.toggle('on',x.dataset.t===t)});
+document.querySelectorAll('.pane').forEach(function(x){x.classList.toggle('on',x.dataset.p===t)});
+document.querySelectorAll('.li-d').forEach(function(x){x.hidden=x.dataset.p!==t});scrollTo({top:0})}});sync();
+function fb(t){var a=document.createElement('textarea');a.value=t;a.setAttribute('readonly','');a.style.cssText='position:fixed;top:-1000px;opacity:0';document.body.appendChild(a);a.select();var ok=false;try{ok=document.execCommand('copy')}catch(e){}document.body.removeChild(a);return ok}
+document.addEventListener('click',function(ev){var b=ev.target.closest('.cp');if(b){var t=b.getAttribute('data-copy');
+function done(ok){b.textContent=ok?'已复制 ✓':'复制失败';b.classList.toggle('ok',ok);clearTimeout(b._t);b._t=setTimeout(function(){b.textContent='复制原文';b.classList.remove('ok')},1600)}
+if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(t).then(function(){done(true)},function(){done(fb(t))})}else done(fb(t));return}
+var x=ev.target.closest('.ex');if(x){var c=x.closest('.post').querySelector('.xp');var o=c.classList.toggle('open');x.textContent=o?'收起':'展开'}})})();
+</script><script>(function(){var q=document.getElementById('q'),c=document.getElementById('cnt'),a=document.getElementById('alll'),ps=[].slice.call(document.querySelectorAll('.feed1 .post'));
+function run(){var v=q.value.trim().toLowerCase(),all=a&&a.checked,k=0,n=0;ps.forEach(function(p){var lo=!p.dataset.ol||all;if(lo)n++;var ok=lo&&(!v||p.dataset.s.indexOf(v)>=0);p.hidden=!ok;if(ok)k++});c.textContent=v?('匹配 '+k+' / '+n+' 条'):(n+' 条')}
+q.addEventListener('input',run);if(a)a.addEventListener('change',run)})();</script></body></html>

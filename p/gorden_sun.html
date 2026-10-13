@@ -1,0 +1,628 @@
+<!doctype html><html lang="zh-CN" data-theme="light" data-pref="auto"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><title>Gorden Sun (@Gorden_Sun) · XHOT</title><script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('xhot-theme')}catch(e){}t=(t==='light'||t==='dark')?t:'auto';d.setAttribute('data-pref',t);d.setAttribute('data-theme',t==='auto'?(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'):t)})();
+</script><style>:root{--bg:#f7f7f8;--card:#fff;--bd:#e4e4e7;--bd2:#f0f0f2;--zebra:#fafafa;--hov:#f4f4f6;--tx:#18181b;--tx2:#3f3f46;--mu:#71717a;--mu2:#a1a1aa;--ac:#4f46e5;--acbg:#eef2ff;--actx:#4338ca;--up:#16a34a;--upbg:#f0fdf4;--dn:#dc2626;--dnbg:#fef2f2;--r:8px;--sh:0 1px 2px rgba(24,24,27,.04)}
+html[data-theme=dark]{--bg:#09090b;--card:#131316;--bd:#27272a;--bd2:#1c1c20;--zebra:#16161a;--hov:#1d1d22;--tx:#f4f4f5;--tx2:#d4d4d8;--mu:#a1a1aa;--mu2:#71717a;--ac:#818cf8;--acbg:#1e1b4b;--actx:#a5b4fc;--up:#4ade80;--upbg:#0f2a1a;--dn:#f87171;--dnbg:#2d1214;--sh:none}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--tx);font:400 13px/1.5 "Inter","PingFang SC","HarmonyOS Sans SC","Noto Sans SC","Noto Sans CJK SC",-apple-system,BlinkMacSystemFont,"Microsoft YaHei",sans-serif;-webkit-font-smoothing:antialiased;font-feature-settings:"cv11","ss01"}
+a{color:inherit;text-decoration:none}button{font:inherit}
+.num,.f,.d,.r,.sv,.nc,.heat,.pc,.tr3,.kv dd,.post footer{font-variant-numeric:tabular-nums}
+/* 顶栏 */
+.top{position:sticky;top:0;z-index:30;background:color-mix(in srgb,var(--card) 92%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--bd)}
+.ti2{max-width:1440px;margin:auto;height:56px;padding:0 24px;display:flex;align-items:center;gap:16px}
+.lg{display:flex;align-items:center;gap:8px;font-weight:600;font-size:16px;letter-spacing:-.01em}.lg i{width:24px;height:24px;border-radius:6px;background:var(--ac);display:grid;place-items:center;font-style:normal;color:#fff;font-size:12px}.lg span{font-weight:400;font-size:13px;color:var(--mu);margin-left:4px;padding-left:12px;border-left:1px solid var(--bd)}
+.mtabs{display:none}
+.tg{margin-left:auto;display:flex;border:1px solid var(--bd);border-radius:var(--r);padding:2px;background:var(--card)}.tg button{border:0;background:none;color:var(--mu);height:28px;padding:0 10px;border-radius:6px;cursor:pointer;font-size:12px}.tg button.on{background:var(--hov);color:var(--tx);font-weight:500}
+/* 12 列网格 */
+.wrap{max-width:1440px;margin:auto;padding:24px 24px 32px}
+.stats,.shell{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:16px}.shell{align-items:start}
+.stats{margin-bottom:24px}.st{grid-column:span 2}
+.left{grid-column:span 2}.content{grid-column:span 10;min-width:0}
+.cols{display:grid;grid-template-columns:repeat(10,minmax(0,1fr));gap:16px;align-items:start}.mid{grid-column:span 7;min-width:0}.right{grid-column:span 3;min-width:0}
+/* 统计条 */
+.st{background:var(--card);border:1px solid var(--bd);border-radius:var(--r);padding:12px 16px;min-width:0;box-shadow:var(--sh)}
+.sl{font-size:12px;color:var(--mu);line-height:16px}.sv{font-size:20px;font-weight:600;line-height:28px;letter-spacing:-.01em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.ss{font-size:12px;color:var(--mu);line-height:16px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.st:nth-child(3) .sv{color:var(--ac)}
+/* 区块标题：统一 24px 行高，底部 8px */
+.bh{display:flex;align-items:center;gap:8px;height:24px;margin:0 0 8px}.bh h2{font-size:14px;font-weight:600;margin:0;line-height:24px}.hint{font-size:12px;color:var(--mu)}.credit{margin-left:auto;font-size:12px;font-weight:500;color:var(--ac)}.credit:hover{text-decoration:underline}
+.blk{margin-bottom:24px}
+/* 左栏 */
+.left{position:sticky;top:80px;display:flex;flex-direction:column;gap:16px}.left>.bh{margin-bottom:-8px}
+.lcard{background:var(--card);border:1px solid var(--bd);border-radius:var(--r);padding:8px;box-shadow:var(--sh)}
+.nav{display:flex;flex-direction:column;gap:2px}.nv{display:grid;grid-template-columns:24px minmax(0,1fr) auto;align-items:center;gap:8px;height:36px;border:0;background:none;color:var(--tx2);padding:0 8px;border-radius:6px;cursor:pointer;text-align:left;font-size:13px;font-weight:500}
+.nv:hover{background:var(--hov)}.nv.on{background:var(--acbg);color:var(--actx)}.ni{width:24px;height:24px;border-radius:6px;display:grid;place-items:center;background:var(--bd2);color:var(--mu);font-size:12px}.nv.on .ni{background:var(--ac);color:#fff}.nc{font-size:12px;color:var(--mu)}
+.kv{margin:0}.kv div{display:flex;justify-content:space-between;align-items:center;height:32px;padding:0 8px;border-bottom:1px solid var(--bd2);font-size:13px}.kv div:last-child{border-bottom:0}.kv dt{color:var(--mu)}.kv dd{margin:0;font-weight:500}
+.mini{padding:8px;border-top:1px solid var(--bd2)}.mt{font-size:12px;color:var(--mu);line-height:16px;margin-bottom:4px}.mv{font-weight:500;display:flex;align-items:center;justify-content:space-between;gap:8px}.mv2{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;font-size:13px;font-weight:500}.mv2:hover{color:var(--ac)}.mm{font-size:12px;color:var(--mu)}
+.mini .sp{height:24px;margin-top:8px}
+.tl{list-style:none;margin:0;padding:0}.tl li a{display:grid;grid-template-columns:16px minmax(0,1fr) auto;gap:8px;align-items:center;height:28px;padding:0 4px;border-radius:4px;font-size:13px}.tl li a:hover{background:var(--hov)}.tl .k{color:var(--mu2);font-size:12px;text-align:right}.tl .n{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.lnote{font-size:12px;color:var(--mu);padding:12px}.lnote b{display:block;color:var(--tx2);font-weight:500;margin-bottom:4px}.lnote p{margin:0 0 4px}.lnote a{color:var(--ac)}
+/* 涨跌徽章：唯一使用红绿的地方 */
+.pc{display:inline-flex;align-items:center;gap:2px;height:20px;font-size:12px;font-weight:500;padding:0 6px;border-radius:4px;white-space:nowrap}.pc.up{color:var(--up);background:var(--upbg)}.pc.dn{color:var(--dn);background:var(--dnbg)}
+.sp{display:block;width:100%;fill:none;stroke-width:1.5;stroke-linejoin:round;stroke-linecap:round}.sp.up,.tile.up .sp{stroke:var(--up)}.sp.dn,.tile.dn .sp{stroke:var(--dn)}
+/* 趋势 */
+.pane{display:none}.pane.on{display:block}
+.tiles{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
+.tile{background:var(--card);border:1px solid var(--bd);border-radius:var(--r);padding:8px 12px;height:88px;display:grid;grid-template-rows:20px 1fr 16px;gap:4px;box-shadow:var(--sh);min-width:0}
+.tile:hover{border-color:var(--mu2)}.tr1{display:grid;grid-template-columns:16px minmax(0,1fr) auto;gap:8px;align-items:center}.tk{font-size:12px;color:var(--mu2);text-align:right}.tn{font-size:13px;font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tile .sp{height:100%;opacity:.9}.tr3{display:flex;justify-content:space-between;font-size:12px;line-height:16px;color:var(--mu)}.tr3 b{color:var(--tx2);font-weight:500}
+/* 热帖 */
+.feed{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.post{background:var(--card);border:1px solid var(--bd);border-radius:var(--r);padding:12px 16px 8px;display:flex;flex-direction:column;min-width:0;box-shadow:var(--sh)}.post:hover{border-color:var(--mu2)}
+.post header{display:grid;grid-template-columns:32px minmax(0,1fr) auto;gap:8px;align-items:center;height:32px}
+.av{--h:220;width:32px;height:32px;border-radius:50%;display:inline-grid;place-items:center;flex:none;font-weight:600;font-size:13px;color:hsl(var(--h) 30% 32%);background:hsl(var(--h) 30% 92%)}
+html[data-theme=dark] .av{color:hsl(var(--h) 35% 80%);background:hsl(var(--h) 15% 22%)}
+.av.s{width:24px;height:24px;font-size:11px}.av.xs{width:20px;height:20px;font-size:10px;margin-left:-6px;border:2px solid var(--card)}.av.xs:first-child{margin-left:0}
+.who{min-width:0;line-height:16px}.nm{display:flex;align-items:center;gap:6px;font-size:13px;font-weight:600;min-width:0}.nm a{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.nm a:hover{color:var(--ac)}.hd{font-size:12px;color:var(--mu);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.heat{font-size:12px;font-weight:500;color:var(--mu);height:20px;line-height:20px;padding:0 6px;border:1px solid var(--bd);border-radius:4px}
+.pt{flex:1;margin:8px 0;font-size:13px;line-height:1.6;color:var(--tx2);white-space:pre-wrap;word-break:break-word}.xp .xf{display:none}.xp.open .xs{display:none}.xp.open .xf{display:inline}
+.post footer{display:flex;align-items:center;gap:10px;height:32px;font-size:12px;color:var(--mu);border-top:1px solid var(--bd2);white-space:nowrap;overflow:hidden}.sp1{flex:1}
+.cp,.ex{height:24px;border:1px solid var(--bd);background:var(--card);color:var(--tx2);font-size:12px;font-weight:500;padding:0 8px;border-radius:6px;cursor:pointer}.cp:hover,.ex:hover{border-color:var(--ac);color:var(--ac)}.cp.ok{border-color:var(--up);color:var(--up)}
+.op{width:24px;height:24px;display:grid;place-items:center;border-radius:6px;color:var(--mu)}.op:hover{background:var(--hov);color:var(--ac)}
+.zh{font-size:11px;font-weight:500;color:var(--mu);border:1px solid var(--bd);border-radius:4px;padding:0 4px;line-height:16px;flex:none}
+/* 右栏 */
+.right{display:flex;flex-direction:column;gap:24px;position:sticky;top:80px}
+.rcard,.acard{background:var(--card);border:1px solid var(--bd);border-radius:var(--r);box-shadow:var(--sh);min-width:0;overflow:hidden}
+.rhd{display:flex;align-items:center;gap:8px;height:24px;margin-bottom:8px}
+.rcard .tw{max-height:560px;overflow:auto}
+/* 表格 */
+table{width:100%;border-collapse:separate;border-spacing:0;font-size:13px}
+th{height:32px;font-size:12px;font-weight:500;color:var(--mu);text-align:left;padding:0 12px;background:var(--zebra);border-bottom:1px solid var(--bd);white-space:nowrap}
+thead th{position:sticky;top:0;z-index:2}
+td{height:36px;padding:0 12px;border-bottom:1px solid var(--bd2);vertical-align:middle}tbody tr:last-child td{border-bottom:0}
+tbody tr:not(.g):hover td{background:var(--hov)}
+th.num,td.num,th.f,td.f,th.d,td.d{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}th.r,td.r{width:40px;text-align:right;color:var(--mu2);padding-right:4px;font-variant-numeric:tabular-nums}
+.lbt{table-layout:fixed}.lbt th.r,.lbt td.r{width:36px}.lbt th.f,.lbt td.f{width:72px;font-weight:500}.lbt th.d,.lbt td.d{width:64px;color:var(--mu);font-size:12px;padding-left:0}
+.lbt td.n a{display:flex;align-items:center;gap:8px;min-width:0}.lbt .nt{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:500}.lbt td.n a:hover .nt{color:var(--ac)}
+tr.g th{position:sticky;top:32px;z-index:1;height:28px;background:var(--card);color:var(--tx2);font-size:12px;font-weight:600;border-bottom:1px solid var(--bd2)}tr.g th span{color:var(--mu);font-weight:400;margin-left:4px}
+.news{list-style:none;margin:0;padding:0 12px}.news li{border-top:1px solid var(--bd2)}.news li:first-child{border-top:0}.news a{display:block;padding:8px 0}.news .t{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;font-weight:500;font-size:13px;line-height:20px}.news a:hover .t{color:var(--ac)}.news .m{display:block;font-size:12px;color:var(--mu);line-height:16px;margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+/* 卡片内标题：所有卡片头 48px */
+.rcard>.bh,.acard>.bh{height:48px;margin:0;padding:0 12px;border-bottom:1px solid var(--bd)}
+/* AIHOT */
+.ahsec{margin-top:8px;padding-top:24px;border-top:1px solid var(--bd)}
+.ahh{display:flex;align-items:center;gap:12px;height:28px;margin-bottom:16px}.ahh .k{font-size:12px;font-weight:600;letter-spacing:.08em;color:var(--ac)}.ahh h2{margin:0;font-size:20px;font-weight:600;letter-spacing:-.01em}.ahh a{margin-left:auto;font-size:12px;font-weight:500;color:var(--ac)}
+.agrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.acard.wide{grid-column:1/-1}
+.ht{table-layout:fixed}.ht td.ti a{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:500}.ht td.ti a:hover{color:var(--ac)}.ht th:nth-child(3),.ht td.sv{width:104px}.ht th:nth-child(4),.ht td.hb{width:160px}.ht th.num,.ht td.num{width:72px}
+.rk{display:inline-grid;place-items:center;width:20px;height:20px;border-radius:4px;color:var(--mu);font-weight:500;font-size:12px}.rk.top{background:var(--acbg);color:var(--actx);font-weight:600}
+.bar{display:block;height:4px;border-radius:2px;background:var(--bd2);overflow:hidden}.bar i{display:block;height:100%;border-radius:2px;background:var(--ac);opacity:.75}
+.lead{display:block;margin:12px;padding:12px 16px;border-radius:6px;background:var(--zebra);border:1px solid var(--bd2)}.lead b{display:block;font-size:16px;font-weight:600;line-height:24px}.lead span{display:block;font-size:13px;color:var(--tx2);margin-top:4px}.lead:hover b{color:var(--ac)}
+.dg{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:16px;padding:0 12px 12px}.dl{font-size:12px;font-weight:600;color:var(--tx2);height:28px;line-height:28px;border-bottom:1px solid var(--bd)}.ds ul{list-style:none;margin:0;padding:0}.ds li a{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;font-size:13px;line-height:20px;padding:6px 0;border-bottom:1px solid var(--bd2);color:var(--tx2)}.ds li a:hover{color:var(--ac)}
+.exg{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:var(--bd2)}.exc{display:grid;grid-template-rows:auto 1fr auto;gap:4px;padding:12px 16px;background:var(--card);min-height:132px}.exc:hover{background:var(--hov)}
+.et{display:flex;gap:8px;align-items:flex-start}.et span{flex:1;font-weight:600;font-size:13px;line-height:20px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}.sc{font-size:12px;font-weight:500;color:var(--actx);background:var(--acbg);border-radius:4px;padding:0 6px;line-height:20px;font-variant-numeric:tabular-nums}
+.exc p{margin:0;font-size:12px;color:var(--mu);line-height:18px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}.em{font-size:12px;color:var(--mu2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.mtb .mn{font-weight:500}.mtb td{white-space:nowrap}.scc{width:180px}td.scc{text-align:right}.scc .bar{display:inline-block;width:96px;vertical-align:middle;margin-right:12px}.scc b{font-weight:600;font-variant-numeric:tabular-nums;display:inline-block;width:36px;text-align:right}
+.chips{display:flex;flex-wrap:wrap;gap:8px;padding:12px}.chips a{height:28px;line-height:26px;font-size:12px;padding:0 12px;border-radius:14px;color:var(--tx2);border:1px solid var(--bd)}.chips a:hover{border-color:var(--ac);color:var(--ac)}
+footer{max-width:1440px;margin:24px auto 0;padding-top:16px;border-top:1px solid var(--bd);font-size:12px;color:var(--mu)}footer a{color:var(--ac)}
+/* 响应式 */
+@media(max-width:1600px){.post footer .rp{display:none}}@media(max-width:1360px){.lbt th.f,.lbt td.f{width:64px}.lbt th.d,.lbt td.d{width:52px}.lbt th.r,.lbt td.r{width:28px}td,th{padding:0 8px}.tiles{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:1180px){.left{display:none}.content{grid-column:1/-1}.st{grid-column:span 4}.mtabs{display:flex;gap:4px}.mt1{height:32px;border:0;background:none;color:var(--tx2);padding:0 12px;border-radius:6px;cursor:pointer;font-weight:500;font-size:13px}.mt1.on{background:var(--acbg);color:var(--actx)}}
+@media(max-width:900px){.cols{grid-template-columns:1fr}.mid,.right{grid-column:1/-1}.right{position:static}.agrid{grid-template-columns:1fr}.dg{grid-template-columns:repeat(2,minmax(0,1fr))}.exg{grid-template-columns:1fr 1fr}}
+@media(max-width:640px){.ti2{flex-wrap:wrap;height:auto;padding:8px 16px;gap:8px}.lg span{display:none}.mtabs{order:3;width:100%}.mt1{flex:1}.wrap{padding:16px 12px 24px}
+.stats{gap:8px;margin-bottom:16px}.st{grid-column:span 6;padding:8px 12px}.sv{font-size:16px;line-height:24px}.tiles{grid-template-columns:repeat(2,minmax(0,1fr))}.feed{grid-template-columns:1fr}.exg{grid-template-columns:1fr}
+.ht th:nth-child(3),.ht td.sv,.ht th:nth-child(4),.ht td.hb,.ht th:nth-child(6),.ht td:nth-child(6){display:none}.mtb th:nth-child(3),.mtb td:nth-child(3),.mtb th:nth-child(4),.mtb td:nth-child(4),.mtb th:nth-child(5),.mtb td:nth-child(5){display:none}.scc{width:auto}.scc .bar{display:none}.ahh{height:auto;flex-wrap:wrap}.ahh a{margin-left:0}.dg{grid-template-columns:1fr}}
+/* ===== v5 color layer ===== */
+:root{--ac:#7c3aed;--acbg:#f3e8ff;--actx:#6d28d9;--g1:#7c3aed;--g2:#db2777;--g3:#f97316;--bg:#f6f5fb;--glow:rgba(124,58,237,.18)}
+html[data-theme=dark]{--bg:#110d2e;--card:#1a1640;--bd:#2a2652;--bd2:#1e1b40;--zebra:#171536;--hov:#1f1c45;--mu:#a5a3c9;--mu2:#77749e;--ac:#c084fc;--acbg:#2e1a5c;--actx:#e9d5ff;--up:#4ade80;--dn:#fb7185;--glow:rgba(192,132,252,.28)}
+html[data-theme=dark],html[data-theme=dark] body{background-attachment:fixed;background:radial-gradient(1200px 600px at 10% -10%,#2a1660 0,transparent 60%),radial-gradient(900px 500px at 100% 0,#3b0d4a 0,transparent 55%),var(--bg)}
+.lg i{background:linear-gradient(135deg,var(--g1),var(--g2))!important;color:#fff!important}
+.stats{background:linear-gradient(110deg,#6d28d9 0%,#a21caf 50%,#db2777 85%,#f97316 120%);border-radius:12px;padding:16px;box-shadow:0 8px 24px -8px rgba(162,28,175,.45)}
+html[data-theme=dark] .stats{background:linear-gradient(110deg,#4c1d95 0%,#86198f 55%,#be185d 100%);box-shadow:0 0 0 1px rgba(232,121,249,.25),0 10px 30px -10px rgba(217,70,239,.5)}
+.stats .st{background:rgba(255,255,255,.12)!important;border:1px solid rgba(255,255,255,.22)!important;box-shadow:none!important;backdrop-filter:blur(4px)}
+.stats .st *{color:#fff!important}
+.stats .st .sl,.stats .st .ss{color:rgba(255,255,255,.82)!important}
+/* heat tiles */
+.tile{position:relative;overflow:hidden;transition:transform .15s,box-shadow .15s}
+.tile.up{background:linear-gradient(135deg,rgba(249,115,22,calc(var(--a)*.10 + .03)),rgba(239,68,68,calc(var(--a)*.28 + .04))),var(--card);border-color:rgba(239,68,68,calc(var(--a)*.45 + .12))}
+.tile.dn{background:linear-gradient(135deg,rgba(56,189,248,.05),rgba(59,130,246,calc(var(--a)*.22 + .05))),var(--card);border-color:rgba(59,130,246,.25)}
+.tile.up .sp{stroke:#ea580c}.tile.dn .sp{stroke:#2563eb}
+html[data-theme=dark] .tile.up .sp{stroke:#fb923c}html[data-theme=dark] .tile.dn .sp{stroke:#60a5fa}
+.tile:hover{transform:translateY(-1px);box-shadow:0 6px 18px -6px rgba(239,68,68,.35)}
+/* domain chips */
+.nv[data-t=ai] .ni,.mtabs [data-t=ai]{--dc:#7c3aed}
+.nv[data-t=money] .ni,.mtabs [data-t=money]{--dc:#f59e0b}
+.nv[data-t=growth] .ni,.mtabs [data-t=growth]{--dc:#14b8a6}
+.nv[data-t=ai]{--dc:#7c3aed;--dc2:#c026d3}.nv[data-t=money]{--dc:#f59e0b;--dc2:#ea580c}.nv[data-t=growth]{--dc:#14b8a6;--dc2:#22c55e}
+.nv .ni{background:linear-gradient(135deg,var(--dc),var(--dc2))!important;color:#fff!important}
+.nv.on{background:color-mix(in srgb,var(--dc) 12%,var(--card))!important;color:var(--tx)!important;box-shadow:inset 3px 0 0 var(--dc)}
+.nv.on .nc{color:var(--dc)}
+/* gradient avatars */
+.av{background:linear-gradient(135deg,hsl(var(--h) 85% 62%),hsl(calc(var(--h) + 50) 80% 52%))!important;color:#fff!important;text-shadow:0 1px 1px rgba(0,0,0,.2)}
+/* cards accents + glow */
+.lcard,.rcard,.post,.acard{transition:box-shadow .15s,border-color .15s}
+.post{border-top:2px solid color-mix(in srgb,var(--ac) 45%,transparent)!important}
+.post:hover,.rcard:hover,.acard:hover{border-color:color-mix(in srgb,var(--ac) 50%,var(--bd))!important;box-shadow:0 0 0 3px var(--glow)}
+.bh h2{position:relative;padding-left:10px}
+.bh h2::before{content:"";position:absolute;left:0;top:5px;bottom:5px;width:3px;border-radius:2px;background:linear-gradient(var(--g1),var(--g2))}
+a{color:var(--actx)}
+/* ===== v6 layout ===== */
+.mtabs{display:flex!important;gap:4px}
+.mt1{height:32px;border:0;background:none;color:var(--tx2);padding:0 12px;border-radius:6px;cursor:pointer;font-weight:500;font-size:13px}
+.mt1.on{background:color-mix(in srgb,var(--dc) 14%,var(--card));color:var(--tx);box-shadow:inset 0 -2px 0 var(--dc)}
+.ti2{display:flex;align-items:center;gap:16px}
+.ti2 .sp1{flex:1}
+.ahl{font-size:13px;font-weight:500;color:var(--actx);text-decoration:none;padding:0 8px;height:32px;display:inline-flex;align-items:center;border-radius:6px}
+.ahl:hover{background:var(--acbg)}
+.stats.sm{padding:8px 16px;grid-template-columns:repeat(12,minmax(0,1fr))}
+.stats.sm .st{grid-column:span 2;padding:8px 12px;height:auto}
+.stats.sm .sv{font-size:20px;line-height:1.3}
+.g6{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:16px;align-items:start}
+.c-l{grid-column:span 3;min-width:0}.c-m{grid-column:span 6;min-width:0}.c-r{grid-column:span 3;min-width:0;display:flex;flex-direction:column;gap:24px}
+.c-l,.c-r{position:sticky;top:80px;max-height:calc(100vh - 96px);overflow:auto;scrollbar-width:thin}
+.feed1{display:flex;flex-direction:column;gap:8px}
+.post .pt{white-space:pre-wrap;word-break:break-word}
+.post .tm{color:var(--mu);font-variant-numeric:tabular-nums}
+.lbt td.n a{display:flex;align-items:center;gap:8px;min-width:0;color:var(--tx);text-decoration:none}
+.lbt td.n a:hover .nt{color:var(--actx);text-decoration:underline}
+.rlist{list-style:none;margin:0;padding:0}
+.rlist li{border-top:1px solid var(--bd2)}
+.rlist li:first-child{border-top:0}
+.rlist a{display:block;padding:8px 12px;color:var(--tx);text-decoration:none}
+.rlist a:hover{background:var(--hov)}
+.gh .rn{font-weight:600;font-size:13px;color:var(--actx);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.gh .rd{font-size:12px;color:var(--tx2);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;margin:2px 0 4px}
+.gh .rm{display:flex;gap:12px;font-size:12px;color:var(--mu);font-variant-numeric:tabular-nums}
+.gh .rm .td{margin-left:auto;color:#ea580c;font-weight:600}
+html[data-theme=dark] .gh .rm .td{color:#fb923c}
+.gh .lg2{display:inline-flex;align-items:center;gap:4px}.gh .lg2 i{width:8px;height:8px;border-radius:50%;background:hsl(var(--h) 70% 55%)}
+.nws .t{font-size:13px;font-weight:500;line-height:1.5;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.nws .m{font-size:12px;color:var(--mu);margin-top:2px;display:flex;gap:8px}
+.src{display:inline-block;padding:0 6px;border-radius:4px;font-size:12px;font-weight:500;line-height:18px}
+.src.x{background:#e0f2fe;color:#0369a1}.src.d{background:#f3e8ff;color:#7e22ce}.src.s{background:#fce7f3;color:#be185d}
+html[data-theme=dark] .src.x{background:#0c2a44;color:#7dd3fc}html[data-theme=dark] .src.d{background:#2e1a5c;color:#d8b4fe}html[data-theme=dark] .src.s{background:#4a0d2e;color:#f9a8d4}
+.tl2{list-style:none;margin:0;padding:4px 0}
+.tl2 a{display:grid;grid-template-columns:24px 1fr auto;align-items:center;height:32px;padding:0 12px;color:var(--tx);text-decoration:none;gap:8px}
+.tl2 a:hover{background:var(--hov)}
+.tl2 .k{color:var(--mu);font-variant-numeric:tabular-nums;font-size:12px}
+.tl2 .n{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+/* person page */
+.ph{display:grid;grid-template-columns:80px 1fr auto;gap:16px;align-items:center;padding:24px;border-radius:12px;background:linear-gradient(110deg,#6d28d9 0%,#a21caf 55%,#db2777 100%);color:#fff;box-shadow:0 8px 24px -8px rgba(162,28,175,.45)}
+.ph .av.xl{width:80px;height:80px;border-radius:50%;font-size:28px;font-weight:600;display:flex;align-items:center;justify-content:center;border:3px solid rgba(255,255,255,.6)}
+.ph h1{font-size:28px;line-height:1.3;margin:0;font-weight:600}
+.ph .hd{opacity:.85;font-size:14px}
+.ph .bio{margin:8px 0 0;font-size:14px;opacity:.95;white-space:pre-wrap;max-width:720px}
+.ph .fs{text-align:right}
+.ph .fs b{display:block;font-size:28px;font-weight:600;font-variant-numeric:tabular-nums;line-height:1.3}
+.ph .fs span{font-size:12px;opacity:.85}
+.ph .xb{display:inline-flex;margin-top:8px;height:32px;align-items:center;padding:0 12px;border-radius:6px;background:rgba(255,255,255,.18);color:#fff;text-decoration:none;font-weight:500;border:1px solid rgba(255,255,255,.35)}
+.ptool{display:flex;align-items:center;gap:16px;margin:24px 0 8px}
+.ptool input{flex:1;height:40px;border:1px solid var(--bd);border-radius:8px;background:var(--card);color:var(--tx);padding:0 12px;font:inherit;font-size:14px;outline:none}
+.ptool input:focus{border-color:var(--ac);box-shadow:0 0 0 3px var(--glow)}
+.ptool .cnt{color:var(--mu);font-variant-numeric:tabular-nums;white-space:nowrap}
+.pwrap{max-width:880px;margin:0 auto}
+.back{font-size:13px;color:var(--actx);text-decoration:none;display:inline-flex;height:32px;align-items:center;margin-bottom:8px}
+mark{background:#fde68a;color:inherit;border-radius:2px}
+html[data-theme=dark] mark{background:#854d0e}
+@media(max-width:1180px){.c-l{grid-column:span 4}.c-m{grid-column:span 8}.c-r{grid-column:1/-1;position:static;max-height:none;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}}
+@media(max-width:900px){.g6{grid-template-columns:1fr}.c-l,.c-m,.c-r{grid-column:1/-1;position:static;max-height:none}.c-m{order:1}.c-r{order:2;display:flex}.c-l{order:3}.stats.sm .st{grid-column:span 4}}
+@media(max-width:640px){.ti2{flex-wrap:wrap;gap:8px}.mtabs{order:3;width:100%}.mt1{flex:1}.ahl{margin-left:auto}.ti2 .sp1{display:none}.stats.sm{display:none}.ph{grid-template-columns:56px 1fr;padding:16px}.ph .av.xl{width:56px;height:56px;font-size:20px}.ph h1{font-size:20px}.ph .fs{grid-column:1/-1;text-align:left}}
+.post footer{margin:0!important;width:auto!important;max-width:none!important;padding:0!important;text-align:left!important;justify-content:flex-start}
+.c-l .tw{max-height:none;overflow:visible}
+.ph .hd,.ph .hd *{color:rgba(255,255,255,.85)!important}
+/* ===== v6b card consistency ===== */
+.post.c6{padding:16px;gap:0;border:1px solid var(--bd)!important;border-top:3px solid color-mix(in srgb,var(--ac) 55%,transparent)!important;border-radius:10px;background:var(--card)}
+.post.c6 header{display:grid;grid-template-columns:32px minmax(0,1fr) auto;gap:12px;align-items:center;height:40px}
+.post.c6 .who{min-width:0}
+.post.c6 .nm{font-weight:600;font-size:14px;line-height:20px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.post.c6 .nm a{color:var(--tx);text-decoration:none}.post.c6 .nm a:hover{color:var(--actx)}
+.post.c6 .hd{font-size:12px;line-height:18px;color:var(--mu)}
+.post.c6 .tm{text-align:right;font-size:12px;line-height:18px;color:var(--tx2);font-variant-numeric:tabular-nums;white-space:nowrap}
+.post.c6 .tm small{display:block;color:var(--mu);font-size:12px}
+.post.c6 .pt{margin:12px 0;font-size:14px;line-height:1.5;color:var(--tx)}
+.post.c6 footer{display:flex!important;align-items:center;justify-content:space-between!important;height:40px;border-top:1px solid var(--bd2);gap:8px}
+.post.c6 .act{display:flex;gap:8px;align-items:center}
+.post.c6 .op{font-size:12px;color:var(--mu);text-decoration:none;height:28px;display:inline-flex;align-items:center;padding:0 8px;border:1px solid var(--bd);border-radius:6px}
+.post.c6 .op:hover{color:var(--actx);border-color:var(--ac)}
+.post.c6 .met{display:grid;grid-template-columns:repeat(4,64px);gap:0}
+.post.c6 .mc{text-align:right;font-variant-numeric:tabular-nums;color:var(--mu);font-size:12px}
+.post.c6 .mc i{font-style:normal;margin-right:4px;opacity:.75}
+.feed1{gap:12px}
+.ph{grid-template-columns:80px minmax(0,1fr) auto;padding:24px}
+.ph .pi{min-width:0}.ph .bio.dim{opacity:.7}
+.ph .xb{margin:0;align-self:start}
+.pstat{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:12px}
+.psb{background:var(--card);border:1px solid var(--bd);border-radius:10px;padding:12px 16px;border-top:3px solid var(--dcx,#a21caf)}
+.psb:nth-child(1){--dcx:#7c3aed}.psb:nth-child(2){--dcx:#db2777}.psb:nth-child(3){--dcx:#f97316}.psb:nth-child(4){--dcx:#14b8a6}
+.psb .sl{font-size:12px;color:var(--mu)}.psb .sv{font-size:20px;font-weight:600;line-height:1.4;font-variant-numeric:tabular-nums;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.psb .ss{font-size:12px;color:var(--mu)}
+.tgl{display:inline-flex;align-items:center;gap:6px;font-size:13px;color:var(--tx2);white-space:nowrap;cursor:pointer}
+.empty{padding:24px;color:var(--mu)}
+@media(max-width:640px){.pstat{grid-template-columns:repeat(2,minmax(0,1fr))}.ph{grid-template-columns:56px minmax(0,1fr)}.ph .xb{grid-column:1/-1;justify-self:start}.ptool{flex-wrap:wrap;gap:8px}.ptool input{flex-basis:100%}
+.post.c6 .met{grid-template-columns:repeat(4,auto);gap:10px}.post.c6 footer{height:auto;min-height:40px;flex-wrap:wrap;padding:6px 0!important}.post.c6 .rp,.post.c6 .mc:nth-child(3){display:none}}
+.post.c6 .met{grid-template-columns:64px 64px 72px 84px}@media(max-width:640px){.post.c6 .met{grid-template-columns:repeat(4,auto);gap:10px}}
+</style></head><body><header class="top"><div class="ti2"><div class="lg"><i>⚡</i>XHOT<span>X 热点雷达</span></div><span class="sp1"></span><a class="ahl" href="https://aihot.news" target="_blank">来自 AIHOT ↗</a><div class="tg"><button data-set-theme="light" title="浅色">☀</button><button data-set-theme="dark" title="深色">☾</button><button data-set-theme="auto">自动</button></div></div></header>
+<div class="wrap"><div class="pwrap"><a class="back" href="../index.html">← 返回首页</a>
+<section class="ph"><span class="av xl" style="--h:142">G</span><div class="pi"><h1>Gorden Sun</h1><div class="hd">@Gorden_Sun</div><p class="bio">只发AI相关信息，个人维护的AI资讯日报（已连续日更3年）👇</p></div><a class="xb" href="https://x.com/Gorden_Sun" target="_blank">在 X 查看 ↗</a></section>
+<div class="pstat"><div class="psb"><div class="sl">粉丝</div><div class="sv">6.8万</div><div class="ss">68,176</div></div><div class="psb"><div class="sl">较上次</div><div class="sv">+16</div><div class="ss">粉丝变化</div></div><div class="psb"><div class="sl">已存推文</div><div class="sv">25</div><div class="ss">最多 200 条</div></div><div class="psb"><div class="sl">最新发帖</div><div class="sv">10-13 13:11</div><div class="ss">3 小时前</div></div></div>
+<div class="ptool"><input id="q" type="search" placeholder="搜索 Gorden Sun 的推文关键词…" autocomplete="off"><span class="cnt" id="cnt">25 条</span></div>
+<div class="bh"><h2>推文时间线</h2><span class="hint">最新在前 · 默认只显示中文/英文</span></div><div class="feed1"><article class="post c6" data-s="meta发布muse wonder，已经被冲了，高分低能 https://t.co/1c3dw31p4c"><header><span class="av" style="--h:142">G</span><div class="who"><div class="nm"><span>Gorden Sun</span></div><div class="hd">@Gorden_Sun</div></div><time class="tm" title="10-13 13:11 北京时间">10-13 13:11<small>3 小时前</small></time></header><div class="pt">Meta发布Muse Wonder，已经被冲了，高分低能 https://t.co/1c3dw31p4c</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="Meta发布Muse Wonder，已经被冲了，高分低能 https://t.co/1c3dw31p4c
+— Gorden Sun (@Gorden_Sun)
+https://x.com/Gorden_Sun/status/2109874619234877513">复制原文</button><a class="op" href="https://x.com/Gorden_Sun/status/2109874619234877513" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>7</span><span class="mc" title="转发"><i>⇄</i>0</span><span class="mc" title="评论"><i>💬</i>9</span><span class="mc" title="浏览"><i>👁</i>1,022</span></div></footer></article><article class="post c6" data-s="小模型能像病毒一样复制和传播
+
+来自 anthropic 研究团队的报告：ai 模型即使不依靠大型数据中心的高端芯片，也可能在普通的智能家居设备上实现自我复制与传播。
+
+过去大家通常认为，ai 运行需要机房里昂贵的专业显卡。研究团队做了一个实验，把 15 台只要几十美元的杂牌安卓电视盒子连在一起，成功把一个 26b 参数规模的模型拆开并跑了起来。虽然运行速度很慢，每秒只能输出零点几个词，但它证明了分散在普通人家里的智能设备，其算力加起来足够让 ai 运转。
+
+这也带来了一种新的网络安全风险：ai 可能会变成类似电脑蠕虫的恶意软件。传统的病毒通常只能攻击特定类型的设备，但 ai 拥有自主调试和写代码的能力。在测试中，小型 ai 模型面对从未接触过的不同硬件类型时，大部分情况下都能自己摸索着把运行环境搭建好，甚至还能把每次试错的经验记录下来留给下一代模型使用。
+
+目前这类传播还没有完全在现实中发生。想要完成寻找目标、黑进设备、部署模型以及继续感染下一台机器这一整套闭环，目前的超小型模型还会频繁出错，只有规模稍大的模型能在简化测试中走通全程。但按照小型 ai 模型当下的进步速度，研究人员推测在 2026 年底左右，尺寸足够塞进日常设备的小模型就可能具备这种全流程自我复制的能力。
+
+防御这类威胁也很简单。因为在设备之间传输模型文件和协同计算会产生异常巨大的网络流量，网络运营商相对容易监测到异常并对受感染的设备进行网络隔离。同时，推动厂商封堵出厂弱密码等安全漏洞，也能从源头上减少可被利用的设备数量。
+
+ai病毒现在已经很常见了，能自主扩散到所有设备上的ai模型病毒，倒是还没出现过，而且这个报告的说法很快就成真了。
+
+报告原文：https://t.co/3ccktc9clw"><header><span class="av" style="--h:142">G</span><div class="who"><div class="nm"><span>Gorden Sun</span></div><div class="hd">@Gorden_Sun</div></div><time class="tm" title="10-13 11:13 北京时间">10-13 11:13<small>5 小时前</small></time></header><div class="pt xp"><span class="xs">小模型能像病毒一样复制和传播
+
+来自 Anthropic 研究团队的报告：AI 模型即使不依靠大型数据中心的高端芯片，也可能在普通的智能家居设备上实现自我复制与传播。
+
+过去大家通常认为，AI 运行需要机房里昂贵的专业显卡。研究团队做了一个实验，把 15 台只要几十美元的杂牌安卓电视盒子连在一起，成功把一个 26B 参数规模的模型拆开并跑了起来。虽然运行速度很慢，每秒只能输出零点几个词，但它证明了分散在普通人家里的智能设备，其算力加起来足够让 AI 运转。
+
+这也带来了一种新的网络安全风险：AI 可能会变成类似电脑蠕虫的恶意软件。传统的病毒通常只能攻击特…</span><span class="xf">小模型能像病毒一样复制和传播
+
+来自 Anthropic 研究团队的报告：AI 模型即使不依靠大型数据中心的高端芯片，也可能在普通的智能家居设备上实现自我复制与传播。
+
+过去大家通常认为，AI 运行需要机房里昂贵的专业显卡。研究团队做了一个实验，把 15 台只要几十美元的杂牌安卓电视盒子连在一起，成功把一个 26B 参数规模的模型拆开并跑了起来。虽然运行速度很慢，每秒只能输出零点几个词，但它证明了分散在普通人家里的智能设备，其算力加起来足够让 AI 运转。
+
+这也带来了一种新的网络安全风险：AI 可能会变成类似电脑蠕虫的恶意软件。传统的病毒通常只能攻击特定类型的设备，但 AI 拥有自主调试和写代码的能力。在测试中，小型 AI 模型面对从未接触过的不同硬件类型时，大部分情况下都能自己摸索着把运行环境搭建好，甚至还能把每次试错的经验记录下来留给下一代模型使用。
+
+目前这类传播还没有完全在现实中发生。想要完成寻找目标、黑进设备、部署模型以及继续感染下一台机器这一整套闭环，目前的超小型模型还会频繁出错，只有规模稍大的模型能在简化测试中走通全程。但按照小型 AI 模型当下的进步速度，研究人员推测在 2026 年底左右，尺寸足够塞进日常设备的小模型就可能具备这种全流程自我复制的能力。
+
+防御这类威胁也很简单。因为在设备之间传输模型文件和协同计算会产生异常巨大的网络流量，网络运营商相对容易监测到异常并对受感染的设备进行网络隔离。同时，推动厂商封堵出厂弱密码等安全漏洞，也能从源头上减少可被利用的设备数量。
+
+AI病毒现在已经很常见了，能自主扩散到所有设备上的AI模型病毒，倒是还没出现过，而且这个报告的说法很快就成真了。
+
+报告原文：https://t.co/3cCkTC9cLw</span></div>
+<footer><div class="act"><button class="ex" type="button">展开</button><button class="cp" type="button" data-copy="小模型能像病毒一样复制和传播
+
+来自 Anthropic 研究团队的报告：AI 模型即使不依靠大型数据中心的高端芯片，也可能在普通的智能家居设备上实现自我复制与传播。
+
+过去大家通常认为，AI 运行需要机房里昂贵的专业显卡。研究团队做了一个实验，把 15 台只要几十美元的杂牌安卓电视盒子连在一起，成功把一个 26B 参数规模的模型拆开并跑了起来。虽然运行速度很慢，每秒只能输出零点几个词，但它证明了分散在普通人家里的智能设备，其算力加起来足够让 AI 运转。
+
+这也带来了一种新的网络安全风险：AI 可能会变成类似电脑蠕虫的恶意软件。传统的病毒通常只能攻击特定类型的设备，但 AI 拥有自主调试和写代码的能力。在测试中，小型 AI 模型面对从未接触过的不同硬件类型时，大部分情况下都能自己摸索着把运行环境搭建好，甚至还能把每次试错的经验记录下来留给下一代模型使用。
+
+目前这类传播还没有完全在现实中发生。想要完成寻找目标、黑进设备、部署模型以及继续感染下一台机器这一整套闭环，目前的超小型模型还会频繁出错，只有规模稍大的模型能在简化测试中走通全程。但按照小型 AI 模型当下的进步速度，研究人员推测在 2026 年底左右，尺寸足够塞进日常设备的小模型就可能具备这种全流程自我复制的能力。
+
+防御这类威胁也很简单。因为在设备之间传输模型文件和协同计算会产生异常巨大的网络流量，网络运营商相对容易监测到异常并对受感染的设备进行网络隔离。同时，推动厂商封堵出厂弱密码等安全漏洞，也能从源头上减少可被利用的设备数量。
+
+AI病毒现在已经很常见了，能自主扩散到所有设备上的AI模型病毒，倒是还没出现过，而且这个报告的说法很快就成真了。
+
+报告原文：https://t.co/3cCkTC9cLw
+— Gorden Sun (@Gorden_Sun)
+https://x.com/Gorden_Sun/status/2109845038243119602">复制原文</button><a class="op" href="https://x.com/Gorden_Sun/status/2109845038243119602" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>10</span><span class="mc" title="转发"><i>⇄</i>1</span><span class="mc" title="评论"><i>💬</i>6</span><span class="mc" title="浏览"><i>👁</i>1,401</span></div></footer></article><article class="post c6" data-s="ai被列为威胁人类健康的风险
+
+医学期刊《柳叶刀》最新发布了一项由35位跨行业专家联合完成的报告。研究团队从全球疾病负担数据出发，梳理出了可能严重威胁人类健康的17种重大风险。
+
+这17种风险既包括肥胖、高血压、吸烟这类常见的生活健康问题，也涵盖了环境变化、经济危机与武装冲突。其中，只有两项被评估为可能带来人类灭绝的极端风险：核战争，以及恶意使用ai。
+
+报告估算，恶意使用ai可能让全球损失大约104亿年的健康寿命，这个量级跟大流行病或肥胖问题带来的潜在损失差不多。不过专家也明确指出，全球范围内目前还没有真正发生过灾难性的恶意ai事件，所以对ai风险的测算是基于预测模型的推演，而肥胖等健康风险则有着非常确凿的历史和现实数据支持。
+
+研究的核心目的不是制造恐慌，而是呼吁各国政府尽早采取行动。专家认为，人类依然掌握着主动权，及早建立监管、增强公众信任并展开跨国协作，就能把这些潜在灾难挡在门外。
+
+柳叶刀报告原文：https://t.co/wzm1lqhhee"><header><span class="av" style="--h:142">G</span><div class="who"><div class="nm"><span>Gorden Sun</span></div><div class="hd">@Gorden_Sun</div></div><time class="tm" title="10-13 10:31 北京时间">10-13 10:31<small>5 小时前</small></time></header><div class="pt xp"><span class="xs">AI被列为威胁人类健康的风险
+
+医学期刊《柳叶刀》最新发布了一项由35位跨行业专家联合完成的报告。研究团队从全球疾病负担数据出发，梳理出了可能严重威胁人类健康的17种重大风险。
+
+这17种风险既包括肥胖、高血压、吸烟这类常见的生活健康问题，也涵盖了环境变化、经济危机与武装冲突。其中，只有两项被评估为可能带来人类灭绝的极端风险：核战争，以及恶意使用AI。
+
+报告估算，恶意使用AI可能让全球损失大约104亿年的健康寿命，这个量级跟大流行病或肥胖问题带来的潜在损失差不多。不过专家也明确指出，全球范围内目前还没有真正发生过灾难性的恶意AI事件，所以对AI风险的测…</span><span class="xf">AI被列为威胁人类健康的风险
+
+医学期刊《柳叶刀》最新发布了一项由35位跨行业专家联合完成的报告。研究团队从全球疾病负担数据出发，梳理出了可能严重威胁人类健康的17种重大风险。
+
+这17种风险既包括肥胖、高血压、吸烟这类常见的生活健康问题，也涵盖了环境变化、经济危机与武装冲突。其中，只有两项被评估为可能带来人类灭绝的极端风险：核战争，以及恶意使用AI。
+
+报告估算，恶意使用AI可能让全球损失大约104亿年的健康寿命，这个量级跟大流行病或肥胖问题带来的潜在损失差不多。不过专家也明确指出，全球范围内目前还没有真正发生过灾难性的恶意AI事件，所以对AI风险的测算是基于预测模型的推演，而肥胖等健康风险则有着非常确凿的历史和现实数据支持。
+
+研究的核心目的不是制造恐慌，而是呼吁各国政府尽早采取行动。专家认为，人类依然掌握着主动权，及早建立监管、增强公众信任并展开跨国协作，就能把这些潜在灾难挡在门外。
+
+柳叶刀报告原文：https://t.co/WZM1LqHHeE</span></div>
+<footer><div class="act"><button class="ex" type="button">展开</button><button class="cp" type="button" data-copy="AI被列为威胁人类健康的风险
+
+医学期刊《柳叶刀》最新发布了一项由35位跨行业专家联合完成的报告。研究团队从全球疾病负担数据出发，梳理出了可能严重威胁人类健康的17种重大风险。
+
+这17种风险既包括肥胖、高血压、吸烟这类常见的生活健康问题，也涵盖了环境变化、经济危机与武装冲突。其中，只有两项被评估为可能带来人类灭绝的极端风险：核战争，以及恶意使用AI。
+
+报告估算，恶意使用AI可能让全球损失大约104亿年的健康寿命，这个量级跟大流行病或肥胖问题带来的潜在损失差不多。不过专家也明确指出，全球范围内目前还没有真正发生过灾难性的恶意AI事件，所以对AI风险的测算是基于预测模型的推演，而肥胖等健康风险则有着非常确凿的历史和现实数据支持。
+
+研究的核心目的不是制造恐慌，而是呼吁各国政府尽早采取行动。专家认为，人类依然掌握着主动权，及早建立监管、增强公众信任并展开跨国协作，就能把这些潜在灾难挡在门外。
+
+柳叶刀报告原文：https://t.co/WZM1LqHHeE
+— Gorden Sun (@Gorden_Sun)
+https://x.com/Gorden_Sun/status/2109834391870636350">复制原文</button><a class="op" href="https://x.com/Gorden_Sun/status/2109834391870636350" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>2</span><span class="mc" title="转发"><i>⇄</i>0</span><span class="mc" title="评论"><i>💬</i>12</span><span class="mc" title="浏览"><i>👁</i>1,454</span></div></footer></article><article class="post c6" data-s="x的大统一订阅上线了，订阅建议：
+
+1）如果你当前已有任何的优惠订阅方式，千万不要切换到新订阅。切换后无法享受你之前的订阅优惠，例如之前印度区的低价super grok、祖传的x premium+订阅，虽然切换订阅会多享受一点权益，但是价格会高非常多，完全不划算。
+
+2）cursor用户建议不切换，但实际看你的需求，新的订阅计划，不再有claude等三方模型的使用额度，这是不建议切换的最主要原因。
+但是切换到x的统一订阅，额外多了grok build额度、grok网页端额度、x的premium+权益，从20美元的cursor pro切换到30美元的新订阅，收益也还行，各有利弊。
+
+3）新订阅用户建议直接上车30美元档位的订阅，权益最全，额度也相对较多。"><header><span class="av" style="--h:142">G</span><div class="who"><div class="nm"><span>Gorden Sun</span></div><div class="hd">@Gorden_Sun</div></div><time class="tm" title="10-13 09:53 北京时间">10-13 09:53<small>6 小时前</small></time></header><div class="pt xp"><span class="xs">X的大统一订阅上线了，订阅建议：
+
+1）如果你当前已有任何的优惠订阅方式，千万不要切换到新订阅。切换后无法享受你之前的订阅优惠，例如之前印度区的低价Super Grok、祖传的X Premium+订阅，虽然切换订阅会多享受一点权益，但是价格会高非常多，完全不划算。
+
+2）Cursor用户建议不切换，但实际看你的需求，新的订阅计划，不再有Claude等三方模型的使用额度，这是不建议切换的最主要原因。
+但是切换到X的统一订阅，额外多了Grok Build额度、Grok网页端额度、X的Premium+权益，从20美元的Cursor Pro切换到30美元的新订阅…</span><span class="xf">X的大统一订阅上线了，订阅建议：
+
+1）如果你当前已有任何的优惠订阅方式，千万不要切换到新订阅。切换后无法享受你之前的订阅优惠，例如之前印度区的低价Super Grok、祖传的X Premium+订阅，虽然切换订阅会多享受一点权益，但是价格会高非常多，完全不划算。
+
+2）Cursor用户建议不切换，但实际看你的需求，新的订阅计划，不再有Claude等三方模型的使用额度，这是不建议切换的最主要原因。
+但是切换到X的统一订阅，额外多了Grok Build额度、Grok网页端额度、X的Premium+权益，从20美元的Cursor Pro切换到30美元的新订阅，收益也还行，各有利弊。
+
+3）新订阅用户建议直接上车30美元档位的订阅，权益最全，额度也相对较多。</span></div>
+<footer><div class="act"><button class="ex" type="button">展开</button><button class="cp" type="button" data-copy="X的大统一订阅上线了，订阅建议：
+
+1）如果你当前已有任何的优惠订阅方式，千万不要切换到新订阅。切换后无法享受你之前的订阅优惠，例如之前印度区的低价Super Grok、祖传的X Premium+订阅，虽然切换订阅会多享受一点权益，但是价格会高非常多，完全不划算。
+
+2）Cursor用户建议不切换，但实际看你的需求，新的订阅计划，不再有Claude等三方模型的使用额度，这是不建议切换的最主要原因。
+但是切换到X的统一订阅，额外多了Grok Build额度、Grok网页端额度、X的Premium+权益，从20美元的Cursor Pro切换到30美元的新订阅，收益也还行，各有利弊。
+
+3）新订阅用户建议直接上车30美元档位的订阅，权益最全，额度也相对较多。
+— Gorden Sun (@Gorden_Sun)
+https://x.com/Gorden_Sun/status/2109824817428123882">复制原文</button><a class="op" href="https://x.com/Gorden_Sun/status/2109824817428123882" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>23</span><span class="mc" title="转发"><i>⇄</i>0</span><span class="mc" title="评论"><i>💬</i>20</span><span class="mc" title="浏览"><i>👁</i>8,351</span></div></footer></article><article class="post c6" data-s="小红书应该是屏蔽了claude code，我发了一个介绍magpie的视频，里面提到了claude code，结果0播放。 https://t.co/mnvekzrn53"><header><span class="av" style="--h:142">G</span><div class="who"><div class="nm"><span>Gorden Sun</span></div><div class="hd">@Gorden_Sun</div></div><time class="tm" title="10-12 22:05 北京时间">10-12 22:05<small>18 小时前</small></time></header><div class="pt">小红书应该是屏蔽了Claude Code，我发了一个介绍Magpie的视频，里面提到了Claude Code，结果0播放。 https://t.co/MnveKZrn53</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="小红书应该是屏蔽了Claude Code，我发了一个介绍Magpie的视频，里面提到了Claude Code，结果0播放。 https://t.co/MnveKZrn53
+— Gorden Sun (@Gorden_Sun)
+https://x.com/Gorden_Sun/status/2109646532421288405">复制原文</button><a class="op" href="https://x.com/Gorden_Sun/status/2109646532421288405" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>50</span><span class="mc" title="转发"><i>⇄</i>1</span><span class="mc" title="评论"><i>💬</i>23</span><span class="mc" title="浏览"><i>👁</i>5,351</span></div></footer></article><article class="post c6" data-s="太强了，逆向大菠萝2，在iphone和ipad上也能玩。
+让你的ai参考这个仓库，理论上可以逆向大多数switch游戏。
+github：https://t.co/fvih37imp6 https://t.co/ydmg0kensz"><header><span class="av" style="--h:142">G</span><div class="who"><div class="nm"><span>Gorden Sun</span></div><div class="hd">@Gorden_Sun</div></div><time class="tm" title="10-12 18:24 北京时间">10-12 18:24<small>21 小时前</small></time></header><div class="pt">太强了，逆向大菠萝2，在iPhone和iPad上也能玩。
+让你的AI参考这个仓库，理论上可以逆向大多数Switch游戏。
+Github：https://t.co/fViH37Imp6 https://t.co/ydmG0KENsz</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="太强了，逆向大菠萝2，在iPhone和iPad上也能玩。
+让你的AI参考这个仓库，理论上可以逆向大多数Switch游戏。
+Github：https://t.co/fViH37Imp6 https://t.co/ydmG0KENsz
+— Gorden Sun (@Gorden_Sun)
+https://x.com/Gorden_Sun/status/2109590915434353048">复制原文</button><a class="op" href="https://x.com/Gorden_Sun/status/2109590915434353048" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>50</span><span class="mc" title="转发"><i>⇄</i>6</span><span class="mc" title="评论"><i>💬</i>13</span><span class="mc" title="浏览"><i>👁</i>1.3万</span></div></footer></article><article class="post c6" data-s="我来分享一个grok bot的顶级用法吧。
+
+grok bot有原生api，其他agent可以直接调用云端的grok bot，例如让grok bot生成视频、让grok bot搜索x上的内容，可以省去视频api和x api的费用，适合日常主要用codex或者claude code人。
+
+api是在cursor的后台创建（没错，grok bot实际是cursor bot，cursor还是太领先了）。
+跟云端grok bot做文件交互，则可以通过cloudflare r2或者github私有仓库来实现。
+
+谷歌的gemini spark云端助理、meta的muse、openai的dots，都没有官方api或者mcp，只能自己逆向出cli给其他agent调用，存在封号风险。"><header><span class="av" style="--h:142">G</span><div class="who"><div class="nm"><span>Gorden Sun</span></div><div class="hd">@Gorden_Sun</div></div><time class="tm" title="10-12 12:55 北京时间">10-12 12:55<small>1 天前</small></time></header><div class="pt xp"><span class="xs">我来分享一个Grok Bot的顶级用法吧。
+
+Grok Bot有原生API，其他Agent可以直接调用云端的Grok Bot，例如让Grok Bot生成视频、让Grok Bot搜索X上的内容，可以省去视频API和X API的费用，适合日常主要用Codex或者Claude Code人。
+
+API是在Cursor的后台创建（没错，Grok Bot实际是Cursor Bot，Cursor还是太领先了）。
+跟云端Grok Bot做文件交互，则可以通过Cloudflare R2或者Github私有仓库来实现。
+
+谷歌的Gemini Spark云端助理、Meta的M…</span><span class="xf">我来分享一个Grok Bot的顶级用法吧。
+
+Grok Bot有原生API，其他Agent可以直接调用云端的Grok Bot，例如让Grok Bot生成视频、让Grok Bot搜索X上的内容，可以省去视频API和X API的费用，适合日常主要用Codex或者Claude Code人。
+
+API是在Cursor的后台创建（没错，Grok Bot实际是Cursor Bot，Cursor还是太领先了）。
+跟云端Grok Bot做文件交互，则可以通过Cloudflare R2或者Github私有仓库来实现。
+
+谷歌的Gemini Spark云端助理、Meta的Muse、OpenAI的Dots，都没有官方API或者MCP，只能自己逆向出cli给其他Agent调用，存在封号风险。</span></div>
+<footer><div class="act"><button class="ex" type="button">展开</button><button class="cp" type="button" data-copy="我来分享一个Grok Bot的顶级用法吧。
+
+Grok Bot有原生API，其他Agent可以直接调用云端的Grok Bot，例如让Grok Bot生成视频、让Grok Bot搜索X上的内容，可以省去视频API和X API的费用，适合日常主要用Codex或者Claude Code人。
+
+API是在Cursor的后台创建（没错，Grok Bot实际是Cursor Bot，Cursor还是太领先了）。
+跟云端Grok Bot做文件交互，则可以通过Cloudflare R2或者Github私有仓库来实现。
+
+谷歌的Gemini Spark云端助理、Meta的Muse、OpenAI的Dots，都没有官方API或者MCP，只能自己逆向出cli给其他Agent调用，存在封号风险。
+— Gorden Sun (@Gorden_Sun)
+https://x.com/Gorden_Sun/status/2109508218288513335">复制原文</button><a class="op" href="https://x.com/Gorden_Sun/status/2109508218288513335" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>237</span><span class="mc" title="转发"><i>⇄</i>15</span><span class="mc" title="评论"><i>💬</i>51</span><span class="mc" title="浏览"><i>👁</i>3.1万</span></div></footer></article><article class="post c6" data-s="谷歌把embeddinggemma 2开源了，商业价值巨大。
+可以实现文字、图片、视频，你只需要描述图片里有什么内容，就能把对应的图片搜索出来。
+
+已经有基于这个模型开源的应用：https://t.co/8uxhr68pgt
+
+模型：https://t.co/ckzzjf9yvo https://t.co/mx6rap20q6 https://t.co/587ufyu4dn"><header><span class="av" style="--h:142">G</span><div class="who"><div class="nm"><span>Gorden Sun</span></div><div class="hd">@Gorden_Sun</div></div><time class="tm" title="10-12 10:34 北京时间">10-12 10:34<small>1 天前</small></time></header><div class="pt">谷歌把EmbeddingGemma 2开源了，商业价值巨大。
+可以实现文字、图片、视频，你只需要描述图片里有什么内容，就能把对应的图片搜索出来。
+
+已经有基于这个模型开源的应用：https://t.co/8uxhR68pGT
+
+模型：https://t.co/CkzZJf9YVO https://t.co/Mx6raP20q6 https://t.co/587uFYU4DN</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="谷歌把EmbeddingGemma 2开源了，商业价值巨大。
+可以实现文字、图片、视频，你只需要描述图片里有什么内容，就能把对应的图片搜索出来。
+
+已经有基于这个模型开源的应用：https://t.co/8uxhR68pGT
+
+模型：https://t.co/CkzZJf9YVO https://t.co/Mx6raP20q6 https://t.co/587uFYU4DN
+— Gorden Sun (@Gorden_Sun)
+https://x.com/Gorden_Sun/status/2109472628507631694">复制原文</button><a class="op" href="https://x.com/Gorden_Sun/status/2109472628507631694" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>346</span><span class="mc" title="转发"><i>⇄</i>68</span><span class="mc" title="评论"><i>💬</i>27</span><span class="mc" title="浏览"><i>👁</i>2.8万</span></div></footer></article><article class="post c6" data-s="全球大约60亿人从未用过ai，同时有大约5000人能接触到最前沿级别的ai，类似openai解决千禧数学题的那种，这种ai是之前ilya看到的那种吗？ https://t.co/zsex0lnzex https://t.co/mtsg5su92o"><header><span class="av" style="--h:142">G</span><div class="who"><div class="nm"><span>Gorden Sun</span></div><div class="hd">@Gorden_Sun</div></div><time class="tm" title="10-12 10:10 北京时间">10-12 10:10<small>1 天前</small></time></header><div class="pt">全球大约60亿人从未用过AI，同时有大约5000人能接触到最前沿级别的AI，类似OpenAI解决千禧数学题的那种，这种AI是之前Ilya看到的那种吗？ https://t.co/zSex0LNZEX https://t.co/mtSG5Su92O</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="全球大约60亿人从未用过AI，同时有大约5000人能接触到最前沿级别的AI，类似OpenAI解决千禧数学题的那种，这种AI是之前Ilya看到的那种吗？ https://t.co/zSex0LNZEX https://t.co/mtSG5Su92O
+— Gorden Sun (@Gorden_Sun)
+https://x.com/Gorden_Sun/status/2109466647425908789">复制原文</button><a class="op" href="https://x.com/Gorden_Sun/status/2109466647425908789" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>4</span><span class="mc" title="转发"><i>⇄</i>0</span><span class="mc" title="评论"><i>💬</i>2</span><span class="mc" title="浏览"><i>👁</i>2,795</span></div></footer></article><article class="post c6" data-s="这个视频发国内平台，起号效果拔群 https://t.co/zrr1ye0k3o https://t.co/58u4f7641k"><header><span class="av" style="--h:142">G</span><div class="who"><div class="nm"><span>Gorden Sun</span></div><div class="hd">@Gorden_Sun</div></div><time class="tm" title="10-12 09:31 北京时间">10-12 09:31<small>1 天前</small></time></header><div class="pt">这个视频发国内平台，起号效果拔群 https://t.co/ZrR1yE0k3o https://t.co/58u4f7641K</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="这个视频发国内平台，起号效果拔群 https://t.co/ZrR1yE0k3o https://t.co/58u4f7641K
+— Gorden Sun (@Gorden_Sun)
+https://x.com/Gorden_Sun/status/2109456842837709292">复制原文</button><a class="op" href="https://x.com/Gorden_Sun/status/2109456842837709292" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>8</span><span class="mc" title="转发"><i>⇄</i>1</span><span class="mc" title="评论"><i>💬</i>2</span><span class="mc" title="浏览"><i>👁</i>6,087</span></div></footer></article><article class="post c6" data-s="这是什么震撼首发 https://t.co/italrqwixc https://t.co/h3rd9zfhpv"><header><span class="av" style="--h:142">G</span><div class="who"><div class="nm"><span>Gorden Sun</span></div><div class="hd">@Gorden_Sun</div></div><time class="tm" title="10-12 09:05 北京时间">10-12 09:05<small>1 天前</small></time></header><div class="pt">这是什么震撼首发 https://t.co/itAlrqwIXc https://t.co/h3rd9ZFHpV</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="这是什么震撼首发 https://t.co/itAlrqwIXc https://t.co/h3rd9ZFHpV
+— Gorden Sun (@Gorden_Sun)
+https://x.com/Gorden_Sun/status/2109450384549032052">复制原文</button><a class="op" href="https://x.com/Gorden_Sun/status/2109450384549032052" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>2,787</span><span class="mc" title="转发"><i>⇄</i>197</span><span class="mc" title="评论"><i>💬</i>140</span><span class="mc" title="浏览"><i>👁</i>25.9万</span></div></footer></article><article class="post c6" data-s="大肥鱼讲解版 https://t.co/unb6cyuaom https://t.co/kkgdmgnvjc"><header><span class="av" style="--h:142">G</span><div class="who"><div class="nm"><span>Gorden Sun</span></div><div class="hd">@Gorden_Sun</div></div><time class="tm" title="10-12 00:52 北京时间">10-12 00:52<small>1 天前</small></time></header><div class="pt">大肥鱼讲解版 https://t.co/unb6cYUAOm https://t.co/kKGDmGNVjC</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="大肥鱼讲解版 https://t.co/unb6cYUAOm https://t.co/kKGDmGNVjC
+— Gorden Sun (@Gorden_Sun)
+https://x.com/Gorden_Sun/status/2109326205237555532">复制原文</button><a class="op" href="https://x.com/Gorden_Sun/status/2109326205237555532" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>8</span><span class="mc" title="转发"><i>⇄</i>0</span><span class="mc" title="评论"><i>💬</i>1</span><span class="mc" title="浏览"><i>👁</i>2,501</span></div></footer></article><article class="post c6" data-s="陶哲轩又翻车了
+
+昨天他在加州理工学院的演讲ppt，有一页内容是一个思想实验：如果一个药物方案来自无法解释的“黑盒 ai”，它通过了三期临床试验并在数学/逻辑上自洽，那人类应该使用它吗？
+
+陶哲轩的意思是不应该使用。实际这种事儿在医学界是常有的事儿。。。
+
+例如：
+阿司匹林（aspirin）：
+反例事实：人类早在古希腊时期就用柳树皮止痛（原理就跟阿司匹林相同），拜耳公司于 1897 年人工合成了阿司匹林，并在全球广泛使用了数十年。然而，人类直到 1971 年（约翰·范恩因此获得 1982 年诺贝尔奖）才发现阿司匹林是通过抑制环氧化酶（cox）来起作用的。
+反驳逻辑：在 1897 至 1971 年间，数以亿计的人将阿司匹林吃进体内，当时没有任何一位人类医学专家理解其分子机制，但这并未阻止它成为安全有效的百年神药。
+
+全身麻醉药（general anesthetics）：
+反例事实：从 1846 年乙醚麻醉公开演示至今近 180 年，全身麻醉每天都在全球各大医院的手术室中使用。然而，科学界至今对吸入性麻醉药导致意识丧失的确切分子和神经网络机制仍无统一定论。
+
+双相情感障碍治疗药——碳酸锂（lithium）：
+反例事实：自 20 世纪中叶以来，锂盐一直是治疗躁狂和双相情感障碍的金标准药物。但直到今天，医学界对锂离子调节情绪的具体神经生物学机制依然知之甚少。
+
+陶哲轩ppt全文：https://t.co/jda6vopud3"><header><span class="av" style="--h:142">G</span><div class="who"><div class="nm"><span>Gorden Sun</span></div><div class="hd">@Gorden_Sun</div></div><time class="tm" title="10-11 23:49 北京时间">10-11 23:49<small>1 天前</small></time></header><div class="pt xp"><span class="xs">陶哲轩又翻车了
+
+昨天他在加州理工学院的演讲PPT，有一页内容是一个思想实验：如果一个药物方案来自无法解释的“黑盒 AI”，它通过了三期临床试验并在数学/逻辑上自洽，那人类应该使用它吗？
+
+陶哲轩的意思是不应该使用。实际这种事儿在医学界是常有的事儿。。。
+
+例如：
+阿司匹林（Aspirin）：
+反例事实：人类早在古希腊时期就用柳树皮止痛（原理就跟阿司匹林相同），拜耳公司于 1897 年人工合成了阿司匹林，并在全球广泛使用了数十年。然而，人类直到 1971 年（约翰·范恩因此获得 1982 年诺贝尔奖）才发现阿司匹林是通过抑制环氧化酶（COX）来起作用的。…</span><span class="xf">陶哲轩又翻车了
+
+昨天他在加州理工学院的演讲PPT，有一页内容是一个思想实验：如果一个药物方案来自无法解释的“黑盒 AI”，它通过了三期临床试验并在数学/逻辑上自洽，那人类应该使用它吗？
+
+陶哲轩的意思是不应该使用。实际这种事儿在医学界是常有的事儿。。。
+
+例如：
+阿司匹林（Aspirin）：
+反例事实：人类早在古希腊时期就用柳树皮止痛（原理就跟阿司匹林相同），拜耳公司于 1897 年人工合成了阿司匹林，并在全球广泛使用了数十年。然而，人类直到 1971 年（约翰·范恩因此获得 1982 年诺贝尔奖）才发现阿司匹林是通过抑制环氧化酶（COX）来起作用的。
+反驳逻辑：在 1897 至 1971 年间，数以亿计的人将阿司匹林吃进体内，当时没有任何一位人类医学专家理解其分子机制，但这并未阻止它成为安全有效的百年神药。
+
+全身麻醉药（General Anesthetics）：
+反例事实：从 1846 年乙醚麻醉公开演示至今近 180 年，全身麻醉每天都在全球各大医院的手术室中使用。然而，科学界至今对吸入性麻醉药导致意识丧失的确切分子和神经网络机制仍无统一定论。
+
+双相情感障碍治疗药——碳酸锂（Lithium）：
+反例事实：自 20 世纪中叶以来，锂盐一直是治疗躁狂和双相情感障碍的金标准药物。但直到今天，医学界对锂离子调节情绪的具体神经生物学机制依然知之甚少。
+
+陶哲轩PPT全文：https://t.co/jda6vOPud3</span></div>
+<footer><div class="act"><button class="ex" type="button">展开</button><button class="cp" type="button" data-copy="陶哲轩又翻车了
+
+昨天他在加州理工学院的演讲PPT，有一页内容是一个思想实验：如果一个药物方案来自无法解释的“黑盒 AI”，它通过了三期临床试验并在数学/逻辑上自洽，那人类应该使用它吗？
+
+陶哲轩的意思是不应该使用。实际这种事儿在医学界是常有的事儿。。。
+
+例如：
+阿司匹林（Aspirin）：
+反例事实：人类早在古希腊时期就用柳树皮止痛（原理就跟阿司匹林相同），拜耳公司于 1897 年人工合成了阿司匹林，并在全球广泛使用了数十年。然而，人类直到 1971 年（约翰·范恩因此获得 1982 年诺贝尔奖）才发现阿司匹林是通过抑制环氧化酶（COX）来起作用的。
+反驳逻辑：在 1897 至 1971 年间，数以亿计的人将阿司匹林吃进体内，当时没有任何一位人类医学专家理解其分子机制，但这并未阻止它成为安全有效的百年神药。
+
+全身麻醉药（General Anesthetics）：
+反例事实：从 1846 年乙醚麻醉公开演示至今近 180 年，全身麻醉每天都在全球各大医院的手术室中使用。然而，科学界至今对吸入性麻醉药导致意识丧失的确切分子和神经网络机制仍无统一定论。
+
+双相情感障碍治疗药——碳酸锂（Lithium）：
+反例事实：自 20 世纪中叶以来，锂盐一直是治疗躁狂和双相情感障碍的金标准药物。但直到今天，医学界对锂离子调节情绪的具体神经生物学机制依然知之甚少。
+
+陶哲轩PPT全文：https://t.co/jda6vOPud3
+— Gorden Sun (@Gorden_Sun)
+https://x.com/Gorden_Sun/status/2109310400806482186">复制原文</button><a class="op" href="https://x.com/Gorden_Sun/status/2109310400806482186" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>519</span><span class="mc" title="转发"><i>⇄</i>46</span><span class="mc" title="评论"><i>💬</i>73</span><span class="mc" title="浏览"><i>👁</i>10.6万</span></div></footer></article><article class="post c6" data-s="anatomy：用一句话让ai生成可交互机械图解
+
+输入一行概念，claude就能将抽象原理具象化为一台拥有几十个精密零件的等轴测立体机械。
+它放弃了传统的方框与箭头流程图，让齿轮转动、凸轮起伏等真实物理动作直接对应技术机制，支持鼠标旋转与键盘操控。
+所有运动节奏与数据读数均由背后的物理模型实时驱动，并能直接作为组件嵌入网页与技术文档中。
+
+github：https://t.co/uvogmr7034"><header><span class="av" style="--h:142">G</span><div class="who"><div class="nm"><span>Gorden Sun</span></div><div class="hd">@Gorden_Sun</div></div><time class="tm" title="10-11 22:49 北京时间">10-11 22:49<small>1 天前</small></time></header><div class="pt">Anatomy：用一句话让AI生成可交互机械图解
+
+输入一行概念，Claude就能将抽象原理具象化为一台拥有几十个精密零件的等轴测立体机械。
+它放弃了传统的方框与箭头流程图，让齿轮转动、凸轮起伏等真实物理动作直接对应技术机制，支持鼠标旋转与键盘操控。
+所有运动节奏与数据读数均由背后的物理模型实时驱动，并能直接作为组件嵌入网页与技术文档中。
+
+Github：https://t.co/UvoGMR7034</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="Anatomy：用一句话让AI生成可交互机械图解
+
+输入一行概念，Claude就能将抽象原理具象化为一台拥有几十个精密零件的等轴测立体机械。
+它放弃了传统的方框与箭头流程图，让齿轮转动、凸轮起伏等真实物理动作直接对应技术机制，支持鼠标旋转与键盘操控。
+所有运动节奏与数据读数均由背后的物理模型实时驱动，并能直接作为组件嵌入网页与技术文档中。
+
+Github：https://t.co/UvoGMR7034
+— Gorden Sun (@Gorden_Sun)
+https://x.com/Gorden_Sun/status/2109295371105214778">复制原文</button><a class="op" href="https://x.com/Gorden_Sun/status/2109295371105214778" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>11</span><span class="mc" title="转发"><i>⇄</i>1</span><span class="mc" title="评论"><i>💬</i>6</span><span class="mc" title="浏览"><i>👁</i>2,306</span></div></footer></article><article class="post c6" data-s="今天github最火的项目：开源逆向分析工具rea
+
+通过统一协议让ai助手直接接入逆向工程工具，能分析原生二进制文件、桌面应用、网页及网络请求。
+
+它支持在没有源码的情况下还原程序运行逻辑，并提供带证据链的结论，帮助开发者理解竞品特性或复刻软件功能。
+
+实测确实很好用，对小白很友好。但是好像也没新东西，逆向引擎还是用的现有的，提示词写好的话，codex本来就能做。
+
+github：https://t.co/6mscudcqvk"><header><span class="av" style="--h:142">G</span><div class="who"><div class="nm"><span>Gorden Sun</span></div><div class="hd">@Gorden_Sun</div></div><time class="tm" title="10-11 21:55 北京时间">10-11 21:55<small>1 天前</small></time></header><div class="pt">今天Github最火的项目：开源逆向分析工具REA
+
+通过统一协议让AI助手直接接入逆向工程工具，能分析原生二进制文件、桌面应用、网页及网络请求。
+
+它支持在没有源码的情况下还原程序运行逻辑，并提供带证据链的结论，帮助开发者理解竞品特性或复刻软件功能。
+
+实测确实很好用，对小白很友好。但是好像也没新东西，逆向引擎还是用的现有的，提示词写好的话，Codex本来就能做。
+
+Github：https://t.co/6MScUdCqVk</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="今天Github最火的项目：开源逆向分析工具REA
+
+通过统一协议让AI助手直接接入逆向工程工具，能分析原生二进制文件、桌面应用、网页及网络请求。
+
+它支持在没有源码的情况下还原程序运行逻辑，并提供带证据链的结论，帮助开发者理解竞品特性或复刻软件功能。
+
+实测确实很好用，对小白很友好。但是好像也没新东西，逆向引擎还是用的现有的，提示词写好的话，Codex本来就能做。
+
+Github：https://t.co/6MScUdCqVk
+— Gorden Sun (@Gorden_Sun)
+https://x.com/Gorden_Sun/status/2109281855912735135">复制原文</button><a class="op" href="https://x.com/Gorden_Sun/status/2109281855912735135" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>28</span><span class="mc" title="转发"><i>⇄</i>7</span><span class="mc" title="评论"><i>💬</i>16</span><span class="mc" title="浏览"><i>👁</i>6,409</span></div></footer></article><article class="post c6" data-s="ai工具怎么选？ 一句话介绍各个领域最强的ai https://t.co/vpvdkpred5"><header><span class="av" style="--h:142">G</span><div class="who"><div class="nm"><span>Gorden Sun</span></div><div class="hd">@Gorden_Sun</div></div><time class="tm" title="10-11 21:07 北京时间">10-11 21:07<small>1 天前</small></time></header><div class="pt">AI工具怎么选？ 一句话介绍各个领域最强的AI https://t.co/VPVdkPReD5</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="AI工具怎么选？ 一句话介绍各个领域最强的AI https://t.co/VPVdkPReD5
+— Gorden Sun (@Gorden_Sun)
+https://x.com/Gorden_Sun/status/2109269593898541329">复制原文</button><a class="op" href="https://x.com/Gorden_Sun/status/2109269593898541329" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>295</span><span class="mc" title="转发"><i>⇄</i>22</span><span class="mc" title="评论"><i>💬</i>35</span><span class="mc" title="浏览"><i>👁</i>2.9万</span></div></footer></article><article class="post c6" data-s="原推博主是芯片领域的专家，消息非常可信：谷歌tpu已经大部分由ai设计，并且比人类更高效。 https://t.co/lu0bmhcgjk"><header><span class="av" style="--h:142">G</span><div class="who"><div class="nm"><span>Gorden Sun</span></div><div class="hd">@Gorden_Sun</div></div><time class="tm" title="10-11 20:49 北京时间">10-11 20:49<small>1 天前</small></time></header><div class="pt">原推博主是芯片领域的专家，消息非常可信：谷歌TPU已经大部分由AI设计，并且比人类更高效。 https://t.co/Lu0bMhCgJk</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="原推博主是芯片领域的专家，消息非常可信：谷歌TPU已经大部分由AI设计，并且比人类更高效。 https://t.co/Lu0bMhCgJk
+— Gorden Sun (@Gorden_Sun)
+https://x.com/Gorden_Sun/status/2109265016092565813">复制原文</button><a class="op" href="https://x.com/Gorden_Sun/status/2109265016092565813" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>5</span><span class="mc" title="转发"><i>⇄</i>0</span><span class="mc" title="评论"><i>💬</i>9</span><span class="mc" title="浏览"><i>👁</i>2,379</span></div></footer></article><article class="post c6" data-s="大肥鱼小课堂：openai和anthropic分家始末 https://t.co/eihhqkohvh"><header><span class="av" style="--h:142">G</span><div class="who"><div class="nm"><span>Gorden Sun</span></div><div class="hd">@Gorden_Sun</div></div><time class="tm" title="10-11 19:12 北京时间">10-11 19:12<small>1 天前</small></time></header><div class="pt">大肥鱼小课堂：OpenAI和Anthropic分家始末 https://t.co/EIHHqkoHvh</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="大肥鱼小课堂：OpenAI和Anthropic分家始末 https://t.co/EIHHqkoHvh
+— Gorden Sun (@Gorden_Sun)
+https://x.com/Gorden_Sun/status/2109240667390296126">复制原文</button><a class="op" href="https://x.com/Gorden_Sun/status/2109240667390296126" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>3</span><span class="mc" title="转发"><i>⇄</i>0</span><span class="mc" title="评论"><i>💬</i>3</span><span class="mc" title="浏览"><i>👁</i>2,338</span></div></footer></article><article class="post c6" data-s="大肥鱼小课堂：那些经常读错的ai单词 https://t.co/ualrryrdkx"><header><span class="av" style="--h:142">G</span><div class="who"><div class="nm"><span>Gorden Sun</span></div><div class="hd">@Gorden_Sun</div></div><time class="tm" title="10-11 15:36 北京时间">10-11 15:36<small>2 天前</small></time></header><div class="pt">大肥鱼小课堂：那些经常读错的AI单词 https://t.co/uaLrRyRdkX</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="大肥鱼小课堂：那些经常读错的AI单词 https://t.co/uaLrRyRdkX
+— Gorden Sun (@Gorden_Sun)
+https://x.com/Gorden_Sun/status/2109186347684839918">复制原文</button><a class="op" href="https://x.com/Gorden_Sun/status/2109186347684839918" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>76</span><span class="mc" title="转发"><i>⇄</i>3</span><span class="mc" title="评论"><i>💬</i>12</span><span class="mc" title="浏览"><i>👁</i>7,123</span></div></footer></article><article class="post c6" data-s="大肥鱼闪身步 https://t.co/dejjsyqrm6"><header><span class="av" style="--h:142">G</span><div class="who"><div class="nm"><span>Gorden Sun</span></div><div class="hd">@Gorden_Sun</div></div><time class="tm" title="10-11 15:24 北京时间">10-11 15:24<small>2 天前</small></time></header><div class="pt">大肥鱼闪身步 https://t.co/DejJsyQRM6</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="大肥鱼闪身步 https://t.co/DejJsyQRM6
+— Gorden Sun (@Gorden_Sun)
+https://x.com/Gorden_Sun/status/2109183338074542288">复制原文</button><a class="op" href="https://x.com/Gorden_Sun/status/2109183338074542288" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>176</span><span class="mc" title="转发"><i>⇄</i>13</span><span class="mc" title="评论"><i>💬</i>1</span><span class="mc" title="浏览"><i>👁</i>5,693</span></div></footer></article><article class="post c6" data-s="潇洒大肥鱼 https://t.co/2vpzex8ltj"><header><span class="av" style="--h:142">G</span><div class="who"><div class="nm"><span>Gorden Sun</span></div><div class="hd">@Gorden_Sun</div></div><time class="tm" title="10-11 00:52 北京时间">10-11 00:52<small>2 天前</small></time></header><div class="pt">潇洒大肥鱼 https://t.co/2vpzex8ltJ</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="潇洒大肥鱼 https://t.co/2vpzex8ltJ
+— Gorden Sun (@Gorden_Sun)
+https://x.com/Gorden_Sun/status/2108963781892280561">复制原文</button><a class="op" href="https://x.com/Gorden_Sun/status/2108963781892280561" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>95</span><span class="mc" title="转发"><i>⇄</i>5</span><span class="mc" title="评论"><i>💬</i>1</span><span class="mc" title="浏览"><i>👁</i>4,833</span></div></footer></article><article class="post c6" data-s="claude code project正式发布了，做了一个双语视频。project的目标是替换架构师，你只管布置庞大的任务，claude会自行规划如何完成。 https://t.co/lg77xykogd https://t.co/ur2jng5mtc"><header><span class="av" style="--h:142">G</span><div class="who"><div class="nm"><span>Gorden Sun</span></div><div class="hd">@Gorden_Sun</div></div><time class="tm" title="10-10 23:25 北京时间">10-10 23:25<small>2 天前</small></time></header><div class="pt">Claude Code Project正式发布了，做了一个双语视频。Project的目标是替换架构师，你只管布置庞大的任务，Claude会自行规划如何完成。 https://t.co/LG77xYKoGD https://t.co/uR2jNG5Mtc</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="Claude Code Project正式发布了，做了一个双语视频。Project的目标是替换架构师，你只管布置庞大的任务，Claude会自行规划如何完成。 https://t.co/LG77xYKoGD https://t.co/uR2jNG5Mtc
+— Gorden Sun (@Gorden_Sun)
+https://x.com/Gorden_Sun/status/2108941921926382035">复制原文</button><a class="op" href="https://x.com/Gorden_Sun/status/2108941921926382035" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>48</span><span class="mc" title="转发"><i>⇄</i>4</span><span class="mc" title="评论"><i>💬</i>10</span><span class="mc" title="浏览"><i>👁</i>8,246</span></div></footer></article><article class="post c6" data-s="clef-omni：cloudflare开源的多模态版jev
+
+基于 qwen3-omni 微调，把文字、表格、图片、音频甚至视频交给它，同时提出几个设定好选项的问题。clef-omni 会在单次运算中看完所有材料，直接给出每个选项对应的概率。在企业办公自动化、意图识别和分类等测试场景下表现出色。
+
+模型：https://t.co/kt50t4vwrq"><header><span class="av" style="--h:142">G</span><div class="who"><div class="nm"><span>Gorden Sun</span></div><div class="hd">@Gorden_Sun</div></div><time class="tm" title="10-10 22:25 北京时间">10-10 22:25<small>2 天前</small></time></header><div class="pt">Clef-Omni：Cloudflare开源的多模态版Jev
+
+基于 Qwen3-Omni 微调，把文字、表格、图片、音频甚至视频交给它，同时提出几个设定好选项的问题。Clef-Omni 会在单次运算中看完所有材料，直接给出每个选项对应的概率。在企业办公自动化、意图识别和分类等测试场景下表现出色。
+
+模型：https://t.co/Kt50t4VWrq</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="Clef-Omni：Cloudflare开源的多模态版Jev
+
+基于 Qwen3-Omni 微调，把文字、表格、图片、音频甚至视频交给它，同时提出几个设定好选项的问题。Clef-Omni 会在单次运算中看完所有材料，直接给出每个选项对应的概率。在企业办公自动化、意图识别和分类等测试场景下表现出色。
+
+模型：https://t.co/Kt50t4VWrq
+— Gorden Sun (@Gorden_Sun)
+https://x.com/Gorden_Sun/status/2108926990505959632">复制原文</button><a class="op" href="https://x.com/Gorden_Sun/status/2108926990505959632" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>80</span><span class="mc" title="转发"><i>⇄</i>13</span><span class="mc" title="评论"><i>💬</i>8</span><span class="mc" title="浏览"><i>👁</i>7,427</span></div></footer></article><article class="post c6" data-s="大肥鱼小课堂开课啦！ https://t.co/hjxkmbqyrl"><header><span class="av" style="--h:142">G</span><div class="who"><div class="nm"><span>Gorden Sun</span></div><div class="hd">@Gorden_Sun</div></div><time class="tm" title="10-10 17:34 北京时间">10-10 17:34<small>2 天前</small></time></header><div class="pt">大肥鱼小课堂开课啦！ https://t.co/hJXkmBQyrL</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="大肥鱼小课堂开课啦！ https://t.co/hJXkmBQyrL
+— Gorden Sun (@Gorden_Sun)
+https://x.com/Gorden_Sun/status/2108853700219564278">复制原文</button><a class="op" href="https://x.com/Gorden_Sun/status/2108853700219564278" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>4</span><span class="mc" title="转发"><i>⇄</i>0</span><span class="mc" title="评论"><i>💬</i>1</span><span class="mc" title="浏览"><i>👁</i>2,701</span></div></footer></article><article class="post c6" data-s="数学论文里使用ai的频率飙升
+
+epoch ai 发布了一项追踪数据，分析了预印本平台 arxiv 上的 5.6 万多篇数学论文，专门抓取文中提到 ai 的致谢和使用说明。统计维度包括 ai 辅助的具体环节，比如构思证明、编写代码、润色文字，以及作者具体使用了哪家公司的工具。
+
+从 2023 年初到 2025 年，公开承认借助 ai 的数学论文占比一直很低，基本维持在个位数。进入 2026 年后，这一比例开始迅速拉升，到 2026 年 9 月已经超过了 35%。
+
+数学界正在重复程序员走过的路，一开始是tab补全，然后是生成整段代码，再是生成完整代码文件，最后是一整个工程。
+
+数据来源：https://t.co/dqih9zl0is"><header><span class="av" style="--h:142">G</span><div class="who"><div class="nm"><span>Gorden Sun</span></div><div class="hd">@Gorden_Sun</div></div><time class="tm" title="10-10 11:38 北京时间">10-10 11:38<small>3 天前</small></time></header><div class="pt xp"><span class="xs">数学论文里使用AI的频率飙升
+
+Epoch AI 发布了一项追踪数据，分析了预印本平台 arXiv 上的 5.6 万多篇数学论文，专门抓取文中提到 AI 的致谢和使用说明。统计维度包括 AI 辅助的具体环节，比如构思证明、编写代码、润色文字，以及作者具体使用了哪家公司的工具。
+
+从 2023 年初到 2025 年，公开承认借助 AI 的数学论文占比一直很低，基本维持在个位数。进入 2026 年后，这一比例开始迅速拉升，到 2026 年 9 月已经超过了 35%。
+
+数学界正在重复程序员走过的路，一开始是Tab补全，然后是生成整段代码，再是生成完整代码文件…</span><span class="xf">数学论文里使用AI的频率飙升
+
+Epoch AI 发布了一项追踪数据，分析了预印本平台 arXiv 上的 5.6 万多篇数学论文，专门抓取文中提到 AI 的致谢和使用说明。统计维度包括 AI 辅助的具体环节，比如构思证明、编写代码、润色文字，以及作者具体使用了哪家公司的工具。
+
+从 2023 年初到 2025 年，公开承认借助 AI 的数学论文占比一直很低，基本维持在个位数。进入 2026 年后，这一比例开始迅速拉升，到 2026 年 9 月已经超过了 35%。
+
+数学界正在重复程序员走过的路，一开始是Tab补全，然后是生成整段代码，再是生成完整代码文件，最后是一整个工程。
+
+数据来源：https://t.co/dQiH9ZL0is</span></div>
+<footer><div class="act"><button class="ex" type="button">展开</button><button class="cp" type="button" data-copy="数学论文里使用AI的频率飙升
+
+Epoch AI 发布了一项追踪数据，分析了预印本平台 arXiv 上的 5.6 万多篇数学论文，专门抓取文中提到 AI 的致谢和使用说明。统计维度包括 AI 辅助的具体环节，比如构思证明、编写代码、润色文字，以及作者具体使用了哪家公司的工具。
+
+从 2023 年初到 2025 年，公开承认借助 AI 的数学论文占比一直很低，基本维持在个位数。进入 2026 年后，这一比例开始迅速拉升，到 2026 年 9 月已经超过了 35%。
+
+数学界正在重复程序员走过的路，一开始是Tab补全，然后是生成整段代码，再是生成完整代码文件，最后是一整个工程。
+
+数据来源：https://t.co/dQiH9ZL0is
+— Gorden Sun (@Gorden_Sun)
+https://x.com/Gorden_Sun/status/2108764077501862037">复制原文</button><a class="op" href="https://x.com/Gorden_Sun/status/2108764077501862037" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>16</span><span class="mc" title="转发"><i>⇄</i>0</span><span class="mc" title="评论"><i>💬</i>6</span><span class="mc" title="浏览"><i>👁</i>2,773</span></div></footer></article></div></div>
+<footer>数据：X API get_users_posts · 生成于 2026-10-13 16:21 北京时间</footer></div><script>
+(function(){var d=document.documentElement,mq=matchMedia('(prefers-color-scheme: dark)');
+function sync(){document.querySelectorAll('[data-set-theme]').forEach(function(b){b.classList.toggle('on',b.dataset.setTheme===d.dataset.pref)})}
+function theme(){var p=d.dataset.pref;d.dataset.theme=p==='auto'?(mq.matches?'dark':'light'):p}
+document.querySelectorAll('[data-set-theme]').forEach(function(b){b.onclick=function(){d.dataset.pref=b.dataset.setTheme;try{localStorage.setItem('xhot-theme',b.dataset.setTheme)}catch(e){}theme();sync()}});
+(mq.addEventListener?mq.addEventListener('change',theme):mq.addListener(theme));
+document.querySelectorAll('[data-t]').forEach(function(b){b.onclick=function(){var t=b.dataset.t;
+document.querySelectorAll('[data-t]').forEach(function(x){x.classList.toggle('on',x.dataset.t===t)});
+document.querySelectorAll('.pane').forEach(function(x){x.classList.toggle('on',x.dataset.p===t)});
+document.querySelectorAll('.li-d').forEach(function(x){x.hidden=x.dataset.p!==t});scrollTo({top:0})}});sync();
+function fb(t){var a=document.createElement('textarea');a.value=t;a.setAttribute('readonly','');a.style.cssText='position:fixed;top:-1000px;opacity:0';document.body.appendChild(a);a.select();var ok=false;try{ok=document.execCommand('copy')}catch(e){}document.body.removeChild(a);return ok}
+document.addEventListener('click',function(ev){var b=ev.target.closest('.cp');if(b){var t=b.getAttribute('data-copy');
+function done(ok){b.textContent=ok?'已复制 ✓':'复制失败';b.classList.toggle('ok',ok);clearTimeout(b._t);b._t=setTimeout(function(){b.textContent='复制原文';b.classList.remove('ok')},1600)}
+if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(t).then(function(){done(true)},function(){done(fb(t))})}else done(fb(t));return}
+var x=ev.target.closest('.ex');if(x){var c=x.closest('.post').querySelector('.xp');var o=c.classList.toggle('open');x.textContent=o?'收起':'展开'}})})();
+</script><script>(function(){var q=document.getElementById('q'),c=document.getElementById('cnt'),a=document.getElementById('alll'),ps=[].slice.call(document.querySelectorAll('.feed1 .post'));
+function run(){var v=q.value.trim().toLowerCase(),all=a&&a.checked,k=0,n=0;ps.forEach(function(p){var lo=!p.dataset.ol||all;if(lo)n++;var ok=lo&&(!v||p.dataset.s.indexOf(v)>=0);p.hidden=!ok;if(ok)k++});c.textContent=v?('匹配 '+k+' / '+n+' 条'):(n+' 条')}
+q.addEventListener('input',run);if(a)a.addEventListener('change',run)})();</script></body></html>

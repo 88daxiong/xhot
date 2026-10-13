@@ -1,0 +1,361 @@
+<!doctype html><html lang="zh-CN" data-theme="light" data-pref="auto"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><title>Demis Hassabis (@demishassabis) · XHOT</title><script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('xhot-theme')}catch(e){}t=(t==='light'||t==='dark')?t:'auto';d.setAttribute('data-pref',t);d.setAttribute('data-theme',t==='auto'?(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'):t)})();
+</script><style>:root{--bg:#f7f7f8;--card:#fff;--bd:#e4e4e7;--bd2:#f0f0f2;--zebra:#fafafa;--hov:#f4f4f6;--tx:#18181b;--tx2:#3f3f46;--mu:#71717a;--mu2:#a1a1aa;--ac:#4f46e5;--acbg:#eef2ff;--actx:#4338ca;--up:#16a34a;--upbg:#f0fdf4;--dn:#dc2626;--dnbg:#fef2f2;--r:8px;--sh:0 1px 2px rgba(24,24,27,.04)}
+html[data-theme=dark]{--bg:#09090b;--card:#131316;--bd:#27272a;--bd2:#1c1c20;--zebra:#16161a;--hov:#1d1d22;--tx:#f4f4f5;--tx2:#d4d4d8;--mu:#a1a1aa;--mu2:#71717a;--ac:#818cf8;--acbg:#1e1b4b;--actx:#a5b4fc;--up:#4ade80;--upbg:#0f2a1a;--dn:#f87171;--dnbg:#2d1214;--sh:none}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--tx);font:400 13px/1.5 "Inter","PingFang SC","HarmonyOS Sans SC","Noto Sans SC","Noto Sans CJK SC",-apple-system,BlinkMacSystemFont,"Microsoft YaHei",sans-serif;-webkit-font-smoothing:antialiased;font-feature-settings:"cv11","ss01"}
+a{color:inherit;text-decoration:none}button{font:inherit}
+.num,.f,.d,.r,.sv,.nc,.heat,.pc,.tr3,.kv dd,.post footer{font-variant-numeric:tabular-nums}
+/* 顶栏 */
+.top{position:sticky;top:0;z-index:30;background:color-mix(in srgb,var(--card) 92%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--bd)}
+.ti2{max-width:1440px;margin:auto;height:56px;padding:0 24px;display:flex;align-items:center;gap:16px}
+.lg{display:flex;align-items:center;gap:8px;font-weight:600;font-size:16px;letter-spacing:-.01em}.lg i{width:24px;height:24px;border-radius:6px;background:var(--ac);display:grid;place-items:center;font-style:normal;color:#fff;font-size:12px}.lg span{font-weight:400;font-size:13px;color:var(--mu);margin-left:4px;padding-left:12px;border-left:1px solid var(--bd)}
+.mtabs{display:none}
+.tg{margin-left:auto;display:flex;border:1px solid var(--bd);border-radius:var(--r);padding:2px;background:var(--card)}.tg button{border:0;background:none;color:var(--mu);height:28px;padding:0 10px;border-radius:6px;cursor:pointer;font-size:12px}.tg button.on{background:var(--hov);color:var(--tx);font-weight:500}
+/* 12 列网格 */
+.wrap{max-width:1440px;margin:auto;padding:24px 24px 32px}
+.stats,.shell{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:16px}.shell{align-items:start}
+.stats{margin-bottom:24px}.st{grid-column:span 2}
+.left{grid-column:span 2}.content{grid-column:span 10;min-width:0}
+.cols{display:grid;grid-template-columns:repeat(10,minmax(0,1fr));gap:16px;align-items:start}.mid{grid-column:span 7;min-width:0}.right{grid-column:span 3;min-width:0}
+/* 统计条 */
+.st{background:var(--card);border:1px solid var(--bd);border-radius:var(--r);padding:12px 16px;min-width:0;box-shadow:var(--sh)}
+.sl{font-size:12px;color:var(--mu);line-height:16px}.sv{font-size:20px;font-weight:600;line-height:28px;letter-spacing:-.01em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.ss{font-size:12px;color:var(--mu);line-height:16px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.st:nth-child(3) .sv{color:var(--ac)}
+/* 区块标题：统一 24px 行高，底部 8px */
+.bh{display:flex;align-items:center;gap:8px;height:24px;margin:0 0 8px}.bh h2{font-size:14px;font-weight:600;margin:0;line-height:24px}.hint{font-size:12px;color:var(--mu)}.credit{margin-left:auto;font-size:12px;font-weight:500;color:var(--ac)}.credit:hover{text-decoration:underline}
+.blk{margin-bottom:24px}
+/* 左栏 */
+.left{position:sticky;top:80px;display:flex;flex-direction:column;gap:16px}.left>.bh{margin-bottom:-8px}
+.lcard{background:var(--card);border:1px solid var(--bd);border-radius:var(--r);padding:8px;box-shadow:var(--sh)}
+.nav{display:flex;flex-direction:column;gap:2px}.nv{display:grid;grid-template-columns:24px minmax(0,1fr) auto;align-items:center;gap:8px;height:36px;border:0;background:none;color:var(--tx2);padding:0 8px;border-radius:6px;cursor:pointer;text-align:left;font-size:13px;font-weight:500}
+.nv:hover{background:var(--hov)}.nv.on{background:var(--acbg);color:var(--actx)}.ni{width:24px;height:24px;border-radius:6px;display:grid;place-items:center;background:var(--bd2);color:var(--mu);font-size:12px}.nv.on .ni{background:var(--ac);color:#fff}.nc{font-size:12px;color:var(--mu)}
+.kv{margin:0}.kv div{display:flex;justify-content:space-between;align-items:center;height:32px;padding:0 8px;border-bottom:1px solid var(--bd2);font-size:13px}.kv div:last-child{border-bottom:0}.kv dt{color:var(--mu)}.kv dd{margin:0;font-weight:500}
+.mini{padding:8px;border-top:1px solid var(--bd2)}.mt{font-size:12px;color:var(--mu);line-height:16px;margin-bottom:4px}.mv{font-weight:500;display:flex;align-items:center;justify-content:space-between;gap:8px}.mv2{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;font-size:13px;font-weight:500}.mv2:hover{color:var(--ac)}.mm{font-size:12px;color:var(--mu)}
+.mini .sp{height:24px;margin-top:8px}
+.tl{list-style:none;margin:0;padding:0}.tl li a{display:grid;grid-template-columns:16px minmax(0,1fr) auto;gap:8px;align-items:center;height:28px;padding:0 4px;border-radius:4px;font-size:13px}.tl li a:hover{background:var(--hov)}.tl .k{color:var(--mu2);font-size:12px;text-align:right}.tl .n{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.lnote{font-size:12px;color:var(--mu);padding:12px}.lnote b{display:block;color:var(--tx2);font-weight:500;margin-bottom:4px}.lnote p{margin:0 0 4px}.lnote a{color:var(--ac)}
+/* 涨跌徽章：唯一使用红绿的地方 */
+.pc{display:inline-flex;align-items:center;gap:2px;height:20px;font-size:12px;font-weight:500;padding:0 6px;border-radius:4px;white-space:nowrap}.pc.up{color:var(--up);background:var(--upbg)}.pc.dn{color:var(--dn);background:var(--dnbg)}
+.sp{display:block;width:100%;fill:none;stroke-width:1.5;stroke-linejoin:round;stroke-linecap:round}.sp.up,.tile.up .sp{stroke:var(--up)}.sp.dn,.tile.dn .sp{stroke:var(--dn)}
+/* 趋势 */
+.pane{display:none}.pane.on{display:block}
+.tiles{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
+.tile{background:var(--card);border:1px solid var(--bd);border-radius:var(--r);padding:8px 12px;height:88px;display:grid;grid-template-rows:20px 1fr 16px;gap:4px;box-shadow:var(--sh);min-width:0}
+.tile:hover{border-color:var(--mu2)}.tr1{display:grid;grid-template-columns:16px minmax(0,1fr) auto;gap:8px;align-items:center}.tk{font-size:12px;color:var(--mu2);text-align:right}.tn{font-size:13px;font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tile .sp{height:100%;opacity:.9}.tr3{display:flex;justify-content:space-between;font-size:12px;line-height:16px;color:var(--mu)}.tr3 b{color:var(--tx2);font-weight:500}
+/* 热帖 */
+.feed{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.post{background:var(--card);border:1px solid var(--bd);border-radius:var(--r);padding:12px 16px 8px;display:flex;flex-direction:column;min-width:0;box-shadow:var(--sh)}.post:hover{border-color:var(--mu2)}
+.post header{display:grid;grid-template-columns:32px minmax(0,1fr) auto;gap:8px;align-items:center;height:32px}
+.av{--h:220;width:32px;height:32px;border-radius:50%;display:inline-grid;place-items:center;flex:none;font-weight:600;font-size:13px;color:hsl(var(--h) 30% 32%);background:hsl(var(--h) 30% 92%)}
+html[data-theme=dark] .av{color:hsl(var(--h) 35% 80%);background:hsl(var(--h) 15% 22%)}
+.av.s{width:24px;height:24px;font-size:11px}.av.xs{width:20px;height:20px;font-size:10px;margin-left:-6px;border:2px solid var(--card)}.av.xs:first-child{margin-left:0}
+.who{min-width:0;line-height:16px}.nm{display:flex;align-items:center;gap:6px;font-size:13px;font-weight:600;min-width:0}.nm a{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.nm a:hover{color:var(--ac)}.hd{font-size:12px;color:var(--mu);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.heat{font-size:12px;font-weight:500;color:var(--mu);height:20px;line-height:20px;padding:0 6px;border:1px solid var(--bd);border-radius:4px}
+.pt{flex:1;margin:8px 0;font-size:13px;line-height:1.6;color:var(--tx2);white-space:pre-wrap;word-break:break-word}.xp .xf{display:none}.xp.open .xs{display:none}.xp.open .xf{display:inline}
+.post footer{display:flex;align-items:center;gap:10px;height:32px;font-size:12px;color:var(--mu);border-top:1px solid var(--bd2);white-space:nowrap;overflow:hidden}.sp1{flex:1}
+.cp,.ex{height:24px;border:1px solid var(--bd);background:var(--card);color:var(--tx2);font-size:12px;font-weight:500;padding:0 8px;border-radius:6px;cursor:pointer}.cp:hover,.ex:hover{border-color:var(--ac);color:var(--ac)}.cp.ok{border-color:var(--up);color:var(--up)}
+.op{width:24px;height:24px;display:grid;place-items:center;border-radius:6px;color:var(--mu)}.op:hover{background:var(--hov);color:var(--ac)}
+.zh{font-size:11px;font-weight:500;color:var(--mu);border:1px solid var(--bd);border-radius:4px;padding:0 4px;line-height:16px;flex:none}
+/* 右栏 */
+.right{display:flex;flex-direction:column;gap:24px;position:sticky;top:80px}
+.rcard,.acard{background:var(--card);border:1px solid var(--bd);border-radius:var(--r);box-shadow:var(--sh);min-width:0;overflow:hidden}
+.rhd{display:flex;align-items:center;gap:8px;height:24px;margin-bottom:8px}
+.rcard .tw{max-height:560px;overflow:auto}
+/* 表格 */
+table{width:100%;border-collapse:separate;border-spacing:0;font-size:13px}
+th{height:32px;font-size:12px;font-weight:500;color:var(--mu);text-align:left;padding:0 12px;background:var(--zebra);border-bottom:1px solid var(--bd);white-space:nowrap}
+thead th{position:sticky;top:0;z-index:2}
+td{height:36px;padding:0 12px;border-bottom:1px solid var(--bd2);vertical-align:middle}tbody tr:last-child td{border-bottom:0}
+tbody tr:not(.g):hover td{background:var(--hov)}
+th.num,td.num,th.f,td.f,th.d,td.d{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}th.r,td.r{width:40px;text-align:right;color:var(--mu2);padding-right:4px;font-variant-numeric:tabular-nums}
+.lbt{table-layout:fixed}.lbt th.r,.lbt td.r{width:36px}.lbt th.f,.lbt td.f{width:72px;font-weight:500}.lbt th.d,.lbt td.d{width:64px;color:var(--mu);font-size:12px;padding-left:0}
+.lbt td.n a{display:flex;align-items:center;gap:8px;min-width:0}.lbt .nt{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:500}.lbt td.n a:hover .nt{color:var(--ac)}
+tr.g th{position:sticky;top:32px;z-index:1;height:28px;background:var(--card);color:var(--tx2);font-size:12px;font-weight:600;border-bottom:1px solid var(--bd2)}tr.g th span{color:var(--mu);font-weight:400;margin-left:4px}
+.news{list-style:none;margin:0;padding:0 12px}.news li{border-top:1px solid var(--bd2)}.news li:first-child{border-top:0}.news a{display:block;padding:8px 0}.news .t{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;font-weight:500;font-size:13px;line-height:20px}.news a:hover .t{color:var(--ac)}.news .m{display:block;font-size:12px;color:var(--mu);line-height:16px;margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+/* 卡片内标题：所有卡片头 48px */
+.rcard>.bh,.acard>.bh{height:48px;margin:0;padding:0 12px;border-bottom:1px solid var(--bd)}
+/* AIHOT */
+.ahsec{margin-top:8px;padding-top:24px;border-top:1px solid var(--bd)}
+.ahh{display:flex;align-items:center;gap:12px;height:28px;margin-bottom:16px}.ahh .k{font-size:12px;font-weight:600;letter-spacing:.08em;color:var(--ac)}.ahh h2{margin:0;font-size:20px;font-weight:600;letter-spacing:-.01em}.ahh a{margin-left:auto;font-size:12px;font-weight:500;color:var(--ac)}
+.agrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.acard.wide{grid-column:1/-1}
+.ht{table-layout:fixed}.ht td.ti a{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:500}.ht td.ti a:hover{color:var(--ac)}.ht th:nth-child(3),.ht td.sv{width:104px}.ht th:nth-child(4),.ht td.hb{width:160px}.ht th.num,.ht td.num{width:72px}
+.rk{display:inline-grid;place-items:center;width:20px;height:20px;border-radius:4px;color:var(--mu);font-weight:500;font-size:12px}.rk.top{background:var(--acbg);color:var(--actx);font-weight:600}
+.bar{display:block;height:4px;border-radius:2px;background:var(--bd2);overflow:hidden}.bar i{display:block;height:100%;border-radius:2px;background:var(--ac);opacity:.75}
+.lead{display:block;margin:12px;padding:12px 16px;border-radius:6px;background:var(--zebra);border:1px solid var(--bd2)}.lead b{display:block;font-size:16px;font-weight:600;line-height:24px}.lead span{display:block;font-size:13px;color:var(--tx2);margin-top:4px}.lead:hover b{color:var(--ac)}
+.dg{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:16px;padding:0 12px 12px}.dl{font-size:12px;font-weight:600;color:var(--tx2);height:28px;line-height:28px;border-bottom:1px solid var(--bd)}.ds ul{list-style:none;margin:0;padding:0}.ds li a{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;font-size:13px;line-height:20px;padding:6px 0;border-bottom:1px solid var(--bd2);color:var(--tx2)}.ds li a:hover{color:var(--ac)}
+.exg{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:var(--bd2)}.exc{display:grid;grid-template-rows:auto 1fr auto;gap:4px;padding:12px 16px;background:var(--card);min-height:132px}.exc:hover{background:var(--hov)}
+.et{display:flex;gap:8px;align-items:flex-start}.et span{flex:1;font-weight:600;font-size:13px;line-height:20px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}.sc{font-size:12px;font-weight:500;color:var(--actx);background:var(--acbg);border-radius:4px;padding:0 6px;line-height:20px;font-variant-numeric:tabular-nums}
+.exc p{margin:0;font-size:12px;color:var(--mu);line-height:18px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}.em{font-size:12px;color:var(--mu2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.mtb .mn{font-weight:500}.mtb td{white-space:nowrap}.scc{width:180px}td.scc{text-align:right}.scc .bar{display:inline-block;width:96px;vertical-align:middle;margin-right:12px}.scc b{font-weight:600;font-variant-numeric:tabular-nums;display:inline-block;width:36px;text-align:right}
+.chips{display:flex;flex-wrap:wrap;gap:8px;padding:12px}.chips a{height:28px;line-height:26px;font-size:12px;padding:0 12px;border-radius:14px;color:var(--tx2);border:1px solid var(--bd)}.chips a:hover{border-color:var(--ac);color:var(--ac)}
+footer{max-width:1440px;margin:24px auto 0;padding-top:16px;border-top:1px solid var(--bd);font-size:12px;color:var(--mu)}footer a{color:var(--ac)}
+/* 响应式 */
+@media(max-width:1600px){.post footer .rp{display:none}}@media(max-width:1360px){.lbt th.f,.lbt td.f{width:64px}.lbt th.d,.lbt td.d{width:52px}.lbt th.r,.lbt td.r{width:28px}td,th{padding:0 8px}.tiles{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:1180px){.left{display:none}.content{grid-column:1/-1}.st{grid-column:span 4}.mtabs{display:flex;gap:4px}.mt1{height:32px;border:0;background:none;color:var(--tx2);padding:0 12px;border-radius:6px;cursor:pointer;font-weight:500;font-size:13px}.mt1.on{background:var(--acbg);color:var(--actx)}}
+@media(max-width:900px){.cols{grid-template-columns:1fr}.mid,.right{grid-column:1/-1}.right{position:static}.agrid{grid-template-columns:1fr}.dg{grid-template-columns:repeat(2,minmax(0,1fr))}.exg{grid-template-columns:1fr 1fr}}
+@media(max-width:640px){.ti2{flex-wrap:wrap;height:auto;padding:8px 16px;gap:8px}.lg span{display:none}.mtabs{order:3;width:100%}.mt1{flex:1}.wrap{padding:16px 12px 24px}
+.stats{gap:8px;margin-bottom:16px}.st{grid-column:span 6;padding:8px 12px}.sv{font-size:16px;line-height:24px}.tiles{grid-template-columns:repeat(2,minmax(0,1fr))}.feed{grid-template-columns:1fr}.exg{grid-template-columns:1fr}
+.ht th:nth-child(3),.ht td.sv,.ht th:nth-child(4),.ht td.hb,.ht th:nth-child(6),.ht td:nth-child(6){display:none}.mtb th:nth-child(3),.mtb td:nth-child(3),.mtb th:nth-child(4),.mtb td:nth-child(4),.mtb th:nth-child(5),.mtb td:nth-child(5){display:none}.scc{width:auto}.scc .bar{display:none}.ahh{height:auto;flex-wrap:wrap}.ahh a{margin-left:0}.dg{grid-template-columns:1fr}}
+/* ===== v5 color layer ===== */
+:root{--ac:#7c3aed;--acbg:#f3e8ff;--actx:#6d28d9;--g1:#7c3aed;--g2:#db2777;--g3:#f97316;--bg:#f6f5fb;--glow:rgba(124,58,237,.18)}
+html[data-theme=dark]{--bg:#110d2e;--card:#1a1640;--bd:#2a2652;--bd2:#1e1b40;--zebra:#171536;--hov:#1f1c45;--mu:#a5a3c9;--mu2:#77749e;--ac:#c084fc;--acbg:#2e1a5c;--actx:#e9d5ff;--up:#4ade80;--dn:#fb7185;--glow:rgba(192,132,252,.28)}
+html[data-theme=dark],html[data-theme=dark] body{background-attachment:fixed;background:radial-gradient(1200px 600px at 10% -10%,#2a1660 0,transparent 60%),radial-gradient(900px 500px at 100% 0,#3b0d4a 0,transparent 55%),var(--bg)}
+.lg i{background:linear-gradient(135deg,var(--g1),var(--g2))!important;color:#fff!important}
+.stats{background:linear-gradient(110deg,#6d28d9 0%,#a21caf 50%,#db2777 85%,#f97316 120%);border-radius:12px;padding:16px;box-shadow:0 8px 24px -8px rgba(162,28,175,.45)}
+html[data-theme=dark] .stats{background:linear-gradient(110deg,#4c1d95 0%,#86198f 55%,#be185d 100%);box-shadow:0 0 0 1px rgba(232,121,249,.25),0 10px 30px -10px rgba(217,70,239,.5)}
+.stats .st{background:rgba(255,255,255,.12)!important;border:1px solid rgba(255,255,255,.22)!important;box-shadow:none!important;backdrop-filter:blur(4px)}
+.stats .st *{color:#fff!important}
+.stats .st .sl,.stats .st .ss{color:rgba(255,255,255,.82)!important}
+/* heat tiles */
+.tile{position:relative;overflow:hidden;transition:transform .15s,box-shadow .15s}
+.tile.up{background:linear-gradient(135deg,rgba(249,115,22,calc(var(--a)*.10 + .03)),rgba(239,68,68,calc(var(--a)*.28 + .04))),var(--card);border-color:rgba(239,68,68,calc(var(--a)*.45 + .12))}
+.tile.dn{background:linear-gradient(135deg,rgba(56,189,248,.05),rgba(59,130,246,calc(var(--a)*.22 + .05))),var(--card);border-color:rgba(59,130,246,.25)}
+.tile.up .sp{stroke:#ea580c}.tile.dn .sp{stroke:#2563eb}
+html[data-theme=dark] .tile.up .sp{stroke:#fb923c}html[data-theme=dark] .tile.dn .sp{stroke:#60a5fa}
+.tile:hover{transform:translateY(-1px);box-shadow:0 6px 18px -6px rgba(239,68,68,.35)}
+/* domain chips */
+.nv[data-t=ai] .ni,.mtabs [data-t=ai]{--dc:#7c3aed}
+.nv[data-t=money] .ni,.mtabs [data-t=money]{--dc:#f59e0b}
+.nv[data-t=growth] .ni,.mtabs [data-t=growth]{--dc:#14b8a6}
+.nv[data-t=ai]{--dc:#7c3aed;--dc2:#c026d3}.nv[data-t=money]{--dc:#f59e0b;--dc2:#ea580c}.nv[data-t=growth]{--dc:#14b8a6;--dc2:#22c55e}
+.nv .ni{background:linear-gradient(135deg,var(--dc),var(--dc2))!important;color:#fff!important}
+.nv.on{background:color-mix(in srgb,var(--dc) 12%,var(--card))!important;color:var(--tx)!important;box-shadow:inset 3px 0 0 var(--dc)}
+.nv.on .nc{color:var(--dc)}
+/* gradient avatars */
+.av{background:linear-gradient(135deg,hsl(var(--h) 85% 62%),hsl(calc(var(--h) + 50) 80% 52%))!important;color:#fff!important;text-shadow:0 1px 1px rgba(0,0,0,.2)}
+/* cards accents + glow */
+.lcard,.rcard,.post,.acard{transition:box-shadow .15s,border-color .15s}
+.post{border-top:2px solid color-mix(in srgb,var(--ac) 45%,transparent)!important}
+.post:hover,.rcard:hover,.acard:hover{border-color:color-mix(in srgb,var(--ac) 50%,var(--bd))!important;box-shadow:0 0 0 3px var(--glow)}
+.bh h2{position:relative;padding-left:10px}
+.bh h2::before{content:"";position:absolute;left:0;top:5px;bottom:5px;width:3px;border-radius:2px;background:linear-gradient(var(--g1),var(--g2))}
+a{color:var(--actx)}
+/* ===== v6 layout ===== */
+.mtabs{display:flex!important;gap:4px}
+.mt1{height:32px;border:0;background:none;color:var(--tx2);padding:0 12px;border-radius:6px;cursor:pointer;font-weight:500;font-size:13px}
+.mt1.on{background:color-mix(in srgb,var(--dc) 14%,var(--card));color:var(--tx);box-shadow:inset 0 -2px 0 var(--dc)}
+.ti2{display:flex;align-items:center;gap:16px}
+.ti2 .sp1{flex:1}
+.ahl{font-size:13px;font-weight:500;color:var(--actx);text-decoration:none;padding:0 8px;height:32px;display:inline-flex;align-items:center;border-radius:6px}
+.ahl:hover{background:var(--acbg)}
+.stats.sm{padding:8px 16px;grid-template-columns:repeat(12,minmax(0,1fr))}
+.stats.sm .st{grid-column:span 2;padding:8px 12px;height:auto}
+.stats.sm .sv{font-size:20px;line-height:1.3}
+.g6{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:16px;align-items:start}
+.c-l{grid-column:span 3;min-width:0}.c-m{grid-column:span 6;min-width:0}.c-r{grid-column:span 3;min-width:0;display:flex;flex-direction:column;gap:24px}
+.c-l,.c-r{position:sticky;top:80px;max-height:calc(100vh - 96px);overflow:auto;scrollbar-width:thin}
+.feed1{display:flex;flex-direction:column;gap:8px}
+.post .pt{white-space:pre-wrap;word-break:break-word}
+.post .tm{color:var(--mu);font-variant-numeric:tabular-nums}
+.lbt td.n a{display:flex;align-items:center;gap:8px;min-width:0;color:var(--tx);text-decoration:none}
+.lbt td.n a:hover .nt{color:var(--actx);text-decoration:underline}
+.rlist{list-style:none;margin:0;padding:0}
+.rlist li{border-top:1px solid var(--bd2)}
+.rlist li:first-child{border-top:0}
+.rlist a{display:block;padding:8px 12px;color:var(--tx);text-decoration:none}
+.rlist a:hover{background:var(--hov)}
+.gh .rn{font-weight:600;font-size:13px;color:var(--actx);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.gh .rd{font-size:12px;color:var(--tx2);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;margin:2px 0 4px}
+.gh .rm{display:flex;gap:12px;font-size:12px;color:var(--mu);font-variant-numeric:tabular-nums}
+.gh .rm .td{margin-left:auto;color:#ea580c;font-weight:600}
+html[data-theme=dark] .gh .rm .td{color:#fb923c}
+.gh .lg2{display:inline-flex;align-items:center;gap:4px}.gh .lg2 i{width:8px;height:8px;border-radius:50%;background:hsl(var(--h) 70% 55%)}
+.nws .t{font-size:13px;font-weight:500;line-height:1.5;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.nws .m{font-size:12px;color:var(--mu);margin-top:2px;display:flex;gap:8px}
+.src{display:inline-block;padding:0 6px;border-radius:4px;font-size:12px;font-weight:500;line-height:18px}
+.src.x{background:#e0f2fe;color:#0369a1}.src.d{background:#f3e8ff;color:#7e22ce}.src.s{background:#fce7f3;color:#be185d}
+html[data-theme=dark] .src.x{background:#0c2a44;color:#7dd3fc}html[data-theme=dark] .src.d{background:#2e1a5c;color:#d8b4fe}html[data-theme=dark] .src.s{background:#4a0d2e;color:#f9a8d4}
+.tl2{list-style:none;margin:0;padding:4px 0}
+.tl2 a{display:grid;grid-template-columns:24px 1fr auto;align-items:center;height:32px;padding:0 12px;color:var(--tx);text-decoration:none;gap:8px}
+.tl2 a:hover{background:var(--hov)}
+.tl2 .k{color:var(--mu);font-variant-numeric:tabular-nums;font-size:12px}
+.tl2 .n{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+/* person page */
+.ph{display:grid;grid-template-columns:80px 1fr auto;gap:16px;align-items:center;padding:24px;border-radius:12px;background:linear-gradient(110deg,#6d28d9 0%,#a21caf 55%,#db2777 100%);color:#fff;box-shadow:0 8px 24px -8px rgba(162,28,175,.45)}
+.ph .av.xl{width:80px;height:80px;border-radius:50%;font-size:28px;font-weight:600;display:flex;align-items:center;justify-content:center;border:3px solid rgba(255,255,255,.6)}
+.ph h1{font-size:28px;line-height:1.3;margin:0;font-weight:600}
+.ph .hd{opacity:.85;font-size:14px}
+.ph .bio{margin:8px 0 0;font-size:14px;opacity:.95;white-space:pre-wrap;max-width:720px}
+.ph .fs{text-align:right}
+.ph .fs b{display:block;font-size:28px;font-weight:600;font-variant-numeric:tabular-nums;line-height:1.3}
+.ph .fs span{font-size:12px;opacity:.85}
+.ph .xb{display:inline-flex;margin-top:8px;height:32px;align-items:center;padding:0 12px;border-radius:6px;background:rgba(255,255,255,.18);color:#fff;text-decoration:none;font-weight:500;border:1px solid rgba(255,255,255,.35)}
+.ptool{display:flex;align-items:center;gap:16px;margin:24px 0 8px}
+.ptool input{flex:1;height:40px;border:1px solid var(--bd);border-radius:8px;background:var(--card);color:var(--tx);padding:0 12px;font:inherit;font-size:14px;outline:none}
+.ptool input:focus{border-color:var(--ac);box-shadow:0 0 0 3px var(--glow)}
+.ptool .cnt{color:var(--mu);font-variant-numeric:tabular-nums;white-space:nowrap}
+.pwrap{max-width:880px;margin:0 auto}
+.back{font-size:13px;color:var(--actx);text-decoration:none;display:inline-flex;height:32px;align-items:center;margin-bottom:8px}
+mark{background:#fde68a;color:inherit;border-radius:2px}
+html[data-theme=dark] mark{background:#854d0e}
+@media(max-width:1180px){.c-l{grid-column:span 4}.c-m{grid-column:span 8}.c-r{grid-column:1/-1;position:static;max-height:none;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}}
+@media(max-width:900px){.g6{grid-template-columns:1fr}.c-l,.c-m,.c-r{grid-column:1/-1;position:static;max-height:none}.c-m{order:1}.c-r{order:2;display:flex}.c-l{order:3}.stats.sm .st{grid-column:span 4}}
+@media(max-width:640px){.ti2{flex-wrap:wrap;gap:8px}.mtabs{order:3;width:100%}.mt1{flex:1}.ahl{margin-left:auto}.ti2 .sp1{display:none}.stats.sm{display:none}.ph{grid-template-columns:56px 1fr;padding:16px}.ph .av.xl{width:56px;height:56px;font-size:20px}.ph h1{font-size:20px}.ph .fs{grid-column:1/-1;text-align:left}}
+.post footer{margin:0!important;width:auto!important;max-width:none!important;padding:0!important;text-align:left!important;justify-content:flex-start}
+.c-l .tw{max-height:none;overflow:visible}
+.ph .hd,.ph .hd *{color:rgba(255,255,255,.85)!important}
+/* ===== v6b card consistency ===== */
+.post.c6{padding:16px;gap:0;border:1px solid var(--bd)!important;border-top:3px solid color-mix(in srgb,var(--ac) 55%,transparent)!important;border-radius:10px;background:var(--card)}
+.post.c6 header{display:grid;grid-template-columns:32px minmax(0,1fr) auto;gap:12px;align-items:center;height:40px}
+.post.c6 .who{min-width:0}
+.post.c6 .nm{font-weight:600;font-size:14px;line-height:20px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.post.c6 .nm a{color:var(--tx);text-decoration:none}.post.c6 .nm a:hover{color:var(--actx)}
+.post.c6 .hd{font-size:12px;line-height:18px;color:var(--mu)}
+.post.c6 .tm{text-align:right;font-size:12px;line-height:18px;color:var(--tx2);font-variant-numeric:tabular-nums;white-space:nowrap}
+.post.c6 .tm small{display:block;color:var(--mu);font-size:12px}
+.post.c6 .pt{margin:12px 0;font-size:14px;line-height:1.5;color:var(--tx)}
+.post.c6 footer{display:flex!important;align-items:center;justify-content:space-between!important;height:40px;border-top:1px solid var(--bd2);gap:8px}
+.post.c6 .act{display:flex;gap:8px;align-items:center}
+.post.c6 .op{font-size:12px;color:var(--mu);text-decoration:none;height:28px;display:inline-flex;align-items:center;padding:0 8px;border:1px solid var(--bd);border-radius:6px}
+.post.c6 .op:hover{color:var(--actx);border-color:var(--ac)}
+.post.c6 .met{display:grid;grid-template-columns:repeat(4,64px);gap:0}
+.post.c6 .mc{text-align:right;font-variant-numeric:tabular-nums;color:var(--mu);font-size:12px}
+.post.c6 .mc i{font-style:normal;margin-right:4px;opacity:.75}
+.feed1{gap:12px}
+.ph{grid-template-columns:80px minmax(0,1fr) auto;padding:24px}
+.ph .pi{min-width:0}.ph .bio.dim{opacity:.7}
+.ph .xb{margin:0;align-self:start}
+.pstat{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:12px}
+.psb{background:var(--card);border:1px solid var(--bd);border-radius:10px;padding:12px 16px;border-top:3px solid var(--dcx,#a21caf)}
+.psb:nth-child(1){--dcx:#7c3aed}.psb:nth-child(2){--dcx:#db2777}.psb:nth-child(3){--dcx:#f97316}.psb:nth-child(4){--dcx:#14b8a6}
+.psb .sl{font-size:12px;color:var(--mu)}.psb .sv{font-size:20px;font-weight:600;line-height:1.4;font-variant-numeric:tabular-nums;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.psb .ss{font-size:12px;color:var(--mu)}
+.tgl{display:inline-flex;align-items:center;gap:6px;font-size:13px;color:var(--tx2);white-space:nowrap;cursor:pointer}
+.empty{padding:24px;color:var(--mu)}
+@media(max-width:640px){.pstat{grid-template-columns:repeat(2,minmax(0,1fr))}.ph{grid-template-columns:56px minmax(0,1fr)}.ph .xb{grid-column:1/-1;justify-self:start}.ptool{flex-wrap:wrap;gap:8px}.ptool input{flex-basis:100%}
+.post.c6 .met{grid-template-columns:repeat(4,auto);gap:10px}.post.c6 footer{height:auto;min-height:40px;flex-wrap:wrap;padding:6px 0!important}.post.c6 .rp,.post.c6 .mc:nth-child(3){display:none}}
+.post.c6 .met{grid-template-columns:64px 64px 72px 84px}@media(max-width:640px){.post.c6 .met{grid-template-columns:repeat(4,auto);gap:10px}}
+</style></head><body><header class="top"><div class="ti2"><div class="lg"><i>⚡</i>XHOT<span>X 热点雷达</span></div><span class="sp1"></span><a class="ahl" href="https://aihot.news" target="_blank">来自 AIHOT ↗</a><div class="tg"><button data-set-theme="light" title="浅色">☀</button><button data-set-theme="dark" title="深色">☾</button><button data-set-theme="auto">自动</button></div></div></header>
+<div class="wrap"><div class="pwrap"><a class="back" href="../index.html">← 返回首页</a>
+<section class="ph"><span class="av xl" style="--h:35">D</span><div class="pi"><h1>Demis Hassabis</h1><div class="hd">@demishassabis</div><p class="bio">Nobel Laureate. Co-Founder &amp; Chair @GoogleDeepMind; Chief Scientist of Alphabet. Founder &amp; CEO @IsomorphicLabs. Building the future...</p></div><a class="xb" href="https://x.com/demishassabis" target="_blank">在 X 查看 ↗</a></section>
+<div class="pstat"><div class="psb"><div class="sl">粉丝</div><div class="sv">195.1万</div><div class="ss">1,951,121</div></div><div class="psb"><div class="sl">较上次</div><div class="sv">+203</div><div class="ss">粉丝变化</div></div><div class="psb"><div class="sl">已存推文</div><div class="sv">22</div><div class="ss">最多 200 条</div></div><div class="psb"><div class="sl">最新发帖</div><div class="sv">10-13 09:09</div><div class="ss">7 小时前</div></div></div>
+<div class="ptool"><input id="q" type="search" placeholder="搜索 Demis Hassabis 的推文关键词…" autocomplete="off"><span class="cnt" id="cnt">22 条</span></div>
+<div class="bh"><h2>推文时间线</h2><span class="hint">最新在前 · 默认只显示中文/英文</span></div><div class="feed1"><article class="post c6" data-s="amazing to see research move from the lab to real-world clinical utility - congrats to the team on this milestone &amp;amp; @thelancet paper! https://t.co/jq0g4d6cx2"><header><span class="av" style="--h:35">D</span><div class="who"><div class="nm"><span>Demis Hassabis</span></div><div class="hd">@demishassabis</div></div><time class="tm" title="10-13 09:09 北京时间">10-13 09:09<small>7 小时前</small></time></header><div class="pt">Amazing to see research move from the lab to real-world clinical utility - congrats to the team on this milestone &amp;amp; @TheLancet paper! https://t.co/Jq0G4D6Cx2</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="Amazing to see research move from the lab to real-world clinical utility - congrats to the team on this milestone &amp;amp; @TheLancet paper! https://t.co/Jq0G4D6Cx2
+— Demis Hassabis (@demishassabis)
+https://x.com/demishassabis/status/2109813775377563908">复制原文</button><a class="op" href="https://x.com/demishassabis/status/2109813775377563908" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>774</span><span class="mc" title="转发"><i>⇄</i>66</span><span class="mc" title="评论"><i>💬</i>63</span><span class="mc" title="浏览"><i>👁</i>4.9万</span></div></footer></article><article class="post c6" data-s="excited to support the genesis mission @whitehouse @energy and director @mkratsios47 with $150m in investments this week. looking forward to collaborating on the future of science! https://t.co/0bxd15ozln"><header><span class="av" style="--h:35">D</span><div class="who"><div class="nm"><span>Demis Hassabis</span></div><div class="hd">@demishassabis</div></div><time class="tm" title="10-09 06:57 北京时间">10-09 06:57<small>4 天前</small></time></header><div class="pt">Excited to support the Genesis Mission @WhiteHouse @ENERGY and Director @mkratsios47 with $150M in investments this week. Looking forward to collaborating on the future of science! https://t.co/0BXd15oZln</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="Excited to support the Genesis Mission @WhiteHouse @ENERGY and Director @mkratsios47 with $150M in investments this week. Looking forward to collaborating on the future of science! https://t.co/0BXd15oZln
+— Demis Hassabis (@demishassabis)
+https://x.com/demishassabis/status/2108331042083872882">复制原文</button><a class="op" href="https://x.com/demishassabis/status/2108331042083872882" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>815</span><span class="mc" title="转发"><i>⇄</i>49</span><span class="mc" title="评论"><i>💬</i>141</span><span class="mc" title="浏览"><i>👁</i>8.4万</span></div></footer></article><article class="post c6" data-s="the most important thing we can apply ai to is improving medicine and human health - very excited about this partnership with the czi and the virtual biology initiative! https://t.co/vcdhp4yzwb"><header><span class="av" style="--h:35">D</span><div class="who"><div class="nm"><span>Demis Hassabis</span></div><div class="hd">@demishassabis</div></div><time class="tm" title="10-07 23:53 北京时间">10-07 23:53<small>5 天前</small></time></header><div class="pt">The most important thing we can apply AI to is improving medicine and human health - very excited about this partnership with the CZI and the Virtual Biology Initiative! https://t.co/vCDhP4yZWB</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="The most important thing we can apply AI to is improving medicine and human health - very excited about this partnership with the CZI and the Virtual Biology Initiative! https://t.co/vCDhP4yZWB
+— Demis Hassabis (@demishassabis)
+https://x.com/demishassabis/status/2107861788301607261">复制原文</button><a class="op" href="https://x.com/demishassabis/status/2107861788301607261" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>5,776</span><span class="mc" title="转发"><i>⇄</i>514</span><span class="mc" title="评论"><i>💬</i>236</span><span class="mc" title="浏览"><i>👁</i>22.8万</span></div></footer></article><article class="post c6" data-s="john urschel is an incredible guy. had the pleasure of co-presenting an award with him at the breakthrough prize a few years ago - wonderful person and an inspiration! https://t.co/vzgdfj6e02"><header><span class="av" style="--h:35">D</span><div class="who"><div class="nm"><span>Demis Hassabis</span></div><div class="hd">@demishassabis</div></div><time class="tm" title="10-07 05:26 北京时间">10-07 05:26<small>6 天前</small></time></header><div class="pt">John Urschel is an incredible guy. Had the pleasure of co-presenting an award with him at the Breakthrough Prize a few years ago - wonderful person and an inspiration! https://t.co/VzGdfj6e02</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="John Urschel is an incredible guy. Had the pleasure of co-presenting an award with him at the Breakthrough Prize a few years ago - wonderful person and an inspiration! https://t.co/VzGdfj6e02
+— Demis Hassabis (@demishassabis)
+https://x.com/demishassabis/status/2107583214432694756">复制原文</button><a class="op" href="https://x.com/demishassabis/status/2107583214432694756" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>2,444</span><span class="mc" title="转发"><i>⇄</i>107</span><span class="mc" title="评论"><i>💬</i>43</span><span class="mc" title="浏览"><i>👁</i>15.3万</span></div></footer></article><article class="post c6" data-s="very proud of the impact of all our work using ai to accelerate science and medicine for the benefit of society. https://t.co/qggyvxdyz2"><header><span class="av" style="--h:35">D</span><div class="who"><div class="nm"><span>Demis Hassabis</span></div><div class="hd">@demishassabis</div></div><time class="tm" title="10-05 04:56 北京时间">10-05 04:56<small>8 天前</small></time></header><div class="pt">Very proud of the impact of all our work using AI to accelerate science and medicine for the benefit of society. https://t.co/qGGYVxdYZ2</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="Very proud of the impact of all our work using AI to accelerate science and medicine for the benefit of society. https://t.co/qGGYVxdYZ2
+— Demis Hassabis (@demishassabis)
+https://x.com/demishassabis/status/2106850913474482566">复制原文</button><a class="op" href="https://x.com/demishassabis/status/2106850913474482566" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>3,272</span><span class="mc" title="转发"><i>⇄</i>229</span><span class="mc" title="评论"><i>💬</i>178</span><span class="mc" title="浏览"><i>👁</i>17.3万</span></div></footer></article><article class="post c6" data-s="so proud of the incredible team who have been working so hard and relentlessly on this! more info in the blogpost: https://t.co/wb1hdah6xu"><header><span class="av" style="--h:35">D</span><div class="who"><div class="nm"><span>Demis Hassabis</span></div><div class="hd">@demishassabis</div></div><time class="tm" title="10-01 05:59 北京时间">10-01 05:59<small>12 天前</small></time></header><div class="pt">So proud of the incredible team who have been working so hard and relentlessly on this! More info in the blogpost: https://t.co/Wb1hdaH6xu</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="So proud of the incredible team who have been working so hard and relentlessly on this! More info in the blogpost: https://t.co/Wb1hdaH6xu
+— Demis Hassabis (@demishassabis)
+https://x.com/demishassabis/status/2105417241424540136">复制原文</button><a class="op" href="https://x.com/demishassabis/status/2105417241424540136" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>473</span><span class="mc" title="转发"><i>⇄</i>30</span><span class="mc" title="评论"><i>💬</i>24</span><span class="mc" title="浏览"><i>👁</i>4.3万</span></div></footer></article><article class="post c6" data-s="very excited to announce gemini 4 argon, our new frontier ai model, and a huge step forward across key capabilities. we’re focused on rolling it out responsibly starting with government and trusted cyber defenders through our fairwind program today, before wider availability soon https://t.co/dcj08qfoqf"><header><span class="av" style="--h:35">D</span><div class="who"><div class="nm"><span>Demis Hassabis</span></div><div class="hd">@demishassabis</div></div><time class="tm" title="10-01 05:59 北京时间">10-01 05:59<small>12 天前</small></time></header><div class="pt xp"><span class="xs">Very excited to announce Gemini 4 Argon, our new Frontier AI model, and a huge step forward across key capabilities. We’re focused on rolling it out responsibly starting with government and trusted cyber defenders through our Fairwind Program today, before wider availability soon…</span><span class="xf">Very excited to announce Gemini 4 Argon, our new Frontier AI model, and a huge step forward across key capabilities. We’re focused on rolling it out responsibly starting with government and trusted cyber defenders through our Fairwind Program today, before wider availability soon https://t.co/dcj08qFoQF</span></div>
+<footer><div class="act"><button class="ex" type="button">展开</button><button class="cp" type="button" data-copy="Very excited to announce Gemini 4 Argon, our new Frontier AI model, and a huge step forward across key capabilities. We’re focused on rolling it out responsibly starting with government and trusted cyber defenders through our Fairwind Program today, before wider availability soon https://t.co/dcj08qFoQF
+— Demis Hassabis (@demishassabis)
+https://x.com/demishassabis/status/2105417239432200636">复制原文</button><a class="op" href="https://x.com/demishassabis/status/2105417239432200636" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>9,186</span><span class="mc" title="转发"><i>⇄</i>686</span><span class="mc" title="评论"><i>💬</i>442</span><span class="mc" title="浏览"><i>👁</i>52.4万</span></div></footer></article><article class="post c6" data-s="biosecurity is one of the most urgent challenges for the ai era. bringing synthid to biology so ai-generated proteins can be watermarked is a critical step - and we’re open sourcing synthid bio tools so the research community can build on this work. published in @nature today, congrats to the team! https://t.co/y4sv8bngqy"><header><span class="av" style="--h:35">D</span><div class="who"><div class="nm"><span>Demis Hassabis</span></div><div class="hd">@demishassabis</div></div><time class="tm" title="10-01 01:27 北京时间">10-01 01:27<small>12 天前</small></time></header><div class="pt xp"><span class="xs">Biosecurity is one of the most urgent challenges for the AI era. Bringing SynthID to biology so AI-generated proteins can be watermarked is a critical step - and we’re open sourcing SynthID Bio tools so the research community can build on this work. Published in @Nature today, co…</span><span class="xf">Biosecurity is one of the most urgent challenges for the AI era. Bringing SynthID to biology so AI-generated proteins can be watermarked is a critical step - and we’re open sourcing SynthID Bio tools so the research community can build on this work. Published in @Nature today, congrats to the team! https://t.co/Y4sv8bnGQY</span></div>
+<footer><div class="act"><button class="ex" type="button">展开</button><button class="cp" type="button" data-copy="Biosecurity is one of the most urgent challenges for the AI era. Bringing SynthID to biology so AI-generated proteins can be watermarked is a critical step - and we’re open sourcing SynthID Bio tools so the research community can build on this work. Published in @Nature today, congrats to the team! https://t.co/Y4sv8bnGQY
+— Demis Hassabis (@demishassabis)
+https://x.com/demishassabis/status/2105348732464070823">复制原文</button><a class="op" href="https://x.com/demishassabis/status/2105348732464070823" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>3,214</span><span class="mc" title="转发"><i>⇄</i>363</span><span class="mc" title="评论"><i>💬</i>139</span><span class="mc" title="浏览"><i>👁</i>26.2万</span></div></footer></article><article class="post c6" data-s="good to see the progress, and we look forward to following up. https://t.co/uvmyn9wrif"><header><span class="av" style="--h:35">D</span><div class="who"><div class="nm"><span>Demis Hassabis</span></div><div class="hd">@demishassabis</div></div><time class="tm" title="09-30 12:13 北京时间">09-30 12:13<small>13 天前</small></time></header><div class="pt">Good to see the progress, and we look forward to following up. https://t.co/UVMYn9wRif</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="Good to see the progress, and we look forward to following up. https://t.co/UVMYn9wRif
+— Demis Hassabis (@demishassabis)
+https://x.com/demishassabis/status/2105148971975102609">复制原文</button><a class="op" href="https://x.com/demishassabis/status/2105148971975102609" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>1,851</span><span class="mc" title="转发"><i>⇄</i>85</span><span class="mc" title="评论"><i>💬</i>118</span><span class="mc" title="浏览"><i>👁</i>18.1万</span></div></footer></article><article class="post c6" data-s="more on the purpose behind the deepmind institute in this short introduction: https://t.co/2rox9kxcfi"><header><span class="av" style="--h:35">D</span><div class="who"><div class="nm"><span>Demis Hassabis</span></div><div class="hd">@demishassabis</div></div><time class="tm" title="09-16 22:29 北京时间">09-16 22:29<small>26 天前</small></time></header><div class="pt">More on the purpose behind the DeepMind Institute in this short introduction: https://t.co/2rOX9kxCFI</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="More on the purpose behind the DeepMind Institute in this short introduction: https://t.co/2rOX9kxCFI
+— Demis Hassabis (@demishassabis)
+https://x.com/demishassabis/status/2100230526007218651">复制原文</button><a class="op" href="https://x.com/demishassabis/status/2100230526007218651" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>282</span><span class="mc" title="转发"><i>⇄</i>21</span><span class="mc" title="评论"><i>💬</i>78</span><span class="mc" title="浏览"><i>👁</i>5.1万</span></div></footer></article><article class="post c6" data-s="for 20+ years @shanelegg and i&#x27;ve discussed agi’s potential impact on the economy, science &amp; society. with the deepmind institute, we&#x27;re expanding interdisciplinary research on key questions for the ai era. we hope it spurs the discussions needed to get the next steps right: https://t.co/bqf10g3xep"><header><span class="av" style="--h:35">D</span><div class="who"><div class="nm"><span>Demis Hassabis</span></div><div class="hd">@demishassabis</div></div><time class="tm" title="09-16 22:29 北京时间">09-16 22:29<small>26 天前</small></time></header><div class="pt xp"><span class="xs">For 20+ years @ShaneLegg and I&#x27;ve discussed AGI’s potential impact on the economy, science &amp; society. With the DeepMind Institute, we&#x27;re expanding interdisciplinary research on key questions for the AI era. We hope it spurs the discussions needed to get the next steps right: http…</span><span class="xf">For 20+ years @ShaneLegg and I&#x27;ve discussed AGI’s potential impact on the economy, science &amp; society. With the DeepMind Institute, we&#x27;re expanding interdisciplinary research on key questions for the AI era. We hope it spurs the discussions needed to get the next steps right: https://t.co/Bqf10G3Xep</span></div>
+<footer><div class="act"><button class="ex" type="button">展开</button><button class="cp" type="button" data-copy="For 20+ years @ShaneLegg and I&#x27;ve discussed AGI’s potential impact on the economy, science &amp; society. With the DeepMind Institute, we&#x27;re expanding interdisciplinary research on key questions for the AI era. We hope it spurs the discussions needed to get the next steps right: https://t.co/Bqf10G3Xep
+— Demis Hassabis (@demishassabis)
+https://x.com/demishassabis/status/2100230524383981702">复制原文</button><a class="op" href="https://x.com/demishassabis/status/2100230524383981702" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>3,998</span><span class="mc" title="转发"><i>⇄</i>634</span><span class="mc" title="评论"><i>💬</i>341</span><span class="mc" title="浏览"><i>👁</i>62.2万</span></div></footer></article><article class="post c6" data-s="honoured to receive the albert medal from
+@thersaorg! science &amp; tech enable amazing opportunities, but the arts &amp; humanities will be crucial in shaping what sort of future we want to see as a society in the coming agi era. fun discussion w/
+@fryrsquared covering many new topics: https://t.co/pmf73lyak8"><header><span class="av" style="--h:35">D</span><div class="who"><div class="nm"><span>Demis Hassabis</span></div><div class="hd">@demishassabis</div></div><time class="tm" title="09-16 21:13 北京时间">09-16 21:13<small>26 天前</small></time></header><div class="pt xp"><span class="xs">Honoured to receive the Albert Medal from
+@theRSAorg! Science &amp; tech enable amazing opportunities, but the arts &amp; humanities will be crucial in shaping what sort of future we want to see as a society in the coming AGI era. Fun discussion w/
+@FryRsquared covering many new topics:…</span><span class="xf">Honoured to receive the Albert Medal from
+@theRSAorg! Science &amp; tech enable amazing opportunities, but the arts &amp; humanities will be crucial in shaping what sort of future we want to see as a society in the coming AGI era. Fun discussion w/
+@FryRsquared covering many new topics: https://t.co/Pmf73lyak8</span></div>
+<footer><div class="act"><button class="ex" type="button">展开</button><button class="cp" type="button" data-copy="Honoured to receive the Albert Medal from
+@theRSAorg! Science &amp; tech enable amazing opportunities, but the arts &amp; humanities will be crucial in shaping what sort of future we want to see as a society in the coming AGI era. Fun discussion w/
+@FryRsquared covering many new topics: https://t.co/Pmf73lyak8
+— Demis Hassabis (@demishassabis)
+https://x.com/demishassabis/status/2100211548794839140">复制原文</button><a class="op" href="https://x.com/demishassabis/status/2100211548794839140" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>1,407</span><span class="mc" title="转发"><i>⇄</i>144</span><span class="mc" title="评论"><i>💬</i>186</span><span class="mc" title="浏览"><i>👁</i>16.7万</span></div></footer></article><article class="post c6" data-s="dario&#x27;s essay points towards the right path forward. the details need working through, but the direction is correct for meeting this critical moment.
+
+this is also why we recently put out our proposal for an industry-wide standards body for frontier ai. https://t.co/mm1hmcasmh https://t.co/sesedgelmj"><header><span class="av" style="--h:35">D</span><div class="who"><div class="nm"><span>Demis Hassabis</span></div><div class="hd">@demishassabis</div></div><time class="tm" title="09-13 06:59 北京时间">09-13 06:59<small>30 天前</small></time></header><div class="pt xp"><span class="xs">Dario&#x27;s essay points towards the right path forward. The details need working through, but the direction is correct for meeting this critical moment.
+
+This is also why we recently put out our proposal for an industry-wide standards body for frontier AI. https://t.co/Mm1hmcaSmH ht…</span><span class="xf">Dario&#x27;s essay points towards the right path forward. The details need working through, but the direction is correct for meeting this critical moment.
+
+This is also why we recently put out our proposal for an industry-wide standards body for frontier AI. https://t.co/Mm1hmcaSmH https://t.co/sESEDGELmj</span></div>
+<footer><div class="act"><button class="ex" type="button">展开</button><button class="cp" type="button" data-copy="Dario&#x27;s essay points towards the right path forward. The details need working through, but the direction is correct for meeting this critical moment.
+
+This is also why we recently put out our proposal for an industry-wide standards body for frontier AI. https://t.co/Mm1hmcaSmH https://t.co/sESEDGELmj
+— Demis Hassabis (@demishassabis)
+https://x.com/demishassabis/status/2098909516582490602">复制原文</button><a class="op" href="https://x.com/demishassabis/status/2098909516582490602" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>9,078</span><span class="mc" title="转发"><i>⇄</i>944</span><span class="mc" title="评论"><i>💬</i>820</span><span class="mc" title="浏览"><i>👁</i>141.9万</span></div></footer></article><article class="post c6" data-s="with alphafold we mapped the protein universe - now with alphagenome atlas we’re charting the human genome. it can predict the impact of all 9 billion possible single-letter dna variants, helping scientists better understand disease. freely available for academic research: https://t.co/gsy6lw3z6o"><header><span class="av" style="--h:35">D</span><div class="who"><div class="nm"><span>Demis Hassabis</span></div><div class="hd">@demishassabis</div></div><time class="tm" title="09-08 23:09 北京时间">09-08 23:09<small>34 天前</small></time></header><div class="pt xp"><span class="xs">With AlphaFold we mapped the protein universe - now with AlphaGenome Atlas we’re charting the human genome. It can predict the impact of all 9 billion possible single-letter DNA variants, helping scientists better understand disease. Freely available for academic research: https:…</span><span class="xf">With AlphaFold we mapped the protein universe - now with AlphaGenome Atlas we’re charting the human genome. It can predict the impact of all 9 billion possible single-letter DNA variants, helping scientists better understand disease. Freely available for academic research: https://t.co/Gsy6lW3z6O</span></div>
+<footer><div class="act"><button class="ex" type="button">展开</button><button class="cp" type="button" data-copy="With AlphaFold we mapped the protein universe - now with AlphaGenome Atlas we’re charting the human genome. It can predict the impact of all 9 billion possible single-letter DNA variants, helping scientists better understand disease. Freely available for academic research: https://t.co/Gsy6lW3z6O
+— Demis Hassabis (@demishassabis)
+https://x.com/demishassabis/status/2097341636472688674">复制原文</button><a class="op" href="https://x.com/demishassabis/status/2097341636472688674" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>9,645</span><span class="mc" title="转发"><i>⇄</i>1,370</span><span class="mc" title="评论"><i>💬</i>268</span><span class="mc" title="浏览"><i>👁</i>78.5万</span></div></footer></article><article class="post c6" data-s="introducing gemini 3.8 flash, another upgrade in under a month! and the new 3.8 flash cyber pushes the frontier of cyber defense. relentless progress 🚀 more on the models &amp;amp; our cyber security work in the blog - happy building! https://t.co/c5h14qaniv https://t.co/fg8ni2wmqd"><header><span class="av" style="--h:35">D</span><div class="who"><div class="nm"><span>Demis Hassabis</span></div><div class="hd">@demishassabis</div></div><time class="tm" title="09-03 00:44 北京时间">09-03 00:44<small>40 天前</small></time></header><div class="pt">Introducing Gemini 3.8 Flash, another upgrade in under a month! And the new 3.8 Flash Cyber pushes the frontier of cyber defense. Relentless progress 🚀 More on the models &amp;amp; our cyber security work in the blog - happy building! https://t.co/C5h14qANIV https://t.co/Fg8ni2WMQd</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="Introducing Gemini 3.8 Flash, another upgrade in under a month! And the new 3.8 Flash Cyber pushes the frontier of cyber defense. Relentless progress 🚀 More on the models &amp;amp; our cyber security work in the blog - happy building! https://t.co/C5h14qANIV https://t.co/Fg8ni2WMQd
+— Demis Hassabis (@demishassabis)
+https://x.com/demishassabis/status/2095191106665284046">复制原文</button><a class="op" href="https://x.com/demishassabis/status/2095191106665284046" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>3,339</span><span class="mc" title="转发"><i>⇄</i>213</span><span class="mc" title="评论"><i>💬</i>213</span><span class="mc" title="浏览"><i>👁</i>20.9万</span></div></footer></article><article class="post c6" data-s="oh yes, and flash 3.7 is also lightning fast! ⚡️ https://t.co/cq7vzty5dp"><header><span class="av" style="--h:35">D</span><div class="who"><div class="nm"><span>Demis Hassabis</span></div><div class="hd">@demishassabis</div></div><time class="tm" title="08-14 04:13 北京时间">08-14 04:13<small>60 天前</small></time></header><div class="pt">Oh yes, and Flash 3.7 is also lightning fast! ⚡️ https://t.co/cQ7VzTy5dp</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="Oh yes, and Flash 3.7 is also lightning fast! ⚡️ https://t.co/cQ7VzTy5dp
+— Demis Hassabis (@demishassabis)
+https://x.com/demishassabis/status/2087995995694960670">复制原文</button><a class="op" href="https://x.com/demishassabis/status/2087995995694960670" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>2,145</span><span class="mc" title="转发"><i>⇄</i>84</span><span class="mc" title="评论"><i>💬</i>105</span><span class="mc" title="浏览"><i>👁</i>20.6万</span></div></footer></article><article class="post c6" data-s="gemini 3.7 flash brings major upgrades for software engineering, web dev &amp;amp; knowledge work. and introductory price is half the original 3.6 flash cost. happy building - enjoy! https://t.co/mql3ordz3i"><header><span class="av" style="--h:35">D</span><div class="who"><div class="nm"><span>Demis Hassabis</span></div><div class="hd">@demishassabis</div></div><time class="tm" title="08-14 01:11 北京时间">08-14 01:11<small>60 天前</small></time></header><div class="pt">Gemini 3.7 Flash brings major upgrades for software engineering, web dev &amp;amp; knowledge work. And introductory price is half the original 3.6 Flash cost. Happy building - enjoy! https://t.co/MQl3oRdz3i</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="Gemini 3.7 Flash brings major upgrades for software engineering, web dev &amp;amp; knowledge work. And introductory price is half the original 3.6 Flash cost. Happy building - enjoy! https://t.co/MQl3oRdz3i
+— Demis Hassabis (@demishassabis)
+https://x.com/demishassabis/status/2087950102455271765">复制原文</button><a class="op" href="https://x.com/demishassabis/status/2087950102455271765" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>3,271</span><span class="mc" title="转发"><i>⇄</i>195</span><span class="mc" title="评论"><i>💬</i>155</span><span class="mc" title="浏览"><i>👁</i>33.7万</span></div></footer></article><article class="post c6" data-s="sl2t is our amazing sign-language-to-text model allows users to sign directly to their phones for the first time. built in close collaboration with the deaf community, it’s a great example of the good that can be done with ai. congrats to the team for the launch! https://t.co/bz9wctjpdy"><header><span class="av" style="--h:35">D</span><div class="who"><div class="nm"><span>Demis Hassabis</span></div><div class="hd">@demishassabis</div></div><time class="tm" title="08-13 20:53 北京时间">08-13 20:53<small>60 天前</small></time></header><div class="pt xp"><span class="xs">SL2T is our amazing sign-language-to-text model allows users to sign directly to their phones for the first time. Built in close collaboration with the Deaf community, it’s a great example of the good that can be done with AI. Congrats to the team for the launch! https://t.co/BZ9…</span><span class="xf">SL2T is our amazing sign-language-to-text model allows users to sign directly to their phones for the first time. Built in close collaboration with the Deaf community, it’s a great example of the good that can be done with AI. Congrats to the team for the launch! https://t.co/BZ9wCtjpdy</span></div>
+<footer><div class="act"><button class="ex" type="button">展开</button><button class="cp" type="button" data-copy="SL2T is our amazing sign-language-to-text model allows users to sign directly to their phones for the first time. Built in close collaboration with the Deaf community, it’s a great example of the good that can be done with AI. Congrats to the team for the launch! https://t.co/BZ9wCtjpdy
+— Demis Hassabis (@demishassabis)
+https://x.com/demishassabis/status/2087885303855944001">复制原文</button><a class="op" href="https://x.com/demishassabis/status/2087885303855944001" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>1,897</span><span class="mc" title="转发"><i>⇄</i>175</span><span class="mc" title="评论"><i>💬</i>93</span><span class="mc" title="浏览"><i>👁</i>16.7万</span></div></footer></article><article class="post c6" data-s="1b for the @geminiapp ! our fastest growing product ever 🚀
+
+incredible milestone - huge congratulations to @joshwoodward and the amazing team! could not be prouder of all of our hard work together. 
+
+and thank you to all our wonderful users, we can&#x27;t wait to see what you&#x27;ll do next with it!"><header><span class="av" style="--h:35">D</span><div class="who"><div class="nm"><span>Demis Hassabis</span></div><div class="hd">@demishassabis</div></div><time class="tm" title="08-12 03:12 北京时间">08-12 03:12<small>62 天前</small></time></header><div class="pt xp"><span class="xs">1B for the @GeminiApp ! Our fastest growing product ever 🚀
+
+Incredible milestone - huge congratulations to @JoshWoodward and the amazing team! Could not be prouder of all of our hard work together. 
+
+And thank you to all our wonderful users, we can&#x27;t wait to see what you&#x27;ll do ne…</span><span class="xf">1B for the @GeminiApp ! Our fastest growing product ever 🚀
+
+Incredible milestone - huge congratulations to @JoshWoodward and the amazing team! Could not be prouder of all of our hard work together. 
+
+And thank you to all our wonderful users, we can&#x27;t wait to see what you&#x27;ll do next with it!</span></div>
+<footer><div class="act"><button class="ex" type="button">展开</button><button class="cp" type="button" data-copy="1B for the @GeminiApp ! Our fastest growing product ever 🚀
+
+Incredible milestone - huge congratulations to @JoshWoodward and the amazing team! Could not be prouder of all of our hard work together. 
+
+And thank you to all our wonderful users, we can&#x27;t wait to see what you&#x27;ll do next with it!
+— Demis Hassabis (@demishassabis)
+https://x.com/demishassabis/status/2087255967549243425">复制原文</button><a class="op" href="https://x.com/demishassabis/status/2087255967549243425" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>2,788</span><span class="mc" title="转发"><i>⇄</i>151</span><span class="mc" title="评论"><i>💬</i>120</span><span class="mc" title="浏览"><i>👁</i>24.2万</span></div></footer></article><article class="post c6" data-s="huge congratulations shreyas @shrez_royal09 - youngest ever british chess champion at just 17! happy to have played a small part in supporting your journey to the top. congratulations to the amazing bodhana too! https://t.co/9xyvz1aeat"><header><span class="av" style="--h:35">D</span><div class="who"><div class="nm"><span>Demis Hassabis</span></div><div class="hd">@demishassabis</div></div><time class="tm" title="08-10 06:06 北京时间">08-10 06:06<small>64 天前</small></time></header><div class="pt">Huge congratulations Shreyas @shrez_royal09 - youngest ever British chess champion at just 17! Happy to have played a small part in supporting your journey to the top. Congratulations to the amazing Bodhana too! https://t.co/9xyVZ1AEaT</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="Huge congratulations Shreyas @shrez_royal09 - youngest ever British chess champion at just 17! Happy to have played a small part in supporting your journey to the top. Congratulations to the amazing Bodhana too! https://t.co/9xyVZ1AEaT
+— Demis Hassabis (@demishassabis)
+https://x.com/demishassabis/status/2086574892560884135">复制原文</button><a class="op" href="https://x.com/demishassabis/status/2086574892560884135" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>2,369</span><span class="mc" title="转发"><i>⇄</i>157</span><span class="mc" title="评论"><i>💬</i>54</span><span class="mc" title="浏览"><i>👁</i>27.7万</span></div></footer></article><article class="post c6" data-s="really enjoyed talking to @bzcohen about alphago&#x27;s famous move 37 and the significance of it 10 years on for math and science breakthroughs in verifiable domains https://t.co/z5ibhblnsw"><header><span class="av" style="--h:35">D</span><div class="who"><div class="nm"><span>Demis Hassabis</span></div><div class="hd">@demishassabis</div></div><time class="tm" title="08-08 10:23 北京时间">08-08 10:23<small>66 天前</small></time></header><div class="pt">Really enjoyed talking to @bzcohen about AlphaGo&#x27;s famous move 37 and the significance of it 10 years on for math and science breakthroughs in verifiable domains https://t.co/Z5ibhblnSW</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="Really enjoyed talking to @bzcohen about AlphaGo&#x27;s famous move 37 and the significance of it 10 years on for math and science breakthroughs in verifiable domains https://t.co/Z5ibhblnSW
+— Demis Hassabis (@demishassabis)
+https://x.com/demishassabis/status/2085914742414061886">复制原文</button><a class="op" href="https://x.com/demishassabis/status/2085914742414061886" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>1,657</span><span class="mc" title="转发"><i>⇄</i>104</span><span class="mc" title="评论"><i>💬</i>82</span><span class="mc" title="浏览"><i>👁</i>33.4万</span></div></footer></article><article class="post c6" data-s="i’ve been working towards agi my whole life, and as we enter this pivotal moment, i’m stepping into a new role as chair of google deepmind &amp; chief scientist of alphabet. this will allow me to focus on long-term strategy, and accelerating scientific breakthroughs, including leaning into my work at isomorphic to help cure disease.
+
+i’m excited that @koraykv will be stepping up to lead gdm as svp, alongside @joshwoodward and our exec team. i could not be more excited and confident about our amazing next chapter! 🚀
+
+https://t.co/2wtliiltua"><header><span class="av" style="--h:35">D</span><div class="who"><div class="nm"><span>Demis Hassabis</span></div><div class="hd">@demishassabis</div></div><time class="tm" title="08-06 00:04 北京时间">08-06 00:04<small>68 天前</small></time></header><div class="pt xp"><span class="xs">I’ve been working towards AGI my whole life, and as we enter this pivotal moment, I’m stepping into a new role as Chair of Google DeepMind &amp; Chief Scientist of Alphabet. This will allow me to focus on long-term strategy, and accelerating scientific breakthroughs, including leanin…</span><span class="xf">I’ve been working towards AGI my whole life, and as we enter this pivotal moment, I’m stepping into a new role as Chair of Google DeepMind &amp; Chief Scientist of Alphabet. This will allow me to focus on long-term strategy, and accelerating scientific breakthroughs, including leaning into my work at Isomorphic to help cure disease.
+
+I’m excited that @koraykv will be stepping up to lead GDM as SVP, alongside @joshwoodward and our exec team. I could not be more excited and confident about our amazing next chapter! 🚀
+
+https://t.co/2WtlIIlTUa</span></div>
+<footer><div class="act"><button class="ex" type="button">展开</button><button class="cp" type="button" data-copy="I’ve been working towards AGI my whole life, and as we enter this pivotal moment, I’m stepping into a new role as Chair of Google DeepMind &amp; Chief Scientist of Alphabet. This will allow me to focus on long-term strategy, and accelerating scientific breakthroughs, including leaning into my work at Isomorphic to help cure disease.
+
+I’m excited that @koraykv will be stepping up to lead GDM as SVP, alongside @joshwoodward and our exec team. I could not be more excited and confident about our amazing next chapter! 🚀
+
+https://t.co/2WtlIIlTUa
+— Demis Hassabis (@demishassabis)
+https://x.com/demishassabis/status/2085034334914769203">复制原文</button><a class="op" href="https://x.com/demishassabis/status/2085034334914769203" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>2.1万</span><span class="mc" title="转发"><i>⇄</i>1,720</span><span class="mc" title="评论"><i>💬</i>1,117</span><span class="mc" title="浏览"><i>👁</i>201.4万</span></div></footer></article></div></div>
+<footer>数据：X API get_users_posts · 生成于 2026-10-13 16:21 北京时间</footer></div><script>
+(function(){var d=document.documentElement,mq=matchMedia('(prefers-color-scheme: dark)');
+function sync(){document.querySelectorAll('[data-set-theme]').forEach(function(b){b.classList.toggle('on',b.dataset.setTheme===d.dataset.pref)})}
+function theme(){var p=d.dataset.pref;d.dataset.theme=p==='auto'?(mq.matches?'dark':'light'):p}
+document.querySelectorAll('[data-set-theme]').forEach(function(b){b.onclick=function(){d.dataset.pref=b.dataset.setTheme;try{localStorage.setItem('xhot-theme',b.dataset.setTheme)}catch(e){}theme();sync()}});
+(mq.addEventListener?mq.addEventListener('change',theme):mq.addListener(theme));
+document.querySelectorAll('[data-t]').forEach(function(b){b.onclick=function(){var t=b.dataset.t;
+document.querySelectorAll('[data-t]').forEach(function(x){x.classList.toggle('on',x.dataset.t===t)});
+document.querySelectorAll('.pane').forEach(function(x){x.classList.toggle('on',x.dataset.p===t)});
+document.querySelectorAll('.li-d').forEach(function(x){x.hidden=x.dataset.p!==t});scrollTo({top:0})}});sync();
+function fb(t){var a=document.createElement('textarea');a.value=t;a.setAttribute('readonly','');a.style.cssText='position:fixed;top:-1000px;opacity:0';document.body.appendChild(a);a.select();var ok=false;try{ok=document.execCommand('copy')}catch(e){}document.body.removeChild(a);return ok}
+document.addEventListener('click',function(ev){var b=ev.target.closest('.cp');if(b){var t=b.getAttribute('data-copy');
+function done(ok){b.textContent=ok?'已复制 ✓':'复制失败';b.classList.toggle('ok',ok);clearTimeout(b._t);b._t=setTimeout(function(){b.textContent='复制原文';b.classList.remove('ok')},1600)}
+if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(t).then(function(){done(true)},function(){done(fb(t))})}else done(fb(t));return}
+var x=ev.target.closest('.ex');if(x){var c=x.closest('.post').querySelector('.xp');var o=c.classList.toggle('open');x.textContent=o?'收起':'展开'}})})();
+</script><script>(function(){var q=document.getElementById('q'),c=document.getElementById('cnt'),a=document.getElementById('alll'),ps=[].slice.call(document.querySelectorAll('.feed1 .post'));
+function run(){var v=q.value.trim().toLowerCase(),all=a&&a.checked,k=0,n=0;ps.forEach(function(p){var lo=!p.dataset.ol||all;if(lo)n++;var ok=lo&&(!v||p.dataset.s.indexOf(v)>=0);p.hidden=!ok;if(ok)k++});c.textContent=v?('匹配 '+k+' / '+n+' 条'):(n+' 条')}
+q.addEventListener('input',run);if(a)a.addEventListener('change',run)})();</script></body></html>

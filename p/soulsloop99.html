@@ -1,0 +1,716 @@
+<!doctype html><html lang="zh-CN" data-theme="light" data-pref="auto"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><title>心灵书舫 | SoulSloop (@SoulSloop99) · XHOT</title><script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('xhot-theme')}catch(e){}t=(t==='light'||t==='dark')?t:'auto';d.setAttribute('data-pref',t);d.setAttribute('data-theme',t==='auto'?(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'):t)})();
+</script><style>:root{--bg:#f7f7f8;--card:#fff;--bd:#e4e4e7;--bd2:#f0f0f2;--zebra:#fafafa;--hov:#f4f4f6;--tx:#18181b;--tx2:#3f3f46;--mu:#71717a;--mu2:#a1a1aa;--ac:#4f46e5;--acbg:#eef2ff;--actx:#4338ca;--up:#16a34a;--upbg:#f0fdf4;--dn:#dc2626;--dnbg:#fef2f2;--r:8px;--sh:0 1px 2px rgba(24,24,27,.04)}
+html[data-theme=dark]{--bg:#09090b;--card:#131316;--bd:#27272a;--bd2:#1c1c20;--zebra:#16161a;--hov:#1d1d22;--tx:#f4f4f5;--tx2:#d4d4d8;--mu:#a1a1aa;--mu2:#71717a;--ac:#818cf8;--acbg:#1e1b4b;--actx:#a5b4fc;--up:#4ade80;--upbg:#0f2a1a;--dn:#f87171;--dnbg:#2d1214;--sh:none}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--tx);font:400 13px/1.5 "Inter","PingFang SC","HarmonyOS Sans SC","Noto Sans SC","Noto Sans CJK SC",-apple-system,BlinkMacSystemFont,"Microsoft YaHei",sans-serif;-webkit-font-smoothing:antialiased;font-feature-settings:"cv11","ss01"}
+a{color:inherit;text-decoration:none}button{font:inherit}
+.num,.f,.d,.r,.sv,.nc,.heat,.pc,.tr3,.kv dd,.post footer{font-variant-numeric:tabular-nums}
+/* 顶栏 */
+.top{position:sticky;top:0;z-index:30;background:color-mix(in srgb,var(--card) 92%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--bd)}
+.ti2{max-width:1440px;margin:auto;height:56px;padding:0 24px;display:flex;align-items:center;gap:16px}
+.lg{display:flex;align-items:center;gap:8px;font-weight:600;font-size:16px;letter-spacing:-.01em}.lg i{width:24px;height:24px;border-radius:6px;background:var(--ac);display:grid;place-items:center;font-style:normal;color:#fff;font-size:12px}.lg span{font-weight:400;font-size:13px;color:var(--mu);margin-left:4px;padding-left:12px;border-left:1px solid var(--bd)}
+.mtabs{display:none}
+.tg{margin-left:auto;display:flex;border:1px solid var(--bd);border-radius:var(--r);padding:2px;background:var(--card)}.tg button{border:0;background:none;color:var(--mu);height:28px;padding:0 10px;border-radius:6px;cursor:pointer;font-size:12px}.tg button.on{background:var(--hov);color:var(--tx);font-weight:500}
+/* 12 列网格 */
+.wrap{max-width:1440px;margin:auto;padding:24px 24px 32px}
+.stats,.shell{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:16px}.shell{align-items:start}
+.stats{margin-bottom:24px}.st{grid-column:span 2}
+.left{grid-column:span 2}.content{grid-column:span 10;min-width:0}
+.cols{display:grid;grid-template-columns:repeat(10,minmax(0,1fr));gap:16px;align-items:start}.mid{grid-column:span 7;min-width:0}.right{grid-column:span 3;min-width:0}
+/* 统计条 */
+.st{background:var(--card);border:1px solid var(--bd);border-radius:var(--r);padding:12px 16px;min-width:0;box-shadow:var(--sh)}
+.sl{font-size:12px;color:var(--mu);line-height:16px}.sv{font-size:20px;font-weight:600;line-height:28px;letter-spacing:-.01em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.ss{font-size:12px;color:var(--mu);line-height:16px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.st:nth-child(3) .sv{color:var(--ac)}
+/* 区块标题：统一 24px 行高，底部 8px */
+.bh{display:flex;align-items:center;gap:8px;height:24px;margin:0 0 8px}.bh h2{font-size:14px;font-weight:600;margin:0;line-height:24px}.hint{font-size:12px;color:var(--mu)}.credit{margin-left:auto;font-size:12px;font-weight:500;color:var(--ac)}.credit:hover{text-decoration:underline}
+.blk{margin-bottom:24px}
+/* 左栏 */
+.left{position:sticky;top:80px;display:flex;flex-direction:column;gap:16px}.left>.bh{margin-bottom:-8px}
+.lcard{background:var(--card);border:1px solid var(--bd);border-radius:var(--r);padding:8px;box-shadow:var(--sh)}
+.nav{display:flex;flex-direction:column;gap:2px}.nv{display:grid;grid-template-columns:24px minmax(0,1fr) auto;align-items:center;gap:8px;height:36px;border:0;background:none;color:var(--tx2);padding:0 8px;border-radius:6px;cursor:pointer;text-align:left;font-size:13px;font-weight:500}
+.nv:hover{background:var(--hov)}.nv.on{background:var(--acbg);color:var(--actx)}.ni{width:24px;height:24px;border-radius:6px;display:grid;place-items:center;background:var(--bd2);color:var(--mu);font-size:12px}.nv.on .ni{background:var(--ac);color:#fff}.nc{font-size:12px;color:var(--mu)}
+.kv{margin:0}.kv div{display:flex;justify-content:space-between;align-items:center;height:32px;padding:0 8px;border-bottom:1px solid var(--bd2);font-size:13px}.kv div:last-child{border-bottom:0}.kv dt{color:var(--mu)}.kv dd{margin:0;font-weight:500}
+.mini{padding:8px;border-top:1px solid var(--bd2)}.mt{font-size:12px;color:var(--mu);line-height:16px;margin-bottom:4px}.mv{font-weight:500;display:flex;align-items:center;justify-content:space-between;gap:8px}.mv2{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;font-size:13px;font-weight:500}.mv2:hover{color:var(--ac)}.mm{font-size:12px;color:var(--mu)}
+.mini .sp{height:24px;margin-top:8px}
+.tl{list-style:none;margin:0;padding:0}.tl li a{display:grid;grid-template-columns:16px minmax(0,1fr) auto;gap:8px;align-items:center;height:28px;padding:0 4px;border-radius:4px;font-size:13px}.tl li a:hover{background:var(--hov)}.tl .k{color:var(--mu2);font-size:12px;text-align:right}.tl .n{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.lnote{font-size:12px;color:var(--mu);padding:12px}.lnote b{display:block;color:var(--tx2);font-weight:500;margin-bottom:4px}.lnote p{margin:0 0 4px}.lnote a{color:var(--ac)}
+/* 涨跌徽章：唯一使用红绿的地方 */
+.pc{display:inline-flex;align-items:center;gap:2px;height:20px;font-size:12px;font-weight:500;padding:0 6px;border-radius:4px;white-space:nowrap}.pc.up{color:var(--up);background:var(--upbg)}.pc.dn{color:var(--dn);background:var(--dnbg)}
+.sp{display:block;width:100%;fill:none;stroke-width:1.5;stroke-linejoin:round;stroke-linecap:round}.sp.up,.tile.up .sp{stroke:var(--up)}.sp.dn,.tile.dn .sp{stroke:var(--dn)}
+/* 趋势 */
+.pane{display:none}.pane.on{display:block}
+.tiles{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
+.tile{background:var(--card);border:1px solid var(--bd);border-radius:var(--r);padding:8px 12px;height:88px;display:grid;grid-template-rows:20px 1fr 16px;gap:4px;box-shadow:var(--sh);min-width:0}
+.tile:hover{border-color:var(--mu2)}.tr1{display:grid;grid-template-columns:16px minmax(0,1fr) auto;gap:8px;align-items:center}.tk{font-size:12px;color:var(--mu2);text-align:right}.tn{font-size:13px;font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tile .sp{height:100%;opacity:.9}.tr3{display:flex;justify-content:space-between;font-size:12px;line-height:16px;color:var(--mu)}.tr3 b{color:var(--tx2);font-weight:500}
+/* 热帖 */
+.feed{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.post{background:var(--card);border:1px solid var(--bd);border-radius:var(--r);padding:12px 16px 8px;display:flex;flex-direction:column;min-width:0;box-shadow:var(--sh)}.post:hover{border-color:var(--mu2)}
+.post header{display:grid;grid-template-columns:32px minmax(0,1fr) auto;gap:8px;align-items:center;height:32px}
+.av{--h:220;width:32px;height:32px;border-radius:50%;display:inline-grid;place-items:center;flex:none;font-weight:600;font-size:13px;color:hsl(var(--h) 30% 32%);background:hsl(var(--h) 30% 92%)}
+html[data-theme=dark] .av{color:hsl(var(--h) 35% 80%);background:hsl(var(--h) 15% 22%)}
+.av.s{width:24px;height:24px;font-size:11px}.av.xs{width:20px;height:20px;font-size:10px;margin-left:-6px;border:2px solid var(--card)}.av.xs:first-child{margin-left:0}
+.who{min-width:0;line-height:16px}.nm{display:flex;align-items:center;gap:6px;font-size:13px;font-weight:600;min-width:0}.nm a{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.nm a:hover{color:var(--ac)}.hd{font-size:12px;color:var(--mu);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.heat{font-size:12px;font-weight:500;color:var(--mu);height:20px;line-height:20px;padding:0 6px;border:1px solid var(--bd);border-radius:4px}
+.pt{flex:1;margin:8px 0;font-size:13px;line-height:1.6;color:var(--tx2);white-space:pre-wrap;word-break:break-word}.xp .xf{display:none}.xp.open .xs{display:none}.xp.open .xf{display:inline}
+.post footer{display:flex;align-items:center;gap:10px;height:32px;font-size:12px;color:var(--mu);border-top:1px solid var(--bd2);white-space:nowrap;overflow:hidden}.sp1{flex:1}
+.cp,.ex{height:24px;border:1px solid var(--bd);background:var(--card);color:var(--tx2);font-size:12px;font-weight:500;padding:0 8px;border-radius:6px;cursor:pointer}.cp:hover,.ex:hover{border-color:var(--ac);color:var(--ac)}.cp.ok{border-color:var(--up);color:var(--up)}
+.op{width:24px;height:24px;display:grid;place-items:center;border-radius:6px;color:var(--mu)}.op:hover{background:var(--hov);color:var(--ac)}
+.zh{font-size:11px;font-weight:500;color:var(--mu);border:1px solid var(--bd);border-radius:4px;padding:0 4px;line-height:16px;flex:none}
+/* 右栏 */
+.right{display:flex;flex-direction:column;gap:24px;position:sticky;top:80px}
+.rcard,.acard{background:var(--card);border:1px solid var(--bd);border-radius:var(--r);box-shadow:var(--sh);min-width:0;overflow:hidden}
+.rhd{display:flex;align-items:center;gap:8px;height:24px;margin-bottom:8px}
+.rcard .tw{max-height:560px;overflow:auto}
+/* 表格 */
+table{width:100%;border-collapse:separate;border-spacing:0;font-size:13px}
+th{height:32px;font-size:12px;font-weight:500;color:var(--mu);text-align:left;padding:0 12px;background:var(--zebra);border-bottom:1px solid var(--bd);white-space:nowrap}
+thead th{position:sticky;top:0;z-index:2}
+td{height:36px;padding:0 12px;border-bottom:1px solid var(--bd2);vertical-align:middle}tbody tr:last-child td{border-bottom:0}
+tbody tr:not(.g):hover td{background:var(--hov)}
+th.num,td.num,th.f,td.f,th.d,td.d{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}th.r,td.r{width:40px;text-align:right;color:var(--mu2);padding-right:4px;font-variant-numeric:tabular-nums}
+.lbt{table-layout:fixed}.lbt th.r,.lbt td.r{width:36px}.lbt th.f,.lbt td.f{width:72px;font-weight:500}.lbt th.d,.lbt td.d{width:64px;color:var(--mu);font-size:12px;padding-left:0}
+.lbt td.n a{display:flex;align-items:center;gap:8px;min-width:0}.lbt .nt{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:500}.lbt td.n a:hover .nt{color:var(--ac)}
+tr.g th{position:sticky;top:32px;z-index:1;height:28px;background:var(--card);color:var(--tx2);font-size:12px;font-weight:600;border-bottom:1px solid var(--bd2)}tr.g th span{color:var(--mu);font-weight:400;margin-left:4px}
+.news{list-style:none;margin:0;padding:0 12px}.news li{border-top:1px solid var(--bd2)}.news li:first-child{border-top:0}.news a{display:block;padding:8px 0}.news .t{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;font-weight:500;font-size:13px;line-height:20px}.news a:hover .t{color:var(--ac)}.news .m{display:block;font-size:12px;color:var(--mu);line-height:16px;margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+/* 卡片内标题：所有卡片头 48px */
+.rcard>.bh,.acard>.bh{height:48px;margin:0;padding:0 12px;border-bottom:1px solid var(--bd)}
+/* AIHOT */
+.ahsec{margin-top:8px;padding-top:24px;border-top:1px solid var(--bd)}
+.ahh{display:flex;align-items:center;gap:12px;height:28px;margin-bottom:16px}.ahh .k{font-size:12px;font-weight:600;letter-spacing:.08em;color:var(--ac)}.ahh h2{margin:0;font-size:20px;font-weight:600;letter-spacing:-.01em}.ahh a{margin-left:auto;font-size:12px;font-weight:500;color:var(--ac)}
+.agrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.acard.wide{grid-column:1/-1}
+.ht{table-layout:fixed}.ht td.ti a{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:500}.ht td.ti a:hover{color:var(--ac)}.ht th:nth-child(3),.ht td.sv{width:104px}.ht th:nth-child(4),.ht td.hb{width:160px}.ht th.num,.ht td.num{width:72px}
+.rk{display:inline-grid;place-items:center;width:20px;height:20px;border-radius:4px;color:var(--mu);font-weight:500;font-size:12px}.rk.top{background:var(--acbg);color:var(--actx);font-weight:600}
+.bar{display:block;height:4px;border-radius:2px;background:var(--bd2);overflow:hidden}.bar i{display:block;height:100%;border-radius:2px;background:var(--ac);opacity:.75}
+.lead{display:block;margin:12px;padding:12px 16px;border-radius:6px;background:var(--zebra);border:1px solid var(--bd2)}.lead b{display:block;font-size:16px;font-weight:600;line-height:24px}.lead span{display:block;font-size:13px;color:var(--tx2);margin-top:4px}.lead:hover b{color:var(--ac)}
+.dg{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:16px;padding:0 12px 12px}.dl{font-size:12px;font-weight:600;color:var(--tx2);height:28px;line-height:28px;border-bottom:1px solid var(--bd)}.ds ul{list-style:none;margin:0;padding:0}.ds li a{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;font-size:13px;line-height:20px;padding:6px 0;border-bottom:1px solid var(--bd2);color:var(--tx2)}.ds li a:hover{color:var(--ac)}
+.exg{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:var(--bd2)}.exc{display:grid;grid-template-rows:auto 1fr auto;gap:4px;padding:12px 16px;background:var(--card);min-height:132px}.exc:hover{background:var(--hov)}
+.et{display:flex;gap:8px;align-items:flex-start}.et span{flex:1;font-weight:600;font-size:13px;line-height:20px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}.sc{font-size:12px;font-weight:500;color:var(--actx);background:var(--acbg);border-radius:4px;padding:0 6px;line-height:20px;font-variant-numeric:tabular-nums}
+.exc p{margin:0;font-size:12px;color:var(--mu);line-height:18px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}.em{font-size:12px;color:var(--mu2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.mtb .mn{font-weight:500}.mtb td{white-space:nowrap}.scc{width:180px}td.scc{text-align:right}.scc .bar{display:inline-block;width:96px;vertical-align:middle;margin-right:12px}.scc b{font-weight:600;font-variant-numeric:tabular-nums;display:inline-block;width:36px;text-align:right}
+.chips{display:flex;flex-wrap:wrap;gap:8px;padding:12px}.chips a{height:28px;line-height:26px;font-size:12px;padding:0 12px;border-radius:14px;color:var(--tx2);border:1px solid var(--bd)}.chips a:hover{border-color:var(--ac);color:var(--ac)}
+footer{max-width:1440px;margin:24px auto 0;padding-top:16px;border-top:1px solid var(--bd);font-size:12px;color:var(--mu)}footer a{color:var(--ac)}
+/* 响应式 */
+@media(max-width:1600px){.post footer .rp{display:none}}@media(max-width:1360px){.lbt th.f,.lbt td.f{width:64px}.lbt th.d,.lbt td.d{width:52px}.lbt th.r,.lbt td.r{width:28px}td,th{padding:0 8px}.tiles{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:1180px){.left{display:none}.content{grid-column:1/-1}.st{grid-column:span 4}.mtabs{display:flex;gap:4px}.mt1{height:32px;border:0;background:none;color:var(--tx2);padding:0 12px;border-radius:6px;cursor:pointer;font-weight:500;font-size:13px}.mt1.on{background:var(--acbg);color:var(--actx)}}
+@media(max-width:900px){.cols{grid-template-columns:1fr}.mid,.right{grid-column:1/-1}.right{position:static}.agrid{grid-template-columns:1fr}.dg{grid-template-columns:repeat(2,minmax(0,1fr))}.exg{grid-template-columns:1fr 1fr}}
+@media(max-width:640px){.ti2{flex-wrap:wrap;height:auto;padding:8px 16px;gap:8px}.lg span{display:none}.mtabs{order:3;width:100%}.mt1{flex:1}.wrap{padding:16px 12px 24px}
+.stats{gap:8px;margin-bottom:16px}.st{grid-column:span 6;padding:8px 12px}.sv{font-size:16px;line-height:24px}.tiles{grid-template-columns:repeat(2,minmax(0,1fr))}.feed{grid-template-columns:1fr}.exg{grid-template-columns:1fr}
+.ht th:nth-child(3),.ht td.sv,.ht th:nth-child(4),.ht td.hb,.ht th:nth-child(6),.ht td:nth-child(6){display:none}.mtb th:nth-child(3),.mtb td:nth-child(3),.mtb th:nth-child(4),.mtb td:nth-child(4),.mtb th:nth-child(5),.mtb td:nth-child(5){display:none}.scc{width:auto}.scc .bar{display:none}.ahh{height:auto;flex-wrap:wrap}.ahh a{margin-left:0}.dg{grid-template-columns:1fr}}
+/* ===== v5 color layer ===== */
+:root{--ac:#7c3aed;--acbg:#f3e8ff;--actx:#6d28d9;--g1:#7c3aed;--g2:#db2777;--g3:#f97316;--bg:#f6f5fb;--glow:rgba(124,58,237,.18)}
+html[data-theme=dark]{--bg:#110d2e;--card:#1a1640;--bd:#2a2652;--bd2:#1e1b40;--zebra:#171536;--hov:#1f1c45;--mu:#a5a3c9;--mu2:#77749e;--ac:#c084fc;--acbg:#2e1a5c;--actx:#e9d5ff;--up:#4ade80;--dn:#fb7185;--glow:rgba(192,132,252,.28)}
+html[data-theme=dark],html[data-theme=dark] body{background-attachment:fixed;background:radial-gradient(1200px 600px at 10% -10%,#2a1660 0,transparent 60%),radial-gradient(900px 500px at 100% 0,#3b0d4a 0,transparent 55%),var(--bg)}
+.lg i{background:linear-gradient(135deg,var(--g1),var(--g2))!important;color:#fff!important}
+.stats{background:linear-gradient(110deg,#6d28d9 0%,#a21caf 50%,#db2777 85%,#f97316 120%);border-radius:12px;padding:16px;box-shadow:0 8px 24px -8px rgba(162,28,175,.45)}
+html[data-theme=dark] .stats{background:linear-gradient(110deg,#4c1d95 0%,#86198f 55%,#be185d 100%);box-shadow:0 0 0 1px rgba(232,121,249,.25),0 10px 30px -10px rgba(217,70,239,.5)}
+.stats .st{background:rgba(255,255,255,.12)!important;border:1px solid rgba(255,255,255,.22)!important;box-shadow:none!important;backdrop-filter:blur(4px)}
+.stats .st *{color:#fff!important}
+.stats .st .sl,.stats .st .ss{color:rgba(255,255,255,.82)!important}
+/* heat tiles */
+.tile{position:relative;overflow:hidden;transition:transform .15s,box-shadow .15s}
+.tile.up{background:linear-gradient(135deg,rgba(249,115,22,calc(var(--a)*.10 + .03)),rgba(239,68,68,calc(var(--a)*.28 + .04))),var(--card);border-color:rgba(239,68,68,calc(var(--a)*.45 + .12))}
+.tile.dn{background:linear-gradient(135deg,rgba(56,189,248,.05),rgba(59,130,246,calc(var(--a)*.22 + .05))),var(--card);border-color:rgba(59,130,246,.25)}
+.tile.up .sp{stroke:#ea580c}.tile.dn .sp{stroke:#2563eb}
+html[data-theme=dark] .tile.up .sp{stroke:#fb923c}html[data-theme=dark] .tile.dn .sp{stroke:#60a5fa}
+.tile:hover{transform:translateY(-1px);box-shadow:0 6px 18px -6px rgba(239,68,68,.35)}
+/* domain chips */
+.nv[data-t=ai] .ni,.mtabs [data-t=ai]{--dc:#7c3aed}
+.nv[data-t=money] .ni,.mtabs [data-t=money]{--dc:#f59e0b}
+.nv[data-t=growth] .ni,.mtabs [data-t=growth]{--dc:#14b8a6}
+.nv[data-t=ai]{--dc:#7c3aed;--dc2:#c026d3}.nv[data-t=money]{--dc:#f59e0b;--dc2:#ea580c}.nv[data-t=growth]{--dc:#14b8a6;--dc2:#22c55e}
+.nv .ni{background:linear-gradient(135deg,var(--dc),var(--dc2))!important;color:#fff!important}
+.nv.on{background:color-mix(in srgb,var(--dc) 12%,var(--card))!important;color:var(--tx)!important;box-shadow:inset 3px 0 0 var(--dc)}
+.nv.on .nc{color:var(--dc)}
+/* gradient avatars */
+.av{background:linear-gradient(135deg,hsl(var(--h) 85% 62%),hsl(calc(var(--h) + 50) 80% 52%))!important;color:#fff!important;text-shadow:0 1px 1px rgba(0,0,0,.2)}
+/* cards accents + glow */
+.lcard,.rcard,.post,.acard{transition:box-shadow .15s,border-color .15s}
+.post{border-top:2px solid color-mix(in srgb,var(--ac) 45%,transparent)!important}
+.post:hover,.rcard:hover,.acard:hover{border-color:color-mix(in srgb,var(--ac) 50%,var(--bd))!important;box-shadow:0 0 0 3px var(--glow)}
+.bh h2{position:relative;padding-left:10px}
+.bh h2::before{content:"";position:absolute;left:0;top:5px;bottom:5px;width:3px;border-radius:2px;background:linear-gradient(var(--g1),var(--g2))}
+a{color:var(--actx)}
+/* ===== v6 layout ===== */
+.mtabs{display:flex!important;gap:4px}
+.mt1{height:32px;border:0;background:none;color:var(--tx2);padding:0 12px;border-radius:6px;cursor:pointer;font-weight:500;font-size:13px}
+.mt1.on{background:color-mix(in srgb,var(--dc) 14%,var(--card));color:var(--tx);box-shadow:inset 0 -2px 0 var(--dc)}
+.ti2{display:flex;align-items:center;gap:16px}
+.ti2 .sp1{flex:1}
+.ahl{font-size:13px;font-weight:500;color:var(--actx);text-decoration:none;padding:0 8px;height:32px;display:inline-flex;align-items:center;border-radius:6px}
+.ahl:hover{background:var(--acbg)}
+.stats.sm{padding:8px 16px;grid-template-columns:repeat(12,minmax(0,1fr))}
+.stats.sm .st{grid-column:span 2;padding:8px 12px;height:auto}
+.stats.sm .sv{font-size:20px;line-height:1.3}
+.g6{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:16px;align-items:start}
+.c-l{grid-column:span 3;min-width:0}.c-m{grid-column:span 6;min-width:0}.c-r{grid-column:span 3;min-width:0;display:flex;flex-direction:column;gap:24px}
+.c-l,.c-r{position:sticky;top:80px;max-height:calc(100vh - 96px);overflow:auto;scrollbar-width:thin}
+.feed1{display:flex;flex-direction:column;gap:8px}
+.post .pt{white-space:pre-wrap;word-break:break-word}
+.post .tm{color:var(--mu);font-variant-numeric:tabular-nums}
+.lbt td.n a{display:flex;align-items:center;gap:8px;min-width:0;color:var(--tx);text-decoration:none}
+.lbt td.n a:hover .nt{color:var(--actx);text-decoration:underline}
+.rlist{list-style:none;margin:0;padding:0}
+.rlist li{border-top:1px solid var(--bd2)}
+.rlist li:first-child{border-top:0}
+.rlist a{display:block;padding:8px 12px;color:var(--tx);text-decoration:none}
+.rlist a:hover{background:var(--hov)}
+.gh .rn{font-weight:600;font-size:13px;color:var(--actx);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.gh .rd{font-size:12px;color:var(--tx2);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;margin:2px 0 4px}
+.gh .rm{display:flex;gap:12px;font-size:12px;color:var(--mu);font-variant-numeric:tabular-nums}
+.gh .rm .td{margin-left:auto;color:#ea580c;font-weight:600}
+html[data-theme=dark] .gh .rm .td{color:#fb923c}
+.gh .lg2{display:inline-flex;align-items:center;gap:4px}.gh .lg2 i{width:8px;height:8px;border-radius:50%;background:hsl(var(--h) 70% 55%)}
+.nws .t{font-size:13px;font-weight:500;line-height:1.5;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.nws .m{font-size:12px;color:var(--mu);margin-top:2px;display:flex;gap:8px}
+.src{display:inline-block;padding:0 6px;border-radius:4px;font-size:12px;font-weight:500;line-height:18px}
+.src.x{background:#e0f2fe;color:#0369a1}.src.d{background:#f3e8ff;color:#7e22ce}.src.s{background:#fce7f3;color:#be185d}
+html[data-theme=dark] .src.x{background:#0c2a44;color:#7dd3fc}html[data-theme=dark] .src.d{background:#2e1a5c;color:#d8b4fe}html[data-theme=dark] .src.s{background:#4a0d2e;color:#f9a8d4}
+.tl2{list-style:none;margin:0;padding:4px 0}
+.tl2 a{display:grid;grid-template-columns:24px 1fr auto;align-items:center;height:32px;padding:0 12px;color:var(--tx);text-decoration:none;gap:8px}
+.tl2 a:hover{background:var(--hov)}
+.tl2 .k{color:var(--mu);font-variant-numeric:tabular-nums;font-size:12px}
+.tl2 .n{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+/* person page */
+.ph{display:grid;grid-template-columns:80px 1fr auto;gap:16px;align-items:center;padding:24px;border-radius:12px;background:linear-gradient(110deg,#6d28d9 0%,#a21caf 55%,#db2777 100%);color:#fff;box-shadow:0 8px 24px -8px rgba(162,28,175,.45)}
+.ph .av.xl{width:80px;height:80px;border-radius:50%;font-size:28px;font-weight:600;display:flex;align-items:center;justify-content:center;border:3px solid rgba(255,255,255,.6)}
+.ph h1{font-size:28px;line-height:1.3;margin:0;font-weight:600}
+.ph .hd{opacity:.85;font-size:14px}
+.ph .bio{margin:8px 0 0;font-size:14px;opacity:.95;white-space:pre-wrap;max-width:720px}
+.ph .fs{text-align:right}
+.ph .fs b{display:block;font-size:28px;font-weight:600;font-variant-numeric:tabular-nums;line-height:1.3}
+.ph .fs span{font-size:12px;opacity:.85}
+.ph .xb{display:inline-flex;margin-top:8px;height:32px;align-items:center;padding:0 12px;border-radius:6px;background:rgba(255,255,255,.18);color:#fff;text-decoration:none;font-weight:500;border:1px solid rgba(255,255,255,.35)}
+.ptool{display:flex;align-items:center;gap:16px;margin:24px 0 8px}
+.ptool input{flex:1;height:40px;border:1px solid var(--bd);border-radius:8px;background:var(--card);color:var(--tx);padding:0 12px;font:inherit;font-size:14px;outline:none}
+.ptool input:focus{border-color:var(--ac);box-shadow:0 0 0 3px var(--glow)}
+.ptool .cnt{color:var(--mu);font-variant-numeric:tabular-nums;white-space:nowrap}
+.pwrap{max-width:880px;margin:0 auto}
+.back{font-size:13px;color:var(--actx);text-decoration:none;display:inline-flex;height:32px;align-items:center;margin-bottom:8px}
+mark{background:#fde68a;color:inherit;border-radius:2px}
+html[data-theme=dark] mark{background:#854d0e}
+@media(max-width:1180px){.c-l{grid-column:span 4}.c-m{grid-column:span 8}.c-r{grid-column:1/-1;position:static;max-height:none;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}}
+@media(max-width:900px){.g6{grid-template-columns:1fr}.c-l,.c-m,.c-r{grid-column:1/-1;position:static;max-height:none}.c-m{order:1}.c-r{order:2;display:flex}.c-l{order:3}.stats.sm .st{grid-column:span 4}}
+@media(max-width:640px){.ti2{flex-wrap:wrap;gap:8px}.mtabs{order:3;width:100%}.mt1{flex:1}.ahl{margin-left:auto}.ti2 .sp1{display:none}.stats.sm{display:none}.ph{grid-template-columns:56px 1fr;padding:16px}.ph .av.xl{width:56px;height:56px;font-size:20px}.ph h1{font-size:20px}.ph .fs{grid-column:1/-1;text-align:left}}
+.post footer{margin:0!important;width:auto!important;max-width:none!important;padding:0!important;text-align:left!important;justify-content:flex-start}
+.c-l .tw{max-height:none;overflow:visible}
+.ph .hd,.ph .hd *{color:rgba(255,255,255,.85)!important}
+/* ===== v6b card consistency ===== */
+.post.c6{padding:16px;gap:0;border:1px solid var(--bd)!important;border-top:3px solid color-mix(in srgb,var(--ac) 55%,transparent)!important;border-radius:10px;background:var(--card)}
+.post.c6 header{display:grid;grid-template-columns:32px minmax(0,1fr) auto;gap:12px;align-items:center;height:40px}
+.post.c6 .who{min-width:0}
+.post.c6 .nm{font-weight:600;font-size:14px;line-height:20px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.post.c6 .nm a{color:var(--tx);text-decoration:none}.post.c6 .nm a:hover{color:var(--actx)}
+.post.c6 .hd{font-size:12px;line-height:18px;color:var(--mu)}
+.post.c6 .tm{text-align:right;font-size:12px;line-height:18px;color:var(--tx2);font-variant-numeric:tabular-nums;white-space:nowrap}
+.post.c6 .tm small{display:block;color:var(--mu);font-size:12px}
+.post.c6 .pt{margin:12px 0;font-size:14px;line-height:1.5;color:var(--tx)}
+.post.c6 footer{display:flex!important;align-items:center;justify-content:space-between!important;height:40px;border-top:1px solid var(--bd2);gap:8px}
+.post.c6 .act{display:flex;gap:8px;align-items:center}
+.post.c6 .op{font-size:12px;color:var(--mu);text-decoration:none;height:28px;display:inline-flex;align-items:center;padding:0 8px;border:1px solid var(--bd);border-radius:6px}
+.post.c6 .op:hover{color:var(--actx);border-color:var(--ac)}
+.post.c6 .met{display:grid;grid-template-columns:repeat(4,64px);gap:0}
+.post.c6 .mc{text-align:right;font-variant-numeric:tabular-nums;color:var(--mu);font-size:12px}
+.post.c6 .mc i{font-style:normal;margin-right:4px;opacity:.75}
+.feed1{gap:12px}
+.ph{grid-template-columns:80px minmax(0,1fr) auto;padding:24px}
+.ph .pi{min-width:0}.ph .bio.dim{opacity:.7}
+.ph .xb{margin:0;align-self:start}
+.pstat{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:12px}
+.psb{background:var(--card);border:1px solid var(--bd);border-radius:10px;padding:12px 16px;border-top:3px solid var(--dcx,#a21caf)}
+.psb:nth-child(1){--dcx:#7c3aed}.psb:nth-child(2){--dcx:#db2777}.psb:nth-child(3){--dcx:#f97316}.psb:nth-child(4){--dcx:#14b8a6}
+.psb .sl{font-size:12px;color:var(--mu)}.psb .sv{font-size:20px;font-weight:600;line-height:1.4;font-variant-numeric:tabular-nums;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.psb .ss{font-size:12px;color:var(--mu)}
+.tgl{display:inline-flex;align-items:center;gap:6px;font-size:13px;color:var(--tx2);white-space:nowrap;cursor:pointer}
+.empty{padding:24px;color:var(--mu)}
+@media(max-width:640px){.pstat{grid-template-columns:repeat(2,minmax(0,1fr))}.ph{grid-template-columns:56px minmax(0,1fr)}.ph .xb{grid-column:1/-1;justify-self:start}.ptool{flex-wrap:wrap;gap:8px}.ptool input{flex-basis:100%}
+.post.c6 .met{grid-template-columns:repeat(4,auto);gap:10px}.post.c6 footer{height:auto;min-height:40px;flex-wrap:wrap;padding:6px 0!important}.post.c6 .rp,.post.c6 .mc:nth-child(3){display:none}}
+.post.c6 .met{grid-template-columns:64px 64px 72px 84px}@media(max-width:640px){.post.c6 .met{grid-template-columns:repeat(4,auto);gap:10px}}
+</style></head><body><header class="top"><div class="ti2"><div class="lg"><i>⚡</i>XHOT<span>X 热点雷达</span></div><span class="sp1"></span><a class="ahl" href="https://aihot.news" target="_blank">来自 AIHOT ↗</a><div class="tg"><button data-set-theme="light" title="浅色">☀</button><button data-set-theme="dark" title="深色">☾</button><button data-set-theme="auto">自动</button></div></div></header>
+<div class="wrap"><div class="pwrap"><a class="back" href="../index.html">← 返回首页</a>
+<section class="ph"><span class="av xl" style="--h:38">心</span><div class="pi"><h1>心灵书舫 | SoulSloop</h1><div class="hd">@SoulSloop99</div><p class="bio">🌿 读书见世界 · 思考见自己
+📚 拓展视野 · 提升认知｜以书为舟，向内生长
+🌱 膳仁堂®｜中医智慧 · 膳食养生
+🧍‍♂️ Real human · Sincere sharing · Making friends</p></div><a class="xb" href="https://x.com/SoulSloop99" target="_blank">在 X 查看 ↗</a></section>
+<div class="pstat"><div class="psb"><div class="sl">粉丝</div><div class="sv">3.5万</div><div class="ss">35,106</div></div><div class="psb"><div class="sl">较上次</div><div class="sv">—</div><div class="ss">粉丝变化</div></div><div class="psb"><div class="sl">已存推文</div><div class="sv">24</div><div class="ss">最多 200 条</div></div><div class="psb"><div class="sl">最新发帖</div><div class="sv">10-13 15:19</div><div class="ss">1 小时前</div></div></div>
+<div class="ptool"><input id="q" type="search" placeholder="搜索 心灵书舫 | SoulSloop 的推文关键词…" autocomplete="off"><span class="cnt" id="cnt">24 条</span></div>
+<div class="bh"><h2>推文时间线</h2><span class="hint">最新在前 · 默认只显示中文/英文</span></div><div class="feed1"><article class="post c6" data-s="60个养生小知识
+
+61、绿茶有益防治肝炎肝癌;
+
+62、胖大海泡茶不宜长期饮用;
+
+63、感冒不宜喝苦丁茶;
+
+64、不应用保温杯喝茶;
+
+65、晚饭后两小时饮用酸奶最佳;
+
+66、不宜空腹喝酸奶;
+
+67、喝完牛奶应喝口白开水;
+
+68、常喝豆浆更健康;
+
+69、豆浆不应与红糖鸡蛋同饮;
+
+70、白酒不宜代替料酒做菜;"><header><span class="av" style="--h:38">心</span><div class="who"><div class="nm"><span>心灵书舫 | SoulSloop</span></div><div class="hd">@SoulSloop99</div></div><time class="tm" title="10-13 15:19 北京时间">10-13 15:19<small>1 小时前</small></time></header><div class="pt">60个养生小知识
+
+61、绿茶有益防治肝炎肝癌;
+
+62、胖大海泡茶不宜长期饮用;
+
+63、感冒不宜喝苦丁茶;
+
+64、不应用保温杯喝茶;
+
+65、晚饭后两小时饮用酸奶最佳;
+
+66、不宜空腹喝酸奶;
+
+67、喝完牛奶应喝口白开水;
+
+68、常喝豆浆更健康;
+
+69、豆浆不应与红糖鸡蛋同饮;
+
+70、白酒不宜代替料酒做菜;</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="60个养生小知识
+
+61、绿茶有益防治肝炎肝癌;
+
+62、胖大海泡茶不宜长期饮用;
+
+63、感冒不宜喝苦丁茶;
+
+64、不应用保温杯喝茶;
+
+65、晚饭后两小时饮用酸奶最佳;
+
+66、不宜空腹喝酸奶;
+
+67、喝完牛奶应喝口白开水;
+
+68、常喝豆浆更健康;
+
+69、豆浆不应与红糖鸡蛋同饮;
+
+70、白酒不宜代替料酒做菜;
+— 心灵书舫 | SoulSloop (@SoulSloop99)
+https://x.com/SoulSloop99/status/2109906742134153530">复制原文</button><a class="op" href="https://x.com/SoulSloop99/status/2109906742134153530" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>1</span><span class="mc" title="转发"><i>⇄</i>1</span><span class="mc" title="评论"><i>💬</i>0</span><span class="mc" title="浏览"><i>👁</i>492</span></div></footer></article><article class="post c6" data-s="📱 手机摸屏背后的科学原理：你的手机是如何“感知”你的？
+
+你是否曾好奇，为什么你的智能手机能对手指最轻触做出即时反应，而无论你用力按压塑料笔，它却毫无反应？
+
+答案不在于压力，而在于电！"><header><span class="av" style="--h:38">心</span><div class="who"><div class="nm"><span>心灵书舫 | SoulSloop</span></div><div class="hd">@SoulSloop99</div></div><time class="tm" title="10-13 15:00 北京时间">10-13 15:00<small>1 小时前</small></time></header><div class="pt">📱 手机摸屏背后的科学原理：你的手机是如何“感知”你的？
+
+你是否曾好奇，为什么你的智能手机能对手指最轻触做出即时反应，而无论你用力按压塑料笔，它却毫无反应？
+
+答案不在于压力，而在于电！</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="📱 手机摸屏背后的科学原理：你的手机是如何“感知”你的？
+
+你是否曾好奇，为什么你的智能手机能对手指最轻触做出即时反应，而无论你用力按压塑料笔，它却毫无反应？
+
+答案不在于压力，而在于电！
+— 心灵书舫 | SoulSloop (@SoulSloop99)
+https://x.com/SoulSloop99/status/2109902017011548615">复制原文</button><a class="op" href="https://x.com/SoulSloop99/status/2109902017011548615" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>3</span><span class="mc" title="转发"><i>⇄</i>0</span><span class="mc" title="评论"><i>💬</i>1</span><span class="mc" title="浏览"><i>👁</i>519</span></div></footer></article><article class="post c6" data-s="哈哈😂，这也是太写实啦吧！ https://t.co/vrrizbsx8n"><header><span class="av" style="--h:38">心</span><div class="who"><div class="nm"><span>心灵书舫 | SoulSloop</span></div><div class="hd">@SoulSloop99</div></div><time class="tm" title="10-13 10:19 北京时间">10-13 10:19<small>6 小时前</small></time></header><div class="pt">哈哈😂，这也是太写实啦吧！ https://t.co/VrRizBsx8N</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="哈哈😂，这也是太写实啦吧！ https://t.co/VrRizBsx8N
+— 心灵书舫 | SoulSloop (@SoulSloop99)
+https://x.com/SoulSloop99/status/2109831289977381103">复制原文</button><a class="op" href="https://x.com/SoulSloop99/status/2109831289977381103" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>1</span><span class="mc" title="转发"><i>⇄</i>0</span><span class="mc" title="评论"><i>💬</i>0</span><span class="mc" title="浏览"><i>👁</i>647</span></div></footer></article><article class="post c6" data-s="听宋人王观算账——《红芍药•人生百岁》：
+       人生百岁，七十稀少。更除十年孩童小。又十年昏老。都来五十载，一半被，睡魔分了。那二十五载之中，宁无些个烦恼！
+       仔细思量，好追欢及早。遇酒追朋笑傲。任玉山摧倒。沈醉且沈醉，人生似，露垂芳草。幸新来，有酒如渑，结千秋歌笑。"><header><span class="av" style="--h:38">心</span><div class="who"><div class="nm"><span>心灵书舫 | SoulSloop</span></div><div class="hd">@SoulSloop99</div></div><time class="tm" title="10-13 09:29 北京时间">10-13 09:29<small>6 小时前</small></time></header><div class="pt">听宋人王观算账——《红芍药•人生百岁》：
+       人生百岁，七十稀少。更除十年孩童小。又十年昏老。都来五十载，一半被，睡魔分了。那二十五载之中，宁无些个烦恼！
+       仔细思量，好追欢及早。遇酒追朋笑傲。任玉山摧倒。沈醉且沈醉，人生似，露垂芳草。幸新来，有酒如渑，结千秋歌笑。</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="听宋人王观算账——《红芍药•人生百岁》：
+       人生百岁，七十稀少。更除十年孩童小。又十年昏老。都来五十载，一半被，睡魔分了。那二十五载之中，宁无些个烦恼！
+       仔细思量，好追欢及早。遇酒追朋笑傲。任玉山摧倒。沈醉且沈醉，人生似，露垂芳草。幸新来，有酒如渑，结千秋歌笑。
+— 心灵书舫 | SoulSloop (@SoulSloop99)
+https://x.com/SoulSloop99/status/2109818757342531910">复制原文</button><a class="op" href="https://x.com/SoulSloop99/status/2109818757342531910" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>1</span><span class="mc" title="转发"><i>⇄</i>0</span><span class="mc" title="评论"><i>💬</i>0</span><span class="mc" title="浏览"><i>👁</i>783</span></div></footer></article><article class="post c6" data-s="毛主席最顶级外交：全程不谈条约、不讲条件，一句话拿捏美国
+
+很多人以为外交就是针锋相对、步步算计、寸土必争。
+
+但毛主席的外交，是降维博弈。
+
+不吵架、不辩论、不纠缠细节，只用格局碾压套路。
+
+1975年，美国国务卿基辛格第五次访华。
+
+这时候的局势很微妙： https://t.co/ewdxqoomts https://t.co/klu0omczzo"><header><span class="av" style="--h:38">心</span><div class="who"><div class="nm"><span>心灵书舫 | SoulSloop</span></div><div class="hd">@SoulSloop99</div></div><time class="tm" title="10-13 08:46 北京时间">10-13 08:46<small>7 小时前</small></time></header><div class="pt">毛主席最顶级外交：全程不谈条约、不讲条件，一句话拿捏美国
+
+很多人以为外交就是针锋相对、步步算计、寸土必争。
+
+但毛主席的外交，是降维博弈。
+
+不吵架、不辩论、不纠缠细节，只用格局碾压套路。
+
+1975年，美国国务卿基辛格第五次访华。
+
+这时候的局势很微妙： https://t.co/EwDXqOoMTS https://t.co/KLu0oMCzzo</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="毛主席最顶级外交：全程不谈条约、不讲条件，一句话拿捏美国
+
+很多人以为外交就是针锋相对、步步算计、寸土必争。
+
+但毛主席的外交，是降维博弈。
+
+不吵架、不辩论、不纠缠细节，只用格局碾压套路。
+
+1975年，美国国务卿基辛格第五次访华。
+
+这时候的局势很微妙： https://t.co/EwDXqOoMTS https://t.co/KLu0oMCzzo
+— 心灵书舫 | SoulSloop (@SoulSloop99)
+https://x.com/SoulSloop99/status/2109807832464064849">复制原文</button><a class="op" href="https://x.com/SoulSloop99/status/2109807832464064849" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>2</span><span class="mc" title="转发"><i>⇄</i>0</span><span class="mc" title="评论"><i>💬</i>11</span><span class="mc" title="浏览"><i>👁</i>848</span></div></footer></article><article class="post c6" data-s="卸任苹果 ceo 仅仅一个月，蒂姆·库克就出现在了广州兰圃公园的绿荫小桥旁。
+
+​这一次，没有黑西装，没有财报季的沉重压力，一身灰色 t 恤的库克站在木人桩旁，兴致勃勃地观摩着传统武术电影的拍摄，看两位高手在桥头切磋咏春拳。 https://t.co/lmhoopyykv"><header><span class="av" style="--h:38">心</span><div class="who"><div class="nm"><span>心灵书舫 | SoulSloop</span></div><div class="hd">@SoulSloop99</div></div><time class="tm" title="10-13 08:33 北京时间">10-13 08:33<small>7 小时前</small></time></header><div class="pt">卸任苹果 CEO 仅仅一个月，蒂姆·库克就出现在了广州兰圃公园的绿荫小桥旁。
+
+​这一次，没有黑西装，没有财报季的沉重压力，一身灰色 T 恤的库克站在木人桩旁，兴致勃勃地观摩着传统武术电影的拍摄，看两位高手在桥头切磋咏春拳。 https://t.co/lMhoOPyykV</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="卸任苹果 CEO 仅仅一个月，蒂姆·库克就出现在了广州兰圃公园的绿荫小桥旁。
+
+​这一次，没有黑西装，没有财报季的沉重压力，一身灰色 T 恤的库克站在木人桩旁，兴致勃勃地观摩着传统武术电影的拍摄，看两位高手在桥头切磋咏春拳。 https://t.co/lMhoOPyykV
+— 心灵书舫 | SoulSloop (@SoulSloop99)
+https://x.com/SoulSloop99/status/2109804693073637506">复制原文</button><a class="op" href="https://x.com/SoulSloop99/status/2109804693073637506" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>1</span><span class="mc" title="转发"><i>⇄</i>0</span><span class="mc" title="评论"><i>💬</i>3</span><span class="mc" title="浏览"><i>👁</i>1,274</span></div></footer></article><article class="post c6" data-s="“凡是脾气温和的人，
+福气都深厚，活的都快乐。
+凡是脾气狂暴的人，
+福气都浅薄，活的都痛苦。
+
+人这辈子所有的福气，
+都藏在自己的脾气里。
+
+不要让你的脾气挡住了你的福气。
+别忘了，一念嗔恨起，
+百万瘴门开。”
+
+你回过头想一想，
+哪次发脾气不是以祸乱收场。
+
+对亲人发脾气，"><header><span class="av" style="--h:38">心</span><div class="who"><div class="nm"><span>心灵书舫 | SoulSloop</span></div><div class="hd">@SoulSloop99</div></div><time class="tm" title="10-13 08:17 北京时间">10-13 08:17<small>8 小时前</small></time></header><div class="pt">“凡是脾气温和的人，
+福气都深厚，活的都快乐。
+凡是脾气狂暴的人，
+福气都浅薄，活的都痛苦。
+
+人这辈子所有的福气，
+都藏在自己的脾气里。
+
+不要让你的脾气挡住了你的福气。
+别忘了，一念嗔恨起，
+百万瘴门开。”
+
+你回过头想一想，
+哪次发脾气不是以祸乱收场。
+
+对亲人发脾气，</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="“凡是脾气温和的人，
+福气都深厚，活的都快乐。
+凡是脾气狂暴的人，
+福气都浅薄，活的都痛苦。
+
+人这辈子所有的福气，
+都藏在自己的脾气里。
+
+不要让你的脾气挡住了你的福气。
+别忘了，一念嗔恨起，
+百万瘴门开。”
+
+你回过头想一想，
+哪次发脾气不是以祸乱收场。
+
+对亲人发脾气，
+— 心灵书舫 | SoulSloop (@SoulSloop99)
+https://x.com/SoulSloop99/status/2109800534253146267">复制原文</button><a class="op" href="https://x.com/SoulSloop99/status/2109800534253146267" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>20</span><span class="mc" title="转发"><i>⇄</i>3</span><span class="mc" title="评论"><i>💬</i>0</span><span class="mc" title="浏览"><i>👁</i>1,463</span></div></footer></article><article class="post c6" data-s="永远相信自己是个非常幸运且有福气的人
+
+永远相信自己是个幸运且有福气的人，因为人生即使偶有风雨，也依然会有美好的事情，正在向你走来。 https://t.co/dslzqhnolq"><header><span class="av" style="--h:38">心</span><div class="who"><div class="nm"><span>心灵书舫 | SoulSloop</span></div><div class="hd">@SoulSloop99</div></div><time class="tm" title="10-13 07:39 北京时间">10-13 07:39<small>8 小时前</small></time></header><div class="pt">永远相信自己是个非常幸运且有福气的人
+
+永远相信自己是个幸运且有福气的人，因为人生即使偶有风雨，也依然会有美好的事情，正在向你走来。 https://t.co/DsLzQHnOLQ</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="永远相信自己是个非常幸运且有福气的人
+
+永远相信自己是个幸运且有福气的人，因为人生即使偶有风雨，也依然会有美好的事情，正在向你走来。 https://t.co/DsLzQHnOLQ
+— 心灵书舫 | SoulSloop (@SoulSloop99)
+https://x.com/SoulSloop99/status/2109791109002174721">复制原文</button><a class="op" href="https://x.com/SoulSloop99/status/2109791109002174721" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>6</span><span class="mc" title="转发"><i>⇄</i>2</span><span class="mc" title="评论"><i>💬</i>0</span><span class="mc" title="浏览"><i>👁</i>1,038</span></div></footer></article><article class="post c6" data-s="为什么时间越久，越多人钦佩毛泽东，毛泽民的夫人朱旦华的一段回忆录很能说明问题。朱旦华是老革命家，她和同时代的许多革命家一样，有一段时间是不大能理解毛泽东的。 https://t.co/l4kwenkba8"><header><span class="av" style="--h:38">心</span><div class="who"><div class="nm"><span>心灵书舫 | SoulSloop</span></div><div class="hd">@SoulSloop99</div></div><time class="tm" title="10-13 07:34 北京时间">10-13 07:34<small>8 小时前</small></time></header><div class="pt">为什么时间越久，越多人钦佩毛泽东，毛泽民的夫人朱旦华的一段回忆录很能说明问题。朱旦华是老革命家，她和同时代的许多革命家一样，有一段时间是不大能理解毛泽东的。 https://t.co/L4KweNKba8</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="为什么时间越久，越多人钦佩毛泽东，毛泽民的夫人朱旦华的一段回忆录很能说明问题。朱旦华是老革命家，她和同时代的许多革命家一样，有一段时间是不大能理解毛泽东的。 https://t.co/L4KweNKba8
+— 心灵书舫 | SoulSloop (@SoulSloop99)
+https://x.com/SoulSloop99/status/2109789806008132056">复制原文</button><a class="op" href="https://x.com/SoulSloop99/status/2109789806008132056" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>5</span><span class="mc" title="转发"><i>⇄</i>1</span><span class="mc" title="评论"><i>💬</i>2</span><span class="mc" title="浏览"><i>👁</i>2,895</span></div></footer></article><article class="post c6" data-s="的确如此 https://t.co/coczapqrjy"><header><span class="av" style="--h:38">心</span><div class="who"><div class="nm"><span>心灵书舫 | SoulSloop</span></div><div class="hd">@SoulSloop99</div></div><time class="tm" title="10-13 07:14 北京时间">10-13 07:14<small>9 小时前</small></time></header><div class="pt">的确如此 https://t.co/CoCzaPqrjy</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="的确如此 https://t.co/CoCzaPqrjy
+— 心灵书舫 | SoulSloop (@SoulSloop99)
+https://x.com/SoulSloop99/status/2109784901100986756">复制原文</button><a class="op" href="https://x.com/SoulSloop99/status/2109784901100986756" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>0</span><span class="mc" title="转发"><i>⇄</i>0</span><span class="mc" title="评论"><i>💬</i>0</span><span class="mc" title="浏览"><i>👁</i>808</span></div></footer></article><article class="post c6" data-s="陈道明很现实的话：“没有亲人，你能活；没有朋友，你能活；就算一个人，你也能好好活。可唯独一样东西，缺了它，纵有凌云志，也难迈半步；纵有千般情，也难守周全，那就是能力。"><header><span class="av" style="--h:38">心</span><div class="who"><div class="nm"><span>心灵书舫 | SoulSloop</span></div><div class="hd">@SoulSloop99</div></div><time class="tm" title="10-13 07:14 北京时间">10-13 07:14<small>9 小时前</small></time></header><div class="pt">陈道明很现实的话：“没有亲人，你能活；没有朋友，你能活；就算一个人，你也能好好活。可唯独一样东西，缺了它，纵有凌云志，也难迈半步；纵有千般情，也难守周全，那就是能力。</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="陈道明很现实的话：“没有亲人，你能活；没有朋友，你能活；就算一个人，你也能好好活。可唯独一样东西，缺了它，纵有凌云志，也难迈半步；纵有千般情，也难守周全，那就是能力。
+— 心灵书舫 | SoulSloop (@SoulSloop99)
+https://x.com/SoulSloop99/status/2109784841156006308">复制原文</button><a class="op" href="https://x.com/SoulSloop99/status/2109784841156006308" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>41</span><span class="mc" title="转发"><i>⇄</i>12</span><span class="mc" title="评论"><i>💬</i>1</span><span class="mc" title="浏览"><i>👁</i>7,470</span></div></footer></article><article class="post c6" data-s="人这一辈子
+所有的“好运”和“福气”，
+都是自己积攒的
+“心诚”才会交善友，
+“品正”方能遇贵人 ​​​。
+
+人会在平静的日子里会重新长出年轻的自己，
+因为，心有多好，
+你的命就有多好，
+心有多静，福气就会有多深。 ​​​
+
+和光同尘，不是懦弱无能，
+而是一种通透的处世格局；
+不与人争，不是退让妥协，"><header><span class="av" style="--h:38">心</span><div class="who"><div class="nm"><span>心灵书舫 | SoulSloop</span></div><div class="hd">@SoulSloop99</div></div><time class="tm" title="10-13 06:57 北京时间">10-13 06:57<small>9 小时前</small></time></header><div class="pt">人这一辈子
+所有的“好运”和“福气”，
+都是自己积攒的
+“心诚”才会交善友，
+“品正”方能遇贵人 ​​​。
+
+人会在平静的日子里会重新长出年轻的自己，
+因为，心有多好，
+你的命就有多好，
+心有多静，福气就会有多深。 ​​​
+
+和光同尘，不是懦弱无能，
+而是一种通透的处世格局；
+不与人争，不是退让妥协，</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="人这一辈子
+所有的“好运”和“福气”，
+都是自己积攒的
+“心诚”才会交善友，
+“品正”方能遇贵人 ​​​。
+
+人会在平静的日子里会重新长出年轻的自己，
+因为，心有多好，
+你的命就有多好，
+心有多静，福气就会有多深。 ​​​
+
+和光同尘，不是懦弱无能，
+而是一种通透的处世格局；
+不与人争，不是退让妥协，
+— 心灵书舫 | SoulSloop (@SoulSloop99)
+https://x.com/SoulSloop99/status/2109780435752612322">复制原文</button><a class="op" href="https://x.com/SoulSloop99/status/2109780435752612322" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>7</span><span class="mc" title="转发"><i>⇄</i>2</span><span class="mc" title="评论"><i>💬</i>0</span><span class="mc" title="浏览"><i>👁</i>1,128</span></div></footer></article><article class="post c6" data-s="大彻大悟的人，都看透了哪些残酷的现
+实？
+
+名言俗语下半句：
+
+1、久病床前无孝子，
+下半句是：久贫家中无贤妻。
+2、春宵一刻值千金，
+下半句是：花有清香月有阴。
+3、近水楼台先得月，
+下半句是：向阳花木易为春。
+4、恭敬不如从命，
+下半句是：受训莫如从顺。
+5、小心使得万年船，
+下半句是："><header><span class="av" style="--h:38">心</span><div class="who"><div class="nm"><span>心灵书舫 | SoulSloop</span></div><div class="hd">@SoulSloop99</div></div><time class="tm" title="10-13 00:13 北京时间">10-13 00:13<small>16 小时前</small></time></header><div class="pt">大彻大悟的人，都看透了哪些残酷的现
+实？
+
+名言俗语下半句：
+
+1、久病床前无孝子，
+下半句是：久贫家中无贤妻。
+2、春宵一刻值千金，
+下半句是：花有清香月有阴。
+3、近水楼台先得月，
+下半句是：向阳花木易为春。
+4、恭敬不如从命，
+下半句是：受训莫如从顺。
+5、小心使得万年船，
+下半句是：</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="大彻大悟的人，都看透了哪些残酷的现
+实？
+
+名言俗语下半句：
+
+1、久病床前无孝子，
+下半句是：久贫家中无贤妻。
+2、春宵一刻值千金，
+下半句是：花有清香月有阴。
+3、近水楼台先得月，
+下半句是：向阳花木易为春。
+4、恭敬不如从命，
+下半句是：受训莫如从顺。
+5、小心使得万年船，
+下半句是：
+— 心灵书舫 | SoulSloop (@SoulSloop99)
+https://x.com/SoulSloop99/status/2109678731958878352">复制原文</button><a class="op" href="https://x.com/SoulSloop99/status/2109678731958878352" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>171</span><span class="mc" title="转发"><i>⇄</i>61</span><span class="mc" title="评论"><i>💬</i>3</span><span class="mc" title="浏览"><i>👁</i>1.3万</span></div></footer></article><article class="post c6" data-s="科技股龙头史上最全名单【建议收藏】
+
+一、全球第一
+1、立讯精密 ，airpods全球组件供应商龙头
+2、海康威视 ，连续7年全球视频监控设备第一
+3、京东 方，面板全球第一
+4、汇顶科技 ，指纹芯片全球第一
+5、闻泰科技 ，全球最大手机代工企业
+6、歌尔股份 ，电声器件世界第一
+7、亿联网络"><header><span class="av" style="--h:38">心</span><div class="who"><div class="nm"><span>心灵书舫 | SoulSloop</span></div><div class="hd">@SoulSloop99</div></div><time class="tm" title="10-12 23:55 北京时间">10-12 23:55<small>16 小时前</small></time></header><div class="pt">科技股龙头史上最全名单【建议收藏】
+
+一、全球第一
+1、立讯精密 ，AirPods全球组件供应商龙头
+2、海康威视 ，连续7年全球视频监控设备第一
+3、京东 方，面板全球第一
+4、汇顶科技 ，指纹芯片全球第一
+5、闻泰科技 ，全球最大手机代工企业
+6、歌尔股份 ，电声器件世界第一
+7、亿联网络</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="科技股龙头史上最全名单【建议收藏】
+
+一、全球第一
+1、立讯精密 ，AirPods全球组件供应商龙头
+2、海康威视 ，连续7年全球视频监控设备第一
+3、京东 方，面板全球第一
+4、汇顶科技 ，指纹芯片全球第一
+5、闻泰科技 ，全球最大手机代工企业
+6、歌尔股份 ，电声器件世界第一
+7、亿联网络
+— 心灵书舫 | SoulSloop (@SoulSloop99)
+https://x.com/SoulSloop99/status/2109674202110611636">复制原文</button><a class="op" href="https://x.com/SoulSloop99/status/2109674202110611636" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>49</span><span class="mc" title="转发"><i>⇄</i>16</span><span class="mc" title="评论"><i>💬</i>12</span><span class="mc" title="浏览"><i>👁</i>7,153</span></div></footer></article><article class="post c6" data-s="教你10 招做饭秘诀:[太开心]建议收藏
+ 
+第一招：煮米饭，先放一点食盐，饭更香。因为食盐能增强米饭的筋性，让米饭粒粒饱满。
+
+第二招：炒青菜，不要太早放盐，出锅前放能保持青菜的色泽和口感，营养也不容易流失。"><header><span class="av" style="--h:38">心</span><div class="who"><div class="nm"><span>心灵书舫 | SoulSloop</span></div><div class="hd">@SoulSloop99</div></div><time class="tm" title="10-12 23:47 北京时间">10-12 23:47<small>16 小时前</small></time></header><div class="pt">教你10 招做饭秘诀:[太开心]建议收藏
+ 
+第一招：煮米饭，先放一点食盐，饭更香。因为食盐能增强米饭的筋性，让米饭粒粒饱满。
+
+第二招：炒青菜，不要太早放盐，出锅前放能保持青菜的色泽和口感，营养也不容易流失。</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="教你10 招做饭秘诀:[太开心]建议收藏
+ 
+第一招：煮米饭，先放一点食盐，饭更香。因为食盐能增强米饭的筋性，让米饭粒粒饱满。
+
+第二招：炒青菜，不要太早放盐，出锅前放能保持青菜的色泽和口感，营养也不容易流失。
+— 心灵书舫 | SoulSloop (@SoulSloop99)
+https://x.com/SoulSloop99/status/2109672188940886306">复制原文</button><a class="op" href="https://x.com/SoulSloop99/status/2109672188940886306" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>21</span><span class="mc" title="转发"><i>⇄</i>9</span><span class="mc" title="评论"><i>💬</i>0</span><span class="mc" title="浏览"><i>👁</i>3,713</span></div></footer></article><article class="post c6" data-s="“古今单位换算：”
+一炷香＝30分钟
+一甲子＝60年
+一两＝10钱
+一盏茶＝10分钟
+一运＝360年
+一钱＝5克
+一刻钟＝15分钟
+一元＝129600年
+一千克＝1公斤
+一刹那＝0.018秒
+一寸＝3.3厘米
+一吨＝1000千克
+一瞬间＝0.36秒
+一分＝3.3毫米
+一公斤＝2斤
+一弹指＝7.2秒
+一尺＝33厘米
+一候＝5天
+一须臾＝48分钟"><header><span class="av" style="--h:38">心</span><div class="who"><div class="nm"><span>心灵书舫 | SoulSloop</span></div><div class="hd">@SoulSloop99</div></div><time class="tm" title="10-12 23:04 北京时间">10-12 23:04<small>17 小时前</small></time></header><div class="pt">“古今单位换算：”
+一炷香＝30分钟
+一甲子＝60年
+一两＝10钱
+一盏茶＝10分钟
+一运＝360年
+一钱＝5克
+一刻钟＝15分钟
+一元＝129600年
+一千克＝1公斤
+一刹那＝0.018秒
+一寸＝3.3厘米
+一吨＝1000千克
+一瞬间＝0.36秒
+一分＝3.3毫米
+一公斤＝2斤
+一弹指＝7.2秒
+一尺＝33厘米
+一候＝5天
+一须臾＝48分钟</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="“古今单位换算：”
+一炷香＝30分钟
+一甲子＝60年
+一两＝10钱
+一盏茶＝10分钟
+一运＝360年
+一钱＝5克
+一刻钟＝15分钟
+一元＝129600年
+一千克＝1公斤
+一刹那＝0.018秒
+一寸＝3.3厘米
+一吨＝1000千克
+一瞬间＝0.36秒
+一分＝3.3毫米
+一公斤＝2斤
+一弹指＝7.2秒
+一尺＝33厘米
+一候＝5天
+一须臾＝48分钟
+— 心灵书舫 | SoulSloop (@SoulSloop99)
+https://x.com/SoulSloop99/status/2109661595706212413">复制原文</button><a class="op" href="https://x.com/SoulSloop99/status/2109661595706212413" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>15</span><span class="mc" title="转发"><i>⇄</i>8</span><span class="mc" title="评论"><i>💬</i>0</span><span class="mc" title="浏览"><i>👁</i>2,303</span></div></footer></article><article class="post c6" data-s="“成年人要勇于结束不健康的关系” https://t.co/fbnqmixdry"><header><span class="av" style="--h:38">心</span><div class="who"><div class="nm"><span>心灵书舫 | SoulSloop</span></div><div class="hd">@SoulSloop99</div></div><time class="tm" title="10-12 23:03 北京时间">10-12 23:03<small>17 小时前</small></time></header><div class="pt">“成年人要勇于结束不健康的关系” https://t.co/fBNqMIXDrY</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="“成年人要勇于结束不健康的关系” https://t.co/fBNqMIXDrY
+— 心灵书舫 | SoulSloop (@SoulSloop99)
+https://x.com/SoulSloop99/status/2109661178297503766">复制原文</button><a class="op" href="https://x.com/SoulSloop99/status/2109661178297503766" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>114</span><span class="mc" title="转发"><i>⇄</i>15</span><span class="mc" title="评论"><i>💬</i>0</span><span class="mc" title="浏览"><i>👁</i>5,046</span></div></footer></article><article class="post c6" data-s="一位深圳退休干部说过一段醍醐灌顶的话：“在社会上一定要认清一个现实：人际交往中，凡是比你强的人，一般都不会主动找你聊天、约着聚一聚、请客吃饭、拉你一把，或者共赴前程。如果真有人找你，他一定是有事。”"><header><span class="av" style="--h:38">心</span><div class="who"><div class="nm"><span>心灵书舫 | SoulSloop</span></div><div class="hd">@SoulSloop99</div></div><time class="tm" title="10-12 22:48 北京时间">10-12 22:48<small>17 小时前</small></time></header><div class="pt">一位深圳退休干部说过一段醍醐灌顶的话：“在社会上一定要认清一个现实：人际交往中，凡是比你强的人，一般都不会主动找你聊天、约着聚一聚、请客吃饭、拉你一把，或者共赴前程。如果真有人找你，他一定是有事。”</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="一位深圳退休干部说过一段醍醐灌顶的话：“在社会上一定要认清一个现实：人际交往中，凡是比你强的人，一般都不会主动找你聊天、约着聚一聚、请客吃饭、拉你一把，或者共赴前程。如果真有人找你，他一定是有事。”
+— 心灵书舫 | SoulSloop (@SoulSloop99)
+https://x.com/SoulSloop99/status/2109657354694180905">复制原文</button><a class="op" href="https://x.com/SoulSloop99/status/2109657354694180905" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>789</span><span class="mc" title="转发"><i>⇄</i>214</span><span class="mc" title="评论"><i>💬</i>32</span><span class="mc" title="浏览"><i>👁</i>9.3万</span></div></footer></article><article class="post c6" data-s="生活中有哪些小妙招呢？
+
+1．第一个：窗户玻璃脏得像蒙了层雾，白醋
+加洗洁精，喷一喷再擦一擦，亮得能当镜子
+照。
+
+2. 第二个：锅底黑得像包公的脸，小苏打加
+白醋，泡一泡刷一刷，马上恢复出厂设置
+3．第三个：厨房油污重灾区，洗衣粉加牙
+膏，涂一涂擦一擦，油腻立马说拜拜。
+
+4."><header><span class="av" style="--h:38">心</span><div class="who"><div class="nm"><span>心灵书舫 | SoulSloop</span></div><div class="hd">@SoulSloop99</div></div><time class="tm" title="10-12 22:30 北京时间">10-12 22:30<small>17 小时前</small></time></header><div class="pt">生活中有哪些小妙招呢？
+
+1．第一个：窗户玻璃脏得像蒙了层雾，白醋
+加洗洁精，喷一喷再擦一擦，亮得能当镜子
+照。
+
+2. 第二个：锅底黑得像包公的脸，小苏打加
+白醋，泡一泡刷一刷，马上恢复出厂设置
+3．第三个：厨房油污重灾区，洗衣粉加牙
+膏，涂一涂擦一擦，油腻立马说拜拜。
+
+4.</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="生活中有哪些小妙招呢？
+
+1．第一个：窗户玻璃脏得像蒙了层雾，白醋
+加洗洁精，喷一喷再擦一擦，亮得能当镜子
+照。
+
+2. 第二个：锅底黑得像包公的脸，小苏打加
+白醋，泡一泡刷一刷，马上恢复出厂设置
+3．第三个：厨房油污重灾区，洗衣粉加牙
+膏，涂一涂擦一擦，油腻立马说拜拜。
+
+4.
+— 心灵书舫 | SoulSloop (@SoulSloop99)
+https://x.com/SoulSloop99/status/2109653039691051234">复制原文</button><a class="op" href="https://x.com/SoulSloop99/status/2109653039691051234" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>30</span><span class="mc" title="转发"><i>⇄</i>13</span><span class="mc" title="评论"><i>💬</i>1</span><span class="mc" title="浏览"><i>👁</i>3,660</span></div></footer></article><article class="post c6" data-s="非常值得看呀，真敢说！ https://t.co/rd2dmcdod8"><header><span class="av" style="--h:38">心</span><div class="who"><div class="nm"><span>心灵书舫 | SoulSloop</span></div><div class="hd">@SoulSloop99</div></div><time class="tm" title="10-12 17:36 北京时间">10-12 17:36<small>22 小时前</small></time></header><div class="pt">非常值得看呀，真敢说！ https://t.co/Rd2DmCdOd8</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="非常值得看呀，真敢说！ https://t.co/Rd2DmCdOd8
+— 心灵书舫 | SoulSloop (@SoulSloop99)
+https://x.com/SoulSloop99/status/2109578859935089149">复制原文</button><a class="op" href="https://x.com/SoulSloop99/status/2109578859935089149" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>0</span><span class="mc" title="转发"><i>⇄</i>1</span><span class="mc" title="评论"><i>💬</i>0</span><span class="mc" title="浏览"><i>👁</i>1,024</span></div></footer></article><article class="post c6" data-s="强烈赞同“教育要适度控制ai”！人不是生来就有高阶智慧的，婴儿必须经历语言、数学的“训练”才能成长。如果从小就被ai投喂答案，跳过“原生智能”的构建过程，未来人类连操作ai的表意符号都看不懂，那才是真正的危机。📚 https://t.co/vpe3qvwani"><header><span class="av" style="--h:38">心</span><div class="who"><div class="nm"><span>心灵书舫 | SoulSloop</span></div><div class="hd">@SoulSloop99</div></div><time class="tm" title="10-12 17:30 北京时间">10-12 17:30<small>22 小时前</small></time></header><div class="pt">强烈赞同“教育要适度控制AI”！人不是生来就有高阶智慧的，婴儿必须经历语言、数学的“训练”才能成长。如果从小就被AI投喂答案，跳过“原生智能”的构建过程，未来人类连操作AI的表意符号都看不懂，那才是真正的危机。📚 https://t.co/VPe3qvWaNi</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="强烈赞同“教育要适度控制AI”！人不是生来就有高阶智慧的，婴儿必须经历语言、数学的“训练”才能成长。如果从小就被AI投喂答案，跳过“原生智能”的构建过程，未来人类连操作AI的表意符号都看不懂，那才是真正的危机。📚 https://t.co/VPe3qvWaNi
+— 心灵书舫 | SoulSloop (@SoulSloop99)
+https://x.com/SoulSloop99/status/2109577522736169405">复制原文</button><a class="op" href="https://x.com/SoulSloop99/status/2109577522736169405" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>3</span><span class="mc" title="转发"><i>⇄</i>0</span><span class="mc" title="评论"><i>💬</i>8</span><span class="mc" title="浏览"><i>👁</i>1,074</span></div></footer></article><article class="post c6" data-s="今天读心理学的书籍看到一个理论：“一个人在不开心的时候，是不会说废话的。一个人说的话，若90％以上是废话她就很快乐。若废话不足50%，人生则快乐感不足。"><header><span class="av" style="--h:38">心</span><div class="who"><div class="nm"><span>心灵书舫 | SoulSloop</span></div><div class="hd">@SoulSloop99</div></div><time class="tm" title="10-12 17:24 北京时间">10-12 17:24<small>22 小时前</small></time></header><div class="pt">今天读心理学的书籍看到一个理论：“一个人在不开心的时候，是不会说废话的。一个人说的话，若90％以上是废话她就很快乐。若废话不足50%，人生则快乐感不足。</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="今天读心理学的书籍看到一个理论：“一个人在不开心的时候，是不会说废话的。一个人说的话，若90％以上是废话她就很快乐。若废话不足50%，人生则快乐感不足。
+— 心灵书舫 | SoulSloop (@SoulSloop99)
+https://x.com/SoulSloop99/status/2109575809128362059">复制原文</button><a class="op" href="https://x.com/SoulSloop99/status/2109575809128362059" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>25</span><span class="mc" title="转发"><i>⇄</i>8</span><span class="mc" title="评论"><i>💬</i>0</span><span class="mc" title="浏览"><i>👁</i>3,133</span></div></footer></article><article class="post c6" data-s="16、第三届奥运会男子400米项目决赛由英国选手哈尔斯维尔和三名美国选手参与角逐。鸣枪前，一位美国选手不知怎的被罚下了，另外两名美国 哥们大吵大闹表示抗议也被罚下，最后哈尔斯维尔自己走完了这一圈，获得金牌。
+
+17、乒乓球在中国可以说是国球了，中国队拿世界冠军容易，拿国内的冠军难啊…"><header><span class="av" style="--h:38">心</span><div class="who"><div class="nm"><span>心灵书舫 | SoulSloop</span></div><div class="hd">@SoulSloop99</div></div><time class="tm" title="10-12 14:36 北京时间">10-12 14:36<small>1 天前</small></time></header><div class="pt">16、第三届奥运会男子400米项目决赛由英国选手哈尔斯维尔和三名美国选手参与角逐。鸣枪前，一位美国选手不知怎的被罚下了，另外两名美国 哥们大吵大闹表示抗议也被罚下，最后哈尔斯维尔自己走完了这一圈，获得金牌。
+
+17、乒乓球在中国可以说是国球了，中国队拿世界冠军容易，拿国内的冠军难啊…</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="16、第三届奥运会男子400米项目决赛由英国选手哈尔斯维尔和三名美国选手参与角逐。鸣枪前，一位美国选手不知怎的被罚下了，另外两名美国 哥们大吵大闹表示抗议也被罚下，最后哈尔斯维尔自己走完了这一圈，获得金牌。
+
+17、乒乓球在中国可以说是国球了，中国队拿世界冠军容易，拿国内的冠军难啊…
+— 心灵书舫 | SoulSloop (@SoulSloop99)
+https://x.com/SoulSloop99/status/2109533525615821208">复制原文</button><a class="op" href="https://x.com/SoulSloop99/status/2109533525615821208" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>0</span><span class="mc" title="转发"><i>⇄</i>0</span><span class="mc" title="评论"><i>💬</i>0</span><span class="mc" title="浏览"><i>👁</i>704</span></div></footer></article><article class="post c6" data-s="关于奥运会有哪些有趣的冷知识？
+
+1、按照&quot;奥林匹克宪章&quot;的规定，金牌必
+须含有92.5％的纯银和至少6克的黄金，金牌不是纯金的，而是镀金的。"><header><span class="av" style="--h:38">心</span><div class="who"><div class="nm"><span>心灵书舫 | SoulSloop</span></div><div class="hd">@SoulSloop99</div></div><time class="tm" title="10-12 14:36 北京时间">10-12 14:36<small>1 天前</small></time></header><div class="pt">关于奥运会有哪些有趣的冷知识？
+
+1、按照&quot;奥林匹克宪章&quot;的规定，金牌必
+须含有92.5％的纯银和至少6克的黄金，金牌不是纯金的，而是镀金的。</div>
+<footer><div class="act"><button class="cp" type="button" data-copy="关于奥运会有哪些有趣的冷知识？
+
+1、按照&quot;奥林匹克宪章&quot;的规定，金牌必
+须含有92.5％的纯银和至少6克的黄金，金牌不是纯金的，而是镀金的。
+— 心灵书舫 | SoulSloop (@SoulSloop99)
+https://x.com/SoulSloop99/status/2109533525225672886">复制原文</button><a class="op" href="https://x.com/SoulSloop99/status/2109533525225672886" target="_blank" title="在 X 打开">↗ 原帖</a></div><div class="met"><span class="mc" title="点赞"><i>♥</i>3</span><span class="mc" title="转发"><i>⇄</i>2</span><span class="mc" title="评论"><i>💬</i>6</span><span class="mc" title="浏览"><i>👁</i>8,962</span></div></footer></article></div></div>
+<footer>数据：X API get_users_posts · 生成于 2026-10-13 16:21 北京时间</footer></div><script>
+(function(){var d=document.documentElement,mq=matchMedia('(prefers-color-scheme: dark)');
+function sync(){document.querySelectorAll('[data-set-theme]').forEach(function(b){b.classList.toggle('on',b.dataset.setTheme===d.dataset.pref)})}
+function theme(){var p=d.dataset.pref;d.dataset.theme=p==='auto'?(mq.matches?'dark':'light'):p}
+document.querySelectorAll('[data-set-theme]').forEach(function(b){b.onclick=function(){d.dataset.pref=b.dataset.setTheme;try{localStorage.setItem('xhot-theme',b.dataset.setTheme)}catch(e){}theme();sync()}});
+(mq.addEventListener?mq.addEventListener('change',theme):mq.addListener(theme));
+document.querySelectorAll('[data-t]').forEach(function(b){b.onclick=function(){var t=b.dataset.t;
+document.querySelectorAll('[data-t]').forEach(function(x){x.classList.toggle('on',x.dataset.t===t)});
+document.querySelectorAll('.pane').forEach(function(x){x.classList.toggle('on',x.dataset.p===t)});
+document.querySelectorAll('.li-d').forEach(function(x){x.hidden=x.dataset.p!==t});scrollTo({top:0})}});sync();
+function fb(t){var a=document.createElement('textarea');a.value=t;a.setAttribute('readonly','');a.style.cssText='position:fixed;top:-1000px;opacity:0';document.body.appendChild(a);a.select();var ok=false;try{ok=document.execCommand('copy')}catch(e){}document.body.removeChild(a);return ok}
+document.addEventListener('click',function(ev){var b=ev.target.closest('.cp');if(b){var t=b.getAttribute('data-copy');
+function done(ok){b.textContent=ok?'已复制 ✓':'复制失败';b.classList.toggle('ok',ok);clearTimeout(b._t);b._t=setTimeout(function(){b.textContent='复制原文';b.classList.remove('ok')},1600)}
+if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(t).then(function(){done(true)},function(){done(fb(t))})}else done(fb(t));return}
+var x=ev.target.closest('.ex');if(x){var c=x.closest('.post').querySelector('.xp');var o=c.classList.toggle('open');x.textContent=o?'收起':'展开'}})})();
+</script><script>(function(){var q=document.getElementById('q'),c=document.getElementById('cnt'),a=document.getElementById('alll'),ps=[].slice.call(document.querySelectorAll('.feed1 .post'));
+function run(){var v=q.value.trim().toLowerCase(),all=a&&a.checked,k=0,n=0;ps.forEach(function(p){var lo=!p.dataset.ol||all;if(lo)n++;var ok=lo&&(!v||p.dataset.s.indexOf(v)>=0);p.hidden=!ok;if(ok)k++});c.textContent=v?('匹配 '+k+' / '+n+' 条'):(n+' 条')}
+q.addEventListener('input',run);if(a)a.addEventListener('change',run)})();</script></body></html>
