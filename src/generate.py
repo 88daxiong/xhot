@@ -30,15 +30,19 @@ os.makedirs('avatars_webp',exist_ok=True)
 for f in glob.glob('avatars/*.jpg'):
     h=os.path.basename(f)[:-4]; w=os.path.join('avatars_webp',h+'.webp')
     if not os.path.exists(w) or os.path.getmtime(w)<os.path.getmtime(f):
-        im=Image.open(f).convert('RGB'); im.thumbnail((96,96)); im.save(w,'WEBP',quality=78,method=6)
+        try: im=Image.open(f); im.verify(); im=Image.open(f).convert('RGB'); im.thumbnail((96,96)); im.save(w,'WEBP',quality=78,method=6)
+        except Exception as ex: print('skip avatar',h,type(ex).__name__); continue
     b=open(w,'rb').read(); n=f'{h}.{H8(b)[:8]}.webp'; put(n,b,AVD); AVF[h]=n
 import base64
+CSP=("default-src 'self'; script-src 'self' 'sha256-"+base64.b64encode(hashlib.sha256(J0.encode('utf-8')).digest()).decode()+"'; "
+     "style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'")
+HEADSEC=f'<meta http-equiv="Content-Security-Policy" content="{CSP}"><meta name="referrer" content="strict-origin-when-cross-origin">'
 def _avsrc(u,pref,eager):
     if eager=='inline': return 'data:image/webp;base64,'+base64.b64encode(open(os.path.join(AVD,AVF[u]),'rb').read()).decode()
     return f'{pref}assets/av/{AVF[u]}'
 def av(u,n,cls='',pref='',eager=False):
-    if eager and u in AVF: return f'<span class="av {cls}" style="--h:{hue(u)}" aria-hidden="true">{e((n or u)[:1].upper())}<img src="{_avsrc(u,pref,eager)}" alt="" width="96" height="96" fetchpriority="high" onerror="this.remove()"></span>'
-    img=f'<img data-src="{pref}assets/av/{AVF[u]}" alt="" width="96" height="96" decoding="async" onerror="this.remove()">' if u in AVF else ''
+    if eager and u in AVF: return f'<span class="av {cls}" style="--h:{hue(u)}" aria-hidden="true">{e((n or u)[:1].upper())}<img src="{_avsrc(u,pref,eager)}" alt="" width="96" height="96" fetchpriority="high"></span>'
+    img=f'<img data-src="{pref}assets/av/{AVF[u]}" alt="" width="96" height="96" decoding="async">' if u in AVF else ''
     return f'<span class="av {cls}" style="--h:{hue(u)}" aria-hidden="true">{e((n or u)[:1].upper())}{img}</span>'
 # ---- 账号 ----
 PROF={}
@@ -77,9 +81,13 @@ def card(r,a,pref='',showwho=True):
     who=(f'<header>{av(a["u"],a["name"],"",pref)}<div class="who"><a href="{pref}p/{a["u"]}.html">{e(a["name"])}</a><small>@{e(a["H"])}</small></div><div class="pm"><span class="heat" title="热度 = 赞 + 2×转 + 3×引用 + 评论 + 收藏">🔥 {fmt(r[8])}</span><time datetime="{r[1]}" title="{fullt(r[1])}">{jdt(r[1])}</time></div></header>' if showwho
          else f'<header><span class="tag">{"近一周" if isw(r[1]) else "更早"}</span><div class="who"></div><div class="pm"><span class="heat" title="热度 = 赞 + 2×转 + 3×引用 + 评论 + 收藏">🔥 {fmt(r[8])}</span><time datetime="{r[1]}" title="{fullt(r[1])}">{jdt(r[1])}</time></div></header>')
     return (f'<article class="post" style="--dc:{DC[a["dom"]]}" data-k="{r[0]}">{who}<div class="pt ptc">{lnk(t)}</div><footer><div class="act">'
-      f'<button class="btn ex" type="button" aria-expanded="false"{"" if lg else " hidden"}>展开</button><button class="btn cp" type="button">复制原文</button><a class="btn op" href="{safe_url(r[9])}" target="_blank" rel="noopener noreferrer">在 X 打开 ↗</a></div>'
+      f'<button class="btn ex" type="button" aria-expanded="false"{"" if lg else " hidden"}>展开</button><button class="btn cp" type="button">复制原文</button><a class="btn op" href="{safe_url(r[9] or f'https://x.com/{a["H"]}/status/{r[0]}')}" target="_blank" rel="noopener noreferrer">在 X 打开 ↗</a></div>'
       f'<div class="met"><span title="点赞"><i aria-hidden="true">♥</i>{fmt(r[3])}</span><span title="转发"><i aria-hidden="true">⇄</i>{fmt(r[4])}</span><span title="评论"><i aria-hidden="true">💬</i>{fmt(r[5])}</span><span title="浏览"><i aria-hidden="true">👁</i>{fmt(r[7])}</span></div></footer></article>')
-def jsafe(o): return json.dumps(o,ensure_ascii=False,separators=(',',':')).replace('</','<\\/')
+def jdump(o): return json.dumps(o,ensure_ascii=False,separators=(',',':'))  # 独立 .json 文件用（不嵌入 HTML）
+def jsafe(o):
+    """嵌入 <script type=application/json> 的 JSON：转义 < > & 与 U+2028/2029，防止 </script>、<!-- 等打断解析"""
+    return (json.dumps(o,ensure_ascii=False,separators=(',',':')).replace('<','\\u003c').replace('>','\\u003e')
+            .replace('&','\\u0026').replace('\u2028','\\u2028').replace('\u2029','\\u2029'))
 THEME='<div class="tg" role="group" aria-label="主题"><button type="button" data-set-theme="light" aria-label="浅色">☀</button><button type="button" data-set-theme="dark" aria-label="深色">☾</button><button type="button" data-set-theme="auto">自动</button></div>'
 TABS=[('index.html','🔥 热帖'),('accounts.html','👤 账号榜'),('news.html','📰 资讯'),('trends.html','📈 趋势')]
 def _fa(lab):
@@ -118,7 +126,7 @@ def fresh(cur):
     return f'<details class="fr {cls}"><summary title="点击查看各数据源状态"><i></i>{lab}{f"<b>{bad} 项待更新</b>" if bad else ""}</summary><div class="frp"><h3>数据健康</h3>{tbl}</div></details>'
 def page(title,body,cur,pref='',head=''):
     nav=''.join(f'<a href="{pref}{h}"{" aria-current=page" if h==cur else ""}>{t}</a>' for h,t in TABS)
-    return (f'<!doctype html><html lang="zh-CN" data-theme="light" data-pref="auto"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><meta name="theme-color" content="#7c3aed"><title>{e(title)}</title><script>{J0}</script><style>{CSS}</style><script src="{pref}assets/{JSN}" defer></script>{head}</head><body>'
+    return (f'<!doctype html><html lang="zh-CN" data-theme="light" data-pref="auto"><head><meta charset="utf-8">{HEADSEC}<meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><meta name="theme-color" content="#7c3aed"><title>{e(title)}</title><script>{J0}</script><style>{CSS}</style><script src="{pref}assets/{JSN}" defer></script>{head}</head><body>'
       f'<header class="top"><div class="bar"><a class="lg" href="{pref}index.html"><i>⚡</i>XHOT<span>X 热点雷达</span></a><nav class="nav" aria-label="栏目">{nav}</nav><span class="sp0"></span>{fresh(cur)}{THEME}</div></header>'
       f'<div class="wrap">{body}<footer class="ft">数据：X API · <a href="https://aihot.news" target="_blank" rel="noopener noreferrer">aihot.news</a> · <a href="https://github.com/trending" target="_blank" rel="noopener noreferrer">GitHub Trending</a> · 热度 = 赞 + 2×转 + 3×引用 + 评论 + 收藏 · 生成于 {NOW.strftime("%Y-%m-%d %H:%M")} 北京时间</footer></div></body></html>')
 def domseg(withall=True):
@@ -173,7 +181,8 @@ def hot():
     used=sorted({i for d in L.values() for l in d.values() for i in l}); remap={o:n for n,o in enumerate(used)}
     PP=[P[i] for i in used]; LL={d:{m:[remap[i] for i in l] for m,l in v.items()} for d,v in L.items()}
     UU=[[u,ACC[u]['name'],ACC[u]['H'],ACC[u]['dom'],AVF.get(u,''),hue(u)] for u in us]
-    data=jsafe({'P':PP,'U':UU,'L':LL}); hn=f'hot.{H8(data)}.json'; put(hn,data)
+    def slim(p): return p[:9]+['' if p[9]==f'https://x.com/{UU[p[10]][2]}/status/{p[0]}' else p[9]]+p[10:]  # url 可还原则省略
+    data=jdump({'P':[slim(p) for p in PP],'U':UU,'L':LL}); hn=f'hot.{H8(data)}.json'; put(hn,data)
     first=''.join(card(PP[i][:10],ACC[us[PP[i][10]]]) for i in LL['all']['w'][:PRE])
     nw=len(LL['all']['w'])
     ov=overview(P,us)
@@ -251,17 +260,19 @@ def news_items():
         if not langf.script_ok(it['chk']) or not k or k in seen: continue
         seen.add(k); out.append(it)
     return out
-def ncard(n):
+NPRE=12  # 资讯首屏直出正文的卡片数，其余正文进 assets/news.<hash>.json 按需加载
+def ncard(n,lz=None):
     lk=''.join(f'<a class="btn" href="{safe_url(u)}" target="_blank" rel="noopener noreferrer">{e(t)} ↗</a>' for t,u in n['links'] if u)
     return (f'<article class="post nw s-{n["s"]}" data-s="{n["s"]}"><header class="nh"><span class="src {n["s"]}">{n["sl"]}</span><span class="nm">{e(n["m"])}</span></header>'
-            f'<h3 class="nt">{e(n["t"])}</h3><div class="nb nbc">{n["body"]}</div><footer><div class="act"><button class="btn ex" type="button" aria-expanded="false">展开</button>{lk}</div></footer></article>')
+            f'<h3 class="nt">{e(n["t"])}</h3>{f'<div class="nb nbc" data-lz="{lz}"></div>' if lz is not None else f'<div class="nb nbc">{n["body"]}</div>'}<footer><div class="act"><button class="btn ex" type="button" aria-expanded="false">展开</button>{lk}</div></footer></article>')
 def news():
     N=news_items(); c={k:sum(1 for n in N if n['s']==k) for k in 'hdsx'}
     nz=sum(c[k] for k in 'hds')
+    nbd=jdump([n['body'] for n in N[NPRE:]]); nbn=f'news.{H8(nbd)}.json'; put(nbn,nbd)
     seg=('<div class="seg" role="group" aria-label="来源"><button type="button" data-src="all" class="on" aria-pressed="true">全部 '+str(len(N))+'</button>'
          +''.join(f'<button type="button" data-src="{k}" aria-pressed="false">{l} {c[k]}</button>' for k,l in (('h','AIHOT 热点'),('d','AIHOT 日报'),('s','AIHOT 精选'),('x','X 新闻 · 英文')) if c[k])+'</div>')
     body=(f'<div class="tools"><h1>资讯</h1>{seg}<span class="sp"></span><span class="hint">中文 AIHOT {nz} 条在前 · 英文 X 新闻 {c["x"]} 条在后 · 卡片内读全文</span></div>'
-          f'<div class="grid ng" id="ng">{"".join(ncard(n) for n in N)}</div><div class="empty" id="nempty" hidden>这个来源暂无内容</div>')
+          f'<div class="grid ng" id="ng" data-src="assets/{nbn}">{"".join(ncard(n,None if i<NPRE else i-NPRE) for i,n in enumerate(N))}</div><div class="empty" id="nempty" hidden>这个来源暂无内容</div>')
     return page('XHOT · 资讯',body,'news.html')
 def spark(vals,w=72,h=22):
     if len(vals)<2: return ''
@@ -307,8 +318,8 @@ def person(u):
     nother=sum(1 for r in rows if not r[10])
     okr=[r for r in rows if r[10]]
     wk=sorted([r for r in okr if isw(r[1])],key=lambda r:-r[8]); mode='w' if len(wk)>=6 else 'g'
-    first=(wk if mode=='w' else sorted(okr,key=lambda r:-r[8]))[:24]
-    data=jsafe(rows); jn=f'{u}.{H8(data)}.json'
+    first=(wk if mode=='w' else sorted(okr,key=lambda r:-r[8]))[:12]
+    data=jdump([r[:9]+['' if r[9]==f'https://x.com/{a["H"]}/status/{r[0]}' else r[9]]+r[10:] for r in rows]); jn=f'{u}.{H8(data)}.json'
     for old in glob.glob(os.path.join(OUT,'p',f'{u}.*.json')):
         if os.path.basename(old)!=jn: os.remove(old)
     open(os.path.join(OUT,'p',jn),'w',encoding='utf-8').write(data)

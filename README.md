@@ -66,7 +66,9 @@ JSON 键排序固定、缩进 2，便于看 diff。推文内容版权归原作�
 
 ## 从零重建（如果站点坏了）
 
-需要 Python 3.10+ 和 `Pillow`（`pip install pillow`）；截图自检需要 `playwright`。
+需要 Python 3.10+：`pip install -r src/requirements.txt`（Pillow 为运行依赖，playwright 仅截图/测速用）。发布前先跑安全回归测试 `python3 src/test_escape.py`（检查链接转义、只放行 http(s) 外链、嵌入 JSON 安全；有 node 时同时测 app.js），必须 ALL PASS。
+
+安全设计：每页带 Content-Security-Policy meta（脚本只允许本站文件 + 主题内联脚本的 sha256，哈希在生成时计算）和 `referrer` meta；外链统一 `rel="noopener noreferrer"`；推文/资讯文本全部转义后再渲染。
 
 1. **准备 X API 只读权限**：任意能调用以下 X API v2 只读端点的方式均可 —— users by usernames、user posts timeline、posts counts recent、news search、posts by ids。把每次调用的 JSON 响应存成文件（文件里允许 JSON 前后有说明文字，入库脚本会截取 `{ ... }`）。
 2. **配置关注列表**：编辑 `src/watchlist.json`。每个领域（`ai` / `money` / `growth`）包含：
