@@ -11,7 +11,7 @@ function hset(o){var s=Object.keys(o).filter(function(k){return o[k]&&o[k]!=='al
 /* 工具 */
 function fmt(n){if(n>=1e8)return(n/1e8).toFixed(2)+'亿';if(n>=1e4)return(n/1e4).toFixed(1)+'万';return n.toLocaleString('en-US')}
 function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
-function lnk(s){return esc(s).replace(/https?:\/\/[^\s<&]+/g,function(u){return '<a href="'+u+'" target="_blank" rel="noopener">'+u.replace(/^https?:\/\//,'')+'</a>'})}
+function lnk(s){return esc(s).replace(/https?:\/\/[^\s<&]+/g,function(u){return '<a href="'+u+'" target="_blank" rel="noopener noreferrer">'+u.replace(/^https?:\/\//,'')+'</a>'})}
 var df=new Intl.DateTimeFormat('zh-CN',{timeZone:'Asia/Shanghai',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',hour12:false});
 function jdt(s){var p={};df.formatToParts(new Date(s)).forEach(function(x){p[x.type]=x.value});return p.month+'-'+p.day+' '+p.hour+':'+p.minute}
 var DC={ai:'var(--ai)',money:'var(--money)',growth:'var(--growth)'};
@@ -20,7 +20,7 @@ function avh(u,n,f,h,pref){return '<span class="av" style="--h:'+h+'" aria-hidde
 function card(r,who,dom,pref,week){var t=r[2],lg=t.length>150||t.split('\n').length>5;
 var hd='<div class="pm"><span class="heat" title="热度 = 赞 + 2×转 + 3×引用 + 评论 + 收藏">🔥 '+fmt(r[8])+'</span><time datetime="'+r[1]+'">'+jdt(r[1])+'</time></div>';
 hd=who?'<header>'+avh(who[0],who[1],who[4],who[5],pref)+'<div class="who"><a href="'+pref+'p/'+who[0]+'.html">'+esc(who[1])+'</a><small>@'+esc(who[2])+'</small></div>'+hd+'</header>':'<header><span class="tag">'+(r[1]>=week?'近一周':'更早')+'</span><div class="who"></div>'+hd+'</header>';
-return '<article class="post" style="--dc:'+DC[dom]+'" data-k="'+r[0]+'">'+hd+'<div class="pt ptc">'+lnk(t)+'</div><footer><div class="act"><button class="btn ex" type="button" aria-expanded="false"'+(lg?'':' hidden')+'>展开</button><button class="btn cp" type="button">复制原文</button><a class="btn op" href="'+esc(r[9])+'" target="_blank" rel="noopener">在 X 打开 ↗</a></div><div class="met"><span title="点赞"><i aria-hidden="true">♥</i>'+fmt(r[3])+'</span><span title="转发"><i aria-hidden="true">⇄</i>'+fmt(r[4])+'</span><span title="评论"><i aria-hidden="true">💬</i>'+fmt(r[5])+'</span><span title="浏览"><i aria-hidden="true">👁</i>'+fmt(r[7])+'</span></div></footer></article>'}
+return '<article class="post" style="--dc:'+DC[dom]+'" data-k="'+r[0]+'">'+hd+'<div class="pt ptc">'+lnk(t)+'</div><footer><div class="act"><button class="btn ex" type="button" aria-expanded="false"'+(lg?'':' hidden')+'>展开</button><button class="btn cp" type="button">复制原文</button><a class="btn op" href="'+esc(r[9])+'" target="_blank" rel="noopener noreferrer">在 X 打开 ↗</a></div><div class="met"><span title="点赞"><i aria-hidden="true">♥</i>'+fmt(r[3])+'</span><span title="转发"><i aria-hidden="true">⇄</i>'+fmt(r[4])+'</span><span title="评论"><i aria-hidden="true">💬</i>'+fmt(r[5])+'</span><span title="浏览"><i aria-hidden="true">👁</i>'+fmt(r[7])+'</span></div></footer></article>'}
 /* 展开按钮：只有真溢出才显示 */
 var avIO='IntersectionObserver' in window?new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){var i=x.target;i.src=i.dataset.src;i.removeAttribute('data-src');avIO.unobserve(i)}})},{rootMargin:'300px'}):null;
 function lazyAv(root){$$('img[data-src]',root).forEach(function(i){if(avIO)avIO.observe(i);else{i.src=i.dataset.src;i.removeAttribute('data-src')}})}
