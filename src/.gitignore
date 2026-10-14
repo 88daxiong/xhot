@@ -1,0 +1,10 @@
+# 本地数据与产物，不入库
+xhot.db
+raw/
+avatars/
+avatars_webp/
+site/
+shots/
+__pycache__/
+*.pyc
+.env
