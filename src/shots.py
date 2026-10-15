@@ -125,7 +125,7 @@ with sync_playwright() as p:
                 # ⌘K
                 if name in('today','all') :
                     g.keyboard.press('Control+k');g.wait_for_timeout(500)
-                    ck(f'{name}[{mn}] Ctrl/⌘K 打开搜索，焦点在输入框',g.evaluate("()=>{const k=document.querySelector('.kp');return !!k&&!k.hidden&&document.activeElement.classList.contains('kpi')}"))
+                    ck(f'{name}[{mn}] Ctrl/⌘K 打开搜索，焦点在输入框',g.evaluate("()=>{const k=document.querySelector('.kp');return !!k&&!k.hidden&&document.activeElement.classList.contains('kpq')}"))
                     g.keyboard.type('karp');g.wait_for_timeout(500)
                     ck(f'{name}[{mn}] 搜索人物：karp → Karpathy',g.evaluate("()=>[...document.querySelectorAll('.kpl li[data-i]')].some(x=>/Karpathy/.test(x.textContent))"))
                     if name=='today': sh('search')

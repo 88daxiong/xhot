@@ -784,6 +784,12 @@ def readable(css):
     css=css.replace('font-weight:bold','font-weight:600').replace('font-weight:normal','font-weight:400')
     return css
 CSSR=readable(CSSR)+'\n'+open('style_final.css',encoding='utf-8').read()
+def remify(css):
+    # 字号一律 rem：系统/浏览器字体放大时整站等比缩放（calc()/max() 里的不动）
+    css=re.sub(r'(?<![\w(,])(font-size:)(\d+(?:\.\d+)?)px',lambda m:m.group(1)+('%g'%(float(m.group(2))/16))+'rem',css)
+    css=re.sub(r'(font:(?:\d{3} )?)(\d+(?:\.\d+)?)px',lambda m:m.group(1)+('%g'%(float(m.group(2))/16))+'rem',css)
+    return css
+CSSR=remify(CSSR)
 CSSR=re.sub(r'/\*.*?\*/','',CSSR,flags=re.S); CSSR=re.sub(r'\s*\n\s*','',CSSR)
 CSSBYKEY={}
 def page_css(html):

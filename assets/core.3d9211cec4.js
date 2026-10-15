@@ -10,6 +10,7 @@ var db=$('[data-density]');if(db){var dsy=function(){var c=d.dataset.density==='
 var hxb=$('.hxb'),hx=$('#hx');if(hxb){hxb.addEventListener('click',function(ev){ev.stopPropagation();var o=hx.classList.toggle('open');hxb.setAttribute('aria-expanded',o)});document.addEventListener('click',function(ev){if(hx.classList.contains('open')&&!hx.contains(ev.target)){hx.classList.remove('open');hxb.setAttribute('aria-expanded','false')}})}
 function seg(attr,v){$$('['+attr+']').forEach(function(x){var on=x.getAttribute(attr)===v;x.classList.toggle('on',on);x.setAttribute('aria-pressed',on)})}
 function hget(){var o={};location.hash.slice(1).split('&').forEach(function(kv){var p=kv.split('=');if(p[0])o[p[0]]=decodeURIComponent(p[1]||'')});return o}
+function keep(el){var r=el.getBoundingClientRect(),h=innerHeight;if(r.bottom>h-8||r.top<64)el.scrollIntoView({block:r.height>h-160?'start':'nearest',behavior:matchMedia('(prefers-reduced-motion:reduce)').matches?'auto':'smooth'})}
 function hset(o){var s=Object.keys(o).filter(function(k){return o[k]&&o[k]!=='all'&&!(k==='sort'&&o[k]===o._def)&&k[0]!=='_'}).map(function(k){return k+'='+encodeURIComponent(o[k])}).join('&');history.replaceState(null,'',s?'#'+s:location.pathname+location.search)}
 function fmt(n){if(n>=1e8)return(n/1e8).toFixed(2)+'亿';if(n>=1e4)return(n/1e4).toFixed(1)+'万';return n.toLocaleString('en-US')}
 function esc(s){return String(s).replace(/[&<>"']/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
@@ -46,7 +47,7 @@ function applyRead(root){$$('.fi[data-k]',root).forEach(function(x){if(RD[x.data
 document.addEventListener('click',function(ev){var t=ev.target;
 var b=t.closest('.cp');if(b){copy(b,ctext(b.closest('.post,.dh,.trw')));markRead(b);return}
 var ol=t.closest('[data-ol]');if(ol){var q=ol.closest('.dh'),v=ol.dataset.ol;$$('[data-ol]',q).forEach(function(z){var on=z===ol;z.classList.toggle('on',on);z.setAttribute('aria-pressed',on)});$('.ptz',q).hidden=v!=='zh';$('.pto',q).hidden=v!=='en';var cb=$('.cp',q);if(cb){cb.dataset.l=v==='zh'?'复制译文':'复制摘录';cb.textContent=cb.dataset.l}return}
-var x=t.closest('.ex');if(x){var p=x.closest('.dh'),o=p.classList.toggle('open');x.textContent=o?'收起':'展开';x.setAttribute('aria-expanded',o);var dr=$('.dor',p);if(dr)dr.hidden=!o;markRead(x);return}
+var x=t.closest('.ex');if(x){var p=x.closest('.dh'),o=p.classList.toggle('open');x.textContent=o?'收起':'展开';x.setAttribute('aria-expanded',o);var dr=$('.dor',p);if(dr)dr.hidden=!o;if(o&&dr)keep(dr);markRead(x);return}
 if(t.closest('.op,summary,.who a,.hh,.wkh'))markRead(t)});
 /* ===== 日期控件：‹ [日期 ▾] ›；state = 页内筛选（空 = 「全部」文案由 data-all 指定），nav = 跳转 ===== */
 var DRE=/^\d{4}-\d\d-\d\d$/;
@@ -83,6 +84,7 @@ var h0=hget();if(p){if(h0.dom||h0.sort){st.dom=oneOf(h0.dom,['all','ai','money',
 if(prev){var n=0;$$('.fi[data-ts]').forEach(function(x){if(new Date(x.dataset.ts).getTime()>prev){x.classList.add('isnew');if(x.closest('#daily'))n++}});var nc=$('#newc');if(nc&&n){nc.textContent='· 自上次访问新增 '+n+' 条（标「新」）';nc.hidden=false}}
 setTimeout(function(){LS.set('xhot-last',String(Date.now()))},4000);applyRead(document)})();
 relabel(document);
+document.addEventListener('toggle',function(ev){var d=ev.target;if(d&&d.matches&&d.matches('.tl30 details')&&d.open){var x=$('.trx',d);if(x)keep(x)}},true);
 /* 同页内只改 #hash 的跳转（如 ⌘K 选了当前页的日期 / 标签）：重新载入以应用；筛选自己用 replaceState，不会触发 */
 addEventListener('hashchange',function(){if(/^#(day|tag|dom|sort)=/.test(location.hash))location.reload()});
 /* ===== ⌘K 搜索 ===== */
@@ -92,7 +94,7 @@ var kp=null,kpi,kpl,items=[],act=0,lastF=null,pq=0;
 var PAGES=[['今日','index.html','每日 10 分钟'],['AI','d/ai.html','领域'],['搞钱','d/money.html','领域'],['成长','d/growth.html','领域'],['全部归档','d/all.html','按天 / 领域 / 重要度'],['人物','people.html','本周要点'],['资讯','news.html','AIHOT / X 新闻'],['趋势','trends.html','话题涨跌 · GitHub']];
 function hl(t,q){if(!q)return esc(t);var i=t.toLowerCase().indexOf(q.toLowerCase());if(i<0)return esc(t);return esc(t.slice(0,i))+'<mark>'+esc(t.slice(i,i+q.length))+'</mark>'+esc(t.slice(i+q.length))}
 function row(t,s,h,ext,k){return {t:t,s:s,h:h,ext:ext,k:k||''}}
-function build(){kp=document.createElement('div');kp.className='kp';kp.hidden=true;kp.innerHTML='<div class="kpb" role="dialog" aria-modal="true" aria-label="搜索"><input class="kpi" type="search" placeholder="搜索人物、标签、话题、日期，或在帖子摘录里查找…" aria-label="搜索" autocomplete="off" spellcheck="false"><ul class="kpl" role="listbox" aria-label="结果"></ul><div class="kpf"><span><kbd>↑</kbd><kbd>↓</kbd> 选择</span><span><kbd>↵</kbd> 打开</span><span><kbd>Esc</kbd> 关闭</span></div></div>';document.body.appendChild(kp);kpi=$('.kpi',kp);kpl=$('.kpl',kp);
+function build(){kp=document.createElement('div');kp.className='kp';kp.hidden=true;kp.innerHTML='<div class="kpb" role="dialog" aria-modal="true" aria-label="搜索"><input class="kpq" type="search" placeholder="搜索人物、标签、话题、日期，或在帖子摘录里查找…" aria-label="搜索" autocomplete="off" spellcheck="false"><ul class="kpl" role="listbox" aria-label="结果"></ul><div class="kpf"><span><kbd>↑</kbd><kbd>↓</kbd> 选择</span><span><kbd>↵</kbd> 打开</span><span><kbd>Esc</kbd> 关闭</span></div></div>';document.body.appendChild(kp);kpi=$('.kpq',kp);kpl=$('.kpl',kp);
 kp.addEventListener('mousedown',function(ev){if(ev.target===kp)kclose()});kpl.addEventListener('click',function(ev){var li=ev.target.closest('li[data-i]');if(li)pick(+li.dataset.i)});kpl.addEventListener('mousemove',function(ev){var li=ev.target.closest('li[data-i]');if(li&&+li.dataset.i!==act){act=+li.dataset.i;mark()}});
 var comp=false;kpi.addEventListener('compositionstart',function(){comp=true});kpi.addEventListener('compositionend',function(){comp=false;act=0;query(kpi.value.trim())});
 kpi.addEventListener('input',function(){if(comp)return;act=0;query(kpi.value.trim())});
