@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """XHOT 静态站生成器（日报 · 热帖 · 账号榜 · 资讯 · 趋势）：顶部 5 个 tab = 5 个独立页面（深链接）
-  index.html 日报（daily/<日期>.html 往期，读 daily/*.json）· hot.html 热帖 · accounts.html 账号榜 · news.html 资讯（X 新闻 + AIHOT）· trends.html 趋势（话题涨跌 + GitHub）
+  index.html 日报（daily/<日期>.html 往期，读 daily/*.json，缺失的 text_orig 按 post_id 从数据库补并写回）· hot.html 热帖 · accounts.html 账号榜 · news.html 资讯（X 新闻 + AIHOT）· trends.html 趋势（话题涨跌 + GitHub）
   p/<handle>.html 个人页；assets/ 下哈希资源：app.<h>.js、hot.<h>.json、av/<handle>.<h>.jpg
 数据：xhot.db、raw/、avatars/（由 avatars_fetch.py 下载）。用法：python3 generate.py [输出目录]"""
 import os,sys,glob,json,re,datetime,hashlib,shutil,html as _h
@@ -100,7 +100,7 @@ def withdays(rows,fn):
         out.append(fn(r))
     return ''.join(out)
 def card(r,a,pref='',showwho=True):
-    """r=[id,t,text,like,rt,reply,quote,view,heat,url]  与 app_v10.js card() 一致"""
+    """r=[id,t,text,like,rt,reply,quote,view,heat,url]  与 app.js card() 一致"""
     t=r[2]; lg=len(t)>150 or t.count('\n')>4
     who=(f'<header>{av(a["u"],a["name"],"",pref)}<div class="who"><a href="{pref}p/{a["u"]}.html">{e(a["name"])}</a><small>@{e(a["H"])}</small></div><div class="pm"><span class="heat" title="热度 = 赞 + 2×转 + 3×引用 + 评论 + 收藏">🔥 {fmt(r[8])}</span>{tmh(r[1])}</div></header>' if showwho
          else f'<header><span class="tag">{"近一周" if isw(r[1]) else "更早"}</span><div class="who"></div><div class="pm"><span class="heat" title="热度 = 赞 + 2×转 + 3×引用 + 评论 + 收藏">🔥 {fmt(r[8])}</span>{tmh(r[1])}</div></header>')
@@ -314,21 +314,37 @@ def news():
     N=news_items(); NEWS=N; c={k:sum(1 for n in N if n['s']==k) for k in 'hdsx'}
     TOP=ntop(N)
     nbd=jdump([nbody(n) for n in N]); nbn=f'news.{H8(nbd)}.json'; put(nbn,nbd)
-    seg=('<div class="seg" role="group" aria-label="来源"><button type="button" data-src="top" class="on" aria-pressed="true">⭐ 精选 '+str(len(TOP))+'</button>'
-         '<button type="button" data-src="all" aria-pressed="false">全部 '+str(len(N))+'</button>'
-         +''.join(f'<button type="button" data-src="{k}" aria-pressed="false">{l} {c[k]}</button>' for k,l in (('h','AIHOT 热点'),('d','AIHOT 日报'),('s','AIHOT 精选'),('x','X 新闻 · 英文')) if c[k])+'</div>')
+    SL=(('h','AIHOT 热点'),('d','AIHOT 日报'),('s','AIHOT 精选'),('x','X 新闻 · 英文'))
+    seg=('<div class="seg" role="group" aria-label="范围"><button type="button" data-src="top" class="on" aria-pressed="true">⭐ 精选 '+str(len(TOP))+'</button>'
+         '<button type="button" data-src="all" aria-pressed="false">全部 '+str(len(N))+'</button></div>'
+         '<div class="seg msrc" role="group" aria-label="来源">'
+         +''.join(f'<button type="button" data-src="{k}" aria-pressed="false">{l} {c[k]}</button>' for k,l in SL if c[k])+'</div>')
     order=sorted(range(len(N)),key=lambda i:(nkey(N[i]),-NORD[N[i]['s']],N[i].get('ts') or ''),reverse=True)
     groups=[];last=None
     for i in order:
         k=nkey(N[i])
         if k!=last: groups.append((k,[])); last=k
         groups[-1][1].append(i)
-    allh=''.join(f'<div class="ndg">{dsep(k) if k!="0000-00-00" else "<div class=dsep><b>更早</b></div>"}<ol class="nl">{"".join(nrow(N[i],i) for i in ids)}</ol></div>' for k,ids in groups)
-    body=(f'<div class="tools"><h1>资讯</h1>{seg}<span class="sp"></span><span class="hint">点标题展开全文 · 中文 AIHOT 在前</span></div>'
-          f'<div class="nwrap" id="ng" data-body="assets/{nbn}">'
+    allh=''.join(f'<div class="ndg" data-d="{k}">{dsep(k) if k!="0000-00-00" else "<div class=dsep><b>更早</b></div>"}<ol class="nl">{"".join(nrow(N[i],i) for i in ids)}</ol></div>' for k,ids in groups)
+    # ---- 右侧栏 ----
+    srcl=''.join(f'<li><button type="button" class="sl2" data-src="{k}" aria-pressed="false"><span class="src {k}">{l}</span><b>{c[k]}</b></button></li>' for k,l in SL if c[k])
+    srcl=f'<li><button type="button" class="sl2" data-src="top" aria-pressed="true"><span class="src top">⭐ 精选</span><b>{len(TOP)}</b></button></li>'+srcl+f'<li><button type="button" class="sl2" data-src="all" aria-pressed="false"><span class="src top">全部</span><b>{len(N)}</b></button></li>'
+    dayl=''.join(f'<li><button type="button" class="dl2" data-jump="{k}"><b>{dlab(k)}</b><span>{(dsub(k) if dlab(k) in ("今天","昨天") else dsub(k).split(" ")[1])}</span><i>{len(ids)}</i></button></li>' for k,ids in groups if k!='0000-00-00')
+    tr=sorted([(x,d) for d in DOMS for x in DATA[d]['trends']],key=lambda z:-z[0]['g'])[:5]
+    trl=''.join(f'<li><a href="trends.html"><span class="tn">{e(x["name"])}</span><b class="{"up" if x["g"]>=0 else "dn"}">{x["g"]:+.0f}%</b></a></li>' for x,d in tr)
+    ghl=''.join(f'<li><a href="{safe_url(r["url"])}" target="_blank" rel="noopener noreferrer"><span class="tn">{e(r["repo"])}</span><b class="gs">+{fmt(r["today"])}★</b></a></li>' for r in GHR[:5])
+    aside=(f'<aside class="nside" aria-label="资讯导航">'
+           f'<section class="panel nrp" id="npane" hidden><div class="nrph"><span class="nrpt" id="nptitle"></span><button type="button" class="btn" id="npclose" aria-label="关闭阅读窗格">✕ 关闭</button></div><div class="nrpm" id="npmeta"></div><div class="nrpb" id="npbody"></div></section>'
+           f'<section class="panel nsp" id="nhint"><h2>📖 阅读窗格</h2><p class="nph">点左侧任意标题，全文在这里打开；左边的列表位置不变，可以连续点着读。</p></section>'
+           f'<section class="panel nsp"><h2>🗂 来源</h2><ul class="nsl">{srcl}</ul></section>'
+           f'<section class="panel nsp"><h2>📅 按日期跳转</h2><ul class="ndl">{dayl}</ul></section>'
+           f'<section class="panel nsp"><h2>📈 话题涨幅 <a class="more2" href="trends.html">趋势 →</a></h2><ul class="nmini">{trl}</ul></section>'
+           f'<section class="panel nsp"><h2>🐙 GitHub 今日 <a class="more2" href="trends.html">更多 →</a></h2><ul class="nmini">{ghl}</ul></section></aside>')
+    body=(f'<div class="tools"><h1>资讯</h1>{seg}<span class="sp"></span><span class="hint">点标题读全文 · 中文 AIHOT 在前</span></div>'
+          f'<div class="nlay" id="ng" data-body="assets/{nbn}"><div class="nmain">'
           f'<section id="ntop" class="nsec2"><h2 class="nh2">今日精选 <small>AIHOT 热点 / 精选优先，{len(TOP)} 条</small></h2><ol class="nl">{"".join(nrow(N[i],i) for i in TOP)}</ol>'
           f'<button id="nmore" class="more" type="button">展开更多 · 按日期看全部 {len(N)} 条</button></section>'
-          f'<section id="nall" class="nsec2" hidden>{allh}</section><div class="empty" id="nempty" hidden>这个来源暂无内容</div></div>')
+          f'<section id="nall" class="nsec2" hidden>{allh}</section><div class="empty" id="nempty" hidden>这个来源暂无内容</div></div>{aside}</div>')
     return page('XHOT · 资讯',body,'news.html')
 def spark(vals,w=72,h=22):
     if len(vals)<2: return ''
@@ -400,14 +416,25 @@ def _dok(d):
         if not isinstance(h,dict) or not re.fullmatch(r'[A-Za-z0-9_]{1,30}',str(h.get('handle',''))): continue
         pid=str(h.get('post_id') or '');pid=pid if re.fullmatch(r'\d{5,25}',pid) else ''
         hl.append(dict(handle=h['handle'],name=str(h.get('name') or h['handle']),text=str(h.get('text_zh') or ''),pid=pid,
-                       url=str(h.get('url') or (f"https://x.com/{h['handle']}/status/{pid}" if pid else f"https://x.com/{h['handle']}")),likes=h.get('likes') if isinstance(h.get('likes'),int) else None))
+                       url=str(h.get('url') or (f"https://x.com/{h['handle']}/status/{pid}" if pid else f"https://x.com/{h['handle']}")),likes=h.get('likes') if isinstance(h.get('likes'),int) else None,orig=str(h.get('text_orig') or '')[:8000]))
     cl=[]
     for c in d.get('changelog') or []:
         if isinstance(c,str): cl.append(('',c))
         elif isinstance(c,dict) and c.get('text'): cl.append((str(c.get('date') or ''),str(c['text'])))
     return dict(date=d['date'],hl=hl,topics=str(d.get('topics_zh') or ''),fol=str(d.get('followers_zh') or ''),cl=cl)
+def fill_orig(fp):
+    """把 highlights[].post_id 对应的原帖全文（来自 xhot.db）写进 daily JSON 的 text_orig：帖子之后滚出数据库（每账号只留最新 200 条），往期日报也能继续显示。已有 text_orig 不覆盖。"""
+    d=json.load(open(fp,encoding='utf-8')); ch=False
+    for h in d.get('highlights') or []:
+        pid=str(h.get('post_id') or '')
+        if not h.get('text_orig') and re.fullmatch(r'\d{5,25}',pid):
+            r=db.execute('select text from tweets where id=?',(pid,)).fetchone()
+            if r and r[0]: h['text_orig']=_h.unescape(r[0]); ch=True
+    if ch: open(fp,'w',encoding='utf-8').write(json.dumps(d,ensure_ascii=False,indent=1)+'\n'); print('text_orig filled',os.path.basename(fp))
 DAYS=[]
 for fp in sorted(glob.glob(os.path.join(DAYD,'*.json'))):
+    try: fill_orig(fp)
+    except Exception as ex: print('fill_orig failed',os.path.basename(fp),type(ex).__name__)
     try: x=_dok(json.load(open(fp,encoding='utf-8')))
     except Exception as ex: print('skip daily',os.path.basename(fp),type(ex).__name__); x=None
     if x: DAYS.append(x)
@@ -418,7 +445,9 @@ def dhl(h,pref):
          else f'<a class="hh" href="{safe_url("https://x.com/"+h["handle"])}" target="_blank" rel="noopener noreferrer"><b>{e(h["name"])}</b><small>@{e(h["handle"])}</small></a>')
     lk=f'<a class="btn op" href="{safe_url(h["url"])}" target="_blank" rel="noopener noreferrer">原帖 ↗</a>'
     lv=f'<span class="lk">♥ {fmt(h["likes"])}</span>' if h['likes'] is not None else ''
-    return f'<li class="dh" style="--dc:{DC[a["dom"]] if a else "var(--ac)"}">{who}<p>{e(h["text"])}</p><div class="dha">{lv}{lk}</div></li>'
+    og=h['orig']
+    ob=(f'<div class="dor"><div class="pt ptc">{lnk(og)}</div><div class="act"><button class="btn ex" type="button" aria-expanded="false" hidden>展开</button><button class="btn cp" type="button">复制原文</button></div></div>' if og else '')
+    return f'<li class="dh" style="--dc:{DC[a["dom"]] if a else "var(--ac)"}">{who}<p class="dsm">{e(h["text"])}</p><div class="dha">{lv}{lk}</div>{ob}</li>'
 def daily_page(i,pref,cur):
     d=DAYS[i]; k=d['date']; latest=i==len(DAYS)-1
     pv=f'<a class="btn" href="{pref}daily/{DAYS[i-1]["date"]}.html" rel="prev">← {dsub(DAYS[i-1]["date"])}</a>' if i>0 else '<span class="btn dis" aria-disabled="true">← 更早</span>'

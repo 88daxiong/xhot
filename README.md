@@ -6,10 +6,10 @@ XHOT 是一个纯静态的 X（Twitter）热点看板，关注 AI、搞钱（创
 
 | 页面 | 内容 |
 |---|---|
-| `index.html` 📅 日报 | 每日摘要（北京时间 08:00 更新）：重点新帖（可点 @账号 进个人页、点原帖链接）、话题涨跌、粉丝变化、更新日志（无改动时隐藏）、资讯头条；上一天 / 下一天切换和往期列表（`daily/YYYY-MM-DD.html`） |
+| `index.html` 📅 日报 | 每日摘要（北京时间 08:00 更新）：重点新帖（可点 @账号 进个人页；每条下面附**原帖全文**，默认折叠 3 行，可展开 / 复制原文，另有原帖链接）、话题涨跌、粉丝变化、更新日志（无改动时隐藏）、资讯头条；上一天 / 下一天切换和往期列表（`daily/YYYY-MM-DD.html`） |
 | `hot.html` 🔥 热帖 | 顶部 10 秒速览；默认按 **时间**（最新在前，按北京时间日期加吸顶分隔：今天 / 昨天 / 日期，醒目的 HH:MM + 相对时间），也可切 **近一周热度 / 全局热度**，按领域筛选，全文搜索；每人最多 3 条 |
 | `accounts.html` 👤 账号榜 | 每个账号一张卡片（头像、名字、粉丝数、较上次变化），按领域 / 分组筛选，按粉丝数或变化排序 |
-| `news.html` 📰 资讯 | 紧凑列表（时间 + 标题 + 一行摘要）：默认「精选」约 13 条（AIHOT 热点 / 精选优先，中文在前），「展开更多」按日期看全部，可按来源筛选；点标题行内展开全文 |
+| `news.html` 📰 资讯 | 两栏：左侧紧凑列表（时间 + 标题 + 一行摘要），默认「精选」约 13 条（AIHOT 热点 / 精选优先，中文在前），「展开更多」按日期看全部；右侧粘性侧栏有阅读窗格（点标题在右边读全文）、来源筛选、按日期跳转、话题涨幅和 GitHub 今日 Top5；手机上标题行内展开 |
 | `trends.html` 📈 趋势 | X 话题讨论量涨跌（排名、近 6 日迷你折线、昨日条数、涨跌条）和 GitHub 今日 AI / 开发工具趋势 |
 | `p/<handle>.html` 个人页 | 单个账号的全部已存推文，默认按时间（带日期分隔），可切热度排序，支持搜索 + 发帖统计 |
 
@@ -49,7 +49,7 @@ src/                                                # 生成器源码，可从�
 
 - `data/accounts.json`：`{"accounts": [{handle, user_id, name, domains[], groups[], zh, followers, followers_ts, tweets_stored}]}`
 - `data/followers_history.json`：`{"history": {"<handle>": [{ts, followers, following, tweets}]}}`，`ts` 为北京时间 `YYYYMMDD_HHMMSS`
-- `data/daily/YYYY-MM-DD.json`：`{"date", "highlights": [{handle, name, text_zh, post_id, url, likes}], "topics_zh", "followers_zh", "changelog": [{date, text}]}`；`handle` 必须是关注列表中的账号，`post_id` 为数字，`url` 只放行 http(s)，不合规的字段生成时会被丢弃；没有改动时 `changelog` 为空数组，页面隐藏「更新日志」
+- `data/daily/YYYY-MM-DD.json`：`{"date", "highlights": [{handle, name, text_zh, post_id, url, likes, text_orig}], "topics_zh", "followers_zh", "changelog": [{date, text}]}`；`handle` 必须是关注列表中的账号，`post_id` 为数字，`text_orig` 是原帖全文（生成时从数据库补全并写回，帖子滚出数据库后日报仍能显示），`url` 只放行 http(s)，不合规的字段生成时会被丢弃；没有改动时 `changelog` 为空数组，页面隐藏「更新日志」
 - `data/tweets/<handle>.json`：`{"handle", "tweets": [{id, created_at(UTC), text, lang, metrics{like, retweet, reply, quote, impression, bookmark}, url}]}`，最新在前，最多 200 条；长推文为全文
 
 JSON 键排序固定、缩进 2，便于看 diff。推文内容版权归原作者。
@@ -98,7 +98,7 @@ JSON 键排序固定、缩进 2，便于看 diff。推文内容版权归原作�
    python3 gh_trending.py
    python3 avatars_fetch.py
    ```
-   **写日报**（生成之前）：`python3 daily_draft.py > /tmp/daily_draft.json` 得到候选新帖、话题涨跌和粉丝变化，然后写 `daily/<YYYY-MM-DD>.json`（格式见上方 `data/daily`，中文摘要，`post_id` / `url` 必须来自数据库，不要编造；旧日期文件保留）。从零重建时可先 `cp -r data/daily src/daily` 取回历史日报。
+   **写日报**（生成之前）：`python3 daily_draft.py > /tmp/daily_draft.json` 得到候选新帖（含原帖全文 `text_orig`）、话题涨跌和粉丝变化，然后写 `daily/<YYYY-MM-DD>.json`（格式见上方 `data/daily`，中文摘要，`post_id` / `url` 必须来自数据库，不要编造；旧日期文件保留）。从零重建时可先 `cp -r data/daily src/daily` 取回历史日报。
 4. **生成与自检**：
    ```bash
    python3 generate.py                     # 输出到 src/site/（index.html 日报、hot.html、daily/…）

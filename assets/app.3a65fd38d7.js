@@ -43,17 +43,18 @@ var avIO='IntersectionObserver' in window?new IntersectionObserver(function(es){
 /* 头像加载失败就移除（替代内联 onerror，便于严格 CSP） */
 document.addEventListener('error',function(ev){var t=ev.target;if(t&&t.tagName==='IMG'&&t.parentNode&&t.parentNode.classList&&t.parentNode.classList.contains('av'))t.remove()},true);
 function lazyAv(root){$$('img[data-src]',root).forEach(function(i){if(avIO)avIO.observe(i);else{i.src=i.dataset.src;i.removeAttribute('data-src')}})}
-function fixEx(root){lazyAv(root);$$('.post',root).forEach(function(p){var pt=$('.ptc,.nbc',p),b=$('.ex',p);if(!pt||!b||p.classList.contains('open'))return;b.hidden=pt.scrollHeight<=pt.clientHeight+2;pt.classList.toggle('fit',b.hidden)})}
+function fixEx(root){lazyAv(root);$$('.post,.dh',root).forEach(function(p){var pt=$('.ptc,.nbc',p),b=$('.ex',p);if(!pt||!b||p.classList.contains('open'))return;b.hidden=pt.scrollHeight<=pt.clientHeight+2;pt.classList.toggle('fit',b.hidden)})}
 /* 复制 */
 var TXT={};
 function fb(t){var a=document.createElement('textarea');a.value=t;a.setAttribute('readonly','');a.style.cssText='position:fixed;top:-1000px;opacity:0';document.body.appendChild(a);a.select();var ok=false;try{ok=document.execCommand('copy')}catch(e){}document.body.removeChild(a);return ok}
 function copy(b,t){function done(ok){b.textContent=ok?'已复制 ✓':'复制失败';b.classList.toggle('ok',ok);clearTimeout(b._t);b._t=setTimeout(function(){b.textContent='复制原文';b.classList.remove('ok')},1600)}
 if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(t).then(function(){done(true)},function(){done(fb(t))})}else done(fb(t))}
-function ctext(p){var k=p.dataset.k;if(TXT[k])return TXT[k];var w=$('.who a',p),h=$('.who small',p);return $('.pt',p).innerText+'\n— '+(w?w.textContent+' ('+h.textContent+')':(M?M.name+' (@'+M.handle+')':''))+'\n'+$('.op',p).href}
-document.addEventListener('click',function(ev){var b=ev.target.closest('.cp');if(b){copy(b,ctext(b.closest('.post')));return}
-var x=ev.target.closest('.ex');if(x){var p=x.closest('.post');var o=p.classList.toggle('open');x.textContent=o?'收起':'展开';x.setAttribute('aria-expanded',o)}});
+function ctext(p){if(p.classList.contains('dh')){var hn=$('.hh b',p),hs=$('.hh small',p),op=$('.op',p);return $('.pt',p).innerText+'\n— '+(hn?hn.textContent:'')+' ('+(hs?hs.textContent:'')+')\n'+(op?op.href:'')}var k=p.dataset.k;if(TXT[k])return TXT[k];var w=$('.who a',p),h=$('.who small',p);return $('.pt',p).innerText+'\n— '+(w?w.textContent+' ('+h.textContent+')':(M?M.name+' (@'+M.handle+')':''))+'\n'+$('.op',p).href}
+document.addEventListener('click',function(ev){var b=ev.target.closest('.cp');if(b){copy(b,ctext(b.closest('.post,.dh')));return}
+var x=ev.target.closest('.ex');if(x){var p=x.closest('.post,.dh');var o=p.classList.toggle('open');x.textContent=o?'收起':'展开';x.setAttribute('aria-expanded',o)}});
 /* 悬停预取 */
 var pf={};['mouseover','touchstart','focusin'].forEach(function(e){document.addEventListener(e,function(ev){var a=ev.target.closest&&ev.target.closest('a[href]');if(!a)return;var h=a.getAttribute('href');if(!h||pf[h]||/^https?:/.test(h)||!/\.html$/.test(h))return;pf[h]=1;var l=document.createElement('link');l.rel='prefetch';l.href=h;document.head.appendChild(l)},{passive:true})});
+if($('#daily'))fixEx(document);
 lazyAv(document);document.addEventListener('click',function(ev){$$('details.fr[open]').forEach(function(d){if(!d.contains(ev.target))d.open=false})});
 if($('#daily')){var oh=location.hash.slice(1);if(/(^|&)(sort|dom)=|^(ai|money|growth)$/.test(oh)){location.replace('hot.html#'+oh);return}}
 /* 吸顶分隔条位置 = 顶栏实际高度 */
@@ -88,16 +89,23 @@ $$('button[data-dom]').forEach(function(b){b.addEventListener('click',function()
 aq.addEventListener('input',arender);var a0=hget();if(a0.dom||a0.sort){as.dom=H0ok(a0.dom,['all','ai','money','growth'],'all');as.sort=H0ok(a0.sort,['grp','f','d'],'grp');arender()}}
 /* ===== 资讯 ===== */
 var ng=$('#ng');
-/* ===== 资讯：精选/全部/来源筛选，点标题行内展开全文（正文 JSON 按需加载，生成器已转义） ===== */
-if(ng){var NB=null,nw=[];function nload(f){if(NB)return f&&f();if(f)nw.push(f);if(nw.length>1||nload.busy)return;nload.busy=1;fetch(ng.dataset.body).then(function(r){return r.json()}).then(function(B){NB=B;nw.splice(0).forEach(function(f){f()})})}
-function nopen(li,on){var b=$('.nrh',li),bd=$('.nrb',li);if(on===undefined)on=bd.hidden;if(on&&!bd.dataset.ok){nload(function(){var x=NB[+li.dataset.i];if(typeof x==='string'){bd.innerHTML=x;bd.dataset.ok=1}})}bd.hidden=!on;li.classList.toggle('open',on);b.setAttribute('aria-expanded',on)}
-ng.addEventListener('click',function(ev){var b=ev.target.closest('.nrh');if(b)nopen(b.closest('.nr'))});
+/* ===== 资讯：精选/全部/来源，桌面右侧阅读窗格、手机行内展开（正文 JSON 按需加载，生成器已转义） ===== */
+if(ng){var NB=null,nw=[],wide=matchMedia('(min-width:1001px)');function nload(f){if(NB)return f&&f();if(f)nw.push(f);if(nw.length>1||nload.busy)return;nload.busy=1;fetch(ng.dataset.body).then(function(r){return r.json()}).then(function(B){NB=B;nw.splice(0).forEach(function(f){f()})})}
+var pane=$('#npane'),hint=$('#nhint'),cur=null;
+function pclose(){if(cur)cur.classList.remove('sel');cur=null;if(pane)pane.hidden=true;if(hint)hint.hidden=false}
+function popen(li){if(cur)cur.classList.remove('sel');cur=li;li.classList.add('sel');hint.hidden=true;pane.hidden=false;$('#nptitle').textContent=$('.nt2',li).textContent;$('#npmeta').innerHTML=$('.nrm',li).innerHTML;var bd=$('#npbody');bd.innerHTML='<p class="nph">加载中…</p>';
+nload(function(){if(cur!==li)return;var x=NB[+li.dataset.i];if(typeof x==='string')bd.innerHTML=x;pane.scrollTop=0;$('.nside').scrollTop=0})}
+function nopen(li,on){var bd=$('.nrb',li),b=$('.nrh',li);if(on===undefined)on=bd.hidden;if(on&&!bd.dataset.ok){nload(function(){var x=NB[+li.dataset.i];if(typeof x==='string'){bd.innerHTML=x;bd.dataset.ok=1}})}bd.hidden=!on;li.classList.toggle('open',on);b.setAttribute('aria-expanded',on)}
+function nact(li){if(wide.matches){if(cur===li)pclose();else popen(li)}else nopen(li)}
+ng.addEventListener('click',function(ev){var b=ev.target.closest('.nrh');if(b)nact(b.closest('.nr'))});
+if($('#npclose'))$('#npclose').addEventListener('click',pclose);
 var nst={src:'top'};function nsr(){var s=nst.src;seg('data-src',s);var top=s==='top';$('#ntop').hidden=!top;$('#nall').hidden=top;var n=0;
 if(!top){$$('#nall .ndg').forEach(function(g){var c=0;$$('.nr',g).forEach(function(li){var ok=s==='all'||li.dataset.s===s;li.hidden=!ok;if(ok)c++});g.hidden=!c;n+=c})}else n=1;$('#nempty').hidden=n>0;hset({src:s==='top'?'':s})}
 $$('[data-src]').forEach(function(b){b.addEventListener('click',function(){nst.src=b.dataset.src;nsr()})});
+$$('[data-jump]').forEach(function(b){b.addEventListener('click',function(){if(nst.src==='top'){nst.src='all';nsr()}var g=$('#nall .ndg[data-d="'+b.dataset.jump+'"]');if(g){g.hidden=false;g.scrollIntoView({block:'start',behavior:'smooth'})}})});
 $('#nmore').addEventListener('click',function(){nst.src='all';nsr();$('#nall').scrollIntoView({block:'start'})});
 var s0=hget();if(s0.src&&/^(all|h|d|s|x)$/.test(s0.src)){nst.src=s0.src;nsr()}
-if(s0.n&&/^\d+$/.test(s0.n)){var li=$('#ntop .nr[data-i="'+s0.n+'"]');if(!li){nst.src='all';nsr();li=$('#nall .nr[data-i="'+s0.n+'"]')}if(li){nopen(li,true);li.classList.add('hl');setTimeout(function(){li.scrollIntoView({block:'center'})},60)}}
+if(s0.n&&/^\d+$/.test(s0.n)){var li=$('#ntop .nr[data-i="'+s0.n+'"]');if(!li){nst.src='all';nsr();li=$('#nall .nr[data-i="'+s0.n+'"]')}if(li){nact(li);li.classList.add('hl');setTimeout(function(){li.scrollIntoView({block:'center'})},60)}}
 addEventListener('load',function(){(window.requestIdleCallback||function(f){setTimeout(f,2000)})(function(){nload()},{timeout:5000})})}
 if(!ag&&!(feed)&&$('button[data-dom]')){var ns={dom:'all'};function nr(){seg('data-dom',ns.dom);domFilter(ns.dom);hset(ns)}
 $$('button[data-dom]').forEach(function(b){b.addEventListener('click',function(){ns.dom=b.dataset.dom;nr()})});var n0=hget();if(n0.dom){ns.dom=H0ok(n0.dom,['all','ai','money','growth'],'all');nr()}}

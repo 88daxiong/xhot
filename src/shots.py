@@ -30,6 +30,10 @@ with sync_playwright() as p:
                 g.screenshot(path=os.path.join(SH,f'shot_{name}_{mn}.png'),full_page=(name not in('hot','person','person2','accounts')))
                 if name in('hot','person'):
                     g.mouse.wheel(0,2600);g.wait_for_timeout(500);g.screenshot(path=os.path.join(SH,f'shot_{name}_{mn}_scrolled.png'))
+                if name=='daily':
+                    ex=g.query_selector('.dh .ex:not([hidden])')
+                    if ex: ex.click();g.wait_for_timeout(300)
+                    g.screenshot(path=os.path.join(SH,f'shot_daily_{mn}_expanded.png'),full_page=True)
                 if name=='news':
                     g.click('#ntop .nr .nrh');g.wait_for_timeout(700);g.screenshot(path=os.path.join(SH,f'shot_news_{mn}_expanded.png'))
                     g.click('#nmore');g.wait_for_timeout(400);g.screenshot(path=os.path.join(SH,f'shot_news_{mn}_all.png'))

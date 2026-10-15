@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """日报素材：python3 daily_draft.py [YYYY-MM-DD] > /tmp/daily_draft.json
 窗口 = 该日 08:00（北京时间）往前 24 小时（若是今天则截至最新抓取）。输出候选：
-  posts   热度前 20（每人 1 条，只含中/英）：handle,name,id,url,likes,heat,created_at,text
+  posts   热度前 20（每人 1 条，只含中/英）：handle,name,id,url,likes,heat,created_at,text(前 400 字),text_orig(原帖全文，直接抄进日报 highlights[].text_orig)
   topics  话题最近一日条数 vs 前几日均值的涨跌（取窗口结束前最新一次计数）
   followers 粉丝变化前后各 6（与约 24 小时前的快照比）
 刷新流程用它写 daily/YYYY-MM-DD.json（中文摘要由刷新人工/助手撰写），不直接发布。"""
@@ -20,7 +20,7 @@ posts=[];seen=set()
 for r in db.execute('select id,author_id,created_at,text,likes,rts,replies,quotes,bm,url,lang from tweets where created_at>=? and created_at<? order by likes+2*rts+3*quotes+replies+coalesce(bm,0) desc',(Z(start),Z(end))):
     if r[1] not in idm or r[1] in seen or not langf.ok(r[3],r[10]): continue
     seen.add(r[1]); u,n=idm[r[1]]
-    posts.append(dict(handle=u,name=n,id=r[0],url=r[9] or f'https://x.com/{u}/status/{r[0]}',likes=r[4],heat=r[4]+2*r[5]+3*r[7]+r[6]+(r[8] or 0),created_at=r[2],text=html.unescape(r[3])[:400]))
+    posts.append(dict(handle=u,name=n,id=r[0],url=r[9] or f'https://x.com/{u}/status/{r[0]}',likes=r[4],heat=r[4]+2*r[5]+3*r[7]+r[6]+(r[8] or 0),created_at=r[2],text=html.unescape(r[3])[:400],text_orig=html.unescape(r[3])))
     if len(posts)>=20: break
 ts_end=end.strftime('%Y%m%d_%H%M%S')
 snaps=[t for (t,) in db.execute('select distinct ts from followers where ts<=? order by ts',(ts_end,))]
