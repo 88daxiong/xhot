@@ -1,0 +1,65 @@
+{
+ "date": "2026-10-15",
+ "highlights": [
+  {
+   "handle": "dotey",
+   "name": "宝玉",
+   "text_zh": "长文：AI 写代码太快，git 扛不住了——GitHub 隔三岔五出故障、流量暴涨，Anthropic 干脆自己造了源码管理系统 Scion。",
+   "post_id": "2110165779228336493",
+   "likes": 246,
+   "url": "https://x.com/dotey/status/2110165779228336493"
+  },
+  {
+   "handle": "Gorden_Sun",
+   "name": "Gorden Sun",
+   "text_zh": "「一分钟看完 Gemini 4 Argon」：3D 建模、国际象棋、哥特教堂、光线追踪全都自己写，价格还很香。",
+   "post_id": "2110256415973802456",
+   "likes": 375,
+   "url": "https://x.com/Gorden_Sun/status/2110256415973802456"
+  },
+  {
+   "handle": "AnthropicAI",
+   "name": "Anthropic",
+   "text_zh": "Anthropic 新加坡办公室开张（亚太第 5 个），并与新加坡政府签署 AI 安全合作备忘录（MoU）。",
+   "post_id": "2110289695888511368",
+   "likes": 3113,
+   "url": "https://x.com/AnthropicAI/status/2110289695888511368"
+  },
+  {
+   "handle": "trq212",
+   "name": "Thariq",
+   "text_zh": "Claude Code Desktop 大升级，更清楚自己的能力、会主动拆分任务协作，几乎可以算 v2。",
+   "post_id": "2110463962877989276",
+   "likes": 2703,
+   "url": "https://x.com/trq212/status/2110463962877989276"
+  },
+  {
+   "handle": "OpenAI",
+   "name": "OpenAI",
+   "text_zh": "OpenAI 数据：欧盟企业客户的 AI 使用里，一半以上已经是 agent。",
+   "post_id": "2110442001749659890",
+   "likes": 1759,
+   "url": "https://x.com/OpenAI/status/2110442001749659890"
+  },
+  {
+   "handle": "tibo_maker",
+   "name": "Tibo",
+   "text_zh": "「AI 本该让我们少干活，结果同时开着 10 个 agent，从没这么累过」——引发大量共鸣。",
+   "post_id": "2110302154833510709",
+   "likes": 6753,
+   "url": "https://x.com/tibo_maker/status/2110302154833510709"
+  }
+ ],
+ "topics_zh": "Gemini 讨论量约为前几日均值的 2 倍（+99%，Gemini 4 Argon 发布带动）；vibe coding 继续走高（+54%），MCP +35% 紧随其后。",
+ "followers_zh": "Anthropic +7.1k、Tibo（@thsottiaux）+6.3k 涨粉最多，Sundar Pichai +5.0k；Elon Musk −25k，跌幅最大。",
+ "changelog": [
+  {
+   "date": "2026-10-14",
+   "text": "安全加固：每页加内容安全策略（CSP）与 referrer 策略；所有推文/资讯文本转义并经恶意字符串模糊测试；外链只放行 http(s)；头像下载限制来源、类型与大小（≤2 MB）。"
+  },
+  {
+   "date": "2026-10-14",
+   "text": "提速：资讯首屏 HTML 74 KB → 26 KB（其余正文按需加载）；热帖/个人页数据更精简，个人页首屏 12 条。"
+  }
+ ]
+}

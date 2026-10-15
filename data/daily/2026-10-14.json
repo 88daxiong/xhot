@@ -1,0 +1,56 @@
+{
+ "date": "2026-10-14",
+ "highlights": [
+  {
+   "handle": "sundarpichai",
+   "name": "Sundar Pichai",
+   "text_zh": "Gemini 4 Argon 正式发布：Gemini API 付费层、Antigravity Ultra、Gemini App 与搜索的 Pro/Ultra 用户全球可用。",
+   "post_id": "2110038898009407584",
+   "likes": 7824,
+   "url": "https://x.com/sundarpichai/status/2110038898009407584"
+  },
+  {
+   "handle": "thsottiaux",
+   "name": "Tibo",
+   "text_zh": "Codex 连更第 9 天：ChatGPT 与 Codex 桌面版本地状态存储优化，磁盘占用减少约 60%。",
+   "post_id": "2110151780478927344",
+   "likes": 14124,
+   "url": "https://x.com/thsottiaux/status/2110151780478927344"
+  },
+  {
+   "handle": "AnthropicAI",
+   "name": "Anthropic",
+   "text_zh": "工程博客：自建源码管理——5 月每天合并约 2,500 个改动，9 月超过 30,000 个，为人设计的开发基础设施扛不住 agent 规模。",
+   "post_id": "2110047081414987957",
+   "likes": 2256,
+   "url": "https://x.com/AnthropicAI/status/2110047081414987957"
+  },
+  {
+   "handle": "gdb",
+   "name": "Greg Brockman",
+   "text_zh": "用 GPT-5.6 Sol 花 6 天、4 万美元算力找到 Chrome 严重漏洞，拿下 Google 2026 年首个全链漏洞奖励。",
+   "post_id": "2110063893016096831",
+   "likes": 3397,
+   "url": "https://x.com/gdb/status/2110063893016096831"
+  },
+  {
+   "handle": "emollick",
+   "name": "Ethan Mollick",
+   "text_zh": "用了 Gemini 4 才发现，很多模型大概都在蒸馏 Claude/GPT；Gemini 4 的感觉很不一样。",
+   "post_id": "2110060618258497764",
+   "likes": 4088,
+   "url": "https://x.com/emollick/status/2110060618258497764"
+  },
+  {
+   "handle": "elonmusk",
+   "name": "Elon Musk",
+   "text_zh": "CEO 和高管直接在 X 上发帖，比发新闻稿有效得多。",
+   "post_id": "2110077948384735481",
+   "likes": 19251,
+   "url": "https://x.com/elonmusk/status/2110077948384735481"
+  }
+ ],
+ "topics_zh": "REA +46% 涨幅最大，vibe coding +27%、solopreneur +27%、MCP +24% 走高；Gemini 在 Argon 发布前一天回落（−20%）。",
+ "followers_zh": "Paul Graham +7.0k、Karpathy +6.6k、Elon Musk +6.4k、Tibo（@thsottiaux）+5.5k 涨粉居前；MrBeast −759。（与上一快照相隔约 17 小时）",
+ "changelog": []
+}
