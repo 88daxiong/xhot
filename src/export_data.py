@@ -1,10 +1,13 @@
 #!/usr/bin/env python3
-"""把 xhot.db 导出为 JSON 备份：<out>/tweets/<handle>.json、accounts.json、followers_history.json、README.md。
-用法：python3 export_data.py [输出目录，默认 ../data]。键排序固定、缩进 2，方便看 diff。不导出 raw/ 或任何密钥。"""
-import os,sys,json,sqlite3
+"""v15 公开数据导出：python3 export_data.py [data]
+与 v14 的区别：**不导出任何推文全文**。tweets/<handle>.json 只含 id / created_at / lang / 指标 / url；
+daily/*.json 去掉 text_orig、text_orig_zh（只保留 excerpt、excerpt_zh、text_zh、gists、summary_zh 等 agent 撰写的字段）；weekly/*.json 原样复制。
+不导出 raw/、xhot.db 或任何密钥。导出后自检：任何 JSON 里出现 text / text_orig* 键或超过 400 字的字符串即报错退出（防止全文泄漏）。"""
+import os,sys,json,sqlite3,glob,shutil
 D=os.path.dirname(os.path.abspath(__file__))
-OUT=sys.argv[1] if len(sys.argv)>1 else os.path.join(os.path.dirname(os.path.abspath(__file__)),'..','data')
+OUT=sys.argv[1] if len(sys.argv)>1 else 'data'
 db=sqlite3.connect(os.path.join(D,'xhot.db')); W=json.load(open(os.path.join(D,'watchlist.json'),encoding='utf-8'))
+STRIP={'text_orig','text_orig_zh','text'}
 def dump(p,o):
     os.makedirs(os.path.dirname(p),exist_ok=True)
     s=json.dumps(o,ensure_ascii=False,indent=2,sort_keys=True)+'\n'
@@ -30,25 +33,44 @@ for k,a in acc.items():
     a.update(user_id=ids.get(k),name=r[1] if r else None,followers=r[2] if r else None,followers_ts=r[0] if r else None)
     uid=ids.get(k); tw=[]
     if uid:
-        for x in db.execute('select id,created_at,text,lang,likes,rts,replies,quotes,views,bm,url from tweets where author_id=? order by created_at desc',(uid,)):
-            tw.append({'id':x[0],'created_at':x[1],'text':x[2],'lang':x[3],'metrics':{'like':x[4],'retweet':x[5],'reply':x[6],'quote':x[7],'impression':x[8],'bookmark':x[9]},'url':x[10]})
+        for x in db.execute('select id,created_at,lang,likes,rts,replies,quotes,views,bm,url from tweets where author_id=? order by created_at desc',(uid,)):
+            tw.append({'id':x[0],'created_at':x[1],'lang':x[2],'metrics':{'like':x[3],'retweet':x[4],'reply':x[5],'quote':x[6],'impression':x[7],'bookmark':x[8]},'url':x[9]})
     a['tweets_stored']=len(tw); n+=len(tw)
     dump(os.path.join(OUT,'tweets',f'{k}.json'),{'handle':k,'user_id':uid,'tweets':tw})
 dump(os.path.join(OUT,'accounts.json'),{'accounts':[acc[k] for k in sorted(acc)]})
 dump(os.path.join(OUT,'followers_history.json'),{'history':{k:hist[k] for k in sorted(hist)}})
-open(os.path.join(OUT,'README.md'),'w',encoding='utf-8').write('''# XHOT 数据备份
+def scrub(o):
+    if isinstance(o,dict): return {k:scrub(v) for k,v in o.items() if k not in STRIP}
+    if isinstance(o,list): return [scrub(x) for x in o]
+    return o
+for sub in ('daily','weekly'):
+    src=glob.glob(os.path.join(D,sub,'*.json')); keep={os.path.basename(f) for f in src}
+    for fp in src: dump(os.path.join(OUT,sub,os.path.basename(fp)),scrub(json.load(open(fp,encoding='utf-8'))))
+    for old in glob.glob(os.path.join(OUT,sub,'*.json')):
+        if os.path.basename(old) not in keep: os.remove(old)
+open(os.path.join(OUT,'README.md'),'w',encoding='utf-8').write('''# XHOT 数据备份（v15：仅 ID 与指标）
 
-由 `export_data.py` 从 xhot.db 导出，每次刷新时更新。JSON 键排序固定、缩进 2。
+由 `export_data.py` 导出，每天刷新时更新。JSON 键排序固定、缩进 2。**本目录不含任何推文全文**；推文内容请点链接回 X 查看。
 
-- `accounts.json`：关注列表里的每个账号，包括 handle、user_id、名字、所属领域/分组、是否中文号、最新粉丝数（`followers_ts` 是快照时间）、已存推文数。
-- `followers_history.json`：每个账号的粉丝时间序列（`ts`、`followers`、`following`、`tweets`），ts 是北京时间 `YYYYMMDD_HHMMSS`。
-- `daily/YYYY-MM-DD.json`：每日日报（date、highlights[handle,name,text_zh,post_id,url,likes]、topics_zh、followers_zh、changelog[]），由刷新流程撰写。
-- `tweets/<handle>.json`：该账号本地存储的原创推文（最多 200 条，最新在前），字段有 id、created_at（UTC）、text（长推文是全文 note_tweet）、lang、metrics（like/retweet/reply/quote/impression/bookmark）、url。
+- `accounts.json`：关注列表里的每个账号（handle、user_id、名字、领域/分组、是否中文号、最新粉丝数）。
+- `followers_history.json`：每个账号的粉丝时间序列（北京时间 `YYYYMMDD_HHMMSS`）。
+- `tweets/<handle>.json`：该账号本地存储的原创推文的 **id、created_at、lang、指标（点赞/转推/回复/引用/曝光/收藏）、url**，不含正文。
+- `daily/YYYY-MM-DD.json`：每日要点（三句话、必读重点的中文概括与短摘录、一句话要点、话题/粉丝变化、更新日志）。
+- `weekly/YYYY-Www.json`：每周 Top 人物的「本周要点」。
 
-数据来源：X API（get_users_posts、get_users_by_usernames）。只做备份和展示，版权归原作者。
+数据来源：X API。只做备份和展示，版权归原作者。
 ''')
-import glob,shutil
-for fp in glob.glob(os.path.join(D,'daily','*.json')):
-    dp=os.path.join(OUT,'daily',os.path.basename(fp)); os.makedirs(os.path.dirname(dp),exist_ok=True)
-    if not os.path.exists(dp) or open(dp,'rb').read()!=open(fp,'rb').read(): shutil.copyfile(fp,dp)
-print('accounts',len(acc),'tweets',n)
+# 自检：不得出现全文
+bad=[]
+for f in glob.glob(os.path.join(OUT,'**','*.json'),recursive=True):
+    def walk(o,p=''):
+        if isinstance(o,dict):
+            for k,v in o.items():
+                if k in STRIP: bad.append(f'{f}: key {k}')
+                walk(v,p+'/'+k)
+        elif isinstance(o,list):
+            for x in o: walk(x,p)
+        elif isinstance(o,str) and len(o)>400: bad.append(f'{f}: long string at {p} ({len(o)})')
+    walk(json.load(open(f,encoding='utf-8')))
+if bad: print('FAIL 全文泄漏检查：'); print('\n'.join(bad[:10])); sys.exit(1)
+print('accounts',len(acc),'tweets(ids+metrics only)',n,'| 全文泄漏检查 OK')

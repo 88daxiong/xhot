@@ -13,7 +13,6 @@
         "reply": 3,
         "retweet": 3
       },
-      "text": "Universal-3.6 Pro from @AssemblyAI is now live on OpenRouter\n\nSpeech-to-text through AssemblyAI's Sync API. Compared with Universal-3.5 Pro:\n\n- 30% fewer errors on short conversational utterances\n- 12% fewer errors on average across supported languages\n- Better recognition and",
       "url": "https://x.com/OpenRouter/status/2110492343581499509"
     },
     {
@@ -28,7 +27,6 @@
         "reply": 0,
         "retweet": 1
       },
-      "text": "How it works: put the parts in state the same way you would in Chat Completions (image_url, input_audio, video_url), ask a choice question, get probabilities back. The whole request above was 801 input tokens, $0.00012.\n\nRead more at: https://t.co/slAvkVWjdN",
       "url": "https://x.com/OpenRouter/status/2110475843529273460"
     },
     {
@@ -43,7 +41,6 @@
         "reply": 6,
         "retweet": 3
       },
-      "text": "We fed Clef Omni a photo, 3 seconds of sizzle, a 2-second clip of a hot dog stand, and the word \"lunch?\"\n\nIt said: hot dog, 96.5%.\n\nAudio + video input for Decisions is live on OpenRouter. Four modalities, one call, probabilities instead of tokens. $0.15/M input, output free. https://t.co/vHqUjoUqNG https://t.co/AFpcjPLRQF",
       "url": "https://x.com/OpenRouter/status/2110475831227375973"
     },
     {
@@ -58,7 +55,6 @@
         "reply": 6,
         "retweet": 3
       },
-      "text": "ElevenLabs had a strong launch week, taking nearly a third of spend on text-to-speech models yesterday after only 7 days live on platform.\n\nAll @ElevenLabs models are 50% off, only on OpenRouter, through 10/19 https://t.co/7aKezXPsaw",
       "url": "https://x.com/OpenRouter/status/2110404020192092611"
     },
     {
@@ -73,7 +69,6 @@
         "reply": 0,
         "retweet": 0
       },
-      "text": "3/ Pick from 10 voices out of the box, or bring your own HeyGen key to use voices cloned in your own HeyGen account.\n\nSee more: https://t.co/RczGsbNU5Z",
       "url": "https://x.com/OpenRouter/status/2110392222109811171"
     },
     {
@@ -88,7 +83,6 @@
         "reply": 1,
         "retweet": 0
       },
-      "text": "2/ Pricing, 50% off through October 31:\nHeyGen Voice: $15 per million characters (list $30)\nHeyGen Voice Turbo: $7.50 per million characters (list $15)",
       "url": "https://x.com/OpenRouter/status/2110392210386821580"
     },
     {
@@ -103,7 +97,6 @@
         "reply": 10,
         "retweet": 10
       },
-      "text": "1/ HeyGen Voice is now on OpenRouter, 50% off through October 31.\n\n@HeyGen's new text-to-speech model topped the Artificial Analysis TTS leaderboard. It comes in two modes: HeyGen Voice, and the lower-latency HeyGen Voice Turbo. https://t.co/tL9z2vMmo8",
       "url": "https://x.com/OpenRouter/status/2110392197946482934"
     },
     {
@@ -118,7 +111,6 @@
         "reply": 0,
         "retweet": 0
       },
-      "text": "Read more insights from 600+ trillion monthly tokens in Inferred, our data newsletter. Subscribe for free today:\n\nhttps://t.co/1YoGzgl1KR",
       "url": "https://x.com/OpenRouter/status/2110083333409640842"
     },
     {
@@ -133,7 +125,6 @@
         "reply": 17,
         "retweet": 8
       },
-      "text": "OpenRouter users are loving Anthropic's Opus 5.5\n\nIt is the #1 model in share of spending across the platform and has led a rebound for Anthropic in the competition with OpenAI\n\nSonnet 5.5 and Haiku 5.5 have also seen strong launch periods https://t.co/UVV4Lss2c5",
       "url": "https://x.com/OpenRouter/status/2110083318478000430"
     },
     {
@@ -148,7 +139,6 @@
         "reply": 1,
         "retweet": 1
       },
-      "text": "Try it now: https://t.co/cLnK9l7fy6",
       "url": "https://x.com/OpenRouter/status/2110068061055435051"
     },
     {
@@ -163,7 +153,6 @@
         "reply": 5,
         "retweet": 7
       },
-      "text": "LFM2.5-24B-A2B from @liquidai is now on OpenRouter.\n\nA 24B MoE with 2B active parameters that reasons before it answers, built for agents and tool use. https://t.co/J3sLIreCci",
       "url": "https://x.com/OpenRouter/status/2110068048749355303"
     },
     {
@@ -178,7 +167,6 @@
         "reply": 5,
         "retweet": 10
       },
-      "text": "Mercury Decide from @_inception_ai now accepts image input on OpenRouter\n\nPut images alongside text in the state of a Decisions request, and Mercury Decide answers your typed questions from what's in the image: a choice, a score, or a yes/no with a probability attached\n\nPricing is unchanged: free endpoint, or $0.02/M input with zero data retention. Images bill as input tokens\n\nhttps://t.co/5sumvRshSm",
       "url": "https://x.com/OpenRouter/status/2110059359279694284"
     },
     {
@@ -193,7 +181,6 @@
         "reply": 0,
         "retweet": 1
       },
-      "text": "It can also write up to 1M tokens in a single response with long decode, using continuation tokens to run past the per-request output limit.\n\nLearn more in our migration guide: https://t.co/8UnhgjMaWp",
       "url": "https://x.com/OpenRouter/status/2110048861763109303"
     },
     {
@@ -208,7 +195,6 @@
         "reply": 1,
         "retweet": 1
       },
-      "text": "Google's new frontier model is built for long, multi-step work. It ranks #1 on the Vals Index across finance, legal, coding and tax, and sets a new high on DeepSWE v1.1 for real-world software engineering.\n\nRead Google's announcement: https://t.co/9ALwauyZjy",
       "url": "https://x.com/OpenRouter/status/2110044466468082024"
     },
     {
@@ -223,7 +209,6 @@
         "reply": 17,
         "retweet": 20
       },
-      "text": "Gemini 4 Argon from @GoogleDeepMind is live on OpenRouter, via Google AI Studio and @googlecloud.\n\nIt tops AutomationBench (51.3%) and LVBench (91.7%) and ties for first on CWE-bench v1 (68%).\n\n$2/M input, $10/M output (introductory pricing).\n\nTry it now: https://t.co/AQNjS8Mbjy https://t.co/iIClZh3Klw",
       "url": "https://x.com/OpenRouter/status/2110044453977403412"
     },
     {
@@ -238,7 +223,6 @@
         "reply": 11,
         "retweet": 6
       },
-      "text": "A family of constrained-decoding models from @scaledown_team is live on OpenRouter, each one purpose-built for a single task:\n\n• Summarize: turns long text, images, and PDFs into short, consistent summaries for context compaction and transcript digests\n• Extract: describe the https://t.co/B4zqQtSI7U",
       "url": "https://x.com/OpenRouter/status/2109989782302716140"
     },
     {
@@ -253,7 +237,6 @@
         "reply": 1,
         "retweet": 0
       },
-      "text": "Muse Wonder is available now on OpenRouter.\n\nhttps://t.co/lTvz8cwmG6",
       "url": "https://x.com/OpenRouter/status/2109696468038865207"
     },
     {
@@ -268,7 +251,6 @@
         "reply": 2,
         "retweet": 2
       },
-      "text": "Muse Wonder is Meta's most capable model yet, designed for complex personal and professional agentic tasks. It delivers frontier coding performance, advanced computer use capabilities, and handles long-horizon work to tackle developers' most demanding tasks. https://t.co/zOJ2jWuvSt",
       "url": "https://x.com/OpenRouter/status/2109696455913148613"
     },
     {
@@ -283,7 +265,6 @@
         "reply": 13,
         "retweet": 17
       },
-      "text": "Muse Wonder from @AIatMeta is live on OpenRouter!",
       "url": "https://x.com/OpenRouter/status/2109696439786041579"
     },
     {
@@ -298,7 +279,6 @@
         "reply": 36,
         "retweet": 64
       },
-      "text": "Microsoft-Decision-1 is live on OpenRouter.\n\nMicrosoft's numbers: highest accuracy across 36 blind benchmarks (~150K questions), 4.5x faster than the runner-up, 35x faster than GPT-6 Sol, and decisions flip on just 1.3% of perturbed inputs. Post-trained from Qwen3.5-9B.\n\n$0.042/M input, output free, 32K context\n\nhttps://t.co/RAgdDMwe1Z",
       "url": "https://x.com/OpenRouter/status/2108689756372775370"
     },
     {
@@ -313,7 +293,6 @@
         "reply": 1,
         "retweet": 1
       },
-      "text": "https://t.co/bCvQFMB8y0",
       "url": "https://x.com/OpenRouter/status/2108650657418801264"
     },
     {
@@ -328,7 +307,6 @@
         "reply": 13,
         "retweet": 1
       },
-      "text": "Luna and Astra driving lots of new Codex usage 👀 https://t.co/5ElQBiM8Ut",
       "url": "https://x.com/OpenRouter/status/2108650655543926858"
     },
     {
@@ -343,7 +321,6 @@
         "reply": 0,
         "retweet": 2
       },
-      "text": "We dug into this further in this week's edition of Inferred, our data newsletter.\n\nRead and subscribe: https://t.co/UiEHZJN8Zq https://t.co/PWUc6Wx0Nm",
       "url": "https://x.com/OpenRouter/status/2108633348847620502"
     },
     {
@@ -358,7 +335,6 @@
         "reply": 37,
         "retweet": 7
       },
-      "text": "Cache rates across AI have seen massive improvements in 2026.\n\nThe median cache rate in agentic traffic was 44% across providers in January - and rose sharply to 85% in September.\n\nMore cache, less cost, everybody wins. https://t.co/6BfLrixZf2",
       "url": "https://x.com/OpenRouter/status/2108633330405310467"
     },
     {
@@ -373,7 +349,6 @@
         "reply": 10,
         "retweet": 15
       },
-      "text": "Mercury Decide from @_inception_ai is now available with zero data retention on OpenRouter\n\nThe fastest growing decision model on OpenRouter last week now has a paid ZDR endpoint, alongside the free one\n\n$0.02/M input (50% off the $0.04 list price). Output and cached input are free. 66K context\n\nhttps://t.co/5sumvRshSm",
       "url": "https://x.com/OpenRouter/status/2108291696572379521"
     },
     {
@@ -388,7 +363,6 @@
         "reply": 2,
         "retweet": 5
       },
-      "text": "Grok Imagine 🤝 OpenRouter\n\nhttps://t.co/1yYp6k84rj https://t.co/oBKva8n2Pt",
       "url": "https://x.com/OpenRouter/status/2108285966842781998"
     },
     {
@@ -403,7 +377,6 @@
         "reply": 6,
         "retweet": 2
       },
-      "text": "Sol Ultrafast is live on OpenRouter!\n\nhttps://t.co/RvEMmFdRGr https://t.co/IKDPVpvvUl",
       "url": "https://x.com/OpenRouter/status/2108278630027771935"
     },
     {
@@ -418,7 +391,6 @@
         "reply": 0,
         "retweet": 0
       },
-      "text": "Deals close 34% faster (71 → 47 days)\nClose rate up 2.6x\n\nAnd it gets cheaper over time as Ori automatically swaps in lower-cost models that hold quality.\n\nEven better - Ori Slack agents go live for everyone soon!\n\nRead more: https://t.co/Qxv9EfAr6I",
       "url": "https://x.com/OpenRouter/status/2108256264694505828"
     },
     {
@@ -433,7 +405,6 @@
         "reply": 1,
         "retweet": 0
       },
-      "text": "The busywork around every demo nearly disappeared:\n\nPrep: 30 min → 5\nNotes: 15 min → 2\nCRM: 30 min → 7\n\nThat's about an hour back per call. Every rep can now take ~2 more calls a day and show up just as prepared. https://t.co/1EOERP4q7d",
       "url": "https://x.com/OpenRouter/status/2108256251616645252"
     },
     {
@@ -448,7 +419,6 @@
         "reply": 17,
         "retweet": 16
       },
-      "text": "Our 5-person sales team was drowning before we built Rasp, an AI sales agent using OpenRouter's Ori.\n\nEvery inbound lead gets researched, many hear back in under 60 seconds, and we save ~600 hours/month.\n\nCost: ~$30/day and getting cheaper by the week.\n\nhttps://t.co/Qxv9EfAr6I",
       "url": "https://x.com/OpenRouter/status/2108256234436698244"
     },
     {
@@ -463,7 +433,6 @@
         "reply": 39,
         "retweet": 26
       },
-      "text": "GPT-6 Luna is the fastest Decisions model today, at 180ms on global requests 🏁\n\nFollowed by Jev and Perplexity Decider: https://t.co/WD9xIYT9PF",
       "url": "https://x.com/OpenRouter/status/2108206463755944219"
     },
     {
@@ -478,7 +447,6 @@
         "reply": 1,
         "retweet": 1
       },
-      "text": "$1.00/M input and $2.70/M output, with cache hits 50% off at launch: just $0.05/M.\n\nRead more in @StepFun_ai's launch post: https://t.co/JJwB5nroE0",
       "url": "https://x.com/OpenRouter/status/2108188987357901047"
     },
     {
@@ -493,7 +461,6 @@
         "reply": 2,
         "retweet": 0
       },
-      "text": "Across StepFun's 8-benchmark eval, Step 5 Preview beats Kimi K3 and GLM-5.3 on 6, including DeepSWE (67.7), ProgramBench (80.5), StepCodeBench (49.0), and FrontierFinance (66.4). https://t.co/nDDVL5if6M",
       "url": "https://x.com/OpenRouter/status/2108188974363865464"
     },
     {
@@ -508,7 +475,6 @@
         "reply": 12,
         "retweet": 15
       },
-      "text": "Step 5 Preview from @StepFun_ai is live on OpenRouter.\n\nTheir new flagship for agentic work: a sparse MoE (27B active, 600B total), 1M context, and text, image, and video input. Strong at coding and professional knowledge work, especially finance.\n\nTry it: https://t.co/kQR1mciHSv https://t.co/MgY8JbuyqW",
       "url": "https://x.com/OpenRouter/status/2108188953757331803"
     },
     {
@@ -523,7 +489,6 @@
         "reply": 27,
         "retweet": 26
       },
-      "text": "Perplexity Decider v1.1 is now on OpenRouter\n\n@perplexity_ai's open-weights multimodal decision model takes text, JSON, or images and returns typed answers with probabilities\n\n$0.02/M input. Output is free\n\nhttps://t.co/PTD9b4aJZv https://t.co/sFh3sa9koU",
       "url": "https://x.com/OpenRouter/status/2107938516080722327"
     },
     {
@@ -538,7 +503,6 @@
         "reply": 7,
         "retweet": 8
       },
-      "text": "GPT-6 Luna Decisions is now on OpenRouter\n\n@OpenAI's Decisions API lets your app pick the right model, tool, or action. Send text, JSON, or images and get back typed answers with probabilities\n\n$0.10/M input, output is free, 1M context\n\nhttps://t.co/MCwtEBqpIZ https://t.co/uzzhmkogD8",
       "url": "https://x.com/OpenRouter/status/2107929204142874759"
     },
     {
@@ -553,7 +517,6 @@
         "reply": 25,
         "retweet": 18
       },
-      "text": "Anthropic's Claude Haiku 5.5 is live on OpenRouter!\n\nThe first Haiku model to support reasoning efforts is also ~75% cheaper than its predecessor, faster (we measure 100+ TPS) and shows a clear capability boost in benchmarks.\n\nUse it now: https://t.co/49PfbpQ4iR https://t.co/u26escRD1r",
       "url": "https://x.com/OpenRouter/status/2107906035109490991"
     },
     {
@@ -568,7 +531,6 @@
         "reply": 6,
         "retweet": 2
       },
-      "text": "Cloudflare Clef decision models are available on OpenRouter\n\n@Cloudflare's Clef (27B) and Clef Flash (9B) are open-source decision models. Send text, JSON, or images and get back typed answers with probabilities instead of generated text\n\n$0.24/M input for Clef, $0.09/M for Clef Flash. Output is free\n\nhttps://t.co/ibrCEkuHH8",
       "url": "https://x.com/OpenRouter/status/2107897999364177925"
     },
     {
@@ -583,7 +545,6 @@
         "reply": 0,
         "retweet": 1
       },
-      "text": "Built for voice agents, customer service, narration, captions, and meeting notes.\nTry it: https://t.co/1duyBPExjP",
       "url": "https://x.com/OpenRouter/status/2107851657396851044"
     },
     {
@@ -598,7 +559,6 @@
         "reply": 1,
         "retweet": 2
       },
-      "text": "Eleven v4 is their most expressive voice model, with audio tags like [whispering]. v4 Turbo keeps that quality for real-time agents, Flash v2.5 is built for ultra-low latency, and Scribe v2 Medical is tuned for clinical conversations.",
       "url": "https://x.com/OpenRouter/status/2107851645346537540"
     },
     {
@@ -613,7 +573,6 @@
         "reply": 28,
         "retweet": 34
       },
-      "text": "ElevenLabs is officially on OpenRouter.\n\nYou can now call 9 Text to Speech models, with up to 90+ languages, and 2 Speech to Text models with speaker labels and word-level timestamps.\n\nAll @ElevenLabs models are 50% off, only on OpenRouter, through October 19, 8am PT. https://t.co/K8ZCmCtPyd",
       "url": "https://x.com/OpenRouter/status/2107851633191436685"
     }
   ],

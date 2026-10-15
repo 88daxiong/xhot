@@ -2,117 +2,98 @@
 
 在线访问：<https://88daxiong.github.io/xhot/>
 
-XHOT 是一个纯静态的 X（Twitter）热点看板，关注 AI、搞钱（创业 / 创作者经济）、个人成长三个领域约 130 个账号，每天北京时间 08:00 自动刷新一次，并生成当天的日报。
+XHOT 是一个纯静态的 X（Twitter）热点简报，关注 AI、搞钱（创业 / 创作者经济）、个人成长三个领域约 130 个账号，**每天北京时间 08:00 刷新一次**。设计目标：**每天 10 分钟看完重点**，或**几分钟追上某个人 / 某个领域的进度**。
 
 | 页面 | 内容 |
 |---|---|
-| `index.html` 📅 日报 | 每日摘要（北京时间 08:00 更新）：重点新帖（按点赞数从高到低；可点 @账号 进个人页；每条右上角固定网格排列：♥ 数 +  **展开 / 收起、复制、原帖 ↗**，原帖全文默认隐藏，展开后显示，过长时框内滚动；英文帖附中文译文，展开区可在 **中 / EN** 间切换，带「译」徽标）、话题涨跌、粉丝变化、更新日志（无改动时隐藏）、资讯头条；顶部日期控件（上一天 / 日历 / 下一天）切换往期（`daily/YYYY-MM-DD.html`） |
-| `hot.html` 🔥 热帖 | 顶部 10 秒速览；工具条：领域筛选 + 搜索 + **日期控件** + 排序。默认按 **时间**（最新在前，按北京时间日期加吸顶分隔：今天 / 昨天 / 日期，醒目的 HH:MM + 相对时间），也可切 **近一周热度 / 全局热度**；选一个日期只看当天的帖子（最近 8 天）；每人最多 3 条 |
-| `accounts.html` 👤 账号榜 | 每个账号一张卡片（头像、名字、粉丝数、较上次变化），按领域 / 分组筛选，按粉丝数或变化排序 |
-| `news.html` 📰 资讯 | 工具条：来源筛选（精选 / 全部 / AIHOT 热点 / 日报 / 精选 / X 新闻）+ **日期控件**。两栏（左列表约 60% / 右窗格约 40%）：左侧列表（序号 + 来源 + 时间 + 标题 + 两行摘要），默认「精选」约 13 条（AIHOT 热点 / 精选优先，中文在前），「展开更多」按日期看全部；右侧阅读窗格（点标题在右边读全文；选中行有强调色边条 + 箭头，窗格顶部重复序号/来源/时间/标题并有指向选中行的缺口；吸顶、高度不超出视口和列表、内部滚动）；手机上标题行内展开。资讯与趋势页互不重复 |
-| `trends.html` 📈 趋势 | X 话题讨论量涨跌（排名、近 6 日迷你折线、昨日条数、涨跌条）和 GitHub 今日 AI / 开发工具趋势 |
-| `p/<handle>.html` 个人页 | 单个账号的全部已存推文，默认按时间（最新在前），卡片排成连续的等列网格（每张卡片左上角是日期标签、右上角是醒目的时间，没有按天换行造成的空白），可切热度排序，支持搜索、日期控件 + 发帖统计 |
+| `index.html` 今日 | 「今天一眼看完」三句话 → 必读（5–8 条，中文要点 + 可展开的原帖摘录，英文帖默认中文译文，可切 EN）→ 更多值得看（与必读合计今日 Top 30，每条一句话中文要点，可按领域筛选、点开看摘录与原帖链接）→ 话题涨跌 · 粉丝变化 · 资讯头条 · 更新日志。顶部「约 N 分钟读完」，已读 / 新增标记只存在你的浏览器里 |
+| `d/ai.html` `d/money.html` `d/growth.html` 领域 | 一个领域一屏：本周重要度前列帖子（15 个受控标签可筛）、必关注 10 人、领域话题、相关资讯 |
+| `d/all.html` 全部归档 | 原「热帖」：按重要度 / 时间排序，按天分片加载，可搜索摘录；每人默认最多 3 条 |
+| `people.html` + `p/<handle>.html` 人物 | 目录：本周 Top 30 人物的「本周要点」+ 全部人物（按领域筛选、按热度 / 粉丝 / 变化排序、搜索）；个人页：一屏读懂（简介、本周概览、话题标签、发帖节奏、粉丝）+ 高光帖 + 时间线 |
+| `news.html` 资讯 | 两栏阅读器（左列表约 60% / 右窗格约 40%），AIHOT 中文在前，X 新闻在后 |
+| `trends.html` 趋势 | X 话题讨论量涨跌 + GitHub 今日 AI / 开发工具趋势（与资讯完全分开） |
+| `day/<日期>.html` 往期 | 每天一个永久链接（旧 `daily/<日期>.html`、`hot.html`、`accounts.html` 自动跳转到新地址） |
 
-所有页面支持浅色 / 深色 / 跟随系统，界面为中文。各页统一的工具条：左侧标题，中间筛选，右侧日期 + 排序（账号榜 / 趋势没有日期）；日期控件是「‹ 日期 ▾ ›」，点中间弹出日历（只有有数据的日期可点）。顶栏的「数据」标签可展开**数据健康**面板，显示每个数据源的最近抓取时间和规模（超过 26 小时标黄，超过 48 小时标红）。
+全站：顶栏 今日 · 领域 · 人物 · 资讯 · 趋势，⌘K（或「/」）全站搜索（人物、标签、话题、日期，帖子摘录按需读取分片），共用日期控件，浅色 / 深色 / 跟随系统，舒适 / 紧凑两档密度，界面只有中文，**没有任何统计 / 分析脚本**，没有第三方请求。
+
+## 内容与版权策略（v15）
+
+- **仓库与站点只公开帖子 ID、互动指标、≤220 字（必读 ≤320 字）的短摘录、agent 撰写的中文要点 / 译文摘录，以及指向 X 的原帖链接**；不再公开推文全文（v14 的 `data/tweets/*.json` 与日报 `text_orig` 已停止公开）。要读全文请点「在 X 打开」。
+- 英文帖的中文是**摘录的中文译文**（带「译」标记，仅供参考，以原文为准）。
+- 资讯：AIHOT 的摘要 / 综述来自其公开 API（MIT 许可）；文章原文版权属于原站，本站只给链接。
+- 推文内容版权归原作者；本项目只做摘录、索引与展示。
+
+## 重要度、标签、人物榜
+
+- **热度** = 赞 + 2×转推 + 3×引用 + 评论 + 收藏。
+- **重要度（0–100，规则可复现）** = `6·ln(1+热度) + 10·clamp(ln((热度+20)/(作者最近 30 条热度中位数+20)), −1, 2.5)`：既看绝对热度，也看相对作者自己的常态，大号小号可比。榜单每人最多 2 条、文本去重、纯链接帖不进榜。**每天由 agent 做最终复核**：必读挑选、置顶 / 隐藏、噪声过滤。
+- **15 个受控标签**（关键词规则打标，可能有误差）：AI：模型 · 智能体 · 编程 · 开源 · 产品发布 · 研究 · 芯片算力 · 政策；搞钱：创业 · 创作者经济 · 融资 · 独立开发；成长：习惯 · 写作 · 职业。
+- **本周 Top 30 人物** = 近 7 天前 3 条帖子重要度之和最高的 30 人（排除灌水账号），每周一由 agent 写每人 1–2 条「本周要点」。
+- **日窗口**：某日的日报覆盖「该日 09:00（北京时间）往前 25 小时」。
 
 ## 架构与数据流
 
 ```
 X API（只读）──┐
-aihot.news API ─┼─> raw/*.json 快照 ──> SQLite（xhot.db）──> Python 静态生成器 ──> HTML/CSS/JS/JSON ──> GitHub Pages
-GitHub Trending ┘                                         └─> data/*.json 备份
+aihot.news API ─┼─> raw/*.json ──> SQLite（xhot.db，本机，不进仓库）──> Python 静态生成器 ──> site/ ──> 静态托管（GitHub Pages）
+GitHub Trending ┘                         │                                                    
+                                          └─> export_data_v15.py ──> data/（仅 ID 与指标）
 ```
 
-- **X API（只读）**：账号资料与粉丝数（users by usernames）、各账号时间线（user posts，不含回复和转推）、话题计数（posts counts recent）、新闻（news search）及其相关帖子（posts by ids）。
-- **aihot.news 公开 API**：AI 资讯精选、日报、多信源热点及其综述，无需 Key。感谢 [KKKKhazix/AIHOT](https://github.com/KKKKhazix/AIHOT)（MIT 许可）。原文全文的版权属于原站，本站只展示 AIHOT 的摘要 / 综述并附原文链接。
-- **GitHub Trending**：匿名读取公开的 github.com/trending 页面，筛选 AI / 开发工具相关仓库。
-- **存储**：SQLite（`followers` 粉丝时间序列、`tweets` 推文，每账号保留最新 200 条），原始响应按时间戳存在 `raw/`。
-- **生成**：`src/generate.py` 读取数据库和最新快照，输出 5 个栏目页（日报 / 热帖 / 账号榜 / 资讯 / 趋势）、每天一个日报页和每个账号一个个人页。日报内容读自 `daily/*.json`（每天由刷新流程撰写，见下）；`daily_draft.py` 先从数据库列出候选新帖（带 `is_english` 标记，英文帖入选时需要再写 `text_orig_zh`）、话题涨跌和粉丝变化。生成时如果最近几天有英文重点新帖缺译文，会打印 `WARN 缺译文`。CSS 内联；JS、热帖数据、头像用内容哈希命名（可长期缓存）；热帖完整数据和个人页推文 JSON 按需加载；头像本地化为 96px WebP，首屏内联、其余滚动时懒加载。
-- **发布**：生成结果推送到本仓库 `main` 分支，由 GitHub Pages 直接托管。
+生成器与托管无关：输出是一个纯静态目录，任何静态主机都能托管（GitHub Pages、Cloudflare Pages、Netlify、对象存储 + CDN）。
+
+### 前端性能设计（均有测试与预算）
+- 每页只有 **一个内联脚本（主题预绘，带 sha256 的 CSP）和一个内联 `<style>`（按页裁剪，约 7KB gzip）**；JS 拆成 `core`（所有页）与 `news` / `feed`（按页），文件名带内容哈希、`defer`。
+- 外链 CSS 在 Fast 3G 下会多一次往返（实测 FCP 约 +1s），所以 CSS 内联；若日后换到支持 HTTP/2 push / Early Hints 的主机，可改回外链。
+- 数据分片：`feed/<日期>.<hash>.json`（按天）、`p/<handle>.<hash>.json`（个人时间线）、`assets/search.<hash>.json`（⌘K 索引，首次呼出时才读）。首屏服务端渲染，无 JS 也能读正文。
+- 相对时间（x 小时前 / 今天 / 昨天）由前端补齐，**页面源码里不烘焙相对时间**，页面稳定、无数据变化就不改写文件；新 / 已读标记只存浏览器 localStorage。
+- `<link rel="expect" blocking="render">` 等页头与工具条解析完再首次绘制，布局偏移（CLS）≈ 0；头像为 64px / 96px webp（约 0.7 / 1.5KB），首屏之外懒加载。
+- 目标：首页首屏 ≤80KB gzip、LCP ≤1.0s（Fast 3G）、INP ≤100ms（CPU 4×）、CLS = 0；实测见仓库外的 `speed_v15.json`。
+
+### 限制（诚实说明）
+- GitHub Pages **不能设置响应头**：CSP 只能写在 `<meta>`，因此没有 `frame-ancestors`（页面可被 iframe 嵌套）、HSTS 不可控；`_headers` 文件只在 Cloudflare Pages / Netlify 等主机上生效。
+- GitHub Pages 有软限制（站点 ≤1GB、月流量约 100GB、构建 10 分钟）；`github.io` 在中国大陆访问不稳定。当前规模远低于限制，若流量增长需要换托管（架构已与托管无关）。
+- 每天约 150 个文件会变化（人物页的指标 / 摘录），仓库会持续增长；公开 `data/` 已去掉全文以控制体积和合规风险。
+- 没有自定义 404 页（GitHub Pages 默认 404）；旧链接的跳转页不会保留 `#` 之后的参数。
 
 ## 仓库结构
 
 ```
-index.html (日报)  hot.html  accounts.html  news.html  trends.html   # 5 个栏目页
-daily/<YYYY-MM-DD>.html                             # 每日日报（往期）
-p/<handle>.html                                     # 个人页
-p/<handle>.<hash>.json                              # 个人页推文数据（按需加载）
-assets/app.<hash>.js                                # 前端脚本
-assets/hot.<hash>.json                              # 热帖完整数据（切换排序 / 筛选 / 搜索时加载）
-assets/hotd.<hash>.json                             # 热帖按日期查看的数据（选日期时才加载）
-assets/news.<hash>.json                             # 资讯全文（点标题展开时加载）
-assets/av/<handle>.<hash>.webp                      # 本地化头像
-data/                                               # JSON 数据备份（见下）
-src/                                                # 生成器源码，可从零重建（见下）
+index.html  news.html  trends.html  people.html  _headers
+d/{ai,money,growth,all}.html        # 领域页与全部归档
+day/<YYYY-MM-DD>.html               # 每日简报（永久链接）
+p/<handle>.html + p/<handle>.<hash>.json
+feed/<YYYY-MM-DD>.<hash>.json       # 按天分片的摘录
+assets/core|news|feed.<hash>.js  assets/search.<hash>.json  assets/news.<hash>.json  assets/av/*.webp
+hot.html accounts.html daily/<日期>.html   # 旧链接跳转页
+data/                               # 仅 ID 与指标的数据备份
+src/                                # 生成器源码，可从零重建
 ```
 
-### data/ 数据格式
-
+### data/ 数据格式（不含任何推文全文）
 - `data/accounts.json`：`{"accounts": [{handle, user_id, name, domains[], groups[], zh, followers, followers_ts, tweets_stored}]}`
-- `data/followers_history.json`：`{"history": {"<handle>": [{ts, followers, following, tweets}]}}`，`ts` 为北京时间 `YYYYMMDD_HHMMSS`
-- `data/daily/YYYY-MM-DD.json`：`{"date", "highlights": [{handle, name, text_zh, post_id, url, likes, text_orig, text_orig_zh}], "topics_zh", "followers_zh", "changelog": [{date, text}]}`；highlights 按 likes 从高到低排列；`handle` 必须是关注列表中的账号，`post_id` 为数字，`text_orig` 是原帖全文（生成时从数据库补全并写回，帖子滚出数据库后日报仍能显示），`text_orig_zh`（可选，仅英文帖）是 `text_orig` 的完整中文翻译，链接 / @ / # 保持不变，页面上默认显示中文并可切回原文；`url` 只放行 http(s)，不合规的字段生成时会被丢弃；没有改动时 `changelog` 为空数组，页面隐藏「更新日志」
-- `data/tweets/<handle>.json`：`{"handle", "tweets": [{id, created_at(UTC), text, lang, metrics{like, retweet, reply, quote, impression, bookmark}, url}]}`，最新在前，最多 200 条；长推文为全文
+- `data/followers_history.json`：每个账号的粉丝时间序列
+- `data/tweets/<handle>.json`：`{"handle", "user_id", "tweets": [{id, created_at(UTC), lang, metrics{like, retweet, reply, quote, impression, bookmark}, url}]}`，**没有 text 字段**
+- `data/daily/YYYY-MM-DD.json`：`{"date", "summary_zh":[3 句], "highlights":[{handle, name, post_id, url, likes, text_zh, excerpt, excerpt_zh?, tags[]}], "gists":{post_id: 一句话要点}, "pin":[], "hide":[], "topics_zh", "followers_zh", "changelog"}`
+- `data/weekly/YYYY-Www.json`：`{"week", "exclude":[], "people":{handle:{"bullets":[…]}}}`
 
-JSON 键排序固定、缩进 2，便于看 diff。推文内容版权归原作者。
-
-## 规则
-
-- **热度** = 赞 + 2×转推 + 3×引用 + 评论 + 收藏。
-- **近一周热度**：过去 7 天发布的帖子按热度排序；**全局热度**：全部已存帖子按热度排序；**时间**：最新在前（热帖页和个人页的默认排序）。热帖页每人最多 3 条。
-- **语言过滤**：只保留中文和英文内容（按 X 返回的 `lang` 和文字字符集判断，日文假名、韩文、西里尔文等占比高的内容会被过滤）；个人页可切换「显示全部语言」。
-- **话题涨跌**：昨日帖子数 vs 之前几天的日均值。
-- **粉丝变化**：本次抓取 vs 上一次抓取。
+JSON 键排序固定、缩进 2。导出脚本在末尾做「全文泄漏检查」（出现 `text` / `text_orig*` 键或超过 400 字的字符串就失败）。
 
 ## 刷新计划与配额
+每天 1 次（北京时间 08:00，X 配额在此时重置）；每次约 155 次 X API 读取：账号资料 2 + 时间线约 131 + 话题计数 16 + 新闻 3 + 新闻相关帖子 3。限额：每分钟 30 次、每天 1000 次；脚本每批 ≤25 次、批间隔 60 秒。aihot.news 与 GitHub Trending 不占 X 配额。每天由 agent 写日报（三句话、必读与译文摘录、Top 30 一句话要点、置顶 / 隐藏复核），每周一写 Top 30 人物的本周要点。
 
-- 每天刷新 **1 次**（北京时间 08:00；X 配额也在 08:00 重置，所以用的是新一天的配额）。
-- 每次约 155 次 X API 读取：账号资料 2 + 时间线约 131（每账号 1 次，增量 `since_id`）+ 话题计数 16 + 新闻 3 + 新闻相关帖子 3。
-- 参考限额：每分钟 30 次、每天 1000 次；脚本按每批 ≤25 次、批间隔 60 秒执行。aihot.news 与 GitHub Trending 不占 X 配额。
+## 从零重建
+需要 Python 3.10+：`pip install -r src/requirements.txt`（Pillow 为运行依赖，playwright 仅测试用）。
 
-## 从零重建（如果站点坏了）
+1. 准备 X API 只读权限（users by usernames、user posts、posts counts recent、news search、posts by ids），把每次响应存成文件。
+2. 编辑 `src/watchlist.json`（每个领域的 `accounts` / `accounts_zh` / `groups` / `trend_queries` / `news_query`）。
+3. 抓取并入库（`ingest.py`、`ingest_tl.py`、`aihot_fetch.py`、`gh_trending.py`、`avatars_fetch.py`，细节见刷新流程文档）。
+4. 写日报与周要点：`python3 daily_draft.py > /tmp/daily_draft.json`，按字段说明写 `daily/<日期>.json`；每周一 `XHOT_WEEKLY=1 python3 generate.py` 得到周草稿后写 `weekly/<周>.json`。
+5. 生成与自检：`python3 generate.py`（输出 `site/`）→ `python3 test_escape.py`（转义 / 安全回归，必须 ALL PASS）→ `python3 fuzz.py 8`（随机恶意字符串灌进日报 / 周要点所有字段）→ `python3 gzserve.py site 8840 &` → `python3 shots.py --all`（截图 + CSP / JS 错误 / 溢出 / 字号 / 同源请求 / 功能断言）→ `python3 speed.py`（Fast 3G + CPU 4×）。
+6. 发布：把 `site/` 复制到仓库根目录，`python3 export_data.py` 导出 `data/`，提交并推送到 `main`。推送凭据放环境变量，不要写进 git config、remote 或任何文件。
 
-需要 Python 3.10+：`pip install -r src/requirements.txt`（Pillow 为运行依赖，playwright 仅截图/测速用）。发布前先跑安全回归测试 `python3 src/test_escape.py`（检查链接转义、只放行 http(s) 外链、嵌入 JSON 安全、日报各字段（含 `text_orig_zh`）带恶意字符串时生成页不出现事件属性 / 额外脚本 / 危险链接；有 node 时同时测 app.js），必须 ALL PASS。
-
-安全设计：每页带 Content-Security-Policy meta（脚本只允许本站文件 + 主题内联脚本的 sha256，哈希在生成时计算）和 `referrer` meta；外链统一 `rel="noopener noreferrer"`；推文/资讯/日报文本（含译文）全部转义后再渲染；译文切换和日期控件只切换 `hidden` / 在页面内渲染固定格式的日历，不执行任何数据里的内容。
-
-1. **准备 X API 只读权限**：任意能调用以下 X API v2 只读端点的方式均可 —— users by usernames、user posts timeline、posts counts recent、news search、posts by ids。把每次调用的 JSON 响应存成文件（文件里允许 JSON 前后有说明文字，入库脚本会截取 `{ ... }`）。
-2. **配置关注列表**：编辑 `src/watchlist.json`。每个领域（`ai` / `money` / `growth`）包含：
-   - `accounts`、`accounts_zh`：账号 handle 列表；`groups`：可选的分组 `{"分组名": [handle, ...]}`
-   - `trend_queries`：`{"话题名": "X 搜索语句"}`，用于话题计数
-   - `news_query`：新闻搜索关键词
-3. **抓取并入库**（在 `src/` 目录下）：
-   ```bash
-   # 账号资料（user.fields=public_metrics,description,verified,profile_image_url）
-   python3 ingest.py users_ai_all <结果文件> users_other <结果文件>
-   # 时间线：先列出待抓账号，再逐个调用 user posts（max_results=25, exclude=replies,retweets,
-   #   post.fields=created_at,public_metrics,note_tweet,lang，有 since_id 时带上）
-   python3 tl_plan.py
-   python3 ingest_tl.py <所有时间线结果文件...>
-   # 话题计数（granularity=day），每个 trend_queries 一次
-   python3 ingest.py counts_ai__<话题名> <结果文件> ...
-   # 新闻（news.fields 包含 cluster_posts_results,hook,summary 等）与相关帖子
-   python3 ingest.py news_ai <文件> news_money <文件> news_growth <文件>
-   python3 news_posts_plan.py        # 输出每个领域要查的帖子 id
-   python3 ingest.py news_posts_ai <文件> news_posts_money <文件> news_posts_growth <文件>
-   # 不占 X 配额的公开数据与头像
-   python3 aihot_fetch.py
-   python3 gh_trending.py
-   python3 avatars_fetch.py
-   ```
-   **写日报**（生成之前）：`python3 daily_draft.py > /tmp/daily_draft.json` 得到候选新帖（含原帖全文 `text_orig` 和 `is_english`）、话题涨跌和粉丝变化，然后写 `daily/<YYYY-MM-DD>.json`（格式见上方 `data/daily`，中文摘要，`post_id` / `url` 必须来自数据库，不要编造；旧日期文件保留）。从零重建时可先 `cp -r data/daily src/daily` 取回历史日报。
-4. **生成与自检**：
-   ```bash
-   python3 generate.py                     # 输出到 src/site/（index.html 日报、hot.html、daily/…）
-   python3 gzserve.py site 8802 &          # 本地预览（带 gzip，模拟 Pages）
-   python3 shots.py http://127.0.0.1:8802/ # 截图（shots/）+ CSP 违规 / 溢出 / JS 错误自检，加 --all 扫全部页面（可用 CHROME_PATH 指定浏览器）
-   python3 speed.py http://127.0.0.1:8802/ # 冷启动测速（无节流 + Fast 3G）
-   ```
-5. **发布**：把 `src/site/` 下的 `*.html`、`daily/`、`p/`、`assets/` 复制到仓库根目录，`python3 export_data.py` 导出 `data/`（含 `data/daily/` 备份），提交并推送到 `main`。推送凭据请放在环境变量里（例如 `GITHUB_TOKEN`，只需本仓库的 contents 写权限），不要写进 git config、remote 或任何文件。仓库设置里开启 GitHub Pages（Deploy from branch → `main` / root）。
-
-`src/.gitignore` 已排除 `xhot.db`、`raw/`、头像缓存和生成目录，不要把这些或任何密钥提交到仓库。
+**安全设计**：每页 meta CSP（`script-src` 仅本站 + 主题预绘脚本的 sha256；`connect-src 'self'`；无第三方）与 referrer meta；所有外链经 `safe_url` / `safeUrl`（只放行 http(s)）并带 `rel="noopener noreferrer"`；所有文本先转义再渲染（含译文、摘录、⌘K 结果、分片数据）；嵌入 HTML 的 JSON 转义 `<>&`、U+2028/2029 与 `@@`；头像只接受 `pbs.twimg.com` 并重新编码；前端无 `eval` / `document.write` / `outerHTML`；本地存储只有主题、密度、已读 ID 与上次访问时间。`src/.gitignore` 已排除 `xhot.db`、`raw/`、头像缓存和生成目录，**不要把这些或任何密钥提交到仓库**。
 
 ## English
 
-**XHOT** is a static dashboard of hot posts on X (Twitter) across three themes: AI, making money (startups / creator economy) and personal growth. It has five tabs: Daily (a short daily digest: highlights whose full original text is hidden until you expand it, with a Chinese translation toggle for English posts; topic and follower changes; a changelog; a date picker), Hot posts (card grid, newest first by default with day separators, week / all-time heat sorting, search, a day picker and a 10-second overview), Accounts (follower cards with change), News (source filters and a day picker in the toolbar, a narrow list on the left and a wide sticky reading pane on the right) and Trends (topic volume changes with sparklines, GitHub trending AI repos). Each tracked account also has a person page.
-
-Data comes from read-only X API endpoints, the public [aihot.news](https://aihot.news) API (credit: [KKKKhazix/AIHOT](https://github.com/KKKKhazix/AIHOT), MIT) and the public GitHub Trending page. It is stored in SQLite, rendered by a small Python static generator (`src/`) and served by GitHub Pages. Refresh runs once a day at 08:00 Asia/Shanghai (about 155 X API reads). Heat = likes + 2×reposts + 3×quotes + replies + bookmarks. Only Chinese and English content is shown. JSON backups live in `data/`. See the Chinese section "从零重建" above for rebuild steps.
+**XHOT** is a static briefing of hot posts on X across AI, making money and personal growth, refreshed daily at 08:00 (Asia/Shanghai). Pages: Today (three-sentence summary, must-reads, a ranked Top 30 with one-line takeaways), Domains, People (weekly takeaways for the top 30), News, Trends, a full archive and a ⌘K search. The UI is Chinese only. The public repo and site contain **only post IDs, metrics, short excerpts (≤220–320 characters) and agent-written Chinese summaries plus links back to X — no full tweet text**. No analytics, no third-party requests; read/new badges live only in your browser. The generator is host-agnostic (plain static output). Limits on GitHub Pages: no response headers (CSP via `<meta>` only, no `frame-ancestors`), soft bandwidth/size limits, unreliable access from mainland China. Tweet content belongs to the original authors.

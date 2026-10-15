@@ -13,7 +13,6 @@
         "reply": 31,
         "retweet": 15
       },
-      "text": "Ultrafast versions of GPT-6 Astra and SOL 6.1 are now available in Perplexity Computer for Max subscribers.\n\nBoth generate tokens faster, completing long Computer tasks sooner.\n\nChoose Astra or SOL 6.1 under Custom, then set speed to Ultrafast. https://t.co/g428a2Q0SC",
       "url": "https://x.com/perplexity_ai/status/2110415710073819389"
     },
     {
@@ -28,7 +27,6 @@
         "reply": 1,
         "retweet": 0
       },
-      "text": "Terminals and file watches can outlive their opening requests. Once a receiver installs the new execution identity, SPACE stops the old streams. Eligible operations can reconnect once, passing the identity checks again.\n\nRead the article: https://t.co/jH6TX2cgI9 https://t.co/BQWAdFZK3i",
       "url": "https://x.com/perplexity_ai/status/2110400925563277631"
     },
     {
@@ -43,7 +41,6 @@
         "reply": 1,
         "retweet": 0
       },
-      "text": "Each request carries short-lived, signed proof of which execution may handle it and what access is allowed.\n\nThe receiving worker checks that identity against its own runtime record and rejects mismatches before forwarding. https://t.co/H6fWrAmb5p",
       "url": "https://x.com/perplexity_ai/status/2110400909696282861"
     },
     {
@@ -58,7 +55,6 @@
         "reply": 1,
         "retweet": 0
       },
-      "text": "When a sandbox resumes on another machine, it keeps its sandbox ID but starts a new execution.\n\nA stale route can send a valid request to the older execution and return old data. Checking the sandbox ID alone won’t catch the difference.",
       "url": "https://x.com/perplexity_ai/status/2110400893317517410"
     },
     {
@@ -73,7 +69,6 @@
         "reply": 27,
         "retweet": 14
       },
-      "text": "Our sandbox, SPACE, handles millions of executions a day with an error rate below 0.0002%.\n\nWe’re sharing how it uses cryptographic identity to keep requests tied to the right execution as sandboxes pause, resume, and move.\n\nRead more: https://t.co/jH6TX2cgI9",
       "url": "https://x.com/perplexity_ai/status/2110400881028149315"
     },
     {
@@ -88,7 +83,6 @@
         "reply": 1,
         "retweet": 0
       },
-      "text": "Because each sandbox holds a real checkout, agents search it with grep and standard file tools instead of relying on broad semantic searches.\n\nOn an internal benchmark of 150 financial-document questions, this reached 0.627 answer accuracy versus about 0.37 for semantic search. https://t.co/w1nmA0N8yz",
       "url": "https://x.com/perplexity_ai/status/2109707048716063132"
     },
     {
@@ -103,7 +97,6 @@
         "reply": 1,
         "retweet": 1
       },
-      "text": "A single long-lived sandbox per project would need provisioning for peak load and months of uptime.\n\nInstead, repositories live on S3-backed storage and each agent runs in its own ephemeral sandbox, so a crash loses only unsubmitted work. https://t.co/dglC3ZI6AX",
       "url": "https://x.com/perplexity_ai/status/2109707032869982357"
     },
     {
@@ -118,7 +111,6 @@
         "reply": 2,
         "retweet": 0
       },
-      "text": "The CLI holds a short-lived lock to serialize submits, and the Git service accepts a submit only if it builds on the head, the latest accepted commit.\n\nOtherwise, the agent replays its change on the new head and resubmits. https://t.co/urIrVVwPL7",
       "url": "https://x.com/perplexity_ai/status/2109707014771531952"
     },
     {
@@ -133,7 +125,6 @@
         "reply": 1,
         "retweet": 1
       },
-      "text": "Git provides atomic multi-file commits, authorship, and queryable history.\n\nA forge hosts the repository, controls who can update it, and adds PR review. Projects keep the first two and replace review with a check of each submit against a repository contract.",
       "url": "https://x.com/perplexity_ai/status/2109706997583265830"
     },
     {
@@ -148,7 +139,6 @@
         "reply": 3,
         "retweet": 1
       },
-      "text": "Agents collaborating on a long-running project face the same problem as engineers sharing a codebase.\n\nWork must outlive ephemeral sandboxes, concurrent writes must not overwrite each other, and history must show who changed what.",
       "url": "https://x.com/perplexity_ai/status/2109706985801429343"
     },
     {
@@ -163,7 +153,6 @@
         "reply": 48,
         "retweet": 42
       },
-      "text": "This is how we built the filesystem behind Perplexity Projects as a Git forge for agents.\n\nEach agent works in its own sandbox and commits to a shared repository where people and other agents can build on its work across sessions.\n\nRead more: https://t.co/jcrTptb2IW https://t.co/dXnhroO4mg",
       "url": "https://x.com/perplexity_ai/status/2109706972723609733"
     },
     {
@@ -178,7 +167,6 @@
         "reply": 0,
         "retweet": 0
       },
-      "text": "Both models are on Hugging Face: https://t.co/JHy1DhFaCT",
       "url": "https://x.com/perplexity_ai/status/2107866188030345423"
     },
     {
@@ -193,7 +181,6 @@
         "reply": 1,
         "retweet": 0
       },
-      "text": "On MADQA, 500 questions over 800 PDFs, it reaches 92.4%, the top result among retrievers. https://t.co/uxW8LDau2c",
       "url": "https://x.com/perplexity_ai/status/2107866173803249747"
     },
     {
@@ -208,7 +195,6 @@
         "reply": 1,
         "retweet": 1
       },
-      "text": "In agentic search, a GPT-OSS-120B agent using the 9B model answers 64.0% of BrowseComp+ questions correctly, 4.9 points ahead of the next ColBERT model, with fewer searches than any baseline. https://t.co/hFngH5ES7D",
       "url": "https://x.com/perplexity_ai/status/2107866149740478976"
     },
     {
@@ -223,7 +209,6 @@
         "reply": 4,
         "retweet": 0
       },
-      "text": "On Q2D-Web, about 70,000 production-derived search queries over 190M web documents, the 9B and 0.6B models reach 74.8% and 73.6% Recall@1000, against 69.3% for nemotron-embed-8b. https://t.co/FwltQP6jGN",
       "url": "https://x.com/perplexity_ai/status/2107866125627486358"
     },
     {
@@ -238,7 +223,6 @@
         "reply": 2,
         "retweet": 1
       },
-      "text": "Both sizes are distilled token by token from one 18B teacher, so they share one embedding space.\n\nA corpus indexed with the 9B model can be searched with 0.6B queries. That lifts ViDoRe v3 from 62.3% to 63.5% with no added query cost. https://t.co/SglIFldtGQ",
       "url": "https://x.com/perplexity_ai/status/2107866100704952530"
     },
     {
@@ -253,7 +237,6 @@
         "reply": 2,
         "retweet": 1
       },
-      "text": "The models also embed images and rendered pages directly, so PDFs, slides, and scans are searched without OCR, keeping tables, figures, and layout that text extraction drops. https://t.co/iZmlOKG1ye",
       "url": "https://x.com/perplexity_ai/status/2107866076587688386"
     },
     {
@@ -268,7 +251,6 @@
         "reply": 3,
         "retweet": 5
       },
-      "text": "Dense embedding models compress each document into one vector, which loses detail as pages get longer or more visual.\n\npplx-embed-v2-late keeps a 128-dimensional vector per token and scores with MaxSim, so each query token is matched to its closest token in the document. https://t.co/vlax3OLOXF",
       "url": "https://x.com/perplexity_ai/status/2107866052084560180"
     },
     {
@@ -283,7 +265,6 @@
         "reply": 73,
         "retweet": 124
       },
-      "text": "We're releasing pplx-embed-v2-late, two late-interaction embedding models that retrieve text, images, and pages with a shared embedding space for cross-model querying.\n\nBoth models achieve frontier performance and are publicly available on Hugging Face.\n\nhttps://t.co/AM7YEyQkKE https://t.co/fR8kaYmHs1",
       "url": "https://x.com/perplexity_ai/status/2107866029745746177"
     },
     {
@@ -298,7 +279,6 @@
         "reply": 77,
         "retweet": 41
       },
-      "text": "Perplexity Computer now creates interactive charts and visualizations directly in your thread.\n\nFor financial data, Computer uses @tradingview Lightweight Charts for candlesticks, volume, and moving averages. https://t.co/AItBm2tN07",
       "url": "https://x.com/perplexity_ai/status/2105692220280226296"
     },
     {
@@ -313,7 +293,6 @@
         "reply": 1,
         "retweet": 2
       },
-      "text": "View pplx-embed-v2-context-9b-preview on Hugging Face:\nhttps://t.co/EeqI2xCFOl",
       "url": "https://x.com/perplexity_ai/status/2105374081537503675"
     },
     {
@@ -328,7 +307,6 @@
         "reply": 5,
         "retweet": 2
       },
-      "text": "On ConTEB, the preview has the highest average nDCG@10 of the models tested, though not on every task.\n\nIt also beats voyage-context-4 on chunk retrieval while using 8x less storage per vector: 1 KB (1024 dims, int8) vs 8 KB (2048, float32). https://t.co/PsyAwyU0Zo",
       "url": "https://x.com/perplexity_ai/status/2105374069382381948"
     },
     {
@@ -343,7 +321,6 @@
         "reply": 1,
         "retweet": 1
       },
-      "text": "pplx-embed-v2-context-9b-preview leads on Answer and Evidence retrieval at every cutoff.\n\nDocument retrieval is closer, with our context v1 4B slightly ahead at Document@3 and Document@5. https://t.co/9DrBG7sxPp",
       "url": "https://x.com/perplexity_ai/status/2105374050684125470"
     },
     {
@@ -358,7 +335,6 @@
         "reply": 1,
         "retweet": 2
       },
-      "text": "context-bench is a benchmark for context-aware retrieval, created and privately held by @turbopuffer. Its queries, documents and capabilities are inspired by conversations with turbopuffer customers.\n\nIt has 2,099 queries and 38,894 documents. We submitted for blind evaluation. https://t.co/IsHUVOl4gh",
       "url": "https://x.com/perplexity_ai/status/2105374034901028909"
     },
     {
@@ -373,7 +349,6 @@
         "reply": 2,
         "retweet": 2
       },
-      "text": "We overcome gold-chunk supervision limits by distilling relevance from our query-aware context compression model.\n\nIt scores every document token against the query. Aggregated into chunk-level targets, those scores train the embedder to retrieve answer and supporting chunks. https://t.co/PvP2TLX5Y9",
       "url": "https://x.com/perplexity_ai/status/2105374018463576466"
     },
     {
@@ -388,7 +363,6 @@
         "reply": 4,
         "retweet": 4
       },
-      "text": "Retrieval systems often split long documents into chunks, but this strips away the surrounding context.\n\nContextual embedding models fix this by encoding the whole document once and pooling chunk vectors afterward.\n\nThey are usually trained on one gold chunk per query.",
       "url": "https://x.com/perplexity_ai/status/2105374001862500669"
     },
     {
@@ -403,7 +377,6 @@
         "reply": 58,
         "retweet": 67
       },
-      "text": "We built a new way to train contextual embedding models, which encode each chunk of a document with the whole document in view.\n\npplx-embed-v2-context-9b-preview sets a new state of the art on ConTEB and @turbopuffer's new, privately held context-bench.\n\nhttps://t.co/tkBUEjWVio https://t.co/yz1eVPrJjR",
       "url": "https://x.com/perplexity_ai/status/2105373989262827915"
     },
     {
@@ -418,7 +391,6 @@
         "reply": 9,
         "retweet": 1
       },
-      "text": "Read more about Automations in Perplexity Computer:\nhttps://t.co/XuNx97oJjb",
       "url": "https://x.com/perplexity_ai/status/2104976048295489934"
     },
     {
@@ -433,7 +405,6 @@
         "reply": 54,
         "retweet": 74
       },
-      "text": "Introducing Automations in Perplexity Computer.\n\nAutomations are for ongoing work. They can take action in response to event-based triggers or on a schedule.\n\nAutomations work with your memory, skills, and connected apps like Slack, Gmail, Outlook, and Linear. https://t.co/0TIk0VaznI",
       "url": "https://x.com/perplexity_ai/status/2104976036274552963"
     },
     {
@@ -448,7 +419,6 @@
         "reply": 0,
         "retweet": 2
       },
-      "text": "Our Secure Intelligence Institute works with researchers at Stanford, CMU, Duke, Columbia, Ohio State, and UVA.\n\nWe’re also working with NVIDIA and the Open Secure AI Alliance, and sharing tools and findings so others can strengthen their own systems.\n\nhttps://t.co/Ss44JdZb5T",
       "url": "https://x.com/perplexity_ai/status/2104952579180609806"
     }
   ],

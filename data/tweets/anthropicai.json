@@ -13,7 +13,6 @@
         "reply": 388,
         "retweet": 170
       },
-      "text": "We’ve opened an office in Singapore—our fifth in the Asia-Pacific region. We’ve also signed an MOU with the Government of Singapore on AI safety and responsible adoption.\n\nYou can read more about our new office here: https://t.co/125mBgHLkM",
       "url": "https://x.com/AnthropicAI/status/2110289695888511368"
     },
     {
@@ -28,7 +27,6 @@
         "reply": 171,
         "retweet": 183
       },
-      "text": "New on our Engineering blog: Creating in-house source control. \n\nIn May, we merged around 2,500 code changes per day. In September, we merged more than 30,000 per day. As a result, we became bottlenecked by developer infrastructure built for human (rather than agent) scale.  \n\nHere, we share how we built a new version control system—and fully migrated our monorepo from git—in five months: https://t.co/wzNkwHs7IN",
       "url": "https://x.com/AnthropicAI/status/2110047081414987957"
     },
     {
@@ -43,7 +41,6 @@
         "reply": 451,
         "retweet": 328
       },
-      "text": "Over the last few months, we’ve made significant progress in reducing the effectiveness of distillation attacks against Claude.\n\nIn this post, we explain how: https://t.co/uWiRSLBuOS",
       "url": "https://x.com/AnthropicAI/status/2109795898909950247"
     },
     {
@@ -58,7 +55,6 @@
         "reply": 650,
         "retweet": 434
       },
-      "text": "We’re beginning a process of publishing more frequent reports on model behavior, beyond what appears in our system cards and regular risk reports.\n\nToday’s report describes four types of behaviors we’ve identified during evaluations and internal use. In each, Claude acted on real",
       "url": "https://x.com/AnthropicAI/status/2108680150556737819"
     },
     {
@@ -73,7 +69,6 @@
         "reply": 8,
         "retweet": 5
       },
-      "text": "This is part of our broader effort to make the systems we all rely upon more secure and resilient.\n\nThat work will take time: the Anthropic Cyber Mission will expand and change as we learn what works, alongside our partners in the public and private sectors.",
       "url": "https://x.com/AnthropicAI/status/2108302545953157156"
     },
     {
@@ -88,7 +83,6 @@
         "reply": 110,
         "retweet": 249
       },
-      "text": "To secure open-source software, we’re launching OSS Scanner.\n\nWe’ll use our frontier models to periodically scan opted-in open-source projects for vulnerabilities, at no cost. Our reports will provide a proof-of-concept, explanation, and suggested fix.\n\nhttps://t.co/UFFrLUd25U",
       "url": "https://x.com/AnthropicAI/status/2108302543977906649"
     },
     {
@@ -103,7 +97,6 @@
         "reply": 49,
         "retweet": 17
       },
-      "text": "To help secure systems like power grids and water systems, we’re launching a new Critical Infrastructure Defense Program. \n\nWe’ll bring frontier Claude models, on-site engineers, and our latest research to these operators’ security, manufacturing and technology providers.",
       "url": "https://x.com/AnthropicAI/status/2108302541385499103"
     },
     {
@@ -118,7 +111,6 @@
         "reply": 265,
         "retweet": 286
       },
-      "text": "We’re launching the Anthropic Cyber Mission, a new effort to secure critical infrastructure and open-source software.\n\nhttps://t.co/0tz0ARAEMj",
       "url": "https://x.com/AnthropicAI/status/2108302539498414208"
     },
     {
@@ -133,7 +125,6 @@
         "reply": 257,
         "retweet": 510
       },
-      "text": "An astrophysicist worked with Claude Science to create the first complete ultraviolet map of the sky. Astronomers have already created complete sky maps from radio to gamma rays. But large regions of the sky have never been observed in UV.\n\nIn today’s science blog, Brice Ménard",
       "url": "https://x.com/AnthropicAI/status/2108290395599667700"
     },
     {
@@ -148,7 +139,6 @@
         "reply": 233,
         "retweet": 226
       },
-      "text": "We're deepening our commitment to scientific research and technological discovery by committing $150 million to the Genesis Mission.\n\nWe'll also make Claude and our technical support available to more than 15 federal agencies.\n\nhttps://t.co/MUmQBiC6MF",
       "url": "https://x.com/AnthropicAI/status/2108226292235809081"
     },
     {
@@ -163,7 +153,6 @@
         "reply": 287,
         "retweet": 305
       },
-      "text": "Claude Haiku 5.5, our latest model: https://t.co/a81H0avciK",
       "url": "https://x.com/AnthropicAI/status/2107894208547983705"
     },
     {
@@ -178,7 +167,6 @@
         "reply": 501,
         "retweet": 625
       },
-      "text": "We’re expanding our Cyber Verification Program to give security professionals broader access to our most capable models.\n\nThrough this program, verified security professionals can access Claude Mythos 5.1, Opus 5.5, and Sonnet 5.5 with safeguards designed for defensive work.",
       "url": "https://x.com/AnthropicAI/status/2107546569654636883"
     },
     {
@@ -193,7 +181,6 @@
         "reply": 471,
         "retweet": 422
       },
-      "text": "In physics, an “impedance mismatch” occurs when two systems each work well but are poorly matched.\n\nIn this Science Blog guest post, Harvard physicist Matthew Schwartz argues that something similar is happening with AI and science. LLMs are capable at many things, but working",
       "url": "https://x.com/AnthropicAI/status/2105733864152858919"
     },
     {
@@ -208,7 +195,6 @@
         "reply": 67,
         "retweet": 17
       },
-      "text": "Making your interview public is completely optional. Our blog post covers the benefits and possible risks of doing so.\n\nRead it here: https://t.co/Gh4v1u6O3n",
       "url": "https://x.com/AnthropicAI/status/2104982631037436201"
     },
     {
@@ -223,7 +209,6 @@
         "reply": 426,
         "retweet": 209
       },
-      "text": "What do you want from AI?\n\nWe’re launching a new study with Anthropic Interviewer to learn more about your experiences using AI, what role you want it to play in your life and the world, and what you want from the companies building it.\n\nLast December, 81,000 people told us about",
       "url": "https://x.com/AnthropicAI/status/2104982629884063840"
     },
     {
@@ -238,7 +223,6 @@
         "reply": 450,
         "retweet": 557
       },
-      "text": "Claude Sonnet 5.5 is now available: https://t.co/DuxGkiPLRY",
       "url": "https://x.com/AnthropicAI/status/2104633259925630995"
     },
     {
@@ -253,7 +237,6 @@
         "reply": 498,
         "retweet": 811
       },
-      "text": "New on the Science Blog: Yes, Claude can do Nine Loops.\n\nTheoretical physicists predict how particles behave using formulas called scattering amplitudes. These are notoriously hard to compute, so researchers work with layers of increasingly fine corrections called “loops”—each",
       "url": "https://x.com/AnthropicAI/status/2103541577083719888"
     },
     {
@@ -268,7 +251,6 @@
         "reply": 182,
         "retweet": 87
       },
-      "text": "In the Democratic Republic of the Congo, global health organizations including @CEPIvaccines, @WHOAFRO, and @inrb_kinshasa are using Claude to accelerate their response to an outbreak of an unusual Ebola variant.\n\nRead the full piece here: https://t.co/lQKx17Mxc3",
       "url": "https://x.com/AnthropicAI/status/2102897863097545197"
     },
     {
@@ -283,7 +265,6 @@
         "reply": 194,
         "retweet": 297
       },
-      "text": "This is the first result from our new molecular biology lab, where a team of Anthropic biologists is using Claude to explore and accelerate fundamental biology research. There, Claude works through data and literature to generate hypotheses and candidate biological systems to https://t.co/2rlsYxGowp",
       "url": "https://x.com/AnthropicAI/status/2102824961538920822"
     },
     {
@@ -298,7 +279,6 @@
         "reply": 1556,
         "retweet": 5310
       },
-      "text": "Claude has discovered a previously unknown enzyme system hidden in the DNA of bacteriophages. Beside the enzyme’s gene sits a long array of repeating DNA—a structure that looks somewhat similar to CRISPR.\n\nWe don’t yet understand what this system does, but only a handful of known",
       "url": "https://x.com/AnthropicAI/status/2102824959827742916"
     },
     {
@@ -313,7 +293,6 @@
         "reply": 626,
         "retweet": 984
       },
-      "text": "Claude Opus 5.5 is available today. https://t.co/lSCmTYw9eJ",
       "url": "https://x.com/AnthropicAI/status/2102435703535939725"
     },
     {
@@ -328,7 +307,6 @@
         "reply": 902,
         "retweet": 340
       },
-      "text": "We’re partnering with Accenture on independent evaluation of frontier AI—part of our recent commitment to embed evaluators at Anthropic. Both we and Accenture expect to invest at least $1 billion to build capacity in this area over the next five years. https://t.co/SHVzjpgnfx",
       "url": "https://x.com/AnthropicAI/status/2101039819870937247"
     },
     {
@@ -343,7 +321,6 @@
         "reply": 31,
         "retweet": 17
       },
-      "text": "You can find all of the code on GitHub: https://t.co/MmPk9hIZpx\n\nAnd the full results in our technical report: https://t.co/HSPEg5Gpsf",
       "url": "https://x.com/AnthropicAI/status/2100701583940190644"
     },
     {
@@ -358,7 +335,6 @@
         "reply": 80,
         "retweet": 47
       },
-      "text": "To show what these optimizations make possible, we’re partnering with Adaptyv Bio on a protein design competition. Together, we’ll be experimentally validating over 5,000 designs. \n\nWe're providing up to $1 million in Claude credits plus funding alongside Adaptyv for experimental",
       "url": "https://x.com/AnthropicAI/status/2100701582744797347"
     },
     {
@@ -373,7 +349,6 @@
         "reply": 286,
         "retweet": 564
       },
-      "text": "Biologists use specialized open-source models for tasks like modeling the structure of molecular systems, designing drug-like molecules, and predicting the effects of genetic mutations. But these models are often expensive to run, potentially limiting their impact.\n\nIn our latest https://t.co/WxoKAKuud1",
       "url": "https://x.com/AnthropicAI/status/2100701581109072332"
     },
     {
@@ -388,7 +363,6 @@
         "reply": 634,
         "retweet": 628
       },
-      "text": "AI systems are getting more powerful, and they're increasingly being used to build the next version of themselves. We want to illuminate that progress for the public.\n\nToday, we're sharing three measurements that help track AI development:\n1. How much AI R&amp;D is done by AI.\n2. How",
       "url": "https://x.com/AnthropicAI/status/2100684274114699295"
     },
     {
@@ -403,7 +377,6 @@
         "reply": 236,
         "retweet": 320
       },
-      "text": "Today we’re opening applications for the Life Sciences Verification Program.\n\nThrough the LSVP, life science professionals can use our models—including, for the first time, Mythos—with a new set of safeguards designed to enable the full range of biology-related work. We designed",
       "url": "https://x.com/AnthropicAI/status/2100646837799834096"
     }
   ],

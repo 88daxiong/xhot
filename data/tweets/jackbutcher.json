@@ -13,7 +13,6 @@
         "reply": 5,
         "retweet": 4
       },
-      "text": "the bigger idea here is that there is far more to visualize than just the present balance \n\nthe metadata (presently wip) will catalog the behavior around the artwork at an extremely granular level, forever https://t.co/Qb9KxQHOQq",
       "url": "https://x.com/jackbutcher/status/2109686751036096605"
     },
     {
@@ -28,7 +27,6 @@
         "reply": 4,
         "retweet": 10
       },
-      "text": "the initial supply of balance will be auctioned via a uniswap cca on 10/20 at 10:20 EST (https://t.co/Fo1S6RCtv0)\n\nI bought back 1% of max possible supply of balance on the open market and will make $0 from the sale, all funds will be used to provide liquidity to the artwork",
       "url": "https://x.com/jackbutcher/status/2109680305632383380"
     },
     {
@@ -43,7 +41,6 @@
         "reply": 55,
         "retweet": 69
       },
-      "text": "balance is an artwork with liquid provenance.\n\ncredits are individual works made from cyan, magenta, yellow and black. each has a rating.\n\n80 credits are burned to compose a statement. the collector chooses the arrangement. the ratings are added together.\n\na statement can be permanently locked to release its rating as transferable balance.\n\neach wallet has an artwork displaying its balance and inherited colors. as tokens move, color moves with them. as balances meet, colors mix.\n\nempty the wallet and the artwork remains.\n\nthis video follows 10,000 balance through six wallets. the total stays the same. its distribution and appearance change.\n\nchance. choice. consequence.\n\nan expanding surface. a finite supply.",
       "url": "https://x.com/jackbutcher/status/2109676954014101820"
     },
     {
@@ -58,7 +55,6 @@
         "reply": 56,
         "retweet": 8
       },
-      "text": "https://t.co/TuCO1zUl1u",
       "url": "https://x.com/jackbutcher/status/2109018899773837330"
     },
     {
@@ -73,7 +69,6 @@
         "reply": 63,
         "retweet": 19
       },
-      "text": "10/20 = 0.5 (balance)",
       "url": "https://x.com/jackbutcher/status/2108637575166783809"
     },
     {
@@ -88,7 +83,6 @@
         "reply": 14,
         "retweet": 21
       },
-      "text": "credit destroyers by @DesLucrece \n\nhttps://t.co/Af4tqk7hs3",
       "url": "https://x.com/jackbutcher/status/2107948495399231540"
     },
     {
@@ -103,7 +97,6 @@
         "reply": 61,
         "retweet": 57
       },
-      "text": "https://t.co/PBnET045Aj",
       "url": "https://x.com/jackbutcher/status/2107948268760277220"
     },
     {
@@ -118,7 +111,6 @@
         "reply": 83,
         "retweet": 32
       },
-      "text": "https://t.co/CIjvZuAjhQ",
       "url": "https://x.com/jackbutcher/status/2107868708513493461"
     },
     {
@@ -133,7 +125,6 @@
         "reply": 114,
         "retweet": 150
       },
-      "text": "credits is an artwork about belief\n\neach credit was created from a private payment - an $8 transaction on x money\n\neach transaction id, originally visible only to sender and recipient, was converted to a sha-256 hash to create an artwork made of four 8x8 printing plates in cmyk (cyan, magenta, yellow and black)\n\nthe transaction id and settlement timestamp became public source data for the onchain artwork\n\nthe x money transaction settlement time (in seconds) determined which plates print - there are 15 different possible combinations of cmyk, so this process repeats 4 x per minute\n\nif the original transaction id contained an 8, the resulting artwork metadata keeps track of each\n\nthe rarity calculation considers the color combination, the number of active pixels, the space they occupy after the plates shift, the number of 8s in the transaction id, and the registration of the plates\n\nthese qualities are measured against the completed collection and translated into a credit rating between 80 and 800\n\nthe rating measures those traits - it cannot account for every reason someone might value an image\n\nthe rating is fixed - the price is whatever someone is willing to pay\n\n80 credits can be burned to create a statement\n\nthe collector chooses which credits to use and how to arrange them - their individual ratings are added together, and their colors become the material of the new artwork\n\na statement can take different visual forms without changing its rating\n\nstatements can also be overprinted - one is burned into another, combining their ink, ratings and histories\n\nbalance is the proposed next form\n\nunder this design, a statement can be permanently surrendered for its rating in divisible erc-20 tokens - one point becomes one balance\n\nthe statement is locked rather than destroyed - its artwork and history remain, but it can no longer be transferred\n\nits quantity and color composition can move independently\n\neach receiving wallet gets one non-transferable erc-721 artwork\n\nthe artwork stays with the wallet and reads its current balance of the transferable erc-20 token\n\nthe tokens move - the artwork updates\n\nif the wallet holds nothing, the artwork remains and displays zero\n\nwhen balances meet, their colors mix in proportion to the amounts received - when they split, each part carries a share of that mixture\n\nthe colors preserve an aggregate ancestry, not a traceable list of individual credits or statements\n\nexchange custody can mix them further - a buyer may receive the exchange’s mixture rather than the particular colors a seller deposited\n\nsomeone who never owned a credit or a statement can inherit their colors\n\ncredits, statements and balances can exist at the same time\n\nsome people keep the individual marks, some compose them into pages, and some surrender the page for something they can divide and exchange\n\nothers may simply prefer the balance artwork\n\ncomposition reduces the number of surviving credits, overprinting reduces the number of surviving statements, and surrender moves statements out of circulation while releasing their accumulated rating as balance\n\nthe appetite for liquidity becomes one of the forces shaping all three collections\n\nbut making something divisible does not mean someone will want to buy it - actual liquidity still requires buyers and funded markets\n\nbalance offers divisibility, not a promise of demand\n\nthe market becomes a medium - its activity changes the distribution of the work, and when trading stops, that distribution remains\n\nthe price can disappear, the artwork cannot",
       "url": "https://x.com/jackbutcher/status/2107122204882149853"
     },
     {
@@ -148,7 +139,6 @@
         "reply": 30,
         "retweet": 30
       },
-      "text": "the very first 8 layer statement https://t.co/CIBxwH8X1x",
       "url": "https://x.com/jackbutcher/status/2106572123468968084"
     },
     {
@@ -163,7 +153,6 @@
         "reply": 79,
         "retweet": 68
       },
-      "text": "https://t.co/4GiNGFXWiH",
       "url": "https://x.com/jackbutcher/status/2106542166478655829"
     },
     {
@@ -178,7 +167,6 @@
         "reply": 31,
         "retweet": 30
       },
-      "text": "first lot of community statement auctions closing shortly \n\nhttps://t.co/YhfQ1iEIaX",
       "url": "https://x.com/jackbutcher/status/2106180118662271356"
     },
     {
@@ -193,7 +181,6 @@
         "reply": 68,
         "retweet": 54
       },
-      "text": "https://t.co/DZqafV5Dbe",
       "url": "https://x.com/jackbutcher/status/2106024596482769333"
     },
     {
@@ -208,7 +195,6 @@
         "reply": 85,
         "retweet": 96
       },
-      "text": "&gt;100 statements made, cheers all \n\nhoping to finish and share the third and final piece of the credits system today https://t.co/GhCOB6LNFU",
       "url": "https://x.com/jackbutcher/status/2106006587970347170"
     },
     {
@@ -223,7 +209,6 @@
         "reply": 50,
         "retweet": 55
       },
-      "text": "65 statements made\n5,200 credits burned https://t.co/frzXUBcayg",
       "url": "https://x.com/jackbutcher/status/2105828419267178724"
     },
     {
@@ -238,7 +223,6 @@
         "reply": 6,
         "retweet": 36
       },
-      "text": "auctions for these community composed statements are now running https://t.co/pS3B0lHlCQ",
       "url": "https://x.com/jackbutcher/status/2105824474977440146"
     },
     {
@@ -253,7 +237,6 @@
         "reply": 8,
         "retweet": 3
       },
-      "text": "I also retained the ability to append additional renderers to the contract, but these are the first 8",
       "url": "https://x.com/jackbutcher/status/2105822790087504095"
     },
     {
@@ -268,7 +251,6 @@
         "reply": 30,
         "retweet": 51
       },
-      "text": "if you own a statement, you can sign a transaction at any point to switch between its renderers (will update it everywhere else)\n\nevery statement is a technically infinite generative art collection based on its underlying credits and future overprints https://t.co/xQBIv2SpfE",
       "url": "https://x.com/jackbutcher/status/2105822446469136681"
     },
     {
@@ -283,7 +265,6 @@
         "reply": 7,
         "retweet": 18
       },
-      "text": "all new statements and overprints will be posted by @vvcredits https://t.co/9zeCWbO1JM",
       "url": "https://x.com/jackbutcher/status/2105820302248935676"
     },
     {
@@ -298,7 +279,6 @@
         "reply": 30,
         "retweet": 35
       },
-      "text": "24 statements made\n1,920 credits burned",
       "url": "https://x.com/jackbutcher/status/2105818452846116996"
     },
     {
@@ -313,7 +293,6 @@
         "reply": 7,
         "retweet": 12
       },
-      "text": "https://t.co/wtpyPX1v0C",
       "url": "https://x.com/jackbutcher/status/2105815792927285423"
     },
     {
@@ -328,7 +307,6 @@
         "reply": 59,
         "retweet": 96
       },
-      "text": "make a statement\n\nhttps://t.co/Ai8zClOtaD",
       "url": "https://x.com/jackbutcher/status/2105814966414545233"
     },
     {
@@ -343,7 +321,6 @@
         "reply": 64,
         "retweet": 93
       },
-      "text": "statement arrangement goes live at 8pm est (just under 3h from now)\n\nwill tweet a link once all is tested and working\n\nthanks all https://t.co/XmOlKwmMUr",
       "url": "https://x.com/jackbutcher/status/2105768695004103003"
     },
     {
@@ -358,7 +335,6 @@
         "reply": 2,
         "retweet": 2
       },
-      "text": "this will actually be 7 overprints (8 total layers), 640 credits total for the sake of conceptual symmetry",
       "url": "https://x.com/jackbutcher/status/2105688895614546368"
     },
     {
@@ -373,7 +349,6 @@
         "reply": 45,
         "retweet": 50
       },
-      "text": "statement\nfrom state: to declare where one stands",
       "url": "https://x.com/jackbutcher/status/2105346271661719685"
     }
   ],

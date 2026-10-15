@@ -13,7 +13,6 @@
         "reply": 56,
         "retweet": 29
       },
-      "text": "Learn about how to get multipliers in local LLM speed-ups using speculative decoding in this livestream with @mervenoyann, @MaartenGr and @_EldarKurtic \n\nhttps://t.co/tFexgaLcT5 https://t.co/Pad59uMr8J",
       "url": "https://x.com/huggingface/status/2110350304613114226"
     },
     {
@@ -28,7 +27,6 @@
         "reply": 27,
         "retweet": 14
       },
-      "text": "Help keep science open, try this out on Paper Pages: https://t.co/1cApLwjR7A https://t.co/SUoEBauOIi",
       "url": "https://x.com/huggingface/status/2108252563015422389"
     },
     {
@@ -43,7 +41,6 @@
         "reply": 185,
         "retweet": 162
       },
-      "text": "The same model, with the same weights, scores 62% in one agent harness and 33% in another.\n\n@adithya_s_k and the @huggingface team just released the ultimate guide to multi-harness RL, and it's one of the most practical RL write-ups this year, and everything open!\n\nThe trick is simple. Don't touch the harness. Point it at a proxy instead of the model. The proxy speaks all four API formats coding agents use (OpenAI Chat Completions, OpenAI Responses, Anthropic Messages, Gemini). It records the exact token ids and logprobs vLLM sampled, and you train on that. You don't change a single line of Claude Code, Codex or OpenCode.\n\nResults:\n🔹 Trained across 4 harnesses at once, LFM2.5-2.6B by @liquidai went from 42% to 54%\n🔹 31% fewer tool calls, thanks to a small bonus for solving tasks in fewer steps\n🔹 Training in OpenCode alone took OpenCode from 34% to 58%, but the multi-harness model improved everywhere\n\nThey also tried the shortcut everyone reaches for: fine-tune on 3,189 successful rollouts from Qwen3.8-27B. Imitation plateaued at 47.5%, below both RL runs. Copying a bigger model doesn't get you there. Practice does.\n\nThe best part is that everything is open: the capture proxy in OpenEnv, the trainer in TRL, the tasks, the SFT data, the training code and all seven trained models.\nAgents will run in dozens of harnesses. \n\nNow open models can be trained for each of them, by anyone.\n\nRead it here 👇\nhttps://t.co/s2I8GI9SLS",
       "url": "https://x.com/huggingface/status/2106034221005312448"
     }
   ],

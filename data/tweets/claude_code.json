@@ -13,7 +13,6 @@
         "reply": 2,
         "retweet": 6
       },
-      "text": "Worthwhile interview from @trq212 on @latentspacepod \n\nPractical Tips:\n\n1) We're moving from a single-player game to multiplayer.\n\nUse Artifacts more. \nThey're shared memory context for teammates, other threads, and subagents. \n\nHow? \nJust ask claude to make it into an artifact.\n\n2) \"Explain using the big picture in few words\"  is shockingly more useful than reading through piles of text.\n\ntry the plugin `/eli5` it's basically this.\n\n3) Your \"unknown unknowns\" are the bottleneck. The fix is to try more things and develop intuition & taste:\n\n\"To have taste, you have to eat. You have to try a lot of things, iterate, figure out what you want and like, and build a vocabulary for the domain. Then your prompt can bring all of that together.\" paraphrasing @jxnlco",
       "url": "https://x.com/claude_code/status/2104798028410273813"
     },
     {
@@ -28,7 +27,6 @@
         "reply": 4,
         "retweet": 1
       },
-      "text": "If you haven't tried the newest AI models in a while\n\nTip: Give Opus 5.5 a try\n\nYou don't need to be an engineer or have a corporate budget.\n\nSome things to try:\n\n1. Run a small business but can't afford marketing or advertising? Tell it your story. It'll help you make a video that tells your store's story and share it online.\n\n2. Help your kids with their homework, even if you never learned the material yourself.",
       "url": "https://x.com/claude_code/status/2103129154816544914"
     },
     {
@@ -43,7 +41,6 @@
         "reply": 5,
         "retweet": 0
       },
-      "text": "\"I believe that AI could cure most major diseases in the next 5–10 years greatly accelerate economic growth rates, create a world of abundance and empowerment\"\n\n\"Even when this gets us accused of hype, “doomerism”, or regulatory capture. \nWe have tried to prioritize caution over speed and prudence over profit.\"\n\n\"The measures I propose to advance the frontier at a safe pace will not be easy. But I believe we owe it to humanity to try.\"\n\nThank you @AnthropicAI and godspeed to us all 🙏",
       "url": "https://x.com/claude_code/status/2098800592949039397"
     },
     {
@@ -58,7 +55,6 @@
         "reply": 0,
         "retweet": 0
       },
-      "text": "+1\n\nhttps://t.co/rDJguH6igc",
       "url": "https://x.com/claude_code/status/2082852156403847268"
     },
     {
@@ -73,7 +69,6 @@
         "reply": 1,
         "retweet": 0
       },
-      "text": "https://t.co/nDvKHi3Ynz",
       "url": "https://x.com/claude_code/status/2082847692397613382"
     },
     {
@@ -88,7 +83,6 @@
         "reply": 3,
         "retweet": 0
       },
-      "text": "Bring your idea into existence, and communicating your story are the creative endeavors that feel euphoric.\n\nWe all know @claudeai is amazing with the first.\n\nBut here's a PSA: Claude can help communicate your story, too.\n\nTry asking @claudeCode:\n\"Use whatever tools you like — Remotion, FFmpeg, anything else — to generate a short video about my {whatever-you-want} and render it as an MP4.\"\n\nShoutout to AzorAhai1TK at r/ClaudeAI:\n\"Fable came up it took about 12 minutes and around 90,000 tokens. I'm just in awe at the ability of the model to make something this competent and coherent this quickly.\"\n\nTip:\nTry  @TapNow_AI for any customized AIGC video and/or image work.",
       "url": "https://x.com/claude_code/status/2082847687385460909"
     },
     {
@@ -103,7 +97,6 @@
         "reply": 0,
         "retweet": 3
       },
-      "text": "Install directly from @claude_code  in two commands:\n\n/plugin marketplace add zarazhangrui/frontend-slides\n/plugin install frontend-slides@frontend-slides\n\nhttps://t.co/MDGAkvDpOM",
       "url": "https://x.com/claude_code/status/2053049308736639212"
     },
     {
@@ -118,7 +111,6 @@
         "reply": 10,
         "retweet": 8
       },
-      "text": "Tip:\n\n1) Instead of 100s lines of markdown, ask @claude_code to generate a html (website) brief.\n\nHave it chain together multiple pages, if necessary, into slides.\n\nExample attached using @zarazhangrui beautiful-html-templates for markdown -> website.\n\n2) @claudeai has a button to publish your website to share with colleagues and others. \n\n\"Copy\" -> \"Publish Artifact\"",
       "url": "https://x.com/claude_code/status/2053049304521265579"
     },
     {
@@ -133,7 +125,6 @@
         "reply": 4,
         "retweet": 1
       },
-      "text": "PSA:\n\n2x’ed Claude Code’s 5-hour rate limits for Pro, Max, and Team plans.\n\nCompute is coming for users, builders, and knowledge coworkers. https://t.co/TJ52WDyOSV",
       "url": "https://x.com/claude_code/status/2052071730190123094"
     },
     {
@@ -148,7 +139,6 @@
         "reply": 1,
         "retweet": 3
       },
-      "text": "s/o creators:\nhttps://t.co/S55dzfAgbF\nhttps://t.co/fsMODAD8Bb\n\nproject repo:\nhttps://t.co/SET3WuKeOn https://t.co/xym33SizyS",
       "url": "https://x.com/claude_code/status/2051686949627544027"
     },
     {
@@ -163,7 +153,6 @@
         "reply": 2,
         "retweet": 6
       },
-      "text": "Karpathy's Personal Wiki Idea implemented: \n\nSynthadoc takes your documents and helps organize it into a wikipedia format.\n\nNo cloud account. No vendor lock-in. You owned your wiki.\n\nUse @claude_code directly. https://t.co/CcaT1v4JjO https://t.co/QoSe7RqhYe",
       "url": "https://x.com/claude_code/status/2051686936553861276"
     },
     {
@@ -178,7 +167,6 @@
         "reply": 1,
         "retweet": 0
       },
-      "text": "https://t.co/GCJzn7xoFD",
       "url": "https://x.com/claude_code/status/2042266048473575537"
     },
     {
@@ -193,7 +181,6 @@
         "reply": 5,
         "retweet": 1
       },
-      "text": "Tip: Use @pbakaus's impeccable for critique/audit and polishing of your frontend.\n\nGet started by installing the skill and then:\n1) /impeccable teach\n2) /audit \n3) /critique https://t.co/lw0hcJJdfG https://t.co/8cNvhU3aDc",
       "url": "https://x.com/claude_code/status/2042266044090433974"
     },
     {
@@ -208,7 +195,6 @@
         "reply": 8,
         "retweet": 5
       },
-      "text": "Tip: Use @claude_code to generate an HTML artifact to explain or deep dive into concepts.\n\nThe Claude skill below is emblematic of Claude as a thinking partner to learn from a codebase.\n\nPlay around with it and use it as a complement to purely chatting. https://t.co/6pYFBNoOzT",
       "url": "https://x.com/claude_code/status/2035966532438863965"
     },
     {
@@ -223,7 +209,6 @@
         "reply": 3,
         "retweet": 1
       },
-      "text": "Worth Reading:\n\n1) What are Skills?\nThey’re not just text files. They’re folders that can include scripts, assets, data, etc.\nA skill is a folder...think of the entire file system as a form of context engineering.\n\n2) The Description Field Is For the Model\nThe description field is not a summary — it's a description of when to trigger skill.\n\n3) Allow flexibility in Skills \nClaude will generally try to stick to your instructions, and because Skills are so reusable you’ll want to be careful of being too specific in your instructions.\nGive it the flexibility to adapt to the situation.\n\n---\n\nNote: Skills are becoming universally agent-native, spanning everything from coding agents, cowork agents @claudeai, to AI gateways like openclaw.",
       "url": "https://x.com/claude_code/status/2034335585339375855"
     },
     {
@@ -238,7 +223,6 @@
         "reply": 2,
         "retweet": 1
       },
-      "text": "Tip on Bugs:  \n\n1) \"Give it success criteria and watch it go. Get it to write tests first and then pass them.\"  \n\n2) The gains of improving your logs and its accessibility is compounding.\n\nWrite skills or scripts to pull logs from production (or dev) environments. Update the logging to address any missing gaps.",
       "url": "https://x.com/claude_code/status/2018911912784970221"
     },
     {
@@ -253,7 +237,6 @@
         "reply": 7,
         "retweet": 2
       },
-      "text": "Tip: \n\nWhen in doubt, if you're on the same page, ask @claude_code for its understanding of what you're trying to do. \n\nMake sure the intent is aligned.\n\n---\n\nExcerpt:\n\"The mistakes have changed a lot - they are not simple syntax errors anymore.\n\nThey are subtle conceptual errors that a slightly sloppy, hasty junior dev might do.\n\nThe most common category is that the models make wrong assumptions on your behalf.\n\nThey also don't manage their confusion, they don't seek clarifications, they don't surface inconsistencies...they don't push back.\"",
       "url": "https://x.com/claude_code/status/2018910422532071456"
     },
     {
@@ -268,7 +251,6 @@
         "reply": 1,
         "retweet": 1
       },
-      "text": "FAQ: What is the difference between Skill and Plugin?\n\nAnswer:\n\nPlugins are containers for distributing and organizing (possibly several) skills as part of a larger toolkit.\n\nSkills focus on providing specialized knowledge or procedures for tasks (e.g., generating slides or parsing PDFs).\n\nExample:\n\n\"Frontend-design\" is both a plugin and a skill.\nThe plugin is a distributable package used to install the skill.",
       "url": "https://x.com/claude_code/status/2009479585172242739"
     },
     {
@@ -283,7 +265,6 @@
         "reply": 0,
         "retweet": 2
       },
-      "text": "https://t.co/S63ZTJcUcL\n\nhttps://t.co/2zBX0c5HV1",
       "url": "https://x.com/claude_code/status/2009467151103467780"
     },
     {
@@ -298,7 +279,6 @@
         "reply": 6,
         "retweet": 9
       },
-      "text": "Take advantage of @claude_code plugins and skills. \n\nFrontend-design \nDoc-coauthoring \nSkill-creator \nCode-simplifier https://t.co/ZEXHb8BfkT https://t.co/QXMUvJ0eeC",
       "url": "https://x.com/claude_code/status/2009467145386877409"
     },
     {
@@ -313,7 +293,6 @@
         "reply": 0,
         "retweet": 0
       },
-      "text": "https://t.co/sRYns1LXSK",
       "url": "https://x.com/claude_code/status/1993198752782598428"
     },
     {
@@ -328,7 +307,6 @@
         "reply": 0,
         "retweet": 0
       },
-      "text": "https://t.co/359wwJtQNi https://t.co/WVYgKSYVwT",
       "url": "https://x.com/claude_code/status/1993191657060417910"
     },
     {
@@ -343,7 +321,6 @@
         "reply": 3,
         "retweet": 2
       },
-      "text": "Tip: Stop stuffing context. Use the new Memory and Context Reset tools in @claude_code.\n\nOpus 4.5 supports a workflow of up to 1M total tokens by \"resetting\" the context window while retaining created memories. [System Card - Section 2.6 🧵]\n\nThis architecture (Context Awareness + Memory Tool) beat standard context stuffing on agentic search benchmarks (~80% vs ~70%).\n\nGeneral context engineering tip: Place critical instructions (output format, constraints) at the ends start and the end of your context block. \nBe careful of invalidating the cache.",
       "url": "https://x.com/claude_code/status/1993191652895170985"
     },
     {
@@ -358,7 +335,6 @@
         "reply": 1,
         "retweet": 1
       },
-      "text": "With pricing at $5/$25 (input/output per million tokens), the \"Opus tax\" is lessened. It is even more accessible for daily loops.\n\nPerformance stats:\n- Beat all human candidates on Anthropic's internal engineering exam (2hr limit).\n- Leading in 7/8 languages on SWE-bench Multilingual.\n\nAction:\nUpdate your API config to `claude-opus-4-5-20251101`",
       "url": "https://x.com/claude_code/status/1993191649246368016"
     },
     {
@@ -373,7 +349,6 @@
         "reply": 14,
         "retweet": 10
       },
-      "text": "Tip: Use Opus 4.5 for @claude_code.\n\nMedium Effort: Matches Sonnet 4.5 capability but uses 76% fewer output tokens. Ideal for routine refactors, writing tests, and migrations.\n\nHigh Effort: Opus 4.5 exceeds Sonnet 4.5 performance by 4.3 percentage points while using 48% fewer tokens.\n\n2. less \"yes-man\" bias\n\nExisting models often validated user biases or incorrect logic, and are prone to sycophancy.\n\nOpus 4.5 has a 60% reduction in sycophancy compared to Sonnet 3.5. (System Card)\n\ntry prompting @claude_code to \"Critique this design pattern brutally\" to trigger this calibration.",
       "url": "https://x.com/claude_code/status/1993191644917821440"
     }
   ],

@@ -13,7 +13,6 @@
         "reply": 2,
         "retweet": 0
       },
-      "text": "I used to tell people it's good to \"be technical\" but I think this is not accurate enough. \n\nIf you're technical you need to be in the details more with the right parts of the code.\n\nIf you're non-technical, being in the details means knowing how things work at the right level.",
       "url": "https://x.com/trq212/status/2110488897453257169"
     },
     {
@@ -28,7 +27,6 @@
         "reply": 6,
         "retweet": 1
       },
-      "text": "s/o to @alicelovescake1 @amorriscode the CCD goats",
       "url": "https://x.com/trq212/status/2110463964740243572"
     },
     {
@@ -43,7 +41,6 @@
         "reply": 233,
         "retweet": 46
       },
-      "text": "Claude Code Desktop is now so much aware of its own capabilities and how it can work with you, like spinning off subsessions.\n\nI think of this almost like a v2, so many small details went into make it great. https://t.co/dpgj4fd8sQ",
       "url": "https://x.com/trq212/status/2110463962877989276"
     },
     {
@@ -58,7 +55,6 @@
         "reply": 29,
         "retweet": 0
       },
-      "text": "excited to be back home https://t.co/58k27G1wa3",
       "url": "https://x.com/trq212/status/2110035114432532654"
     },
     {
@@ -73,7 +69,6 @@
         "reply": 33,
         "retweet": 66
       },
-      "text": "evergreen https://t.co/vypABFN6PU",
       "url": "https://x.com/trq212/status/2109717295631372628"
     },
     {
@@ -88,7 +83,6 @@
         "reply": 241,
         "retweet": 73
       },
-      "text": "I think Terrence Tao is directionally correct, we shouldn’t settle for a super intelligence that is opaque.\n\nA key signal of intelligence is communication. We should strive to make products and models that build understanding with humans instead of disintermediating them. https://t.co/p44dDROehA",
       "url": "https://x.com/trq212/status/2109329495341867391"
     },
     {
@@ -103,7 +97,6 @@
         "reply": 85,
         "retweet": 16
       },
-      "text": "honestly pretty cool to have this on my new tab page \n\njust merged in some PRs by others too! https://t.co/OOzflxL3N7 https://t.co/3AE65z3VqK",
       "url": "https://x.com/trq212/status/2108802833986552174"
     },
     {
@@ -118,7 +111,6 @@
         "reply": 107,
         "retweet": 46
       },
-      "text": "before I joined Anthropic, I spent about 2 weeks hacking on this as a side project with Opus 4. It used the Agent SDK so it needed a constantly running process &amp; didnt work that well\n\nbut one prompt to Opus 5.5 ported it to Claude Managed Agents &amp; made it way more reliable https://t.co/3AE65z3VqK",
       "url": "https://x.com/trq212/status/2108689101503566319"
     },
     {
@@ -133,7 +125,6 @@
         "reply": 4,
         "retweet": 1
       },
-      "text": "here's what I got today https://t.co/ua7zBXbpDP",
       "url": "https://x.com/trq212/status/2108312751202537946"
     },
     {
@@ -148,7 +139,6 @@
         "reply": 78,
         "retweet": 73
       },
-      "text": "whoops I hit send and went to a meeting, didn't realize the repo wasnt public- it is now! \n\nit's a chrome extension I use every day now https://t.co/OroAeTafj0 https://t.co/3AE65z3VqK",
       "url": "https://x.com/trq212/status/2108312534222778407"
     },
     {
@@ -163,7 +153,6 @@
         "reply": 9,
         "retweet": 6
       },
-      "text": "and read more about how to enable the API credits for yourself here: https://t.co/dXXsfLbxH6",
       "url": "https://x.com/trq212/status/2108301672409960922"
     },
     {
@@ -178,7 +167,6 @@
         "reply": 21,
         "retweet": 17
       },
-      "text": "it's built on top of Claude Managed Agents, doing code generation in the cloud sandbo, using Sonnet 5.5 each run costs ~$0.75\n\nyou can try it yourself here: https://t.co/Q2zzOYeX9k",
       "url": "https://x.com/trq212/status/2108301670451163390"
     },
     {
@@ -193,7 +181,6 @@
         "reply": 220,
         "retweet": 148
       },
-      "text": "you now get Claude API credits with your MAX plans ($100, or 200 matching your plan) every month, use this to build more personal AI for yourself! \n\nI made an AI homepage that's generated everyday based on sites I read and replaces my 'new tab' page in Chrome https://t.co/VJ6KyOlel8",
       "url": "https://x.com/trq212/status/2108301668828004396"
     },
     {
@@ -208,7 +195,6 @@
         "reply": 5,
         "retweet": 4
       },
-      "text": "oh the OP's also on Twitter: https://t.co/MLmngNLZBb",
       "url": "https://x.com/trq212/status/2108246587638202860"
     },
     {
@@ -223,7 +209,6 @@
         "reply": 137,
         "retweet": 380
       },
-      "text": "we should be more ambitious https://t.co/peknhqAn5m",
       "url": "https://x.com/trq212/status/2108246323707383961"
     },
     {
@@ -238,7 +223,6 @@
         "reply": 38,
         "retweet": 13
       },
-      "text": "and because agents make it easier, almost everyone is operating outside their expertise at some point\n\nbut luckily, you can just ask the model to teach you what you don't know",
       "url": "https://x.com/trq212/status/2108021248966135891"
     },
     {
@@ -253,7 +237,6 @@
         "reply": 179,
         "retweet": 136
       },
-      "text": "the most common failure case I see is when people are working outside their domain of expertise and don't know how to be precise with their prompts and plans, so they have to spend a lot of turns iterating imprecisely https://t.co/mRT3knojCP",
       "url": "https://x.com/trq212/status/2108021247301062894"
     },
     {
@@ -268,7 +251,6 @@
         "reply": 49,
         "retweet": 19
       },
-      "text": "I think it's probably an incredible time to be a game dev content creator, for many people making games is a form of having fun and they're willing to pay for it! https://t.co/iS08bGZZnJ",
       "url": "https://x.com/trq212/status/2107957206327173484"
     },
     {
@@ -283,7 +265,6 @@
         "reply": 159,
         "retweet": 60
       },
-      "text": "We've heard how much people love Haiku and it's back in 5.5, cheaper, faster than ever before. \n\nIn fact it's 10x cheaper than Haiku 4.5 under 100k tokens.\n\nTry it with computer use, workflows and in the API. https://t.co/Jkoed6A3sH",
       "url": "https://x.com/trq212/status/2107898493234982968"
     },
     {
@@ -298,7 +279,6 @@
         "reply": 14,
         "retweet": 1
       },
-      "text": "there are some tricky technical problems to figure out! \n\nif Claude can only access your files when your computer is online, it might be effectively blocked on doing work until your computer is back on, so perhaps you want some sort of sync but there are edge cases there",
       "url": "https://x.com/trq212/status/2107580787277340835"
     },
     {
@@ -313,7 +293,6 @@
         "reply": 130,
         "retweet": 34
       },
-      "text": "we're increasingly going to be moving towards Claude's \"brains\" in the cloud and giving Claude \"local hands\" to operate on your computer\n\nI talked about this a bit on latent space https://t.co/m6NVHyweBp",
       "url": "https://x.com/trq212/status/2107580785456976085"
     },
     {
@@ -328,7 +307,6 @@
         "reply": 303,
         "retweet": 417
       },
-      "text": "working at a higher level of abstraction has always required understanding the lower level ones, I don't think coding agents changes this",
       "url": "https://x.com/trq212/status/2107504677143368163"
     },
     {
@@ -343,7 +321,6 @@
         "reply": 19,
         "retweet": 19
       },
-      "text": "if you're getting into game design, there are so many good resources out there to learn from! https://t.co/j3vAtf7nd1",
       "url": "https://x.com/trq212/status/2107340728380870868"
     },
     {
@@ -358,7 +335,6 @@
         "reply": 100,
         "retweet": 69
       },
-      "text": "a big advantage of doing planning like this is that it’s a lot more token efficient compared to raw HTML-\n\nthe model doesn’t need to remake the components or logic to do common things like state machines, diagrams, code snippets, etc. https://t.co/z2LsVJ9D3W",
       "url": "https://x.com/trq212/status/2107294499282293017"
     },
     {
@@ -373,7 +349,6 @@
         "reply": 128,
         "retweet": 36
       },
-      "text": "my favorite name for this pattern is \"local hands\", Claude runs in the cloud but can access your files locally- also coming to cowork https://t.co/fLX963TUxY",
       "url": "https://x.com/trq212/status/2107229483015258493"
     },
     {
@@ -388,7 +363,6 @@
         "reply": 13,
         "retweet": 3
       },
-      "text": "I particularly like the call stacks (got this from @dillon_mulroy) and ability to annotate code snippets https://t.co/t5s7hSdSdx",
       "url": "https://x.com/trq212/status/2107196587021840760"
     },
     {
@@ -403,7 +377,6 @@
         "reply": 25,
         "retweet": 28
       },
-      "text": "install it and give me feedback with:\n\nclaude plugin marketplace add anthropics/claude-plugins-community\n\nclaude plugin install html-plan@claude-community\n\nhere's an example: https://t.co/z7yYpPGFe8",
       "url": "https://x.com/trq212/status/2107192972983075241"
     },
     {
@@ -418,7 +391,6 @@
         "reply": 304,
         "retweet": 200
       },
-      "text": "I've been working on a skill that makes better HTML plans in Claude Code. \n\nIt uses simple language, shows code snippets, surfaces questions &amp; makes mockups. Linting reduces the normal failure cases that Claude runs into.\n\nWould love your feedback before shipping more broadly! https://t.co/U2Gb1K37vl",
       "url": "https://x.com/trq212/status/2107192901537329354"
     },
     {
@@ -433,7 +405,6 @@
         "reply": 107,
         "retweet": 80
       },
-      "text": "\"You should know\" is a great way of staying on top of what's possible with Claude and also a great example of the kind of things mods enable.\n\nYou can really make Claude Code yours. https://t.co/En0OhotxQL",
       "url": "https://x.com/trq212/status/2106119299484221762"
     }
   ],

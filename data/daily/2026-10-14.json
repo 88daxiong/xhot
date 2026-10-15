@@ -1,1 +1,102 @@
-{"date": "2026-10-14", "highlights": [{"handle": "elonmusk", "name": "Elon Musk", "text_zh": "CEO 和高管直接在 X 上发帖，比发新闻稿有效得多。", "post_id": "2110077948384735481", "likes": 19251, "url": "https://x.com/elonmusk/status/2110077948384735481", "text_orig": "Congrats!\n\nCEOs & execs posting to the public directly on 𝕏 is the best way to get your message out and drive product sales. \n\nVastly more powerful and effective than a press release. https://t.co/Cn7bJ99TW9", "text_orig_zh": "恭喜！\n\nCEO 和高管直接在 𝕏 上向公众发声，是传递信息、拉动产品销售的最佳方式。\n\n比新闻稿强大有效得多。 https://t.co/Cn7bJ99TW9"}, {"handle": "thsottiaux", "name": "Tibo", "text_zh": "Codex 连更第 9 天：ChatGPT 与 Codex 桌面版本地状态存储优化，磁盘占用减少约 60%。", "post_id": "2110151780478927344", "likes": 14124, "url": "https://x.com/thsottiaux/status/2110151780478927344", "text_orig": "Day 9/\n\nWe've rolled out optimizations to how we store state on disk for the chatgpt & codex desktop app that should reduce the amount stored on disk by 60%. Small ship but we've heard enough feedback about power users running out of disk space.", "text_orig_zh": "第 9 天/\n\n我们优化了 ChatGPT 和 Codex 桌面应用在磁盘上存储状态的方式，预计可以让磁盘占用减少 60%。改动不大，但我们收到了足够多的反馈：重度用户的磁盘空间不够用了。"}, {"handle": "sundarpichai", "name": "Sundar Pichai", "text_zh": "Gemini 4 Argon 正式发布：Gemini API 付费层、Antigravity Ultra、Gemini App 与搜索的 Pro/Ultra 用户全球可用。", "post_id": "2110038898009407584", "likes": 7824, "url": "https://x.com/sundarpichai/status/2110038898009407584", "text_orig": "Gemini 4 Argon is here.\n\nIt’s available globally today for developers and enterprises in the paid tier of the Gemini API and the Gemini platform, for Ultra subscribers in Google Antigravity, and Ultra and Pro subscribers in the Gemini app and Search.\n\nHope you all enjoy it! https://t.co/2jyAgqoylU", "text_orig_zh": "Gemini 4 Argon 来了。\n\n今天起，它已面向全球开放：开发者和企业可通过 Gemini API 与 Gemini 平台的付费层使用，Google Antigravity 的 Ultra 订阅用户，以及 Gemini 应用和搜索中的 Ultra 和 Pro 订阅用户也可使用。\n\n希望大家喜欢！ https://t.co/2jyAgqoylU"}, {"handle": "emollick", "name": "Ethan Mollick", "text_zh": "用了 Gemini 4 才发现，很多模型大概都在蒸馏 Claude/GPT；Gemini 4 的感觉很不一样。", "post_id": "2110060618258497764", "likes": 4088, "url": "https://x.com/emollick/status/2110060618258497764", "text_orig": "Using Gemini 4 makes you realize how many other models must be distilling Claude/GPT (or using a similar training pipeline). It feels quite different than other models.", "text_orig_zh": "用过 Gemini 4 之后你会意识到，其他很多模型一定在蒸馏 Claude/GPT（或者用了类似的训练流程）。它给人的感觉和其他模型很不一样。"}, {"handle": "gdb", "name": "Greg Brockman", "text_zh": "用 GPT-5.6 Sol 花 6 天、4 万美元算力找到 Chrome 严重漏洞，拿下 Google 2026 年首个全链漏洞奖励。", "post_id": "2110063893016096831", "likes": 3397, "url": "https://x.com/gdb/status/2110063893016096831", "text_orig": "6 days and $40,000 of compute with GPT-5.6 Sol to find a critical vulnerability in Chrome, claiming Google’s first full-chain reward in 2026 for a vulnerability that would affect an estimated 1 billion users.\n\nHighlights the opportunity for defenders to utilize these tools to secure their software to unprecedented levels:", "text_orig_zh": "用 GPT-5.6 Sol 花了 6 天、4 万美元算力，找到了 Chrome 里的一个严重漏洞，拿下 Google 2026 年首个完整攻击链（full-chain）漏洞奖金，该漏洞预计会影响约 10 亿用户。\n\n这说明防御方有机会借助这些工具，把软件安全提升到前所未有的水平："}, {"handle": "AnthropicAI", "name": "Anthropic", "text_zh": "工程博客：自建源码管理——5 月每天合并约 2,500 个改动，9 月超过 30,000 个，为人设计的开发基础设施扛不住 agent 规模。", "post_id": "2110047081414987957", "likes": 2256, "url": "https://x.com/AnthropicAI/status/2110047081414987957", "text_orig": "New on our Engineering blog: Creating in-house source control. \n\nIn May, we merged around 2,500 code changes per day. In September, we merged more than 30,000 per day. As a result, we became bottlenecked by developer infrastructure built for human (rather than agent) scale.  \n\nHere, we share how we built a new version control system—and fully migrated our monorepo from git—in five months: https://t.co/wzNkwHs7IN", "text_orig_zh": "我们工程博客的新文章：自建内部源码管理系统。\n\n5 月，我们每天合并约 2,500 次代码修改；到 9 月，每天合并超过 30,000 次。结果，我们为人类（而不是智能体）规模打造的开发者基础设施成了瓶颈。\n\n这篇文章里，我们分享了如何用五个月构建出一套新的版本控制系统，并把整个单体仓库（monorepo）从 git 完整迁移过去： https://t.co/wzNkwHs7IN"}], "topics_zh": "REA +46% 涨幅最大，vibe coding +27%、solopreneur +27%、MCP +24% 走高；Gemini 在 Argon 发布前一天回落（−20%）。", "followers_zh": "Paul Graham +7.0k、Karpathy +6.6k、Elon Musk +6.4k、Tibo（@thsottiaux）+5.5k 涨粉居前；MrBeast −759。（与上一快照相隔约 17 小时）", "changelog": []}
+{
+  "changelog": [],
+  "date": "2026-10-14",
+  "followers_zh": "Paul Graham +7.0k、Karpathy +6.6k、Elon Musk +6.4k、Tibo（@thsottiaux）+5.5k 涨粉居前；MrBeast −759。（与上一快照相隔约 17 小时）",
+  "gists": {
+    "2109812216212099456": "OpenAI 的 Day 8：重置。",
+    "2109820222190575666": "吴说：韩国下令封锁 27 家未注册境外加密交易所网站。",
+    "2109836485981778260": "Logan 预热：Gemini。",
+    "2109987399488933924": "Tim Ferriss：外包给 AI 的东西要非常小心。",
+    "2109989782302716140": "OpenRouter：受约束解码模型家族上线。",
+    "2110003117483757699": "Tibo：12 月底前让 AI 智能体运营的新 YouTube 频道达到 100 万播放。",
+    "2110009048691249227": "吴说：Sui Devnet 加入后量子签名，目标 2027 Q1 主网。",
+    "2110038940841545827": "Logan：Argon 在 Gemini API、Pro/Ultra 订阅等全面上线。",
+    "2110039274922131792": "DeepMind：Gemini 4 Argon 全球可用，专攻最难的问题。",
+    "2110039322229649783": "Gemini App：新一代前沿模型 Argon 开始推送。",
+    "2110039860077527293": "Google AI：Argon 面向复杂任务，全球推送中。",
+    "2110041297360699856": "Google：Gemini 4 Argon 今天正式推送。",
+    "2110044453977403412": "OpenRouter：Argon 已上线。",
+    "2110047081414987957": "Anthropic 工程博客：自建内部源码控制。",
+    "2110059840957768027": "Sundar：Google 员工用 Argon 做的一批实用案例。",
+    "2110075611633074295": "Cursor：代码托管 Origin 支持 20+ 集成。",
+    "2110078384617464201": "DeepMind：Argon 看视频就教会机器人玩沙包投掷。",
+    "2110086189386695130": "Paul Graham：客户不买就问他们想买什么——听着简单，很少人做。",
+    "2110087611763368271": "Cursor：Argon 上线，CursorBench 默认强度 52.8%。",
+    "2110091290063090093": "Paul Graham：特斯拉 FSD 带他和太太无接触开去健身房，震撼。",
+    "2110091767211078119": "Google 工程师用 Argon 消除了一整类浏览器崩溃。",
+    "2110105139248037986": "Matthew Berman：OpenAI 办公室发现窃听设备，并用自家模型查处。",
+    "2110105496145576406": "Gemini App：用 Argon 把视频/摄像头画面变成可玩合成器。",
+    "2110151384289223103": "Simon Willison：「用傅里叶本轮」是新花样。",
+    "2110151780478927344": "Tibo：ChatGPT / Codex 桌面端优化磁盘状态存储。",
+    "2110154332553597413": "马斯克：特斯拉自动驾驶「像魔法」。",
+    "2110165986926072019": "Ethan：消费者用 AI 无限打客服＝合法的分布式拒绝服务。"
+  },
+  "highlights": [
+    {
+      "excerpt": "Congrats!\n\nCEOs & execs posting to the public directly on 𝕏 is the best way to get your message out and drive product sales.\n\nVastly more powerful and effective than a press release.",
+      "excerpt_zh": "恭喜！\n\nCEO 和高管直接在 𝕏 上向公众发声，是传递信息、拉动产品销售的最佳方式。\n\n比新闻稿强大有效得多。 https://t.co/Cn7bJ99TW9",
+      "handle": "elonmusk",
+      "likes": 19251,
+      "name": "Elon Musk",
+      "post_id": "2110077948384735481",
+      "text_zh": "CEO 和高管直接在 X 上发帖，比发新闻稿有效得多。",
+      "url": "https://x.com/elonmusk/status/2110077948384735481"
+    },
+    {
+      "excerpt": "Day 9/\n\nWe've rolled out optimizations to how we store state on disk for the chatgpt & codex desktop app that should reduce the amount stored on disk by 60%. Small ship but we've heard enough feedback about power users running out of disk space.",
+      "excerpt_zh": "第 9 天/\n\n我们优化了 ChatGPT 和 Codex 桌面应用在磁盘上存储状态的方式，预计可以让磁盘占用减少 60%。改动不大，但我们收到了足够多的反馈：重度用户的磁盘空间不够用了。",
+      "handle": "thsottiaux",
+      "likes": 14124,
+      "name": "Tibo",
+      "post_id": "2110151780478927344",
+      "text_zh": "Codex 连更第 9 天：ChatGPT 与 Codex 桌面版本地状态存储优化，磁盘占用减少约 60%。",
+      "url": "https://x.com/thsottiaux/status/2110151780478927344"
+    },
+    {
+      "excerpt": "Gemini 4 Argon is here.\n\nIt’s available globally today for developers and enterprises in the paid tier of the Gemini API and the Gemini platform, for Ultra subscribers in Google Antigravity, and Ultra and Pro subscribers in the Gemini app and Search.\n\nHope you all enjoy it!",
+      "excerpt_zh": "Gemini 4 Argon 来了。\n\n今天起，它已面向全球开放：开发者和企业可通过 Gemini API 与 Gemini 平台的付费层使用，Google Antigravity 的 Ultra 订阅用户，以及 Gemini 应用和搜索中的 Ultra 和 Pro 订阅用户也可使用。\n\n希望大家喜欢！ https://t.co/2jyAgqoylU",
+      "handle": "sundarpichai",
+      "likes": 7824,
+      "name": "Sundar Pichai",
+      "post_id": "2110038898009407584",
+      "text_zh": "Gemini 4 Argon 正式发布：Gemini API 付费层、Antigravity Ultra、Gemini App 与搜索的 Pro/Ultra 用户全球可用。",
+      "url": "https://x.com/sundarpichai/status/2110038898009407584"
+    },
+    {
+      "excerpt": "Using Gemini 4 makes you realize how many other models must be distilling Claude/GPT (or using a similar training pipeline). It feels quite different than other models.",
+      "excerpt_zh": "用过 Gemini 4 之后你会意识到，其他很多模型一定在蒸馏 Claude/GPT（或者用了类似的训练流程）。它给人的感觉和其他模型很不一样。",
+      "handle": "emollick",
+      "likes": 4088,
+      "name": "Ethan Mollick",
+      "post_id": "2110060618258497764",
+      "text_zh": "用了 Gemini 4 才发现，很多模型大概都在蒸馏 Claude/GPT；Gemini 4 的感觉很不一样。",
+      "url": "https://x.com/emollick/status/2110060618258497764"
+    },
+    {
+      "excerpt": "6 days and $40,000 of compute with GPT-5.6 Sol to find a critical vulnerability in Chrome, claiming Google’s first full-chain reward in 2026 for a vulnerability that would affect an estimated 1 billion users. …",
+      "excerpt_zh": "用 GPT-5.6 Sol 花了 6 天、4 万美元算力，找到了 Chrome 里的一个严重漏洞，拿下 Google 2026 年首个完整攻击链（full-chain）漏洞奖金，该漏洞预计会影响约 10 亿用户。 …",
+      "handle": "gdb",
+      "likes": 3397,
+      "name": "Greg Brockman",
+      "post_id": "2110063893016096831",
+      "text_zh": "用 GPT-5.6 Sol 花 6 天、4 万美元算力找到 Chrome 严重漏洞，拿下 Google 2026 年首个全链漏洞奖励。",
+      "url": "https://x.com/gdb/status/2110063893016096831"
+    },
+    {
+      "excerpt": "New on our Engineering blog: Creating in-house source control.\n\nIn May, we merged around 2,500 code changes per day. In September, we merged more than 30,000 per day. As a result, we became bottlenecked by developer infrastructure built for human (rather than agent) scale. …",
+      "excerpt_zh": "我们工程博客的新文章：自建内部源码管理系统。\n\n5 月，我们每天合并约 2,500 次代码修改；到 9 月，每天合并超过 30,000 次。 …",
+      "handle": "AnthropicAI",
+      "likes": 2256,
+      "name": "Anthropic",
+      "post_id": "2110047081414987957",
+      "text_zh": "工程博客：自建源码管理——5 月每天合并约 2,500 个改动，9 月超过 30,000 个，为人设计的开发基础设施扛不住 agent 规模。",
+      "url": "https://x.com/AnthropicAI/status/2110047081414987957"
+    }
+  ],
+  "summary_zh": [
+    "Gemini 4 Argon 全球上线；Sundar 亲自发帖，讨论量次日再翻倍。",
+    "Tibo 披露 ChatGPT / Codex 桌面端状态存储优化；OpenAI 连发「Day 9」。",
+    "Anthropic 工程博客讲自建源控；gdb 用 GPT-5.6 Sol 找到 Chrome 严重漏洞。"
+  ],
+  "topics_zh": "REA +46% 涨幅最大，vibe coding +27%、solopreneur +27%、MCP +24% 走高；Gemini 在 Argon 发布前一天回落（−20%）。"
+}

@@ -13,7 +13,6 @@
         "reply": 244,
         "retweet": 363
       },
-      "text": "Please check out @DeepSeekHarness. We just released packaged desktop versions for macOS and Windows; Linux users can get it from the @​deepseek-ai/dsh package on npm. https://t.co/Cde0dZ6cPy https://t.co/mIvsRMsXEj",
       "url": "https://x.com/deepseek_ai/status/2105915715241062644"
     },
     {
@@ -28,7 +27,6 @@
         "reply": 68,
         "retweet": 212
       },
-      "text": "🌐 Supporting open source. Expanding deployment options.\n\nWe’ll work closely with the open-source community on V4.1-Flash inference support and explore more deployment options.\nPlanning a large-scale deployment with 2,000 GPUs + a storage cluster? Let’s talk.\n\n🔹 Model:",
       "url": "https://x.com/deepseek_ai/status/2097930627949711516"
     },
     {
@@ -43,7 +41,6 @@
         "reply": 27,
         "retweet": 52
       },
-      "text": "💰 More efficient architecture. Lower API prices.\n\nV4.1-Flash lets us serve more users at a lower cost. We’re passing the savings on to you.\n\n🔹 Peak/off-peak pricing continues to balance demand.\n🔹 Off-peak rates are 50% of peak rates. Schedule flexible workloads off-peak to https://t.co/EBCqx8cWjO",
       "url": "https://x.com/deepseek_ai/status/2097930624598446137"
     },
     {
@@ -58,7 +55,6 @@
         "reply": 23,
         "retweet": 52
       },
-      "text": "⚡ V4.1-Flash is now live on the DeepSeek API with native multimodal support.\n\nSet your model to deepseek-flash.\n\n🔹 V4-Flash &amp; V4-Flash-Vision-Exp are retired. For compatibility, deepseek-v4-flash and deepseek-v4-flash-vision-exp temporarily route to V4.1-Flash.\n🔹 Tests by",
       "url": "https://x.com/deepseek_ai/status/2097930620680941732"
     },
     {
@@ -73,7 +69,6 @@
         "reply": 33,
         "retweet": 193
       },
-      "text": "💾 Smaller KV cache. Bigger savings.\n\nCompared with the previous generation, V4.1-Flash’s KV cache needs just:\n🔹 1/4 the HBM\n🔹 1/8 the SSD storage\nCache-hit charges often account for a large share of agent costs. Compressing the cache cuts those costs significantly.\n\n3/6 https://t.co/rLzo9cTJzR",
       "url": "https://x.com/deepseek_ai/status/2097930617396887773"
     },
     {
@@ -88,7 +83,6 @@
         "reply": 120,
         "retweet": 356
       },
-      "text": "🧠 Asymmetric architecture. More intelligence, less cost.\n\n🔹 552B-parameter MoE.\n🔹 New Causal Encoder–Decoder architecture: just 8B active parameters for input, 16B for output.\n🔹 New pre-training methods + larger-scale RL post-training deliver benchmark results ahead of https://t.co/1z37Acfq26",
       "url": "https://x.com/deepseek_ai/status/2097930613101838709"
     },
     {
@@ -103,7 +97,6 @@
         "reply": 1107,
         "retweet": 3088
       },
-      "text": "🚀 Introducing DeepSeek-V4.1-Flash: smarter, faster, more efficient.\n\n🔹 Introducing the smallest model in our new architecture family, with native visual understanding.\n🔹 Designed for greater capability, faster inference, higher throughput, and scaling to larger models.\n\n1/6 https://t.co/wxJGiyX56o",
       "url": "https://x.com/deepseek_ai/status/2097930608790167907"
     },
     {
@@ -118,7 +111,6 @@
         "reply": 9,
         "retweet": 19
       },
-      "text": "Files API is now live. 📁\n\n🔹 Free to use\n🔹 Upload an image once, then reference it by file_id to save request bandwidth\n🔹 Reuse the same image across requests—no need to upload it again\n\nLearn more: https://t.co/68OKIq6xmc\n\n4/n",
       "url": "https://x.com/deepseek_ai/status/2090730042586489333"
     },
     {
@@ -133,7 +125,6 @@
         "reply": 7,
         "retweet": 18
       },
-      "text": "Multimodal API support 🔌\n\n🔹 Set model='deepseek-v4-flash-vision-exp'\n🔹 Images are tokenized for billing: up to 384 tokens each, at V4-Flash pricing\n🔹 Supports Chat Completions, Messages &amp; Responses\n🔹 Supports mixed text + image input; images can be provided via base64,",
       "url": "https://x.com/deepseek_ai/status/2090730039973392531"
     },
     {
@@ -148,7 +139,6 @@
         "reply": 21,
         "retweet": 33
       },
-      "text": "Multimodality unlocks more agent use cases. 👀\n\nV4-Flash-Vision-Exp works smoothly across agent frameworks, combining visual understanding with a wide range of tools to unlock more practical workflows.\n\n2/n https://t.co/pZFf8Yqw3D",
       "url": "https://x.com/deepseek_ai/status/2090730036852858964"
     },
     {
@@ -163,7 +153,6 @@
         "reply": 557,
         "retweet": 1213
       },
-      "text": "DeepSeek-V4-Flash-Vision-Exp is now live on the DeepSeek API Platform! 🚀\n\n🔹 This experimental multimodal model matches DeepSeek-V4-Flash on text capabilities—including agents, reasoning, and world knowledge.\n🔹 On multimodal agent benchmarks, V4-Flash-Vision-Exp makes a major https://t.co/t2ELUZAagW",
       "url": "https://x.com/deepseek_ai/status/2090730032574631962"
     },
     {
@@ -178,7 +167,6 @@
         "reply": 847,
         "retweet": 2454
       },
-      "text": "🧩 DeepSeek Harness v0.1 is now available in Developer Preview!\n\n🔹 We’re opening it up to developers building agent harnesses worldwide and open-sourcing the codebase in MIT license.\n🔹 Powered by the Cordis meta-framework, DeepSeek Harness is an agent harness built around one",
       "url": "https://x.com/deepseek_ai/status/2087887408440164663"
     },
     {
@@ -193,7 +181,6 @@
         "reply": 204,
         "retweet": 191
       },
-      "text": "API pricing update 💰\n\nWith the V4 lineup release, we’re updating our API pricing and introducing peak and off-peak rates. Off-peak rates are 50% lower than peak, enabling more flexible workload scheduling. 📉\n\nNew pricing takes effect at 16:00 UTC, Aug 16, 2026 🕒 https://t.co/l5CFrMB5Ev",
       "url": "https://x.com/deepseek_ai/status/2087864589895798968"
     },
     {
@@ -208,7 +195,6 @@
         "reply": 613,
         "retweet": 1791
       },
-      "text": "We’re launching DeepSeek-V4-Pro today! 🚀\n\n🔷 Major Agent upgrades with strong production gains!\n🔷 Flexible reasoning effort for V4-Pro &amp; V4-Flash: low for simple tasks, high for daily Agent workflows, max for complex tasks.\n🔷 Native OpenAI Responses API support, optimized for https://t.co/ZsGbUpiu1T",
       "url": "https://x.com/deepseek_ai/status/2087864585504305397"
     },
     {
@@ -223,7 +209,6 @@
         "reply": 93,
         "retweet": 139
       },
-      "text": "⚠️ Note\n\n🔷 DeepSeek-V4-Flash-0731 keeps the exact same model architecture and size as the preview version.\n🔷 Today's upgrade applies ONLY to the DeepSeek-V4-Flash API. The DeepSeek-V4-Pro API and App/Web models remain unchanged for now.\n\nThe official release of DeepSeek-V4-Pro",
       "url": "https://x.com/deepseek_ai/status/2083084419515220191"
     },
     {
@@ -238,7 +223,6 @@
         "reply": 1698,
         "retweet": 3507
       },
-      "text": "🚀 DeepSeek-V4-Flash Official API is now LIVE in public beta!\n\n🔷 We’ve massively upgraded its Agent capabilities—benchmark scores are now far surpassing the V4-Pro-Preview. Check out the massive performance leap below! 👇\n🔷 The official V4-Flash now natively supports the https://t.co/NUzOyxza2f",
       "url": "https://x.com/deepseek_ai/status/2083084415157022911"
     },
     {
@@ -253,7 +237,6 @@
         "reply": 1482,
         "retweet": 2732
       },
-      "text": "We are making our discount permanent! 🎉\n\nEnjoy building with DeepSeek-V4-Pro and bring your innovative ideas to life! 🚀 https://t.co/V8atbTaogH https://t.co/ctbZely7of",
       "url": "https://x.com/deepseek_ai/status/2057854261699195173"
     },
     {
@@ -268,7 +251,6 @@
         "reply": 317,
         "retweet": 553
       },
-      "text": "The DeepSeek-V4-Pro discount has been extended until May 31, 2026, 15:59 UTC! https://t.co/kd0taLhZhH https://t.co/aCdTC9CUkA",
       "url": "https://x.com/deepseek_ai/status/2049312932014813344"
     },
     {
@@ -283,7 +265,6 @@
         "reply": 603,
         "retweet": 780
       },
-      "text": "🔥DeepSeek Input Cache Price Drop!\n\nEffective immediately, the price for input cache hits across the ENTIRE DeepSeek API series is reduced to just 1/10th of the original price! Build more efficiently for less.\n\n📌Reminder: The DeepSeek-V4-Pro 75% OFF promotion is still active https://t.co/glpUSyzqKy",
       "url": "https://x.com/deepseek_ai/status/2048440764368347611"
     },
     {
@@ -298,7 +279,6 @@
         "reply": 344,
         "retweet": 878
       },
-      "text": "🔥DeepSeek-V4-Pro API is 75% OFF until May 5th, 2026, 15:59 (UTC Time)! Don't miss out on this massive discount.\n\n🛠️Integration Updates:\n🔹Claude Code: Set model to deepseek-v4-pro[1m]  to unlock 1M context!\n🔹OpenCode: Update to v1.14.24+\n🔹OpenClaw: Update to v2026.4.24+\n\nCheck https://t.co/rvf11eSsoJ",
       "url": "https://x.com/deepseek_ai/status/2048062777357750316"
     },
     {
@@ -313,7 +293,6 @@
         "reply": 32,
         "retweet": 86
       },
-      "text": "🔹 Amid recent attention, a quick reminder: please rely only on our official accounts for DeepSeek news. Statements from other channels do not reflect our views.\n🔹 Thank you for your continued trust. We remain committed to longtermism, advancing steadily toward our ultimate goal",
       "url": "https://x.com/deepseek_ai/status/2047516948611960897"
     },
     {
@@ -328,7 +307,6 @@
         "reply": 31,
         "retweet": 125
       },
-      "text": "API is Available Today!\n\n🔹 Keep base_url, just update model to deepseek-v4-pro or deepseek-v4-flash.\n🔹 Supports OpenAI ChatCompletions &amp; Anthropic APIs.\n🔹 Both models support 1M context &amp; dual modes (Thinking / Non-Thinking): https://t.co/ec3B0BDXZi\n\n⚠️ Note: deepseek-chat &amp; https://t.co/xjOpRzOMAT",
       "url": "https://x.com/deepseek_ai/status/2047516945466188072"
     },
     {
@@ -343,7 +321,6 @@
         "reply": 13,
         "retweet": 69
       },
-      "text": "Dedicated Optimizations for Agent Capabilities\n\n🔹 DeepSeek-V4 is seamlessly integrated with leading AI agents like Claude Code, OpenClaw &amp; OpenCode.\n🔹 Already driving our in-house agentic coding at DeepSeek.\n\nThe figure below showcases a sample PDF generated by DeepSeek-V4-Pro. https://t.co/bmMp2t3aQF",
       "url": "https://x.com/deepseek_ai/status/2047516941074796676"
     },
     {
@@ -358,7 +335,6 @@
         "reply": 20,
         "retweet": 138
       },
-      "text": "Structural Innovation &amp; Ultra-High Context Efficiency\n\n🔹 Novel Attention: Token-wise compression + DSA (DeepSeek Sparse Attention).\n🔹 Peak Efficiency: World-leading long context with drastically reduced compute &amp; memory costs.\n🔹 1M Standard: 1M context is now the default https://t.co/7EqOQYfWBH",
       "url": "https://x.com/deepseek_ai/status/2047516936289017964"
     },
     {
@@ -373,7 +349,6 @@
         "reply": 17,
         "retweet": 132
       },
-      "text": "DeepSeek-V4-Flash\n\n🔹 Reasoning capabilities closely approach V4-Pro.\n🔹 Performs on par with V4-Pro on simple Agent tasks.\n🔹 Smaller parameter size, faster response times, and highly cost-effective API pricing.\n\n3/n https://t.co/dAkP1f2aX0",
       "url": "https://x.com/deepseek_ai/status/2047516932140884024"
     }
   ],
