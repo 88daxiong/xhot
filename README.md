@@ -28,6 +28,7 @@ XHOT 是一个纯静态的 X（Twitter）热点简报，关注 AI、搞钱（创
 - 站内「关于 · 数据来源 · 免责声明」页（`about.html`）说明数据来源（X API、AIHOT、GitHub Trending）、哪些内容是 AI 生成的（中文要点 / 译文，带「译」标记，不是 X 官方内容）、撤下方式（GitHub Issues）和免责声明；每页页脚都有入口。
 - 第三方许可声明见 `LICENSE-THIRD-PARTY.md`（AIHOT 的 MIT 声明等）。
 - `takedown.txt`：帖子 ID / 账号 handle 清单，生成器会跳过其中的内容（用于被要求撤下、已删除或受保护的帖子）；`check_deleted_v15.py` 可用 X API 批量检查展示过的帖子是否已被删除并写入该清单（需要 `X_BEARER_TOKEN`，只读）。
+- X 新闻的中文标题与要点来自 `news_zh.json`（AI 翻译，站内标注并保留英文原标题）；`qa_v15.py` 在每次构建后检查重复、空区块、未翻译英文与领域错配。
 - 头像为小尺寸缓存，仅用于标识作者；如需撤下请开 Issue。
 - 本项目与 X Corp.、AIHOT、GitHub 无隶属关系；以上不构成法律意见。
 

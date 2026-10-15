@@ -4,7 +4,7 @@ html body{font-size:15px;line-height:1.65;-webkit-text-size-adjust:100%;font-syn
 .pt,.dsm,.trg,.pcs,.ptz,.pto{line-height:1.7}
 .nt2,.nrpt,.ns,.nrb{line-height:1.55}
 .tm b,time.tm b{background:none;-webkit-background-clip:border-box;background-clip:border-box;-webkit-text-fill-color:currentColor;color:var(--actx)}
-.src.h{background:linear-gradient(135deg,#be185d,#c2410c);color:#fff}
+.src.h,.trb{background:linear-gradient(135deg,#be185d,#c2410c);color:#fff}
 .src.d{color:#9d174d}
 html[data-theme=dark] .src.d{color:#f9a8d4}
 .skip{background:#5b21b6;color:#fff}
@@ -19,7 +19,7 @@ html[data-theme=dark] .seg button[data-dom].on,html[data-theme=dark] .dcd.on{bac
 .nav{order:5;flex:1 1 100%;margin:0 -4px}.nav a{flex:1;justify-content:center;padding:0 8px;height:44px;font-size:15px}
 .sp0{flex:1}.lg span{display:none}.kb span,.kb kbd{display:none}.kb{width:44px;min-width:44px;padding:0;justify-content:center}.kb i{font-size:24px;line-height:1}
 .hxb{display:inline-grid;width:44px;height:44px;place-items:center;font-size:20px}
-.hx{display:none;position:absolute;top:100%;right:12px;z-index:30;flex-direction:column;align-items:stretch;gap:8px;padding:12px;border-radius:12px;background:var(--card);border:1px solid var(--bd);box-shadow:0 12px 32px -12px rgba(0,0,0,.4)}
+.hx{display:none;position:absolute;top:100%;right:12px;z-index:30;flex-direction:column;align-items:stretch;gap:8px;padding:12px;border-radius:12px;background:var(--card);border:1px solid var(--bd);box-shadow:0 16px 40px -12px rgba(0,0,0,.35)}
 .hx.open{display:flex}.top{position:sticky}.bar{position:relative}.hx .tg{justify-content:center}.hx .tgb{width:100%}.hx .fr summary{padding:0 8px}
 }
 @media(pointer:coarse){.btn,.seg a,.seg button,.fchips button,.tg button,.tgb,summary,.more,.xb,.kb,.hxb,.dcb,.dcm,.nav a,.pg a{min-height:44px}.tg button{min-width:44px}}
@@ -35,3 +35,13 @@ details[open]>.trx,.dh.open .dor,.nr:not(.sel) .nrb:not([hidden]){animation:xfad
 @media(max-height:500px){.top{position:static}}
 @media(pointer:coarse){input[type=search],input[type=text]{min-height:44px;font-size:16px}.who a{padding:14px 0}}
 html[data-theme=dark] .seg a.on[style]{color:#0f0c26}html[data-theme=dark] .seg a.on[style] .dot{background:#0f0c26}
+.tl30 .trw{content-visibility:auto;contain-intrinsic-size:auto 57px}
+/* 触控与安全区 */
+html{scroll-padding-top:76px;-webkit-tap-highlight-color:transparent}
+body{padding-left:env(safe-area-inset-left);padding-right:env(safe-area-inset-right)}
+.wrap{padding-bottom:calc(24px + env(safe-area-inset-bottom))}
+.btn:active,.seg button:active,.seg a:active,.fchips button:active,.nav a:active,.tgb:active,.kb:active,.hxb:active,.more:active,.dcb:active,.dcm:active{background:var(--hov);transform:scale(.97)}
+.nav a[aria-current=page]:active,.seg .on:active{transform:none}
+.nrh:active,.trw summary:active{background:var(--hov)}
+.kp,.dcpop,.hx{overscroll-behavior:contain}
+@media(pointer:coarse){.kpf{display:none}}

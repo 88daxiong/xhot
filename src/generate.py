@@ -14,7 +14,7 @@ def e(t): return _e0(t).replace('@@','&#64;&#64;')   # 内容里的 @@ 不能被
 OUT=sys.argv[1] if len(sys.argv)>1 else os.path.join(D,'site')
 TEXT_MODE=os.environ.get('XHOT_TEXT_MODE','excerpt')   # excerpt（默认）| full（用户日后批准才改）
 EXC,EXCH=(220,320) if TEXT_MODE=='excerpt' else (4000,8000)
-SANS='-apple-system,BlinkMacSystemFont,"PingFang SC","Helvetica Neue",system-ui,"Noto Sans CJK SC","Microsoft YaHei",sans-serif'   # Mac 优先 -apple-system / PingFang SC / Helvetica Neue
+SANS='system-ui,"Noto Sans CJK SC",-apple-system,"PingFang SC","Helvetica Neue",sans-serif'   # Mac：system-ui=苹方/SF（同 -apple-system）；Linux 先命中 Noto，避免对缺失字体名反复探测（实测省 ≈100ms LCP）
 DC={'ai':'var(--ai)','money':'var(--money)','growth':'var(--growth)'}
 DN={'ai':'AI','money':'搞钱','growth':'成长'}
 def H8(b): return hashlib.sha1(b if isinstance(b,bytes) else b.encode()).hexdigest()[:10]
@@ -272,7 +272,7 @@ def page(title,body,cur,pref='',head='',mods=(),desc='XHOT：每天 10 分钟，
     nav=''.join(f'<a href="{pref}{h}"{" aria-current=page" if c==cur else ""}>{t}</a>' for h,t,c in NAVT)
     js=''.join(f'<script src="{pref}assets/@@JS:{m}@@" defer></script>' for m in ('core',)+tuple(mods))
     return (f'<!doctype html><html lang="zh-CN" data-theme="light" data-pref="auto" data-p="{pref}" data-sj="@@SJ@@"><head><meta charset="utf-8">{HEADSEC}<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%E2%9A%A1%3C/text%3E%3C/svg%3E">'
-      f'<meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><meta name="theme-color" content="#7c3aed"><link rel="expect" href="#rdy" blocking="render"><meta name="description" content="{e(desc)}"><title>{e(title)}</title>'
+      f'<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="color-scheme" content="light dark"><meta name="theme-color" content="#7c3aed"><link rel="expect" href="#rdy" blocking="render"><meta name="description" content="{e(desc)}"><title>{e(title)}</title>'
       f'<script>{J0}</script>@@CSS@@{js}{head}</head><body><a class="skip" href="#main">跳到正文</a>'
       f'<header class="top"><div class="bar"><a class="lg" href="{pref}index.html"><i aria-hidden="true">⚡</i>XHOT<span>X 热点雷达</span></a><nav class="nav" aria-label="栏目">{nav}</nav><span class="sp0"></span>'
       f'<button class="kb" type="button" data-kp aria-haspopup="dialog" aria-label="搜索（快捷键 ⌘K 或 /）"><i aria-hidden="true">⌕</i><span>搜索</span><kbd>⌘K</kbd></button>'
@@ -349,10 +349,14 @@ def news_items():
         body=paras(it.get('summary',''))+(f'<p class="why"><b>推荐理由</b>{e(it["reason"])}</p>' if it.get('reason') else '')
         items.append(dict(sm=plain(it.get('summary','') or it.get('reason','')),ts=it.get('publishedAt',''),t=it['title'],s='s',sl='AIHOT 精选',m=src(it)+(' · '+tt(it.get('publishedAt',''))) if it.get('publishedAt') else src(it),body=body,links=[('AIHOT 全文译文',L.get('aihot','')),('原文',L.get('original',''))],chk=it['title']))
     xs=[]
+    NEWSZH=json.load(open(os.path.join(D,'news_zh.json'),encoding='utf-8')) if os.path.exists(os.path.join(D,'news_zh.json')) else {}
     for d in DOMS:
         for n in (latest(f'news_{d}') or {}).get('data',[])[:15]:
             body=(f'<p class="hook">{e(n["hook"])}</p>' if n.get('hook') else '')+paras(n.get('summary',''))+kp([x['post_id'] for x in n.get('cluster_posts_results',[])])
-            xs.append(dict(sm=plain(n.get('hook') or n.get('summary','')),ts=n.get('updated_at',''),t=n.get('name',''),s='x',sl='X 新闻',m='更新 '+tt(n.get('updated_at','')),u=n.get('updated_at',''),body=body,links=[('在 X 查看',n.get('url',''))],chk=n.get('name','')+n.get('summary','')))
+            _z=NEWSZH.get(n.get('name',''))
+            if _z: body=f'<p class="hook">{e(_z["h"])}</p><p class="mu">英文原标题：{e(n.get("name",""))}（中文为 AI 翻译，仅供参考）</p>'+body.replace('<p class="hook">','<p class="hook en">',1)
+            else: print('WARN X 新闻无中文翻译（news_zh.json）:',n.get('name','')[:60])
+            xs.append(dict(sm=plain(_z['h'] if _z else (n.get('hook') or n.get('summary',''))),ts=n.get('updated_at',''),t=_z['t'] if _z else n.get('name',''),s='x',sl='X 新闻',m='更新 '+tt(n.get('updated_at','')),u=n.get('updated_at',''),body=body,links=[('在 X 查看',n.get('url',''))],chk=n.get('name','')+n.get('summary','')))
     items+=sorted(xs,key=lambda x:x['u'],reverse=True)  # X 新闻（英文）在后，按更新时间新→旧
     seen=set(); out=[]
     for it in items:
@@ -389,7 +393,7 @@ def news():
     N=news_items(); NEWS=N; c={k:sum(1 for n in N if n['s']==k) for k in 'hdsx'}
     TOP=ntop(N)
     nbd=jdump([nbody(n) for n in N]); nbn=f'news.{H8(nbd)}.json'; put(nbn,nbd)
-    SL=(('h','AIHOT 热点'),('d','AIHOT 日报'),('s','AIHOT 精选'),('x','X 新闻 · 英文'))
+    SL=(('h','AIHOT 热点'),('d','AIHOT 日报'),('s','AIHOT 精选'),('x','X 新闻 · 中文要点'))
     seg=('<div class="seg" role="group" aria-label="来源筛选"><button type="button" data-src="top" class="on" aria-pressed="true">⭐ 精选 '+str(len(TOP))+'</button>'
          '<button type="button" data-src="all" aria-pressed="false">全部 '+str(len(N))+'</button>'
          +''.join(f'<button type="button" data-src="{k}" aria-pressed="false">{l} {c[k]}</button>' for k,l in SL if c[k])+'</div>')
@@ -406,7 +410,7 @@ def news():
            '<div class="nrpm" id="npmeta">'+('<span class="nn">01</span>'+nmeta(N[f0]) if f0 is not None else '')+'</div>'
            '<div class="nrph"><span class="nrpt" id="nptitle">'+(e(N[f0]['t']) if f0 is not None else '阅读窗格')+'</span></div>'
            '<div class="nrpb" id="npbody">'+(nbody(N[f0]) if f0 is not None else '<p class="nph" id="nhint">点左侧任意标题，全文在这里打开；列表位置不变，可以连续点着读。</p>')+'</div></section></aside>')
-    body=(tools('资讯',seg,dctl(days),f'<span class="hint">精选 = AIHOT 热点 / 精选优先 {len(TOP)} 条 · 点标题读全文 · 中文 AIHOT 在前 · X 新闻为英文</span>')+
+    body=(tools('资讯',seg,dctl(days),f'<span class="hint">精选 = AIHOT 热点 / 精选优先 {len(TOP)} 条 · 点标题读全文 · 中文 AIHOT 在前 · X 新闻中文为 AI 翻译</span>')+
           f'<div class="nlay" id="ng" data-body="assets/{nbn}"><div class="nmain">'
           f'<section id="ntop" class="nsec2"><ol class="nl">{"".join(nrow(N[i],i,j==0) for j,i in enumerate(TOP))}</ol>'
           f'<button id="nmore" class="more" type="button">展开更多 · 按日期看全部 {len(N)} 条</button></section>'
@@ -726,9 +730,10 @@ for u in ACC: emit(f'p/{u}.html',person(u))
 def stub(to): return f'<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta http-equiv="refresh" content="0;url={to}"><link rel="icon" href="data:,"><meta name="robots" content="noindex"><title>已移动</title></head><body><p>页面已移动：<a href="{to}">{to}</a></p></body></html>'
 emit('hot.html',stub('d/all.html')); emit('accounts.html',stub('people.html'))
 for x in DAYS: emit(f'daily/{x["date"]}.html',stub(f'../day/{x["date"]}.html'))
+ZHN={'elonmusk':'马斯克 埃隆','sama':'奥特曼 山姆','satyanadella':'纳德拉 微软','sundarpichai':'皮查伊 谷歌','karpathy':'卡帕西 卡尔帕西','paulg':'保罗格雷厄姆 格雷厄姆','naval':'纳瓦尔','andrewyng':'吴恩达','demishassabis':'哈萨比斯','ylecun':'杨立昆 勒昆','darioamodei':'阿莫迪 达里奥','ilyasut':'苏茨克维 伊利亚','miramurati':'穆拉蒂','gdb':'布罗克曼','jeffdean':'杰夫迪恩 迪恩','mrbeast':'野兽先生','cz_binance':'赵长鹏 币安','heyibinance':'何一 币安','justinsuntron':'孙宇晨','google':'谷歌','microsoft':'微软','nvidia':'英伟达 黄仁勋','claudeai':'克劳德','deepseek_ai':'深度求索','huggingface':'抱抱脸','jordanbpeterson':'彼得森','tferriss':'费里斯','hubermanlab':'胡伯曼','jamesclear':'詹姆斯克利尔 原子习惯','alexhormozi':'霍莫兹','garyvee':'加里','thedankoe':'丹科','mustafasuleyman':'苏莱曼','aravsrinivas':'斯里尼瓦斯','wublockchain':'吴说区块链'}
 # 搜索索引（⌘K：人物 / 标签 / 话题 / 日期；帖子按需读 feed 分片）
-SJ=jdump({'p':[[u,a['H'],a['name'],AVS.get(u,''),hue(u),a['dom'],','.join(a['doms']),a['f'],a['d'] or 0] for u,a in ACC.items()],
-          't':[[k,l,d] for k,l,d,_ in TAGS],'d':FEEDDAYS,'dy':[x['date'] for x in DAYS],'tp':[[x['name'],d] for d in DOMS for x in DATA[d]['trends']]})
+SJ=jdump({'p':[[u,a['H'],a['name'],AVS.get(u,''),hue(u),a['dom'],','.join(a['doms']),a['f'],a['d'] or 0,ZHN.get(u.lower(),'')] for u,a in ACC.items()],
+          't':[[k,l,d] for k,l,d,_ in TAGS],'d':FEEDDAYS,'dy':[x['date'] for x in DAYS],'g':[[i,PBY[i]['u'],t,x['date']] for x in DAYS for i,t in x['gists'].items() if i in PBY],'tp':[[x['name'],d] for d in DOMS for x in DATA[d]['trends']]})
 SJN=f'search.{H8(SJ)}.json'; put(SJN,SJ)
 # ---- JS / CSS ----
 JSN={}
@@ -773,6 +778,9 @@ def readable(css):
     def fw(m):
         v=int(m.group(1)); return 'font-weight:'+('400' if v<=400 else '500' if v<=550 else '600')
     css=re.sub(r'font-weight:(\d{3})',fw,css)
+    rad={'5':'6','7':'6','10':'8','14':'12'}   # 圆角收敛为 6/8/12/16/药丸
+    css=re.sub(r'border-radius:(\d+)px(?=[;}])',lambda m:'border-radius:'+rad.get(m.group(1),m.group(1))+'px',css)
+    for o in ('0 12px 32px -12px rgba(0,0,0,.4)','0 24px 64px -16px rgba(0,0,0,.5)','0 -12px 40px -8px rgba(0,0,0,.4)'): css=css.replace(o,'0 16px 40px -12px rgba(0,0,0,.35)')   # 浮层阴影只留一档
     css=css.replace('font-weight:bold','font-weight:600').replace('font-weight:normal','font-weight:400')
     return css
 CSSR=readable(CSSR)+'\n'+open('style_final.css',encoding='utf-8').read()

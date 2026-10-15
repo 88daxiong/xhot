@@ -83,6 +83,8 @@ var h0=hget();if(p){if(h0.dom||h0.sort){st.dom=oneOf(h0.dom,['all','ai','money',
 if(prev){var n=0;$$('.fi[data-ts]').forEach(function(x){if(new Date(x.dataset.ts).getTime()>prev){x.classList.add('isnew');if(x.closest('#daily'))n++}});var nc=$('#newc');if(nc&&n){nc.textContent='· 自上次访问新增 '+n+' 条（标「新」）';nc.hidden=false}}
 setTimeout(function(){LS.set('xhot-last',String(Date.now()))},4000);applyRead(document)})();
 relabel(document);
+/* 同页内只改 #hash 的跳转（如 ⌘K 选了当前页的日期 / 标签）：重新载入以应用；筛选自己用 replaceState，不会触发 */
+addEventListener('hashchange',function(){if(/^#(day|tag|dom|sort)=/.test(location.hash))location.reload()});
 /* ===== ⌘K 搜索 ===== */
 var SJ=null,SJP=null;
 function people(){if(SJP)return SJP;return SJP=fetch(P+'assets/'+d.dataset.sj).then(function(r){return r.json()}).then(function(j){SJ=j;j.M={};j.p.forEach(function(x){j.M[x[0]]=x});return j})}
@@ -92,21 +94,24 @@ function hl(t,q){if(!q)return esc(t);var i=t.toLowerCase().indexOf(q.toLowerCase
 function row(t,s,h,ext,k){return {t:t,s:s,h:h,ext:ext,k:k||''}}
 function build(){kp=document.createElement('div');kp.className='kp';kp.hidden=true;kp.innerHTML='<div class="kpb" role="dialog" aria-modal="true" aria-label="搜索"><input class="kpi" type="search" placeholder="搜索人物、标签、话题、日期，或在帖子摘录里查找…" aria-label="搜索" autocomplete="off" spellcheck="false"><ul class="kpl" role="listbox" aria-label="结果"></ul><div class="kpf"><span><kbd>↑</kbd><kbd>↓</kbd> 选择</span><span><kbd>↵</kbd> 打开</span><span><kbd>Esc</kbd> 关闭</span></div></div>';document.body.appendChild(kp);kpi=$('.kpi',kp);kpl=$('.kpl',kp);
 kp.addEventListener('mousedown',function(ev){if(ev.target===kp)kclose()});kpl.addEventListener('click',function(ev){var li=ev.target.closest('li[data-i]');if(li)pick(+li.dataset.i)});kpl.addEventListener('mousemove',function(ev){var li=ev.target.closest('li[data-i]');if(li&&+li.dataset.i!==act){act=+li.dataset.i;mark()}});
-kpi.addEventListener('input',function(){act=0;query(kpi.value.trim())});
-kpi.addEventListener('keydown',function(ev){if(ev.key==='ArrowDown'){ev.preventDefault();act=Math.min(items.length-1,act+1);mark()}else if(ev.key==='ArrowUp'){ev.preventDefault();act=Math.max(0,act-1);mark()}else if(ev.key==='Enter'){ev.preventDefault();pick(act)}else if(ev.key==='Escape'){kclose()}else if(ev.key==='Tab'){ev.preventDefault()}})}
+var comp=false;kpi.addEventListener('compositionstart',function(){comp=true});kpi.addEventListener('compositionend',function(){comp=false;act=0;query(kpi.value.trim())});
+kpi.addEventListener('input',function(){if(comp)return;act=0;query(kpi.value.trim())});
+kpi.addEventListener('keydown',function(ev){if(ev.isComposing||ev.keyCode===229)return;if(ev.key==='ArrowDown'){ev.preventDefault();act=Math.min(items.length-1,act+1);mark()}else if(ev.key==='ArrowUp'){ev.preventDefault();act=Math.max(0,act-1);mark()}else if(ev.key==='Enter'){ev.preventDefault();pick(act)}else if(ev.key==='Escape'){kclose()}else if(ev.key==='Tab'){ev.preventDefault()}})}
 function mark(){$$('li[data-i]',kpl).forEach(function(li){var on=+li.dataset.i===act;li.classList.toggle('on',on);li.setAttribute('aria-selected',on);if(on)li.scrollIntoView({block:'nearest'})})}
 function paint(q,note){var h='',g='',i=0;items.forEach(function(it){if(it.g&&it.g!==g){g=it.g;h+='<li class="kg" role="presentation">'+esc(g)+'</li>'}h+='<li role="option" data-i="'+i+'" aria-selected="false"><b>'+it.t+'</b><span>'+it.s+'</span><i>'+(it.ext?'↗':'↵')+'</i></li>';i++});
 if(note)h+='<li class="kn" role="presentation">'+note+'</li>';kpl.innerHTML=h||'<li class="kn" role="presentation">没有匹配项</li>';mark()}
 function mk(arr,g){arr.forEach(function(x){x.g=g});return arr}
-function query(q){var ql=q.toLowerCase();if(!SJ){people().then(function(){query(kpi.value.trim())});if(!q){items=mk(PAGES.map(function(p){return row(esc(p[0]),esc(p[2]),P+p[1])}),'前往');paint('')}return}
+function nz(t){return String(t).toLowerCase().normalize('NFKC')}
+function query(q){var ql=nz(q),TS=ql.split(/\s+/).filter(Boolean);function hit(h){h=nz(h);return TS.every(function(t){return h.indexOf(t)>=0})}if(!SJ){people().then(function(){query(kpi.value.trim())});if(!q){items=mk(PAGES.map(function(p){return row(esc(p[0]),esc(p[2]),P+p[1])}),'前往');paint('')}return}
 items=[];var pp=[],tg=[],tp=[],dy=[],pg=[];
 if(!q){items=mk(PAGES.map(function(p){return row(esc(p[0]),esc(p[2]),P+p[1])}),'前往');items=items.concat(mk(SJ.p.slice().sort(function(a,b){return b[7]-a[7]}).slice(0,5).map(function(x){return row(esc(x[2]),'@'+esc(x[1])+' · '+fmt(x[7])+' 粉丝',P+'p/'+x[0]+'.html')}),'热门人物'));paint('');return}
-SJ.p.forEach(function(x){var n=x[2].toLowerCase(),h=x[1].toLowerCase(),sc=n===ql||h===ql?0:n.indexOf(ql)===0||h.indexOf(ql)===0?1:n.indexOf(ql)>=0||h.indexOf(ql)>=0?2:9;if(sc<9)pp.push([sc,-x[7],x])});pp.sort(function(a,b){return a[0]-b[0]||a[1]-b[1]});
+SJ.p.forEach(function(x){var n=nz(x[2]),h=nz(x[1]),sc=n===ql||h===ql?0:n.indexOf(ql)===0||h.indexOf(ql)===0?1:n.indexOf(ql)>=0||h.indexOf(ql)>=0?2:hit(x[2]+' '+x[1]+' '+(x[9]||''))?3:9;if(sc<9)pp.push([sc,-x[7],x])});pp.sort(function(a,b){return a[0]-b[0]||a[1]-b[1]});
 items=mk(pp.slice(0,6).map(function(z){var x=z[2];return row(hl(x[2],q),'@'+hl(x[1],q)+' · '+fmt(x[7])+' 粉丝',P+'p/'+x[0]+'.html')}),'人物');
-SJ.t.forEach(function(x){if(x[1].toLowerCase().indexOf(ql)>=0)tg.push(row(hl(x[1],q),'标签 · 打开「'+({ai:'AI',money:'搞钱',growth:'成长'})[x[2]]+'」领域并筛选',P+'d/'+x[2]+'.html#tag='+x[0]))});items=items.concat(mk(tg.slice(0,3),'标签'));
-SJ.tp.forEach(function(x){if(x[0].toLowerCase().indexOf(ql)>=0)tp.push(row(hl(x[0],q),'话题 · '+({ai:'AI',money:'搞钱',growth:'成长'})[x[1]],P+'trends.html'))});items=items.concat(mk(tp.slice(0,3),'话题'));
+SJ.t.forEach(function(x){if(hit(x[1]))tg.push(row(hl(x[1],q),'标签 · 打开「'+({ai:'AI',money:'搞钱',growth:'成长'})[x[2]]+'」领域并筛选',P+'d/'+x[2]+'.html#tag='+x[0]))});items=items.concat(mk(tg.slice(0,3),'标签'));
+SJ.tp.forEach(function(x){if(hit(x[0]))tp.push(row(hl(x[0],q),'话题 · '+({ai:'AI',money:'搞钱',growth:'成长'})[x[1]],P+'trends.html'))});items=items.concat(mk(tp.slice(0,3),'话题'));
 var m=q.match(/^(\d{4}-)?(\d{1,2})[-\/.月](\d{1,2})日?$/);if(m){var y=m[1]?m[1].slice(0,4):String(new Date().getFullYear()),k=y+'-'+('0'+m[2]).slice(-2)+'-'+('0'+m[3]).slice(-2);if((SJ.dy||[]).indexOf(k)>=0)dy.push(row(esc(dfull(k)),'当日日报',P+'day/'+k+'.html'));else if(SJ.d.some(function(x){return x[0]===k}))dy.push(row(esc(dfull(k)),'当日全部归档（按重要度）',P+'d/all.html#day='+k))}items=items.concat(mk(dy,'日期'));
-PAGES.forEach(function(p){if(p[0].toLowerCase().indexOf(ql)>=0)pg.push(row(hl(p[0],q),esc(p[2]),P+p[1]))});items=items.concat(mk(pg,'页面'));
+PAGES.forEach(function(p){if(hit(p[0]))pg.push(row(hl(p[0],q),esc(p[2]),P+p[1]))});items=items.concat(mk(pg,'页面'));
+var gz=[];(SJ.g||[]).forEach(function(x){var u=SJ.M[x[1]]||null;if(u&&hit(x[2]+' '+u[2]+' '+u[1])&&gz.length<5)gz.push({t:hl(x[2].length>46?x[2].slice(0,46)+'…':x[2],TS[0]),s:esc(u[2])+' · '+esc(x[3])+' 日报要点',h:'https://x.com/'+encodeURIComponent(u[1])+'/status/'+encodeURIComponent(x[0]),ext:1})});items=items.concat(mk(gz,'日报要点'));
 if(q.length>=2)items.push({g:'帖子',t:'在帖子摘录中搜索「'+esc(q)+'」',s:'按需读取最近 '+SJ.d.length+' 天分片，只搜摘录',h:'',k:'posts',q:q});
 paint(q)}
 function pick(i){var it=items[i];if(!it)return;if(it.k==='posts'){psearch(it.q);return}if(it.ext){window.open(it.h.replace(/&amp;/g,'&'),'_blank','noopener');return}kclose();location.href=it.h}
