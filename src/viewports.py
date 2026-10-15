@@ -73,8 +73,10 @@ with sync_playwright() as p:
                     ov=g.evaluate("()=>document.documentElement.scrollWidth>innerWidth+1")
                     if ov: fail(tag+' 新闻展开后横向溢出')
                     if vw<=1000:
-                        r2=g.evaluate("()=>{const p=document.querySelector('#npane');if(!p)return {none:1};const cs=getComputedStyle(p),pr=p.getBoundingClientRect();const l=document.querySelector('#ntop').getBoundingClientRect();return {pos:cs.position,vis:cs.display!=='none'&&pr.height>0,over:pr.top<l.bottom-2&&pr.bottom>l.top+2&&pr.left<l.right&&pr.right>l.left,w:pr.width}}")
-                        if not r2.get('none') and r2['vis'] and (r2['pos'] in('sticky','fixed') or r2['over']): fail(tag+' 窄屏阅读窗格未堆叠/遮挡列表 '+str(r2))
+                        r2=g.evaluate("()=>{const s=document.querySelector('.nside'),q=s.getBoundingClientRect(),bk=document.querySelector('#nback').getBoundingClientRect(),pb=document.querySelector('#npbody');return {open:s.classList.contains('open'),pos:getComputedStyle(s).position,full:Math.abs(q.width-innerWidth)<2&&Math.abs(q.height-innerHeight)<2,bk:[Math.round(bk.width),Math.round(bk.height)],lock:document.documentElement.classList.contains('nlock'),len:pb.textContent.trim().length,clip:pb.scrollWidth>pb.clientWidth+1}}")
+                        if not (r2['open'] and r2['pos']=='fixed' and r2['full'] and r2['lock'] and r2['len']>20 and not r2['clip']) or r2['bk'][1]<44: fail(tag+' 窄屏阅读页（整页滑入）状态不对 '+str(r2))
+                        g.click('#nback');g.wait_for_timeout(450)
+                        if g.evaluate("()=>document.querySelector('.nside').classList.contains('open')||document.documentElement.classList.contains('nlock')"): fail(tag+' 返回键没有关闭阅读页')
                 g.close()
             if th=='light' and vn in('p390','t820'):
                 g=c.new_page();g.goto(B+'index.html',wait_until='load');g.wait_for_timeout(400)

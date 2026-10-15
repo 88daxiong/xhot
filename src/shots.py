@@ -121,7 +121,7 @@ with sync_playwright() as p:
                     g.evaluate("document.querySelector('#ntop .nr:nth-child(4) .nrh').click()");g.wait_for_timeout(500)
                     ck(f'news[{mn}] 选中行 + 窗格重复序号/标题',g.evaluate("()=>document.querySelectorAll('#ntop .nr.sel').length===1&&document.querySelector('#npmeta .nn').textContent==='04'&&document.querySelector('#nptitle').textContent.length>3"))
                 if name=='news' and vw<=1000:
-                    g.click('#ntop .nr .nrh');g.wait_for_timeout(700);sh('news_expanded')
+                    g.click('#ntop .nr .nrh');g.wait_for_timeout(700);sh('news_expanded');g.keyboard.press('Escape');g.wait_for_timeout(300)
                 # ⌘K
                 if name in('today','all') :
                     g.keyboard.press('Control+k');g.wait_for_timeout(500)
@@ -140,10 +140,13 @@ with sync_playwright() as p:
                     g.keyboard.press('Escape')
                 if name=='today':
                     if g.is_visible('.hxb'): g.click('.hxb')
-                    g.click('[data-density]');g.wait_for_timeout(150)
+                    g.click('button[data-density]');g.wait_for_timeout(150)
                     ck(f'today[{mn}] 紧凑密度切换并记住',g.evaluate("()=>document.documentElement.dataset.density==='compact'&&localStorage.getItem('xhot-density')==='compact'"))
+                    g.reload();g.wait_for_timeout(600)
+                    ck(f'today[{mn}] 保存「紧凑」后刷新不白屏、按钮仍可用',g.evaluate("()=>!!document.body&&!!document.querySelector('main')&&document.documentElement.dataset.density==='compact'&&document.querySelector('button[data-density]').textContent==='舒适'"))
+                    if g.is_visible('.hxb'): g.click('.hxb')
                     sh('today_compact',clip={'x':0,'y':0,'width':vw,'height':min(900,844 if vw<600 else 900)})
-                    g.click('[data-density]')
+                    g.click('button[data-density]')
                     if g.is_visible('.hxb'): g.mouse.click(5,300)
             r=g.evaluate(CHK);agg['n']+=1
             if name!='x': agg['cr']+=[u+' '+x['k']+' '+str(x['cr'])+' '+x['t'] for x in g.evaluate(AUD) if x['cr']<4.5]

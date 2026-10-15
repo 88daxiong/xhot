@@ -98,7 +98,7 @@ JSON 键排序固定、缩进 2。导出脚本在末尾做「全文泄漏检查�
 2. 编辑 `src/watchlist.json`（每个领域的 `accounts` / `accounts_zh` / `groups` / `trend_queries` / `news_query`）。
 3. 抓取并入库（`ingest.py`、`ingest_tl.py`、`aihot_fetch.py`、`gh_trending.py`、`avatars_fetch.py`，细节见刷新流程文档）。
 4. 写日报与周要点：`python3 daily_draft.py > /tmp/daily_draft.json`，按字段说明写 `daily/<日期>.json`；每周一 `XHOT_WEEKLY=1 python3 generate.py` 得到周草稿后写 `weekly/<周>.json`。
-5. 生成与自检：`python3 generate.py`（输出 `site/`）→ `python3 test_escape.py`（转义 / 安全回归，必须 ALL PASS）→ `python3 fuzz.py 8`（随机恶意字符串灌进日报 / 周要点所有字段）→ `python3 gzserve.py site 8840 &` → `python3 shots.py --all`（截图 + CSP / JS 错误 / 溢出 / 字号 / 同源请求 / 功能断言）→ `python3 viewports.py`（12 种视口）→ `python3 mobile_audit.py [--scale130]`（iPhone SE/14/Pro Max、Pixel 7、360×640、iPad mini/Pro 真机模拟：横向溢出、被截断的文字、line-clamp、字号下限 15/13/12、触控 44px、展开内容完整可见，`--scale130` 模拟系统文字放大 130%）→ `python3 speed.py`（Fast 3G + CPU 4×）。
+5. 生成与自检：`python3 generate.py`（输出 `site/`）→ `python3 test_escape.py`（转义 / 安全回归，必须 ALL PASS）→ `python3 fuzz.py 8`（随机恶意字符串灌进日报 / 周要点所有字段）→ `python3 gzserve.py site 8840 &` → `python3 shots.py --all`（截图 + CSP / JS 错误 / 溢出 / 字号 / 同源请求 / 功能断言）→ `python3 viewports.py`（12 种视口）→ `python3 mobile_audit.py [--scale130]`（iPhone SE/14/Pro Max、Pixel 7、360×640、iPad mini/Pro 真机模拟：横向溢出、被截断的文字、line-clamp、字号下限 15/13/12、触控 44px、展开内容完整可见，`--scale130` 模拟系统文字放大 130%）→ `python3 ds_audit.py`（设计系统一致性：字号/间距/圆角/字重必须落在令牌刻度内、顶栏高度与页面宽度一致、卡片内边距一致，含展开态）→ `python3 news_all.py`（逐条打开每条资讯）→ `python3 speed.py`（Fast 3G + CPU 4×）。
 6. 发布：把 `site/` 复制到仓库根目录，`python3 export_data.py` 导出 `data/`，提交并推送到 `main`。推送凭据放环境变量，不要写进 git config、remote 或任何文件。
 
 **安全设计**：每页 meta CSP（`script-src` 仅本站 + 主题预绘脚本的 sha256；`connect-src 'self'`；无第三方）与 referrer meta；所有外链经 `safe_url` / `safeUrl`（只放行 http(s)）并带 `rel="noopener noreferrer"`；所有文本先转义再渲染（含译文、摘录、⌘K 结果、分片数据）；嵌入 HTML 的 JSON 转义 `<>&`、U+2028/2029 与 `@@`；头像只接受 `pbs.twimg.com` 并重新编码；前端无 `eval` / `document.write` / `outerHTML`；本地存储只有主题、密度、已读 ID 与上次访问时间。`src/.gitignore` 已排除 `xhot.db`、`raw/`、头像缓存和生成目录，**不要把这些或任何密钥提交到仓库**。
@@ -106,3 +106,8 @@ JSON 键排序固定、缩进 2。导出脚本在末尾做「全文泄漏检查�
 ## English
 
 **XHOT** is a static briefing of hot posts on X across AI, making money and personal growth, refreshed daily at 08:00 (Asia/Shanghai). Pages: Today (three-sentence summary, must-reads, a ranked Top 30 with one-line takeaways), Domains, People (weekly takeaways for the top 30), News, Trends, a full archive and a ⌘K search. The UI is Chinese only. The public repo and site contain **only post IDs, metrics, short excerpts (≤220–320 characters) and agent-written Chinese summaries plus links back to X — no full tweet text**. No analytics, no third-party requests; read/new badges live only in your browser. The generator is host-agnostic (plain static output). Limits on GitHub Pages: no response headers (CSP via `<meta>` only, no `frame-ancestors`), soft bandwidth/size limits, unreliable access from mainland China. Tweet content belongs to the original authors.
+
+
+## 设计系统（v15.5）
+
+令牌在 `ds_tokens.json`：字号 6 档（12 / 13 / 14（手机 15）/ 16（手机 17）/ 20 / 28，rem，随系统字号缩放），间距 0 1 2 4 8 12 16 24 32 40 48 56 64，圆角 6 / 8 / 12 / 胶囊，字重 400 / 500 / 600 / 700，一种 1px 边框、一种阴影。构建时 `ds_snap.py` 把所有 CSS 的字号 / 间距 / 圆角吸附到刻度；`style_ds.css` 定义共享组件（页面容器、标题层级、卡片、列表行、标签、按钮、分段控件、展开、手机整页阅读页）。展开/收起统一走 `app_core.js` 里的 `xp()`（高度动画、aria、滚入视口、减少动效时直接切换）。改样式后请跑 `ds_audit.py`，不得有越界值。

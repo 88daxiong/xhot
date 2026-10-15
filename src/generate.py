@@ -407,6 +407,7 @@ def news():
     days=[k for k,_ in groups if k!='0000-00-00']
     f0=TOP[0] if TOP else None
     aside=('<aside class="nside" aria-label="阅读窗格"><section class="panel nrp" id="npane"><i class="nnotch" id="nnotch" aria-hidden="true"></i>'
+           '<button class="nback" id="nback" type="button" aria-label="返回资讯列表"><i aria-hidden="true"></i>资讯</button>'
            '<div class="nrpm" id="npmeta">'+('<span class="nn">01</span>'+nmeta(N[f0]) if f0 is not None else '')+'</div>'
            '<div class="nrph"><span class="nrpt" id="nptitle">'+(e(N[f0]['t']) if f0 is not None else '阅读窗格')+'</span></div>'
            '<div class="nrpb" id="npbody">'+(nbody(N[f0]) if f0 is not None else '<p class="nph" id="nhint">点左侧任意标题，全文在这里打开；列表位置不变，可以连续点着读。</p>')+'</div></section></aside>')
@@ -783,15 +784,17 @@ def readable(css):
     for o in ('0 12px 32px -12px rgba(0,0,0,.4)','0 24px 64px -16px rgba(0,0,0,.5)','0 -12px 40px -8px rgba(0,0,0,.4)'): css=css.replace(o,'0 16px 40px -12px rgba(0,0,0,.35)')   # 浮层阴影只留一档
     css=css.replace('font-weight:bold','font-weight:600').replace('font-weight:normal','font-weight:400')
     return css
-CSSR=readable(CSSR)+'\n'+open('style_final.css',encoding='utf-8').read()
+CSSR=readable(CSSR)+'\n'+open('style_final.css',encoding='utf-8').read()+'\n'+open('style_ds.css',encoding='utf-8').read()
 def remify(css):
     # 字号一律 rem：系统/浏览器字体放大时整站等比缩放（calc()/max() 里的不动）
     # html 为 94%：13px→12.2px 是下限（AIHOT 比例：正文 14、标题 17、元信息 12.5）
-    fl=lambda v:max(float(v),13)
+    fl=lambda v:float(v)
     css=re.sub(r'(?<![\w(,])(font-size:)(\d+(?:\.\d+)?)px',lambda m:m.group(1)+('%g'%(fl(m.group(2))/16))+'rem',css)
     css=re.sub(r'(font:(?:\d{3} )?)(\d+(?:\.\d+)?)px',lambda m:m.group(1)+('%g'%(fl(m.group(2))/16))+'rem',css)
     return css
 CSSR=remify(CSSR)
+import ds_snap as DS
+CSSR=DS.root_vars()+'\n'+DS.snap(CSSR)
 CSSR=re.sub(r'/\*.*?\*/','',CSSR,flags=re.S); CSSR=re.sub(r'\s*\n\s*','',CSSR)
 CSSBYKEY={}
 def page_css(html):

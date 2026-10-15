@@ -9,9 +9,9 @@ def fail(m):
     FAILS.append(m); print('FAIL',m,flush=True)
 CHK="""()=>{const o={};const e=document.elementFromPoint(innerWidth/2,innerHeight/2);o.btnOK=!(e&&e.closest('.kov,.kp')&&getComputedStyle(e.closest('.kov,.kp')).position==='fixed');o.ctr=e?e.tagName+'.'+e.className:'';
 o.ov=document.documentElement.scrollWidth>innerWidth+1;
-o.fixed=[...document.querySelectorAll('body *')].filter(x=>{const c=getComputedStyle(x);if(c.position!=='fixed')return false;const q=x.getBoundingClientRect();return q.width>=innerWidth*.9&&q.height>=innerHeight*.9&&c.display!=='none'&&x.offsetParent===null&&!x.hidden}).map(x=>x.tagName+'.'+x.className).slice(0,3);
-const pb=document.querySelector('#npbody');o.pane=pb&&pb.offsetParent?{len:pb.textContent.trim().length,clip:pb.scrollWidth>pb.clientWidth+1}:null;
-const op=document.querySelector('.nr.open .nrb');if(op){const q=op.getBoundingClientRect();o.open={len:op.textContent.trim().length,h:Math.round(q.height),clipX:op.scrollWidth>op.clientWidth+1}}return o}"""
+o.fixed=[...document.querySelectorAll('body *')].filter(x=>{const c=getComputedStyle(x);if(c.position!=='fixed'||x.matches('.nside'))return false;const q=x.getBoundingClientRect();return q.width>=innerWidth*.9&&q.height>=innerHeight*.9&&c.display!=='none'&&x.offsetParent===null&&!x.hidden}).map(x=>x.tagName+'.'+x.className).slice(0,3);
+const pb=document.querySelector('#npbody');o.pane=pb&&pb.offsetParent&&!document.querySelector('.nside.open')?{len:pb.textContent.trim().length,clip:pb.scrollWidth>pb.clientWidth+1}:null;
+const sh=document.querySelector('.nside.open');if(sh&&pb){o.open={len:pb.textContent.trim().length,clipX:pb.scrollWidth>pb.clientWidth+1,lock:document.documentElement.classList.contains('nlock')}}return o}"""
 with sync_playwright() as p:
     b=p.chromium.launch(executable_path='/usr/bin/google-chrome',args=['--no-sandbox'])
     for name,vp,mob in [('desk',{'width':1440,'height':900},False),('phone',{'width':390,'height':844},True)]:
@@ -37,9 +37,9 @@ with sync_playwright() as p:
                     if not r['pane'] or r['pane']['len']<20: fail(t+' 阅读窗格正文为空')
                     elif r['pane']['clip']: fail(t+' 窗格内容横向被裁')
                 else:
-                    if not r['open'] or r['open']['len']<20: fail(t+' 展开内容为空')
+                    if not r['open'] or r['open']['len']<20: fail(t+' 阅读页内容为空')
                     elif r['open']['clipX']: fail(t+' 展开内容横向被裁')
-                    pg.evaluate("i=>document.querySelectorAll('.nr')[i].querySelector('.nrh').click()",i)  # 收起
+                    pg.click('#nback'); pg.wait_for_timeout(60)  # 返回
         if errs: fail(name+' JS 错误 '+str(errs[:3]))
         print(name,'打开条目',n,flush=True)
 print('news_all: FAIL %d'%len(FAILS) if FAILS else 'news_all: ALL PASS'); sys.exit(1 if FAILS else 0)

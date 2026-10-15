@@ -1,6 +1,6 @@
 /* ===== XHOT v15 增量样式（叠在 v14 基础上；构建时按实际用到的类做裁剪）===== */
-:root{--s1:4px;--s2:8px;--s3:12px;--s4:16px;--s5:24px;--fs:.9375rem;--lh:1.6;--cp:14px;--rowp:12px}
-html[data-density=compact]{--fs:.875rem;--lh:1.5;--cp:10px;--rowp:8px}
+:root{--s1:4px;--s2:8px;--s3:12px;--s4:16px;--s5:24px;--fs:var(--t-md);--lh:1.6;--cp:14px;--rowp:12px}
+html[data-density=compact]{--fs:var(--t-sm);--lh:1.5;--cp:10px;--rowp:8px}
 body{font-size:var(--fs);line-height:1.6}
 .skip{position:absolute;left:12px;top:-60px;z-index:100;padding:10px 16px;border-radius:10px;background:var(--ac);color:#fff;font-weight:600;text-decoration:none}
 .skip:focus{top:8px}

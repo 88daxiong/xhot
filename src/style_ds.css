@@ -1,0 +1,55 @@
+/* ===== v15.5 设计系统层（最后加载；令牌见 ds_tokens.json，构建时统一吸附刻度）=====
+   字号 6 档：cap12 / sm13 / md14(手机15) / lg16(手机17) / xl20 / xxl28
+   间距：0 1 2 4 8 12 16 24 32 | 圆角：6 8 12 pill | 一种边框 1px var(--bd) | 一种阴影 var(--sh)
+   组件：页面容器 .wrap/.bar · 卡片 · 列表行 · 标签 .tag · 按钮 .btn · 分段控件 .seg · 展开 xp · 头像行 */
+:root{--pg:24px;--cp:12px;--rowp:12px;--r1:6px;--r2:8px;--r3:12px}
+@media(max-width:720px){:root{--pg:16px}}
+html[data-density=compact]{--cp:8px;--rowp:8px}
+/* 页面容器：所有页面同一最大宽度与左右内边距 */
+.wrap,.bar{max-width:1440px;margin-left:auto;margin-right:auto;padding-left:var(--pg);padding-right:var(--pg)}
+.wrap{padding-top:var(--s4);padding-bottom:var(--s5)}
+.bar{height:56px}
+@media(max-width:720px){.bar{height:auto;padding-top:var(--s2);padding-bottom:var(--s2)}}
+/* 标题层级：页面标题 xl / 区块标题 lg / 小标题 md */
+.tools h1,.wrap>h1,.abt h1{font-size:var(--t-xl);font-weight:600;line-height:1.3;margin:0}
+.sec>h2,.sech h2,.panel>h2,.abt h2,.wrap>section>h2{font-size:var(--t-lg);font-weight:600;line-height:1.35;margin:0 0 var(--s3)}
+.sech h2{margin:0}
+/* 卡片：同一内边距/圆角/边框/阴影 */
+.post,.pc,.acard,.kpi,.panel,.glance,.brief{border-radius:var(--r3);border:1px solid var(--bd);box-shadow:var(--sh)}
+.post,.pc,.acard,.kpi{padding:var(--s3) var(--s4)}
+/* 列表行：同一纵向内边距 */
+.trw summary,.nrh,.list a.trow,.gl a.grow{padding-top:var(--rowp);padding-bottom:var(--rowp);padding-left:var(--s4);padding-right:var(--s4)}
+.trx{padding:0 var(--s4) var(--s4)}
+/* 头像里的首字母 */
+.av,.hh .av{font-size:var(--t-sm)}
+/* 标签 / 按钮：圆角与字号统一 */
+.tag,.tc,.src,.trb{font-size:var(--t-cap)}
+.btn{font-size:var(--t-sm);border-radius:var(--r2)}
+.seg{border-radius:var(--r2)}.seg button,.seg a{border-radius:var(--r1)}
+/* 共享展开组件：容器动画由 app_core 的 xp() 设置，这里只定义视觉 */
+.dor,.trx,.nrb{overflow:clip}
+/* 基础元素：去掉浏览器默认的 em 间距/字号，全部落在令牌刻度上 */
+b,strong{font-weight:600}
+h1{font-size:var(--t-xl);font-weight:600}
+h2,h3,h4{font-size:var(--t-lg);font-weight:600;margin:0 0 var(--s3)}
+p{margin:0 0 var(--s3)}
+button{padding:0}
+/* 手机/平板：资讯阅读 = 整页滑入（返回键关闭），不再在列表里撑开 */
+.nback{display:none}
+@media(max-width:1000px){
+.nside{display:block;position:fixed;inset:0;z-index:60;contain:none;background:var(--bg);transform:translateX(100%);visibility:hidden;transition:transform .26s cubic-bezier(.2,.7,.2,1),visibility 0s .26s;padding-top:env(safe-area-inset-top);padding-bottom:env(safe-area-inset-bottom)}
+.nside.open{transform:none;visibility:visible;transition-delay:0s}
+.nside .nrp{position:static;height:100%;max-height:none;border-radius:0;border:0;box-shadow:none;display:flex;flex-direction:column;background:var(--bg)}
+.nside .nnotch{display:none}
+.nback{display:inline-flex;align-items:center;gap:var(--s1);align-self:flex-start;min-height:44px;margin:var(--s2) var(--s2) 0;padding:0 var(--s3) 0 var(--s2);border:0;background:none;color:var(--actx);font-size:var(--t-lg);font-weight:500;cursor:pointer;border-radius:var(--r2)}
+.nback i{width:10px;height:10px;border-left:2px solid currentColor;border-bottom:2px solid currentColor;transform:rotate(45deg);margin-right:var(--s1)}
+.nback:active{background:var(--hov)}
+.nside .nrpm{padding:0 var(--pg)}.nside .nrph{padding:var(--s2) var(--pg) var(--s3)}.nside .nrpb{padding:var(--s3) var(--pg) var(--s5);overscroll-behavior:contain;border-radius:0}
+html.nlock,html.nlock body{overflow:hidden}
+.nr.sel .nrh{background:var(--hov)}
+}
+@media(prefers-reduced-motion:reduce){.nside{transition:none}}
+@media(max-width:720px){
+.gm{grid-template-columns:minmax(0,1fr)}.gm .gn{grid-row:1}.gm .gx{grid-column:1;grid-row:2;justify-self:start}.gm .gd{grid-row:3}
+.gn,.go{overflow-wrap:break-word}
+}

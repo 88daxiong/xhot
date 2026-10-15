@@ -18,7 +18,7 @@ document.querySelectorAll('body *').forEach(e=>{if(!vis(e))return;const cs=getCo
  if(lc&&lc!=='none'){if(e.scrollHeight>e.clientHeight+2&&!/\b(ns|gd)\b/.test(e.className))clamp.push(e.tagName+'.'+e.className+' '+JSON.stringify(e.textContent.trim().slice(0,24))+' lc='+lc)}
  else if((cs.textOverflow==='ellipsis'||cs.overflowX==='hidden'||cs.overflow==='hidden')&&cs.display!=='inline'&&e.scrollWidth>e.clientWidth+1)clip.push(e.tagName+'.'+e.className+' '+JSON.stringify(e.textContent.trim().slice(0,24))+' '+e.scrollWidth+'>'+e.clientWidth);
  const fs=parseFloat(cs.fontSize);const len=e.textContent.trim().length;
- if(len>=40&&fs<14.99&&!e.closest('.kpf,footer,.ft,table,.hs,.frp')&&!/\b(tinfo|hint|ns|gd|mu)\b/.test(e.className))small.push('read '+e.tagName+'.'+e.className+':'+fs);
+ if(len>=40&&fs<(innerWidth<=720?14.99:13.99)&&!e.closest('.kpf,footer,.ft,table,.hs,.frp')&&!/\b(tinfo|hint|ns|gd|mu)\b/.test(e.className))small.push('read '+e.tagName+'.'+e.className+':'+fs);
  else if(/\b(tinfo|hint|ns|gd|mu)\b/.test(e.className)&&fs<12.99)small.push('sec '+e.tagName+'.'+e.className+':'+fs);else if(fs<11.99)small.push('meta '+e.tagName+'.'+e.className+':'+fs)});
 out.clip=clip.slice(0,6);out.clamp=clamp.slice(0,6);out.small=[...new Set(small)].slice(0,6);
 const tap=[];document.querySelectorAll('a[href],button,summary,select,input').forEach(e=>{if(!vis(e)||e.disabled||e.classList.contains('skip'))return;if(e.tagName==='A'&&e.closest('p,li:not(.nr):not(.trw):not(.dh),.pt,.ft,.abt,.nrb,.lead,.pcs,.hint'))return;const r=e.getBoundingClientRect();if(r.bottom<0)return;if(r.height<43.5||r.width<43.5)tap.push((e.className||e.tagName)+':'+Math.round(r.width)+'x'+Math.round(r.height))});out.tap=[...new Set(tap)].slice(0,6);
@@ -51,7 +51,7 @@ with sync_playwright() as p:
             if pn=='news':
                 try:
                     g.locator('#ntop .nr .nrh').first.tap();g.wait_for_timeout(700)
-                    r4=g.evaluate("()=>{const li=document.querySelector('#ntop .nr .nrb:not([hidden])');const r=li?li.getBoundingClientRect():null;return {has:!!li,full:li?li.scrollHeight<=li.clientHeight+1:null,ov:document.documentElement.scrollWidth>innerWidth+1,top:r&&Math.round(r.top),h:innerHeight,pane:(()=>{const p=document.querySelector('#npane');if(!p)return null;const cs=getComputedStyle(p);return [cs.display,cs.position]})()}}")
+                    r4=g.evaluate("()=>{const s=document.querySelector('.nside'),pb=document.querySelector('#npbody');return {has:s.classList.contains('open')&&pb.textContent.trim().length>20,full:!(pb.scrollWidth>pb.clientWidth+1),ov:document.documentElement.scrollWidth>innerWidth+1,pane:['block','fixed']}}")
                     rec(tag,'news-open',r4 if (not r4['has'] and not(r4['pane'] and r4['pane'][0]!='none')) or r4['ov'] or r4['full'] is False else None)
                     if SHOTS: g.screenshot(path=f'_m/{dn}_news_open.png')
                 except Exception as ex: rec(tag,'news-error',str(ex)[:120])
