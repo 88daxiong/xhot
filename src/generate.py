@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
-"""XHOT 静态站生成器（日报 · 热帖 · 账号榜 · 资讯 · 趋势）：顶部 5 个 tab = 5 个独立页面（深链接）
-  index.html 日报（daily/<日期>.html 往期，读 daily/*.json，缺失的 text_orig 按 post_id 从数据库补并写回）· hot.html 热帖 · accounts.html 账号榜 · news.html 资讯（X 新闻 + AIHOT）· trends.html 趋势（话题涨跌 + GitHub）
+"""XHOT 静态站生成器（统一工具条 + 日期选择器 · 日报原帖折叠/译文 · 资讯两栏阅读窗格）：顶部 4 个 tab = 4 个独立页面（深链接）
+  index.html 日报 · hot.html 热帖 · accounts.html 账号榜 · news.html 资讯（X 新闻 + AIHOT）· trends.html 趋势（话题涨跌 + GitHub）
   p/<handle>.html 个人页；assets/ 下哈希资源：app.<h>.js、hot.<h>.json、av/<handle>.<h>.jpg
 数据：xhot.db、raw/、avatars/（由 avatars_fetch.py 下载）。用法：python3 generate.py [输出目录]"""
 import os,sys,glob,json,re,datetime,hashlib,shutil,html as _h
@@ -112,6 +112,27 @@ def jsafe(o):
     """嵌入 <script type=application/json> 的 JSON：转义 < > & 与 U+2028/2029，防止 </script>、<!-- 等打断解析"""
     return (json.dumps(o,ensure_ascii=False,separators=(',',':')).replace('<','\\u003c').replace('>','\\u003e')
             .replace('&','\\u0026').replace('\u2028','\\u2028').replace('\u2029','\\u2029'))
+
+def tools(title,mid='',right='',info=''):
+    """统一工具条：左标题 · 中筛选 · 右日期 + 排序；info 是下方一行小字"""
+    return (f'<div class="tools"><h1>{title}</h1><div class="tmid">{mid}</div><div class="tright">{right}</div></div>'+(f'<div class="tinfo">{info}</div>' if info else ''))
+def dfull(k):
+    t=NOW.strftime('%Y-%m-%d'); y=(NOW-datetime.timedelta(days=1)).strftime('%Y-%m-%d'); d=datetime.datetime.strptime(k,'%Y-%m-%d')
+    return f'今天 · {d.month}月{d.day}日' if k==t else f'昨天 · {d.month}月{d.day}日' if k==y else dsub(k)
+def dctl(days,mode='state',cur='',href=''):
+    """统一日期控件：‹ [📅 日期 ▾] ›。state = 页内筛选（空 = 全部日期）；nav = 跳转到 href 模板（{d}）。days 为有数据的日期（新→旧）"""
+    days=[k for k in days if re.fullmatch(r'\d{4}-\d\d-\d\d',k)]
+    if mode=='nav':
+        i=days.index(cur) if cur in days else -1
+        pv=f'<a class="dcb dcp" href="{e(href.replace("{d}",days[i+1]))}" rel="prev" aria-label="更早一天">‹</a>' if 0<=i<len(days)-1 else '<span class="dcb dcp dis" aria-disabled="true">‹</span>'
+        nx=f'<a class="dcb dcn" href="{e(href.replace("{d}",days[i-1]))}" rel="next" aria-label="更新一天">›</a>' if i>0 else '<span class="dcb dcn dis" aria-disabled="true">›</span>'
+        lab=dfull(cur) if cur else '选择日期'
+    else:
+        pv='<button type="button" class="dcb dcp" aria-label="更早一天"'+('' if days else ' disabled')+'>‹</button>'
+        nx='<button type="button" class="dcb dcn" aria-label="更新一天" disabled>›</button>'
+        lab='全部日期'
+    return (f'<div class="dctl" data-mode="{mode}" data-days="{",".join(days)}"'+(f' data-cur="{cur}"' if cur else '')+(f' data-href="{e(href)}"' if href else '')+f'>{pv}'
+            f'<button type="button" class="dcm" aria-haspopup="dialog" aria-expanded="false"><i aria-hidden="true">📅</i><span class="dcl">{lab}</span><i class="dcv" aria-hidden="true"></i></button>{nx}</div>')
 THEME='<div class="tg" role="group" aria-label="主题"><button type="button" data-set-theme="light" aria-label="浅色">☀</button><button type="button" data-set-theme="dark" aria-label="深色">☾</button><button type="button" data-set-theme="auto">自动</button></div>'
 TABS=[('index.html','📅 日报'),('hot.html','🔥 热帖'),('accounts.html','👤 账号榜'),('news.html','📰 资讯'),('trends.html','📈 趋势')]
 def _fa(lab):
@@ -204,14 +225,33 @@ def hot():
     L={d:{m:lst(d,m) for m in 'wgt'} for d in ['all']+DOMS}
     used=sorted({i for d in L.values() for l in d.values() for i in l}); remap={o:n for n,o in enumerate(used)}
     PP=[P[i] for i in used]; LL={d:{m:[remap[i] for i in l] for m,l in v.items()} for d,v in L.items()}
-    UU=[[u,ACC[u]['name'],ACC[u]['H'],ACC[u]['dom'],AVF.get(u,''),hue(u)] for u in us]
+    us=us+[u for u in ACC if u not in ui]   # U 含全部账号（日期文件按下标引用）
+    UU=[[u,ACC[u]['name'],ACC[u]['H'],ACC[u]['dom'],AVF.get(u,''),hue(u),','.join(ACC[u]['doms'])] for u in us]
     def slim(p): return p[:9]+['' if p[9]==f'https://x.com/{UU[p[10]][2]}/status/{p[0]}' else p[9]]+p[10:]  # url 可还原则省略
     data=jdump({'P':[slim(p) for p in PP],'U':UU,'L':LL}); hn=f'hot.{H8(data)}.json'; put(hn,data)
+    # 按日期查看：最近 8 天各取热度前 100 + 各领域前 40（每人 ≤3 条），单独文件，选日期时才加载
+    byday={}
+    for i,p in enumerate(P): byday.setdefault(dkey(p[1]),[]).append(i)
+    HDAYS=[k for k in sorted(byday,reverse=True) if len(byday[k])>=5][:8]
+    def pick(idx,n):
+        out=[];c={}
+        for i in sorted(idx,key=lambda i:-P[i][8]):
+            a=P[i][10];c[a]=c.get(a,0)+1
+            if c[a]>CAP: continue
+            out.append(i)
+            if len(out)>=n: break
+        return out
+    dmap={};DL={}
+    for k in HDAYS:
+        sel=set(pick(byday[k],100))
+        for d in DOMS: sel|=set(pick([i for i in byday[k] if d in ACC[us[P[i][10]]]['doms']],40))
+        DL[k]=[dmap.setdefault(i,len(dmap)) for i in sorted(sel,key=lambda i:-P[i][8])]
+    ddata=jdump({'P':[slim(P[i]) for i in dmap],'D':DL}); dn_=f'hotd.{H8(ddata)}.json'; put(dn_,ddata)
     first=withdays([PP[i] for i in LL['all']['t'][:PRE]],lambda p:card(p[:10],ACC[us[p[10]]]))
     nw=len(LL['all']['t'])
     ov=overview(P,us)
-    body=(f'{ov}<div class="tools"><h1>热帖</h1>{SORTSEG}{domseg()}<input type="search" id="hq" aria-label="搜索热帖" placeholder="搜索内容 / 账号…" autocomplete="off" spellcheck="false" style="flex:0 1 220px"><span class="sp"></span><span class="cnt" id="cnt" aria-live="polite">最新 {nw} 条 · 每人最多 {CAP} 条</span></div>'
-          f'<div id="feed" class="grid tl" data-src="assets/{hn}" data-pre="{PRE}">{first}</div><button id="more" class="more" type="button"{"" if nw>PRE else " hidden"}>再显示 36 条</button>')
+    body=(f'{ov}'+tools('热帖',domseg()+'<input type="search" id="hq" aria-label="搜索热帖" placeholder="搜索内容 / 账号…" autocomplete="off" spellcheck="false">',dctl(HDAYS)+SORTSEG,f'<span class="cnt" id="cnt" aria-live="polite">最新 {nw} 条 · 每人最多 {CAP} 条</span>')+
+          f'<div id="feed" class="grid tl" data-src="assets/{hn}" data-dsrc="assets/{dn_}" data-pre="{PRE}">{first}</div><button id="more" class="more" type="button"{"" if nw>PRE else " hidden"}>再显示 36 条</button>')
     return page('XHOT · 热帖',body,'hot.html',head='')
 # ---- 账号榜 ----
 def accounts():
@@ -227,8 +267,9 @@ def accounts():
                 dv='' if a['d'] is None else f'<span class="dv {"up" if a["d"]>0 else "dn" if a["d"]<0 else ""}">{"+" if a["d"]>0 else ""}{a["d"]:,} 较上次</span>'
                 sec+=(f'<a class="acard" href="p/{a["u"]}.html" style="--dc:{DC[d]}" data-dom="{d}" data-f="{a["f"]}" data-d="{a["d"] or 0}" data-q="{e((a["name"]+" "+a["u"]).lower())}">{av(a["u"],a["name"],"l",eager=("inline" if (_ec:=_ec+1)<=24 else False))}'
                       f'<span class="an"><b>{e(a["name"])}</b><small>@{e(a["H"])}</small></span><span class="af"><span class="tag">{DN[d]}</span><span class="fv">{fmt(a["f"])} 粉丝</span>{dv}</span></a>')
-    body=(f'<div class="tools"><h1>账号榜</h1>{domseg()}<div class="seg" role="group" aria-label="排序"><button type="button" data-asort="grp" class="on" aria-pressed="true">按分组</button><button type="button" data-asort="f" aria-pressed="false">粉丝数</button><button type="button" data-asort="d" aria-pressed="false">粉丝变化</button></div>'
-          f'<input type="search" id="aq" aria-label="搜索账号" placeholder="搜索账号…" autocomplete="off" spellcheck="false"><span class="sp"></span><span class="cnt" id="acnt">{len(ACC)} 个账号 · 点卡片看主页</span><span class="hint" title="粉丝变化 = 最近一次抓取 vs 上一次抓取">变化 = 本次 vs 上次抓取</span></div><div id="ag" class="agrid">{sec}</div>')
+    body=(tools('账号榜',domseg()+'<input type="search" id="aq" aria-label="搜索账号" placeholder="搜索账号…" autocomplete="off" spellcheck="false">',
+                '<div class="seg" role="group" aria-label="排序"><button type="button" data-asort="grp" class="on" aria-pressed="true">按分组</button><button type="button" data-asort="f" aria-pressed="false">粉丝数</button><button type="button" data-asort="d" aria-pressed="false">粉丝变化</button></div>',
+                f'<span class="cnt" id="acnt">{len(ACC)} 个账号 · 点卡片看主页</span><span class="hint" title="粉丝变化 = 最近一次抓取 vs 上一次抓取"> · 变化 = 本次 vs 上次抓取</span>')+f'<div id="ag" class="agrid">{sec}</div>')
     return page('XHOT · 账号榜',body,'accounts.html')
 # ---- 资讯 ----
 GH=GH0
@@ -298,11 +339,13 @@ def ntop(N):
         pick+=[i for i,n in enumerate(N) if n['s']==k][:q[k]]
     if len(pick)<12: pick+=[i for i in range(len(N)) if i not in pick][:12-len(pick)]
     return pick
-def nrow(n,i):
+def nmeta(n):
     t=dt(n.get('ts') or '')
     tm=f'<time class="tm" datetime="{e(n["ts"])}"><b>{t.strftime("%H:%M")}</b><span class="rl">{relt(n["ts"])}</span></time>' if t else ''
-    return (f'<li class="nr" data-s="{n["s"]}" data-i="{i}"><button class="nrh" type="button" aria-expanded="false">'
-            f'<span class="nrm"><span class="src {n["s"]}">{n["sl"]}</span>{tm}</span>'
+    return f'<span class="src {n["s"]}">{n["sl"]}</span>{tm}'
+def nrow(n,i,sel=False):
+    return (f'<li class="nr{" sel" if sel else ""}" data-s="{n["s"]}" data-i="{i}"><button class="nrh" type="button" aria-expanded="false">'
+            f'<span class="nrm">{nmeta(n)}</span>'
             f'<span class="nrt"><b class="nt2">{e(n["t"])}</b><span class="ns">{e(n["sm"])}</span></span><i class="chev" aria-hidden="true"></i></button>'
             f'<div class="nrb" hidden></div></li>')
 def nbody(n):
@@ -315,9 +358,8 @@ def news():
     TOP=ntop(N)
     nbd=jdump([nbody(n) for n in N]); nbn=f'news.{H8(nbd)}.json'; put(nbn,nbd)
     SL=(('h','AIHOT 热点'),('d','AIHOT 日报'),('s','AIHOT 精选'),('x','X 新闻 · 英文'))
-    seg=('<div class="seg" role="group" aria-label="范围"><button type="button" data-src="top" class="on" aria-pressed="true">⭐ 精选 '+str(len(TOP))+'</button>'
-         '<button type="button" data-src="all" aria-pressed="false">全部 '+str(len(N))+'</button></div>'
-         '<div class="seg msrc" role="group" aria-label="来源">'
+    seg=('<div class="seg" role="group" aria-label="来源筛选"><button type="button" data-src="top" class="on" aria-pressed="true">⭐ 精选 '+str(len(TOP))+'</button>'
+         '<button type="button" data-src="all" aria-pressed="false">全部 '+str(len(N))+'</button>'
          +''.join(f'<button type="button" data-src="{k}" aria-pressed="false">{l} {c[k]}</button>' for k,l in SL if c[k])+'</div>')
     order=sorted(range(len(N)),key=lambda i:(nkey(N[i]),-NORD[N[i]['s']],N[i].get('ts') or ''),reverse=True)
     groups=[];last=None
@@ -326,25 +368,16 @@ def news():
         if k!=last: groups.append((k,[])); last=k
         groups[-1][1].append(i)
     allh=''.join(f'<div class="ndg" data-d="{k}">{dsep(k) if k!="0000-00-00" else "<div class=dsep><b>更早</b></div>"}<ol class="nl">{"".join(nrow(N[i],i) for i in ids)}</ol></div>' for k,ids in groups)
-    # ---- 右侧栏 ----
-    srcl=''.join(f'<li><button type="button" class="sl2" data-src="{k}" aria-pressed="false"><span class="src {k}">{l}</span><b>{c[k]}</b></button></li>' for k,l in SL if c[k])
-    srcl=f'<li><button type="button" class="sl2" data-src="top" aria-pressed="true"><span class="src top">⭐ 精选</span><b>{len(TOP)}</b></button></li>'+srcl+f'<li><button type="button" class="sl2" data-src="all" aria-pressed="false"><span class="src top">全部</span><b>{len(N)}</b></button></li>'
-    dayl=''.join(f'<li><button type="button" class="dl2" data-jump="{k}"><b>{dlab(k)}</b><span>{(dsub(k) if dlab(k) in ("今天","昨天") else dsub(k).split(" ")[1])}</span><i>{len(ids)}</i></button></li>' for k,ids in groups if k!='0000-00-00')
-    tr=sorted([(x,d) for d in DOMS for x in DATA[d]['trends']],key=lambda z:-z[0]['g'])[:5]
-    trl=''.join(f'<li><a href="trends.html"><span class="tn">{e(x["name"])}</span><b class="{"up" if x["g"]>=0 else "dn"}">{x["g"]:+.0f}%</b></a></li>' for x,d in tr)
-    ghl=''.join(f'<li><a href="{safe_url(r["url"])}" target="_blank" rel="noopener noreferrer"><span class="tn">{e(r["repo"])}</span><b class="gs">+{fmt(r["today"])}★</b></a></li>' for r in GHR[:5])
-    aside=(f'<aside class="nside" aria-label="资讯导航">'
-           f'<section class="panel nrp" id="npane" hidden><div class="nrph"><span class="nrpt" id="nptitle"></span><button type="button" class="btn" id="npclose" aria-label="关闭阅读窗格">✕ 关闭</button></div><div class="nrpm" id="npmeta"></div><div class="nrpb" id="npbody"></div></section>'
-           f'<section class="panel nsp" id="nhint"><h2>📖 阅读窗格</h2><p class="nph">点左侧任意标题，全文在这里打开；左边的列表位置不变，可以连续点着读。</p></section>'
-           f'<section class="panel nsp"><h2>🗂 来源</h2><ul class="nsl">{srcl}</ul></section>'
-           f'<section class="panel nsp"><h2>📅 按日期跳转</h2><ul class="ndl">{dayl}</ul></section>'
-           f'<section class="panel nsp"><h2>📈 话题涨幅 <a class="more2" href="trends.html">趋势 →</a></h2><ul class="nmini">{trl}</ul></section>'
-           f'<section class="panel nsp"><h2>🐙 GitHub 今日 <a class="more2" href="trends.html">更多 →</a></h2><ul class="nmini">{ghl}</ul></section></aside>')
-    body=(f'<div class="tools"><h1>资讯</h1>{seg}<span class="sp"></span><span class="hint">点标题读全文 · 中文 AIHOT 在前</span></div>'
+    days=[k for k,_ in groups if k!='0000-00-00']
+    f0=TOP[0] if TOP else None
+    aside=('<aside class="nside" aria-label="阅读窗格"><section class="panel nrp" id="npane"><div class="nrph"><span class="nrpt" id="nptitle">'+(e(N[f0]['t']) if f0 is not None else '阅读窗格')+'</span></div>'
+           '<div class="nrpm" id="npmeta">'+(nmeta(N[f0]) if f0 is not None else '')+'</div>'
+           '<div class="nrpb" id="npbody">'+(nbody(N[f0]) if f0 is not None else '<p class="nph" id="nhint">点左侧任意标题，全文在这里打开；列表位置不变，可以连续点着读。</p>')+'</div></section></aside>')
+    body=(tools('资讯',seg,dctl(days),f'<span class="hint">精选 = AIHOT 热点 / 精选优先 {len(TOP)} 条 · 点标题读全文 · 中文 AIHOT 在前 · X 新闻为英文</span>')+
           f'<div class="nlay" id="ng" data-body="assets/{nbn}"><div class="nmain">'
-          f'<section id="ntop" class="nsec2"><h2 class="nh2">今日精选 <small>AIHOT 热点 / 精选优先，{len(TOP)} 条</small></h2><ol class="nl">{"".join(nrow(N[i],i) for i in TOP)}</ol>'
+          f'<section id="ntop" class="nsec2"><ol class="nl">{"".join(nrow(N[i],i,j==0) for j,i in enumerate(TOP))}</ol>'
           f'<button id="nmore" class="more" type="button">展开更多 · 按日期看全部 {len(N)} 条</button></section>'
-          f'<section id="nall" class="nsec2" hidden>{allh}</section><div class="empty" id="nempty" hidden>这个来源暂无内容</div></div>{aside}</div>')
+          f'<section id="nall" class="nsec2" hidden>{allh}</section><div class="empty" id="nempty" hidden>这个来源 / 日期暂无内容</div></div>{aside}</div>')
     return page('XHOT · 资讯',body,'news.html')
 def spark(vals,w=72,h=22):
     if len(vals)<2: return ''
@@ -374,7 +407,7 @@ def trends():
     gmx=max([r['today'] for r in GHR[:12]] or [1])
     gl=''.join(f'<li><a class="grow" href="{safe_url(r["url"])}" target="_blank" rel="noopener noreferrer"><span class="rk">{i}</span><span class="gm"><b class="gn"><span class="go">{e(r["repo"].split("/")[0])}/</span>{e(r["repo"].split("/")[-1])}</b><span class="gd">{e(r["desc"])}</span><span class="gx">{(f"<i class=ld style=--h:{hue(r[chr(108)+chr(97)+chr(110)+chr(103)])}></i>"+e(r["lang"])) if r["lang"] else ""}<span>★ {fmt(r["stars"])}</span></span></span><span class="gt"><b>+{r["today"]:,}</b><span class="tb"><i class="up" style="width:{(r["today"]/gmx)**.5*100:.0f}%"></i></span><small>今日 ★</small></span></a></li>' for i,r in enumerate(GHR[:12],1))
     # hot=''.join(f'<li><a class="hrow" href="{e((it.get("links") or {}).get("aihot",""))}" target="_blank" rel="noopener noreferrer"><span class="rk">{i}</span><span class="hn">{e(it["title"])}</span><span class="hc">{it.get("sourceCount",0)} 信源</span></a></li>' for i,it in enumerate(AH_HOT[:10],1))
-    body=(f'<div class="tools"><h1>趋势</h1><span class="hint">话题 = X 上相关帖子每日条数（get_posts_counts_recent），涨跌 = 昨日 vs 前几日均值 · 点行在 X 搜索</span></div>{kpis}'
+    body=(tools('趋势','<span class="hint">话题 = X 上相关帖子每日条数，涨跌 = 昨日 vs 前几日均值 · 点行在 X 搜索</span>')+f'{kpis}'
           f'<div class="tcols"><div class="tstack"><section class="panel big" style="--dc:{DC["ai"]}"><h2><i class="dot"></i>AI 话题涨跌<small>{len(T)} 个 · 按涨幅排序</small></h2>{TH}<ul class="list tl">{trows(T,mx)}</ul></section>'
           f'<section class="panel" style="--dc:{DC["money"]}"><h2><i class="dot" style="--dc:{DC["money"]}"></i><i class="dot" style="--dc:{DC["growth"]}"></i>搞钱 + 个人成长<small>{len(M)} 个话题</small></h2>{TH}<ul class="list tl">{trows(M,mx,True)}</ul></section></div>'
           f'<section class="panel big" style="--dc:#0ea5e9"><h2>GitHub 技术趋势<small>AI / 开发工具 · 今日新增 ★（条长按平方根缩放）</small></h2><ul class="list gl">{gl}</ul></section></div>'
@@ -391,6 +424,7 @@ def person(u):
     okr=[r for r in rows if r[10]]
     wk=sorted([r for r in okr if isw(r[1])],key=lambda r:-r[8]); mode='t'
     first=okr[:12]
+    pdays=sorted({dkey(r[1]) for r in okr},reverse=True)
     data=jdump([r[:9]+['' if r[9]==f'https://x.com/{a["H"]}/status/{r[0]}' else r[9]]+r[10:] for r in rows]); jn=f'{u}.{H8(data)}.json'
     for old in glob.glob(os.path.join(OUT,'p',f'{u}.*.json')):
         if os.path.basename(old)!=jn: os.remove(old)
@@ -402,12 +436,12 @@ def person(u):
     tags=''.join(f'<span class="tag" style="--dc:#fff">{DN[d]}</span>' for d in a['doms'])
     feed=withdays(first,lambda r:card(r,a,'../',False)) if okr else '<div class="empty">这个账号暂时没有可显示的推文：可能是受保护账号，或者近期没有发原创帖。</div>'
     body=(f'<section class="phc">{av(u,a["name"],"xl","../")}<div style="min-width:0"><h1>{e(a["name"])}<small translate="no">@{e(a["H"])}</small>{tags}</h1>{bio}</div><div class="chips"><div class="chip"><b>{fmt(a["f"])}</b><span>粉丝</span></div><div class="chip"><b>{dl}</b><span>较上次</span></div><div class="chip"><b>{len(rows)}</b><span>已存推文</span></div><a class="xb" href="https://x.com/{e(a["H"])}" target="_blank" rel="noopener noreferrer">在 X 查看 ↗</a></div></section>'
-          f'<div class="tools">{seg}<input id="q" type="search" aria-label="搜索推文" placeholder="搜索 {e(a["name"])} 的推文…" autocomplete="off" spellcheck="false" style="flex:1 1 240px">{tog}<span class="cnt" id="cnt" aria-live="polite">{"全部 "+str(len(okr))+" 条 · 近一周 "+str(len(wk))+" 条"}</span></div>'
+          +tools('推文',f'<input id="q" type="search" aria-label="搜索推文" placeholder="搜索 {e(a["name"])} 的推文…" autocomplete="off" spellcheck="false">{tog}',dctl(pdays)+seg,f'<span class="cnt" id="cnt" aria-live="polite">{"全部 "+str(len(okr))+" 条 · 近一周 "+str(len(wk))+" 条"}</span>')+
           f'<div id="feed" class="grid tl" data-pre="{len(first)}" data-mode="{mode}">{feed}</div><button id="more" class="more" type="button" hidden>再显示</button>'
           f'<script type="application/json" id="tw-meta">{jsafe({"name":a["name"],"handle":a["H"],"u":u,"dom":a["dom"],"av":AVF.get(u,""),"h":hue(u),"src":jn,"week":WEEK})}</script>')
     return page(f'{a["name"]} (@{a["H"]}) · XHOT',body,'',pref='../')
 # ---- 日报 ----
-DAYD=os.path.join(D,'daily')
+DAYD=os.environ.get('XHOT_DAILY_DIR') or os.path.join(D,'daily')   # 测试可指向临时目录
 def _dok(d):
     """校验日报 JSON（来自刷新流程撰写），不合规的字段丢弃"""
     if not isinstance(d,dict) or not re.fullmatch(r'\d{4}-\d\d-\d\d',str(d.get('date',''))): return None
@@ -416,7 +450,7 @@ def _dok(d):
         if not isinstance(h,dict) or not re.fullmatch(r'[A-Za-z0-9_]{1,30}',str(h.get('handle',''))): continue
         pid=str(h.get('post_id') or '');pid=pid if re.fullmatch(r'\d{5,25}',pid) else ''
         hl.append(dict(handle=h['handle'],name=str(h.get('name') or h['handle']),text=str(h.get('text_zh') or ''),pid=pid,
-                       url=str(h.get('url') or (f"https://x.com/{h['handle']}/status/{pid}" if pid else f"https://x.com/{h['handle']}")),likes=h.get('likes') if isinstance(h.get('likes'),int) else None,orig=str(h.get('text_orig') or '')[:8000]))
+                       url=str(h.get('url') or (f"https://x.com/{h['handle']}/status/{pid}" if pid else f"https://x.com/{h['handle']}")),likes=h.get('likes') if isinstance(h.get('likes'),int) else None,orig=str(h.get('text_orig') or '')[:8000],orig_zh=str(h.get('text_orig_zh') or '')[:12000]))
     cl=[]
     for c in d.get('changelog') or []:
         if isinstance(c,str): cl.append(('',c))
@@ -431,6 +465,10 @@ def fill_orig(fp):
             r=db.execute('select text from tweets where id=?',(pid,)).fetchone()
             if r and r[0]: h['text_orig']=_h.unescape(r[0]); ch=True
     if ch: open(fp,'w',encoding='utf-8').write(json.dumps(d,ensure_ascii=False,indent=1)+'\n'); print('text_orig filled',os.path.basename(fp))
+def is_en(t):
+    """英文帖：去掉链接 / @ / # 后几乎没有汉字、且有足够多的拉丁字母"""
+    t=re.sub(r'https?://\S+|[@#]\w+','',t or ''); cj=len(re.findall(r'[\u3400-\u9fff]',t)); la=len(re.findall(r'[A-Za-z]',t))
+    return la>=12 and cj<=max(2,0.05*(cj+la))
 DAYS=[]
 for fp in sorted(glob.glob(os.path.join(DAYD,'*.json'))):
     try: fill_orig(fp)
@@ -439,34 +477,46 @@ for fp in sorted(glob.glob(os.path.join(DAYD,'*.json'))):
     except Exception as ex: print('skip daily',os.path.basename(fp),type(ex).__name__); x=None
     if x: DAYS.append(x)
 DAYS.sort(key=lambda x:x['date'])
-def dhl(h,pref):
+for _x in DAYS[-3:]:
+    for _h2 in _x['hl']:
+        if _h2['orig'] and is_en(_h2['orig']) and not _h2['orig_zh']: print('WARN 缺译文 text_orig_zh:',_x['date'],_h2['handle'])
+def dhl(h,pref,n=0,k=''):
     u=h['handle'].lower(); a=ACC.get(u)
     who=(f'<a class="hh" href="{pref}p/{u}.html">{av(u,a["name"],"",pref)}<b>{e(a["name"])}</b><small>@{e(a["H"])}</small></a>' if a
          else f'<a class="hh" href="{safe_url("https://x.com/"+h["handle"])}" target="_blank" rel="noopener noreferrer"><b>{e(h["name"])}</b><small>@{e(h["handle"])}</small></a>')
     lk=f'<a class="btn op" href="{safe_url(h["url"])}" target="_blank" rel="noopener noreferrer">原帖 ↗</a>'
     lv=f'<span class="lk">♥ {fmt(h["likes"])}</span>' if h['likes'] is not None else ''
-    og=h['orig']
-    ob=(f'<div class="dor"><div class="pt ptc">{lnk(og)}</div><div class="act"><button class="btn ex" type="button" aria-expanded="false" hidden>展开</button><button class="btn cp" type="button">复制原文</button></div></div>' if og else '')
-    return f'<li class="dh" style="--dc:{DC[a["dom"]] if a else "var(--ac)"}">{who}<p class="dsm">{e(h["text"])}</p><div class="dha">{lv}{lk}</div>{ob}</li>'
+    og,oz=h['orig'],h['orig_zh']
+    ex=cp=ob=''
+    if og:
+        zh=bool(oz) and is_en(og)      # 只有英文帖才有译文切换；默认中文
+        did=f'o{k}-{n}'
+        ex=f'<button class="btn ex" type="button" aria-expanded="false" aria-controls="{did}">展开</button>'
+        cp=f'<button class="btn cp" type="button" data-l="{"复制译文" if zh else "复制原文"}">{"复制译文" if zh else "复制原文"}</button>'
+        if zh:
+            hd=('<div class="dorh"><span class="dlab">原帖全文</span><span class="trb" title="中文为译文，仅供参考，以原文为准">译</span>'
+                '<div class="seg sm" role="group" aria-label="语言"><button type="button" data-ol="zh" class="on" aria-pressed="true">中</button><button type="button" data-ol="en" aria-pressed="false">EN</button></div></div>')
+            tx=f'<div class="pt ptz" lang="zh-CN">{lnk(oz)}</div><div class="pt pto" lang="en" hidden>{lnk(og)}</div>'
+        else:
+            hd='<div class="dorh"><span class="dlab">原帖全文</span></div>'; tx=f'<div class="pt pto">{lnk(og)}</div>'
+        ob=f'<div class="dor" id="{did}" hidden>{hd}{tx}</div>'
+    return f'<li class="dh" style="--dc:{DC[a["dom"]] if a else "var(--ac)"}">{who}<div class="dha">{lv}{ex}{cp}{lk}</div><p class="dsm">{e(h["text"])}</p>{ob}</li>'
 def daily_page(i,pref,cur):
     d=DAYS[i]; k=d['date']; latest=i==len(DAYS)-1
-    pv=f'<a class="btn" href="{pref}daily/{DAYS[i-1]["date"]}.html" rel="prev">← {dsub(DAYS[i-1]["date"])}</a>' if i>0 else '<span class="btn dis" aria-disabled="true">← 更早</span>'
-    nx=(f'<a class="btn" href="{pref}daily/{DAYS[i+1]["date"]}.html" rel="next">{dsub(DAYS[i+1]["date"])} →</a>' if i<len(DAYS)-1 else '<span class="btn dis" aria-disabled="true">已是最新 →</span>')
-    hist=''.join(f'<a href="{pref}daily/{x["date"]}.html"{" aria-current=page" if x["date"]==k else ""}>{dsub(x["date"])}{" · 最新" if j==len(DAYS)-1 else ""}</a>' for j,x in reversed(list(enumerate(DAYS))))
-    hl=''.join(dhl(h,pref) for h in d['hl'])
+    hl=''.join(dhl(h,pref,n,k) for n,h in enumerate(d['hl']))
     news5=''
     if latest and NEWS:
         tops=ntop(NEWS)[:5]
         news5=('<section class="panel dsec"><h2>📰 资讯头条 <a class="more2" href="'+pref+'news.html">全部资讯 →</a></h2><ol class="dn">'
                +''.join(f'<li><a href="{pref}news.html#n={j}"><span class="src {NEWS[j]["s"]}">{NEWS[j]["sl"]}</span><b>{e(NEWS[j]["t"])}</b></a></li>' for j in tops)+'</ol></section>')
     cl=('<section class="panel dsec dcl"><h2>🛠 更新日志</h2><ul>'+''.join(f'<li>{f"<time>{e(dd)}</time>" if dd else ""}{e(t)}</li>' for dd,t in d['cl'])+'</ul></section>') if d['cl'] else ''
-    body=(f'<div id="daily" class="dly"><div class="dhd"><div><h1>日报 <span class="dd">{dsub(k)}</span>{"<span class=dnew>最新</span>" if latest else ""}</h1>'
-          f'<p class="hint">每天北京时间 08:00 更新 · 过去 24 小时 X 上的 AI / 搞钱 / 成长重点</p></div><nav class="dnav" aria-label="日期">{pv}{nx}</nav></div>'
+    dates=[x['date'] for x in reversed(DAYS)]
+    mid=f'<span class="ddl">{dsub(k)}</span>'+('<span class="dnew">最新</span>' if latest else '')+'<span class="hint">每天北京时间 08:00 更新 · 过去 24 小时 X 上的 AI / 搞钱 / 成长重点</span>'
+    body=(f'<div id="daily" class="dly">'+tools('日报',mid,dctl(dates,'nav',k,pref+'daily/{d}.html'))+
           f'<div class="dgrid"><div class="dmain">'
-          f'<section class="panel dsec"><h2>🔥 重点新帖 <a class="more2" href="{pref}hot.html">看全部热帖 →</a></h2><ol class="dhl">{hl}</ol></section>'
-          f'<div class="dpair"><section class="panel dsec"><h2>📈 话题涨跌 <a class="more2" href="{pref}trends.html">趋势 →</a></h2><p>{e(d["topics"])}</p></section>'
-          f'<section class="panel dsec"><h2>👤 粉丝变化 <a class="more2" href="{pref}accounts.html#sort=d">账号榜 →</a></h2><p>{e(d["fol"])}</p></section></div>'
-          f'{cl}</div><aside class="dside">{news5}<section class="panel dsec"><h2>🗂 往期日报</h2><div class="dhist">{hist}</div></section></aside></div></div>')
+          f'<section class="panel dsec"><h2>🔥 重点新帖 <a class="more2" href="{pref}hot.html">看全部热帖 →</a></h2><ol class="dhl">{hl}</ol></section>{cl}</div>'
+          f'<aside class="dside"><section class="panel dsec"><h2>📈 话题涨跌 <a class="more2" href="{pref}trends.html">趋势 →</a></h2><p>{e(d["topics"])}</p></section>'
+          f'<section class="panel dsec"><h2>👤 粉丝变化 <a class="more2" href="{pref}accounts.html#sort=d">账号榜 →</a></h2><p>{e(d["fol"])}</p></section>{news5}</aside></div></div>')
     return page(f'XHOT · 日报 {k}',body,cur,pref=pref)
 os.makedirs(os.path.join(OUT,'p'),exist_ok=True)
 for fn,fnc in (('hot.html',hot),('accounts.html',accounts),('news.html',news),('trends.html',trends)):

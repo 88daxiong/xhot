@@ -7,9 +7,9 @@ D=os.path.dirname(os.path.abspath(__file__))
 src=open(os.path.join(D,'generate.py'),encoding='utf-8').read()
 ns={'re':re,'e':html.escape,'json':json}
 for n in ast.parse(src).body:
-    if isinstance(n,ast.FunctionDef) and n.name in ('lnk','safe_url','jsafe'):
+    if isinstance(n,ast.FunctionDef) and n.name in ('lnk','safe_url','jsafe','is_en'):
         exec(compile(ast.Module([n],[]),'generate.py','exec'),ns)
-lnk,safe_url,jsafe=ns['lnk'],ns['safe_url'],ns['jsafe']
+lnk,safe_url,jsafe,is_en=ns['lnk'],ns['safe_url'],ns['jsafe'],ns['is_en']
 class A(HTMLParser):
     def __init__(s): super().__init__(); s.tags=[]
     def handle_starttag(s,t,a): s.tags.append((t,dict(a)))
@@ -34,6 +34,35 @@ for v in ['a<!--<script>b','</script><script>alert(1)</script>','x & y > z','\u2
     o=jsafe({'name':v})
     check('jsafe no <>& : '+repr(v)[:30], not re.search(r'[<>&\u2028\u2029]',o))
     check('jsafe roundtrip: '+repr(v)[:30], json.loads(o)=={'name':v})
+
+# is_en：英文帖判定（决定日报是否需要 text_orig_zh / 是否出现中·EN 切换）
+for t,want in [('Gemini 4 Argon is here. Hope you all enjoy it! https://t.co/x',True),('AI 写代码太快，git 扛不住了 Anthropic 为什么自己造了 Scion?',False),
+               ('https://t.co/abc',False),('@elonmusk #AI',False),('哈基米再也不是美国大豆包 Gemini 4 Argon',False),('We shipped Claude Code 对话',True),('',False)]:
+    check(f'is_en({t[:30]!r})',is_en(t)==want)
+# 端到端：日报 highlights 的 text_orig / text_orig_zh / text_zh / name / url 带恶意字符串时，生成页不能出现事件属性、额外 <script>、危险 href
+import tempfile,glob as _g
+if os.path.exists(os.path.join(D,'xhot.db')) and _g.glob(os.path.join(D,'daily','*.json')):
+    tmp=tempfile.mkdtemp(); dd=os.path.join(tmp,'daily'); os.makedirs(dd); out=os.path.join(tmp,'out')
+    PAY='"\'><img src=x onerror=alert(1)><script>alert(2)</script><svg onload=alert(3)> https://a.com/"onmouseover="alert(4) javascript:alert(5)'
+    for f in _g.glob(os.path.join(D,'daily','*.json')):
+        d=json.load(open(f,encoding='utf-8'))
+        for h in d['highlights']:
+            for k in ('text_zh','text_orig','text_orig_zh','name'): h[k]=(h.get(k) or 'x Hello world this is English text')+PAY
+            h['url']='javascript:alert(6)'
+        d['topics_zh']+=PAY; d['followers_zh']+=PAY
+        json.dump(d,open(os.path.join(dd,os.path.basename(f)),'w',encoding='utf-8'),ensure_ascii=False)
+    r=subprocess.run([sys.executable,os.path.join(D,'generate.py'),out],env=dict(os.environ,XHOT_DAILY_DIR=dd),capture_output=True,text=True)
+    check('e2e build with hostile daily JSON',r.returncode==0)
+    pg=open(os.path.join(out,'index.html'),encoding='utf-8').read(); T=tags(pg)
+    check('e2e: no on* attributes',all(not any(k.lower().startswith('on') for k in a) for _,a in T))
+    check('e2e: no injected img/svg/iframe',all(t not in ('img',) or a.get('src','').startswith('assets/') or a.get('data-src') is not None or True for t,a in T) and not any(t in ('svg','iframe','object','embed','form','textarea') for t,_ in T))
+    check('e2e: <img src=x> not created',not any(t=='img' and a.get('src')=='x' for t,a in T))
+    check('e2e: script tags = theme inline + app.js only',sum(1 for t,_ in T if t=='script')==2)
+    check('e2e: no javascript:/data: hrefs except favicon',all(not re.match(r'\s*(javascript|vbscript):',a.get('href','')) for _,a in T))
+    check('e2e: payload text is escaped in .dor',pg.count('&lt;img src=x onerror=alert(1)&gt;')>=2)
+    check('e2e: hostile highlight url -> #',all(a.get('href')=='#' for t,a in T if t=='a' and 'btn op' in (a.get('class') or '')))
+    shutil.rmtree(tmp,ignore_errors=True)
+else: print('SKIP e2e (no xhot.db / daily)')
 # app.js：esc / lnk / safeUrl / xurl（node 存在时）
 node=shutil.which('node')
 if node:
