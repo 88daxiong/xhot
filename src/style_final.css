@@ -1,6 +1,7 @@
 /* ===== v15.1 可读性终稿（不经过构建期字号变换，数值即最终值）===== */
 :root{--mu:#57546e;--up:#15803d;--dn:#b91c1c;--money:#b45309;--growth:#0f766e;--ai:#6d28d9;--heat:#c2410c;--actx:#5b21b6}
-html body{font-size:15px;line-height:1.65;-webkit-text-size-adjust:100%;font-synthesis:none}
+html{font-size:94%;-webkit-text-size-adjust:100%;text-size-adjust:100%}
+html body{font-size:15px;line-height:1.6;-webkit-text-size-adjust:100%;font-synthesis:none}
 .pt,.dsm,.trg,.pcs,.ptz,.pto{line-height:1.7}
 .nt2,.nrpt,.ns,.nrb{line-height:1.55}
 .tm b,time.tm b{background:none;-webkit-background-clip:border-box;background-clip:border-box;-webkit-text-fill-color:currentColor;color:var(--actx)}
@@ -31,9 +32,9 @@ footer.ft{font-size:13px;line-height:1.7;text-align:center;max-width:56em;margin
 @keyframes xfade{from{opacity:0}to{opacity:1}}
 details[open]>.trx,.dh.open .dor,.nr:not(.sel) .nrb:not([hidden]){animation:xfade .16s ease-out}
 @media(max-width:720px){.dha .cp{display:none}}
-@media(pointer:coarse){.lg{min-height:44px;display:inline-flex;align-items:center}.dcb{min-width:44px}.hh{min-height:44px;align-items:center}.more2{display:inline-block;padding:12px 8px;margin:-12px -8px}}
+@media(pointer:coarse){.lg{min-height:44px;display:inline-flex;align-items:center}.dcb{min-width:44px}.hh{min-height:44px;align-items:center}.more2{display:inline-block;padding:13px 8px;margin:-13px -8px;min-height:44px;box-sizing:border-box}}
 @media(max-height:500px){.top{position:static}}
-@media(pointer:coarse){input[type=search],input[type=text]{min-height:44px;font-size:16px}.who a{padding:14px 0}}
+@media(pointer:coarse){input[type=search],input[type=text]{min-height:44px;font-size:max(16px,1rem)}.who a{padding:14px 0}}
 html[data-theme=dark] .seg a.on[style]{color:#0f0c26}html[data-theme=dark] .seg a.on[style] .dot{background:#0f0c26}
 .tl30 .trw{content-visibility:auto;contain-intrinsic-size:auto 57px}
 /* 触控与安全区 */
@@ -43,13 +44,13 @@ body{padding-left:env(safe-area-inset-left);padding-right:env(safe-area-inset-ri
 .btn:active,.seg button:active,.seg a:active,.fchips button:active,.nav a:active,.tgb:active,.kb:active,.hxb:active,.more:active,.dcb:active,.dcm:active{background:var(--hov);transform:scale(.97)}
 .nav a[aria-current=page]:active,.seg .on:active{transform:none}
 .nrh:active,.trw summary:active{background:var(--hov)}
-.kp,.dcpop,.hx{overscroll-behavior:contain}
+.kov,.dcpop,.hx{overscroll-behavior:contain}
 @media(pointer:coarse){.kpf{display:none}}
 /* ===== v15.3 手机/平板（触屏或 ≤720px）：阅读 16 / 次要 14 / 元信息 ≥12.5，关键文字不截断 ===== */
 @media(pointer:coarse),(max-width:720px){
-html body{font-size:16px;line-height:1.65}
+html body{font-size:16px;line-height:1.55}
 :root{--fs:16px}
-main p,main li,.dsm,.trg,.pt,.pcs,.b3 li,.nrb,.wkg li{font-size:16px;line-height:1.65}
+main p,main li,.dsm,.trg,.pt,.pcs,.b3 li,.nrb,.wkg li{font-size:16px;line-height:1.55}
 .tinfo,.hint,.ns,.gd,.tn small,.who small,.tl30 .trh small,.pm,.mu{font-size:14px}
 .tag,.tc,.src,.hc,.th,.en,.tm,.rl,small,.met span,.lk{font-size:13px}
 .dsm{font-weight:500}

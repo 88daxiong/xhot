@@ -13,7 +13,7 @@ if QUICK: VPS=[v for v in VPS if v[0] in('p390','t820','l1440')]; PAGES=['index.
 CHK=r"""()=>{const W=innerWidth,H=innerHeight,out={};
 out.ov=document.documentElement.scrollWidth>W+1;
 const vis=e=>{const r=e.getBoundingClientRect();const cs=getComputedStyle(e);return r.width>0&&r.height>0&&cs.visibility!=='hidden'&&cs.display!=='none'&&!e.closest('[hidden]')};
-const small=[];const w=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT);let n;while(n=w.nextNode()){const t=n.textContent.trim();if(!t)continue;const p=n.parentElement;if(!p||/^(SCRIPT|STYLE)$/.test(p.tagName)||!vis(p))continue;const fs=parseFloat(getComputedStyle(p).fontSize);if(fs<12.99)small.push(p.tagName+'.'+p.className+':'+fs)}
+const small=[];const w=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT);let n;while(n=w.nextNode()){const t=n.textContent.trim();if(!t)continue;const p=n.parentElement;if(!p||/^(SCRIPT|STYLE)$/.test(p.tagName)||!vis(p))continue;const fs=parseFloat(getComputedStyle(p).fontSize);if(fs<11.99)small.push(p.tagName+'.'+p.className+':'+fs)}
 out.small=small.slice(0,4);
 const tap=[];document.querySelectorAll('a[href],button,summary,select,input,[role=button]').forEach(e=>{if(!vis(e)||e.disabled||e.closest('.skip')||e.classList.contains('skip'))return;if(e.tagName==='A'&&e.closest('p,li:not(.nr):not(.trw):not(.dh),.pt,.ft,.abt,.nrb,.sec>small,.lead'))return;if(e.tagName==='A'&&e.closest('.ft'))return;const r=e.getBoundingClientRect();if(r.bottom<0||r.right<0)return;if(e.closest('.nav,.seg,.fchips,.kpl')&&false)return;if(r.height<43.5||r.width<43.5)tap.push((e.className||e.tagName)+':'+Math.round(r.width)+'x'+Math.round(r.height))});
 out.tap=[...new Set(tap)].slice(0,6);
@@ -33,7 +33,7 @@ with sync_playwright() as p:
                 g=c.new_page();g.goto(B+u,wait_until='load');g.wait_for_timeout(500);res['n']+=1;tag=f'{vn}/{th}/{u}'
                 r=g.evaluate(CHK)
                 if r['ov']: fail(tag+' 横向溢出')
-                if r['small']: fail(tag+' 字号<13 '+str(r['small']))
+                if r['small']: fail(tag+' 字号<12 '+str(r['small']))
                 if touch and r['tap']: fail(tag+' 触控目标<44 '+str(r['tap']))
                 if not r['navOk']: fail(tag+' 顶部导航超出视口')
                 if not r['kbOk']: fail(tag+' 搜索入口不可达')
@@ -44,13 +44,13 @@ with sync_playwright() as p:
                 if u=='index.html' and th=='light':
                     # 搜索入口真的能点开
                     g.locator('.kb').click();g.wait_for_timeout(300)
-                    if not g.evaluate("()=>{const k=document.querySelector('.kp');return !!k&&!k.hidden}"): fail(tag+' 点搜索未打开')
+                    if not g.evaluate("()=>{const k=document.querySelector('.kov');return !!k&&!k.hidden}"): fail(tag+' 点搜索未打开')
                     g.keyboard.press('Escape');g.wait_for_timeout(150)
                     # 展开/收起：位移、aria、时延
-                    ex=g.locator('.dh .ex').first;y0=ex.bounding_box()['y'];t0=g.evaluate("()=>document.querySelector('.dh').getBoundingClientRect().top")
+                    ex=g.locator('.dh .ex').first;y0=ex.bounding_box()['y'];t0=g.evaluate("()=>document.querySelector('.dh').getBoundingClientRect().top+scrollY")
                     ms=g.evaluate("()=>new Promise(res=>{const b=document.querySelector('.dh .ex'),s=performance.now();b.click();requestAnimationFrame(()=>requestAnimationFrame(()=>res(performance.now()-s)))})")
                     st=g.evaluate("()=>{const b=document.querySelector('.dh .ex'),d=document.getElementById(b.getAttribute('aria-controls'));return [b.getAttribute('aria-expanded'),!d.hidden&&d.offsetHeight>0]}")
-                    t1=g.evaluate("()=>document.querySelector('.dh').getBoundingClientRect().top")
+                    t1=g.evaluate("()=>document.querySelector('.dh').getBoundingClientRect().top+scrollY")
                     if st!=['true',True]: fail(tag+' 展开状态不对 '+str(st))
                     if abs(t1-t0)>1: fail(tag+f' 展开造成上方位移 {t1-t0}')
                     if ms>100: fail(tag+f' 展开耗时 {ms:.0f}ms>100')

@@ -16,7 +16,7 @@ MODES=[('1440_light',1440,'light'),('1440_dark',1440,'dark'),('390',390,'light')
 INIT="window.__v=[];window.open=function(){window.__open=1};window.__cls=0;try{new PerformanceObserver(function(l){l.getEntries().forEach(function(e){if(!e.hadRecentInput)window.__cls+=e.value})}).observe({type:'layout-shift',buffered:true})}catch(x){};document.addEventListener('securitypolicyviolation',function(e){window.__v.push(e.violatedDirective+' '+(e.blockedURI||''))});"
 CHK="""()=>{const W=innerWidth;
 const ovEl=[...document.querySelectorAll('body *')].filter(x=>{const r=x.getBoundingClientRect();return r.width>0&&(r.right>W+1)&&getComputedStyle(x).position!=='fixed'&&!x.closest('.nav,.seg,.fchips,.kpl,.dcpop,.tl')}).slice(0,3).map(x=>x.className||x.tagName);
-const small=[];const w=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT);let n;while(n=w.nextNode()){const t=n.textContent.trim();if(!t)continue;const p=n.parentElement;if(!p||!p.offsetParent&&getComputedStyle(p).position!=='fixed')continue;if(/^(SCRIPT|STYLE)$/.test(p.tagName))continue;const fs=parseFloat(getComputedStyle(p).fontSize);if(fs<12.99)small.push(p.className+':'+fs)}
+const small=[];const w=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT);let n;while(n=w.nextNode()){const t=n.textContent.trim();if(!t)continue;const p=n.parentElement;if(!p||!p.offsetParent&&getComputedStyle(p).position!=='fixed')continue;if(/^(SCRIPT|STYLE)$/.test(p.tagName))continue;const fs=parseFloat(getComputedStyle(p).fontSize);if(fs<11.99)small.push(p.className+':'+fs)}
 return {v:window.__v,ov:document.documentElement.scrollWidth>W+1,ovEl,br:[...document.images].filter(i=>i.complete&&i.src&&i.naturalWidth===0).length,
  landmark:!!document.querySelector('main#main')&&!!document.querySelector('header.top')&&!!document.querySelector('nav[aria-label]'),skip:!!document.querySelector('a.skip[href="#main"]'),h1:document.querySelectorAll('h1').length,
  small:small.slice(0,3),inlineStyle:document.querySelectorAll('style').length,inlineScripts:[...document.scripts].filter(s=>!s.src&&s.type!=='application/json').length,theme:document.documentElement.dataset.theme}}"""
@@ -125,14 +125,14 @@ with sync_playwright() as p:
                 # ⌘K
                 if name in('today','all') :
                     g.keyboard.press('Control+k');g.wait_for_timeout(500)
-                    ck(f'{name}[{mn}] Ctrl/⌘K 打开搜索，焦点在输入框',g.evaluate("()=>{const k=document.querySelector('.kp');return !!k&&!k.hidden&&document.activeElement.classList.contains('kpq')}"))
+                    ck(f'{name}[{mn}] Ctrl/⌘K 打开搜索，焦点在输入框',g.evaluate("()=>{const k=document.querySelector('.kov');return !!k&&!k.hidden&&document.activeElement.classList.contains('kpq')}"))
                     g.keyboard.type('karp');g.wait_for_timeout(500)
                     ck(f'{name}[{mn}] 搜索人物：karp → Karpathy',g.evaluate("()=>[...document.querySelectorAll('.kpl li[data-i]')].some(x=>/Karpathy/.test(x.textContent))"))
                     if name=='today': sh('search')
                     g.keyboard.press('Escape');g.wait_for_timeout(200)
-                    ck(f'{name}[{mn}] Esc 关闭搜索',g.evaluate("()=>document.querySelector('.kp').hidden"))
+                    ck(f'{name}[{mn}] Esc 关闭搜索',g.evaluate("()=>document.querySelector('.kov').hidden"))
                     g.evaluate('document.activeElement&&document.activeElement.blur()');g.keyboard.press('/');g.wait_for_timeout(300)
-                    ck(f'{name}[{mn}] 「/」打开搜索',g.evaluate("()=>!document.querySelector('.kp').hidden"))
+                    ck(f'{name}[{mn}] 「/」打开搜索',g.evaluate("()=>!document.querySelector('.kov').hidden"))
                     g.keyboard.type('gemini');g.wait_for_timeout(300)
                     g.evaluate("[...document.querySelectorAll('.kpl li[data-i]')].pop().click()");g.wait_for_timeout(2500)
                     ck(f'{name}[{mn}] 搜帖子摘录：按需读分片并出结果',g.evaluate("()=>[...document.querySelectorAll('.kpl li[data-i]')].length>=3"))

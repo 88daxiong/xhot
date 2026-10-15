@@ -786,8 +786,10 @@ def readable(css):
 CSSR=readable(CSSR)+'\n'+open('style_final.css',encoding='utf-8').read()
 def remify(css):
     # 字号一律 rem：系统/浏览器字体放大时整站等比缩放（calc()/max() 里的不动）
-    css=re.sub(r'(?<![\w(,])(font-size:)(\d+(?:\.\d+)?)px',lambda m:m.group(1)+('%g'%(float(m.group(2))/16))+'rem',css)
-    css=re.sub(r'(font:(?:\d{3} )?)(\d+(?:\.\d+)?)px',lambda m:m.group(1)+('%g'%(float(m.group(2))/16))+'rem',css)
+    # html 为 94%：13px→12.2px 是下限（AIHOT 比例：正文 14、标题 17、元信息 12.5）
+    fl=lambda v:max(float(v),13)
+    css=re.sub(r'(?<![\w(,])(font-size:)(\d+(?:\.\d+)?)px',lambda m:m.group(1)+('%g'%(fl(m.group(2))/16))+'rem',css)
+    css=re.sub(r'(font:(?:\d{3} )?)(\d+(?:\.\d+)?)px',lambda m:m.group(1)+('%g'%(fl(m.group(2))/16))+'rem',css)
     return css
 CSSR=remify(CSSR)
 CSSR=re.sub(r'/\*.*?\*/','',CSSR,flags=re.S); CSSR=re.sub(r'\s*\n\s*','',CSSR)
