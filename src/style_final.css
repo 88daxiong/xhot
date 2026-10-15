@@ -1,0 +1,37 @@
+/* ===== v15.1 可读性终稿（不经过构建期字号变换，数值即最终值）===== */
+:root{--mu:#57546e;--up:#15803d;--dn:#b91c1c;--money:#b45309;--growth:#0f766e;--ai:#6d28d9;--heat:#c2410c;--actx:#5b21b6}
+html body{font-size:15px;line-height:1.65;-webkit-text-size-adjust:100%;font-synthesis:none}
+.pt,.dsm,.trg,.pcs,.ptz,.pto{line-height:1.7}
+.nt2,.nrpt,.ns,.nrb{line-height:1.55}
+.tm b,time.tm b{background:none;-webkit-background-clip:border-box;background-clip:border-box;-webkit-text-fill-color:currentColor;color:var(--actx)}
+.src.h{background:linear-gradient(135deg,#be185d,#c2410c);color:#fff}
+.src.d{color:#9d174d}
+html[data-theme=dark] .src.d{color:#f9a8d4}
+.skip{background:#5b21b6;color:#fff}
+.phc small,.phc .bio{color:#fff;opacity:1}
+html[data-theme=dark] .fchips button.on,html[data-theme=dark] .fchips button.on small{color:#0f0c26;opacity:1}
+html[data-theme=dark] .seg button[data-dom].on,html[data-theme=dark] .dcd.on{background:linear-gradient(135deg,#6d28d9,#be185d);color:#fff}
+.fchips button.on small{color:#fff;opacity:1}
+.phc h1 small{opacity:1}
+/* 平板/手机顶栏：≤1060px 与手机同构（导航独占一行、设置收进弹层、搜索为 44px 图标键） */
+@media(max-width:1060px){
+.bar{flex-wrap:wrap;height:auto;padding-top:8px;padding-bottom:4px;gap:8px}
+.nav{order:5;flex:1 1 100%;margin:0 -4px}.nav a{flex:1;justify-content:center;padding:0 8px;height:44px;font-size:15px}
+.sp0{flex:1}.lg span{display:none}.kb span,.kb kbd{display:none}.kb{width:44px;min-width:44px;padding:0;justify-content:center}.kb i{font-size:24px;line-height:1}
+.hxb{display:inline-grid;width:44px;height:44px;place-items:center;font-size:20px}
+.hx{display:none;position:absolute;top:100%;right:12px;z-index:30;flex-direction:column;align-items:stretch;gap:8px;padding:12px;border-radius:12px;background:var(--card);border:1px solid var(--bd);box-shadow:0 12px 32px -12px rgba(0,0,0,.4)}
+.hx.open{display:flex}.top{position:sticky}.bar{position:relative}.hx .tg{justify-content:center}.hx .tgb{width:100%}.hx .fr summary{padding:0 8px}
+}
+@media(pointer:coarse){.btn,.seg a,.seg button,.fchips button,.tg button,.tgb,summary,.more,.xb,.kb,.hxb,.dcb,.dcm,.nav a,.pg a{min-height:44px}.tg button{min-width:44px}}
+.ph1{font-size:26px;font-weight:600;margin:8px 0 12px}
+.lead{font-size:17px;line-height:1.75;max-width:46em;margin:0 0 20px}
+.abt{max-width:46em;margin:0 0 24px}.abt h2{font-size:18px;font-weight:600;margin:0 0 8px}.abt li,.abt p{font-size:16px;line-height:1.75;margin:0 0 8px}.abt ul{padding-left:1.2em;margin:0}
+.abt a,footer.ft a{color:var(--actx);text-decoration:underline;text-underline-offset:2px}
+footer.ft{font-size:13px;line-height:1.7;text-align:center;max-width:56em;margin:32px auto 0;padding-bottom:24px}footer.ft p{margin:0 0 6px}
+@keyframes xfade{from{opacity:0}to{opacity:1}}
+details[open]>.trx,.dh.open .dor,.nr:not(.sel) .nrb:not([hidden]){animation:xfade .16s ease-out}
+@media(max-width:720px){.dha .cp{display:none}}
+@media(pointer:coarse){.lg{min-height:44px;display:inline-flex;align-items:center}.dcb{min-width:44px}.hh{min-height:44px;align-items:center}.more2{display:inline-block;padding:12px 8px;margin:-12px -8px}}
+@media(max-height:500px){.top{position:static}}
+@media(pointer:coarse){input[type=search],input[type=text]{min-height:44px;font-size:16px}.who a{padding:14px 0}}
+html[data-theme=dark] .seg a.on[style]{color:#0f0c26}html[data-theme=dark] .seg a.on[style] .dot{background:#0f0c26}

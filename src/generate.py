@@ -14,7 +14,7 @@ def e(t): return _e0(t).replace('@@','&#64;&#64;')   # 内容里的 @@ 不能被
 OUT=sys.argv[1] if len(sys.argv)>1 else os.path.join(D,'site')
 TEXT_MODE=os.environ.get('XHOT_TEXT_MODE','excerpt')   # excerpt（默认）| full（用户日后批准才改）
 EXC,EXCH=(220,320) if TEXT_MODE=='excerpt' else (4000,8000)
-SANS='system-ui,"PingFang SC","Noto Sans CJK SC","Microsoft YaHei",sans-serif'   # 精简字体栈：减少系统字体探测（不存在的字体名会触发字体回退查找，首次布局慢 ~400ms）
+SANS='-apple-system,BlinkMacSystemFont,"PingFang SC","Helvetica Neue",system-ui,"Noto Sans CJK SC","Microsoft YaHei",sans-serif'   # Mac 优先 -apple-system / PingFang SC / Helvetica Neue
 DC={'ai':'var(--ai)','money':'var(--money)','growth':'var(--growth)'}
 DN={'ai':'AI','money':'搞钱','growth':'成长'}
 def H8(b): return hashlib.sha1(b if isinstance(b,bytes) else b.encode()).hexdigest()[:10]
@@ -207,11 +207,14 @@ def xlink(h,i): return f'https://x.com/{h}/status/{i}'
 def zts(s): return s[:19]+'Z'     # 精简 UTC 时间戳
 # ---- 帖子表（内存里有全文，只为评分/标签/摘录；公开产物只写摘录） ----
 POSTS=[]; PBY={}
+TAKEDOWN=set(l.split('#')[0].strip().lower() for l in open('takedown.txt',encoding='utf-8')) if os.path.exists('takedown.txt') else set()   # 帖子 ID / 账号 handle，一行一个：已删除、受保护或被要求撤下的内容
+TAKEDOWN.discard('')
 for u,a in ACC.items():
     uid=U2ID.get(u)
     if not uid: continue
     rows=[]
     for r in db.execute('select id,created_at,text,likes,rts,replies,quotes,views,bm,lang from tweets where author_id=? order by created_at desc',(uid,)):
+        if str(r[0]) in TAKEDOWN or u.lower() in TAKEDOWN: continue
         t=_h.unescape(r[2] or '')
         if not langf.ok(t,r[9]): continue
         ex=excerpt(t,EXC)
@@ -275,7 +278,7 @@ def page(title,body,cur,pref='',head='',mods=(),desc='XHOT：每天 10 分钟，
       f'<button class="kb" type="button" data-kp aria-haspopup="dialog" aria-label="搜索（快捷键 ⌘K 或 /）"><i aria-hidden="true">⌕</i><span>搜索</span><kbd>⌘K</kbd></button>'
       f'<button class="hxb" type="button" aria-expanded="false" aria-controls="hx" aria-label="设置：主题、密度、数据状态">⚙</button><div class="hx" id="hx">{fresh(cur)}'
       f'<button class="tgb" type="button" data-density aria-pressed="false" title="切换信息密度">紧凑</button>{THEME}</div></div></header>'
-      f'<main id="main" class="wrap">{body}<footer class="ft">数据：X API · <a href="https://aihot.news" target="_blank" rel="noopener noreferrer">aihot.news</a> · <a href="https://github.com/trending" target="_blank" rel="noopener noreferrer">GitHub Trending</a> · 站内只展示帖子摘录与中文要点，全文请点「在 X 打开」· 热度 = 赞 + 2×转 + 3×引用 + 评论 + 收藏 · 数据抓取于 {NOW.strftime("%Y-%m-%d %H:%M")} 北京时间</footer></main></body></html>')
+      f'<main id="main" class="wrap">{body}<footer class="ft"><p>XHOT 是独立的个人项目，与 X Corp.、AIHOT、GitHub 无隶属或背书关系。帖子版权归原作者；站内只有短摘录，全文请点「在 X 打开」。中文要点与译文由 AI 自动整理，仅供参考，以原文为准。</p><p><a href="{pref}about.html">关于 · 数据来源 · 免责声明</a> · <a href="https://github.com/88daxiong/xhot/issues" target="_blank" rel="noopener noreferrer">反馈 / 撤下请求（GitHub Issues）</a> · 数据抓取于 {NOW.strftime("%Y-%m-%d %H:%M")} 北京时间</p></footer></main></body></html>')
 PAGES={}
 def emit(rel,html): PAGES[rel]=html
 MET=lambda p:(f'<div class="met"><span title="点赞"><i aria-hidden="true">♥</i>{fmt(p["like"])}</span><span title="转发"><i aria-hidden="true">⇄</i>{fmt(p["rt"])}</span><span title="评论"><i aria-hidden="true">💬</i>{fmt(p["reply"])}</span><span title="浏览"><i aria-hidden="true">👁</i>{fmt(p["view"])}</span></div>')
@@ -688,9 +691,27 @@ def person(u):
           f'<script type="application/json" id="tw-meta">{jsafe({"name":a["name"],"handle":H,"u":u,"dom":a["dom"],"av":AVS.get(u,""),"h":hue(u),"src":jn,"week":WEEK})}</script>')
     return page(f'{a["name"]} (@{H}) · XHOT',body,'ppl',pref='../',mods=('feed',),desc=f'{a["name"]} 本周要点与高光帖。')
 
+def about_page():
+    L=lambda u,t:f'<a href="{u}" target="_blank" rel="noopener noreferrer">{t}</a>'
+    body=(f'<h1 class="ph1">关于 XHOT</h1><p class="lead">XHOT 是一个纯静态的个人项目：每天一次，把 X 上 AI / 搞钱 / 成长领域 {len(ACC)} 个公开账号的热点整理成 10 分钟能读完的简报。没有登录、没有广告、没有统计脚本、没有第三方请求。</p>'
+      '<section class="abt"><h2>数据来源</h2><ul>'
+      f'<li><b>X</b>：通过 X 官方 API（只读，开发者账号授权）获取公开帖子与账号资料。站内展示的是<b>短摘录</b>、互动数字和指向原帖的链接；每条都可点「在 X 打开」查看完整原文。{L("https://developer.x.com/en/developer-terms/agreement-and-policy","X 开发者协议与政策")}适用于这些内容。头像为小尺寸缓存，仅用于标识作者。</li>'
+      f'<li><b>AIHOT</b>：资讯页的精选与热点来自 {L("https://aihot.news","aihot.news")} 的公开 API，按其 MIT 许可使用并署名；文章原文版权属于原站，本站只给链接。许可声明见仓库中的 LICENSE-THIRD-PARTY.md。</li>'
+      f'<li><b>GitHub Trending</b>：趋势页读取 {L("https://github.com/trending","GitHub Trending")} 公开页面中的项目名与星标数，只做索引并链接到项目主页，不转载项目内容；每日一次，不做高频抓取。</li>'
+      '</ul></section>'
+      '<section class="abt"><h2>哪些内容是 AI 生成的</h2><ul>'
+      '<li>「今天一眼看完」「必读」中的<b>中文要点</b>、英文帖的<b>中文译文</b>（带「译」标记）、人物「本周要点」和话题解读，均由 AI 助手自动整理，<b>不是 X 官方内容，也不代表原作者的表述</b>，可能有误；以原帖为准。</li>'
+      '<li>热度、重要度、标签是公开的规则公式 / 关键词规则计算的结果，不是 X 官方排名。</li></ul></section>'
+      '<section class="abt"><h2>内容撤下与合规</h2><ul>'
+      '<li>每天刷新一次；X 已删除、改为受保护或不再可获取的帖子，会在下一轮刷新后撤下。站点另有一份撤下清单，可按帖子或账号即时屏蔽。</li>'
+      f'<li>如果你是原作者或相关方，希望撤下某条内容、头像或整个账号，请在 {L("https://github.com/88daxiong/xhot/issues","GitHub Issues")} 留言（只需给出帖子或账号链接，不要提供个人隐私信息），我们会尽快处理。</li>'
+      '<li>站内不收集访客信息：偏好（主题、密度、已读标记）只保存在你自己的浏览器里。</li></ul></section>'
+      '<section class="abt"><h2>免责声明</h2><p>XHOT 与 X Corp.、AIHOT、GitHub 没有隶属、授权或背书关系；X、Twitter、GitHub 及相关标识属于各自所有者。内容仅供信息参考，不构成投资、法律或其他专业建议；数据可能延迟或不完整，请以原始来源为准。站点托管在 GitHub Pages，并遵守其服务条款与可接受使用政策。</p></section>'
+      f'<p class="mu">代码与说明：{L("https://github.com/88daxiong/xhot","github.com/88daxiong/xhot")} · 当前数据抓取于 {NOW.strftime("%Y-%m-%d %H:%M")} 北京时间</p>')
+    return page('关于 · 数据来源 · 免责声明 · XHOT',body,'about',desc='XHOT 的数据来源、AI 生成内容说明、撤下方式与免责声明。')
 # ======================= 生成全部页面 =======================
 open_ok=True
-emit('news.html',news()); emit('trends.html',trends())     # news() 先跑：NEWS 供今日页/领域页引用
+emit('about.html',about_page()); emit('news.html',news()); emit('trends.html',trends())     # news() 先跑：NEWS 供今日页/领域页引用
 FEEDDAYS=feed_shards()
 for old in glob.glob(os.path.join(OUT,'p','*.html')): pass
 if DAYS:
@@ -741,6 +762,20 @@ def purge(css,corpus):
         i=k
     return ''.join(out)
 CSSR=(open('style_base.css',encoding='utf-8').read()+'\n'+open('style.css',encoding='utf-8').read()).replace('$SANS',SANS)
+def readable(css):
+    """可读性变换（构建期，不动 v14 源 CSS）：字号整体 +1px（≤11.5→12；12/12.5→13；13→14；…；≥20 不变）、字距归零、字重只留 400/500/600、渐变文字改纯色"""
+    def fs(m):
+        v=float(m.group(2)); n=12 if v<=11.5 else 13 if v<=12.5 else v+1 if v<=18 else v
+        return m.group(1)+(str(int(n)) if n==int(n) else str(n))+'px'
+    css=re.sub(r'(font-size:)(\d+(?:\.\d+)?)px',fs,css)
+    css=re.sub(r'(font:(?:\d{3} )?)(\d+(?:\.\d+)?)px',fs,css)
+    css=re.sub(r'letter-spacing:[^;}]*','letter-spacing:0',css)
+    def fw(m):
+        v=int(m.group(1)); return 'font-weight:'+('400' if v<=400 else '500' if v<=550 else '600')
+    css=re.sub(r'font-weight:(\d{3})',fw,css)
+    css=css.replace('font-weight:bold','font-weight:600').replace('font-weight:normal','font-weight:400')
+    return css
+CSSR=readable(CSSR)+'\n'+open('style_final.css',encoding='utf-8').read()
 CSSR=re.sub(r'/\*.*?\*/','',CSSR,flags=re.S); CSSR=re.sub(r'\s*\n\s*','',CSSR)
 CSSBYKEY={}
 def page_css(html):

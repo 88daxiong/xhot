@@ -11,15 +11,17 @@ def tot(f):
 pp=sorted(((tot(f),os.path.basename(f)) for f in glob.glob(S+'/p/*.html')))
 sparse=[n for t,n in pp if t>0][0]; dayfiles=sorted(glob.glob(S+'/day/*.html'))
 PAGES=[('today','index.html'),('day','day/'+os.path.basename(dayfiles[0])),('dom_ai','d/ai.html'),('dom_money','d/money.html'),('dom_growth','d/growth.html'),('all','d/all.html'),('people','people.html'),
-       ('person','p/karpathy.html'),('person2','p/'+sparse),('news','news.html'),('trends','trends.html')]
+       ('person','p/karpathy.html'),('person2','p/'+sparse),('news','news.html'),('trends','trends.html'),('about','about.html')]
 MODES=[('1440_light',1440,'light'),('1440_dark',1440,'dark'),('390',390,'light')]
 INIT="window.__v=[];window.open=function(){window.__open=1};window.__cls=0;try{new PerformanceObserver(function(l){l.getEntries().forEach(function(e){if(!e.hadRecentInput)window.__cls+=e.value})}).observe({type:'layout-shift',buffered:true})}catch(x){};document.addEventListener('securitypolicyviolation',function(e){window.__v.push(e.violatedDirective+' '+(e.blockedURI||''))});"
 CHK="""()=>{const W=innerWidth;
 const ovEl=[...document.querySelectorAll('body *')].filter(x=>{const r=x.getBoundingClientRect();return r.width>0&&(r.right>W+1)&&getComputedStyle(x).position!=='fixed'&&!x.closest('.nav,.seg,.fchips,.kpl,.dcpop,.tl')}).slice(0,3).map(x=>x.className||x.tagName);
-const small=[];const w=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT);let n;while(n=w.nextNode()){const t=n.textContent.trim();if(!t)continue;const p=n.parentElement;if(!p||!p.offsetParent&&getComputedStyle(p).position!=='fixed')continue;if(/^(SCRIPT|STYLE)$/.test(p.tagName))continue;const fs=parseFloat(getComputedStyle(p).fontSize);if(fs<11.99)small.push(p.className+':'+fs)}
+const small=[];const w=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT);let n;while(n=w.nextNode()){const t=n.textContent.trim();if(!t)continue;const p=n.parentElement;if(!p||!p.offsetParent&&getComputedStyle(p).position!=='fixed')continue;if(/^(SCRIPT|STYLE)$/.test(p.tagName))continue;const fs=parseFloat(getComputedStyle(p).fontSize);if(fs<12.99)small.push(p.className+':'+fs)}
 return {v:window.__v,ov:document.documentElement.scrollWidth>W+1,ovEl,br:[...document.images].filter(i=>i.complete&&i.src&&i.naturalWidth===0).length,
  landmark:!!document.querySelector('main#main')&&!!document.querySelector('header.top')&&!!document.querySelector('nav[aria-label]'),skip:!!document.querySelector('a.skip[href="#main"]'),h1:document.querySelectorAll('h1').length,
  small:small.slice(0,3),inlineStyle:document.querySelectorAll('style').length,inlineScripts:[...document.scripts].filter(s=>!s.src&&s.type!=='application/json').length,theme:document.documentElement.dataset.theme}}"""
+import re as _re
+AUD=_re.search(r'JS=r"""(.*?)"""',open(os.path.join(os.path.dirname(os.path.abspath(__file__)),'audit.py'),encoding='utf-8').read(),_re.S).group(1)
 res={}; checks={}
 def ck(name,ok,info=''): checks[name]=('PASS' if ok else 'FAIL')+(' '+str(info)[:300] if info else '')
 raw={}
@@ -31,7 +33,7 @@ with sync_playwright() as p:
     for mn,vw,cs in MODES:
         todo=[x for x in PAGES if not os.environ.get('ONLY') or x[0] in os.environ['ONLY'].split(',')]
         if ALL: todo+=[('x','p/'+os.path.basename(f)) for f in sorted(glob.glob(S+'/p/*.html'))]+[('x','day/'+os.path.basename(f)) for f in dayfiles[1:]]+[('x','hot.html'),('x','accounts.html')]
-        agg=dict(n=0,csp=[],js=[],ov=[],br=0,land=[],small=[],ext=[],inl=[])
+        agg=dict(cr=[],n=0,csp=[],js=[],ov=[],br=0,land=[],small=[],ext=[],inl=[])
         for name,u in todo:
             print('>>',mn,name,u,file=sys.stderr,flush=True);c=b.new_context(viewport={'width':vw,'height':900 if vw>600 else 844},color_scheme=cs,device_scale_factor=1);c.add_init_script(INIT);g=c.new_page();er=[];ext=[]
             g.on('pageerror',lambda x:er.append(str(x)[:100]))
@@ -144,6 +146,7 @@ with sync_playwright() as p:
                     g.click('[data-density]')
                     if g.is_visible('.hxb'): g.mouse.click(5,300)
             r=g.evaluate(CHK);agg['n']+=1
+            if name!='x': agg['cr']+=[u+' '+x['k']+' '+str(x['cr'])+' '+x['t'] for x in g.evaluate(AUD) if x['cr']<4.5]
             agg['csp']+=[u+' '+x for x in r['v']];agg['js']+=[u+' '+x for x in er]
             if r['ov']:agg['ov'].append(u+' '+str(r['ovEl']))
             agg['br']+=r['br']
@@ -153,6 +156,7 @@ with sync_playwright() as p:
             if r['inlineStyle']!=1 or r['inlineScripts']!=1: agg['inl'].append(u+str((r['inlineStyle'],r['inlineScripts'])))
             if name!='x': res[f'{name}_{mn}']=dict(theme=r['theme'])
             g.close();c.close()
+        ck(f'contrast[{mn}] 主要页面所有文字 ≥4.5:1（含渐变底色最差值）',not agg['cr'],agg['cr'][:3])
         res['SUMMARY_'+mn]=agg;c.close()
     b.close()
 res['CHECKS']=checks
