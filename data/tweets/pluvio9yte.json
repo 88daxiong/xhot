@@ -2,6 +2,21 @@
   "handle": "pluvio9yte",
   "tweets": [
     {
+      "created_at": "2026-10-14T09:02:03.000Z",
+      "id": "2110295056796229927",
+      "lang": "",
+      "metrics": {
+        "bookmark": 26,
+        "impression": 5210,
+        "like": 23,
+        "quote": 0,
+        "reply": 14,
+        "retweet": 1
+      },
+      "text": "如果想用 Grok bot 写文案、写口播稿、做总结、做汇报，我真的推荐大家试试，将 Antigravity 的 Gemini 接入到 Grok Bot，实在是太好用了。\n\nGemini 的文案能力是一等一的领先，对人类情绪的洞察，也是在所有模型中断层领先的。\n\n其次，现在说实话，Grok bot https://t.co/m2TA7Prj5k",
+      "url": "https://x.com/Pluvio9yte/status/2110295056796229927"
+    },
+    {
       "created_at": "2026-10-13T15:36:25.000Z",
       "id": "2110031914556182742",
       "lang": "",

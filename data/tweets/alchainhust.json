@@ -2,6 +2,96 @@
   "handle": "alchainhust",
   "tweets": [
     {
+      "created_at": "2026-10-14T13:47:45.000Z",
+      "id": "2110366956205572442",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 1,
+        "impression": 2741,
+        "like": 2,
+        "quote": 0,
+        "reply": 1,
+        "retweet": 1
+      },
+      "text": "这是文末那个朴实无法的技巧的应用效果 https://t.co/FYvxYsAiHu https://t.co/rjiDh9BRDq",
+      "url": "https://x.com/AlchainHust/status/2110366956205572442"
+    },
+    {
+      "created_at": "2026-10-14T13:44:23.000Z",
+      "id": "2110366109954113587",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 8,
+        "impression": 6731,
+        "like": 29,
+        "quote": 3,
+        "reply": 16,
+        "retweet": 1
+      },
+      "text": "最近来X的人越来越多了，感觉X的社区氛围比前两年好了不少（从骂我的人变少就能看出）。不再是技术宅专属的社群个。\n\n核心原因我觉得有以下三点：\n1、AI\n2、AI\n3、AI\n\nemmm...说点认真的：\n1、AI，因为AI是现在大家都关心的话题，而最最前沿的模型又确实在海外，海外AI公司的创始人、核心成员又特别喜欢在X上发布内容、发布模型，与人互动的，所以对于一个关于AI行业发展的人来说，很难不对这个一手信息平台感兴趣；\n2、AI，很多人原本没有非得翻墙出来看个信息的欲望，但是现在想使用SOTA模型必须具备这个技能和环境，所以在工具齐备的情况下，顺便来X看一看，发点内容的门槛降低了很多；\n3、AI，因为X上有最前沿的AI信息，而最有智识能参与这波AI浪潮的国内用户大多也会用用X，所以国内更多的做通识内容的AI自媒体也会习惯来X搬运些信息回去分发，于是人更多了。\n\n对我来说，其实很多时候在X发布内容发布开源项目的核心价值之一就是会被国内别的自媒体搬运，这对于我个人项目影响力的扩大还挺有帮助的。\n\n还有，顺便说个两年前就分享过，部分人已经学会的技巧，那就是：同样的内容，如果你想同时发布在X和小红书等平台的话，你先发布在X，然后以自己搬运自己的形式，往小红书截图，通常来说，你的内容封标点击率会高不少（价值999，比大多数小红书运营课有用的简单技巧）",
+      "url": "https://x.com/AlchainHust/status/2110366109954113587"
+    },
+    {
+      "created_at": "2026-10-14T08:44:56.000Z",
+      "id": "2110290750130770212",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 8,
+        "impression": 3214,
+        "like": 23,
+        "quote": 0,
+        "reply": 3,
+        "retweet": 0
+      },
+      "text": "让 Rick &amp; Morty来给我做了个宣传片，欢迎huashu-art-motion迎来第36种画风 https://t.co/3hPBuxdI83",
+      "url": "https://x.com/AlchainHust/status/2110290750130770212"
+    },
+    {
+      "created_at": "2026-10-14T07:51:19.000Z",
+      "id": "2110277254387224763",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 8,
+        "impression": 4113,
+        "like": 4,
+        "quote": 0,
+        "reply": 10,
+        "retweet": 0
+      },
+      "text": "我用过数百个MCP和skills了，最最最让我没想到会开放mcp的一个上架大概就是....\n🍔麦当劳. 😂\n\n所以拿这个MCP整了个活，用女娲skill调用麦当劳的mcp接口反馈的订单数据，蒸馏了我的胃，做了个胃.skill\n\n用这个skill的话，可以获取到你的麦当劳订单信息，并加工理解你的偏好，给你做个「麦门胃」的小卡～\n欢迎来玩一玩：https://t.co/uLYUOhHfXZ",
+      "url": "https://x.com/AlchainHust/status/2110277254387224763"
+    },
+    {
+      "created_at": "2026-10-14T06:45:12.000Z",
+      "id": "2110260615055110252",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 32,
+        "impression": 6432,
+        "like": 45,
+        "quote": 0,
+        "reply": 15,
+        "retweet": 5
+      },
+      "text": "好疯狂！\n随便丢一张《Rick &amp; Morty》的截图，Opus5.5用代码给我复刻除了个几乎一模一样，真假难辨的画面...\n并且！\n这个画面还是分层的，并且角色可以绑骨骼进行交互😨\n\n这做起2D动画或者2D游戏来，会不会太容易了 https://t.co/cOCpNEOPNL",
+      "url": "https://x.com/AlchainHust/status/2110260615055110252"
+    },
+    {
+      "created_at": "2026-10-14T01:51:38.000Z",
+      "id": "2110186738081821132",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 53,
+        "impression": 11594,
+        "like": 76,
+        "quote": 0,
+        "reply": 12,
+        "retweet": 9
+      },
+      "text": "其实我一个月前就做过Coding Agent+Tripo+Blender去做游戏的教程，甚至…演示的时间也用了小王子的案例，流量也还不错。\n\n但是精细程度、完整度和 @Saccc_c 展示的案例表现确实完全不可同日而语的。\n\n所以同样是AI做东西，不管是做软件、做视频还是做游戏，如果你真的能把普通人实现的品质再往前推个10倍、100倍的话，你是会获得意想不到的东西的。\n\n这是个完全可能上架卖钱的游戏作品了，期待下进一步的教程",
+      "url": "https://x.com/AlchainHust/status/2110186738081821132"
+    },
+    {
       "created_at": "2026-10-13T14:35:39.000Z",
       "id": "2110016620869673386",
       "lang": "",

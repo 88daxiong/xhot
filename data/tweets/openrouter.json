@@ -2,6 +2,111 @@
   "handle": "openrouter",
   "tweets": [
     {
+      "created_at": "2026-10-14T22:06:00.000Z",
+      "id": "2110492343581499509",
+      "lang": "",
+      "metrics": {
+        "bookmark": 4,
+        "impression": 3235,
+        "like": 14,
+        "quote": 0,
+        "reply": 3,
+        "retweet": 3
+      },
+      "text": "Universal-3.6 Pro from @AssemblyAI is now live on OpenRouter\n\nSpeech-to-text through AssemblyAI's Sync API. Compared with Universal-3.5 Pro:\n\n- 30% fewer errors on short conversational utterances\n- 12% fewer errors on average across supported languages\n- Better recognition and",
+      "url": "https://x.com/OpenRouter/status/2110492343581499509"
+    },
+    {
+      "created_at": "2026-10-14T21:00:26.000Z",
+      "id": "2110475843529273460",
+      "lang": "",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 1576,
+        "like": 5,
+        "quote": 0,
+        "reply": 0,
+        "retweet": 1
+      },
+      "text": "How it works: put the parts in state the same way you would in Chat Completions (image_url, input_audio, video_url), ask a choice question, get probabilities back. The whole request above was 801 input tokens, $0.00012.\n\nRead more at: https://t.co/slAvkVWjdN",
+      "url": "https://x.com/OpenRouter/status/2110475843529273460"
+    },
+    {
+      "created_at": "2026-10-14T21:00:23.000Z",
+      "id": "2110475831227375973",
+      "lang": "",
+      "metrics": {
+        "bookmark": 11,
+        "impression": 4693,
+        "like": 28,
+        "quote": 0,
+        "reply": 6,
+        "retweet": 3
+      },
+      "text": "We fed Clef Omni a photo, 3 seconds of sizzle, a 2-second clip of a hot dog stand, and the word \"lunch?\"\n\nIt said: hot dog, 96.5%.\n\nAudio + video input for Decisions is live on OpenRouter. Four modalities, one call, probabilities instead of tokens. $0.15/M input, output free. https://t.co/vHqUjoUqNG https://t.co/AFpcjPLRQF",
+      "url": "https://x.com/OpenRouter/status/2110475831227375973"
+    },
+    {
+      "created_at": "2026-10-14T16:15:02.000Z",
+      "id": "2110404020192092611",
+      "lang": "",
+      "metrics": {
+        "bookmark": 5,
+        "impression": 5290,
+        "like": 51,
+        "quote": 1,
+        "reply": 6,
+        "retweet": 3
+      },
+      "text": "ElevenLabs had a strong launch week, taking nearly a third of spend on text-to-speech models yesterday after only 7 days live on platform.\n\nAll @ElevenLabs models are 50% off, only on OpenRouter, through 10/19 https://t.co/7aKezXPsaw",
+      "url": "https://x.com/OpenRouter/status/2110404020192092611"
+    },
+    {
+      "created_at": "2026-10-14T15:28:09.000Z",
+      "id": "2110392222109811171",
+      "lang": "",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 1821,
+        "like": 3,
+        "quote": 0,
+        "reply": 0,
+        "retweet": 0
+      },
+      "text": "3/ Pick from 10 voices out of the box, or bring your own HeyGen key to use voices cloned in your own HeyGen account.\n\nSee more: https://t.co/RczGsbNU5Z",
+      "url": "https://x.com/OpenRouter/status/2110392222109811171"
+    },
+    {
+      "created_at": "2026-10-14T15:28:06.000Z",
+      "id": "2110392210386821580",
+      "lang": "",
+      "metrics": {
+        "bookmark": 1,
+        "impression": 2059,
+        "like": 9,
+        "quote": 0,
+        "reply": 1,
+        "retweet": 0
+      },
+      "text": "2/ Pricing, 50% off through October 31:\nHeyGen Voice: $15 per million characters (list $30)\nHeyGen Voice Turbo: $7.50 per million characters (list $15)",
+      "url": "https://x.com/OpenRouter/status/2110392210386821580"
+    },
+    {
+      "created_at": "2026-10-14T15:28:03.000Z",
+      "id": "2110392197946482934",
+      "lang": "",
+      "metrics": {
+        "bookmark": 16,
+        "impression": 8752,
+        "like": 77,
+        "quote": 2,
+        "reply": 10,
+        "retweet": 10
+      },
+      "text": "1/ HeyGen Voice is now on OpenRouter, 50% off through October 31.\n\n@HeyGen's new text-to-speech model topped the Artificial Analysis TTS leaderboard. It comes in two modes: HeyGen Voice, and the lower-latency HeyGen Voice Turbo. https://t.co/tL9z2vMmo8",
+      "url": "https://x.com/OpenRouter/status/2110392197946482934"
+    },
+    {
       "created_at": "2026-10-13T19:00:44.000Z",
       "id": "2110083333409640842",
       "lang": "en",

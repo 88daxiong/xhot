@@ -2,6 +2,66 @@
   "handle": "ericzakariasson",
   "tweets": [
     {
+      "created_at": "2026-10-14T22:08:20.000Z",
+      "id": "2110492929920053441",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 102,
+        "impression": 14046,
+        "like": 262,
+        "quote": 9,
+        "reply": 28,
+        "retweet": 10
+      },
+      "text": "grok @bot marketplace is open for submissions!\n\nsend us your connectors:\nhttps://t.co/bkn3313Wjl https://t.co/pFc5r9298r",
+      "url": "https://x.com/ericzakariasson/status/2110492929920053441"
+    },
+    {
+      "created_at": "2026-10-14T15:44:05.000Z",
+      "id": "2110396233202475016",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 6,
+        "impression": 1394,
+        "like": 6,
+        "quote": 0,
+        "reply": 0,
+        "retweet": 0
+      },
+      "text": "try it out\n\nnpm i @xai-official/sdk\n\nhttps://t.co/KI6rjgbCx6",
+      "url": "https://x.com/ericzakariasson/status/2110396233202475016"
+    },
+    {
+      "created_at": "2026-10-14T15:44:03.000Z",
+      "id": "2110396221353533649",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 23,
+        "impression": 2371,
+        "like": 14,
+        "quote": 1,
+        "reply": 2,
+        "retweet": 1
+      },
+      "text": "and the full cookbook here: https://t.co/gaT92x8voP",
+      "url": "https://x.com/ericzakariasson/status/2110396221353533649"
+    },
+    {
+      "created_at": "2026-10-14T15:44:00.000Z",
+      "id": "2110396209118736858",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 131,
+        "impression": 9709,
+        "like": 142,
+        "quote": 3,
+        "reply": 12,
+        "retweet": 7
+      },
+      "text": "cookbook is updated with 25 examples, all built on the @spacexai typescript sdk:\n\n- short films from a one-line premise\n- one photo to a time-lapse\n- talking photos\n- product photo to video ad\n- video dubbing\n- live voice translation\n\nand more! https://t.co/VZe7rxRsnY",
+      "url": "https://x.com/ericzakariasson/status/2110396209118736858"
+    },
+    {
       "created_at": "2026-10-13T18:47:09.000Z",
       "id": "2110079912409542988",
       "lang": "",

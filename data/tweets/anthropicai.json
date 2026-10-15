@@ -2,6 +2,21 @@
   "handle": "anthropicai",
   "tweets": [
     {
+      "created_at": "2026-10-14T08:40:45.000Z",
+      "id": "2110289695888511368",
+      "lang": "",
+      "metrics": {
+        "bookmark": 314,
+        "impression": 545376,
+        "like": 3113,
+        "quote": 200,
+        "reply": 388,
+        "retweet": 170
+      },
+      "text": "We’ve opened an office in Singapore—our fifth in the Asia-Pacific region. We’ve also signed an MOU with the Government of Singapore on AI safety and responsible adoption.\n\nYou can read more about our new office here: https://t.co/125mBgHLkM",
+      "url": "https://x.com/AnthropicAI/status/2110289695888511368"
+    },
+    {
       "created_at": "2026-10-13T16:36:41.000Z",
       "id": "2110047081414987957",
       "lang": "en",

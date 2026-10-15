@@ -2,6 +2,216 @@
   "handle": "google",
   "tweets": [
     {
+      "created_at": "2026-10-14T21:44:15.000Z",
+      "id": "2110486869951791156",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 2,
+        "impression": 10408,
+        "like": 7,
+        "quote": 0,
+        "reply": 4,
+        "retweet": 0
+      },
+      "text": "Learn more ↓ https://t.co/xieAleMZ9U",
+      "url": "https://x.com/Google/status/2110486869951791156"
+    },
+    {
+      "created_at": "2026-10-14T21:44:14.000Z",
+      "id": "2110486867569262936",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 5,
+        "impression": 39750,
+        "like": 70,
+        "quote": 1,
+        "reply": 26,
+        "retweet": 7
+      },
+      "text": "From optimizing codebases to creative writing, here's how @TulseeDoshi and other Google teams are using Gemini 4 Argon 👇",
+      "url": "https://x.com/Google/status/2110486867569262936"
+    },
+    {
+      "created_at": "2026-10-14T21:16:32.000Z",
+      "id": "2110479896401133627",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 11549,
+        "like": 10,
+        "quote": 0,
+        "reply": 2,
+        "retweet": 1
+      },
+      "text": "Learn more about all of our updates from Research@ ↓ https://t.co/s3kyssMIQw",
+      "url": "https://x.com/Google/status/2110479896401133627"
+    },
+    {
+      "created_at": "2026-10-14T21:16:31.000Z",
+      "id": "2110479892206752019",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 17,
+        "impression": 29734,
+        "like": 73,
+        "quote": 0,
+        "reply": 22,
+        "retweet": 13
+      },
+      "text": "Today, at our Research@ event, we shared research breakthroughs that can help amplify human ingenuity. From agents that can help solve real-world problems, like public health threats and environmental crises like extreme flooding, to models that can aid advanced medical workflows and improve doctor-patient relations, our latest updates will help advance science and technology.\n\nHere are some recent highlights.",
+      "url": "https://x.com/Google/status/2110479892206752019"
+    },
+    {
+      "created_at": "2026-10-14T21:10:01.000Z",
+      "id": "2110478256097173600",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 1,
+        "impression": 12327,
+        "like": 23,
+        "quote": 0,
+        "reply": 2,
+        "retweet": 5
+      },
+      "text": "@_philschmid @antigravity @soumyadesign Make 3D musical instruments using Argon, WebMIDI, and Three.js.\n\n🎹 by @alexanderchen https://t.co/ZUV3Kg5TJf",
+      "url": "https://x.com/Google/status/2110478256097173600"
+    },
+    {
+      "created_at": "2026-10-14T21:09:00.000Z",
+      "id": "2110477997333729504",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 7,
+        "impression": 13681,
+        "like": 31,
+        "quote": 3,
+        "reply": 1,
+        "retweet": 5
+      },
+      "text": "@_philschmid Play an interactive WebGL Mahjong game built in @Antigravity featuring responsive, realistic spring physics and sound effects.\n\nPlay it here → https://t.co/ko0FIUBxoy\n\n🀄 by @soumyadesign https://t.co/ZXLWLKLWx8",
+      "url": "https://x.com/Google/status/2110477997333729504"
+    },
+    {
+      "created_at": "2026-10-14T19:04:22.000Z",
+      "id": "2110446632923693458",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 7,
+        "impression": 14708,
+        "like": 24,
+        "quote": 0,
+        "reply": 4,
+        "retweet": 2
+      },
+      "text": "🌴 Build your own island with the applet in @GoogleAIStudio ↓ https://t.co/27jrvNbo7V",
+      "url": "https://x.com/Google/status/2110446632923693458"
+    },
+    {
+      "created_at": "2026-10-14T19:04:21.000Z",
+      "id": "2110446630948180353",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 141,
+        "impression": 117927,
+        "like": 739,
+        "quote": 6,
+        "reply": 46,
+        "retweet": 57
+      },
+      "text": "We used Gemini 4 Argon in @GoogleAIStudio to build an interactive 3D island sandbox 🏝️\n\nEvery brush stroke simulates living terrain, sand, and water physics in real time using custom Three.js and GLSL shaders. https://t.co/HWohQX7RT0",
+      "url": "https://x.com/Google/status/2110446630948180353"
+    },
+    {
+      "created_at": "2026-10-14T18:38:45.000Z",
+      "id": "2110440187406975292",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 12,
+        "impression": 5744,
+        "like": 53,
+        "quote": 0,
+        "reply": 1,
+        "retweet": 4
+      },
+      "text": "Go from standard photos to digital oil paintings. This prompt in Argon generates a custom multi-pass canvas renderer in Python.\n\n🌆 by @_philschmid https://t.co/jR6fDcg2Lx",
+      "url": "https://x.com/Google/status/2110440187406975292"
+    },
+    {
+      "created_at": "2026-10-14T18:38:44.000Z",
+      "id": "2110440184584253442",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 17,
+        "impression": 5889,
+        "like": 80,
+        "quote": 1,
+        "reply": 2,
+        "retweet": 5
+      },
+      "text": "Build playable, stylized games with 3D renderings in Three.js with Argon (complete with jump scares), all in one shot.\n\n👻 by @ammaar https://t.co/qBnllygpiY",
+      "url": "https://x.com/Google/status/2110440184584253442"
+    },
+    {
+      "created_at": "2026-10-14T18:38:44.000Z",
+      "id": "2110440182390432091",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 21,
+        "impression": 6268,
+        "like": 72,
+        "quote": 0,
+        "reply": 6,
+        "retweet": 7
+      },
+      "text": "Use complex mathematical principles like Fourier epicycles to animate a pelican riding a bicycle.\n\nArgon takes care of the physics, motion, and video render with background music generated and synced using Lyria 3.5.\n\nPrompt: Make a slow-reveal Fourier epicycle video of [Pelican riding a bike with a 3D bullet time effect], make the video in the style of the attached reference image, add a cinematic soundtrack using Lyria 3.5 and sync the music.\n\n🚲 by @fofrAI using the @Antigravity CLI https://t.co/9IPtHPhdvq",
+      "url": "https://x.com/Google/status/2110440182390432091"
+    },
+    {
+      "created_at": "2026-10-14T18:38:43.000Z",
+      "id": "2110440180142498036",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 281,
+        "impression": 369971,
+        "like": 1560,
+        "quote": 21,
+        "reply": 75,
+        "retweet": 114
+      },
+      "text": "Gemini 4 Argon is here.\n\nTo show you what it can do, here are 5 builds from our team 🧵 ↓ https://t.co/9IPtHPhLkY",
+      "url": "https://x.com/Google/status/2110440180142498036"
+    },
+    {
+      "created_at": "2026-10-14T17:51:42.000Z",
+      "id": "2110428347042041958",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 14817,
+        "like": 23,
+        "quote": 0,
+        "reply": 3,
+        "retweet": 1
+      },
+      "text": "Learn more about Gemini 4 Argon ↓ https://t.co/ra421jakxM",
+      "url": "https://x.com/Google/status/2110428347042041958"
+    },
+    {
+      "created_at": "2026-10-14T17:51:41.000Z",
+      "id": "2110428343950836212",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 55,
+        "impression": 82779,
+        "like": 514,
+        "quote": 17,
+        "reply": 57,
+        "retweet": 64
+      },
+      "text": "We taught a robot to play cornhole using Gemini 4 Argon  🦾\n\nJust by watching a video of humans playing, Argon mapped the physics, coded its own simulation to practice, and taught @Apptronik's Apollo humanoid to sink 7 shots in a row. https://t.co/ihlEU2FKvo",
+      "url": "https://x.com/Google/status/2110428343950836212"
+    },
+    {
       "created_at": "2026-10-13T21:04:24.000Z",
       "id": "2110114452955926759",
       "lang": "en",

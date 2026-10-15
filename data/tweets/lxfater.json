@@ -2,6 +2,321 @@
   "handle": "lxfater",
   "tweets": [
     {
+      "created_at": "2026-10-14T18:17:11.000Z",
+      "id": "2110434759579189725",
+      "lang": "",
+      "metrics": {
+        "bookmark": 19,
+        "impression": 10180,
+        "like": 38,
+        "quote": 0,
+        "reply": 8,
+        "retweet": 2
+      },
+      "text": "AI 还没取代人类，已经先替人类去面试了🤣\n\n视频里面的老哥碰到，企业派出了 AI 面试官面试他，所以他也让自己的虚拟人上场面试。人类都开始挂机了\n\n那么，这场面试还怎么进行？\n\n两台大模型开始一本正经地聊岗位。聊到最后，它们却双双卡住，在无休止地相互说再见。\n\nAI的到来让这个世界太魔幻。",
+      "url": "https://x.com/lxfater/status/2110434759579189725"
+    },
+    {
+      "created_at": "2026-10-14T13:30:26.000Z",
+      "id": "2110362598826766739",
+      "lang": "",
+      "metrics": {
+        "bookmark": 1,
+        "impression": 4541,
+        "like": 23,
+        "quote": 0,
+        "reply": 12,
+        "retweet": 0
+      },
+      "text": "天天重置 基本的用户体验都保持不了，天天显示GPT 所选模型已满额？ https://t.co/5CFvzlakIS",
+      "url": "https://x.com/lxfater/status/2110362598826766739"
+    },
+    {
+      "created_at": "2026-10-14T13:13:10.000Z",
+      "id": "2110358250809864254",
+      "lang": "",
+      "metrics": {
+        "bookmark": 9,
+        "impression": 19319,
+        "like": 26,
+        "quote": 0,
+        "reply": 99,
+        "retweet": 0
+      },
+      "text": "说说你们 claude 账号坚持了多久了吧，咋做到的？",
+      "url": "https://x.com/lxfater/status/2110358250809864254"
+    },
+    {
+      "created_at": "2026-10-14T12:01:03.000Z",
+      "id": "2110340103436435695",
+      "lang": "",
+      "metrics": {
+        "bookmark": 13,
+        "impression": 3254,
+        "like": 23,
+        "quote": 3,
+        "reply": 24,
+        "retweet": 1
+      },
+      "text": "AI 逆向的风愈演愈烈，但我认为软件没有死！！\n\n死的是写代码曾经能单独构成壁垒的时代。\n\n现在做一个 App、一个微型 SaaS、一个功能完整的工具，往往一两天就搞定了：需求讲清楚，AI 就能把页面、接口、部署一路推过去。\n\n当大多数软件都能被很快复刻，辛苦写出的代码到底还值不值钱？",
+      "url": "https://x.com/lxfater/status/2110340103436435695"
+    },
+    {
+      "created_at": "2026-10-14T10:48:12.000Z",
+      "id": "2110321769164722313",
+      "lang": "",
+      "metrics": {
+        "bookmark": 19,
+        "impression": 12013,
+        "like": 29,
+        "quote": 1,
+        "reply": 19,
+        "retweet": 3
+      },
+      "text": "大家通常以为，Anthropic 成立初期为了攻克通用的AI，写代码只是后来为了对抗竞争而寻求的出路。\n\n但最近官司公开了 Anthropic 2021 年创始期内部路线图\n事实完全反过来，他们从第一天起，就把 AGI 的验证原型直接定义为AI 程序员。\n\n这份是联创 Jared Kaplan 写的，Dario Amodei 等全员一起评审过 https://t.co/ScVbr2Bih3",
+      "url": "https://x.com/lxfater/status/2110321769164722313"
+    },
+    {
+      "created_at": "2026-10-14T10:35:49.000Z",
+      "id": "2110318653757653438",
+      "lang": "",
+      "metrics": {
+        "bookmark": 15,
+        "impression": 19436,
+        "like": 12,
+        "quote": 1,
+        "reply": 28,
+        "retweet": 1
+      },
+      "text": "有什么法子能让我免费用上 Gemini3.8-Flash 的 API 呢？🤔",
+      "url": "https://x.com/lxfater/status/2110318653757653438"
+    },
+    {
+      "created_at": "2026-10-14T07:30:07.000Z",
+      "id": "2110271919031280062",
+      "lang": "",
+      "metrics": {
+        "bookmark": 32,
+        "impression": 3032,
+        "like": 25,
+        "quote": 0,
+        "reply": 5,
+        "retweet": 2
+      },
+      "text": "如果你想在 macOS 之外做 iOS 开发，xtool 是一个值得关注的开源项目。\n\n它的定位很直接：用 SwiftPM 和开放标准，做一个跨平台的 Xcode 替代品，支持在 Linux、WSL 和 macOS 上构建 SwiftPM 项目，并把它打包成 iOS App。\n\n除了构建，xtool 还把 iOS 开发中的几件事拆成了清晰的命令：\n\n-",
+      "url": "https://x.com/lxfater/status/2110271919031280062"
+    },
+    {
+      "created_at": "2026-10-14T07:19:46.000Z",
+      "id": "2110269315220185113",
+      "lang": "",
+      "metrics": {
+        "bookmark": 12,
+        "impression": 11815,
+        "like": 15,
+        "quote": 1,
+        "reply": 8,
+        "retweet": 0
+      },
+      "text": "有什么靠谱的同步微博，即刻的插件，想做做国内社媒了👀",
+      "url": "https://x.com/lxfater/status/2110269315220185113"
+    },
+    {
+      "created_at": "2026-10-14T06:27:42.000Z",
+      "id": "2110256213883838588",
+      "lang": "",
+      "metrics": {
+        "bookmark": 2,
+        "impression": 7780,
+        "like": 19,
+        "quote": 1,
+        "reply": 37,
+        "retweet": 0
+      },
+      "text": "一晚上给我干了 400 美金，Cursor 里面的 Claude API😅 https://t.co/gaC4cgYtlS",
+      "url": "https://x.com/lxfater/status/2110256213883838588"
+    },
+    {
+      "created_at": "2026-10-14T06:06:25.000Z",
+      "id": "2110250857551847624",
+      "lang": "",
+      "metrics": {
+        "bookmark": 1,
+        "impression": 4846,
+        "like": 5,
+        "quote": 0,
+        "reply": 8,
+        "retweet": 0
+      },
+      "text": "OpenAI 高管会议室里，发现了一枚窃听器。\n它插在电视背后的 USB 口，还用卫生纸盖着😂\n\n这件事提醒所有把 AI 接进核心业务的公司：安全漏洞不一定在代码里，而是自己人，是 OpenAI 的一名工程师。\n\n设备约在 9 月 28 日装上，9 月 30 日被发现，里面存的内容已经加密。 https://t.co/nCM9gv8d8l",
+      "url": "https://x.com/lxfater/status/2110250857551847624"
+    },
+    {
+      "created_at": "2026-10-14T06:00:23.000Z",
+      "id": "2110249337217245564",
+      "lang": "",
+      "metrics": {
+        "bookmark": 18,
+        "impression": 10011,
+        "like": 28,
+        "quote": 0,
+        "reply": 3,
+        "retweet": 3
+      },
+      "text": "iPad Mini 现在是玩 Switch 游戏最好的设备。 https://t.co/7KGFVGc4ye",
+      "url": "https://x.com/lxfater/status/2110249337217245564"
+    },
+    {
+      "created_at": "2026-10-14T05:42:44.000Z",
+      "id": "2110244897764843887",
+      "lang": "",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 2934,
+        "like": 9,
+        "quote": 0,
+        "reply": 7,
+        "retweet": 0
+      },
+      "text": "笑死了，平替了呀😂 https://t.co/zff3rGPVWl",
+      "url": "https://x.com/lxfater/status/2110244897764843887"
+    },
+    {
+      "created_at": "2026-10-14T04:51:28.000Z",
+      "id": "2110231995867627781",
+      "lang": "",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 3123,
+        "like": 1,
+        "quote": 0,
+        "reply": 1,
+        "retweet": 0
+      },
+      "text": "笑死 https://t.co/EQY5Dvf9qa",
+      "url": "https://x.com/lxfater/status/2110231995867627781"
+    },
+    {
+      "created_at": "2026-10-14T03:57:02.000Z",
+      "id": "2110218295878332431",
+      "lang": "",
+      "metrics": {
+        "bookmark": 1,
+        "impression": 2296,
+        "like": 4,
+        "quote": 0,
+        "reply": 0,
+        "retweet": 0
+      },
+      "text": "最近 AI 逆向越来越疯狂了🥲，下面是我的一些思考 https://t.co/zW1PHzfojU",
+      "url": "https://x.com/lxfater/status/2110218295878332431"
+    },
+    {
+      "created_at": "2026-10-14T03:55:53.000Z",
+      "id": "2110218007834431614",
+      "lang": "",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 829,
+        "like": 0,
+        "quote": 0,
+        "reply": 0,
+        "retweet": 0
+      },
+      "text": "关于 AI 逆向软件的思考🤔 https://t.co/zW1PHzfojU",
+      "url": "https://x.com/lxfater/status/2110218007834431614"
+    },
+    {
+      "created_at": "2026-10-14T03:55:11.000Z",
+      "id": "2110217829039698275",
+      "lang": "",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 1211,
+        "like": 0,
+        "quote": 0,
+        "reply": 0,
+        "retweet": 0
+      },
+      "text": "关于 AI 逆向的思考🤔 https://t.co/zW1PHzfojU",
+      "url": "https://x.com/lxfater/status/2110217829039698275"
+    },
+    {
+      "created_at": "2026-10-14T03:49:29.000Z",
+      "id": "2110216396693000348",
+      "lang": "",
+      "metrics": {
+        "bookmark": 17,
+        "impression": 8642,
+        "like": 24,
+        "quote": 0,
+        "reply": 17,
+        "retweet": 1
+      },
+      "text": "一个Switch游戏几分钟就能移植到iPhone\n\nPS5 也已经摸到高权限隔离层了，能运行大部分游戏了\n\n过去主机像一个封闭黑箱：硬件、系统、游戏、运行环境，全都被锁在里面。\n\n但随着逆向工具和 AI https://t.co/FokPPGP5zM",
+      "url": "https://x.com/lxfater/status/2110216396693000348"
+    },
+    {
+      "created_at": "2026-10-14T03:18:30.000Z",
+      "id": "2110208601214312782",
+      "lang": "",
+      "metrics": {
+        "bookmark": 1,
+        "impression": 14697,
+        "like": 30,
+        "quote": 1,
+        "reply": 48,
+        "retweet": 0
+      },
+      "text": "500 刀的 GPT 能到得了 100 刀的 claude 的水平吗？\n\n没得选了，只能用 GPT 了🙁",
+      "url": "https://x.com/lxfater/status/2110208601214312782"
+    },
+    {
+      "created_at": "2026-10-14T02:15:01.000Z",
+      "id": "2110192625210785813",
+      "lang": "",
+      "metrics": {
+        "bookmark": 15,
+        "impression": 11959,
+        "like": 28,
+        "quote": 1,
+        "reply": 13,
+        "retweet": 0
+      },
+      "text": "Anthropic被 AI 逼到重写是Git。\n\n他们 5 月每天合并约 2500 个代码变更，9 月已超过 3 万个。CI 每天要 checkout 约 2500 万次；主分支历史接近 100GB，压缩工作副本也超过 25GB。\n\n问题不只是Git 慢，而是它的很多前提是为人类离线协作设计的：每个客户端都要尽量拥有一份完整仓库。 https://t.co/3nFowj35AZ",
+      "url": "https://x.com/lxfater/status/2110192625210785813"
+    },
+    {
+      "created_at": "2026-10-14T01:30:13.000Z",
+      "id": "2110181347159367825",
+      "lang": "",
+      "metrics": {
+        "bookmark": 5,
+        "impression": 7478,
+        "like": 26,
+        "quote": 2,
+        "reply": 60,
+        "retweet": 1
+      },
+      "text": "我最近想一下，别急着为 AI 囤显卡\n\n这两年本地跑模型、写 Agent、做推理，硬件焦虑很容易上来：显卡要不要一步到位？\nMac 够不够？要不要直接买一台价格很高的 AI 专用设备？\n\n但换个角度看，最贵的未必是设备，而是过早锁定。",
+      "url": "https://x.com/lxfater/status/2110181347159367825"
+    },
+    {
+      "created_at": "2026-10-13T23:42:01.000Z",
+      "id": "2110154118752825829",
+      "lang": "",
+      "metrics": {
+        "bookmark": 7,
+        "impression": 5622,
+        "like": 16,
+        "quote": 0,
+        "reply": 4,
+        "retweet": 2
+      },
+      "text": "PS5 破解刚跨过一个很关键的坎：\n\n有人展示称，已经击败了负责隔离的 hypervisor（虚拟化监控层）。\n\n它可以理解为主机系统最上方的一道“总闸门”：普通漏洞也许只能在局部做文章，但一旦高权限隔离层被突破，破解者就可能获得更深的系统控制权限，后续的自制软件、调试与安全研究都有了新的入口。 https://t.co/dnzKL4IbtP",
+      "url": "https://x.com/lxfater/status/2110154118752825829"
+    },
+    {
       "created_at": "2026-10-13T22:54:00.000Z",
       "id": "2110142036435235014",
       "lang": "zh",

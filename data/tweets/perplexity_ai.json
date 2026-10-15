@@ -2,6 +2,81 @@
   "handle": "perplexity_ai",
   "tweets": [
     {
+      "created_at": "2026-10-14T17:01:29.000Z",
+      "id": "2110415710073819389",
+      "lang": "",
+      "metrics": {
+        "bookmark": 32,
+        "impression": 36222,
+        "like": 219,
+        "quote": 15,
+        "reply": 31,
+        "retweet": 15
+      },
+      "text": "Ultrafast versions of GPT-6 Astra and SOL 6.1 are now available in Perplexity Computer for Max subscribers.\n\nBoth generate tokens faster, completing long Computer tasks sooner.\n\nChoose Astra or SOL 6.1 under Custom, then set speed to Ultrafast. https://t.co/g428a2Q0SC",
+      "url": "https://x.com/perplexity_ai/status/2110415710073819389"
+    },
+    {
+      "created_at": "2026-10-14T16:02:44.000Z",
+      "id": "2110400925563277631",
+      "lang": "",
+      "metrics": {
+        "bookmark": 2,
+        "impression": 3686,
+        "like": 11,
+        "quote": 0,
+        "reply": 1,
+        "retweet": 0
+      },
+      "text": "Terminals and file watches can outlive their opening requests. Once a receiver installs the new execution identity, SPACE stops the old streams. Eligible operations can reconnect once, passing the identity checks again.\n\nRead the article: https://t.co/jH6TX2cgI9 https://t.co/BQWAdFZK3i",
+      "url": "https://x.com/perplexity_ai/status/2110400925563277631"
+    },
+    {
+      "created_at": "2026-10-14T16:02:40.000Z",
+      "id": "2110400909696282861",
+      "lang": "",
+      "metrics": {
+        "bookmark": 1,
+        "impression": 4103,
+        "like": 15,
+        "quote": 0,
+        "reply": 1,
+        "retweet": 0
+      },
+      "text": "Each request carries short-lived, signed proof of which execution may handle it and what access is allowed.\n\nThe receiving worker checks that identity against its own runtime record and rejects mismatches before forwarding. https://t.co/H6fWrAmb5p",
+      "url": "https://x.com/perplexity_ai/status/2110400909696282861"
+    },
+    {
+      "created_at": "2026-10-14T16:02:36.000Z",
+      "id": "2110400893317517410",
+      "lang": "",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 1262,
+        "like": 12,
+        "quote": 1,
+        "reply": 1,
+        "retweet": 0
+      },
+      "text": "When a sandbox resumes on another machine, it keeps its sandbox ID but starts a new execution.\n\nA stale route can send a valid request to the older execution and return old data. Checking the sandbox ID alone won’t catch the difference.",
+      "url": "https://x.com/perplexity_ai/status/2110400893317517410"
+    },
+    {
+      "created_at": "2026-10-14T16:02:34.000Z",
+      "id": "2110400881028149315",
+      "lang": "",
+      "metrics": {
+        "bookmark": 78,
+        "impression": 29178,
+        "like": 168,
+        "quote": 5,
+        "reply": 27,
+        "retweet": 14
+      },
+      "text": "Our sandbox, SPACE, handles millions of executions a day with an error rate below 0.0002%.\n\nWe’re sharing how it uses cryptographic identity to keep requests tied to the right execution as sandboxes pause, resume, and move.\n\nRead more: https://t.co/jH6TX2cgI9",
+      "url": "https://x.com/perplexity_ai/status/2110400881028149315"
+    },
+    {
       "created_at": "2026-10-12T18:05:31.000Z",
       "id": "2109707048716063132",
       "lang": "",

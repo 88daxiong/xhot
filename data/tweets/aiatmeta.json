@@ -2,6 +2,51 @@
   "handle": "aiatmeta",
   "tweets": [
     {
+      "created_at": "2026-10-14T23:46:15.000Z",
+      "id": "2110517572575895671",
+      "lang": "",
+      "metrics": {
+        "bookmark": 3,
+        "impression": 1302,
+        "like": 3,
+        "quote": 0,
+        "reply": 0,
+        "retweet": 0
+      },
+      "text": "Watch the full convo with @finkd, @alexandr_wang and @collision:\n\nhttps://t.co/AJ9GHXjB2d",
+      "url": "https://x.com/AIatMeta/status/2110517572575895671"
+    },
+    {
+      "created_at": "2026-10-14T23:46:15.000Z",
+      "id": "2110517571149807685",
+      "lang": "",
+      "metrics": {
+        "bookmark": 3,
+        "impression": 4480,
+        "like": 32,
+        "quote": 0,
+        "reply": 14,
+        "retweet": 6
+      },
+      "text": "Muse Wonder and Muse Wonder Full deliver SOTA performance on personal and professional agentic tasks. \n\nLearn more about the models on our researcher blog: https://t.co/koe89SLQts https://t.co/mEIYEFD40g",
+      "url": "https://x.com/AIatMeta/status/2110517571149807685"
+    },
+    {
+      "created_at": "2026-10-14T18:44:49.000Z",
+      "id": "2110441716507693450",
+      "lang": "",
+      "metrics": {
+        "bookmark": 136,
+        "impression": 83167,
+        "like": 375,
+        "quote": 37,
+        "reply": 34,
+        "retweet": 60
+      },
+      "text": "We’re exploring how AI can accelerate health science research.\n\nWhile AI has made significant breakthroughs in formal sciences like mathematics, health data science depends on imperfect real-world data and consequential choices about cohorts, variables, and causal assumptions. https://t.co/jQyYt6VL2J",
+      "url": "https://x.com/AIatMeta/status/2110441716507693450"
+    },
+    {
       "created_at": "2026-10-12T17:32:22.000Z",
       "id": "2109698705490149596",
       "lang": "en",

@@ -2,6 +2,51 @@
   "handle": "therundownai",
   "tweets": [
     {
+      "created_at": "2026-10-14T16:35:39.000Z",
+      "id": "2110409210433245535",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 7,
+        "impression": 4708,
+        "like": 19,
+        "quote": 2,
+        "reply": 9,
+        "retweet": 1
+      },
+      "text": "REPORT: Researchers say they made contact with a fleet of Tencent-linked AI agents that was scraping Alibaba’s version of Google Maps.\n\nThey’re calling it the first contact with a \"rogue agent fleet in the wild.\" https://t.co/NOAd34AuKc https://t.co/Do9LuPXnNW",
+      "url": "https://x.com/TheRundownAI/status/2110409210433245535"
+    },
+    {
+      "created_at": "2026-10-14T10:30:30.000Z",
+      "id": "2110317317447925941",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 1807,
+        "like": 1,
+        "quote": 0,
+        "reply": 0,
+        "retweet": 0
+      },
+      "text": "Read more: https://t.co/hjAtOkDWAd",
+      "url": "https://x.com/TheRundownAI/status/2110317317447925941"
+    },
+    {
+      "created_at": "2026-10-14T10:30:29.000Z",
+      "id": "2110317312662233187",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 1,
+        "impression": 5221,
+        "like": 18,
+        "quote": 1,
+        "reply": 12,
+        "retweet": 3
+      },
+      "text": "Top stories in AI today:\n\n- OpenAI engineer bugged exec meeting room\n- AI’s taste skills move up self-improvement timeline\n- Give Grok Bot its own email inbox\n- Character AI declares bankruptcy, Disney bids $20M https://t.co/oqlqMNI2JS",
+      "url": "https://x.com/TheRundownAI/status/2110317312662233187"
+    },
+    {
       "created_at": "2026-10-13T18:48:21.000Z",
       "id": "2110080214411911331",
       "lang": "",

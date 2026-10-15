@@ -2,6 +2,21 @@
   "handle": "clementdelangue",
   "tweets": [
     {
+      "created_at": "2026-10-14T14:30:48.000Z",
+      "id": "2110377790486749231",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 101,
+        "impression": 22861,
+        "like": 439,
+        "quote": 7,
+        "reply": 67,
+        "retweet": 24
+      },
+      "text": "Very cool to see Embedding Gemma 2 by @Google, number on trending on HF!\n\nThe media and silicon valley bubble only talks about reasoning LLMs when there is a much bigger variety of AI models that are super impactful and useful like embeddings, decision models, audio, video, time-series,... (over 3M public models on HF!).\n\nLet's put them back in the spotlight!",
+      "url": "https://x.com/ClementDelangue/status/2110377790486749231"
+    },
+    {
       "created_at": "2026-10-13T16:02:08.000Z",
       "id": "2110038387360923744",
       "lang": "en",

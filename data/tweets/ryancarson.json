@@ -2,6 +2,21 @@
   "handle": "ryancarson",
   "tweets": [
     {
+      "created_at": "2026-10-14T14:27:40.000Z",
+      "id": "2110377001701744670",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 5,
+        "impression": 4918,
+        "like": 101,
+        "quote": 1,
+        "reply": 21,
+        "retweet": 5
+      },
+      "text": "I’m speaking at @aiDotEngineer next. \n\nI’m going to show how we manage our teams of agents across the team and how we hire new employees at @HelloUntangle https://t.co/OoaqVP2bQS",
+      "url": "https://x.com/ryancarson/status/2110377001701744670"
+    },
+    {
       "created_at": "2026-10-13T13:10:37.000Z",
       "id": "2109995223762006468",
       "lang": "",

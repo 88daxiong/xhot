@@ -2,6 +2,21 @@
   "handle": "msftresearch",
   "tweets": [
     {
+      "created_at": "2026-10-14T15:35:34.000Z",
+      "id": "2110394086947528957",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 10,
+        "impression": 7332,
+        "like": 36,
+        "quote": 3,
+        "reply": 1,
+        "retweet": 4
+      },
+      "text": "Weather forecasts are unreliable past two weeks, leaving a crucial gap for farmers and others. Probabilistic Bias Correction improves extended forecasting, taking top honors in a global competition and showing promise for real-world use: https://t.co/lGiuzdAheY \n\nIMAGE CREDIT: Cooperative Institute for Research in the Atmosphere at Colorado State University and the National Oceanic and Atmospheric Administration (CSU/CIRA & NOAA)",
+      "url": "https://x.com/MSFTResearch/status/2110394086947528957"
+    },
+    {
       "created_at": "2026-10-12T19:26:03.000Z",
       "id": "2109727313772392867",
       "lang": "en",

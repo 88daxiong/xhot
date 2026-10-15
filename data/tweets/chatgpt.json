@@ -2,6 +2,21 @@
   "handle": "chatgpt",
   "tweets": [
     {
+      "created_at": "2026-10-14T17:37:41.000Z",
+      "id": "2110424821331034550",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 204,
+        "impression": 103806,
+        "like": 870,
+        "quote": 24,
+        "reply": 110,
+        "retweet": 68
+      },
+      "text": "At DevDay, we introduced ChatGPT Space: a new home for your team to collaborate with AI to get work done.\n\nIn Space, you can create living documents with ChatGPT and the people you work with. Turn a messy conversation into an organized plan, and invite a teammate to edit together or leave feedback in comments. Tag ChatGPT or your dot to make changes or help with next steps.\n\nYou can also ask ChatGPT to keep the page updated from your connected tools, so you can focus on the work—not updating the doc.\n\nSee how it works below and go to https://t.co/S5nTgzPkLq to get started.\n\nAvailable on Pro, Business, and Enterprise plans on web and desktop.",
+      "url": "https://x.com/ChatGPT/status/2110424821331034550"
+    },
+    {
       "created_at": "2026-10-09T19:12:32.000Z",
       "id": "2108636750050713843",
       "lang": "",

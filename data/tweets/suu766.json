@@ -2,6 +2,171 @@
   "handle": "suu766",
   "tweets": [
     {
+      "created_at": "2026-10-14T13:51:55.000Z",
+      "id": "2110368003070259619",
+      "lang": "",
+      "metrics": {
+        "bookmark": 4,
+        "impression": 2082,
+        "like": 17,
+        "quote": 0,
+        "reply": 23,
+        "retweet": 1
+      },
+      "text": "如果你已经和 ChatGPT 聊过几百次，甚至几千次，我强烈建议你现在就去问它一个问题\n\n把下面这段话原封不动地发给 ChatGPT：\n\n「在我们反复讨论过的所有问题中，有没有一个更深层次的问题，是我一直在围着它打转，却始终没有真正问出口的？」\n\n我刚刚试了一下，看完它的回答，真的有种醍醐灌顶的感觉 https://t.co/7z5rKVES86",
+      "url": "https://x.com/Suu766/status/2110368003070259619"
+    },
+    {
+      "created_at": "2026-10-14T12:40:05.000Z",
+      "id": "2110349927624867974",
+      "lang": "",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 2453,
+        "like": 8,
+        "quote": 0,
+        "reply": 22,
+        "retweet": 0
+      },
+      "text": "我以为的推特：每日大赛，每日大赛，每日大赛\n\n  实际的推特：段子、抖音短视频、小红书照片 https://t.co/61Z2kVhbe5",
+      "url": "https://x.com/Suu766/status/2110349927624867974"
+    },
+    {
+      "created_at": "2026-10-14T11:45:55.000Z",
+      "id": "2110336292861161866",
+      "lang": "",
+      "metrics": {
+        "bookmark": 32,
+        "impression": 10494,
+        "like": 54,
+        "quote": 0,
+        "reply": 41,
+        "retweet": 1
+      },
+      "text": "99% 不知道的人都不知道的 8 个牛逼工具！！！\n\n1、Codex（实现你的各种编程想法）\n\n2、ChatGPT（学习、写作、搜索、处理各种问题）\n\n3、DeepSeek（国产 AI 大模型，中文和代码能力很强）\n\n4、CC Switch（快速切换 Claude Code、Codex 等工具的 API 配置）\n\n5、ComfyUI（自由搭建 AI",
+      "url": "https://x.com/Suu766/status/2110336292861161866"
+    },
+    {
+      "created_at": "2026-10-14T10:14:17.000Z",
+      "id": "2110313236277170599",
+      "lang": "",
+      "metrics": {
+        "bookmark": 95,
+        "impression": 13558,
+        "like": 131,
+        "quote": 2,
+        "reply": 48,
+        "retweet": 14
+      },
+      "text": "判断一个人对 AI 的认知有多高，我建议直接看看他的 ChatGPT 插件栏\n\n接入了 GitHub，说明他开始让 AI 参与软件开发\n\n接入了 Notion，说明他懂得用 AI 管理知识体系\n\n接入了 Google Calendar，说明他开始用 AI 安排时间\n\n接入了 Finances，说明他开始用 AI 分析财务\n\n接入了 Gmail，说明他开始用 AI",
+      "url": "https://x.com/Suu766/status/2110313236277170599"
+    },
+    {
+      "created_at": "2026-10-14T07:03:45.000Z",
+      "id": "2110265283948769419",
+      "lang": "",
+      "metrics": {
+        "bookmark": 6,
+        "impression": 7791,
+        "like": 7,
+        "quote": 0,
+        "reply": 0,
+        "retweet": 0
+      },
+      "text": "Telegram 的隐私保护功能确实不少，但很多设置都需要自己去检查和调整\n\n尤其是刚学会翻墙的大学生，别只顾着研究哪里有群、哪里有资源，连自己的账号怎么保护都不知道\n\n这 5 个设置花不了几分钟，建议现在就检查一遍，别等账号出了问题才想起来！！！",
+      "url": "https://x.com/Suu766/status/2110265283948769419"
+    },
+    {
+      "created_at": "2026-10-14T07:03:44.000Z",
+      "id": "2110265281419657613",
+      "lang": "",
+      "metrics": {
+        "bookmark": 5,
+        "impression": 8543,
+        "like": 6,
+        "quote": 0,
+        "reply": 1,
+        "retweet": 0
+      },
+      "text": "5、关闭不必要的权限\n\n手机设置 → 应用 → Telegram → 权限\n\n检查一下这些权限：\n\n通讯录：不需要就关闭\n\n位置：不使用相关功能就关闭\n\n电话、短信：按实际需要授权\n\n相机、麦克风：需要使用时再开启\n\n权限给得越少，能被应用访问的个人信息也就越少",
+      "url": "https://x.com/Suu766/status/2110265281419657613"
+    },
+    {
+      "created_at": "2026-10-14T07:03:44.000Z",
+      "id": "2110265279037206576",
+      "lang": "",
+      "metrics": {
+        "bookmark": 5,
+        "impression": 8749,
+        "like": 2,
+        "quote": 0,
+        "reply": 1,
+        "retweet": 0
+      },
+      "text": "4、检查登录设备\n\nTelegram → 设置 → 设备\n\n这里可以看到你的账号目前在哪些设备上登录\n\n发现不认识的设备，直接终止对应会话\n\n平时也不要乱扫别人发来的登录二维码，更不要随便点击陌生的登录授权链接",
+      "url": "https://x.com/Suu766/status/2110265279037206576"
+    },
+    {
+      "created_at": "2026-10-14T07:03:43.000Z",
+      "id": "2110265276843585723",
+      "lang": "",
+      "metrics": {
+        "bookmark": 7,
+        "impression": 9806,
+        "like": 1,
+        "quote": 0,
+        "reply": 1,
+        "retweet": 0
+      },
+      "text": "3、开启两步验证\n\nTelegram → 设置 → 隐私与安全 → 两步验证\n\n设置一个独立密码，再绑定自己的恢复邮箱\n\n以后就算别人拿到了你的登录验证码，通常也还需要输入两步验证密码才能登录\n\n千万别把 Telegram 验证码发给任何人！！！",
+      "url": "https://x.com/Suu766/status/2110265276843585723"
+    },
+    {
+      "created_at": "2026-10-14T07:03:42.000Z",
+      "id": "2110265274419294365",
+      "lang": "",
+      "metrics": {
+        "bookmark": 5,
+        "impression": 10605,
+        "like": 2,
+        "quote": 0,
+        "reply": 1,
+        "retweet": 0
+      },
+      "text": "2、关闭通讯录同步\n\nTelegram → 设置 → 隐私与安全 → 数据设置\n\n关闭「同步联系人」\n\n点击「删除已同步的联系人」\n\n在手机系统里关闭 Telegram 的通讯录权限\n\n如果你只是拿 TG 加群、看频道，完全没必要把整个手机通讯录同步上去",
+      "url": "https://x.com/Suu766/status/2110265274419294365"
+    },
+    {
+      "created_at": "2026-10-14T07:03:42.000Z",
+      "id": "2110265272359895257",
+      "lang": "",
+      "metrics": {
+        "bookmark": 10,
+        "impression": 11397,
+        "like": 8,
+        "quote": 0,
+        "reply": 1,
+        "retweet": 0
+      },
+      "text": "1、隐藏手机号码\n\nTelegram → 设置 → 隐私与安全 → 手机号码\n\n谁可以看到我的手机号：没有人\n\n谁可以通过手机号找到我：我的联系人\n\n这样可以减少陌生人通过 Telegram 查到你手机号的机会\n\n注意，已经知道并保存你号码的人，仍可能看到你的号码",
+      "url": "https://x.com/Suu766/status/2110265272359895257"
+    },
+    {
+      "created_at": "2026-10-14T07:03:41.000Z",
+      "id": "2110265269851717882",
+      "lang": "",
+      "metrics": {
+        "bookmark": 347,
+        "impression": 119785,
+        "like": 446,
+        "quote": 1,
+        "reply": 46,
+        "retweet": 11
+      },
+      "text": "很多大学生都已经学会翻墙了，结果 Telegram 下载完就只知道加群、找资源、看片？？？\n\n连最基本的隐私设置都没搞明白，就敢天天往各种陌生群里钻？？？\n\n别光顾着找资源了，先花几分钟把自己的账号保护好\n\n我整理了 5 个 Telegram 新手必改的隐私设置，尤其是刚注册的，建议都看一遍！！！👇",
+      "url": "https://x.com/Suu766/status/2110265269851717882"
+    },
+    {
       "created_at": "2026-10-13T13:08:01.000Z",
       "id": "2109994566904680944",
       "lang": "",

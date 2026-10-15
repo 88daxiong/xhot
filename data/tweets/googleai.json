@@ -2,6 +2,21 @@
   "handle": "googleai",
   "tweets": [
     {
+      "created_at": "2026-10-14T15:29:33.000Z",
+      "id": "2110392574754107405",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 182,
+        "impression": 39038,
+        "like": 540,
+        "quote": 12,
+        "reply": 30,
+        "retweet": 73
+      },
+      "text": "Textbook biology, brought to life right in your browser 🌿\n\nThis interactive 5-stage visual atlas built by Argon in @antigravity turns dense textbook biology into a hands-on experience. With fluid animations and scientific precision, you can scroll from a sunlit leaf all the way down to sub-cellular chloroplasts.\n\nThe model pairs accuracy with a seamless interactive design, demonstrating how to build educational tools that can make complex science visual and effortless to explore.",
+      "url": "https://x.com/GoogleAI/status/2110392574754107405"
+    },
+    {
       "created_at": "2026-10-13T19:03:06.000Z",
       "id": "2110083927620591769",
       "lang": "en",

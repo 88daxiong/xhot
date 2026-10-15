@@ -2,6 +2,96 @@
   "handle": "googledeepmind",
   "tweets": [
     {
+      "created_at": "2026-10-14T17:25:58.000Z",
+      "id": "2110421873242861711",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 7,
+        "impression": 10590,
+        "like": 69,
+        "quote": 1,
+        "reply": 6,
+        "retweet": 2
+      },
+      "text": "To advance more research with Gemini 4 Argon, we’re offering 10,000 scientists access to our highest usage tier in @GoogleAntigravity free of charge for 6 months.\n\nFind out more → https://t.co/A9F2OZi4OJ",
+      "url": "https://x.com/GoogleDeepMind/status/2110421873242861711"
+    },
+    {
+      "created_at": "2026-10-14T17:25:58.000Z",
+      "id": "2110421871103730104",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 5,
+        "impression": 11114,
+        "like": 64,
+        "quote": 0,
+        "reply": 2,
+        "retweet": 2
+      },
+      "text": "Argon also compressed the process of enzyme engineering into a matter of hours to design five lab-verified serine esterases. 🧬\nhttps://t.co/74xPM9LJPa",
+      "url": "https://x.com/GoogleDeepMind/status/2110421871103730104"
+    },
+    {
+      "created_at": "2026-10-14T17:25:57.000Z",
+      "id": "2110421868284936555",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 3,
+        "impression": 2847,
+        "like": 68,
+        "quote": 0,
+        "reply": 1,
+        "retweet": 4
+      },
+      "text": "Researchers discovered novel 3D magnetic field designs with Argon that further disprove a 60-year-old assumption in plasma physics known as Grad's conjecture. ↓\nhttps://t.co/kYKebBo3Su",
+      "url": "https://x.com/GoogleDeepMind/status/2110421868284936555"
+    },
+    {
+      "created_at": "2026-10-14T17:25:57.000Z",
+      "id": "2110421866079003070",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 8,
+        "impression": 4041,
+        "like": 66,
+        "quote": 0,
+        "reply": 4,
+        "retweet": 3
+      },
+      "text": "Argon is helping accelerate progress across both quantum error correction and algorithm design. 🧮\nhttps://t.co/P5r0qRxqy4",
+      "url": "https://x.com/GoogleDeepMind/status/2110421866079003070"
+    },
+    {
+      "created_at": "2026-10-14T17:25:56.000Z",
+      "id": "2110421861435879476",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 223,
+        "impression": 70027,
+        "like": 1475,
+        "quote": 44,
+        "reply": 106,
+        "retweet": 161
+      },
+      "text": "Gemini 4 Argon is already unlocking new scientific breakthroughs in quantum computing, nuclear fusion, protein design and beyond. 🧵",
+      "url": "https://x.com/GoogleDeepMind/status/2110421861435879476"
+    },
+    {
+      "created_at": "2026-10-14T02:05:00.000Z",
+      "id": "2110190101707858039",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 117,
+        "impression": 64346,
+        "like": 586,
+        "quote": 48,
+        "reply": 126,
+        "retweet": 52
+      },
+      "text": "Over half of reported crimes in Singapore use sophisticated social engineering.\n\nWith @GovTechSG, we’re building on-device fraud detection using our open model Gemma.\n\nBy fine-tuning it on local scam tactics, it identifies threats in real time without compromising personal privacy → https://t.co/VdCio2nrHC",
+      "url": "https://x.com/GoogleDeepMind/status/2110190101707858039"
+    },
+    {
       "created_at": "2026-10-13T18:47:42.000Z",
       "id": "2110080053409116660",
       "lang": "",

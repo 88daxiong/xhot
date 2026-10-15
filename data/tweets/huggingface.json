@@ -2,6 +2,21 @@
   "handle": "huggingface",
   "tweets": [
     {
+      "created_at": "2026-10-14T12:41:35.000Z",
+      "id": "2110350304613114226",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 74,
+        "impression": 21903,
+        "like": 124,
+        "quote": 12,
+        "reply": 56,
+        "retweet": 29
+      },
+      "text": "Learn about how to get multipliers in local LLM speed-ups using speculative decoding in this livestream with @mervenoyann, @MaartenGr and @_EldarKurtic \n\nhttps://t.co/tFexgaLcT5 https://t.co/Pad59uMr8J",
+      "url": "https://x.com/huggingface/status/2110350304613114226"
+    },
+    {
       "created_at": "2026-10-08T17:45:55.000Z",
       "id": "2108252563015422389",
       "lang": "en",

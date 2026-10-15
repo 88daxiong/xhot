@@ -2,6 +2,21 @@
   "handle": "openai",
   "tweets": [
     {
+      "created_at": "2026-10-14T18:45:57.000Z",
+      "id": "2110442001749659890",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 262,
+        "impression": 205187,
+        "like": 1759,
+        "quote": 72,
+        "reply": 326,
+        "retweet": 122
+      },
+      "text": "European businesses are rapidly expanding their use of AI agents. More than half of the AI use among our EU enterprise and business customers now involves these tools, and the number of small business users has grown 8x across the region.\n\nOur latest Economic Research report explores Europe’s shift toward agentic AI—and the opportunity to turn broader adoption into deeper use.\n\nhttps://t.co/jUjCF5sW0B",
+      "url": "https://x.com/OpenAI/status/2110442001749659890"
+    },
+    {
       "created_at": "2026-10-07T19:03:52.000Z",
       "id": "2107909792945832070",
       "lang": "",

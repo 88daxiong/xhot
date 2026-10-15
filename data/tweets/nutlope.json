@@ -2,6 +2,51 @@
   "handle": "nutlope",
   "tweets": [
     {
+      "created_at": "2026-10-14T15:02:20.000Z",
+      "id": "2110385726680670319",
+      "lang": "",
+      "metrics": {
+        "bookmark": 89,
+        "impression": 2986,
+        "like": 62,
+        "quote": 0,
+        "reply": 5,
+        "retweet": 4
+      },
+      "text": "Tech Stack &amp; code:\n\n◆ @togethercompute for AI answers (DeepSeek V4.1)\n◆ @ExaAILabs for fast web search\n◆ @llama_index (LiteParse) for PDFs\n◆ @nextjs for the frontend/backend\n◆ @neondatabase for the database\n◆ @clerk for authentication\n\nhttps://t.co/hrllTQbPB4",
+      "url": "https://x.com/nutlope/status/2110385726680670319"
+    },
+    {
+      "created_at": "2026-10-14T15:02:20.000Z",
+      "id": "2110385724059246968",
+      "lang": "",
+      "metrics": {
+        "bookmark": 70,
+        "impression": 3505,
+        "like": 57,
+        "quote": 0,
+        "reply": 3,
+        "retweet": 2
+      },
+      "text": "Try Gloss today!\n\nPowered by fast inference on @togethercompute. The repo &amp; full tech stack are below too.\n\nhttps://t.co/zLBq9FjO8b",
+      "url": "https://x.com/nutlope/status/2110385724059246968"
+    },
+    {
+      "created_at": "2026-10-14T15:02:19.000Z",
+      "id": "2110385721391366263",
+      "lang": "",
+      "metrics": {
+        "bookmark": 1030,
+        "impression": 33492,
+        "like": 889,
+        "quote": 8,
+        "reply": 38,
+        "retweet": 52
+      },
+      "text": "Introducing Gloss!\n\nA beautiful new way to save, read, and interact with articles.\n\n→ Save articles, PDFs, and X bookmarks\n→ Highlight and get instant answers with AI\n→ Build a personal library you'll actually use\n\nFree and open source! https://t.co/Uc5nU5nLym",
+      "url": "https://x.com/nutlope/status/2110385721391366263"
+    },
+    {
       "created_at": "2026-10-13T20:45:22.000Z",
       "id": "2110109663769592025",
       "lang": "",

@@ -2,6 +2,96 @@
   "handle": "yanhua1010",
   "tweets": [
     {
+      "created_at": "2026-10-14T14:10:43.000Z",
+      "id": "2110372733964226856",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 1683,
+        "like": 4,
+        "quote": 1,
+        "reply": 2,
+        "retweet": 1
+      },
+      "text": "2026 全球社交平台月活：\n\nFacebook：32 亿\nInstagram：30 亿\nWhatsApp：30 亿\nYouTube：28.5 亿\nTikTok：约 20 亿\nTelegram：10 亿\nSnapchat：9.71 亿\nX：5.5 亿\n\n你天天刷的 X，排倒数第一，Ins、Tiktok才是成年人的战场。",
+      "url": "https://x.com/yanhua1010/status/2110372733964226856"
+    },
+    {
+      "created_at": "2026-10-14T13:42:35.000Z",
+      "id": "2110365655937741172",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 2,
+        "impression": 6628,
+        "like": 15,
+        "quote": 2,
+        "reply": 8,
+        "retweet": 1
+      },
+      "text": "A社在新加坡设立亚太办公室。\n\n理由是新加坡在 Claude 全球使用排名中排第二，约为其预测人口规模的六倍。\n\n你品，你细品。",
+      "url": "https://x.com/yanhua1010/status/2110365655937741172"
+    },
+    {
+      "created_at": "2026-10-14T06:41:48.000Z",
+      "id": "2110259763384922386",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 16,
+        "impression": 3848,
+        "like": 4,
+        "quote": 0,
+        "reply": 0,
+        "retweet": 1
+      },
+      "text": "领取地址：https://t.co/oYjFczPolA",
+      "url": "https://x.com/yanhua1010/status/2110259763384922386"
+    },
+    {
+      "created_at": "2026-10-14T06:41:48.000Z",
+      "id": "2110259760775958559",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 86,
+        "impression": 23997,
+        "like": 66,
+        "quote": 1,
+        "reply": 17,
+        "retweet": 6
+      },
+      "text": "其实我是冲着 Gemini 3.8 flash去的，据说写作一流。\n\n另外，如果你订阅了Google AI，每个月都有赠金，大家别忘记领取。 https://t.co/koGEkPg5f7",
+      "url": "https://x.com/yanhua1010/status/2110259760775958559"
+    },
+    {
+      "created_at": "2026-10-14T04:11:46.000Z",
+      "id": "2110222002607067646",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 2,
+        "impression": 1632,
+        "like": 3,
+        "quote": 0,
+        "reply": 5,
+        "retweet": 0
+      },
+      "text": "是我太蠢了吗，本来说还懂一点audi quattro， 结果看完argon的演示，我更不懂了。\n\nprompt：制作一段工业级 3D 动画，生动，形象解释audi A8 quatto的工作原理。 https://t.co/JW3Xz3Rhr8 https://t.co/JAz37vXHns",
+      "url": "https://x.com/yanhua1010/status/2110222002607067646"
+    },
+    {
+      "created_at": "2026-10-14T00:48:16.000Z",
+      "id": "2110170790327157173",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 2,
+        "impression": 6366,
+        "like": 7,
+        "quote": 1,
+        "reply": 6,
+        "retweet": 0
+      },
+      "text": "Gemini 4 Argon 今天刷屏了，我把核心要点总结好了。\n\n还在犹豫要不要升级 Pro 或 Ultra 的，可以先看完再决定，不着急下单。\n\n一句话总结：\n\n在第三方评测机构 Artificial Analysis 的智能指数上和 GPT-6 Astra 打平，单任务成本便宜约 40%，幻觉率 15% 是同级最低；视频理解、3D、仿真这些多模态能力最突出，适合做研究、整理资料、做演示的知识工作者；但在大模型竞技场 Arena 总榜只排第 5，有开发者实测它分析代码库时一半以上的结论是错的，暂时别拿它当主力编程模型。",
+      "url": "https://x.com/yanhua1010/status/2110170790327157173"
+    },
+    {
       "created_at": "2026-10-13T14:39:35.000Z",
       "id": "2110017609672671506",
       "lang": "ja",

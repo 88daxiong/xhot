@@ -2,6 +2,21 @@
   "handle": "dickiebush",
   "tweets": [
     {
+      "created_at": "2026-10-14T16:32:21.000Z",
+      "id": "2110408377801289985",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 3,
+        "impression": 7146,
+        "like": 48,
+        "quote": 1,
+        "reply": 23,
+        "retweet": 3
+      },
+      "text": "Some days the solution is to have zero caffeine\n\nOther days the solution is to have an absurd amount\n\nWisdom is knowing which is the right solution for that day",
+      "url": "https://x.com/dickiebush/status/2110408377801289985"
+    },
+    {
       "created_at": "2026-10-13T22:26:38.000Z",
       "id": "2110135149191188581",
       "lang": "",

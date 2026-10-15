@@ -2,6 +2,21 @@
   "handle": "alibaba_qwen",
   "tweets": [
     {
+      "created_at": "2026-10-14T03:43:40.000Z",
+      "id": "2110214931559899630",
+      "lang": "",
+      "metrics": {
+        "bookmark": 142,
+        "impression": 68932,
+        "like": 901,
+        "quote": 11,
+        "reply": 62,
+        "retweet": 50
+      },
+      "text": "Congrats to @lightseekorg on the impressive TokenSpeed results! 🚀 Great to see Qwen3.8-Flash-Next reaching 685 output tokens/s per user on Nvida GPUs. Excited to see the community unlock more of Qwen’s inference potential! https://t.co/yudaS4VgBW",
+      "url": "https://x.com/Alibaba_Qwen/status/2110214931559899630"
+    },
+    {
       "created_at": "2026-10-12T13:11:38.000Z",
       "id": "2109633089211416820",
       "lang": "",

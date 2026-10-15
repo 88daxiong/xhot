@@ -2,6 +2,96 @@
   "handle": "petergyang",
   "tweets": [
     {
+      "created_at": "2026-10-15T00:00:12.000Z",
+      "id": "2110521081450922117",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 519,
+        "like": 2,
+        "quote": 0,
+        "reply": 0,
+        "retweet": 0
+      },
+      "text": "Found out that my 8 year old used ChatGPT to get an answer for her math homework.\n\nInstead of being mad I was actually quite impressed :)",
+      "url": "https://x.com/petergyang/status/2110521081450922117"
+    },
+    {
+      "created_at": "2026-10-14T21:42:51.000Z",
+      "id": "2110486517311496319",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 2291,
+        "like": 16,
+        "quote": 0,
+        "reply": 4,
+        "retweet": 0
+      },
+      "text": "Fuck cancer. Spreading the word: https://t.co/bde4rUNyW6",
+      "url": "https://x.com/petergyang/status/2110486517311496319"
+    },
+    {
+      "created_at": "2026-10-14T17:57:15.000Z",
+      "id": "2110429743954960633",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 8,
+        "impression": 5980,
+        "like": 79,
+        "quote": 1,
+        "reply": 18,
+        "retweet": 3
+      },
+      "text": "I used Grok Voice 2.0 while stuck on a 40 min commute to the city and it was surprisingly great - almost no lag and felt instant. \n\nWas also awesome using it to orchestrate my Grok @bot.\n\nThe team should market this feature more and I can't wait to try 3.0. https://t.co/kHGUyjZuDh",
+      "url": "https://x.com/petergyang/status/2110429743954960633"
+    },
+    {
+      "created_at": "2026-10-14T16:24:09.000Z",
+      "id": "2110406315457818876",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 342,
+        "impression": 15661,
+        "like": 148,
+        "quote": 0,
+        "reply": 28,
+        "retweet": 8
+      },
+      "text": "If you're tired of 3rd parties sharing your email address here's a prompt to give your Grok @bot (or any other agent):\n\nRemove my personal and contact info from B2B contact-data sellers and people-search brokers (e.g. Apollo, ZoomInfo, RocketReach, Lusha, ContactOut, Seamless AI, Hunter, Clearbit, Cognism, Kaspr, SignalHire, People Data Labs, LeadIQ, Adapt io, UpLead, plus any others common in my country).\n\n1. Ask me for my name, the emails I use, and where I live, then look up each provider's current official opt-out route on their own site.\n2. Write a short deletion and opt-out request that cites the privacy law that applies where I live (e.g. GDPR/UK GDPR, CCPA/CPRA or another US state law, PIPEDA, the Australian Privacy Act). Request deletion of all my data, an end to any sale or sharing, deletion of linked profiles, and written confirmation.\n3. Show me the emails as drafts from my own email account. Send them only after I approve.\n4. Fill out web forms for providers that don't accept email.\n5. Give me a list of what was sent, what's still pending, and any confirmation links I need to click.\n6. Offer to repeat this every quarter.\n\nAny other ideas welcome in the replies, tired of getting this spam.",
+      "url": "https://x.com/petergyang/status/2110406315457818876"
+    },
+    {
+      "created_at": "2026-10-14T02:35:11.000Z",
+      "id": "2110197699790430711",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 6,
+        "impression": 12605,
+        "like": 51,
+        "quote": 0,
+        "reply": 25,
+        "retweet": 0
+      },
+      "text": "Is it just me or is an usb recording device plugged into a conference room tv “concealed” in toilet paper not a very good disguise at all https://t.co/JqyqCevnIX",
+      "url": "https://x.com/petergyang/status/2110197699790430711"
+    },
+    {
+      "created_at": "2026-10-14T02:21:54.000Z",
+      "id": "2110194356166795474",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 15,
+        "impression": 21692,
+        "like": 144,
+        "quote": 0,
+        "reply": 4,
+        "retweet": 3
+      },
+      "text": "Poteto cracks me up with her trolling https://t.co/EYXg8RALst",
+      "url": "https://x.com/petergyang/status/2110194356166795474"
+    },
+    {
       "created_at": "2026-10-13T21:26:41.000Z",
       "id": "2110120062908862517",
       "lang": "",

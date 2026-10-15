@@ -2,6 +2,51 @@
   "handle": "trq212",
   "tweets": [
     {
+      "created_at": "2026-10-14T21:52:18.000Z",
+      "id": "2110488897453257169",
+      "lang": "",
+      "metrics": {
+        "bookmark": 3,
+        "impression": 3570,
+        "like": 8,
+        "quote": 0,
+        "reply": 2,
+        "retweet": 0
+      },
+      "text": "I used to tell people it's good to \"be technical\" but I think this is not accurate enough. \n\nIf you're technical you need to be in the details more with the right parts of the code.\n\nIf you're non-technical, being in the details means knowing how things work at the right level.",
+      "url": "https://x.com/trq212/status/2110488897453257169"
+    },
+    {
+      "created_at": "2026-10-14T20:13:14.000Z",
+      "id": "2110463964740243572",
+      "lang": "",
+      "metrics": {
+        "bookmark": 2,
+        "impression": 8351,
+        "like": 39,
+        "quote": 0,
+        "reply": 6,
+        "retweet": 1
+      },
+      "text": "s/o to @alicelovescake1 @amorriscode the CCD goats",
+      "url": "https://x.com/trq212/status/2110463964740243572"
+    },
+    {
+      "created_at": "2026-10-14T20:13:13.000Z",
+      "id": "2110463962877989276",
+      "lang": "",
+      "metrics": {
+        "bookmark": 520,
+        "impression": 123476,
+        "like": 2703,
+        "quote": 16,
+        "reply": 233,
+        "retweet": 46
+      },
+      "text": "Claude Code Desktop is now so much aware of its own capabilities and how it can work with you, like spinning off subsessions.\n\nI think of this almost like a v2, so many small details went into make it great. https://t.co/dpgj4fd8sQ",
+      "url": "https://x.com/trq212/status/2110463962877989276"
+    },
+    {
       "created_at": "2026-10-13T15:49:08.000Z",
       "id": "2110035114432532654",
       "lang": "en",

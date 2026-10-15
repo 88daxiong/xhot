@@ -2,6 +2,51 @@
   "handle": "github",
   "tweets": [
     {
+      "created_at": "2026-10-14T23:20:11.000Z",
+      "id": "2110511011862134980",
+      "lang": "",
+      "metrics": {
+        "bookmark": 2,
+        "impression": 5168,
+        "like": 17,
+        "quote": 0,
+        "reply": 2,
+        "retweet": 1
+      },
+      "text": "Psst, pass it around: We have a new and improved badge for GitHub Universe 2026 ✨\n\nGrab your in-person pass and secure a badge. Can't make it? Sign up to join us virtually. ⬇️\nhttps://t.co/D4axC8Oecn https://t.co/Jq3FFdcyQf",
+      "url": "https://x.com/github/status/2110511011862134980"
+    },
+    {
+      "created_at": "2026-10-14T22:00:03.000Z",
+      "id": "2110490847905272314",
+      "lang": "",
+      "metrics": {
+        "bookmark": 8,
+        "impression": 9569,
+        "like": 36,
+        "quote": 4,
+        "reply": 14,
+        "retweet": 2
+      },
+      "text": "⭐ We shaped our new repo star history API around production evidence and maintainer feedback. Now it provides trends without returning individual identities or requiring unbounded database work.\n\nThe practical engineering tradeoffs that made it happen ⬇️ https://t.co/WJ18vkYmdO",
+      "url": "https://x.com/github/status/2110490847905272314"
+    },
+    {
+      "created_at": "2026-10-14T18:55:03.000Z",
+      "id": "2110444288131690537",
+      "lang": "",
+      "metrics": {
+        "bookmark": 1,
+        "impression": 11762,
+        "like": 58,
+        "quote": 0,
+        "reply": 12,
+        "retweet": 5
+      },
+      "text": "Cake is always open source #NationalDessertDay https://t.co/rPMXEW3gHJ",
+      "url": "https://x.com/github/status/2110444288131690537"
+    },
+    {
       "created_at": "2026-10-13T19:07:50.000Z",
       "id": "2110085117041594750",
       "lang": "en",

@@ -2,6 +2,51 @@
   "handle": "howie_serious",
   "tweets": [
     {
+      "created_at": "2026-10-14T11:23:03.000Z",
+      "id": "2110330538825527330",
+      "lang": "",
+      "metrics": {
+        "bookmark": 2,
+        "impression": 9470,
+        "like": 23,
+        "quote": 0,
+        "reply": 9,
+        "retweet": 1
+      },
+      "text": "gemini 4 argon 代码能力不如 opus 5.5，这个问题不大，一般需求是可以用的。\n\n最大的问题是慢，太慢太慢了。习惯了 opus 5.5 的飞速干活干脆利落（没开fast mode），就无法忍受 gemini 4 argon 这种慢吞吞的速度。\n\n此外，antigravity app 太不好用，chrome 是 Google 做的，可是 antigravity",
+      "url": "https://x.com/howie_serious/status/2110330538825527330"
+    },
+    {
+      "created_at": "2026-10-14T00:58:59.000Z",
+      "id": "2110173488057372835",
+      "lang": "",
+      "metrics": {
+        "bookmark": 13,
+        "impression": 5167,
+        "like": 23,
+        "quote": 0,
+        "reply": 33,
+        "retweet": 2
+      },
+      "text": "比起 chatgpt dot，我用 grok bot 更多。\n\n杀手级 use case：用 grok bot 每天整理你关注的推友推文，汇总到 Notion 里做成简报。\n\n一句话总结：推特的优质信息，but without  slop 和营销号 🤣 https://t.co/upNTSpIT96",
+      "url": "https://x.com/howie_serious/status/2110173488057372835"
+    },
+    {
+      "created_at": "2026-10-14T00:44:39.000Z",
+      "id": "2110169881756979302",
+      "lang": "",
+      "metrics": {
+        "bookmark": 17,
+        "impression": 16948,
+        "like": 67,
+        "quote": 0,
+        "reply": 14,
+        "retweet": 3
+      },
+      "text": "卡拉克第一定律：\n\n当一个老权威老专家说某件事是可能的，它几乎肯定是对的。当一个老权威老专家说某件事是不可能的，它几乎肯定是错的。\n\nyann lecun 就是那个老权威，多年来口口声声说年轻人搞出来的大语言模型不可能实现真正的智能🤣\n\n可现实是，在 lecun https://t.co/oLbFzUDsis",
+      "url": "https://x.com/howie_serious/status/2110169881756979302"
+    },
+    {
       "created_at": "2026-10-13T00:18:25.000Z",
       "id": "2109800893764034963",
       "lang": "",
