@@ -84,6 +84,8 @@ def dsub(k): d=datetime.datetime.strptime(k,'%Y-%m-%d'); return f'{d.month}月{d
 def dsep(k):
     sub=dsub(k); sub=sub if dlab(k) in ('今天','昨天') else sub.split(' ')[1]
     return f'<div class="dsep" data-d="{k}"><b>{dlab(k)}</b><span>{sub}</span></div>'
+def dchip(k):
+    return f'{dlab(k)} · {dsub(k).split(" ")[1]}'
 def relt(s):
     d=dt(s); m=int((NOW-d).total_seconds()//60)
     if m<1: return '刚刚'
@@ -103,7 +105,7 @@ def card(r,a,pref='',showwho=True):
     """r=[id,t,text,like,rt,reply,quote,view,heat,url]  与 app.js card() 一致"""
     t=r[2]; lg=len(t)>150 or t.count('\n')>4
     who=(f'<header>{av(a["u"],a["name"],"",pref)}<div class="who"><a href="{pref}p/{a["u"]}.html">{e(a["name"])}</a><small>@{e(a["H"])}</small></div><div class="pm"><span class="heat" title="热度 = 赞 + 2×转 + 3×引用 + 评论 + 收藏">🔥 {fmt(r[8])}</span>{tmh(r[1])}</div></header>' if showwho
-         else f'<header><span class="tag">{"近一周" if isw(r[1]) else "更早"}</span><div class="who"></div><div class="pm"><span class="heat" title="热度 = 赞 + 2×转 + 3×引用 + 评论 + 收藏">🔥 {fmt(r[8])}</span>{tmh(r[1])}</div></header>')
+         else f'<header><span class="tag dtag" data-d="{dkey(r[1])}">{dchip(dkey(r[1]))}</span><div class="who"></div><div class="pm"><span class="heat" title="热度 = 赞 + 2×转 + 3×引用 + 评论 + 收藏">🔥 {fmt(r[8])}</span>{tmh(r[1])}</div></header>')
     return (f'<article class="post" style="--dc:{DC[a["dom"]]}" data-k="{r[0]}">{who}<div class="pt ptc">{lnk(t)}</div><footer><div class="act">'
       f'<button class="btn ex" type="button" aria-expanded="false"{"" if lg else " hidden"}>展开</button><button class="btn cp" type="button">复制原文</button><a class="btn op" href="{safe_url(r[9] or f'https://x.com/{a["H"]}/status/{r[0]}')}" target="_blank" rel="noopener noreferrer">在 X 打开 ↗</a></div>'
       f'<div class="met"><span title="点赞"><i aria-hidden="true">♥</i>{fmt(r[3])}</span><span title="转发"><i aria-hidden="true">⇄</i>{fmt(r[4])}</span><span title="评论"><i aria-hidden="true">💬</i>{fmt(r[5])}</span><span title="浏览"><i aria-hidden="true">👁</i>{fmt(r[7])}</span></div></footer></article>')
@@ -370,8 +372,9 @@ def news():
     allh=''.join(f'<div class="ndg" data-d="{k}">{dsep(k) if k!="0000-00-00" else "<div class=dsep><b>更早</b></div>"}<ol class="nl">{"".join(nrow(N[i],i) for i in ids)}</ol></div>' for k,ids in groups)
     days=[k for k,_ in groups if k!='0000-00-00']
     f0=TOP[0] if TOP else None
-    aside=('<aside class="nside" aria-label="阅读窗格"><section class="panel nrp" id="npane"><div class="nrph"><span class="nrpt" id="nptitle">'+(e(N[f0]['t']) if f0 is not None else '阅读窗格')+'</span></div>'
-           '<div class="nrpm" id="npmeta">'+(nmeta(N[f0]) if f0 is not None else '')+'</div>'
+    aside=('<aside class="nside" aria-label="阅读窗格"><section class="panel nrp" id="npane"><i class="nnotch" id="nnotch" aria-hidden="true"></i>'
+           '<div class="nrpm" id="npmeta">'+('<span class="nn">01</span>'+nmeta(N[f0]) if f0 is not None else '')+'</div>'
+           '<div class="nrph"><span class="nrpt" id="nptitle">'+(e(N[f0]['t']) if f0 is not None else '阅读窗格')+'</span></div>'
            '<div class="nrpb" id="npbody">'+(nbody(N[f0]) if f0 is not None else '<p class="nph" id="nhint">点左侧任意标题，全文在这里打开；列表位置不变，可以连续点着读。</p>')+'</div></section></aside>')
     body=(tools('资讯',seg,dctl(days),f'<span class="hint">精选 = AIHOT 热点 / 精选优先 {len(TOP)} 条 · 点标题读全文 · 中文 AIHOT 在前 · X 新闻为英文</span>')+
           f'<div class="nlay" id="ng" data-body="assets/{nbn}"><div class="nmain">'
@@ -434,10 +437,10 @@ def person(u):
     tog=f'<label class="tgl"><input type="checkbox" id="alll"> 显示全部语言（另 {nother} 条）</label>' if nother else ''
     seg=SORTSEG if mode=='t' else SORTSEG.replace('data-sort="w" class="on" aria-pressed="true"','data-sort="w" aria-pressed="false"').replace('data-sort="g" aria-pressed="false"','data-sort="g" class="on" aria-pressed="true"')
     tags=''.join(f'<span class="tag" style="--dc:#fff">{DN[d]}</span>' for d in a['doms'])
-    feed=withdays(first,lambda r:card(r,a,'../',False)) if okr else '<div class="empty">这个账号暂时没有可显示的推文：可能是受保护账号，或者近期没有发原创帖。</div>'
+    feed=''.join(card(r,a,'../',False) for r in first) if okr else '<div class="empty">这个账号暂时没有可显示的推文：可能是受保护账号，或者近期没有发原创帖。</div>'
     body=(f'<section class="phc">{av(u,a["name"],"xl","../")}<div style="min-width:0"><h1>{e(a["name"])}<small translate="no">@{e(a["H"])}</small>{tags}</h1>{bio}</div><div class="chips"><div class="chip"><b>{fmt(a["f"])}</b><span>粉丝</span></div><div class="chip"><b>{dl}</b><span>较上次</span></div><div class="chip"><b>{len(rows)}</b><span>已存推文</span></div><a class="xb" href="https://x.com/{e(a["H"])}" target="_blank" rel="noopener noreferrer">在 X 查看 ↗</a></div></section>'
           +tools('推文',f'<input id="q" type="search" aria-label="搜索推文" placeholder="搜索 {e(a["name"])} 的推文…" autocomplete="off" spellcheck="false">{tog}',dctl(pdays)+seg,f'<span class="cnt" id="cnt" aria-live="polite">{"全部 "+str(len(okr))+" 条 · 近一周 "+str(len(wk))+" 条"}</span>')+
-          f'<div id="feed" class="grid tl" data-pre="{len(first)}" data-mode="{mode}">{feed}</div><button id="more" class="more" type="button" hidden>再显示</button>'
+          f'<div id="feed" class="grid pgrid" data-pre="{len(first)}" data-mode="{mode}">{feed}</div><button id="more" class="more" type="button" hidden>再显示</button>'
           f'<script type="application/json" id="tw-meta">{jsafe({"name":a["name"],"handle":a["H"],"u":u,"dom":a["dom"],"av":AVF.get(u,""),"h":hue(u),"src":jn,"week":WEEK})}</script>')
     return page(f'{a["name"]} (@{a["H"]}) · XHOT',body,'',pref='../')
 # ---- 日报 ----
@@ -451,6 +454,7 @@ def _dok(d):
         pid=str(h.get('post_id') or '');pid=pid if re.fullmatch(r'\d{5,25}',pid) else ''
         hl.append(dict(handle=h['handle'],name=str(h.get('name') or h['handle']),text=str(h.get('text_zh') or ''),pid=pid,
                        url=str(h.get('url') or (f"https://x.com/{h['handle']}/status/{pid}" if pid else f"https://x.com/{h['handle']}")),likes=h.get('likes') if isinstance(h.get('likes'),int) else None,orig=str(h.get('text_orig') or '')[:8000],orig_zh=str(h.get('text_orig_zh') or '')[:12000]))
+    hl.sort(key=lambda x:-(x['likes'] if x['likes'] is not None else -1))   # 重点新帖按点赞数从高到低（稳定排序，无 likes 的排最后）
     cl=[]
     for c in d.get('changelog') or []:
         if isinstance(c,str): cl.append(('',c))
@@ -485,7 +489,7 @@ def dhl(h,pref,n=0,k=''):
     who=(f'<a class="hh" href="{pref}p/{u}.html">{av(u,a["name"],"",pref)}<b>{e(a["name"])}</b><small>@{e(a["H"])}</small></a>' if a
          else f'<a class="hh" href="{safe_url("https://x.com/"+h["handle"])}" target="_blank" rel="noopener noreferrer"><b>{e(h["name"])}</b><small>@{e(h["handle"])}</small></a>')
     lk=f'<a class="btn op" href="{safe_url(h["url"])}" target="_blank" rel="noopener noreferrer">原帖 ↗</a>'
-    lv=f'<span class="lk">♥ {fmt(h["likes"])}</span>' if h['likes'] is not None else ''
+    lv=f'<span class="lk">♥ {fmt(h["likes"])}</span>' if h['likes'] is not None else '<span class="lk"></span>'
     og,oz=h['orig'],h['orig_zh']
     ex=cp=ob=''
     if og:

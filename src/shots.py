@@ -7,7 +7,7 @@ B=sys.argv[1] if len(sys.argv)>1 and not sys.argv[1].startswith('--') else 'http
 ALL='--all' in sys.argv
 D=os.path.dirname(os.path.abspath(__file__)); S=os.path.join(D,os.environ.get('SITE_DIR','site')); SH=os.path.join(D,'shots'); os.makedirs(SH,exist_ok=True)
 _dl=sorted(glob.glob(S+'/daily/*.html')); OLD=('daily/'+os.path.basename(_dl[0])) if _dl else 'index.html'
-PAGES=[('daily','index.html'),('daily14',OLD),('hot','hot.html'),('accounts','accounts.html'),('news','news.html'),('trends','trends.html'),('person','p/karpathy.html'),('person2','p/dotey.html')]
+PAGES=[('daily','index.html'),('daily14',OLD),('hot','hot.html'),('accounts','accounts.html'),('news','news.html'),('trends','trends.html'),('person','p/karpathy.html'),('person2','p/dotey.html'),('person3','p/huggingface.html'),('person4','p/david_perell.html')]
 MODES=[('1440_light',1440,'light'),('1440_dark',1440,'dark'),('390',390,'light')]
 INIT="window.__v=[];document.addEventListener('securitypolicyviolation',function(e){window.__v.push(e.violatedDirective+' '+(e.blockedURI||''))});"
 CHK="""()=>{const W=innerWidth;const bo=[...document.querySelectorAll('.btn,button')].filter(b=>b.offsetParent&&b.scrollWidth>b.clientWidth+1).map(b=>b.textContent.trim().slice(0,20));
@@ -41,12 +41,15 @@ with sync_playwright() as p:
                 if name=='daily':
                     ck(f'daily[{mn}] original hidden by default',g.evaluate("()=>[...document.querySelectorAll('.dor')].every(d=>d.hidden||!d.offsetParent)"))
                     ck(f'daily[{mn}] expand/copy buttons in header row',g.evaluate("()=>[...document.querySelectorAll('.dh')].every(h=>{const a=h.querySelector('.dha'),d=h.querySelector('.dor');if(!d)return true;return !!a.querySelector('.ex')&&!!a.querySelector('.cp')&&!!a.querySelector('.op')&&a.getBoundingClientRect().bottom<=h.querySelector('.dsm').getBoundingClientRect().top+2})"))
+                    ck(f'daily[{mn}] highlights sorted by likes desc',g.evaluate("()=>{const a=[...document.querySelectorAll('.dh .lk')].map(x=>+x.textContent.replace(/[^0-9]/g,''));return a.length>1&&a.every((v,i)=>i===0||a[i-1]>=v)}"))
+                    ck(f'daily[{mn}] action boxes on one fixed grid (same x/width in every card)',g.evaluate("()=>{const q=s=>[...document.querySelectorAll('.dh '+s)].map(x=>{const r=x.getBoundingClientRect();return Math.round(r.left)+':'+Math.round(r.width)});return ['.lk','.ex','.cp','.op'].every(s=>new Set(q(s)).size===1)}"))
+                    g.locator('.dhl').screenshot(path=os.path.join(SH,f'shot_daily_{mn}_footer.png'))
                     ex=g.query_selector('.dh .ex');ex.click();g.wait_for_timeout(250)
                     ck(f'daily[{mn}] expand shows original',g.evaluate("()=>{const h=document.querySelector('.dh .ex').closest('.dh');const d=h.querySelector('.dor');return !d.hidden&&d.offsetHeight>0&&h.querySelector('.ex').textContent==='收起'}"))
                     ck(f'daily[{mn}] long original scrolls (<=440px)',g.evaluate("()=>{const d=document.querySelector('.dh .dor .pt:not([hidden])');return d.getBoundingClientRect().height<=441}"))
                     g.screenshot(path=os.path.join(SH,f'shot_daily_{mn}_expanded1.png'),full_page=True)
                     # English card with translation
-                    r=g.evaluate("""()=>{const h=[...document.querySelectorAll('.dh')].find(x=>x.querySelector('[data-ol]'));if(!h)return null;h.querySelector('.ex').click();h.scrollIntoView({block:'center'});const z=h.querySelector('.ptz'),o=h.querySelector('.pto');return {zhShown:!z.hidden&&o.hidden,cp:h.querySelector('.cp').textContent,badge:!!h.querySelector('.trb')}}""")
+                    r=g.evaluate("""()=>{const h=[...document.querySelectorAll('.dh')].find(x=>x.querySelector('[data-ol]'));if(!h)return null;if(h.querySelector('.dor').hidden)h.querySelector('.ex').click();h.scrollIntoView({block:'center'});const z=h.querySelector('.ptz'),o=h.querySelector('.pto');return {zhShown:!z.hidden&&o.hidden,cp:h.querySelector('.cp').textContent,badge:!!h.querySelector('.trb')}}""")
                     ck(f'daily[{mn}] English default 中 + 译 badge + 复制译文',bool(r and r['zhShown'] and r['badge'] and r['cp']=='复制译文'),r)
                     g.wait_for_timeout(200);g.screenshot(path=os.path.join(SH,f'shot_daily_{mn}_zh.png'))
                     r=g.evaluate("""()=>{const h=[...document.querySelectorAll('.dh')].find(x=>x.querySelector('[data-ol]')&&!x.querySelector('.dor').hidden);h.querySelector('[data-ol="en"]').click();const z=h.querySelector('.ptz'),o=h.querySelector('.pto');return {enShown:z.hidden&&!o.hidden,cp:h.querySelector('.cp').textContent}}""")
@@ -57,7 +60,10 @@ with sync_playwright() as p:
                     pn=g.evaluate(PANE)
                     if vw>1000:
                         ck(f'news[{mn}] pane visible with content',bool(pn and pn['visible'] and g.evaluate("()=>document.querySelector('#nptitle').textContent.length>4")),pn)
-                        ck(f'news[{mn}] list narrower than pane',pn['listW']<pn['paneW'],f"{pn['listW']}/{pn['paneW']}")
+                        ck(f'news[{mn}] list wider than pane (list 55-66% of total)',pn['listW']>pn['paneW'] and 0.55<=pn['listW']/(pn['listW']+pn['paneW']+16)<=0.66,f"{pn['listW']}/{pn['paneW']}")
+                        r=g.evaluate("()=>{const li=document.querySelector('#ntop .nr:nth-child(4)');li.querySelector('.nrh').click();const bd=document.querySelector('#npbody');return new Promise(res=>setTimeout(()=>{const pm=document.querySelector('#npmeta .nn'),a=li.getBoundingClientRect(),n=document.querySelector('#nnotch').getBoundingClientRect(),pr=document.querySelector('#npane').getBoundingClientRect();res({sel:li.classList.contains('sel'),only:document.querySelectorAll('.nr.sel').length===1,num:pm&&pm.textContent,title:document.querySelector('#nptitle').textContent===li.querySelector('.nt2').textContent,bar:getComputedStyle(li).boxShadow!=='none',arrow:getComputedStyle(li.querySelector('.nrh'),'::after').content!=='none',notchY:Math.round(n.top+n.height/2),rowY:Math.round(a.top+Math.min(a.height,72)/2),notchOnPane:n.left<pr.left+4&&n.right>pr.left-12,top:bd.scrollTop})},400))}")
+                        ck(f'news[{mn}] selected row: accent bar+arrow, pane repeats number/title, notch aligned to row, pane at top',bool(r['sel'] and r['only'] and r['num']=='04' and r['title'] and r['bar'] and r['arrow'] and abs(r['notchY']-r['rowY'])<=8 and r['notchOnPane'] and r['top']==0),r)
+                        g.screenshot(path=os.path.join(SH,f'shot_news_{mn}_selected.png'),clip={'x':0,'y':0,'width':vw,'height':760})
                         ck(f'news[{mn}] pane within viewport + not past list bottom',pn['paneBottom']<=pn['vh'] and pn['paneBottom']<=pn['listBottom']+1,pn)
                         g.mouse.wheel(0,700);g.wait_for_timeout(300);pn2=g.evaluate(PANE)
                         ck(f'news[{mn}] pane sticky after scroll',pn2['paneTop']<=20+60 and pn2['paneBottom']<=pn2['vh'] and pn2['paneBottom']<=pn2['listBottom']+1,pn2)
@@ -86,6 +92,7 @@ with sync_playwright() as p:
                     g.click('.dcn');g.wait_for_timeout(900)
                     ck(f'hot[{mn}] next-day arrow works',g.evaluate("()=>document.querySelectorAll('#feed .post').length>3"))
                 if name=='person':
+                    ck(f'person[{mn}] continuous grid: no day separators, day chip + time on every card, first row full',g.evaluate("()=>{const c=[...document.querySelectorAll('#feed .post')];if(c.length<4)return false;const t0=Math.round(c[0].getBoundingClientRect().top);const row=c.filter(x=>Math.abs(x.getBoundingClientRect().top-t0)<3).length;const cols=Math.floor((document.querySelector('#feed').clientWidth+12)/(360+12));return !document.querySelector('#feed .dsep')&&c.every(x=>x.querySelector('.dtag')&&x.querySelector('time.tm'))&&row>=Math.min(cols,c.length)&&(innerWidth<=720||row>=2)}"))
                     g.click('.dcm');g.wait_for_timeout(200);g.click('.dcd:not(.off) >> nth=1');g.wait_for_timeout(900)
                     ck(f'person[{mn}] day filter',g.evaluate("()=>{const ds=[...document.querySelectorAll('#feed .dsep')];return ds.length<=1&&document.querySelectorAll('#feed .post').length>=0}"))
                     g.screenshot(path=os.path.join(SH,f'shot_person_{mn}_dayfilter.png'))

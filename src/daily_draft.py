@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 """日报素材：python3 daily_draft.py [YYYY-MM-DD] > /tmp/daily_draft.json
 窗口 = 该日 08:00（北京时间）往前 24 小时（若是今天则截至最新抓取）。输出候选：
-  posts   热度前 20（每人 1 条，只含中/英）：handle,name,id,url,likes,heat,created_at,text(前 400 字),text_orig(原帖全文，直接抄进日报 highlights[].text_orig),
+  posts   热度前 20（每人 1 条，只含中/英；列表按 likes 从高到低排序）：handle,name,id,url,likes,heat,created_at,text(前 400 字),text_orig(原帖全文，直接抄进日报 highlights[].text_orig),
           is_english(英文帖=true：入选 highlights 时必须再写 text_orig_zh = text_orig 的完整中文翻译；中文帖不需要)
   topics  话题最近一日条数 vs 前几日均值的涨跌（取窗口结束前最新一次计数）
   followers 粉丝变化前后各 6（与约 24 小时前的快照比）
-刷新流程用它写 daily/YYYY-MM-DD.json（中文摘要由刷新人工/助手撰写），不直接发布。"""
+刷新流程用它写 daily/YYYY-MM-DD.json（中文摘要由刷新流程撰写），不直接发布。"""
 import sys,os,json,glob,sqlite3,datetime,re,html
 D=os.path.dirname(os.path.abspath(__file__)); os.chdir(D); sys.path.insert(0,D)
 import langf
@@ -27,6 +27,7 @@ for r in db.execute('select id,author_id,created_at,text,likes,rts,replies,quote
     seen.add(r[1]); u,n=idm[r[1]]
     posts.append(dict(handle=u,name=n,id=r[0],url=r[9] or f'https://x.com/{u}/status/{r[0]}',likes=r[4],heat=r[4]+2*r[5]+3*r[7]+r[6]+(r[8] or 0),created_at=r[2],text=html.unescape(r[3])[:400],text_orig=html.unescape(r[3]),is_english=is_english(html.unescape(r[3]))))
     if len(posts)>=20: break
+posts.sort(key=lambda p:-p['likes'])   # 候选按点赞数从高到低列出（写 highlights 时也按 likes 从高到低排）
 ts_end=end.strftime('%Y%m%d_%H%M%S')
 snaps=[t for (t,) in db.execute('select distinct ts from followers where ts<=? order by ts',(ts_end,))]
 fol=[]
