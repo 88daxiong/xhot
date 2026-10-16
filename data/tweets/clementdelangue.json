@@ -2,6 +2,62 @@
   "handle": "clementdelangue",
   "tweets": [
     {
+      "created_at": "2026-10-15T20:50:16.000Z",
+      "id": "2110835673003667527",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 11,
+        "impression": 6000,
+        "like": 90,
+        "quote": 1,
+        "reply": 20,
+        "retweet": 4
+      },
+      "url": "https://x.com/ClementDelangue/status/2110835673003667527"
+    },
+    {
+      "created_at": "2026-10-15T17:55:03.000Z",
+      "id": "2110791576435794339",
+      "lang": "de",
+      "metrics": {
+        "bookmark": 43,
+        "impression": 17707,
+        "like": 236,
+        "quote": 5,
+        "reply": 37,
+        "retweet": 23
+      },
+      "url": "https://x.com/ClementDelangue/status/2110791576435794339"
+    },
+    {
+      "created_at": "2026-10-15T17:35:17.000Z",
+      "id": "2110786602805195191",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 105,
+        "impression": 27927,
+        "like": 793,
+        "quote": 5,
+        "reply": 22,
+        "retweet": 39
+      },
+      "url": "https://x.com/ClementDelangue/status/2110786602805195191"
+    },
+    {
+      "created_at": "2026-10-15T16:00:36.000Z",
+      "id": "2110762775161327813",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 6,
+        "impression": 12320,
+        "like": 269,
+        "quote": 4,
+        "reply": 20,
+        "retweet": 19
+      },
+      "url": "https://x.com/ClementDelangue/status/2110762775161327813"
+    },
+    {
       "created_at": "2026-10-14T14:30:48.000Z",
       "id": "2110377790486749231",
       "lang": "en",

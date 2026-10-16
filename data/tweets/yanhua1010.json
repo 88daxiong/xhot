@@ -2,6 +2,90 @@
   "handle": "yanhua1010",
   "tweets": [
     {
+      "created_at": "2026-10-16T00:06:07.000Z",
+      "id": "2110884959833780521",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 101,
+        "like": 1,
+        "quote": 0,
+        "reply": 0,
+        "retweet": 0
+      },
+      "url": "https://x.com/yanhua1010/status/2110884959833780521"
+    },
+    {
+      "created_at": "2026-10-15T11:41:37.000Z",
+      "id": "2110697600831943151",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 12,
+        "impression": 2786,
+        "like": 10,
+        "quote": 0,
+        "reply": 4,
+        "retweet": 1
+      },
+      "url": "https://x.com/yanhua1010/status/2110697600831943151"
+    },
+    {
+      "created_at": "2026-10-15T10:21:15.000Z",
+      "id": "2110677375138910286",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 1151,
+        "like": 3,
+        "quote": 0,
+        "reply": 2,
+        "retweet": 0
+      },
+      "url": "https://x.com/yanhua1010/status/2110677375138910286"
+    },
+    {
+      "created_at": "2026-10-15T07:29:58.000Z",
+      "id": "2110634269987225618",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 1,
+        "impression": 4596,
+        "like": 14,
+        "quote": 0,
+        "reply": 8,
+        "retweet": 0
+      },
+      "url": "https://x.com/yanhua1010/status/2110634269987225618"
+    },
+    {
+      "created_at": "2026-10-15T03:21:05.000Z",
+      "id": "2110571638173643247",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 1467,
+        "like": 2,
+        "quote": 1,
+        "reply": 1,
+        "retweet": 0
+      },
+      "url": "https://x.com/yanhua1010/status/2110571638173643247"
+    },
+    {
+      "created_at": "2026-10-15T00:12:31.000Z",
+      "id": "2110524182564163840",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 1,
+        "impression": 3556,
+        "like": 6,
+        "quote": 1,
+        "reply": 7,
+        "retweet": 0
+      },
+      "url": "https://x.com/yanhua1010/status/2110524182564163840"
+    },
+    {
       "created_at": "2026-10-14T14:10:43.000Z",
       "id": "2110372733964226856",
       "lang": "zh",

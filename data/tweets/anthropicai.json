@@ -2,6 +2,48 @@
   "handle": "anthropicai",
   "tweets": [
     {
+      "created_at": "2026-10-15T21:31:45.000Z",
+      "id": "2110846112152105136",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 118,
+        "impression": 80968,
+        "like": 1032,
+        "quote": 20,
+        "reply": 107,
+        "retweet": 71
+      },
+      "url": "https://x.com/AnthropicAI/status/2110846112152105136"
+    },
+    {
+      "created_at": "2026-10-15T17:27:34.000Z",
+      "id": "2110784662071398807",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 355,
+        "impression": 258335,
+        "like": 2261,
+        "quote": 84,
+        "reply": 262,
+        "retweet": 165
+      },
+      "url": "https://x.com/AnthropicAI/status/2110784662071398807"
+    },
+    {
+      "created_at": "2026-10-15T13:14:22.000Z",
+      "id": "2110720940665372825",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 4214,
+        "impression": 748522,
+        "like": 5490,
+        "quote": 118,
+        "reply": 303,
+        "retweet": 423
+      },
+      "url": "https://x.com/AnthropicAI/status/2110720940665372825"
+    },
+    {
       "created_at": "2026-10-14T08:40:45.000Z",
       "id": "2110289695888511368",
       "lang": "",

@@ -2,6 +2,62 @@
   "handle": "chatgpt",
   "tweets": [
     {
+      "created_at": "2026-10-15T20:09:10.000Z",
+      "id": "2110825327811580209",
+      "lang": "",
+      "metrics": {
+        "bookmark": 154,
+        "impression": 29591,
+        "like": 194,
+        "quote": 0,
+        "reply": 6,
+        "retweet": 8
+      },
+      "url": "https://x.com/ChatGPT/status/2110825327811580209"
+    },
+    {
+      "created_at": "2026-10-15T20:02:51.000Z",
+      "id": "2110823741991354728",
+      "lang": "",
+      "metrics": {
+        "bookmark": 49,
+        "impression": 36839,
+        "like": 250,
+        "quote": 1,
+        "reply": 3,
+        "retweet": 4
+      },
+      "url": "https://x.com/ChatGPT/status/2110823741991354728"
+    },
+    {
+      "created_at": "2026-10-15T20:02:51.000Z",
+      "id": "2110823740309401654",
+      "lang": "",
+      "metrics": {
+        "bookmark": 41,
+        "impression": 41342,
+        "like": 412,
+        "quote": 2,
+        "reply": 8,
+        "retweet": 9
+      },
+      "url": "https://x.com/ChatGPT/status/2110823740309401654"
+    },
+    {
+      "created_at": "2026-10-15T20:02:51.000Z",
+      "id": "2110823738531037651",
+      "lang": "",
+      "metrics": {
+        "bookmark": 1389,
+        "impression": 419069,
+        "like": 3971,
+        "quote": 113,
+        "reply": 174,
+        "retweet": 244
+      },
+      "url": "https://x.com/ChatGPT/status/2110823738531037651"
+    },
+    {
       "created_at": "2026-10-14T17:37:41.000Z",
       "id": "2110424821331034550",
       "lang": "en",

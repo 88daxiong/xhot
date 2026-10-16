@@ -2,6 +2,62 @@
   "handle": "pluvio9yte",
   "tweets": [
     {
+      "created_at": "2026-10-15T18:29:49.000Z",
+      "id": "2110800327209582851",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 237,
+        "like": 0,
+        "quote": 0,
+        "reply": 1,
+        "retweet": 0
+      },
+      "url": "https://x.com/Pluvio9yte/status/2110800327209582851"
+    },
+    {
+      "created_at": "2026-10-15T18:28:28.000Z",
+      "id": "2110799987298935249",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 4,
+        "impression": 1252,
+        "like": 4,
+        "quote": 0,
+        "reply": 3,
+        "retweet": 1
+      },
+      "url": "https://x.com/Pluvio9yte/status/2110799987298935249"
+    },
+    {
+      "created_at": "2026-10-15T14:23:24.000Z",
+      "id": "2110738313309286609",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 9,
+        "impression": 19603,
+        "like": 65,
+        "quote": 0,
+        "reply": 37,
+        "retweet": 2
+      },
+      "url": "https://x.com/Pluvio9yte/status/2110738313309286609"
+    },
+    {
+      "created_at": "2026-10-15T13:19:37.000Z",
+      "id": "2110722261158383982",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 74,
+        "impression": 8191,
+        "like": 74,
+        "quote": 1,
+        "reply": 9,
+        "retweet": 5
+      },
+      "url": "https://x.com/Pluvio9yte/status/2110722261158383982"
+    },
+    {
       "created_at": "2026-10-14T09:02:03.000Z",
       "id": "2110295056796229927",
       "lang": "",

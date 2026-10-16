@@ -2,6 +2,90 @@
   "handle": "perplexity_ai",
   "tweets": [
     {
+      "created_at": "2026-10-15T18:03:15.000Z",
+      "id": "2110793639727358422",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 15,
+        "impression": 26898,
+        "like": 174,
+        "quote": 6,
+        "reply": 17,
+        "retweet": 11
+      },
+      "url": "https://x.com/perplexity_ai/status/2110793639727358422"
+    },
+    {
+      "created_at": "2026-10-15T17:03:11.000Z",
+      "id": "2110778525565534464",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 8,
+        "impression": 4615,
+        "like": 22,
+        "quote": 0,
+        "reply": 0,
+        "retweet": 2
+      },
+      "url": "https://x.com/perplexity_ai/status/2110778525565534464"
+    },
+    {
+      "created_at": "2026-10-15T17:03:08.000Z",
+      "id": "2110778513871839717",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 4,
+        "impression": 5277,
+        "like": 26,
+        "quote": 1,
+        "reply": 1,
+        "retweet": 0
+      },
+      "url": "https://x.com/perplexity_ai/status/2110778513871839717"
+    },
+    {
+      "created_at": "2026-10-15T17:03:05.000Z",
+      "id": "2110778502249435490",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 1,
+        "impression": 3249,
+        "like": 23,
+        "quote": 0,
+        "reply": 2,
+        "retweet": 1
+      },
+      "url": "https://x.com/perplexity_ai/status/2110778502249435490"
+    },
+    {
+      "created_at": "2026-10-15T17:03:03.000Z",
+      "id": "2110778490652180644",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 2,
+        "impression": 4233,
+        "like": 24,
+        "quote": 0,
+        "reply": 2,
+        "retweet": 1
+      },
+      "url": "https://x.com/perplexity_ai/status/2110778490652180644"
+    },
+    {
+      "created_at": "2026-10-15T17:03:00.000Z",
+      "id": "2110778478312481167",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 823,
+        "impression": 79986,
+        "like": 1066,
+        "quote": 38,
+        "reply": 72,
+        "retweet": 81
+      },
+      "url": "https://x.com/perplexity_ai/status/2110778478312481167"
+    },
+    {
       "created_at": "2026-10-14T17:01:29.000Z",
       "id": "2110415710073819389",
       "lang": "",

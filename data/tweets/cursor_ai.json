@@ -2,6 +2,20 @@
   "handle": "cursor_ai",
   "tweets": [
     {
+      "created_at": "2026-10-15T22:56:58.000Z",
+      "id": "2110867556693430293",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 28,
+        "impression": 28378,
+        "like": 523,
+        "quote": 26,
+        "reply": 74,
+        "retweet": 30
+      },
+      "url": "https://x.com/cursor_ai/status/2110867556693430293"
+    },
+    {
       "created_at": "2026-10-13T19:17:44.000Z",
       "id": "2110087611763368271",
       "lang": "en",

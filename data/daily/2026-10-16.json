@@ -1,0 +1,155 @@
+{
+  "changelog": [],
+  "date": "2026-10-16",
+  "followers_zh": "Tibo（@thsottiaux）+10.2k、Greg Isenberg +6.0k、Anthropic +3.8k 涨粉最多；Elon Musk −7.0k，跌幅最大。",
+  "gists": {
+    "2110525059093987468": "OpenRouter 上线 Jev 1.14：多语言大升、实验性多模态，价格不变。",
+    "2110525636884259180": "Gemini 4 Argon 纯 Python 零依赖写出 5000+ 行光线追踪引擎。",
+    "2110535797673791908": "CZ：Solana 能在中国做广告甚至设办公室，BNB Chain 暂时还做不到。",
+    "2110563979890421878": "Matthew Berman：报税材料丢进 ChatGPT，发现对自己有利的 2 万美元错误。",
+    "2110595484180214059": "Tibo（xAI）Day 10：调侃「重置键丢了」的传言被夸大。",
+    "2110658552016560541": "Tibo：50 个员工整天盯着你——这就是养一堆 AI agent 的既视感。",
+    "2110671750727946638": "levelsio：数据掮客以 10–200 万美元收购 SaaS 数据集，再转卖给 AI 实验室。",
+    "2110684732103041474": "Mistral 与 CERN 合作探索「大物理模型」，在数十亿次模拟对撞上训练。",
+    "2110711574121857208": "马斯克预热新 Roadster：超越电影与想象，仍由地球上的人类打造。",
+    "2110715556328579219": "马斯克调侃：要不我们搞个亚马逊竞品？",
+    "2110740414445900204": "Matt Shumer：眼下很多人很惶恐，我们需要更多共情。",
+    "2110750421367287996": "Tibo Day 11：加算力与改动，大幅减少「模型满载」卡死。",
+    "2110772859580895678": "Gemini Canvas：上传家具尺寸图，交互式 3D CAD 并导出可打印 STL。",
+    "2110778478312481167": "Perplexity 开源 SPACE：为每个智能体任务提供 Firecracker 微虚拟机沙箱。",
+    "2110779756828557356": "Muse Spark Open 可在两台 Apple M5 Ultra + MLX 上跑。",
+    "2110802176289448427": "Matthew Berman 预告新品：You can just do things，即将上线。",
+    "2110817988311998911": "NVIDIA 互动短帖：「感觉是相互的」💚",
+    "2110824076218605922": "NVIDIA 发布 Nemotron 3.5 Bolt：可塞进 24GB 显存的开放模型。",
+    "2110832979656524283": "OpenAI Sites 企业版全面可用，支持美/欧数据驻留。",
+    "2110838205654470840": "OpenRouter Armor 公测：用 Jev 在工具调用前拦截越权操作。",
+    "2110855363616763922": "OpenAI Dev：Codex 硬件项目展示站上线，可浏览与分享社区作品。",
+    "2110858269225103685": "Grok Bot 征集下一波连接器：Apple / WhatsApp / Bitwarden 等呼声高。"
+  },
+  "hide": [
+    "2110551546635444588",
+    "2110817988311998911",
+    "2110802176289448427",
+    "2110753312517824838"
+  ],
+  "highlights": [
+    {
+      "excerpt": "Today we’re releasing Muse Spark Open, the most capable US open-weight model to date.\n\nBuilt for coding and agentic work, it excels at long-horizon tasks, complex software engineering, and multi-step reasoning.\n\nKey Model Specs:\n→ 816B total / 42B active parameters\n→ 1M token https://t.co/yAtoxNeYJm",
+      "excerpt_zh": "今天我们发布 Muse Spark Open，迄今最强的美国开源权重模型。\n\n专为编程与智能体工作打造，擅长长程任务、复杂软件工程与多步推理。\n\n关键模型规格：\n→ 总参数 816B / 活跃 42B\n→ 100 万 token",
+      "handle": "AIatMeta",
+      "likes": 8707,
+      "name": "AI at Meta",
+      "post_id": "2110779754274292212",
+      "tags": [
+        "model",
+        "agent"
+      ],
+      "text_zh": "Meta 发布 Muse Spark Open：美系最强开源权重，816B/42B，面向编程与智能体。",
+      "url": "https://x.com/AIatMeta/status/2110779754274292212"
+    },
+    {
+      "excerpt": "New voices. Better accents. And less \"checking...\"\n\nGPT-Live-1.1 brings these updates to Voice in ChatGPT, Codex, and dots, with new voices in French, German, Hindi, Mexican Spanish, Korean, and Japanese.\n\nRolling out today to all users. Coming soon to the API. https://t.co/L6K8ZUC1xm",
+      "excerpt_zh": "新声音。更好的口音。更少「正在检查…」。\n\nGPT-Live-1.1 把这些更新带到 ChatGPT、Codex 和 dots 的语音功能，并新增法语、德语、印地语、墨西哥西班牙语、韩语和日语声音。\n\n今天起向所有用户推送。API 即将跟进。",
+      "handle": "OpenAI",
+      "likes": 7569,
+      "name": "OpenAI",
+      "post_id": "2110797830361436604",
+      "tags": [
+        "product",
+        "code"
+      ],
+      "text_zh": "OpenAI 上线 GPT-Live-1.1：新语音、更好口音，覆盖 ChatGPT / Codex / dots。",
+      "url": "https://x.com/OpenAI/status/2110797830361436604"
+    },
+    {
+      "excerpt": "Applications are now open for two new Anthropic Fellowships.\n\nSTEM Fellows (science and engineering) and Conceptual Reasoning Fellows (philosophy, cognitive science, economics, policy, and law) will spend four months at Anthropic from January 2027.",
+      "excerpt_zh": "两类新的 Anthropic Fellowship 现已开放申请。\n\nSTEM Fellows（科学与工程）与 Conceptual Reasoning Fellows（哲学、认知科学、经济、政策与法律）将于 2027 年 1 月起在 Anthropic 驻留四个月。",
+      "handle": "AnthropicAI",
+      "likes": 5490,
+      "name": "Anthropic",
+      "post_id": "2110720940665372825",
+      "tags": [
+        "policy",
+        "model"
+      ],
+      "text_zh": "Anthropic 开放 STEM / 概念推理 Fellowship，2027 年 1 月驻留四个月。",
+      "url": "https://x.com/AnthropicAI/status/2110720940665372825"
+    },
+    {
+      "excerpt": "We want to support the mathematics community in turning progress in AI into deeper human understanding and new discoveries. To support that goal, we are contributing $5 million to a new Simons Foundation initiative to help mathematicians examine, understand, and build on results produced by AI.",
+      "excerpt_zh": "我们希望支持数学界，把 AI 的进展转化为更深的人类理解与新发现。为此，我们向 Simons Foundation 的一项新计划捐赠 500 万美元，帮助数学家检验、理解并在 AI 产出的结果上继续推进。",
+      "handle": "OpenAI",
+      "likes": 4459,
+      "name": "OpenAI",
+      "post_id": "2110741355739963884",
+      "tags": [
+        "research",
+        "model"
+      ],
+      "text_zh": "OpenAI 向 Simons 新计划捐赠 500 万美元，助力数学家检验 AI 成果。",
+      "url": "https://x.com/OpenAI/status/2110741355739963884"
+    },
+    {
+      "excerpt": "A few big upgrades for Chrome users today! We’re bringing the power of computer use to anyone who uses Chrome.\n\nFirst up: ChatGPT can now use your tabs in Chrome to make answers more useful and get things done for you. \n\nIf you’re in Chat, it can look across your open tabs and https://t.co/c99ZSugDcI",
+      "excerpt_zh": "今天给 Chrome 用户带来几项大升级！我们把 computer use 的能力带给每一位 Chrome 用户。\n\n首先：ChatGPT 现在可以用你在 Chrome 里的标签页，让回答更有用，并帮你把事情做完。",
+      "handle": "ChatGPT",
+      "likes": 3971,
+      "name": "ChatGPT",
+      "post_id": "2110823738531037651",
+      "tags": [
+        "agent",
+        "product"
+      ],
+      "text_zh": "ChatGPT 为 Chrome 带来 computer use：可读开标签、代你完成操作。",
+      "url": "https://x.com/ChatGPT/status/2110823738531037651"
+    },
+    {
+      "excerpt": "Meet NVIDIA Nemotron 3.5 Super VL\n\nOur new open model combines reasoning and tool use with text, image, document, and video understanding for long-running AI agents.\n\n120B total parameters with 12B active 🧵 https://t.co/BcbED05qSG",
+      "excerpt_zh": "认识 NVIDIA Nemotron 3.5 Super VL\n\n这款新的开放模型把推理与工具调用，和文本、图像、文档、视频理解结合在一起，面向长时间运行的 AI 智能体。\n\n总参数 120B，活跃 12B",
+      "handle": "NVIDIAAI",
+      "likes": 3588,
+      "name": "NVIDIA AI",
+      "post_id": "2110749836450713896",
+      "tags": [
+        "model",
+        "agent"
+      ],
+      "text_zh": "NVIDIA 发布 Nemotron 3.5 Super VL：开放多模态，120B/12B，面向长程智能体。",
+      "url": "https://x.com/NVIDIAAI/status/2110749836450713896"
+    },
+    {
+      "excerpt": "With Gemini 4 Argon, your research has new ways to tell its story 📖\n\nWe used Nano Banana, Veo, and Argon to turn a dense academic PDF into a full-color, animated storybook in the @GeminiApp. https://t.co/GD6teW5IK5",
+      "excerpt_zh": "有了 Gemini 4 Argon，你的研究有了新的讲述方式 📖\n\n我们用 Nano Banana、Veo 和 Argon，把一篇密集的学术 PDF 变成了 @GeminiApp 里的全彩动画故事书。",
+      "handle": "Google",
+      "likes": 2472,
+      "name": "Google",
+      "post_id": "2110751391899644101",
+      "tags": [
+        "model",
+        "research"
+      ],
+      "text_zh": "Google 用 Gemini 4 Argon 把学术 PDF 变成全彩动画故事书。",
+      "url": "https://x.com/Google/status/2110751391899644101"
+    },
+    {
+      "excerpt": "We now have state-of-the-art pre-trained base models in the 3T-parameter weight class, built entirely in-house at MAI.\n\nPost-training results coming soon -- stay tuned!\n\nLots of details in our technical blog post.\n\nhttps://t.co/K8Nh4YFDJL",
+      "excerpt_zh": "我们现在已有 3T 参数量级的顶尖预训练基座模型，全部在 MAI 内部自研完成。\n\n后训练结果即将公布——敬请期待！\n\n技术博客里有更多细节。",
+      "handle": "mustafasuleyman",
+      "likes": 2248,
+      "name": "Mustafa Suleyman",
+      "post_id": "2110766651344146564",
+      "tags": [
+        "model"
+      ],
+      "text_zh": "Mustafa：MAI 自制 3T 参数级 SOTA 预训练基座，后训练结果将公布。",
+      "url": "https://x.com/mustafasuleyman/status/2110766651344146564"
+    }
+  ],
+  "pin": [],
+  "summary_zh": [
+    "Meta 开源 Muse Spark Open（816B）；NVIDIA 连发 Nemotron 3.5。",
+    "OpenAI 推 GPT-Live-1.1 多语语音；ChatGPT Chrome 可做 computer use。",
+    "DeepSeek 讨论量约翻倍（+99%）；Tibo +1.0 万粉，马斯克 −7k。"
+  ],
+  "topics_zh": "DeepSeek 讨论量约为近期均值近 2 倍（+99%）；Kimi +32%、vibe coding +32%、Claude Code +29% 紧随其后。"
+}

@@ -2,6 +2,20 @@
   "handle": "thesamparr",
   "tweets": [
     {
+      "created_at": "2026-10-15T01:56:44.000Z",
+      "id": "2110550409190494571",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 207,
+        "impression": 22356,
+        "like": 305,
+        "quote": 6,
+        "reply": 40,
+        "retweet": 10
+      },
+      "url": "https://x.com/thesamparr/status/2110550409190494571"
+    },
+    {
       "created_at": "2026-10-14T17:28:53.000Z",
       "id": "2110422603341132223",
       "lang": "en",
