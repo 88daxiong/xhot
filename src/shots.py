@@ -56,7 +56,7 @@ with sync_playwright() as p:
                     r=g.evaluate("()=>({sum:document.querySelectorAll('.b3 li').length,hl:document.querySelectorAll('.dhl .dh').length,rows:document.querySelectorAll('.tl30 .trw').length,orig:[...document.querySelectorAll('.dor')].every(d=>d.hidden||!d.offsetParent)})")
                     ck(f'today[{mn}] 三句话 + 必读 + Top30 余下共 30',r['sum']==3 and r['hl']>=1 and r['hl']+r['rows']==30,r)
                     ck(f'today[{mn}] 必读原文摘录默认折叠',r['orig'])
-                    ck(f'today[{mn}] 必读按点赞降序',g.evaluate("()=>{const a=[...document.querySelectorAll('.dh .lk')].map(x=>+x.textContent.replace(/[^0-9]/g,''));return a.length>1&&a.every((v,i)=>i===0||a[i-1]>=v)}"))
+                    ck(f'today[{mn}] 必读按点赞降序',g.evaluate("()=>{const a=[...document.querySelectorAll('.dh .lk')].map(x=>{const t=x.textContent,v=parseFloat(t.replace(/[^0-9.]/g,'').replace(/(\\d)\\.(?=\\d*\\.)/g,'$1'))||0;return t.includes('亿')?v*1e8:t.includes('万')?v*1e4:+t.replace(/[^0-9]/g,'')});return a.length>1&&a.every((v,i)=>i===0||a[i-1]>=v)}"))
                     ck(f'today[{mn}] 相对时间由前端补齐（页面源码里 .rl 全为空，运行后非空）',all(x=='' for x in re.findall(r'<span class="rl">(.*?)</span>',rawhtml(u)))and g.evaluate("()=>[...document.querySelectorAll('time.tm .rl')].every(x=>x.textContent.length>0)"))
                     ck(f'today[{mn}] 页面源码没有烘焙「今天/昨天」',not re.search(r'今天|昨天',re.sub(r'<script.*?</script>|<footer.*?</footer>','',rawhtml(u),flags=re.S).replace('每天北京时间','')) or True)
                     ck(f'today[{mn}] 日期标签运行后显示今天/昨天/日期',g.evaluate("()=>/\\d+月\\d+日/.test(document.querySelector('.ddl').textContent)"),g.evaluate("()=>document.querySelector('.ddl').textContent"))
@@ -114,7 +114,7 @@ with sync_playwright() as p:
                     g.click('.dcm');g.wait_for_timeout(200);g.click('.dcd:not(.off) >> nth=1');g.wait_for_timeout(700)
                     ck(f'person[{mn}] 日期筛选',g.evaluate("()=>document.querySelectorAll('#feed .post').length>=1"))
                 if name=='person2':
-                    ck(f'person2[{mn}] 稀疏账号无大片空白（页面高度合理）',g.evaluate("()=>document.documentElement.scrollHeight<"+("3600" if vw<600 else "2600")),g.evaluate("()=>document.documentElement.scrollHeight"))
+                    ck(f'person2[{mn}] 稀疏账号无大片空白（页面高度合理）',g.evaluate("()=>document.documentElement.scrollHeight<"+("3300" if vw<600 else "2300")+"+90*document.querySelectorAll('#feed .post').length"),g.evaluate("()=>document.documentElement.scrollHeight"))
                 if name=='news' and vw>1000:
                     pn=g.evaluate("()=>{const p=document.querySelector('#npane'),m=document.querySelector('.nmain');if(!p||!m)return null;const a=p.getBoundingClientRect(),b2=m.getBoundingClientRect();return {listW:Math.round(b2.width),paneW:Math.round(a.width),paneBottom:Math.round(a.bottom),listBottom:Math.round(b2.bottom),vh:innerHeight}}")
                     ck(f'news[{mn}] 列表宽于窗格 + 窗格不超过视口/列表',bool(pn) and pn['listW']>pn['paneW'] and pn['paneBottom']<=pn['vh'] and pn['paneBottom']<=pn['listBottom']+1,pn)

@@ -27,7 +27,7 @@ return}
 /* ===== 全部归档 ===== */
 var SJ=null,st={dom:'all',sort:'s',day:''},SH={},tmr;
 X.people().then(function(j){SJ=j;j.t.forEach(function(x){TG[x[0]]=x[1]});init()});
-function shard(dd){var k=dd[0];if(SH[k])return Promise.resolve(SH[k]);return fetchJ(P+'feed/'+k+'.'+dd[1]+'.json').then(function(a){return SH[k]=norm(a)})}
+function shard(dd){var k=dd[0];if(SH[k])return Promise.resolve(SH[k]);return fetchJ(P+'feed/'+k+'.json?v='+dd[1]).then(function(a){return SH[k]=norm(a)})}
 function days(){var A=SJ.d;if(st.day)return A.filter(function(x){return x[0]===st.day});var t=X.dkey(Date.now()-7*864e5);return A.filter(function(x){return x[0]>=t}).slice(0,8)}
 function ready(){return Promise.all(days().map(shard))}
 function who(r){return SJ.M[r.u]}

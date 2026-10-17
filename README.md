@@ -2,7 +2,7 @@
 
 在线访问：<https://88daxiong.github.io/xhot/>
 
-XHOT 是一个纯静态的 X（Twitter）热点简报，关注 AI、搞钱（创业 / 创作者经济）、个人成长三个领域约 130 个账号，**每天北京时间 08:00 刷新一次**。设计目标：**每天 10 分钟看完重点**，或**几分钟追上某个人 / 某个领域的进度**。
+XHOT 是一个纯静态的 X（Twitter）热点简报，关注 AI、搞钱（创业 / 创作者经济）、个人成长三个领域约 130 个账号，**每天北京时间 08:00 完整刷新一次，14:00 / 20:00 / 次日 02:00 各做一次轻量刷新**（只更新约 60 个最热账号的新帖，规则评分，不含人工撰写内容）。设计目标：**每天 10 分钟看完重点**，或**几分钟追上某个人 / 某个领域的进度**。
 
 | 页面 | 内容 |
 |---|---|
@@ -54,7 +54,7 @@ GitHub Trending ┘                         │
 ### 前端性能设计（均有测试与预算）
 - 每页只有 **一个内联脚本（主题预绘，带 sha256 的 CSP）和一个内联 `<style>`（按页裁剪，约 7KB gzip）**；JS 拆成 `core`（所有页）与 `news` / `feed`（按页），文件名带内容哈希、`defer`。
 - 外链 CSS 在 Fast 3G 下会多一次往返（实测 FCP 约 +1s），所以 CSS 内联；若日后换到支持 HTTP/2 push / Early Hints 的主机，可改回外链。
-- 数据分片：`feed/<日期>.<hash>.json`（按天）、`p/<handle>.<hash>.json`（个人时间线）、`assets/search.<hash>.json`（⌘K 索引，首次呼出时才读）。首屏服务端渲染，无 JS 也能读正文。
+- 数据分片：`feed/<日期>.json`（按天）、`p/<handle>.json`（个人时间线）、`assets/search.json`（⌘K 索引，首次呼出时才读）、`assets/status.html`（数据健康表，点开才读）；文件名稳定，内容哈希只作 `?v=` 版本号写在引用处，所以轻量刷新只会改到真正有变化的文件。首屏服务端渲染，无 JS 也能读正文。
 - 相对时间（x 小时前 / 今天 / 昨天）由前端补齐，**页面源码里不烘焙相对时间**，页面稳定、无数据变化就不改写文件；新 / 已读标记只存浏览器 localStorage。
 - `<link rel="expect" blocking="render">` 等页头与工具条解析完再首次绘制，布局偏移（CLS）≈ 0；头像为 64px / 96px webp（约 0.7 / 1.5KB），首屏之外懒加载。
 - 目标：首页首屏 ≤80KB gzip、LCP ≤1.0s（Fast 3G）、INP ≤100ms（CPU 4×）、CLS = 0；实测见仓库外的 `speed_v15.json`。
@@ -71,9 +71,9 @@ GitHub Trending ┘                         │
 index.html  news.html  trends.html  people.html  _headers
 d/{ai,money,growth,all}.html        # 领域页与全部归档
 day/<YYYY-MM-DD>.html               # 每日简报（永久链接）
-p/<handle>.html + p/<handle>.<hash>.json
-feed/<YYYY-MM-DD>.<hash>.json       # 按天分片的摘录
-assets/core|news|feed.<hash>.js  assets/search.<hash>.json  assets/news.<hash>.json  assets/av/*.webp
+p/<handle>.html + p/<handle>.json
+feed/<YYYY-MM-DD>.json       # 按天分片的摘录
+assets/core|news|feed.<hash>.js  assets/search.json  assets/news.json  assets/status.html  assets/av/*.webp
 hot.html accounts.html daily/<日期>.html   # 旧链接跳转页
 data/                               # 仅 ID 与指标的数据备份
 src/                                # 生成器源码，可从零重建
@@ -89,7 +89,7 @@ src/                                # 生成器源码，可从零重建
 JSON 键排序固定、缩进 2。导出脚本在末尾做「全文泄漏检查」（出现 `text` / `text_orig*` 键或超过 400 字的字符串就失败）。
 
 ## 刷新计划与配额
-每天 1 次（北京时间 08:00，X 配额在此时重置）；每次约 155 次 X API 读取：账号资料 2 + 时间线约 131 + 话题计数 16 + 新闻 3 + 新闻相关帖子 3。限额：每分钟 30 次、每天 1000 次；脚本每批 ≤25 次、批间隔 60 秒。aihot.news 与 GitHub Trending 不占 X 配额。每天由 agent 写日报（三句话、必读与译文摘录、Top 30 一句话要点、置顶 / 隐藏复核），每周一写 Top 30 人物的本周要点。
+每天 08:00 完整刷新（X 配额在此时重置）+ 14:00 / 20:00 / 02:00 轻量刷新。完整刷新约 155 次 X API 读取：账号资料 2 + 时间线约 131 + 话题计数 16 + 新闻 3 + 新闻相关帖子 3。限额：每分钟 30 次、每天 1000 次；脚本每批 ≤25 次、批间隔 60 秒。轻量刷新只读 hot60（近 7 天最热的 60 个账号）的时间线，每次约 63 次；全天合计约 344 次，开跑前若剩余配额不足 300 则放弃。重要度的「作者常态」基线冻结在最近一次完整刷新，轻量刷新只加新帖、不改旧帖得分。aihot.news 与 GitHub Trending 不占 X 配额。每天由 agent 写日报（三句话、必读与译文摘录、Top 30 一句话要点、置顶 / 隐藏复核），每周一写 Top 30 人物的本周要点。
 
 ## 从零重建
 需要 Python 3.10+：`pip install -r src/requirements.txt`（Pillow 为运行依赖，playwright 仅测试用）。
@@ -101,11 +101,11 @@ JSON 键排序固定、缩进 2。导出脚本在末尾做「全文泄漏检查�
 5. 生成与自检：`python3 generate.py`（输出 `site/`）→ `python3 test_escape.py`（转义 / 安全回归，必须 ALL PASS）→ `python3 fuzz.py 8`（随机恶意字符串灌进日报 / 周要点所有字段）→ `python3 gzserve.py site 8840 &` → `python3 shots.py --all`（截图 + CSP / JS 错误 / 溢出 / 字号 / 同源请求 / 功能断言）→ `python3 viewports.py`（12 种视口）→ `python3 mobile_audit.py [--scale130]`（iPhone SE/14/Pro Max、Pixel 7、360×640、iPad mini/Pro 真机模拟：横向溢出、被截断的文字、line-clamp、字号下限 15/13/12、触控 44px、展开内容完整可见，`--scale130` 模拟系统文字放大 130%）→ `python3 ds_audit.py`（设计系统一致性：字号/间距/圆角/字重必须落在令牌刻度内、顶栏高度与页面宽度一致、卡片内边距一致，含展开态）→ `python3 news_all.py`（逐条打开每条资讯）→ `python3 speed.py`（Fast 3G + CPU 4×）。
 6. 发布：把 `site/` 复制到仓库根目录，`python3 export_data.py` 导出 `data/`，提交并推送到 `main`。推送凭据放环境变量，不要写进 git config、remote 或任何文件。
 
-**安全设计**：每页 meta CSP（`script-src` 仅本站 + 主题预绘脚本的 sha256；`connect-src 'self'`；无第三方）与 referrer meta；所有外链经 `safe_url` / `safeUrl`（只放行 http(s)）并带 `rel="noopener noreferrer"`；所有文本先转义再渲染（含译文、摘录、⌘K 结果、分片数据）；嵌入 HTML 的 JSON 转义 `<>&`、U+2028/2029 与 `@@`；头像只接受 `pbs.twimg.com` 并重新编码；前端无 `eval` / `document.write` / `outerHTML`；本地存储只有主题、密度、已读 ID 与上次访问时间。`src/.gitignore` 已排除 `xhot.db`、`raw/`、头像缓存和生成目录，**不要把这些或任何密钥提交到仓库**。
+**安全设计**：每页 meta CSP（`script-src` 仅本站 + 主题预绘脚本的 sha256；`connect-src 'self'`；无第三方）与 referrer meta；所有外链经 `safe_url` / `safeUrl`（只放行 http(s)）并带 `rel="noopener noreferrer"`；所有文本先转义再渲染（含译文、摘录、⌘K 结果、分片数据）；嵌入 HTML 的 JSON 转义 `<>&`、U+2028/2029 与 `@@`；头像只接受 `pbs.twimg.com` 并重新编码；前端无 `eval` / `document.write` / `outerHTML`；本地存储只有主题、密度、已读 ID 与上次访问时间。`src/.gitignore` 已排除 `xhot.db`、`raw/`、头像缓存和生成目录，**不要把这些或任何密钥提交到仓库**。 **隐私脱敏**：生成时对页面与分片里的简介 / 摘录统一隐藏邮箱、11 位手机号、微信号（VX: / 微信: 等写法），指向内网 / 本机地址（192.168.x、10.x、172.16–31.x、127.x、localhost、裸 IP、.local 等）的链接不渲染为链接；`test_escape.py` 有对应回归。
 
 ## English
 
-**XHOT** is a static briefing of hot posts on X across AI, making money and personal growth, refreshed daily at 08:00 (Asia/Shanghai). Pages: Today (three-sentence summary, must-reads, a ranked Top 30 with one-line takeaways), Domains, People (weekly takeaways for the top 30), News, Trends, a full archive and a ⌘K search. The UI is Chinese only. The public repo and site contain **only post IDs, metrics, short excerpts (≤220–320 characters) and agent-written Chinese summaries plus links back to X — no full tweet text**. No analytics, no third-party requests; read/new badges live only in your browser. The generator is host-agnostic (plain static output). Limits on GitHub Pages: no response headers (CSP via `<meta>` only, no `frame-ancestors`), soft bandwidth/size limits, unreliable access from mainland China. Tweet content belongs to the original authors.
+**XHOT** is a static briefing of hot posts on X across AI, making money and personal growth, fully refreshed daily at 08:00 (Asia/Shanghai) plus light refreshes at 14:00, 20:00 and 02:00 (top ~60 accounts only, rules-only scoring). Pages: Today (three-sentence summary, must-reads, a ranked Top 30 with one-line takeaways), Domains, People (weekly takeaways for the top 30), News, Trends, a full archive and a ⌘K search. The UI is Chinese only. The public repo and site contain **only post IDs, metrics, short excerpts (≤220–320 characters) and agent-written Chinese summaries plus links back to X — no full tweet text**. No analytics, no third-party requests; read/new badges live only in your browser. The generator is host-agnostic (plain static output). Limits on GitHub Pages: no response headers (CSP via `<meta>` only, no `frame-ancestors`), soft bandwidth/size limits, unreliable access from mainland China. Tweet content belongs to the original authors.
 
 
 ## 设计系统（v15.5）

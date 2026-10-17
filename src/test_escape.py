@@ -5,11 +5,13 @@ import ast,html,json,os,re,shutil,subprocess,sys,tempfile,glob as _g
 from html.parser import HTMLParser
 D=os.path.dirname(os.path.abspath(__file__))
 src=open(os.path.join(D,'generate.py'),encoding='utf-8').read()
-ns={'re':re,'e':html.escape,'json':json}
+sys.path.insert(0,D)
+from redact import redact,private_url
+ns={'re':re,'_e0':html.escape,'json':json,'redact':redact,'private_url':private_url}
 for n in ast.parse(src).body:
-    if isinstance(n,ast.FunctionDef) and n.name in ('lnk','safe_url','jsafe','is_en','excerpt','clean1'):
+    if isinstance(n,ast.FunctionDef) and n.name in ('e','_rd','lnk','safe_url','jsafe','is_en','excerpt','clean1'):
         exec(compile(ast.Module([n],[]),'generate.py','exec'),ns)
-lnk,safe_url,jsafe,is_en,excerpt,clean1=[ns[k] for k in ('lnk','safe_url','jsafe','is_en','excerpt','clean1')]
+e,lnk,safe_url,jsafe,is_en,excerpt,clean1=[ns[k] for k in ('e','lnk','safe_url','jsafe','is_en','excerpt','clean1')]
 class A(HTMLParser):
     def __init__(s): super().__init__(); s.tags=[]
     def handle_starttag(s,t,a): s.tags.append((t,dict(a)))
@@ -34,6 +36,18 @@ long='Sentence one is here. '*30
 check('excerpt <= n+3',len(excerpt(long,220))<=223); check('excerpt keeps short text',excerpt('hi https://t.co/abc',220)=='hi')
 check('excerpt no half URL',not re.search(r'https?://\S*…',excerpt('a '*100+'https://example.com/very/long/path/'+'x'*200,220)) or True)
 check('clean1 strips urls',clean1('x https://a.com y')=='x y')
+# ---- 隐私脱敏（邮箱 / 手机号 / 微信号）与内网地址 ----
+for t,bad in [('contact me: john.doe+x@example.co.uk now','john.doe'),('邮箱 foo_bar@sub.domain.com','foo_bar@'),('手机 13812345678 联系','13812345678'),('tel:+86 138-1234-5678','1234-5678'),('VX: abc_123-x','abc_123'),('vx：Abcdef123','Abcdef123'),('微信: wxid_abc123','wxid_abc123'),('加微信 abcd1234 咨询','abcd1234'),('WeChat: my_wechat_id','my_wechat_id')]:
+    o=redact(t); check('redact hides: '+t[:30], bad not in o and '已隐藏' in o, o)
+    check('e() redacts: '+t[:30], bad not in e(t))
+for t in ['Model 12345678901234 tokens','版本 v2.1.3 发布了 20260101','@elonmusk and @sama','order #1234567890 shipped','1,000,000 users','在 10 月 17 日']:
+    check('redact leaves normal text: '+t[:30], redact(t)==t, redact(t))
+check('redact handles non-str', redact('')=='' and redact(5)=='5')
+for u in ['http://192.168.1.1/admin','https://10.0.0.5:8080/x','http://172.16.0.1/','http://172.31.255.255/','http://127.0.0.1:3000','http://localhost:8000','http://0.0.0.0/','http://8.8.8.8/dns','http://2130706433/','http://0x7f.1/','http://[::1]/','http://printer.local/','http://nas.lan/x','http://svc.internal/','http://169.254.169.254/latest/meta-data/']:
+    check('private url not linked: '+u, 'href' not in lnk('see '+u+' ok'), lnk(u))
+    check('private url safe_url -> #: '+u, safe_url(u)=='#')
+for u in ['https://example.com/a','https://x.com/elonmusk/status/123','http://172.32.0.1.example.com/','https://github.com/88daxiong/xhot']:
+    check('public url still linked: '+u, 'href="' in lnk('see '+u) and safe_url(u)!='#')
 # ---- 端到端：恶意 daily + weekly JSON ----
 PAY='"\'><img src=x onerror=alert(1)><script>alert(2)</script><svg onload=alert(3)> https://a.com/"onmouseover="alert(4) javascript:alert(5)'
 def build(out,dd,wd):

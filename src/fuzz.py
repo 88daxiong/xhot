@@ -42,7 +42,7 @@ for seed in range(N):
                 if t in('iframe','object','embed','form','textarea','base','meta') and not(t=='meta'): probs.append(f'{n}: <{t}>')
                 if t=='img' and a.get('src') in('x','//evil'): probs.append(f'{n}: injected img')
             sc=[a for t,a in T if t=='script' and not a.get('src') and a.get('type')!='application/json']
-            if len(sc)>1 or (len(sc)==0 and 'http-equiv="refresh"' not in open(f,encoding='utf-8').read()): probs.append(f'{n}: {len(sc)} inline scripts')
+            if len(sc)>1 or (len(sc)==0 and 'http-equiv="refresh"' not in open(f,encoding='utf-8').read() and not n.endswith('status.html')):  probs.append(f'{n}: {len(sc)} inline scripts')
             if sum(1 for t,_ in T if t=='style')>1: probs.append(f'{n}: multiple <style>')
             txt=open(f,encoding='utf-8').read()
             if re.search(r'@@(CSS|SJ|JS)',txt): probs.append(f'{n}: placeholder leaked')

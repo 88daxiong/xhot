@@ -9,8 +9,9 @@ import os,sys,glob,json,re,datetime,hashlib,shutil,math,html as _h,base64,io,sta
 D=os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0,D); os.chdir(D)
 from xhot_data import *
 import langf
+from redact import redact,private_url
 _e0=e
-def e(t): return _e0(t).replace('@@','&#64;&#64;')   # 内容里的 @@ 不能被当成构建占位符
+def e(t): return _e0(redact(t)).replace('@@','&#64;&#64;')   # 内容里的 @@ 不能被当成构建占位符
 OUT=sys.argv[1] if len(sys.argv)>1 else os.path.join(D,'site')
 TEXT_MODE=os.environ.get('XHOT_TEXT_MODE','excerpt')   # excerpt（默认）| full（用户日后批准才改）
 EXC,EXCH=(220,320) if TEXT_MODE=='excerpt' else (4000,8000)
@@ -64,6 +65,9 @@ for d in DOMS:
             s=series(u); name=s[-1][2] if s else (PROF.get(u,{}).get('name') or u)
             ACC[u]=dict(u=u,name=name,H=handle_case(u),f=s[-1][1] if s else 0,d=(s[-1][1]-s[-2][1]) if len(s)>1 else None,dom=d,doms=[d],g=g)
 NT=db.execute('select count(*) from tweets').fetchone()[0]
+def _fz_of(t):
+    try: return datetime.datetime.fromisoformat(t).astimezone(datetime.timezone.utc).strftime('%Y-%m-%dT%H:%M:%S')
+    except Exception: return '0'
 def heat(r): return r[4]+2*r[5]+3*r[7]+r[6]+(r[9] or 0)
 WEEK=(NOW-datetime.timedelta(days=7)).astimezone(datetime.timezone.utc).strftime('%Y-%m-%dT%H:%M:%S')
 def jdt(s): return dt(s).astimezone(TZ).strftime('%m-%d %H:%M')
@@ -72,8 +76,8 @@ def fullt(s): return dt(s).astimezone(TZ).strftime('%Y-%m-%d %H:%M')
 def safe_url(u):
     """只保留 http(s) 链接，其它（javascript:/data: 等）一律替换成 '#'；结果已转义"""
     u=str(u or '').strip()
-    return e(u) if re.match(r'(?i)https?://',u) else '#'
-def lnk(t): return re.sub(r'https?://[^\s<&"\']+',lambda m:f'<a href="{m.group(0)}" target="_blank" rel="noopener noreferrer">{re.sub("^https?://","",m.group(0))}</a>',e(t))
+    return e(u) if re.match(r'(?i)https?://',u) and not private_url(u) else '#'
+def lnk(t): return re.sub(r'https?://[^\s<&"\']+',lambda m:m.group(0) if private_url(m.group(0)) else f'<a href="{m.group(0)}" target="_blank" rel="noopener noreferrer">{re.sub("^https?://","",m.group(0))}</a>',e(t))
 def isw(t): return t>=WEEK
 WD='一二三四五六日'
 def dkey(s): return dt(s).strftime('%Y-%m-%d')
@@ -96,10 +100,15 @@ def withdays(rows,fn):
         if k!=last: out.append(dsep(k)); last=k
         out.append(fn(r))
 
-def jdump(o): return json.dumps(o,ensure_ascii=False,separators=(',',':'))  # 独立 .json 文件用（不嵌入 HTML）
+def _rd(o):
+    if isinstance(o,str): return redact(o)
+    if isinstance(o,list): return [_rd(x) for x in o]
+    if isinstance(o,dict): return {k:_rd(v) for k,v in o.items()}
+    return o
+def jdump(o): return json.dumps(_rd(o),ensure_ascii=False,separators=(',',':'))  # 独立 .json 文件用（不嵌入 HTML）
 def jsafe(o):
     """嵌入 <script type=application/json> 的 JSON：转义 < > & 与 U+2028/2029，防止 </script>、<!-- 等打断解析"""
-    return (json.dumps(o,ensure_ascii=False,separators=(',',':')).replace('<','\\u003c').replace('>','\\u003e')
+    return (json.dumps(_rd(o),ensure_ascii=False,separators=(',',':')).replace('<','\\u003c').replace('>','\\u003e')
             .replace('&','\\u0026').replace('\u2028','\\u2028').replace('\u2029','\\u2029').replace('@@','\\u0040\\u0040'))
 
 def tools(title,mid='',right='',info='',h='h1'):
@@ -138,7 +147,9 @@ FRESH=dict(tweets=datetime.datetime.fromisoformat(_tw).astimezone(TZ) if _tw els
 # 「x 小时前 / 数据是否过期」全部交给前端按真实当前时间判断。
 _fv=[v for v in FRESH.values() if v]
 if _fv: NOW=max(_fv)
-WEEK=(NOW-datetime.timedelta(days=7)).astimezone(datetime.timezone.utc).strftime('%Y-%m-%dT%H:%M:%S')
+FULLNOW=max([FRESH[k] for k in ('followers','counts','news') if FRESH.get(k)] or [NOW])   # 最近一次「完整刷新」（账号资料/粉丝快照）的时间：写进页面的时间戳都用它，轻量刷新不会改写全站页面
+_FZ=FULLNOW.astimezone(datetime.timezone.utc).strftime('%Y-%m-%dT%H:%M:%S')
+WEEK=(FULLNOW-datetime.timedelta(days=7)).astimezone(datetime.timezone.utc).strftime('%Y-%m-%dT%H:%M:%S')
 FRL={'tweets':'推文','followers':'粉丝','news':'X 新闻','aihot':'AIHOT','gh':'GitHub','counts':'话题计数'}
 PAGEF={'today':['tweets','followers','counts'],'dom':['tweets'],'ppl':['followers','tweets'],'news':['aihot','news'],'trends':['counts','gh'],'trend':['counts','gh'],'':['tweets','followers']}
 def _cnt(lab,key='data'):
@@ -154,13 +165,14 @@ def health():
         t=FRESH.get(k); age=(NOW-t).total_seconds()/3600 if t else 999
         stt='ok' if age<=lim else ('warn' if age<=48 else 'bad'); bad+=stt!='ok'
         out+=f'<tr class="{stt}"><td><i></i>{lab}</td><td>{_ts(t)}</td><td>{('—' if not t else '<time class="tm" datetime="'+Zs(t)+'Z"><span class="rl"></span></time>')}</td><td>{c}</td></tr>'
-    return bad,f'<table class="hs"><thead><tr><th>数据源</th><th>最近抓取</th><th>距今</th><th>规模</th></tr></thead><tbody>{out}</tbody></table><p class="hsn">刷新计划：每天 1 次（北京时间 07:58）。超过 26 小时标黄、超过 48 小时标红。数据抓取于 {NOW.strftime("%m-%d %H:%M")}。</p>'
+    return bad,f'<table class="hs"><thead><tr><th>数据源</th><th>最近抓取</th><th>距今</th><th>规模</th></tr></thead><tbody>{out}</tbody></table><p class="hsn">刷新计划：每天 08:00 完整刷新；14:00、20:00、次日 02:00 轻量刷新（只更新约 60 个最热账号的新帖，其余数据源仍按天更新）。超过 26 小时标黄、超过 48 小时标红。数据抓取于 {NOW.strftime("%m-%d %H:%M")}。</p>'
 def fresh(cur):
     ks=PAGEF.get(cur,['tweets']); bad,tbl=health()
     ts=[FRESH[k] for k in ks if FRESH.get(k)]; old=min(ts) if ts else None; age=(NOW-old).total_seconds()/3600 if old else 99
     cls='ok'   # 过期颜色由前端按真实时间改（data-t）
     lab=f'数据 {_ts(old)}' if old else '数据 —'
-    return f'<details class="fr {cls}"{(" data-t=\""+Zs(old)+"Z\"") if old else ""}><summary title="点击查看各数据源状态"><i></i>{lab}{f"<b>{bad} 项待更新</b>" if bad else ""}</summary><div class="frp"><h3>数据健康</h3>{tbl}</div></details>'
+    put('status.html',tbl)   # 数据健康表放在独立片段里，点开才加载：任何一次刷新都不用改写全站每一页
+    return f'<details class="fr {cls}"{(" data-t=\""+Zs(old)+"Z\"") if old else ""}><summary title="点击查看各数据源状态"><i></i>{lab}{f"<b>{bad} 项待更新</b>" if bad else ""}</summary><div class="frp"><h3>数据健康</h3><div class="hsl" data-src="assets/status.html">正在加载…</div></div></details>'
 
 # ======================= v15 新增：评分 / 标签 / 摘录 / 帖子表 =======================
 import statistics
@@ -213,24 +225,28 @@ for u,a in ACC.items():
     uid=U2ID.get(u)
     if not uid: continue
     rows=[]
-    for r in db.execute('select id,created_at,text,likes,rts,replies,quotes,views,bm,lang from tweets where author_id=? order by created_at desc',(uid,)):
+    for r in db.execute('select id,created_at,text,likes,rts,replies,quotes,views,bm,lang,fetched_at from tweets where author_id=? order by created_at desc',(uid,)):
         if str(r[0]) in TAKEDOWN or u.lower() in TAKEDOWN: continue
         t=_h.unescape(r[2] or '')
         if not langf.ok(t,r[9]): continue
         ex=excerpt(t,EXC)
         if len(re.sub(r'https?://\S+|\s','',t))<4: continue    # 纯链接/媒体帖不进榜
-        rows.append(dict(id=r[0],u=u,ts=r[1],t=t,ex=ex,like=r[3],rt=r[4],reply=r[5],quote=r[6],view=r[7],bm=r[8] or 0,heat=r[3]+2*r[4]+3*r[6]+r[5]+(r[8] or 0),en=is_en(t),tags=tags_of(t)))
-    base=statistics.median([x['heat'] for x in rows[:30]]) if len(rows)>=5 else 50
+        rows.append(dict(fa=_fz_of(r[10]),id=r[0],u=u,ts=r[1],t=t,ex=ex,like=r[3],rt=r[4],reply=r[5],quote=r[6],view=r[7],bm=r[8] or 0,heat=r[3]+2*r[4]+3*r[6]+r[5]+(r[8] or 0),en=is_en(t),tags=tags_of(t)))
+    # 基线冻结在最近一次完整刷新：中位数只看 FULLNOW 之前的最近 30 条。完整刷新时与旧算法完全一致（FULLNOW=NOW）；
+    _bl=[y['heat'] for y in rows if y['fa']<=_FZ][:30]   # 以「入库时间」判断是否属于上次完整刷新   # 轻量刷新只加新帖、不改旧帖，旧帖得分/旧分片/旧页面保持字节不变
+    base=statistics.median(_bl) if len(_bl)>=5 else 50
     for x in rows:
         # 重要度 0-100：绝对热度（对数）+ 相对本人常态（对数比，限幅），规则可复现；日报由流程撰写者做最终复核（pin/hide/必读）
         s=6*math.log1p(x['heat'])+10*max(-1,min(2.5,math.log((x['heat']+20)/(base+20))))
         x['score']=int(max(0,min(100,round(s)))); POSTS.append(x); PBY[x['id']]=x
-POSTS.sort(key=lambda p:-p['score'])
+POSTS.sort(key=lambda p:(-p['score'],p['ts'],p['id']))   # 同分用时间、id 定序：新增帖子不会让同分旧帖换位置（分片/页面保持字节稳定）
 def pdom(p): return ACC[p['u']]['dom']
 def Zs(t): return t.astimezone(datetime.timezone.utc).strftime('%Y-%m-%dT%H:%M:%S')
 def win(k):
     end=datetime.datetime.strptime(k+' 09:00','%Y-%m-%d %H:%M').replace(tzinfo=TZ); end=min(end,NOW)
-    return Zs(end-datetime.timedelta(hours=25)),Zs(end)
+    st=end-datetime.timedelta(hours=25)
+    if DAYS and k==DAYS[-1]['date'] and NOW>end: end=NOW   # 最新一天：窗口末端滚动到最近一次抓取（轻量刷新的新帖会进今日 Top30），起点不动
+    return Zs(st),Zs(end)
 def inwin(k): a,b=win(k); return [p for p in POSTS if a<=p['ts'][:19]<b]
 def rank(rows,n,per=2,hide=(),pin=()):
     out=[];cnt={};seen=set()
@@ -278,7 +294,7 @@ def page(title,body,cur,pref='',head='',mods=(),desc='XHOT：每天 10 分钟，
       f'<button class="kb" type="button" data-kp aria-haspopup="dialog" aria-label="搜索（快捷键 ⌘K 或 /）"><i aria-hidden="true">⌕</i><span>搜索</span><kbd>⌘K</kbd></button>'
       f'<button class="hxb" type="button" aria-expanded="false" aria-controls="hx" aria-label="设置：主题、密度、数据状态">⚙</button><div class="hx" id="hx">{fresh(cur)}'
       f'<button class="tgb" type="button" data-density aria-pressed="false" title="切换信息密度">紧凑</button>{THEME}</div></div></header>'
-      f'<main id="main" class="wrap">{body}<footer class="ft"><p>XHOT 是独立的个人项目，与 X Corp.、AIHOT、GitHub 无隶属或背书关系。帖子版权归原作者；站内只有短摘录，全文请点「在 X 打开」。中文要点与译文由 AI 自动整理，仅供参考，以原文为准。</p><p><a href="{pref}about.html">关于 · 数据来源 · 免责声明</a> · <a href="https://github.com/88daxiong/xhot/issues" target="_blank" rel="noopener noreferrer">反馈 / 撤下请求（GitHub Issues）</a> · 数据抓取于 {NOW.strftime("%Y-%m-%d %H:%M")} 北京时间</p></footer></main></body></html>')
+      f'<main id="main" class="wrap">{body}<footer class="ft"><p>XHOT 是独立的个人项目，与 X Corp.、AIHOT、GitHub 无隶属或背书关系。帖子版权归原作者；站内只有短摘录，全文请点「在 X 打开」。中文要点与译文由 AI 自动整理，仅供参考，以原文为准。</p><p><a href="{pref}about.html">关于 · 数据来源 · 免责声明</a> · <a href="https://github.com/88daxiong/xhot/issues" target="_blank" rel="noopener noreferrer">反馈 / 撤下请求（GitHub Issues）</a> · 完整刷新于 {FULLNOW.strftime("%Y-%m-%d %H:%M")} 北京时间</p></footer></main></body></html>')
 PAGES={}
 def emit(rel,html): PAGES[rel]=html
 MET=lambda p:(f'<div class="met"><span title="点赞"><i aria-hidden="true">♥</i>{fmt(p["like"])}</span><span title="转发"><i aria-hidden="true">⇄</i>{fmt(p["rt"])}</span><span title="评论"><i aria-hidden="true">💬</i>{fmt(p["reply"])}</span><span title="浏览"><i aria-hidden="true">👁</i>{fmt(p["view"])}</span></div>')
@@ -392,7 +408,7 @@ def news():
     global NEWS
     N=news_items(); NEWS=N; c={k:sum(1 for n in N if n['s']==k) for k in 'hdsx'}
     TOP=ntop(N)
-    nbd=jdump([nbody(n) for n in N]); nbn=f'news.{H8(nbd)}.json'; put(nbn,nbd)
+    nbd=jdump([nbody(n) for n in N]); nbn=f'news.json?v={H8(nbd)}'; put('news.json',nbd)
     SL=(('h','AIHOT 热点'),('d','AIHOT 日报'),('s','AIHOT 精选'),('x','X 新闻 · 中文要点'))
     seg=('<div class="seg" role="group" aria-label="来源筛选"><button type="button" data-src="top" class="on" aria-pressed="true">⭐ 精选 '+str(len(TOP))+'</button>'
          '<button type="button" data-src="all" aria-pressed="false">全部 '+str(len(N))+'</button>'
@@ -464,7 +480,7 @@ def _dok(d):
         pid=str(h.get('post_id') or ''); pid=pid if re.fullmatch(r'\d{5,25}',pid) else ''
         p=PBY.get(pid)
         og=str(h.get('excerpt') or '') or (excerpt(str(h.get('text_orig') or ''),EXCH) if h.get('text_orig') else '') or (excerpt(p['t'],EXCH) if p else '')
-        likes=h.get('likes') if isinstance(h.get('likes'),int) else (p['like'] if p else None)
+        likes=p['like'] if (p and os.environ.get('XHOT_LIVE_LIKES')) else (h.get('likes') if isinstance(h.get('likes'),int) else (p['like'] if p else None))   # 轻量刷新：必读的点赞数取库里最新值（规则字段），其余 agent 撰写字段不动
         hl.append(dict(handle=h['handle'],name=str(h.get('name') or h['handle']),text=str(h.get('text_zh') or ''),pid=pid,
             url=str(h.get('url') or (xlink(h['handle'],pid) if pid else f"https://x.com/{h['handle']}")),likes=likes,orig=og[:EXCH+40],orig_zh=str(h.get('excerpt_zh') or '')[:EXCH*3],
             tags=[k for k in (h.get('tags') or tags_of(og)) if k in TAGL][:2]))
@@ -613,7 +629,7 @@ def feed_shards():
         if len(by[k])<8 or len(out)>=30: continue
         rows=sorted(by[k],key=lambda p:-p['score'])[:200]
         data=jdump([[p['id'],zts(p['ts']),p['ex'],p['like'],p['rt'],p['reply'],p['quote'],p['view'],p['heat'],p['score'],p['u'],','.join(p['tags']),1 if p['en'] else 0] for p in rows])
-        h=H8(data); put(f'{k}.{h}.json',data,os.path.join(OUT,'feed')); out.append([k,h,len(by[k])])
+        h=H8(data); put(f'{k}.json',data,os.path.join(OUT,'feed')); out.append([k,h,len(by[k])])   # 稳定文件名；内容哈希 h 只作 ?v= 缓存版本号，写进 search.json
     return out
 def all_page():
     rows=dom_posts('ai',7)+dom_posts('money',7)+dom_posts('growth',7)
@@ -663,9 +679,9 @@ def person(u):
     a=ACC[u]; pr=PROF.get(u,{}); H=a['H']
     ps=[p for p in POSTS if p['u']==u]; ps.sort(key=lambda p:p['ts'],reverse=True)
     rows=[[p['id'],zts(p['ts']),p['ex'],p['like'],p['rt'],p['reply'],p['quote'],p['view'],p['heat'],p['score'],','.join(p['tags']),1 if p['en'] else 0] for p in ps]
-    data=jdump(rows); jn=f'{u}.{H8(data)}.json'
-    write(f'p/{jn}',data)
-    c30=Zs(NOW-datetime.timedelta(days=30))
+    data=jdump(rows); jv=H8(data); jn=f'{u}.json?v={jv}'
+    write(f'p/{u}.json',data)
+    c30=Zs(FULLNOW-datetime.timedelta(days=30))
     hi=rank([p for p in ps if p['ts'][:19]>=c30],4,4)
     first=ps[:12]; pdays=sorted({dkey(p['ts']) for p in ps},reverse=True)
     dl='—' if a['d'] is None else f'{a["d"]:+,}'
@@ -681,7 +697,7 @@ def person(u):
         if p['ts'][:19]>=c30:
             for t in p['tags']: tc[t]=tc.get(t,0)+1
     tgl=''.join(f'<span class="tc">{e(TAGL[t])} <small>{n}</small></span>' for t,n in sorted(tc.items(),key=lambda z:-z[1])[:4]) or '<span class="mu">暂无标签</span>'
-    days14=[(NOW-datetime.timedelta(days=i)).strftime('%Y-%m-%d') for i in range(13,-1,-1)]
+    days14=[(FULLNOW-datetime.timedelta(days=i)).strftime('%Y-%m-%d') for i in range(13,-1,-1)]
     cnt14=[sum(1 for p in ps if dkey(p['ts'])==x) for x in days14]
     avg=int(sum(p['heat'] for p in ps[:30])/max(1,len(ps[:30])))
     glance=(f'<section class="glance" aria-label="一屏读懂"><div class="gl1"><h2>{wkn}</h2><ul>{wkb}</ul></div><div class="gl2"><h2>近 30 天话题</h2><div class="tcs">{tgl}</div><h2 class="g2">近 14 天节奏</h2>{minimap(cnt14)}</div>'
@@ -712,7 +728,7 @@ def about_page():
       f'<li>如果你是原作者或相关方，希望撤下某条内容、头像或整个账号，请在 {L("https://github.com/88daxiong/xhot/issues","GitHub Issues")} 留言（只需给出帖子或账号链接，不要提供个人隐私信息），我们会尽快处理。</li>'
       '<li>站内不收集访客信息：偏好（主题、密度、已读标记）只保存在你自己的浏览器里。</li></ul></section>'
       '<section class="abt"><h2>免责声明</h2><p>XHOT 与 X Corp.、AIHOT、GitHub 没有隶属、授权或背书关系；X、Twitter、GitHub 及相关标识属于各自所有者。内容仅供信息参考，不构成投资、法律或其他专业建议；数据可能延迟或不完整，请以原始来源为准。站点托管在 GitHub Pages，并遵守其服务条款与可接受使用政策。</p></section>'
-      f'<p class="mu">代码与说明：{L("https://github.com/88daxiong/xhot","github.com/88daxiong/xhot")} · 当前数据抓取于 {NOW.strftime("%Y-%m-%d %H:%M")} 北京时间</p>')
+      f'<p class="mu">代码与说明：{L("https://github.com/88daxiong/xhot","github.com/88daxiong/xhot")} · 最近一次完整刷新于 {FULLNOW.strftime("%Y-%m-%d %H:%M")} 北京时间</p>')
     return page('关于 · 数据来源 · 免责声明 · XHOT',body,'about',desc='XHOT 的数据来源、AI 生成内容说明、撤下方式与免责声明。')
 # ======================= 生成全部页面 =======================
 open_ok=True
@@ -735,7 +751,7 @@ ZHN={'elonmusk':'马斯克 埃隆','sama':'奥特曼 山姆','satyanadella':'纳
 # 搜索索引（⌘K：人物 / 标签 / 话题 / 日期；帖子按需读 feed 分片）
 SJ=jdump({'p':[[u,a['H'],a['name'],AVS.get(u,''),hue(u),a['dom'],','.join(a['doms']),a['f'],a['d'] or 0,ZHN.get(u.lower(),'')] for u,a in ACC.items()],
           't':[[k,l,d] for k,l,d,_ in TAGS],'d':FEEDDAYS,'dy':[x['date'] for x in DAYS],'g':[[i,PBY[i]['u'],t,x['date']] for x in DAYS for i,t in x['gists'].items() if i in PBY],'tp':[[x['name'],d] for d in DOMS for x in DATA[d]['trends']]})
-SJN=f'search.{H8(SJ)}.json'; put(SJN,SJ)
+SJN='search.json'; put(SJN,SJ)   # 稳定文件名：不再把哈希写进每个页面（轻量刷新只改有变化的页面）；Pages 对所有文件都是 max-age=600，哈希对缓存没有实际收益
 # ---- JS / CSS ----
 JSN={}
 for m in ('core','news','feed'):

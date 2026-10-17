@@ -31,6 +31,7 @@ html[data-theme=dark] .seg button[data-dom].on,html[data-theme=dark] .dcd.on{bac
 footer.ft{font-size:13px;line-height:1.7;text-align:center;max-width:56em;margin:32px auto 0;padding-bottom:24px}footer.ft p{margin:0 0 6px}
 @keyframes xfade{from{opacity:0}to{opacity:1}}
 details[open]>.trx,.dh.open .dor,.nr:not(.sel) .nrb:not([hidden]){animation:xfade .16s ease-out}
+.trx{display:flow-root}   /* 展开区建立 BFC：overflow:clip 下 flex 换行的按钮曾被量成 0 高度而被裁掉（所有宽度） */
 @media(max-width:720px){.dha .cp{display:none}}
 @media(pointer:coarse){.lg{min-height:44px;display:inline-flex;align-items:center}.dcb{min-width:44px}.hh{min-height:44px;align-items:center}.more2{display:inline-block;padding:13px 8px;margin:-13px -8px;min-height:44px;box-sizing:border-box}}
 @media(max-height:500px){.top{position:static}}
@@ -52,6 +53,7 @@ html body{font-size:15px;line-height:1.55}
 :root{--fs:15px}
 main p,main li,.dsm,.trg,.pt,.pcs,.b3 li,.nrb,.wkg li{font-size:15px;line-height:1.55}
 .tinfo,.hint,.ns,.gd,.tn small,.who small,.tl30 .trh small,.pm,.mu{font-size:14px}
+.rps small{font-size:14px!important}   /* 全局 small{…!important} 会把资讯「各方报道」信源行压到 13px */
 .tag,.tc,.src,.hc,.th,.en,.tm,.rl,small,.met span,.lk{font-size:13px}
 .dsm{font-weight:500}
 .dsec p,.dsec li,.dn li b{font-size:15px}

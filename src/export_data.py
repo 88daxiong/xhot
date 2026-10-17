@@ -6,7 +6,7 @@ daily/*.json 去掉 text_orig、text_orig_zh（只保留 excerpt、excerpt_zh、
 import os,sys,json,sqlite3,glob,shutil
 D=os.path.dirname(os.path.abspath(__file__))
 OUT=sys.argv[1] if len(sys.argv)>1 else 'data'
-db=sqlite3.connect(os.path.join(D,'xhot.db')); W=json.load(open(os.path.join(D,'watchlist.json'),encoding='utf-8'))
+db=sqlite3.connect(os.environ.get('XHOT_DB') or os.path.join(D,'xhot.db')); W=json.load(open(os.path.join(D,'watchlist.json'),encoding='utf-8'))
 STRIP={'text_orig','text_orig_zh','text'}
 def dump(p,o):
     os.makedirs(os.path.dirname(p),exist_ok=True)
