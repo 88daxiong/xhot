@@ -2,6 +2,34 @@
   "handle": "dickiebush",
   "tweets": [
     {
+      "created_at": "2026-10-16T16:28:19.000Z",
+      "id": "2111132140058681746",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 3,
+        "impression": 8617,
+        "like": 79,
+        "quote": 0,
+        "reply": 34,
+        "retweet": 1
+      },
+      "url": "https://x.com/dickiebush/status/2111132140058681746"
+    },
+    {
+      "created_at": "2026-10-16T12:48:34.000Z",
+      "id": "2111076834892718171",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 4,
+        "impression": 5495,
+        "like": 17,
+        "quote": 2,
+        "reply": 7,
+        "retweet": 0
+      },
+      "url": "https://x.com/dickiebush/status/2111076834892718171"
+    },
+    {
       "created_at": "2026-10-14T16:32:21.000Z",
       "id": "2110408377801289985",
       "lang": "en",

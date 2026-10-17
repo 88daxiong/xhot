@@ -2,6 +2,48 @@
   "handle": "drjimfan",
   "tweets": [
     {
+      "created_at": "2026-10-16T16:15:03.000Z",
+      "id": "2111128799895269643",
+      "lang": "",
+      "metrics": {
+        "bookmark": 5,
+        "impression": 4704,
+        "like": 14,
+        "quote": 0,
+        "reply": 0,
+        "retweet": 0
+      },
+      "url": "https://x.com/DrJimFan/status/2111128799895269643"
+    },
+    {
+      "created_at": "2026-10-16T16:15:03.000Z",
+      "id": "2111128798645416006",
+      "lang": "",
+      "metrics": {
+        "bookmark": 23,
+        "impression": 5613,
+        "like": 32,
+        "quote": 0,
+        "reply": 7,
+        "retweet": 1
+      },
+      "url": "https://x.com/DrJimFan/status/2111128798645416006"
+    },
+    {
+      "created_at": "2026-10-16T16:15:02.000Z",
+      "id": "2111128797181567466",
+      "lang": "",
+      "metrics": {
+        "bookmark": 340,
+        "impression": 35131,
+        "like": 591,
+        "quote": 28,
+        "reply": 99,
+        "retweet": 80
+      },
+      "url": "https://x.com/DrJimFan/status/2111128797181567466"
+    },
+    {
       "created_at": "2026-10-07T14:36:33.000Z",
       "id": "2107842520390701212",
       "lang": "en",

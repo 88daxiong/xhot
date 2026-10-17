@@ -2,6 +2,20 @@
   "handle": "anthropicai",
   "tweets": [
     {
+      "created_at": "2026-10-16T17:47:58.000Z",
+      "id": "2111152183240511640",
+      "lang": "",
+      "metrics": {
+        "bookmark": 640,
+        "impression": 272185,
+        "like": 2920,
+        "quote": 164,
+        "reply": 259,
+        "retweet": 300
+      },
+      "url": "https://x.com/AnthropicAI/status/2111152183240511640"
+    },
+    {
       "created_at": "2026-10-15T21:31:45.000Z",
       "id": "2110846112152105136",
       "lang": "en",

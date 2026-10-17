@@ -2,6 +2,48 @@
   "handle": "cursor_ai",
   "tweets": [
     {
+      "created_at": "2026-10-16T20:34:03.000Z",
+      "id": "2111193980981665837",
+      "lang": "",
+      "metrics": {
+        "bookmark": 8,
+        "impression": 7124,
+        "like": 59,
+        "quote": 0,
+        "reply": 3,
+        "retweet": 1
+      },
+      "url": "https://x.com/cursor_ai/status/2111193980981665837"
+    },
+    {
+      "created_at": "2026-10-16T20:34:01.000Z",
+      "id": "2111193969355084011",
+      "lang": "",
+      "metrics": {
+        "bookmark": 9,
+        "impression": 8050,
+        "like": 74,
+        "quote": 0,
+        "reply": 9,
+        "retweet": 0
+      },
+      "url": "https://x.com/cursor_ai/status/2111193969355084011"
+    },
+    {
+      "created_at": "2026-10-16T20:33:58.000Z",
+      "id": "2111193957527146711",
+      "lang": "",
+      "metrics": {
+        "bookmark": 223,
+        "impression": 46237,
+        "like": 1134,
+        "quote": 34,
+        "reply": 108,
+        "retweet": 63
+      },
+      "url": "https://x.com/cursor_ai/status/2111193957527146711"
+    },
+    {
       "created_at": "2026-10-15T22:56:58.000Z",
       "id": "2110867556693430293",
       "lang": "en",

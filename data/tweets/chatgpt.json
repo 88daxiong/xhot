@@ -2,6 +2,20 @@
   "handle": "chatgpt",
   "tweets": [
     {
+      "created_at": "2026-10-16T21:37:44.000Z",
+      "id": "2111210005617889406",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 210,
+        "impression": 74823,
+        "like": 1719,
+        "quote": 42,
+        "reply": 177,
+        "retweet": 107
+      },
+      "url": "https://x.com/ChatGPT/status/2111210005617889406"
+    },
+    {
       "created_at": "2026-10-15T20:09:10.000Z",
       "id": "2110825327811580209",
       "lang": "",

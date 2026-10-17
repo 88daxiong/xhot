@@ -2,6 +2,20 @@
   "handle": "perplexity_ai",
   "tweets": [
     {
+      "created_at": "2026-10-16T15:03:25.000Z",
+      "id": "2111110772747321460",
+      "lang": "",
+      "metrics": {
+        "bookmark": 58,
+        "impression": 70184,
+        "like": 518,
+        "quote": 20,
+        "reply": 50,
+        "retweet": 33
+      },
+      "url": "https://x.com/perplexity_ai/status/2111110772747321460"
+    },
+    {
       "created_at": "2026-10-15T18:03:15.000Z",
       "id": "2110793639727358422",
       "lang": "en",

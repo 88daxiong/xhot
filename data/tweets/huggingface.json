@@ -2,6 +2,34 @@
   "handle": "huggingface",
   "tweets": [
     {
+      "created_at": "2026-10-16T14:00:32.000Z",
+      "id": "2111094948133216735",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 25,
+        "impression": 19335,
+        "like": 114,
+        "quote": 5,
+        "reply": 26,
+        "retweet": 14
+      },
+      "url": "https://x.com/huggingface/status/2111094948133216735"
+    },
+    {
+      "created_at": "2026-10-16T13:15:47.000Z",
+      "id": "2111083685961445625",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 13,
+        "impression": 21454,
+        "like": 82,
+        "quote": 6,
+        "reply": 24,
+        "retweet": 7
+      },
+      "url": "https://x.com/huggingface/status/2111083685961445625"
+    },
+    {
       "created_at": "2026-10-14T12:41:35.000Z",
       "id": "2110350304613114226",
       "lang": "en",

@@ -7,7 +7,8 @@ import sys,os,json,subprocess,sqlite3,datetime,html
 D=os.path.dirname(os.path.abspath(__file__)); os.chdir(D)
 TZ=datetime.timezone(datetime.timedelta(hours=8))
 day=sys.argv[1] if len(sys.argv)>1 else datetime.datetime.now(TZ).strftime('%Y-%m-%d')
-cand=json.loads(subprocess.run([sys.executable,'generate.py'],env=dict(os.environ,XHOT_DRAFT=day),capture_output=True,text=True,check=True).stdout)
+_o=subprocess.run([sys.executable,'generate.py'],env=dict(os.environ,XHOT_DRAFT=day),capture_output=True,text=True,check=True).stdout
+cand=json.loads(_o[_o.index('\n[')+1:] if not _o.lstrip().startswith('[') else _o)  # WARN 行也会打到 stdout，跳过
 old=json.loads(subprocess.run([sys.executable,'daily_topics.py',day],capture_output=True,text=True,check=True).stdout)
 db=sqlite3.connect('xhot.db')
 for c in cand:

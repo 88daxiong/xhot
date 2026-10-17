@@ -2,6 +2,90 @@
   "handle": "rauchg",
   "tweets": [
     {
+      "created_at": "2026-10-16T22:00:47.000Z",
+      "id": "2111215808781394329",
+      "lang": "",
+      "metrics": {
+        "bookmark": 53,
+        "impression": 8702,
+        "like": 122,
+        "quote": 0,
+        "reply": 41,
+        "retweet": 7
+      },
+      "url": "https://x.com/rauchg/status/2111215808781394329"
+    },
+    {
+      "created_at": "2026-10-16T19:33:48.000Z",
+      "id": "2111178816731382110",
+      "lang": "",
+      "metrics": {
+        "bookmark": 44,
+        "impression": 17075,
+        "like": 248,
+        "quote": 0,
+        "reply": 54,
+        "retweet": 11
+      },
+      "url": "https://x.com/rauchg/status/2111178816731382110"
+    },
+    {
+      "created_at": "2026-10-16T19:18:19.000Z",
+      "id": "2111174921678446595",
+      "lang": "",
+      "metrics": {
+        "bookmark": 118,
+        "impression": 30414,
+        "like": 613,
+        "quote": 4,
+        "reply": 38,
+        "retweet": 16
+      },
+      "url": "https://x.com/rauchg/status/2111174921678446595"
+    },
+    {
+      "created_at": "2026-10-16T04:52:29.000Z",
+      "id": "2110957024934858815",
+      "lang": "",
+      "metrics": {
+        "bookmark": 24,
+        "impression": 26098,
+        "like": 970,
+        "quote": 3,
+        "reply": 64,
+        "retweet": 11
+      },
+      "url": "https://x.com/rauchg/status/2110957024934858815"
+    },
+    {
+      "created_at": "2026-10-16T01:28:28.000Z",
+      "id": "2110905682610598310",
+      "lang": "",
+      "metrics": {
+        "bookmark": 35,
+        "impression": 72522,
+        "like": 2223,
+        "quote": 3,
+        "reply": 32,
+        "retweet": 36
+      },
+      "url": "https://x.com/rauchg/status/2110905682610598310"
+    },
+    {
+      "created_at": "2026-10-16T00:18:17.000Z",
+      "id": "2110888020572611010",
+      "lang": "",
+      "metrics": {
+        "bookmark": 30,
+        "impression": 51503,
+        "like": 1647,
+        "quote": 5,
+        "reply": 51,
+        "retweet": 15
+      },
+      "url": "https://x.com/rauchg/status/2110888020572611010"
+    },
+    {
       "created_at": "2026-10-15T22:49:59.000Z",
       "id": "2110865799791714339",
       "lang": "",

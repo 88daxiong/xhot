@@ -2,6 +2,76 @@
   "handle": "swyx",
   "tweets": [
     {
+      "created_at": "2026-10-16T23:58:13.000Z",
+      "id": "2111245359125266915",
+      "lang": "",
+      "metrics": {
+        "bookmark": 1,
+        "impression": 1480,
+        "like": 9,
+        "quote": 0,
+        "reply": 6,
+        "retweet": 0
+      },
+      "url": "https://x.com/swyx/status/2111245359125266915"
+    },
+    {
+      "created_at": "2026-10-16T22:46:31.000Z",
+      "id": "2111227317255319795",
+      "lang": "",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 1063,
+        "like": 2,
+        "quote": 0,
+        "reply": 0,
+        "retweet": 0
+      },
+      "url": "https://x.com/swyx/status/2111227317255319795"
+    },
+    {
+      "created_at": "2026-10-16T22:45:34.000Z",
+      "id": "2111227077924127056",
+      "lang": "",
+      "metrics": {
+        "bookmark": 5,
+        "impression": 2619,
+        "like": 16,
+        "quote": 0,
+        "reply": 11,
+        "retweet": 0
+      },
+      "url": "https://x.com/swyx/status/2111227077924127056"
+    },
+    {
+      "created_at": "2026-10-16T20:12:33.000Z",
+      "id": "2111188568974803248",
+      "lang": "",
+      "metrics": {
+        "bookmark": 9,
+        "impression": 3060,
+        "like": 9,
+        "quote": 1,
+        "reply": 4,
+        "retweet": 1
+      },
+      "url": "https://x.com/swyx/status/2111188568974803248"
+    },
+    {
+      "created_at": "2026-10-16T19:33:18.000Z",
+      "id": "2111178689530810878",
+      "lang": "",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 5577,
+        "like": 89,
+        "quote": 5,
+        "reply": 74,
+        "retweet": 3
+      },
+      "url": "https://x.com/swyx/status/2111178689530810878"
+    },
+    {
       "created_at": "2026-10-14T14:48:17.000Z",
       "id": "2110382190093836568",
       "lang": "",

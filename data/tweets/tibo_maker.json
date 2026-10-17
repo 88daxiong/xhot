@@ -2,6 +2,90 @@
   "handle": "tibo_maker",
   "tweets": [
     {
+      "created_at": "2026-10-16T16:57:20.000Z",
+      "id": "2111139441024565497",
+      "lang": "",
+      "metrics": {
+        "bookmark": 17,
+        "impression": 12377,
+        "like": 337,
+        "quote": 4,
+        "reply": 42,
+        "retweet": 10
+      },
+      "url": "https://x.com/tibo_maker/status/2111139441024565497"
+    },
+    {
+      "created_at": "2026-10-16T11:47:46.000Z",
+      "id": "2111061536277954682",
+      "lang": "",
+      "metrics": {
+        "bookmark": 416,
+        "impression": 17375,
+        "like": 229,
+        "quote": 3,
+        "reply": 65,
+        "retweet": 8
+      },
+      "url": "https://x.com/tibo_maker/status/2111061536277954682"
+    },
+    {
+      "created_at": "2026-10-16T11:00:20.000Z",
+      "id": "2111049597619442085",
+      "lang": "",
+      "metrics": {
+        "bookmark": 906,
+        "impression": 36520,
+        "like": 399,
+        "quote": 5,
+        "reply": 73,
+        "retweet": 20
+      },
+      "url": "https://x.com/tibo_maker/status/2111049597619442085"
+    },
+    {
+      "created_at": "2026-10-16T09:55:17.000Z",
+      "id": "2111033227913601186",
+      "lang": "",
+      "metrics": {
+        "bookmark": 55,
+        "impression": 23619,
+        "like": 56,
+        "quote": 1,
+        "reply": 9,
+        "retweet": 8
+      },
+      "url": "https://x.com/tibo_maker/status/2111033227913601186"
+    },
+    {
+      "created_at": "2026-10-16T09:35:10.000Z",
+      "id": "2111028164868599862",
+      "lang": "",
+      "metrics": {
+        "bookmark": 14,
+        "impression": 5672,
+        "like": 53,
+        "quote": 3,
+        "reply": 40,
+        "retweet": 7
+      },
+      "url": "https://x.com/tibo_maker/status/2111028164868599862"
+    },
+    {
+      "created_at": "2026-10-16T07:21:48.000Z",
+      "id": "2110994603281121630",
+      "lang": "",
+      "metrics": {
+        "bookmark": 22,
+        "impression": 6788,
+        "like": 70,
+        "quote": 2,
+        "reply": 39,
+        "retweet": 3
+      },
+      "url": "https://x.com/tibo_maker/status/2110994603281121630"
+    },
+    {
       "created_at": "2026-10-15T14:12:03.000Z",
       "id": "2110735457092768218",
       "lang": "",

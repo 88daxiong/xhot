@@ -1,0 +1,146 @@
+{
+  "changelog": [],
+  "date": "2026-10-17",
+  "followers_zh": "马斯克 +1.9 万、Tibo（@thsottiaux）+6.2k、Sam Altman +4.6k 涨粉最多；Satya Nadella −3.9k、CZ −2.9k、Paul Graham −2.3k 掉粉最多。",
+  "gists": {
+    "2110918113550307778": "Mollick：小幅准确度与判断力的提升在长任务中会累积，所以应让最强模型当调度者。",
+    "2110941306344345819": "Matthew Berman 吐槽新款保时捷「像在拉出一辆旧保时捷」，看过就忘不掉。",
+    "2110952580348047520": "吴说：Solana 基金会 10 月 16 日上海「Solana Accelerate China 2026」活动临时取消，原因未明。",
+    "2110956076988498404": "Ryan Carson 对一段内容惊叹「简直不敢相信这是真的」。",
+    "2111005194058179020": "英伟达扩大与梅赛德斯-奔驰合作，共同研发下一代辅助驾驶与自动驾驶系统。",
+    "2111049597619442085": "Tibo：若 2026 年重新赚第一个 1000 美元，不会做创业；八月仅分给创作者和联盟就付了 3.7 万美元。",
+    "2111056376763961665": "Paul Graham：投资人拒绝创始人的「蠢理由」，要么真蠢，要么只是不喜欢你而找借口，二者可并存。",
+    "2111056939841163336": "Mistral Large 4 在 Ulam 私有基准 STEMBench 的工程与天文学项目中表现出色。",
+    "2111058386959937970": "Levelsio 反讽：欧洲必须「放慢」前沿速度，我们前进得太快了。",
+    "2111061536277954682": "Tibo：学到可在推文里运行真正的网站，三天已做出 3 个小游戏。",
+    "2111079209733075333": "Tim Ferriss：如何在状态滑落之后重回正轨（播客链接）。",
+    "2111102706962092265": "Greg Isenberg：你和马斯克、扎克伯格、黄仁勋一天都是 24 小时，用同样的 AI 工具，现在是最好的创业时代。",
+    "2111110772747321460": "Perplexity：Gemini 4 Argon 刷新 WANDR 纪录，Pro 和 Max 用户已可使用。",
+    "2111122250820989217": "Peter Yang 联合 SpaceX AI 送一个月 X 订阅 Super 档免费码，回帖说明怎么组合使用即可抽取。",
+    "2111124769450135880": "Perplexity 的 Computer 集成 Reverse-Engineer-Anything 技能，并送最多 1 万点额度供逆向任意应用。",
+    "2111127991401247033": "DeepMind：四个 Gemini 4 Argon 智能体 27 小时从零通关 Minecraft，写了 2783 个程序、互相协作。",
+    "2111142070786441334": "Tim Ferriss：像专业人士一样谈判的成交策略（播客链接）。",
+    "2111142258867335430": "OpenAI 开发者：用 GPT-Live-1 做应用，可用提示词塑造声音，或选新的国际预设音色。",
+    "2111142856094265595": "Levelsio：像 2022 年追 AI 那样，现在忙着找剩下的护城河，因为 AI 公司会吞掉其余一切。",
+    "2111147479248855484": "Gemini 4 Argon 的 Canvas 可把复杂 PDF 变成可交互、带动画的网页应用。",
+    "2111171395170541911": "Ryan Holiday：推荐 5 本比 MBA 更有用的书。",
+    "2111192513851928844": "Huberman：成瘾是快乐来源不断收窄，「觉悟」则是不断扩展；问你对什么上瘾。",
+    "2111211411766399288": "OpenAI 开发者：工程师凌晨 3 点用 dot 排查值班事故，并开 Codex 线程在手机上继续推进。"
+  },
+  "hide": [
+    "2110993046104105344",
+    "2111065315610341881",
+    "2110956076988498404"
+  ],
+  "highlights": [
+    {
+      "excerpt": "Turns out the future does have flying cars",
+      "excerpt_zh": "原来未来真的有飞行汽车",
+      "handle": "elonmusk",
+      "likes": 726842,
+      "name": "Elon Musk",
+      "post_id": "2110913107094606330",
+      "tags": [
+        "product"
+      ],
+      "text_zh": "马斯克：「原来未来真的有飞行汽车」，配特斯拉新 Roadster 演示。",
+      "url": "https://x.com/elonmusk/status/2110913107094606330"
+    },
+    {
+      "excerpt": "Going forward, all advertising on 𝕏 will be subject to a reasonable esthetic standard.\n\nAdvertisers who post ads that are ugly, shrill, strident or overstate claims about their product will be barred from advertising.",
+      "excerpt_zh": "今后，𝕏 上的所有广告都将遵守合理的审美标准。\n\n发布丑陋、刺耳、聒噪或夸大产品宣传的广告的广告主，将被禁止投放广告。",
+      "handle": "elonmusk",
+      "likes": 144336,
+      "name": "Elon Musk",
+      "post_id": "2111131160348688395",
+      "tags": [
+        "policy"
+      ],
+      "text_zh": "马斯克宣布：𝕏 广告今后须符合「合理的审美标准」，丑陋、刺耳、夸大者禁投。",
+      "url": "https://x.com/elonmusk/status/2111131160348688395"
+    },
+    {
+      "excerpt": "Wow the new roadster looks quite amazing, good job @elonmusk",
+      "excerpt_zh": "哇，新 Roadster 看起来太棒了，干得漂亮 @elonmusk",
+      "handle": "sama",
+      "likes": 48209,
+      "name": "Sam Altman",
+      "post_id": "2111131677351432197",
+      "tags": [
+        "product"
+      ],
+      "text_zh": "奥特曼夸新 Roadster「看起来太棒了」，点名祝贺马斯克。",
+      "url": "https://x.com/sama/status/2111131677351432197"
+    },
+    {
+      "excerpt": "Damn cool...\n\nMust have good seat belts and coffee cup holders. 👍",
+      "excerpt_zh": "真酷……\n\n应该配有靠谱的安全带和杯架。👍",
+      "handle": "cz_binance",
+      "likes": 17299,
+      "name": "CZ 🔶 BNB",
+      "post_id": "2110946493536346548",
+      "tags": [],
+      "text_zh": "CZ 看完 Roadster 演示：「真酷」，并调侃要有靠谱安全带和杯架。",
+      "url": "https://x.com/cz_binance/status/2110946493536346548"
+    },
+    {
+      "excerpt": "Six projects from the last few weeks that caught our attention:\n\nA wildfire analysis prototype that maps the fire’s spread over time and tracks hot spots, made with Opus 5.5.",
+      "excerpt_zh": "过去几周里让我们眼前一亮的六个项目：\n\n一个野火分析原型，可按时间展示火势蔓延并追踪热点，使用 Opus 5.5 制作。",
+      "handle": "claudeai",
+      "likes": 13586,
+      "name": "Claude",
+      "post_id": "2111177834127601902",
+      "tags": [
+        "model",
+        "product"
+      ],
+      "text_zh": "Claude 官方盘点近期六个项目，首个是用 Opus 5.5 做的野火蔓延分析原型。",
+      "url": "https://x.com/claudeai/status/2111177834127601902"
+    },
+    {
+      "excerpt": "Either we are out of ideas or we are cooking. Time will tell",
+      "excerpt_zh": "要么我们没点子了，要么我们在憋大招。时间会证明。",
+      "handle": "thsottiaux",
+      "likes": 12432,
+      "name": "Tibo",
+      "post_id": "2110971985417441512",
+      "tags": [],
+      "text_zh": "Tibo（OpenAI）暗示有新东西：「要么没点子了，要么在憋大招」。",
+      "url": "https://x.com/thsottiaux/status/2110971985417441512"
+    },
+    {
+      "excerpt": "The back of the Navier-Stokes milestone shirt is the last line of the chain-of-thought from the solution:",
+      "excerpt_zh": "纳维-斯托克斯里程碑 T 恤的背面，印着该解法思维链的最后一行：",
+      "handle": "sama",
+      "likes": 7805,
+      "name": "Sam Altman",
+      "post_id": "2111139227761266699",
+      "tags": [
+        "research"
+      ],
+      "text_zh": "奥特曼晒 Navier-Stokes 里程碑 T 恤，背面印着解法思维链的最后一行。",
+      "url": "https://x.com/sama/status/2111139227761266699"
+    },
+    {
+      "excerpt": "GPT-6 Astra Pro in ChatGPT got an upgrade with faster responses and improved use of plugins and tools.\n\nAnd now, multiple agents can tackle different parts of a task in parallel. You can follow each agent’s progress and open completed tasks to review their work.",
+      "excerpt_zh": "ChatGPT 中的 GPT-6 Astra Pro 升级了：响应更快，对插件和工具的使用更好。\n\n现在多个智能体可以并行处理一项任务的不同部分。你可以跟踪每个智能体的进度，并打开已完成的任务查看成果。",
+      "handle": "OpenAI",
+      "likes": 5595,
+      "name": "OpenAI",
+      "post_id": "2111192259073094035",
+      "tags": [
+        "agent",
+        "product"
+      ],
+      "text_zh": "OpenAI：ChatGPT 的 GPT-6 Astra Pro 升级，多个智能体可并行处理同一任务。",
+      "url": "https://x.com/OpenAI/status/2111192259073094035"
+    }
+  ],
+  "pin": [],
+  "summary_zh": [
+    "特斯拉新 Roadster 发布，可空中翻转落地；马斯克单帖 72.7 万赞，奥特曼、CZ 跟着夸。",
+    "OpenAI GPT-6 Astra Pro 支持多智能体并行；Gemini 4 Argon 四智能体 27 小时通关 Minecraft。",
+    "Dan Koe 讨论量近翻倍（+126%）；涨粉马斯克 +1.9 万、Tibo +6.2k，Satya −3.9k。"
+  ],
+  "topics_zh": "Dan Koe 讨论量约为近期均值 2.3 倍（+126%）；GLM 智谱 +36%、MCP +17%、DeepSeek +15% 紧随其后；Gemini −25%、Opus 5.5 −15% 降温最多。"
+}
