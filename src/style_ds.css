@@ -53,3 +53,19 @@ html.nlock,html.nlock body{overflow:hidden}
 .gm{grid-template-columns:minmax(0,1fr)}.gm .gn{grid-row:1}.gm .gx{grid-column:1;grid-row:2;justify-self:start}.gm .gd{grid-row:3}
 .gn,.go{overflow-wrap:break-word}
 }
+/* 趋势页 · AI 开发工具：复用 .trw 展开行 + .gm/.gt 仓库排版 */
+.dts .sech{display:flex;flex-direction:column;gap:var(--s3);margin-bottom:var(--s3)}
+.dts .sech h2 small{display:block;margin-top:var(--s1);font-size:var(--t-cap);font-weight:400;color:var(--mu)}
+.dtl{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;column-gap:var(--s4)}
+.dtl .trw:nth-child(2){border-top:0}
+.dtl .trw summary{grid-template-columns:24px minmax(0,1fr) 84px;gap:var(--s3);padding:var(--rowp) var(--s3)}
+.dtl .gd{-webkit-line-clamp:2;font-size:var(--t-sm)}
+.dtl .gn{font-size:var(--t-md)}.dtl .go{font-weight:400;color:var(--mu)}
+.dtl .gx,.dtl .gt small{font-size:var(--t-cap)}.dtl .gt b{font-size:var(--t-md)}
+.dtg{display:flex;gap:var(--s1);flex-wrap:wrap;grid-column:1/-1}
+.dtl .trx{padding:0 var(--s3) var(--s4) 48px}
+.dtl .dtm{font-size:var(--t-sm);color:var(--mu);margin:0 0 var(--s3)}
+@media(max-width:1000px){.dtl{grid-template-columns:1fr}.dtl .trw:nth-child(2){border-top:1px solid var(--bd2)}}
+@media(max-width:720px){.dtl .trw summary{grid-template-columns:24px minmax(0,1fr) 64px;gap:var(--s2)}.dtl .trx{padding:0 var(--s3) var(--s4) var(--s3)}}
+:root{--dt-agent:#6d28d9;--dt-coding:#0369a1;--dt-mcp:#047857;--dt-infra:#b45309;--dt-ops:#be185d;--dt-fun:#b91c1c}
+html[data-theme=dark]{--dt-agent:#c4b5fd;--dt-coding:#7dd3fc;--dt-mcp:#6ee7b7;--dt-infra:#fcd34d;--dt-ops:#f9a8d4;--dt-fun:#fca5a5}

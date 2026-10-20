@@ -31,9 +31,10 @@ for f in sorted(glob.glob(S+'/*.html')+glob.glob(S+'/day/*.html')+glob.glob(S+'/
             if x.parent and 'seg' in (x.parent.get('class') or []): continue
             if x.name in('button','a'): continue
             if dom not in x['data-dom'].split(): bad(f,f'领域错配 {x["data-dom"]} 出现在 {dom}'); break
+    DEVTAGS={'agent','coding','mcp','infra','ops','fun'}   # 趋势页 AI 开发工具子标签
     for x in s.select('[data-tags]'):
         for t in x['data-tags'].split():
-            if t not in TAGS: bad(f,f'未知标签 {t}'); break
+            if t not in (DEVTAGS if 'dtw' in (x.get('class') or []) else TAGS): bad(f,f'未知标签 {t}'); break
 s=P(S+'/news.html')
 ti=[x.get_text(strip=True) for x in s.select('#nall .nt2')]
 print('news 条目',len(ti),'无中文标题',sum(1 for t in ti if not CJK.search(t)))

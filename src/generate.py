@@ -322,6 +322,53 @@ def minimap(vals,w=112,h=28):
 
 GH=GH0
 GHR=sorted([r for r in GH['repos'] if r['ai'] and langf.script_ok(r['desc'])],key=lambda r:-r['today'])[:20]
+# ---- AI 开发工具（devtools_fetch.py 抓取 + devtools_zh.json agent 撰写的中文/改标签/隐藏）----
+DTN={'agent':'Agent/Harness','coding':'编码代理','mcp':'MCP/插件','infra':'基础设施/沙箱','ops':'管理工具','fun':'好玩'}
+DTC={k:f'var(--dt-{k})' for k in DTN}   # 颜色令牌在 style_ds.css（浅/深色各一套，满足 4.5:1）
+def _devtools():
+    fs=sorted(glob.glob('raw/*_devtools.json'))
+    if not fs: return [],''
+    J=json.load(open(fs[-1],encoding='utf-8'))
+    try: Z=json.load(open('devtools_zh.json',encoding='utf-8'))
+    except Exception: Z={}
+    zr={k.lower():v for k,v in (Z.get('repos') or {}).items() if isinstance(v,dict)}; hid={x.lower() for x in Z.get('hide') or []}
+    out=[]
+    for r in J.get('repos',[]):
+        k=str(r.get('repo','')).lower()
+        if k in hid or not re.fullmatch(r'[a-z0-9_.-]+/[a-z0-9_.-]+',k): continue
+        z=zr.get(k,{}); tags=[t for t in (r.get('tags') or []) if t in DTN]
+        if z.get('tag') in DTN: tags=[z['tag']]+[t for t in tags if t!=z['tag']]
+        if not tags: continue
+        zh=str(z.get('zh') or '')[:60]
+        if not zh and not langf.script_ok(r.get('desc','')): continue
+        new=bool(r.get('created')); sc=int(r.get('today',0))*7+int(r.get('week',0))+(int(r.get('stars',0))/30 if new else 0)
+        out.append(dict(repo=r['repo'],url='https://github.com/'+r['repo'],tags=tags[:2],zh=zh,desc=str(r.get('desc',''))[:200],lang=str(r.get('lang',''))[:20],
+                        stars=int(r.get('stars',0)),today=int(r.get('today',0)),week=int(r.get('week',0)),created=str(r.get('created',''))[:10],
+                        topics=[str(t)[:30] for t in (r.get('topics') or [])][:6],sc=sc,hz=bool(zh)))
+    pick=[]
+    for t in DTN:   # 每个主标签取前 8，优先有中文一句话的
+        L=sorted([x for x in out if x['tags'][0]==t],key=lambda x:(-x['hz'],-x['sc']))[:8]
+        pick+=sorted(L,key=lambda x:-x['sc'])
+    return pick,str(J.get('_fetched_at',''))[:16].replace('T',' ')
+DEVT,DEVT_AT=_devtools()
+def devtools_sec():
+    if not DEVT: return ''
+    cnt={t:sum(1 for x in DEVT if t in x['tags']) for t in DTN}   # 与筛选一致：主/副标签都算
+    chips=('<div class="fchips" role="group" aria-label="子标签筛选"><button type="button" class="on" data-ftag="all" aria-pressed="true">全部<small>'+str(len(DEVT))+'</small></button>'
+           +''.join(f'<button type="button" data-ftag="{t}" aria-pressed="false">{e(n)}<small>{cnt[t]}</small></button>' for t,n in DTN.items() if cnt[t])+'</div>')
+    rows=''
+    for i,x in enumerate(DEVT,1):
+        own,nm=x['repo'].split('/',1)
+        tg=''.join(f'<span class="tag" style="--dc:{DTC[t]}">{e(DTN[t])}</span>' for t in x['tags'])
+        inc=(f'<b>+{x["today"]:,}</b><small>今日 ★</small>' if x['today'] else f'<b>+{x["week"]:,}</b><small>本周 ★</small>' if x['week'] else f'<b>{fmt(x["stars"])}</b><small>{e(x["created"][5:])} 新建</small>')
+        meta=((f'<i class=ld style=--h:{hue(x["lang"])}></i>'+e(x['lang'])) if x['lang'] else '')+f'<span>★ {fmt(x["stars"])}</span>'
+        ex=(f'<p class="pt">{e(x["desc"])}</p>' if x['desc'] else '')+'<p class="dtm mu">'+' · '.join(filter(None,[('话题 '+' '.join(e(t) for t in x['topics'])) if x['topics'] else '',f'创建 {e(x["created"])}' if x['created'] else '',f'今日 +{x["today"]:,} ★' if x['today'] else '',f'本周 +{x["week"]:,} ★' if x['week'] else '']))+'</p>'
+        ex+=f'<div class="act"><a class="btn" href="{safe_url(x["url"])}" target="_blank" rel="noopener noreferrer">在 GitHub 打开 ↗</a></div>'
+        rows+=(f'<li class="trw fi dtw" style="--dc:{DTC[x["tags"][0]]}" data-tags="{" ".join(x["tags"])}"><details><summary><span class="rk">{i}</span>'
+               f'<span class="gm"><b class="gn"><span class="go">{e(own)}/</span>{e(nm)}</b><span class="gx">{meta}</span><span class="gd">{e(x["zh"] or x["desc"])}</span><span class="dtg">{tg}</span></span>'
+               f'<span class="gt">{inc}</span></summary><div class="trx">{ex}</div></details></li>')
+    return (f'<section class="panel big dts" id="devtools" style="--dc:var(--dt-agent)"><div class="sech"><h2>AI 开发工具<small class="mu">开源 Agent / 编码代理 / MCP / 沙箱 · GitHub Trending 日榜+周榜 与近 45 天新项目 · {e(DEVT_AT)} 更新</small></h2>{chips}</div>'
+            f'<ol class="dtl" data-fl>{rows}</ol><p class="empty" hidden>这个子标签暂时没有项目。</p></section>')
 def plain(t,n=96):
     t=re.sub(r'https?://\S+','',t or ''); t=re.sub(r'[#*>`_]+','',t); t=re.sub(r'\s+',' ',t).strip()
     return short(t,n)
@@ -454,8 +501,8 @@ def trends():
     up=[z for z in T+M if z[0]['g']>=0]; top=max(T+M,key=lambda z:z[0]['g']) if T+M else None; bot=min(T+M,key=lambda z:z[0]['g']) if T+M else None
     gtop=GHR[0] if GHR else None
     kp_=[('追踪话题',f'{len(T+M)}',f'{len(up)} 个上升 · {len(T+M)-len(up)} 个下降'),
-         ('涨最快',e(top[0]['name']) if top else '—',f'<b class="up">{top[0]["g"]:+.0f}%</b> · {DN[top[1]]}' if top else ''),
-         ('跌最多',e(bot[0]['name']) if bot else '—',f'<b class="dn">{bot[0]["g"]:+.0f}%</b> · {DN[bot[1]]}' if bot else ''),
+         ('涨最快',e(top[0]['name'].split('·')[0]) if top else '—',f'<b class="up">{top[0]["g"]:+.0f}%</b> · {DN[top[1]]}' if top else ''),
+         ('跌最多',e(bot[0]['name'].split('·')[0]) if bot else '—',f'<b class="dn">{bot[0]["g"]:+.0f}%</b> · {DN[bot[1]]}' if bot else ''),
          ('GitHub 今日最热',e(gtop['repo'].split('/')[-1]) if gtop else '—',f'+{gtop["today"]:,} ★ 今日' if gtop else '')]
     kpis='<div class="kpis">'+''.join(f'<div class="kpi"><span class="kl">{a}</span><b class="kv">{b}</b><span class="ks">{c}</span></div>' for a,b,c in kp_)+'</div>'
     gmx=max([r['today'] for r in GHR[:12]] or [1])
@@ -465,7 +512,7 @@ def trends():
           f'<div class="tcols"><div class="tstack"><section class="panel big" style="--dc:{DC["ai"]}"><h2><i class="dot"></i>AI 话题涨跌<small>{len(T)} 个 · 按涨幅排序</small></h2>{TH}<ul class="list tl">{trows(T,mx)}</ul></section>'
           f'<section class="panel" style="--dc:{DC["money"]}"><h2><i class="dot" style="--dc:{DC["money"]}"></i><i class="dot" style="--dc:{DC["growth"]}"></i>搞钱 + 个人成长<small>{len(M)} 个话题</small></h2>{TH}<ul class="list tl">{trows(M,mx,True)}</ul></section></div>'
           f'<section class="panel big" style="--dc:#0ea5e9"><h2>GitHub 技术趋势<small>AI / 开发工具 · 今日新增 ★（条长按平方根缩放）</small></h2><ul class="list gl">{gl}</ul></section></div>'
-          '')
+          +devtools_sec())
     return page('XHOT · 趋势',body,'trends.html')
 # ---- 个人页 ----
 

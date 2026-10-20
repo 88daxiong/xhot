@@ -56,7 +56,7 @@ document.addEventListener('click',function(ev){var t=ev.target;
 var b=t.closest('.cp');if(b){copy(b,ctext(b.closest('.post,.dh,.trw')));markRead(b);return}
 var ol=t.closest('[data-ol]');if(ol){var q=ol.closest('.dh'),v=ol.dataset.ol;$$('[data-ol]',q).forEach(function(z){var on=z===ol;z.classList.toggle('on',on);z.setAttribute('aria-pressed',on)});$('.ptz',q).hidden=v!=='zh';$('.pto',q).hidden=v!=='en';var cb=$('.cp',q);if(cb){cb.dataset.l=v==='zh'?'复制译文':'复制摘录';cb.textContent=cb.dataset.l}return}
 var x=t.closest('.ex');if(x){var p=x.closest('.dh'),o=p.classList.toggle('open');x.textContent=o?'收起':'展开';x.setAttribute('aria-expanded',o);var dr=$('.dor',p);if(dr)xp(dr,o);markRead(x);return}
-var sm=t.closest('.tl30 summary');if(sm){var d=sm.parentNode,xx=$('.trx',d);if(xx&&d.tagName==='DETAILS'&&!matchMedia('(prefers-reduced-motion:reduce)').matches){ev.preventDefault();if(d.open){xp(xx,false,function(){d.open=false;xx.hidden=false})}else{d.open=true;xx.hidden=false;xp(xx,true)}markRead(sm);return}}
+var sm=t.closest('.tl30 summary,.dtl summary');if(sm){var d=sm.parentNode,xx=$('.trx',d);if(xx&&d.tagName==='DETAILS'&&!matchMedia('(prefers-reduced-motion:reduce)').matches){ev.preventDefault();if(d.open){xp(xx,false,function(){d.open=false;xx.hidden=false})}else{d.open=true;xx.hidden=false;xp(xx,true)}markRead(sm);return}}
 if(t.closest('.op,summary,.who a,.hh,.wkh'))markRead(t)});
 /* ===== 日期控件：‹ [日期 ▾] ›；state = 页内筛选（空 = 「全部」文案由 data-all 指定），nav = 跳转 ===== */
 var DRE=/^\d{4}-\d\d-\d\d$/;
