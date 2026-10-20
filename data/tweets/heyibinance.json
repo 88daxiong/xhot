@@ -2,6 +2,20 @@
   "handle": "heyibinance",
   "tweets": [
     {
+      "created_at": "2026-10-20T15:17:25.000Z",
+      "id": "2112563848020689152",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 34,
+        "impression": 66467,
+        "like": 576,
+        "quote": 64,
+        "reply": 262,
+        "retweet": 55
+      },
+      "url": "https://x.com/heyibinance/status/2112563848020689152"
+    },
+    {
       "created_at": "2026-10-19T12:44:29.000Z",
       "id": "2112162974559527089",
       "lang": "",

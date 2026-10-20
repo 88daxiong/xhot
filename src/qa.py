@@ -3,6 +3,7 @@ import sys,os,re,glob,json,collections
 from bs4 import BeautifulSoup
 S=sys.argv[1] if len(sys.argv)>1 else os.path.join(os.path.dirname(os.path.abspath(__file__)),'site')
 CJK=re.compile('[\u4e00-\u9fff]'); issues=[]
+LIGHT=os.environ.get('XHOT_QA_LIGHT')=='1'
 def P(f): return BeautifulSoup(open(f,encoding='utf-8').read(),'html.parser')
 def bad(f,m): issues.append(os.path.relpath(f,S)+' '+m)
 TAGS={'model','agent','code','oss','product','research','chips','policy','startup','creator','funding','indie','habit','write','career'}
@@ -21,7 +22,10 @@ for f in sorted(glob.glob(S+'/*.html')+glob.glob(S+'/day/*.html')+glob.glob(S+'/
         for sel,nm in (('.b3 li','三句话'),('.dsm','必读要点'),('.trg','Top30 一句话')):
             for x in s.select(sel):
                 t=x.get_text(' ',strip=True)
-                if t and not CJK.search(t): bad(f,f'{nm} 无中文：{t[:50]}')
+                if t and not CJK.search(t):
+                    # 轻量刷新（light_run.py build 设 XHOT_QA_LIGHT=1）允许 Top30 新入榜英文帖用「英文摘录 + EN 标记」兜底；08:00 完整刷新仍严格
+                    if LIGHT and nm=='Top30 一句话' and x.select_one('i.en'): continue
+                    bad(f,f'{nm} 无中文：{t[:50]}')
         txs=[re.sub(r'\W','',x.get_text()) [:40] for x in s.select('.dsm,.trg')]
         d=[t for t,c in collections.Counter(txs).items() if c>1 and t]
         if d: bad(f,f'重复要点 {d[:2]}')

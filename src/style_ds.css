@@ -125,3 +125,17 @@ html[data-theme=dark]{--dt-agent:#c4b5fd;--dt-coding:#7dd3fc;--dt-mcp:#6ee7b7;--
 .post.open .pt.clp{max-height:none;-webkit-mask-image:none;mask-image:none;cursor:auto}
 .post .tcs,.post footer{position:relative;z-index:1}
 html[data-theme=dark] .dtabs button.on,html[data-theme=dark] .dtabs button.on small,html[data-theme=dark] .dpg button.on,html[data-theme=dark] .dca .dgh{color:#0f0c26}
+/* 一键复制（链接 / git clone / 仓库名）：图标按钮与现有 .btn 同高同边框；纯 CSS 图标（mask），成功后切成对勾并浮出「已复制」 */
+.cpy{position:relative;display:inline-flex;align-items:center;justify-content:center;flex:none;width:32px;height:28px;padding:0;border:1px solid var(--bd);border-radius:var(--r2,8px);background:var(--card);color:var(--tx2);cursor:pointer}
+.cpy::before{content:"";width:16px;height:16px;background:currentColor;-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='9' y='9' width='12' height='12' rx='2'/%3E%3Cpath d='M5 15H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v1'/%3E%3C/svg%3E") center/contain no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='9' y='9' width='12' height='12' rx='2'/%3E%3Cpath d='M5 15H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v1'/%3E%3C/svg%3E") center/contain no-repeat}
+.cpy:hover{border-color:var(--ac);color:var(--actx)}
+.cpy:focus-visible,.cpb:focus-visible{outline:2px solid var(--ac);outline-offset:2px}
+.cpy.ok{color:var(--up);border-color:var(--up)}
+.cpy.ok::before{-webkit-mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12l5 5L20 7'/%3E%3C/svg%3E");mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12l5 5L20 7'/%3E%3C/svg%3E")}
+.cpy.ok::after,.cpy.bad::after{content:attr(data-tip);position:absolute;bottom:calc(100% + 6px);left:50%;transform:translateX(-50%);padding:var(--s1) var(--s2);border-radius:var(--r1,6px);background:var(--tx);color:var(--bg);font-size:var(--t-cap);font-weight:500;line-height:1.4;white-space:nowrap;pointer-events:none;z-index:5}
+.dca .cpy{width:36px;height:36px}
+.cpb.ok{color:var(--up);border-color:var(--up)}
+.gl li{display:flex;align-items:center;gap:var(--s2)}.gl li>a.grow{flex:1;min-width:0}.gl li>.cpy{margin-right:var(--s3)}
+.dsh .dca{flex-wrap:wrap}
+.srl{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+@media(pointer:coarse),(max-width:720px){.cpy,.dca .cpy{width:44px;height:44px}}

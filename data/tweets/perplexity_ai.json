@@ -2,6 +2,48 @@
   "handle": "perplexity_ai",
   "tweets": [
     {
+      "created_at": "2026-10-20T15:48:18.000Z",
+      "id": "2112571621550760085",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 12,
+        "impression": 4863,
+        "like": 42,
+        "quote": 0,
+        "reply": 1,
+        "retweet": 0
+      },
+      "url": "https://x.com/perplexity_ai/status/2112571621550760085"
+    },
+    {
+      "created_at": "2026-10-20T15:48:16.000Z",
+      "id": "2112571609693523990",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 11,
+        "impression": 5738,
+        "like": 50,
+        "quote": 0,
+        "reply": 2,
+        "retweet": 0
+      },
+      "url": "https://x.com/perplexity_ai/status/2112571609693523990"
+    },
+    {
+      "created_at": "2026-10-20T15:48:13.000Z",
+      "id": "2112571597798461920",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 243,
+        "impression": 58442,
+        "like": 601,
+        "quote": 36,
+        "reply": 67,
+        "retweet": 51
+      },
+      "url": "https://x.com/perplexity_ai/status/2112571597798461920"
+    },
+    {
       "created_at": "2026-10-16T15:03:25.000Z",
       "id": "2111110772747321460",
       "lang": "",

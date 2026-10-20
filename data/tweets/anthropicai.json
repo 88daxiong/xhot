@@ -2,6 +2,76 @@
   "handle": "anthropicai",
   "tweets": [
     {
+      "created_at": "2026-10-20T16:18:40.000Z",
+      "id": "2112579263039725659",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 13,
+        "impression": 21531,
+        "like": 155,
+        "quote": 0,
+        "reply": 11,
+        "retweet": 4
+      },
+      "url": "https://x.com/AnthropicAI/status/2112579263039725659"
+    },
+    {
+      "created_at": "2026-10-20T16:18:40.000Z",
+      "id": "2112579261358023071",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 6,
+        "impression": 22510,
+        "like": 191,
+        "quote": 0,
+        "reply": 4,
+        "retweet": 3
+      },
+      "url": "https://x.com/AnthropicAI/status/2112579261358023071"
+    },
+    {
+      "created_at": "2026-10-20T16:18:39.000Z",
+      "id": "2112579257704882246",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 8,
+        "impression": 13252,
+        "like": 233,
+        "quote": 1,
+        "reply": 5,
+        "retweet": 7
+      },
+      "url": "https://x.com/AnthropicAI/status/2112579257704882246"
+    },
+    {
+      "created_at": "2026-10-20T16:18:38.000Z",
+      "id": "2112579254538141981",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 9,
+        "impression": 24690,
+        "like": 299,
+        "quote": 4,
+        "reply": 13,
+        "retweet": 17
+      },
+      "url": "https://x.com/AnthropicAI/status/2112579254538141981"
+    },
+    {
+      "created_at": "2026-10-20T16:18:38.000Z",
+      "id": "2112579251555721573",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 395,
+        "impression": 205251,
+        "like": 2831,
+        "quote": 120,
+        "reply": 260,
+        "retweet": 228
+      },
+      "url": "https://x.com/AnthropicAI/status/2112579251555721573"
+    },
+    {
       "created_at": "2026-10-18T18:07:51.000Z",
       "id": "2111881963657412903",
       "lang": "en",

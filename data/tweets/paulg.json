@@ -2,6 +2,34 @@
   "handle": "paulg",
   "tweets": [
     {
+      "created_at": "2026-10-20T16:31:21.000Z",
+      "id": "2112582455551041891",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 9,
+        "impression": 18710,
+        "like": 82,
+        "quote": 1,
+        "reply": 41,
+        "retweet": 1
+      },
+      "url": "https://x.com/paulg/status/2112582455551041891"
+    },
+    {
+      "created_at": "2026-10-20T12:41:40.000Z",
+      "id": "2112524653163839991",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 41,
+        "impression": 47724,
+        "like": 494,
+        "quote": 7,
+        "reply": 56,
+        "retweet": 15
+      },
+      "url": "https://x.com/paulg/status/2112524653163839991"
+    },
+    {
       "created_at": "2026-10-19T15:57:33.000Z",
       "id": "2112211561091858537",
       "lang": "en",

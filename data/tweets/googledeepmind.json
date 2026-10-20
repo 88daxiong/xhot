@@ -2,6 +2,20 @@
   "handle": "googledeepmind",
   "tweets": [
     {
+      "created_at": "2026-10-20T14:53:53.000Z",
+      "id": "2112557925264752930",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 279,
+        "impression": 63592,
+        "like": 1126,
+        "quote": 39,
+        "reply": 144,
+        "retweet": 94
+      },
+      "url": "https://x.com/GoogleDeepMind/status/2112557925264752930"
+    },
+    {
       "created_at": "2026-10-16T16:11:50.000Z",
       "id": "2111127991401247033",
       "lang": "",

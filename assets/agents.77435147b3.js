@@ -43,7 +43,9 @@ function fill(c,x){var k=c.dataset.k||'';body.textContent='';ttl.textContent=k;
  if(x[2])row('项目描述',x[2]);
  if(x[0]){body.appendChild(mk('h3','','README 摘要'));body.appendChild(mk('p','dsm',x[0]))}else body.appendChild(mk('p','dsl mu','暂无 README 摘要。'));
  if(x[3]&&x[3].length){var t=mk('p','dtt');x[3].forEach(function(s){t.appendChild(mk('span','src',s))});body.appendChild(t)}
- var a=mk('a','btn dgh','在 GitHub 打开 ↗');a.href='https://github.com/'+k.split('/').map(encodeURIComponent).join('/');a.target='_blank';a.rel='noopener noreferrer';var w=mk('div','dca');w.appendChild(a);body.appendChild(w)}
+ var a=mk('a','btn dgh','在 GitHub 打开 ↗');a.href='https://github.com/'+k.split('/').map(encodeURIComponent).join('/');a.target='_blank';a.rel='noopener noreferrer';var w=mk('div','dca');w.appendChild(a);var u='https://github.com/'+k;
+ if(/^[\w.-]+\/[\w.-]+$/.test(k))[['复制链接',u,'复制仓库链接 '+u],['复制 git clone','git clone '+u+'.git','复制命令 git clone '+u+'.git'],['复制仓库名',k,'复制仓库名 '+k]].forEach(function(z){var b=mk('button','btn cpb',z[0]);b.type='button';b.setAttribute('data-copy',z[1]);b.setAttribute('aria-label',z[2]);w.appendChild(b)});
+ body.appendChild(w)}
 function show(c){if(!sh)return;ret=c.querySelector('.dmore')||c;fill(c,DJ&&DJ[c.dataset.k]);sh.hidden=false;open=true;d.documentElement.classList.add('nlock');
  requestAnimationFrame(function(){sh.classList.add('open')});history.pushState({dsh:1},'',location.href);var x=$('.dshx',sh);(matchMedia('(max-width:1000px)').matches?$('.nback',sh):x).focus();
  data().then(function(j){if(open&&ttl.textContent===c.dataset.k)fill(c,j[c.dataset.k]||null)})}
