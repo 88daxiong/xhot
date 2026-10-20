@@ -729,7 +729,7 @@ def person(u):
     data=jdump(rows); jv=H8(data); jn=f'{u}.json?v={jv}'
     write(f'p/{u}.json',data)
     c30=Zs(FULLNOW-datetime.timedelta(days=30))
-    hi=rank([p for p in ps if p['ts'][:19]>=c30],4,4)
+    hi=rank([p for p in ps if p['ts'][:19]>=c30],4,4) if len(ps)>8 else []   # 稀疏账号（≤8 条）时间线已全部可见，不再重复一遍高光帖
     first=ps[:12]; pdays=sorted({dkey(p['ts']) for p in ps},reverse=True)
     dl='—' if a['d'] is None else f'{a["d"]:+,}'
     bio=f'<p class="bio">{e(re.sub(r"\s*https?://t\.co/\w+","",pr["description"]).strip())}</p>' if re.sub(r"\s*https?://t\.co/\w+","",pr.get('description') or '').strip() else ''
