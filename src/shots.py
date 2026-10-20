@@ -11,7 +11,7 @@ def tot(f):
 pp=sorted(((tot(f),os.path.basename(f)) for f in glob.glob(S+'/p/*.html')))
 sparse=[n for t,n in pp if t>0][0]; dayfiles=sorted(glob.glob(S+'/day/*.html'))
 PAGES=[('today','index.html'),('day','day/'+os.path.basename(dayfiles[0])),('dom_ai','d/ai.html'),('dom_money','d/money.html'),('dom_growth','d/growth.html'),('all','d/all.html'),('people','people.html'),
-       ('person','p/karpathy.html'),('person2','p/'+sparse),('news','news.html'),('trends','trends.html'),('about','about.html')]
+       ('person','p/karpathy.html'),('person2','p/'+sparse),('news','news.html'),('trends','trends.html'),('agents','agents.html'),('about','about.html')]
 MODES=[('1440_light',1440,'light'),('1440_dark',1440,'dark'),('390',390,'light')]
 INIT="window.__v=[];window.open=function(){window.__open=1};window.__cls=0;try{new PerformanceObserver(function(l){l.getEntries().forEach(function(e){if(!e.hadRecentInput)window.__cls+=e.value})}).observe({type:'layout-shift',buffered:true})}catch(x){};document.addEventListener('securitypolicyviolation',function(e){window.__v.push(e.violatedDirective+' '+(e.blockedURI||''))});"
 CHK="""()=>{const W=innerWidth;
@@ -46,7 +46,7 @@ with sync_playwright() as p:
             cls0=g.evaluate('window.__cls')
             ck(f'budget {name}[{mn}] CLS ≤ 0.001（加载 + 600ms）',cls0<=0.001,cls0)
             if name=='today': ck(f'budget today[{mn}] 首屏传输（gzip，含头像）≤ 80KB',kb0<=80,kb0)
-            if name in('person','person2','dom_ai','all','people','news','trends','day'): ck(f'budget {name}[{mn}] 首次加载传输 ≤ 150KB',kb0<=150,kb0)
+            if name in('person','person2','dom_ai','all','people','news','trends','agents','day'): ck(f'budget {name}[{mn}] 首次加载传输 ≤ 150KB',kb0<=150,kb0)
             sh=lambda s,**k:g.screenshot(path=os.path.join(D,'shots',f'{s}_{mn}.png'),**k)
             if name!='x':
                 g.mouse.wheel(0,1500);g.wait_for_timeout(250);g.mouse.wheel(0,-3000);g.wait_for_timeout(250)

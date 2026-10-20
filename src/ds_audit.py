@@ -9,7 +9,7 @@ import sys,json
 from playwright.sync_api import sync_playwright
 B=next((a for a in sys.argv[1:] if a.startswith('http')),'http://127.0.0.1:8840/'); CENSUS='--census' in sys.argv
 T=json.load(open(__file__.rsplit('/',1)[0]+'/ds_tokens.json')) if '/' in __file__ else json.load(open('ds_tokens.json'))
-PAGES=[('today','index.html'),('ai','d/ai.html'),('all','d/all.html'),('people','people.html'),('person','p/karpathy.html'),('news','news.html'),('trends','trends.html'),('about','about.html'),('day','day/2026-10-15.html')]
+PAGES=[('today','index.html'),('ai','d/ai.html'),('all','d/all.html'),('people','people.html'),('person','p/karpathy.html'),('news','news.html'),('trends','trends.html'),('agents','agents.html'),('about','about.html'),('day','day/2026-10-15.html')]
 JS="""()=>{const fs={},sp={},rd={},fw={},lh=[];const vis=e=>{const r=e.getBoundingClientRect();if(r.width<1||r.height<1)return false;const c=getComputedStyle(e);return c.visibility!=='hidden'&&c.display!=='none'};
 const add=(m,k,e)=>{if(!m[k])m[k]=[];if(m[k].length<3)m[k].push(e.tagName.toLowerCase()+(e.className&&typeof e.className==='string'?'.'+e.className.trim().split(/\\s+/)[0]:''))};
 const px=v=>{const n=parseFloat(v);return isNaN(n)?null:Math.round(n*100)/100};

@@ -40,4 +40,15 @@ ti=[x.get_text(strip=True) for x in s.select('#nall .nt2')]
 print('news 条目',len(ti),'无中文标题',sum(1 for t in ti if not CJK.search(t)))
 tc=collections.Counter(ti);du=[t for t,c in tc.items() if c>1]
 if du: issues.append('news.html 重复标题 '+str(du[:3]))
+# Agent 页：三个区块、每行有 GitHub 链接与子标签、导航含 Agent、趋势页不再含开发工具
+try:
+    _a=open(S+'/agents.html',encoding='utf-8').read()
+    for _id in ('new','day','week'):
+        if f'id="{_id}"' not in _a: issues.append('agents.html 缺区块 '+str(_id))
+    _rows=_a.count('class="trw fi dtw"')
+    if _rows<10 or _a.count('href="https://github.com/')<_rows: issues.append('agents.html 行数/链接异常 '+str(_rows))
+    if 'href="agents.html"' not in open(S+'/index.html',encoding='utf-8').read(): issues.append('导航缺 Agent')
+    if 'dtw' in open(S+'/trends.html',encoding='utf-8').read(): issues.append('trends.html 仍含 AI 开发工具')
+    
+except FileNotFoundError: issues.append('缺 agents.html')
 print('\n'.join(issues[:60]) or 'OK',f'\n问题 {len(issues)} 条')

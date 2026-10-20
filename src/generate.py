@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """XHOT v15 生成器（任务导向重构）：今日 · 领域 · 人物 · 资讯 · 趋势 + ⌘K 搜索
   index.html 今日（最新一期） · day/<date>.html 往期 · d/<ai|money|growth|all>.html 领域/归档 · people.html 人物目录 · p/<handle>.html 人物页
-  news.html 资讯 · trends.html 趋势；hot.html / accounts.html / daily/<date>.html 为旧链接跳转页
+  news.html 资讯 · trends.html 趋势 · agents.html Agent（AI 开发工具）；hot.html / accounts.html / daily/<date>.html 为旧链接跳转页
   assets/：style.<h>.css · core/news/feed.<h>.js · search.<h>.json · av/ 头像；feed/<day>.<h>.json 按天分片；p/<handle>.<h>.json 个人分片
   公开数据策略（TEXT_MODE=excerpt，默认）：站点与 data/ 只含帖子 ID、指标、短摘录（≤220 字，日报必读 ≤320 字）+ 中文要点 + 原帖链接，不含推文全文。
   用法：python3 generate.py [输出目录]"""
@@ -281,8 +281,8 @@ CSP=("default-src 'self'; script-src 'self' 'sha256-"+base64.b64encode(hashlib.s
      "style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'none'; connect-src 'self'; media-src 'none'; frame-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'")
 HEADSEC=f'<meta http-equiv="Content-Security-Policy" content="{CSP}"><meta name="referrer" content="strict-origin-when-cross-origin">'
 THEME='<div class="tg" role="group" aria-label="主题"><button type="button" data-set-theme="light" aria-label="浅色">☀</button><button type="button" data-set-theme="dark" aria-label="深色">☾</button><button type="button" data-set-theme="auto">自动</button></div>'
-NAVT=[('index.html','今日','today'),('d/ai.html','领域','dom'),('people.html','人物','ppl'),('news.html','资讯','news'),('trends.html','趋势','trend')]
-CURM={'news.html':'news','trends.html':'trend','index.html':'today'}
+NAVT=[('index.html','今日','today'),('d/ai.html','领域','dom'),('people.html','人物','ppl'),('news.html','资讯','news'),('trends.html','趋势','trend'),('agents.html','Agent','agents')]
+CURM={'news.html':'news','trends.html':'trend','agents.html':'agents','index.html':'today'}
 def page(title,body,cur,pref='',head='',mods=(),desc='XHOT：每天 10 分钟，看完 X 上 AI / 搞钱 / 成长领域的重点。'):
     cur=CURM.get(cur,cur)
     nav=''.join(f'<a href="{pref}{h}"{" aria-current=page" if c==cur else ""}>{t}</a>' for h,t,c in NAVT)
@@ -322,7 +322,7 @@ def minimap(vals,w=112,h=28):
 
 GH=GH0
 GHR=sorted([r for r in GH['repos'] if r['ai'] and langf.script_ok(r['desc'])],key=lambda r:-r['today'])[:20]
-# ---- AI 开发工具（devtools_fetch.py 抓取 + devtools_zh.json agent 撰写的中文/改标签/隐藏）----
+# ---- Agent 页（agents.html）：AI 开发工具（devtools_fetch.py 抓取 + devtools_zh.json agent 撰写的中文/改标签/隐藏）----
 DTN={'agent':'Agent/Harness','coding':'编码代理','mcp':'MCP/插件','infra':'基础设施/沙箱','ops':'管理工具','fun':'好玩'}
 DTC={k:f'var(--dt-{k})' for k in DTN}   # 颜色令牌在 style_ds.css（浅/深色各一套，满足 4.5:1）
 def _devtools():
@@ -332,7 +332,7 @@ def _devtools():
     try: Z=json.load(open('devtools_zh.json',encoding='utf-8'))
     except Exception: Z={}
     zr={k.lower():v for k,v in (Z.get('repos') or {}).items() if isinstance(v,dict)}; hid={x.lower() for x in Z.get('hide') or []}
-    out=[]
+    out=[]; today=datetime.date.today()
     for r in J.get('repos',[]):
         k=str(r.get('repo','')).lower()
         if k in hid or not re.fullmatch(r'[a-z0-9_.-]+/[a-z0-9_.-]+',k): continue
@@ -341,34 +341,45 @@ def _devtools():
         if not tags: continue
         zh=str(z.get('zh') or '')[:60]
         if not zh and not langf.script_ok(r.get('desc','')): continue
-        new=bool(r.get('created')); sc=int(r.get('today',0))*7+int(r.get('week',0))+(int(r.get('stars',0))/30 if new else 0)
+        cr=str(r.get('created',''))[:10]
+        try: age=max(1,(today-datetime.date.fromisoformat(cr)).days) if cr else None
+        except ValueError: age=None
         out.append(dict(repo=r['repo'],url='https://github.com/'+r['repo'],tags=tags[:2],zh=zh,desc=str(r.get('desc',''))[:200],lang=str(r.get('lang',''))[:20],
-                        stars=int(r.get('stars',0)),today=int(r.get('today',0)),week=int(r.get('week',0)),created=str(r.get('created',''))[:10],
-                        topics=[str(t)[:30] for t in (r.get('topics') or [])][:6],sc=sc,hz=bool(zh)))
-    pick=[]
-    for t in DTN:   # 每个主标签取前 8，优先有中文一句话的
-        L=sorted([x for x in out if x['tags'][0]==t],key=lambda x:(-x['hz'],-x['sc']))[:8]
-        pick+=sorted(L,key=lambda x:-x['sc'])
-    return pick,str(J.get('_fetched_at',''))[:16].replace('T',' ')
+                        stars=int(r.get('stars',0)),today=int(r.get('today',0)),week=int(r.get('week',0)),created=cr,age=age,
+                        topics=[str(t)[:30] for t in (r.get('topics') or [])][:6],vel=(int(r.get('stars',0))/age if age else 0)))
+    return out,str(J.get('_fetched_at',''))[:16].replace('T',' ')
 DEVT,DEVT_AT=_devtools()
-def devtools_sec():
-    if not DEVT: return ''
-    cnt={t:sum(1 for x in DEVT if t in x['tags']) for t in DTN}   # 与筛选一致：主/副标签都算
-    chips=('<div class="fchips" role="group" aria-label="子标签筛选"><button type="button" class="on" data-ftag="all" aria-pressed="true">全部<small>'+str(len(DEVT))+'</small></button>'
+DTNEW=sorted([x for x in DEVT if x['age'] and x['age']<=14],key=lambda x:-x['vel'])[:24]
+DTDAY=sorted([x for x in DEVT if x['today']],key=lambda x:-x['today'])[:30]
+DTWK=sorted([x for x in DEVT if x['week']],key=lambda x:-x['week'])[:30]
+def dt_row(i,x,mode):
+    own,nm=x['repo'].split('/',1)
+    tg=''.join(f'<span class="tag" style="--dc:{DTC[t]}">{e(DTN[t])}</span>' for t in x['tags'])
+    if mode=='new': inc=f'<b>{fmt(round(x["vel"]))}</b><small>★/天</small>'
+    elif mode=='day': inc=f'<b>+{x["today"]:,}</b><small>今日 ★</small>'
+    else: inc=f'<b>+{x["week"]:,}</b><small>本周 ★</small>'
+    meta=((f'<i class=ld style=--h:{hue(x["lang"])}></i>'+e(x['lang'])) if x['lang'] else '')+f'<span>★ {fmt(x["stars"])}</span>'+(f'<span>{e(x["created"][5:].replace("-","/"))} 创建</span>' if x['created'] else '')
+    ex=(f'<p class="pt">{e(x["desc"])}</p>' if x['desc'] else '')+'<p class="dtm mu">'+' · '.join(filter(None,[('话题 '+' '.join(e(t) for t in x['topics'])) if x['topics'] else '',f'创建 {e(x["created"])}' if x['created'] else '',f'今日 +{x["today"]:,} ★' if x['today'] else '',f'本周 +{x["week"]:,} ★' if x['week'] else '']))+'</p>'
+    ex+=f'<div class="act"><a class="btn" href="{safe_url(x["url"])}" target="_blank" rel="noopener noreferrer">在 GitHub 打开 ↗</a></div>'
+    return (f'<li class="trw fi dtw" style="--dc:{DTC[x["tags"][0]]}" data-tags="{" ".join(x["tags"])}"><details><summary><span class="rk">{i}</span>'
+            f'<span class="gm"><b class="gn"><span class="go">{e(own)}/</span>{e(nm)}</b><span class="gx">{meta}</span><span class="gd">{e(x["zh"] or x["desc"])}</span><span class="dtg">{tg}</span></span>'
+            f'<span class="gt">{inc}</span></summary><div class="trx">{ex}</div></details></li>')
+def agents_page():
+    allx={x['repo'] for x in DTNEW+DTDAY+DTWK}; L=[x for x in DEVT if x['repo'] in allx]
+    cnt={t:sum(1 for x in L if t in x['tags']) for t in DTN}
+    chips=('<div class="fchips" role="group" aria-label="子标签筛选"><button type="button" class="on" data-ftag="all" aria-pressed="true">全部<small>'+str(len(L))+'</small></button>'
            +''.join(f'<button type="button" data-ftag="{t}" aria-pressed="false">{e(n)}<small>{cnt[t]}</small></button>' for t,n in DTN.items() if cnt[t])+'</div>')
-    rows=''
-    for i,x in enumerate(DEVT,1):
-        own,nm=x['repo'].split('/',1)
-        tg=''.join(f'<span class="tag" style="--dc:{DTC[t]}">{e(DTN[t])}</span>' for t in x['tags'])
-        inc=(f'<b>+{x["today"]:,}</b><small>今日 ★</small>' if x['today'] else f'<b>+{x["week"]:,}</b><small>本周 ★</small>' if x['week'] else f'<b>{fmt(x["stars"])}</b><small>{e(x["created"][5:])} 新建</small>')
-        meta=((f'<i class=ld style=--h:{hue(x["lang"])}></i>'+e(x['lang'])) if x['lang'] else '')+f'<span>★ {fmt(x["stars"])}</span>'
-        ex=(f'<p class="pt">{e(x["desc"])}</p>' if x['desc'] else '')+'<p class="dtm mu">'+' · '.join(filter(None,[('话题 '+' '.join(e(t) for t in x['topics'])) if x['topics'] else '',f'创建 {e(x["created"])}' if x['created'] else '',f'今日 +{x["today"]:,} ★' if x['today'] else '',f'本周 +{x["week"]:,} ★' if x['week'] else '']))+'</p>'
-        ex+=f'<div class="act"><a class="btn" href="{safe_url(x["url"])}" target="_blank" rel="noopener noreferrer">在 GitHub 打开 ↗</a></div>'
-        rows+=(f'<li class="trw fi dtw" style="--dc:{DTC[x["tags"][0]]}" data-tags="{" ".join(x["tags"])}"><details><summary><span class="rk">{i}</span>'
-               f'<span class="gm"><b class="gn"><span class="go">{e(own)}/</span>{e(nm)}</b><span class="gx">{meta}</span><span class="gd">{e(x["zh"] or x["desc"])}</span><span class="dtg">{tg}</span></span>'
-               f'<span class="gt">{inc}</span></summary><div class="trx">{ex}</div></details></li>')
-    return (f'<section class="panel big dts" id="devtools" style="--dc:var(--dt-agent)"><div class="sech"><h2>AI 开发工具<small class="mu">开源 Agent / 编码代理 / MCP / 沙箱 · GitHub Trending 日榜+周榜 与近 45 天新项目 · {e(DEVT_AT)} 更新</small></h2>{chips}</div>'
-            f'<ol class="dtl" data-fl>{rows}</ol><p class="empty" hidden>这个子标签暂时没有项目。</p></section>')
+    def blk(hid,title,sub,X,mode):
+        if not X: return ''
+        return (f'<div class="panel big dts" id="{hid}"><h2>{title}<small class="mu">{sub}</small></h2>'
+                f'<ol class="dtl" data-fl>{"".join(dt_row(i,x,mode) for i,x in enumerate(X,1))}</ol><p class="empty" hidden>这个子标签下暂时没有项目。</p></div>')
+    body=('<section class="dtp">'+tools('Agent',chips,f'<span class="hint">{e(DEVT_AT)} 更新</span>',info='开源 AI 开发工具：Agent / Harness、编码代理（Codex · Claude Code 类）、MCP 与插件、沙箱等基础设施、agent 管理工具，外加好玩的小项目 · 来源 GitHub Trending 日榜/周榜与 GitHub 公开搜索 · 点行看原描述')
+          +'<div class="dtb">'
+          +blk('new','新出现',f'近 14 天创建 · 按每天新增星标排序 · {len(DTNEW)} 个',DTNEW,'new')
+          +blk('day','今日热门',f'GitHub Trending 日榜 · 今日新增星标 · {len(DTDAY)} 个',DTDAY,'day')
+          +blk('week','本周热门',f'GitHub Trending 周榜 · 本周新增星标 · {len(DTWK)} 个',DTWK,'week')
+          +'</div></section>')
+    return page('XHOT · Agent：AI 开发工具',body,'agents.html',desc='开源 AI agent、编码代理、MCP、沙箱与 agent 管理工具的 GitHub 热门与新项目，每天更新。')
 def plain(t,n=96):
     t=re.sub(r'https?://\S+','',t or ''); t=re.sub(r'[#*>`_]+','',t); t=re.sub(r'\s+',' ',t).strip()
     return short(t,n)
@@ -512,7 +523,7 @@ def trends():
           f'<div class="tcols"><div class="tstack"><section class="panel big" style="--dc:{DC["ai"]}"><h2><i class="dot"></i>AI 话题涨跌<small>{len(T)} 个 · 按涨幅排序</small></h2>{TH}<ul class="list tl">{trows(T,mx)}</ul></section>'
           f'<section class="panel" style="--dc:{DC["money"]}"><h2><i class="dot" style="--dc:{DC["money"]}"></i><i class="dot" style="--dc:{DC["growth"]}"></i>搞钱 + 个人成长<small>{len(M)} 个话题</small></h2>{TH}<ul class="list tl">{trows(M,mx,True)}</ul></section></div>'
           f'<section class="panel big" style="--dc:#0ea5e9"><h2>GitHub 技术趋势<small>AI / 开发工具 · 今日新增 ★（条长按平方根缩放）</small></h2><ul class="list gl">{gl}</ul></section></div>'
-          +devtools_sec())
+          '')
     return page('XHOT · 趋势',body,'trends.html')
 # ---- 个人页 ----
 
@@ -765,7 +776,7 @@ def about_page():
       '<section class="abt"><h2>数据来源</h2><ul>'
       f'<li><b>X</b>：通过 X 官方 API（只读，开发者账号授权）获取公开帖子与账号资料。站内展示的是<b>短摘录</b>、互动数字和指向原帖的链接；每条都可点「在 X 打开」查看完整原文。{L("https://developer.x.com/en/developer-terms/agreement-and-policy","X 开发者协议与政策")}适用于这些内容。头像为小尺寸缓存，仅用于标识作者。</li>'
       f'<li><b>AIHOT</b>：资讯页的精选与热点来自 {L("https://aihot.news","aihot.news")} 的公开 API，按其 MIT 许可使用并署名；文章原文版权属于原站，本站只给链接。许可声明见仓库中的 LICENSE-THIRD-PARTY.md。</li>'
-      f'<li><b>GitHub Trending</b>：趋势页读取 {L("https://github.com/trending","GitHub Trending")} 公开页面中的项目名与星标数，只做索引并链接到项目主页，不转载项目内容；每日一次，不做高频抓取。</li>'
+      f'<li><b>GitHub Trending</b>：趋势页读取 {L("https://github.com/trending","GitHub Trending")} 公开页面中的项目名与星标数，只做索引并链接到项目主页，不转载项目内容；每日一次，不做高频抓取。 Agent 页另用 GitHub 公开搜索 API（不登录，每天约 20 次）补充近期新建项目与创建日期；项目一句话中文介绍由 AI 助手撰写，以项目主页为准。</li>'
       '</ul></section>'
       '<section class="abt"><h2>哪些内容是 AI 生成的</h2><ul>'
       '<li>「今天一眼看完」「必读」中的<b>中文要点</b>、英文帖的<b>中文译文</b>（带「译」标记）、人物「本周要点」和话题解读，均由 AI 助手自动整理，<b>不是 X 官方内容，也不代表原作者的表述</b>，可能有误；以原帖为准。</li>'
@@ -779,7 +790,7 @@ def about_page():
     return page('关于 · 数据来源 · 免责声明 · XHOT',body,'about',desc='XHOT 的数据来源、AI 生成内容说明、撤下方式与免责声明。')
 # ======================= 生成全部页面 =======================
 open_ok=True
-emit('about.html',about_page()); emit('news.html',news()); emit('trends.html',trends())     # news() 先跑：NEWS 供今日页/领域页引用
+emit('about.html',about_page()); emit('news.html',news()); emit('trends.html',trends()); emit('agents.html',agents_page())     # news() 先跑：NEWS 供今日页/领域页引用
 FEEDDAYS=feed_shards()
 for old in glob.glob(os.path.join(OUT,'p','*.html')): pass
 if DAYS:
@@ -797,7 +808,7 @@ for x in DAYS: emit(f'daily/{x["date"]}.html',stub(f'../day/{x["date"]}.html'))
 ZHN={'elonmusk':'马斯克 埃隆','sama':'奥特曼 山姆','satyanadella':'纳德拉 微软','sundarpichai':'皮查伊 谷歌','karpathy':'卡帕西 卡尔帕西','paulg':'保罗格雷厄姆 格雷厄姆','naval':'纳瓦尔','andrewyng':'吴恩达','demishassabis':'哈萨比斯','ylecun':'杨立昆 勒昆','darioamodei':'阿莫迪 达里奥','ilyasut':'苏茨克维 伊利亚','miramurati':'穆拉蒂','gdb':'布罗克曼','jeffdean':'杰夫迪恩 迪恩','mrbeast':'野兽先生','cz_binance':'赵长鹏 币安','heyibinance':'何一 币安','justinsuntron':'孙宇晨','google':'谷歌','microsoft':'微软','nvidia':'英伟达 黄仁勋','claudeai':'克劳德','deepseek_ai':'深度求索','huggingface':'抱抱脸','jordanbpeterson':'彼得森','tferriss':'费里斯','hubermanlab':'胡伯曼','jamesclear':'詹姆斯克利尔 原子习惯','alexhormozi':'霍莫兹','garyvee':'加里','thedankoe':'丹科','mustafasuleyman':'苏莱曼','aravsrinivas':'斯里尼瓦斯','wublockchain':'吴说区块链'}
 # 搜索索引（⌘K：人物 / 标签 / 话题 / 日期；帖子按需读 feed 分片）
 SJ=jdump({'p':[[u,a['H'],a['name'],AVS.get(u,''),hue(u),a['dom'],','.join(a['doms']),a['f'],a['d'] or 0,ZHN.get(u.lower(),'')] for u,a in ACC.items()],
-          't':[[k,l,d] for k,l,d,_ in TAGS],'d':FEEDDAYS,'dy':[x['date'] for x in DAYS],'g':[[i,PBY[i]['u'],t,x['date']] for x in DAYS for i,t in x['gists'].items() if i in PBY],'tp':[[x['name'],d] for d in DOMS for x in DATA[d]['trends']]})
+          't':[[k,l,d] for k,l,d,_ in TAGS],'d':FEEDDAYS,'dy':[x['date'] for x in DAYS],'g':[[i,PBY[i]['u'],t,x['date']] for x in DAYS for i,t in x['gists'].items() if i in PBY],'tp':[[x['name'],d] for d in DOMS for x in DATA[d]['trends']],'gr':[[x['repo'],x['zh'],DTN[x['tags'][0]]] for x in DEVT if x['repo'] in {y['repo'] for y in DTNEW+DTDAY+DTWK}]})
 SJN='search.json'; put(SJN,SJ)   # 稳定文件名：不再把哈希写进每个页面（轻量刷新只改有变化的页面）；Pages 对所有文件都是 max-age=600，哈希对缓存没有实际收益
 # ---- JS / CSS ----
 JSN={}

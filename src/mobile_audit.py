@@ -6,7 +6,7 @@ import sys,json,os
 from playwright.sync_api import sync_playwright
 B=next((a for a in sys.argv[1:] if a.startswith('http')),'http://127.0.0.1:8840/'); SHOTS='--shots' in sys.argv; S130='--scale130' in sys.argv
 DEV=[('se',375,667,2),('i14',390,844,3),('promax',430,932,3),('pixel7',412,915,2.6),('droid360',360,640,3),('ipadmini',768,1024,2),('ipadpro',1024,1366,2)]
-PG=[('today','index.html'),('ai','d/ai.html'),('money','d/money.html'),('growth','d/growth.html'),('all','d/all.html'),('people','people.html'),('person','p/karpathy.html'),('news','news.html'),('trends','trends.html'),('day','day/2026-10-14.html'),('about','about.html')]
+PG=[('today','index.html'),('ai','d/ai.html'),('money','d/money.html'),('growth','d/growth.html'),('all','d/all.html'),('people','people.html'),('person','p/karpathy.html'),('news','news.html'),('trends','trends.html'),('agents','agents.html'),('day','day/2026-10-14.html'),('about','about.html')]
 if '--quick' in sys.argv: DEV=[d for d in DEV if d[0] in('se','i14')]
 SCALE="""()=>{const k=1.3;document.querySelectorAll('body *').forEach(e=>{if(e.dataset.fs)return;const cs=getComputedStyle(e);e.dataset.fs=1;e.style.setProperty('font-size',(parseFloat(cs.fontSize)*k)+'px','important')})}"""
 CHK=r"""(W0)=>{const W=innerWidth,out={};const vis=e=>{const r=e.getBoundingClientRect(),cs=getComputedStyle(e);return r.width>0&&r.height>0&&cs.visibility!=='hidden'&&cs.display!=='none'&&!e.closest('[hidden]')};

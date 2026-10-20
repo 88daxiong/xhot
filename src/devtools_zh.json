@@ -1,62 +1,367 @@
-{"_note":"agent 撰写：AI 开发工具 版块的中文一句话 + 人工改标签(tag) / 隐藏(hide)。键 = owner/repo（不区分大小写）",
-"hide":["tashfeenahmed/freellmapi","koala73/worldmonitor","krillinai/OpenCreator","croffasia/itsaplan","Bennettxai/FounderOS","trhhubsd/ARTEX","RuoJi6/ARTEX","datawhalechina/easy-vibe","bobeff/open-source-games","DmNote-App/DmNote","Comfy-Org/ComfyUI","urfave/cli","edenfunf/reelmimic","CopilotKit/OpenIntelligentUI","Anil-matcha/Open-Generative-AI","SegFault42/HeliosGen","hirotomasato/yowes","xiaodou-official/xiaodou-open-platform","marclou/mailcheap","Gathin23/cleanyourtv","shader-effects-inc/shaders","tangency-labs/solidcraft","youngyangyang04/llm-master","corrinehu/dsh-workbuddy-connect","Minglink/dsh-infinite-gen-5","YuJunZhiXue/dsh-purge","ardeyouxipianyi/workbuddy2api-hub","Mag1cFall/AIStudio2API","Folkbench/folkbench","KKKKhazix/AIHOT"],
-"repos":{
-"morluto/rea":{"zh":"用 agent 逆向分析任何东西：从应用行为一路拆到原生二进制"},
-"HKUDS/CLI-Anything":{"zh":"把任意软件包成命令行，让 agent 能直接调用"},
-"ifixai-ai/iFixAi":{"zh":"独立审计 AI agent：人或 agent 自己跑，回答“它可信吗”"},
-"heygen-com/hyperframes":{"zh":"写 HTML 出视频，专为 agent 设计的渲染框架"},
-"vxcontrol/pentagi":{"zh":"全自动 AI 渗透测试 agent 系统"},
-"usestrix/strix":{"zh":"开源 AI 渗透测试工具，找漏洞并给修复"},
-"pbakaus/impeccable":{"zh":"给 AI harness 的设计语言，让 agent 做出更好看的界面"},
-"earthtojake/text-to-cad":{"zh":"给 agent 加 CAD 能力：文字生成 3D 模型"},
-"MadsLorentzen/ai-job-search":{"zh":"本地运行的 AI 求职框架，基于 Claude Code 自动投递","tag":"agent"},
-"ShawnPana/phone-harness":{"zh":"让 agent 操控你的手机","tag":"agent"},
-"google/agentmesh":{"zh":"Google 的 Agent Mesh：多 agent 互联","tag":"ops"},
-"anomalyco/opencode":{"zh":"开源编码代理 opencode，终端里的 Claude Code 替代"},
-"anthropics/claude-code":{"zh":"Anthropic 官方 Claude Code：终端里的编码代理"},
-"anthropics/claude-code-action":{"zh":"在 GitHub Actions 里跑 Claude Code，自动处理 PR/Issue"},
-"Harvil1/codeAgent":{"zh":"新开源终端编码代理 CodeAgent","tag":"coding"},
-"qiz029/dscode":{"zh":"DeepSeek 编码代理 harness：常驻 shell、子代理、自动批准","tag":"coding"},
-"cathrynlavery/diagram-design":{"zh":"给 Claude Code / Codex / Cursor 用的图表设计技能","tag":"mcp"},
-"google/artemis":{"zh":"Google ARTEMIS：自然语言驱动的安卓自动化","tag":"agent"},
-"michael-denyer/pstack-claude":{"zh":"pstack 工作流的多代理版本：Claude Code、Codex、Copilot 等","tag":"mcp"},
-"amontlabs/lcu":{"zh":"把 Codex 的 computer use 拆出来，任何 harness 都能用","tag":"coding"},
-"anthropics/claude-plugins-official":{"zh":"Anthropic 官方 Claude Code 插件目录","tag":"mcp"},
-"cloudflare/security-audit-skill":{"zh":"Cloudflare 出品：编码代理的多阶段安全审计技能"},
-"Graphify-Labs/graphify":{"zh":"把代码库、文档、SQL 变成可查询的知识图谱，供 agent 使用"},
-"cursor/plugins":{"zh":"Cursor 插件规范与官方插件"},
-"K-Dense-AI/scientific-agent-skills":{"zh":"科研 agent 技能库：让 agent 变成 AI 科学家"},
-"tt-a1i/archify":{"zh":"把想法或代码库变成交互式架构图的 agent 技能"},
-"headroomlabs-ai/headroom":{"zh":"在工具输出、日志进入 LLM 前压缩，省 token","tag":"infra"},
-"vercel-labs/skills":{"zh":"Vercel 开源的 agent 技能工具：npx skills"},
-"github/github-mcp-server":{"zh":"GitHub 官方 MCP Server"},
-"punkpeye/awesome-remote-mcp-servers":{"zh":"远程 MCP Server 合集"},
-"stablyai/orca":{"zh":"管理一整队 agent（Claude Code 等）的工作台","tag":"ops"},
-"ruvnet/ruflo":{"zh":"多 agent 集群编排 harness，协调自治 agent 群","tag":"ops"},
-"yetone/magpie":{"zh":"菜单栏统一切换各 agent 用的模型：Codex 跑 DeepSeek、Claude Code 跑 Kimi","tag":"ops"},
-"leepokai/Codync":{"zh":"手机上给 Claude Code、Codex、Cursor 等 40+ agent 发消息","tag":"ops"},
-"devswha/herdr-web-ui":{"zh":"herdr 的网页/手机端：远程看每个 agent 面板的对话与终端","tag":"ops"},
-"Armur-Ai/Pentest-Swarm-AI":{"zh":"AI agent 群自主渗透测试，编排侦察到报告","tag":"ops"},
-"xerj-org/xerj":{"zh":"本地优先的搜索引擎 + MCP Server，单个 Rust 二进制索引代码和文档"},
-"akitaonrails/ai-memory":{"zh":"编码 CLI 的长期记忆，方便在不同 agent 间交接"},
-"mksglu/context-mode":{"zh":"编码代理的上下文优化：把工具输出放进沙箱，缩减 98%"},
-"TencentCloud/TencentDB-Agent-Memory":{"zh":"腾讯云团队级 agent 记忆中枢"},
-"elie222/rakazo":{"zh":"开源个人 agent，可自选模型和沙箱"},
-"citrolabs/ego-lite":{"zh":"为 AI agent 做的极速浏览器自动化","tag":"infra"},
-"strands-agents/box":{"zh":"在沙箱里跑 agent，限制其执行、读写和联网范围"},
-"davidondrej/cloudroom-core":{"zh":"可自托管的 Rust 运行时，在云端跑 Claude Code / Codex"},
-"MiniMax-AI/OpenAgentCore":{"zh":"MiniMax 开源自托管版 Agents API，可跑 Codex / Claude Code","tag":"infra"},
-"lightseekorg/tokenspeed":{"zh":"极速 LLM 推理引擎"},
-"smg-project/smg":{"zh":"Rust 写的 LLM 网关，兼容 OpenAI / Anthropic 接口"},
-"jwuthri-cloud/Tracely-ai":{"zh":"面向 agent 的 CI/CD：给线上 trace 打分、聚类失败"},
-"diegosouzapw/OmniRoute":{"zh":"免费 AI 网关：一个端点接数百家模型","tag":"infra"},
-"DietrichGebert/ponytail":{"zh":"让 agent 像最懒的资深工程师那样思考：最好的代码是不写"},
-"JuliusBrussee/caveman":{"zh":"“少说话省 token”的穴居人技能：让编码代理说话像原始人"},
-"Louis-CFM/coucou":{"zh":"住在 Mac 刘海里的小伙伴，帮你盯着编码代理"},
-"flizzywine/dsh-tavern":{"zh":"Agent 酒馆：兼容 SillyTavern 的文字冒险"},
-"rehan-remade/universal-modder":{"zh":"让 Claude Code 给几乎任何游戏做 mod"},
-"krishhgg/Insomnia":{"zh":"合盖也不睡的 Mac 菜单栏工具，让 agent 通宵干活"},
-"hujjun/mcd-saver-strategist":{"zh":"麦当劳省钱点餐技能：巨无霸套餐 ¥47 → ¥21.9","tag":"fun"},
-"Leonxlnx/earshot":{"zh":"给编码代理装上耳朵：能听、能评、能做声音","tag":"fun"},
-"Oldcircle/geo-sleuth":{"zh":"看照片找拍摄地的 agent 技能","tag":"fun"}
-}}
+{
+ "_note": "agent 撰写：AI 开发工具 版块的中文一句话 + 人工改标签(tag) / 隐藏(hide)。键 = owner/repo（不区分大小写）",
+ "hide": [
+  "Anil-matcha/Open-Generative-AI",
+  "Arekejoker/qwen21-nsfw-pose-skill",
+  "Bennettxai/FounderOS",
+  "Caho1/open-claude-ui",
+  "Comfy-Org/ComfyUI",
+  "CopilotKit/OpenIntelligentUI",
+  "DmNote-App/DmNote",
+  "Folkbench/folkbench",
+  "Gathin23/cleanyourtv",
+  "KKKKhazix/AIHOT",
+  "Mag1cFall/AIStudio2API",
+  "Minglink/dsh-infinite-gen-5",
+  "RuoJi6/ARTEX",
+  "SegFault42/HeliosGen",
+  "YuJunZhiXue/dsh-purge",
+  "ardeyouxipianyi/workbuddy2api-hub",
+  "bobeff/open-source-games",
+  "corrinehu/dsh-workbuddy-connect",
+  "croffasia/itsaplan",
+  "datawhalechina/easy-vibe",
+  "edenfunf/reelmimic",
+  "godotengine/godot",
+  "hirotomasato/yowes",
+  "koala73/worldmonitor",
+  "krillinai/OpenCreator",
+  "marclou/mailcheap",
+  "shader-effects-inc/shaders",
+  "tangency-labs/solidcraft",
+  "tashfeenahmed/freellmapi",
+  "trhhubsd/ARTEX",
+  "urfave/cli",
+  "xiaodou-official/xiaodou-open-platform",
+  "youngyangyang04/llm-master"
+ ],
+ "repos": {
+  "morluto/rea": {
+   "zh": "用 agent 逆向分析任何东西：从应用行为一路拆到原生二进制",
+   "tag": "agent"
+  },
+  "HKUDS/CLI-Anything": {
+   "zh": "把任意软件包成命令行，让 agent 能直接调用"
+  },
+  "ifixai-ai/iFixAi": {
+   "zh": "独立审计 AI agent：人或 agent 自己跑，回答“它可信吗”"
+  },
+  "heygen-com/hyperframes": {
+   "zh": "写 HTML 出视频，专为 agent 设计的渲染框架"
+  },
+  "vxcontrol/pentagi": {
+   "zh": "全自动 AI 渗透测试 agent 系统"
+  },
+  "usestrix/strix": {
+   "zh": "开源 AI 渗透测试工具，找漏洞并给修复"
+  },
+  "pbakaus/impeccable": {
+   "zh": "给 AI harness 的设计语言，让 agent 做出更好看的界面"
+  },
+  "earthtojake/text-to-cad": {
+   "zh": "给 agent 加 CAD 能力：文字生成 3D 模型"
+  },
+  "MadsLorentzen/ai-job-search": {
+   "zh": "本地运行的 AI 求职框架，基于 Claude Code 自动投递",
+   "tag": "agent"
+  },
+  "ShawnPana/phone-harness": {
+   "zh": "让 agent 操控你的手机",
+   "tag": "agent"
+  },
+  "google/agentmesh": {
+   "zh": "Google 的 Agent Mesh：多 agent 互联",
+   "tag": "ops"
+  },
+  "anomalyco/opencode": {
+   "zh": "开源编码代理 opencode，终端里的 Claude Code 替代"
+  },
+  "anthropics/claude-code": {
+   "zh": "Anthropic 官方 Claude Code：终端里的编码代理"
+  },
+  "anthropics/claude-code-action": {
+   "zh": "在 GitHub Actions 里跑 Claude Code，自动处理 PR/Issue"
+  },
+  "Harvil1/codeAgent": {
+   "zh": "新开源终端编码代理 CodeAgent",
+   "tag": "coding"
+  },
+  "qiz029/dscode": {
+   "zh": "DeepSeek 编码代理 harness：常驻 shell、子代理、自动批准",
+   "tag": "coding"
+  },
+  "cathrynlavery/diagram-design": {
+   "zh": "给 Claude Code / Codex / Cursor 用的图表设计技能",
+   "tag": "mcp"
+  },
+  "google/artemis": {
+   "zh": "Google ARTEMIS：自然语言驱动的安卓自动化",
+   "tag": "agent"
+  },
+  "michael-denyer/pstack-claude": {
+   "zh": "pstack 工作流的多代理版本：Claude Code、Codex、Copilot 等",
+   "tag": "mcp"
+  },
+  "amontlabs/lcu": {
+   "zh": "把 Codex 的 computer use 拆出来，任何 harness 都能用",
+   "tag": "coding"
+  },
+  "anthropics/claude-plugins-official": {
+   "zh": "Anthropic 官方 Claude Code 插件目录",
+   "tag": "mcp"
+  },
+  "cloudflare/security-audit-skill": {
+   "zh": "Cloudflare 出品：编码代理的多阶段安全审计技能"
+  },
+  "Graphify-Labs/graphify": {
+   "zh": "把代码库、文档、SQL 变成可查询的知识图谱，供 agent 使用"
+  },
+  "cursor/plugins": {
+   "zh": "Cursor 插件规范与官方插件"
+  },
+  "K-Dense-AI/scientific-agent-skills": {
+   "zh": "科研 agent 技能库：让 agent 变成 AI 科学家"
+  },
+  "tt-a1i/archify": {
+   "zh": "把想法或代码库变成交互式架构图的 agent 技能"
+  },
+  "headroomlabs-ai/headroom": {
+   "zh": "在工具输出、日志进入 LLM 前压缩，省 token",
+   "tag": "infra"
+  },
+  "vercel-labs/skills": {
+   "zh": "Vercel 开源的 agent 技能工具：npx skills"
+  },
+  "github/github-mcp-server": {
+   "zh": "GitHub 官方 MCP Server"
+  },
+  "punkpeye/awesome-remote-mcp-servers": {
+   "zh": "远程 MCP Server 合集"
+  },
+  "stablyai/orca": {
+   "zh": "管理一整队 agent（Claude Code 等）的工作台",
+   "tag": "ops"
+  },
+  "ruvnet/ruflo": {
+   "zh": "多 agent 集群编排 harness，协调自治 agent 群",
+   "tag": "ops"
+  },
+  "yetone/magpie": {
+   "zh": "菜单栏统一切换各 agent 用的模型：Codex 跑 DeepSeek、Claude Code 跑 Kimi",
+   "tag": "ops"
+  },
+  "leepokai/Codync": {
+   "zh": "手机上给 Claude Code、Codex、Cursor 等 40+ agent 发消息",
+   "tag": "ops"
+  },
+  "devswha/herdr-web-ui": {
+   "zh": "herdr 的网页/手机端：远程看每个 agent 面板的对话与终端",
+   "tag": "ops"
+  },
+  "Armur-Ai/Pentest-Swarm-AI": {
+   "zh": "AI agent 群自主渗透测试，编排侦察到报告",
+   "tag": "ops"
+  },
+  "xerj-org/xerj": {
+   "zh": "本地优先的搜索引擎 + MCP Server，单个 Rust 二进制索引代码和文档"
+  },
+  "akitaonrails/ai-memory": {
+   "zh": "编码 CLI 的长期记忆，方便在不同 agent 间交接"
+  },
+  "mksglu/context-mode": {
+   "zh": "编码代理的上下文优化：把工具输出放进沙箱，缩减 98%"
+  },
+  "TencentCloud/TencentDB-Agent-Memory": {
+   "zh": "腾讯云团队级 agent 记忆中枢"
+  },
+  "elie222/rakazo": {
+   "zh": "开源个人 agent，可自选模型和沙箱"
+  },
+  "citrolabs/ego-lite": {
+   "zh": "为 AI agent 做的极速浏览器自动化",
+   "tag": "infra"
+  },
+  "strands-agents/box": {
+   "zh": "在沙箱里跑 agent，限制其执行、读写和联网范围"
+  },
+  "davidondrej/cloudroom-core": {
+   "zh": "可自托管的 Rust 运行时，在云端跑 Claude Code / Codex"
+  },
+  "MiniMax-AI/OpenAgentCore": {
+   "zh": "MiniMax 开源自托管版 Agents API，可跑 Codex / Claude Code",
+   "tag": "infra"
+  },
+  "lightseekorg/tokenspeed": {
+   "zh": "极速 LLM 推理引擎"
+  },
+  "smg-project/smg": {
+   "zh": "Rust 写的 LLM 网关，兼容 OpenAI / Anthropic 接口"
+  },
+  "jwuthri-cloud/Tracely-ai": {
+   "zh": "面向 agent 的 CI/CD：给线上 trace 打分、聚类失败"
+  },
+  "diegosouzapw/OmniRoute": {
+   "zh": "免费 AI 网关：一个端点接数百家模型",
+   "tag": "infra"
+  },
+  "DietrichGebert/ponytail": {
+   "zh": "让 agent 像最懒的资深工程师那样思考：最好的代码是不写"
+  },
+  "JuliusBrussee/caveman": {
+   "zh": "“少说话省 token”的穴居人技能：让编码代理说话像原始人"
+  },
+  "Louis-CFM/coucou": {
+   "zh": "住在 Mac 刘海里的小伙伴，帮你盯着编码代理"
+  },
+  "flizzywine/dsh-tavern": {
+   "zh": "Agent 酒馆：兼容 SillyTavern 的文字冒险"
+  },
+  "rehan-remade/universal-modder": {
+   "zh": "让 Claude Code 给几乎任何游戏做 mod"
+  },
+  "krishhgg/Insomnia": {
+   "zh": "合盖也不睡的 Mac 菜单栏工具，让 agent 通宵干活"
+  },
+  "hujjun/mcd-saver-strategist": {
+   "zh": "麦当劳省钱点餐技能：巨无霸套餐 ¥47 → ¥21.9",
+   "tag": "fun"
+  },
+  "Leonxlnx/earshot": {
+   "zh": "给编码代理装上耳朵：能听、能评、能做声音",
+   "tag": "fun"
+  },
+  "Oldcircle/geo-sleuth": {
+   "zh": "看照片找拍摄地的 agent 技能",
+   "tag": "fun"
+  },
+  "wheresryan22/anatomy": {
+   "zh": "把真实机器画成可交互等距剖面图的 agent 技能",
+   "tag": "mcp"
+  },
+  "simbasjungles/free-my-tv": {
+   "zh": "用 Claude Code 写的无广告 Google TV 桌面，一键还原",
+   "tag": "fun"
+  },
+  "feder-cr/git-ai": {
+   "zh": "专为 AI agent 设计的 Git"
+  },
+  "aicodeking/leanrea": {
+   "zh": "8KB 技能替代 REA 逆向工具：纯 CLI、不用 MCP，快 38%",
+   "tag": "mcp"
+  },
+  "Ansub/tv-detox": {
+   "zh": "让 Claude Code / Codex 帮旧安卓电视提速去广告",
+   "tag": "fun"
+  },
+  "deeplethe/solid-glass": {
+   "zh": "面向 AI 应用的设计系统：质感、物理、触感"
+  },
+  "Fei2411/DeepSeek-Bot": {
+   "zh": "DeepSeek Harness 的常驻机器人团队：主 bot、bot 互发消息、群聊",
+   "tag": "ops"
+  },
+  "Noniv/web-ocean": {
+   "zh": "从零手写的 WebGPU 实时海洋渲染",
+   "tag": "fun"
+  },
+  "LiCinCan/blender-ai-mcp-addon": {
+   "zh": "Blender 的 AI 助手 + MCP Server，多 agent 建模",
+   "tag": "mcp"
+  },
+  "cranebeaker/coop-anything": {
+   "zh": "让 AI agent 把任何单机游戏改成和朋友联机",
+   "tag": "fun"
+  },
+  "finereli/whatsapp-mcp": {
+   "zh": "只读 WhatsApp MCP：让 agent 搜索你自己的聊天记录",
+   "tag": "mcp"
+  },
+  "kanaworksai-hue/audio-studio-mcp": {
+   "zh": "本地生成 BGM 和音效的 MCP，给 Claude Code 用",
+   "tag": "mcp"
+  },
+  "zhuyansen/new-term-radar": {
+   "zh": "AI 新词雷达：每天从 X、HF、GitHub 抓新模型和新项目名"
+  },
+  "outcrawlai/scout": {
+   "zh": "开源浏览器 agent Scout",
+   "tag": "infra"
+  },
+  "rociiu/talorys": {
+   "zh": "部署在你自己 Cloudflare 账号里的个人 AI agent",
+   "tag": "agent"
+  },
+  "reason-machines/reason-network": {
+   "zh": "让团队里的编码代理互相对话协作",
+   "tag": "ops"
+  },
+  "Zfinix/eleven": {
+   "zh": "agent 优先的逆向工程：ACP agent 读、改、补丁二进制",
+   "tag": "agent"
+  },
+  "YeonwooSung/my-claude-code-mods": {
+   "zh": "个人自用的 Claude Code 改装合集",
+   "tag": "mcp"
+  },
+  "msitarzewski/agency-agents": {
+   "zh": "一整个 AI 代理公司：从前端到社区运营的角色 agent 合集",
+   "tag": "agent"
+  },
+  "EpicGames/unreal-engine-skills-for-claude-code-plugin": {
+   "zh": "Epic 官方：给 Claude Code 的虚幻引擎技能插件",
+   "tag": "mcp"
+  },
+  "Imbad0202/academic-research-skills": {
+   "zh": "Claude Code 学术研究技能：调研→写作→审稿→修改"
+  },
+  "anthropics/claude-quickstarts": {
+   "zh": "Anthropic 官方快速上手项目合集",
+   "tag": "agent"
+  },
+  "plugin87/ux-ui-agent-skills": {
+   "zh": "把 Claude 变成资深设计架构师的 UX/UI 技能包"
+  },
+  "ollama/ollama": {
+   "zh": "本地一键运行 Kimi、GLM、DeepSeek、Qwen 等开源模型",
+   "tag": "infra"
+  },
+  "1lck/Lithe-IDEA": {
+   "zh": "面向 AI 时代的轻量跨平台 IDE",
+   "tag": "coding"
+  },
+  "livekit/livekit": {
+   "zh": "连接人与 AI 的端到端实时音视频栈",
+   "tag": "infra"
+  },
+  "mattpocock/skills": {
+   "zh": "Matt Pocock 的工程师技能集：直接来自他的 .agents 目录",
+   "tag": "mcp"
+  },
+  "obra/superpowers": {
+   "zh": "agent 技能框架 + 一套可用的软件开发方法论",
+   "tag": "mcp"
+  },
+  "lyogavin/airllm": {
+   "zh": "单张 4GB 显卡跑超大模型推理",
+   "tag": "infra"
+  },
+  "ranxianglei/billion-context": {
+   "zh": "小上下文也够用的上下文压缩插件，省 token"
+  },
+  "microsoft/generative-ai-for-beginners": {
+   "zh": "微软 21 课生成式 AI 入门教程",
+   "tag": "agent"
+  },
+  "78/xiaozhi-esp32": {
+   "zh": "小智：基于 MCP 的 ESP32 硬件聊天机器人",
+   "tag": "fun"
+  },
+  "alchaincyf/huashu-motion": {
+   "zh": "让 agent 一键直出商业级产品宣传片，会作曲、能指着画面改"
+  },
+  "zcbacxc/mcd-party-planner": {
+   "zh": "麦当劳 MCP 聚会团餐组织助手",
+   "tag": "fun"
+  }
+ }
+}
