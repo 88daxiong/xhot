@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """每个领域输出一行：<dom> <逗号分隔的 post id>（每条 X 新闻取前 3 个 cluster 帖子，去重，≤100）。
-用于 get_posts_by_ids（每领域 1 次调用），结果入库：python3 ingest.py news_posts_<dom> <file>"""
+用于按 id 批量取帖 GET /2/tweets?ids=…（每领域 1 次调用），结果入库：python3 ingest.py news_posts_<dom> <file>"""
 import os,sys,glob,json
 D=os.path.dirname(os.path.abspath(__file__)); os.chdir(D)
 for d in ('ai','money','growth'):

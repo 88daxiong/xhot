@@ -1,55 +1,68 @@
 # XHOT · X 热点雷达
 
-在线访问：<https://88daxiong.github.io/xhot/>
+在线访问：<https://88daxiong.github.io/xhot/>　·　源码：[`src/`](src/)　·　第三方许可：[`LICENSE-THIRD-PARTY.md`](LICENSE-THIRD-PARTY.md)
 
-XHOT 是一个纯静态的 X（Twitter）热点简报，关注 AI、搞钱（创业 / 创作者经济）、个人成长三个领域约 130 个账号，**每天北京时间 08:00 完整刷新一次，14:00 / 20:00 / 次日 02:00 各做一次轻量刷新**（只更新约 60 个最热账号的新帖，规则评分，不含人工撰写内容）。设计目标：**每天 10 分钟看完重点**，或**几分钟追上某个人 / 某个领域的进度**。
+XHOT 是一个**纯静态**的 X（Twitter）热点简报：关注 AI、搞钱（创业 / 创作者经济）、个人成长三个领域约 130 个账号，外加 AI 资讯与 GitHub 上的 AI 开发工具。每天北京时间 08:00 完整刷新，14:00 / 20:00 / 次日 02:00 各做一次轻量刷新。目标是**每天 10 分钟看完重点**。
 
-| 页面 | 内容 |
-|---|---|
-| `index.html` 今日 | 「今天一眼看完」三句话 → 必读（5–8 条，中文要点 + 可展开的原帖摘录，英文帖默认中文译文，可切 EN）→ 更多值得看（与必读合计今日 Top 30，每条一句话中文要点，可按领域筛选、点开看摘录与原帖链接）→ 话题涨跌 · 粉丝变化 · 资讯头条 · 更新日志。顶部「约 N 分钟读完」，已读 / 新增标记只存在你的浏览器里 |
-| `d/ai.html` `d/money.html` `d/growth.html` 领域 | 一个领域一屏：本周重要度前列帖子（15 个受控标签可筛）、必关注 10 人、领域话题、相关资讯 |
-| `d/all.html` 全部归档 | 原「热帖」：按重要度 / 时间排序，按天分片加载，可搜索摘录；每人默认最多 3 条 |
-| `people.html` + `p/<handle>.html` 人物 | 目录：本周 Top 30 人物的「本周要点」+ 全部人物（按领域筛选、按热度 / 粉丝 / 变化排序、搜索）；个人页：一屏读懂（简介、本周概览、话题标签、发帖节奏、粉丝）+ 高光帖 + 时间线 |
-| `news.html` 资讯 | 两栏阅读器（左列表约 60% / 右窗格约 40%），AIHOT 中文在前，X 新闻在后 |
-| `trends.html` 趋势 | X 话题讨论量涨跌 + GitHub 今日 AI / 开发工具趋势（与资讯完全分开） |
-| `day/<日期>.html` 往期 | 每天一个永久链接（旧 `daily/<日期>.html`、`hot.html`、`accounts.html` 自动跳转到新地址） |
+本 README 的目标是：**只看这一份文档，就能从零复刻整个站点**（用你自己的 X API 令牌和账号清单）。
 
-全站：顶栏 今日 · 领域 · 人物 · 资讯 · 趋势，⌘K（或「/」）全站搜索（人物、标签、话题、日期，帖子摘录按需读取分片），共用日期控件，浅色 / 深色 / 跟随系统，舒适 / 紧凑两档密度，界面只有中文，**没有任何统计 / 分析脚本**，没有第三方请求。
+## 目录
+1. [页面地图](#页面地图)
+2. [架构与数据流](#架构与数据流)
+3. [数据来源、条款与配额](#数据来源条款与配额)
+4. [源码结构 src/](#源码结构-src)
+5. [环境准备](#环境准备)
+6. [从零复刻：分步指南](#从零复刻分步指南)
+7. [定时刷新（cron / GitHub Actions）](#定时刷新cron--github-actions)
+8. [设计系统](#设计系统)
+9. [安全设计](#安全设计)
+10. [合规与内容策略](#合规与内容策略)
+11. [自定义：账号、领域、标签](#自定义账号领域标签)
+12. [常见问题与排错](#常见问题与排错)
+13. [English](#english)
 
-## 内容与版权策略（v15）
+## 页面地图
 
-- **仓库与站点只公开帖子 ID、互动指标、≤220 字（必读 ≤320 字）的短摘录、agent 撰写的中文要点 / 译文摘录，以及指向 X 的原帖链接**；不再公开推文全文（v14 的 `data/tweets/*.json` 与日报 `text_orig` 已停止公开）。要读全文请点「在 X 打开」。
-- 英文帖的中文是**摘录的中文译文**（带「译」标记，仅供参考，以原文为准）。
-- 资讯：AIHOT 的摘要 / 综述来自其公开 API（MIT 许可）；文章原文版权属于原站，本站只给链接。
-- 推文内容版权归原作者；本项目只做摘录、索引与展示。
+| 顶栏 | 页面 | 内容 |
+|---|---|---|
+| 今日 | `index.html`、`day/<日期>.html` | 三句话总结 → 必读 5–8 条（中文要点 + 可展开摘录）→ 今日 Top 30 → 话题涨跌 · 粉丝变化 · 资讯头条。每天一个永久链接 |
+| 领域 | `d/ai.html` `d/money.html` `d/growth.html`、`d/all.html` | 一个领域一屏：本周重要帖子（15 个受控标签可筛）、必关注 10 人、领域话题、相关资讯；`all` 为全部归档（按天分片加载） |
+| 人物 | `people.html`、`p/<handle>.html` | 本周 Top 30 人物要点 + 全部人物目录；个人页：简介、本周概览、发帖节奏、粉丝曲线、高光帖、时间线 |
+| 资讯 | `news.html` | 两栏阅读器：AIHOT 中文资讯在前，X 新闻在后 |
+| 趋势 | `trends.html` | X 话题讨论量 7 天涨跌 + GitHub 今日 AI / 开发工具趋势 |
+| Agent | `agents.html` | AI 开发工具雷达：今日热门 / 本周热门 / 新出现 三个标签页，分类筛选，每页 9 张卡片（3/2/1 列），点卡片打开详情（README 纯文本摘要 + 中文一句话），数据懒加载自 `assets/agents.json` |
+| — | `about.html` | 数据来源、AI 生成内容说明、撤下方式、免责声明（每页页脚有入口） |
 
-## 合规与来源说明（v15.1）
-
-- 站内「关于 · 数据来源 · 免责声明」页（`about.html`）说明数据来源（X API、AIHOT、GitHub Trending）、哪些内容是 AI 生成的（中文要点 / 译文，带「译」标记，不是 X 官方内容）、撤下方式（GitHub Issues）和免责声明；每页页脚都有入口。
-- 第三方许可声明见 `LICENSE-THIRD-PARTY.md`（AIHOT 的 MIT 声明等）。
-- `takedown.txt`：帖子 ID / 账号 handle 清单，生成器会跳过其中的内容（用于被要求撤下、已删除或受保护的帖子）；`check_deleted_v15.py` 可用 X API 批量检查展示过的帖子是否已被删除并写入该清单（需要 `X_BEARER_TOKEN`，只读）。
-- X 新闻的中文标题与要点来自 `news_zh.json`（AI 翻译，站内标注并保留英文原标题）；`qa_v15.py` 在每次构建后检查重复、空区块、未翻译英文与领域错配。
-- 头像为小尺寸缓存，仅用于标识作者；如需撤下请开 Issue。
-- 本项目与 X Corp.、AIHOT、GitHub 无隶属关系；以上不构成法律意见。
-
-## 重要度、标签、人物榜
-
-- **热度** = 赞 + 2×转推 + 3×引用 + 评论 + 收藏。
-- **重要度（0–100，规则可复现）** = `6·ln(1+热度) + 10·clamp(ln((热度+20)/(作者最近 30 条热度中位数+20)), −1, 2.5)`：既看绝对热度，也看相对作者自己的常态，大号小号可比。榜单每人最多 2 条、文本去重、纯链接帖不进榜。**每天由 agent 做最终复核**：必读挑选、置顶 / 隐藏、噪声过滤。
-- **15 个受控标签**（关键词规则打标，可能有误差）：AI：模型 · 智能体 · 编程 · 开源 · 产品发布 · 研究 · 芯片算力 · 政策；搞钱：创业 · 创作者经济 · 融资 · 独立开发；成长：习惯 · 写作 · 职业。
-- **本周 Top 30 人物** = 近 7 天前 3 条帖子重要度之和最高的 30 人（排除灌水账号），每周一由 agent 写每人 1–2 条「本周要点」。
-- **日窗口**：某日的日报覆盖「该日 09:00（北京时间）往前 25 小时」。
+全站：⌘K（或 `/`）搜索人物、标签、话题、日期、Agent 项目；浅色 / 深色 / 跟随系统；舒适 / 紧凑两档密度；**无统计脚本、无第三方请求**；已读 / 新增标记只存在浏览器 localStorage。
 
 ## 架构与数据流
 
-```
-X API（只读）──┐
-aihot.news API ─┼─> raw/*.json ──> SQLite（xhot.db，本机，不进仓库）──> Python 静态生成器 ──> site/ ──> 静态托管（GitHub Pages）
-GitHub Trending ┘                         │                                                    
-                                          └─> export_data_v15.py ──> data/（仅 ID 与指标）
+```mermaid
+flowchart LR
+  subgraph 抓取["抓取（本机或 CI，只读）"]
+    X["X API v2<br/>x_fetch.py"]
+    AH["aihot.news API<br/>aihot_fetch.py"]
+    GT["GitHub Trending<br/>gh_trending.py"]
+    GS["GitHub 公开搜索 + raw README<br/>devtools_fetch.py / devtools_readme.py"]
+    AV["头像 pbs.twimg.com<br/>avatars_fetch.py"]
+  end
+  X -->|ingest.py / ingest_tl.py| DB[("xhot.db<br/>SQLite，不入库")]
+  X --> RAW["raw/*.json<br/>不入库"]
+  AH --> RAW
+  GT --> RAW
+  GS --> RAW
+  AV --> WEBP["avatars_webp/<br/>64/96px webp"]
+  ED["编辑内容<br/>daily/*.json · weekly/*.json<br/>news_zh.json · devtools_zh.json"] --> GEN
+  DB --> GEN["generate.py<br/>静态生成器"]
+  RAW --> GEN
+  WEBP --> GEN
+  GEN --> SITE["site/<br/>HTML + 分片 JSON"]
+  SITE --> T{"测试<br/>test_escape · fuzz · qa · check_links<br/>ds_audit · mobile_audit · shots"}
+  T -->|全部通过| PUB["GitHub Pages<br/>main 分支根目录"]
+  DB --> EXP["export_data.py"] --> DATA["data/<br/>仅 ID 与指标"] --> PUB
 ```
 
-生成器与托管无关：输出是一个纯静态目录，任何静态主机都能托管（GitHub Pages、Cloudflare Pages、Netlify、对象存储 + CDN）。
+生成器与托管无关：输出是纯静态目录，GitHub Pages、Cloudflare Pages、Netlify、对象存储 + CDN 均可。
 
 ### 前端性能设计（均有测试与预算）
 - 每页只有 **一个内联脚本（主题预绘，带 sha256 的 CSP）和一个内联 `<style>`（按页裁剪，约 7KB gzip）**；JS 拆成 `core`（所有页）与 `news` / `feed`（按页），文件名带内容哈希、`defer`。
@@ -57,7 +70,7 @@ GitHub Trending ┘                         │
 - 数据分片：`feed/<日期>.json`（按天）、`p/<handle>.json`（个人时间线）、`assets/search.json`（⌘K 索引，首次呼出时才读）、`assets/status.html`（数据健康表，点开才读）；文件名稳定，内容哈希只作 `?v=` 版本号写在引用处，所以轻量刷新只会改到真正有变化的文件。首屏服务端渲染，无 JS 也能读正文。
 - 相对时间（x 小时前 / 今天 / 昨天）由前端补齐，**页面源码里不烘焙相对时间**，页面稳定、无数据变化就不改写文件；新 / 已读标记只存浏览器 localStorage。
 - `<link rel="expect" blocking="render">` 等页头与工具条解析完再首次绘制，布局偏移（CLS）≈ 0；头像为 64px / 96px webp（约 0.7 / 1.5KB），首屏之外懒加载。
-- 目标：首页首屏 ≤80KB gzip、LCP ≤1.0s（Fast 3G）、INP ≤100ms（CPU 4×）、CLS = 0；实测见仓库外的 `speed_v15.json`。
+- 目标：首页首屏 ≤80KB gzip、LCP ≤1.0s（Fast 3G）、INP ≤100ms（CPU 4×）、CLS = 0；可用 `speed.py` 自测。
 
 ### 限制（诚实说明）
 - GitHub Pages **不能设置响应头**：CSP 只能写在 `<meta>`，因此没有 `frame-ancestors`（页面可被 iframe 嵌套）、HSTS 不可控；`_headers` 文件只在 Cloudflare Pages / Netlify 等主机上生效。
@@ -65,18 +78,160 @@ GitHub Trending ┘                         │
 - 每天约 150 个文件会变化（人物页的指标 / 摘录），仓库会持续增长；公开 `data/` 已去掉全文以控制体积和合规风险。
 - 没有自定义 404 页（GitHub Pages 默认 404）；旧链接的跳转页不会保留 `#` 之后的参数。
 
-## 仓库结构
+### 限制（诚实说明）
+- GitHub Pages **不能设置响应头**：CSP 只能写在 `<meta>`，因此没有 `frame-ancestors`（页面可被 iframe 嵌套）、HSTS 不可控；`_headers` 文件只在 Cloudflare Pages / Netlify 等主机上生效。
+- GitHub Pages 有软限制（站点 ≤1GB、月流量约 100GB、构建 10 分钟）；`github.io` 在中国大陆访问不稳定。当前规模远低于限制，若流量增长需要换托管（架构已与托管无关）。
+- 每天约 150 个文件会变化（人物页的指标 / 摘录），仓库会持续增长；公开 `data/` 已去掉全文以控制体积和合规风险。
+- 没有自定义 404 页（GitHub Pages 默认 404）；旧链接的跳转页不会保留 `#` 之后的参数。
+
+## 数据来源、条款与配额
+
+| 来源 | 用途 | 认证 | 条款 / 限制 | 脚本 |
+|---|---|---|---|---|
+| **X API v2**（只读公开数据） | 账号资料、用户时间线、话题计数、X 新闻（可选） | 你自己的 App Bearer Token | 遵守 [X Developer Agreement and Policy](https://developer.x.com/en/developer-terms/agreement-and-policy)；只公开 ID、指标与短摘录；配额取决于你的套餐 | `x_fetch.py` → `ingest.py` / `ingest_tl.py` |
+| **aihot.news API** | AI 中文资讯与摘要 | 无 | 摘要内容 MIT 许可（声明见 `LICENSE-THIRD-PARTY.md`），原文版权归原站，只给链接 | `aihot_fetch.py` |
+| **GitHub Trending** | 今日 / 本周趋势仓库（10 种语言） | 无 | 公开网页，低频抓取（每次刷新 ≤20 页） | `gh_trending.py`、`devtools_fetch.py` |
+| **GitHub 公开搜索 API** | 新出现的 AI 工具、补全创建时间 | 无（未认证） | 搜索限 10 次/分钟（脚本每次间隔 7s，≤20 次）；核心 API 未认证 60 次/小时 | `devtools_fetch.py` |
+| **raw.githubusercontent.com** | 仓库 README（只在完整刷新时取，ETag 缓存，≤100 个） | 无 | 不占核心 API 配额；只保留 ≤600 字纯文本摘要 | `devtools_readme.py` |
+| **头像** | 作者标识 | 无 | 只接受 `pbs.twimg.com`，重新编码为 64 / 96px webp（约 0.7 / 1.5KB） | `avatars_fetch.py` |
+
+### X API 调用与配额策略
+
+| 步骤 | 端点 | 次数（约 130 账号、16 个话题时） |
+|---|---|---|
+| 账号资料 | `GET /2/users/by?usernames=`（每次 100 个） | 2 |
+| 时间线（`since_id` 增量，排除回复与转推） | `GET /2/users/:id/tweets` | 约 131 |
+| 话题计数（7 天按天） | `GET /2/tweets/counts/recent` | 16 |
+| X 新闻（可选，取决于套餐） | `GET /2/news/search` | 3 |
+| 新闻相关帖子 | `GET /2/tweets?ids=` | 3 |
+
+- **完整刷新**（每天 1 次）约 155 次；**轻量刷新**（`x_fetch.py light`）只拉近 7 天最热的 `HOT_N`（默认 60）个账号的时间线，每次约 60 次。
+- 全天合计约 340 次。`x_fetch.py` 每次调用至少间隔 1.1s，遇到 429 按 `x-rate-limit-reset` 等待后重试一次，并有本次调用上限 `MAX_CALLS`。
+- 重要度的「作者常态」基线在完整刷新时更新；轻量刷新只加新帖、不改旧帖得分。aihot.news 与 GitHub 不占 X 配额。
+
+## 源码结构 src/
 
 ```
-index.html  news.html  trends.html  people.html  _headers
-d/{ai,money,growth,all}.html        # 领域页与全部归档
-day/<YYYY-MM-DD>.html               # 每日简报（永久链接）
-p/<handle>.html + p/<handle>.json
-feed/<YYYY-MM-DD>.json       # 按天分片的摘录
-assets/core|news|feed.<hash>.js  assets/search.json  assets/news.json  assets/status.html  assets/av/*.webp
-hot.html accounts.html daily/<日期>.html   # 旧链接跳转页
-data/                               # 仅 ID 与指标的数据备份
-src/                                # 生成器源码，可从零重建
+src/
+├─ x_fetch.py            # X API v2 抓取（full / light / 单步），令牌只读环境变量
+├─ ingest.py             # 保存 API 响应到 raw/，users_* 写入 followers 表
+├─ ingest_tl.py          # 时间线响应写入 tweets 表（按 id 去重，每账号保留最新 200 条）
+├─ tl_plan.py            # 列出要拉取的时间线：handle user_id since_id
+├─ news_posts_plan.py    # X 新闻相关帖子 id 批次
+├─ aihot_fetch.py        # aihot.news 资讯
+├─ gh_trending.py        # GitHub Trending（趋势页）
+├─ devtools_fetch.py     # Agent 页：Trending + 公开搜索 → 分类、过滤
+├─ devtools_readme.py    # Agent 页：README 抓取与纯文本清洗（≤600 字）
+├─ avatars_fetch.py      # 头像下载与 webp 缓存
+├─ check_deleted.py      # 可选：检查已展示帖子是否被删除，写入 takedown.txt
+├─ demo_seed.py          # 离线演示数据（虚构），无需任何令牌即可跑通生成与测试
+├─ generate.py           # 静态生成器 → site/
+├─ xhot_data.py  langf.py  redact.py  reflow.py  daily_topics.py   # 生成器模块（数据读取 / 语言 / 脱敏 / 排版 / 话题）
+├─ daily_draft.py        # 日报草稿（供编辑撰写 daily/*.json）
+├─ export_data.py        # 导出 data/（仅 ID 与指标，含全文泄漏检查）
+├─ app_core.js  app_feed.js  app_news.js  app_agents.js   # 前端脚本（构建时加内容哈希）
+├─ style_base.css  style.css  style_ds.css  style_final.css  ds_tokens.json   # 样式与设计令牌
+├─ ds_snap.py            # 构建时把 CSS 数值吸附到令牌刻度
+├─ watchlist.json        # 当前站点使用的账号与话题配置（公开）
+├─ watchlist.sample.json # 最小配置示例
+├─ daily.sample.json  weekly.sample.json   # 日报 / 周要点格式示例
+├─ news_zh.json  devtools_zh.json  takedown.txt   # 编辑内容：资讯中文、Agent 中文与隐藏、撤下清单
+├─ .env.example          # 环境变量模板（复制为 .env，不入库）
+├─ requirements.txt
+├─ gzserve.py            # 本地预览：带 gzip 的静态服务器（模拟 GitHub Pages）
+└─ 测试：test_escape.py fuzz.py qa.py check_links.py ds_audit.py mobile_audit.py shots.py
+        viewports.py news_all.py speed.py speedtab.py audit.py prof.py prof2.py
+```
+
+### 数据库结构（`xhot.db`，SQLite，由 `ingest.py` / `ingest_tl.py` 自动建表）
+
+```sql
+CREATE TABLE followers(ts TEXT, username TEXT, user_id TEXT, name TEXT,
+  followers INTEGER, following INTEGER, tweets INTEGER, PRIMARY KEY(ts, username));   -- 每次刷新一个快照
+CREATE TABLE tweets(id TEXT PRIMARY KEY, author_id TEXT, created_at TEXT, text TEXT,
+  likes INT, rts INT, replies INT, quotes INT, views INT, bm INT, url TEXT, lang TEXT, fetched_at TEXT);
+```
+
+`text` 只存在本机数据库里，**从不原样发布**：页面只用 ≤220 字（必读 ≤320 字）的摘录。
+
+### raw/ 文件约定
+`raw/<YYYYmmdd_HHMMSS>_<label>.json`，生成器按 label 取最新一份：`users_*`、`counts_<领域>__<话题名>`、`news_<领域>`、`news_posts_<领域>`、`aihot*`、`gh_trending`、`devtools`，以及 `agents_repos.json`、`readme_cache.json`。
+
+## 环境准备
+
+- **Python 3.10+**（开发与 CI 使用 3.13）；除 Pillow 外只用标准库。
+- `pip install -r src/requirements.txt`：`Pillow==12.3.0`（头像转 webp，运行依赖）；`playwright==1.63.0`、`beautifulsoup4==4.15.0` **仅测试用**。
+- 浏览器（仅测试）：`python3 -m playwright install chromium webkit`；Linux 上首次还需 `python3 -m playwright install-deps webkit`。
+- 一个 X 开发者账号与 App（见下一节第 1 步）。不想申请也可以先用 `demo_seed.py` 离线体验。
+
+## 从零复刻：分步指南
+
+以下命令都在 `src/` 目录中执行。
+
+### 0. 先离线跑通（可选，1 分钟）
+```bash
+cd src
+python3 demo_seed.py          # 生成虚构的 xhot.db + raw/ + daily/weekly 示例（会覆盖当前 xhot.db）
+python3 generate.py           # 输出 site/
+python3 gzserve.py site 8840  # 浏览器打开 http://127.0.0.1:8840/
+```
+演示数据没有资讯与 GitHub 数据，`qa.py` 会提示这些区块为空，属正常。
+
+### 1. 申请自己的 X Bearer Token
+1. 在 [developer.x.com](https://developer.x.com/) 注册开发者账号，创建 Project 与 App。
+2. 在 App 的 **Keys and tokens** 页生成 **Bearer Token**（只读应用级令牌即可）。
+3. `cp .env.example .env`，把令牌填进 `X_BEARER_TOKEN=`，然后 `set -a; . ./.env; set +a`。`.env` 已被 `.gitignore` 排除。**永远不要把令牌写进代码、git config、remote URL 或提交历史。**
+
+### 2. 配置账号清单（`watchlist.json`）
+从 `watchlist.sample.json` 开始（或直接修改现有的 `watchlist.json`）。每个领域（`ai` / `money` / `growth`）：
+
+| 键 | 含义 |
+|---|---|
+| `label` | 显示名 |
+| `accounts` / `accounts_zh` | 英文 / 中文账号 handle（不带 @） |
+| `groups` | 分组 `{组名: [handle…]}`，用于人物目录 |
+| `keywords_en` / `keywords_zh` | 领域关键词（逗号分隔），用于领域归属与标签 |
+| `trend_queries` | `{话题名: X 搜索语句}`，每个话题每次完整刷新 1 次计数调用 |
+| `news_query` | X 新闻检索词（可选） |
+
+受保护账号无法读取时间线，可加入 `tl_plan.py` 的 `SKIP`。
+
+### 3. 抓取
+```bash
+python3 x_fetch.py full        # 账号资料 → 时间线 → 话题计数 → X 新闻（不支持则自动跳过；或 X_NEWS=0）
+python3 aihot_fetch.py         # 资讯
+python3 gh_trending.py         # 趋势页 GitHub
+python3 devtools_fetch.py      # Agent 页（约 40 次请求，含 7s 搜索间隔，约 3–4 分钟）
+python3 devtools_readme.py     # Agent 详情 README 摘要（只在完整刷新时跑）
+python3 avatars_fetch.py       # 头像缓存
+```
+长任务请放后台并写日志，例如 `nohup python3 devtools_fetch.py > fetch.log 2>&1 &`。
+
+### 4. 编辑内容（可选，但决定「今日」页质量）
+- 日报 `daily/<YYYY-MM-DD>.json`：格式见 `daily.sample.json`（三句话、必读、要点、置顶 / 隐藏）。`python3 daily_draft.py > draft.json` 会按规则给出候选，再人工撰写或用你自己的 LLM 流程撰写。没有日报时页面按规则评分自动排序。
+- 周要点 `weekly/<YYYY-Www>.json`：格式见 `weekly.sample.json`；`XHOT_WEEKLY=1 python3 generate.py` 输出周草稿。
+- `news_zh.json`（X 新闻中文标题）、`devtools_zh.json`（Agent 项目中文一句话、改标签 `tag`、隐藏 `hide`）、`takedown.txt`（撤下的帖子 ID / handle，每行一个）。
+
+### 5. 生成
+```bash
+python3 generate.py            # → site/
+```
+
+### 6. 测试（逐个运行，每个必须通过）
+```bash
+python3 test_escape.py                 # 转义 / XSS / safeUrl / 脱敏 / README 清洗回归，必须 ALL PASS
+python3 fuzz.py 8                      # 8 组随机恶意字符串灌进日报 / 周要点所有字段
+python3 qa.py                          # 内容 QA：重复、空区块、未翻译、领域错配
+python3 check_links.py site            # 站内链接与分片文件存在性
+python3 gzserve.py site 8840 &         # 以下浏览器测试需要预览服务器（务必用 gzserve，不要用 http.server）
+python3 ds_audit.py                    # 设计令牌一致性（字号 / 间距 / 圆角 / 字重）
+python3 mobile_audit.py                # 手机 / 平板（Chromium + WebKit）：溢出、截断、字号下限、触控 44px、展开
+python3 shots.py --all                 # 截图 + CSP / JS 错误 / 体积预算 / 功能断言
+```
+
+### 7. 导出公开数据
+```bash
+python3 export_data.py         # data/：仅 ID 与指标，末尾做全文泄漏检查
 ```
 
 ### data/ 数据格式（不含任何推文全文）
@@ -88,26 +243,167 @@ src/                                # 生成器源码，可从零重建
 
 JSON 键排序固定、缩进 2。导出脚本在末尾做「全文泄漏检查」（出现 `text` / `text_orig*` 键或超过 400 字的字符串就失败）。
 
-## 刷新计划与配额
-每天 08:00 完整刷新（X 配额在此时重置）+ 14:00 / 20:00 / 02:00 轻量刷新。完整刷新约 155 次 X API 读取：账号资料 2 + 时间线约 131 + 话题计数 16 + 新闻 3 + 新闻相关帖子 3。限额：每分钟 30 次、每天 1000 次；脚本每批 ≤25 次、批间隔 60 秒。轻量刷新只读 hot60（近 7 天最热的 60 个账号）的时间线，每次约 63 次；全天合计约 344 次，开跑前若剩余配额不足 300 则放弃。重要度的「作者常态」基线冻结在最近一次完整刷新，轻量刷新只加新帖、不改旧帖得分。aihot.news 与 GitHub Trending 不占 X 配额。每天由 agent 写日报（三句话、必读与译文摘录、Top 30 一句话要点、置顶 / 隐藏复核），每周一写 Top 30 人物的本周要点。
+### 8. 部署到 GitHub Pages
+1. 新建公开仓库，把 `site/` 的内容复制到仓库根目录，连同 `data/`、`src/`（不含 `xhot.db`、`raw/`、`.env`）。
+2. 推送到 `main`。
+3. 仓库 **Settings → Pages → Build and deployment → Source: Deploy from a branch**，选 `main` / `/ (root)`，保存。几分钟后访问 `https://<用户名>.github.io/<仓库名>/`。
+4. 提交前检查暂存区（`git diff --cached`）：不得出现任何 GitHub 个人访问令牌、本机绝对路径、个人邮箱或任何密钥；有就不要提交。
 
-## 从零重建
-需要 Python 3.10+：`pip install -r src/requirements.txt`（Pillow 为运行依赖，playwright 仅测试用）。
+## 定时刷新（cron / GitHub Actions）
 
-1. 准备 X API 只读权限（users by usernames、user posts、posts counts recent、news search、posts by ids），把每次响应存成文件。
-2. 编辑 `src/watchlist.json`（每个领域的 `accounts` / `accounts_zh` / `groups` / `trend_queries` / `news_query`）。
-3. 抓取并入库（`ingest.py`、`ingest_tl.py`、`aihot_fetch.py`、`gh_trending.py`、`avatars_fetch.py`，细节见刷新流程文档）。
-4. 写日报与周要点：`python3 daily_draft.py > /tmp/daily_draft.json`，按字段说明写 `daily/<日期>.json`；每周一 `XHOT_WEEKLY=1 python3 generate.py` 得到周草稿后写 `weekly/<周>.json`。
-5. 生成与自检：`python3 generate.py`（输出 `site/`）→ `python3 test_escape.py`（转义 / 安全回归，必须 ALL PASS）→ `python3 fuzz.py 8`（随机恶意字符串灌进日报 / 周要点所有字段）→ `python3 gzserve.py site 8840 &` → `python3 shots.py --all`（截图 + CSP / JS 错误 / 溢出 / 字号 / 同源请求 / 功能断言）→ `python3 viewports.py`（12 种视口）→ `python3 mobile_audit.py [--scale130]`（iPhone SE/14/Pro Max、Pixel 7、360×640、iPad mini/Pro 真机模拟：横向溢出、被截断的文字、line-clamp、字号下限 15/13/12、触控 44px、展开内容完整可见，`--scale130` 模拟系统文字放大 130%）→ `python3 ds_audit.py`（设计系统一致性：字号/间距/圆角/字重必须落在令牌刻度内、顶栏高度与页面宽度一致、卡片内边距一致，含展开态）→ `python3 news_all.py`（逐条打开每条资讯）→ `python3 speed.py`（Fast 3G + CPU 4×）。
-6. 发布：把 `site/` 复制到仓库根目录，`python3 export_data.py` 导出 `data/`，提交并推送到 `main`。推送凭据放环境变量，不要写进 git config、remote 或任何文件。
+时间均为北京时间（UTC+8）。完整刷新放在你的 X 配额重置之后。
 
-**安全设计**：每页 meta CSP（`script-src` 仅本站 + 主题预绘脚本的 sha256；`connect-src 'self'`；无第三方）与 referrer meta；所有外链经 `safe_url` / `safeUrl`（只放行 http(s)）并带 `rel="noopener noreferrer"`；所有文本先转义再渲染（含译文、摘录、⌘K 结果、分片数据）；嵌入 HTML 的 JSON 转义 `<>&`、U+2028/2029 与 `@@`；头像只接受 `pbs.twimg.com` 并重新编码；前端无 `eval` / `document.write` / `outerHTML`；本地存储只有主题、密度、已读 ID 与上次访问时间。`src/.gitignore` 已排除 `xhot.db`、`raw/`、头像缓存和生成目录，**不要把这些或任何密钥提交到仓库**。 **隐私脱敏**：生成时对页面与分片里的简介 / 摘录统一隐藏邮箱、11 位手机号、微信号（VX: / 微信: 等写法），指向内网 / 本机地址（192.168.x、10.x、172.16–31.x、127.x、localhost、裸 IP、.local 等）的链接不渲染为链接；`test_escape.py` 有对应回归。
+**cron（自己的服务器）：**
+```cron
+0 8 * * *       cd /path/to/xhot/src && set -a && . ./.env && set +a && python3 x_fetch.py full  && python3 aihot_fetch.py && python3 gh_trending.py && python3 devtools_fetch.py && python3 devtools_readme.py && python3 avatars_fetch.py && python3 generate.py && python3 test_escape.py >> refresh.log 2>&1
+0 14,20,2 * * * cd /path/to/xhot/src && set -a && . ./.env && set +a && python3 x_fetch.py light && python3 aihot_fetch.py && python3 generate.py && python3 test_escape.py >> refresh.log 2>&1
+```
+（生成通过后再把 `site/` 同步到 Pages 仓库并推送。）
+
+**GitHub Actions 示例**（`.github/workflows/refresh.yml`）。令牌放在 **Settings → Secrets and variables → Actions** 的 `X_BEARER_TOKEN`，绝不写进文件；`xhot.db` 与 `raw/` 用 cache 在多次运行间保留：
+
+```yaml
+name: refresh
+on:
+  schedule:
+    - cron: "0 0 * * *"        # 08:00 北京时间 完整刷新
+    - cron: "0 6,12,18 * * *"  # 14:00 / 20:00 / 02:00 轻量刷新
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency: refresh
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.13" }
+      - run: pip install Pillow==12.3.0
+      - uses: actions/cache@v4
+        with:
+          path: |
+            src/xhot.db
+            src/raw
+            src/avatars_webp
+          key: xhot-data-${{ github.run_id }}
+          restore-keys: xhot-data-
+      - name: fetch and build
+        working-directory: src
+        env:
+          X_BEARER_TOKEN: ${{ secrets.X_BEARER_TOKEN }}
+        run: |
+          if [ "${{ github.event.schedule }}" = "0 0 * * *" ] || [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            python3 x_fetch.py full && python3 gh_trending.py && python3 devtools_fetch.py && python3 devtools_readme.py && python3 avatars_fetch.py
+          else
+            python3 x_fetch.py light
+          fi
+          python3 aihot_fetch.py
+          python3 generate.py
+          python3 check_links.py site
+          python3 export_data.py
+      - name: publish
+        run: |
+          cp -r src/site/. .
+          git config user.name "${{ github.actor }}"
+          git config user.email "${{ github.actor }}@users.noreply.github.com"
+          git add -A ':!src/xhot.db' ':!src/raw' ':!src/site'
+          git diff --cached --quiet || git commit -m "refresh $(date -u +%F_%H%M)"
+          git push origin HEAD:main
+```
+浏览器测试（`test_escape.py` 的端到端部分、`mobile_audit.py`、`shots.py`）需要 `pip install playwright beautifulsoup4 && python3 -m playwright install --with-deps chromium webkit`，可放在单独的 job 里。
+
+## 重要度、标签、人物榜
+
+- **热度** = 赞 + 2×转推 + 3×引用 + 评论 + 收藏。
+- **重要度（0–100，规则可复现）** = `6·ln(1+热度) + 10·clamp(ln((热度+20)/(作者最近 30 条热度中位数+20)), −1, 2.5)`：既看绝对热度，也看相对作者自己的常态，大号小号可比。榜单每人最多 2 条、文本去重、纯链接帖不进榜。**每天由编辑做最终复核**：必读挑选、置顶 / 隐藏、噪声过滤。
+- **15 个受控标签**（关键词规则打标，可能有误差）：AI：模型 · 智能体 · 编程 · 开源 · 产品发布 · 研究 · 芯片算力 · 政策；搞钱：创业 · 创作者经济 · 融资 · 独立开发；成长：习惯 · 写作 · 职业。
+- **本周 Top 30 人物** = 近 7 天前 3 条帖子重要度之和最高的 30 人（排除灌水账号），每周一由编辑写每人 1–2 条「本周要点」。
+- **日窗口**：某日的日报覆盖「该日 09:00（北京时间）往前 25 小时」。
+
+## 设计系统
+
+令牌定义在 [`src/ds_tokens.json`](src/ds_tokens.json)，生成器（`ds_snap.py` 构建时吸附）和 `ds_audit.py` 共用：
+
+| 令牌 | 取值 |
+|---|---|
+| 字号（px，以 rem 输出，随系统字号缩放） | cap 12 · sm 13 · md 14（手机 15）· lg 16（手机 17）· xl 20 · xxl 28 |
+| 字重 | 400 · 500 · 600 · 700 |
+| 间距（px） | 0 1 2 4 8 12 16 24 32 40 48 56 64（CSS 变量 `--s1`…） |
+| 圆角（px） | 4 · 6 · 8 · 12 · 16 · 999（胶囊） |
+| 顶栏高度 | 桌面 52 · 手机 56；页面左右内边距 桌面 24 · 手机 16 |
+| 边框 / 阴影 | 只有一种 1px 边框（`--bd`）和一种卡片阴影（`--sh`） |
+
+颜色（`style_base.css`，深色模式通过 `[data-theme=dark]` / `prefers-color-scheme` 覆盖）：
+
+| 变量 | 浅色 | 深色 | 用途 |
+|---|---|---|---|
+| `--bg` | `#f6f5fb` | `#0f0c26` | 页面背景 |
+| `--card` | `#fff` | `#1a1640` | 卡片 |
+| `--bd` / `--bd2` | `#e6e4ef` / `#f0eef6` | `#2c2856` / `#221e48` | 边框 / 分隔 |
+| `--tx` / `--tx2` | `#18181b` / `#3f3f46` | `#f4f4f5` / `#d4d4d8` | 正文 / 次要文字 |
+| `--mu` | `#6b6880` | `#a5a3c9` | 元信息 |
+| `--ac` / `--actx` | `#7c3aed` / `#6d28d9` | `#c084fc` / `#e9d5ff` | 强调色 / 强调文字 |
+| `--up` / `--dn` | `#16a34a` / `#dc2626` | `#4ade80` / `#fb7185` | 涨 / 跌 |
+
+组件规则：
+- 共享组件都在 `style_ds.css`：页面容器、标题层级、卡片、列表行、标签、按钮、分段控件、标签页、分页、底部详情面板、手机整页阅读页。
+- 所有对比度需达到 WCAG AA；彩色底上的选中态文字用深色（`#0f0c26`），不要用白字。
+- 触控目标 ≥44px（手机）；阅读文字 ≥15px、次要 ≥13px、元信息 ≥12px（手机）。
+- 展开 / 收起统一走 `app_core.js` 的 `xp()`：高度动画、`aria-expanded`、滚入视口、减少动效时直接切换。长帖正文默认折叠为 6 行并渐隐（`.pt.clp`），点击卡片或「展开」查看完整摘录。
+- Agent 卡片网格：>1000px 3 列，721–1000px 2 列，手机 1 列；每页 9 张。
+- 改样式后必须跑 `ds_audit.py` 与 `mobile_audit.py`，不得有越界值。
+
+## 安全设计
+
+- **CSP**：每页 `<meta>` CSP，`script-src` 只允许本站与主题预绘脚本的 sha256，`connect-src 'self'`，`img-src 'self' data:`，`object-src` / `frame-src` / `form-action` 全部禁用，无任何第三方源；另有 referrer meta。
+- **转义**：所有文本先转义再渲染（服务端 `e()` 先脱敏再 HTML 转义，含译文、摘录、⌘K 结果、分片数据）；嵌入 HTML 的 JSON 额外转义 `<>&`、U+2028/2029；前端只用 `textContent` 插入外部数据（Agent 页详情面板也是），无 `eval` / `document.write` / `outerHTML`。
+- **链接**：所有外链经 `safe_url()` / `safeUrl()`，只放行 `http(s)`，带 `rel="noopener noreferrer"`；指向内网 / 本机地址的链接不渲染为链接。
+- **头像白名单**：只接受 `pbs.twimg.com`，下载后用 Pillow 重新编码为 webp。
+- **README 清洗**：Agent 详情只保留纯文本（去掉 HTML、图片、徽章、链接目标、代码块），≤600 字。
+- **隐私脱敏**（`redact.py`）：简介与摘录中的邮箱、11 位手机号、微信号统一隐藏。
+- **不发布全文**：公开仓库与站点里没有推文全文；`export_data.py` 末尾的泄漏检查发现 `text` 键或超长字符串就失败。
+- **密钥**：令牌只放环境变量 / CI Secrets；`.env`、`xhot.db`、`raw/` 已被 `.gitignore` 排除。
+- **撤下流程**：在本仓库开 Issue（附帖子链接或账号），维护者把 ID / handle 加入 `src/takedown.txt`，下次刷新即从页面与 `data/` 中移除；`check_deleted.py` 可批量发现已删除的帖子并自动加入。
+- 回归：`test_escape.py`（必须 ALL PASS）与 `fuzz.py`。
+
+## 合规与内容策略
+
+- **仓库与站点只公开帖子 ID、互动指标、≤220 字（必读 ≤320 字）的短摘录、编辑撰写的中文要点 / 译文摘录，以及指向 X 的原帖链接**；不再公开推文全文（v14 的 `data/tweets/*.json` 与日报 `text_orig` 已停止公开）。要读全文请点「在 X 打开」。
+- 英文帖的中文是**摘录的中文译文**（带「译」标记，仅供参考，以原文为准）。
+- 资讯：AIHOT 的摘要 / 综述来自其公开 API（MIT 许可）；文章原文版权属于原站，本站只给链接。
+- 推文内容版权归原作者；本项目只做摘录、索引与展示。
+
+- 使用 X API 须遵守 [X Developer Agreement and Policy](https://developer.x.com/en/developer-terms/agreement-and-policy)：本项目只读取公开数据，**公开发布的只有帖子 ID、互动指标、短摘录和指向 X 的链接**；被删除或受保护的内容通过 `takedown.txt` 与 `check_deleted.py` 及时移除。
+- 站内 `about.html` 说明数据来源、哪些内容是 AI 生成（中文要点 / 译文，带「译」标记）、撤下方式与免责声明。
+- 本项目与 X Corp.、AIHOT、GitHub 无隶属关系；以上不构成法律意见。
+
+## 自定义：账号、领域、标签
+
+- **换账号**：改 `watchlist.json` 的 `accounts` / `accounts_zh` / `groups`，下次 `x_fetch.py full` 会自动拉资料与时间线；删掉的账号不再更新（历史数据留在本机库里）。
+- **换话题**：改 `trend_queries`（每个话题每天 1 次计数调用，注意配额）。
+- **改领域**：领域键决定 `d/<键>.html`。增删领域需同时修改 `generate.py` 中的 `DOMS`、导航与标签规则，并更新 `qa.py` 的领域检查。
+- **改标签**：`generate.py` 中的标签规则表（形如 `('code','编程','ai', r'claude code|codex|…')`：键、显示名、所属领域、正则）。保持受控标签数量少而稳定。
+- **Agent 页**：分类规则与屏蔽词在 `devtools_fetch.py` 的 `RULES` / `BLOCK`；中文一句话、改分类、隐藏在 `devtools_zh.json`。
+- **改样式**：先改 `ds_tokens.json` 与 `style_ds.css`，再跑 `ds_audit.py`。
+
+## 常见问题与排错
+
+- **长任务被中断 / 终端卡住**：`devtools_fetch.py`（有 7s 搜索间隔）、`shots.py --all`、`mobile_audit.py` 都可能运行数分钟。用 `nohup … > x.log 2>&1 &` 放后台，逐步写日志，再查看日志，不要在前台长时间阻塞。
+- **体积预算测试失败，但页面并不大**：预算按 **gzip 后**的传输体积计算。用 `python3 -m http.server` 预览不压缩，会误报；请用 `gzserve.py`。
+- **Safari / iOS 上卡片文字压住按钮**：WebKit 在「纵向 flex 容器 + 自动高度」里对 `flex:1`（基准 0%）的子元素会算出过小的高度，文字溢出。正文用 `flex:1 0 auto; min-height:0`，长文本再配合行数折叠与展开；`mobile_audit.py` 会同时在 Chromium 与 WebKit 里检查。
+- **平板宽度下顶栏换行压住内容**：721–1060px 时顶栏高度需为 `auto`（已在 `style_ds.css` 处理）。
+- **429 Too Many Requests**：`x_fetch.py` 会按重置时间等待重试一次；仍失败就降低 `HOT_N` / 话题数，或调大刷新间隔。GitHub 搜索 403 / 429 通常是未认证搜索的 10 次/分钟限制。
+- **X 新闻为空**：`/2/news/search` 取决于你的 API 套餐，不支持时设 `X_NEWS=0`，资讯页只显示 AIHOT。
+- **`test_escape.py` 找不到 daily / weekly**：先放至少一份日报和周要点（`demo_seed.py` 会自动放示例）。
+- **页面没变化**：生成器不烘焙相对时间，数据没变就不改写文件，这是有意的（减少提交噪声）。
+- **字体或间距审计报越界**：新写的 CSS 数值没落在令牌刻度上，改用 `var(--s*)` / `var(--t-*)` / `var(--r*)`。
 
 ## English
 
-**XHOT** is a static briefing of hot posts on X across AI, making money and personal growth, fully refreshed daily at 08:00 (Asia/Shanghai) plus light refreshes at 14:00, 20:00 and 02:00 (top ~60 accounts only, rules-only scoring). Pages: Today (three-sentence summary, must-reads, a ranked Top 30 with one-line takeaways), Domains, People (weekly takeaways for the top 30), News, Trends, a full archive and a ⌘K search. The UI is Chinese only. The public repo and site contain **only post IDs, metrics, short excerpts (≤220–320 characters) and agent-written Chinese summaries plus links back to X — no full tweet text**. No analytics, no third-party requests; read/new badges live only in your browser. The generator is host-agnostic (plain static output). Limits on GitHub Pages: no response headers (CSP via `<meta>` only, no `frame-ancestors`), soft bandwidth/size limits, unreliable access from mainland China. Tweet content belongs to the original authors.
+**XHOT** is a static briefing of hot posts on X across AI, making money and personal growth (~130 accounts), plus AI news and an AI developer-tools radar from GitHub. It is fully refreshed daily at 08:00 (Asia/Shanghai), with light refreshes at 14:00, 20:00 and 02:00. Pages: Today, Domains, People, News, Trends, Agent (GitHub AI tools: today / this week / new), plus ⌘K search.
 
+**Replicate it:** `pip install -r src/requirements.txt`; run `python3 demo_seed.py && python3 generate.py && python3 gzserve.py site 8840` for an offline demo. For real data, create your own X developer App, put its Bearer Token in `.env` as `X_BEARER_TOKEN` (never commit it), edit `watchlist.json`, then run `x_fetch.py full`, `aihot_fetch.py`, `gh_trending.py`, `devtools_fetch.py`, `devtools_readme.py`, `avatars_fetch.py`, then `generate.py`. Run the tests one by one, export `data/` with `export_data.py`, and publish `site/` to GitHub Pages (Settings → Pages → Deploy from a branch → `main` / root). A GitHub Actions example is above.
 
-## 设计系统（v15.5）
-
-令牌在 `ds_tokens.json`：字号 6 档（12 / 13 / 14（手机 15）/ 16（手机 17）/ 20 / 28，rem，随系统字号缩放），间距 0 1 2 4 8 12 16 24 32 40 48 56 64，圆角 6 / 8 / 12 / 胶囊，字重 400 / 500 / 600 / 700，一种 1px 边框、一种阴影。构建时 `ds_snap.py` 把所有 CSS 的字号 / 间距 / 圆角吸附到刻度；`style_ds.css` 定义共享组件（页面容器、标题层级、卡片、列表行、标签、按钮、分段控件、展开、手机整页阅读页）。展开/收起统一走 `app_core.js` 里的 `xp()`（高度动画、aria、滚入视口、减少动效时直接切换）。改样式后请跑 `ds_audit.py`，不得有越界值。
+The repo and site publish **only post IDs, metrics, short excerpts (≤220–320 characters), editor-written Chinese summaries and links back to X — never full post text**. They follow the X Developer Agreement. There are no analytics and no third-party requests. Pages use a strict meta CSP, escape everything, filter links through safeUrl and only accept avatars from `pbs.twimg.com`. To request a takedown, open an issue. Post content belongs to the original authors; AIHOT summaries are MIT-licensed.

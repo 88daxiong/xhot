@@ -326,7 +326,7 @@ def minimap(vals,w=112,h=28):
 
 GH=GH0
 GHR=sorted([r for r in GH['repos'] if r['ai'] and langf.script_ok(r['desc'])],key=lambda r:-r['today'])[:20]
-# ---- Agent 页（agents.html）：AI 开发工具（devtools_fetch.py 抓取 + devtools_zh.json agent 撰写的中文/改标签/隐藏）----
+# ---- Agent 页（agents.html）：AI 开发工具（devtools_fetch.py 抓取 + devtools_zh.json 编辑撰写的中文/改标签/隐藏）----
 DTN={'agent':'Agent/Harness','coding':'编码代理','mcp':'MCP/插件','infra':'基础设施/沙箱','ops':'管理工具','fun':'好玩'}
 DTC={k:f'var(--dt-{k})' for k in DTN}   # 颜色令牌在 style_ds.css（浅/深色各一套，满足 4.5:1）
 def _devtools():
@@ -566,7 +566,7 @@ def _dok(d):
         pid=str(h.get('post_id') or ''); pid=pid if re.fullmatch(r'\d{5,25}',pid) else ''
         p=PBY.get(pid)
         og=str(h.get('excerpt') or '') or (excerpt(str(h.get('text_orig') or ''),EXCH) if h.get('text_orig') else '') or (excerpt(p['t'],EXCH) if p else '')
-        likes=p['like'] if (p and os.environ.get('XHOT_LIVE_LIKES')) else (h.get('likes') if isinstance(h.get('likes'),int) else (p['like'] if p else None))   # 轻量刷新：必读的点赞数取库里最新值（规则字段），其余 agent 撰写字段不动
+        likes=p['like'] if (p and os.environ.get('XHOT_LIVE_LIKES')) else (h.get('likes') if isinstance(h.get('likes'),int) else (p['like'] if p else None))   # 轻量刷新：必读的点赞数取库里最新值（规则字段），其余 编辑撰写字段不动
         hl.append(dict(handle=h['handle'],name=str(h.get('name') or h['handle']),text=str(h.get('text_zh') or ''),pid=pid,
             url=str(h.get('url') or (xlink(h['handle'],pid) if pid else f"https://x.com/{h['handle']}")),likes=likes,orig=og[:EXCH+40],orig_zh=str(h.get('excerpt_zh') or '')[:EXCH*3],
             tags=[k for k in (h.get('tags') or tags_of(og)) if k in TAGL][:2]))

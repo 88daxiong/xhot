@@ -1,0 +1,12 @@
+{
+ "date": "2026-01-01",
+ "summary_zh": ["第一句：今天最重要的事。", "第二句。", "第三句。"],
+ "highlights": [
+  {"handle": "example", "name": "Example", "post_id": "1900000000000000001", "url": "https://x.com/example/status/1900000000000000001",
+   "likes": 1234, "text_zh": "一句话中文要点", "excerpt": "Short excerpt (<=320 chars), never the full post.", "excerpt_zh": "摘录的中文译文", "tags": ["智能体"]}
+ ],
+ "gists": {"1900000000000000001": "一句话要点"},
+ "pin": [], "hide": [],
+ "topics_zh": "", "followers_zh": "",
+ "changelog": []
+}

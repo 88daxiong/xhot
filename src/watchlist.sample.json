@@ -1,0 +1,33 @@
+{
+ "_doc": "最小示例：复制为 watchlist.json 后按需修改。领域键（ai/money/growth）被页面路径 d/<键>.html 使用；增删领域需同步修改 generate.py 里的 DOMS 与标签规则。",
+ "ai": {
+  "label": "AI",
+  "accounts": ["OpenAI", "AnthropicAI", "karpathy"],
+  "accounts_zh": [],
+  "groups": {"实验室": ["OpenAI", "AnthropicAI"], "研究者": ["karpathy"]},
+  "keywords_en": "agent, LLM, open source model",
+  "keywords_zh": "智能体, 大模型, 开源",
+  "trend_queries": {"Claude Code": "\"Claude Code\" -is:retweet", "vibe coding": "\"vibe coding\" -is:retweet"},
+  "news_query": "AI"
+ },
+ "money": {
+  "label": "搞钱",
+  "accounts": ["levelsio"],
+  "accounts_zh": [],
+  "groups": {"独立开发": ["levelsio"]},
+  "keywords_en": "startup, MRR, indie hacker",
+  "keywords_zh": "创业, 副业",
+  "trend_queries": {"indie hacker": "\"indie hacker\" -is:retweet"},
+  "news_query": "startup"
+ },
+ "growth": {
+  "label": "成长",
+  "accounts": ["naval"],
+  "accounts_zh": [],
+  "groups": {"思考": ["naval"]},
+  "keywords_en": "habits, writing",
+  "keywords_zh": "习惯, 写作",
+  "trend_queries": {"deep work": "\"deep work\" -is:retweet"},
+  "news_query": "productivity"
+ }
+}

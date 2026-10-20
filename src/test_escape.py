@@ -152,7 +152,7 @@ for raw,bad in RMAL:
     o=_rs(raw); check('readme sanitize: '+raw[:36].replace('\n',' '),'<' not in o and '>' not in o and bad not in o,o)
 check('readme sanitize: length cap',len(_rs('word '*2000))<=605)
 check('readme sanitize: keeps plain text',_rs('# Title\n\nThe open source **AI** coding agent.').endswith('The open source AI coding agent.'),_rs('# Title\n\nThe open source **AI** coding agent.'))
-_aj=open(os.path.join(D,'app_agents_v15.js'),encoding='utf-8').read()
+_aj=open(os.path.join(D,'app_agents.js'),encoding='utf-8').read()
 check('agents.js: no innerHTML / insertAdjacentHTML (only textContent)',not re.search(r'innerHTML|insertAdjacentHTML|outerHTML|document\.write',_aj))
 check('agents.js: GitHub link built from encoded repo path with noopener noreferrer',"rel='noopener noreferrer'" in _aj.replace('"',"'") and 'encodeURIComponent' in _aj)
 print('ALL PASS' if not fails else f'{fails} FAILED'); sys.exit(1 if fails else 0)

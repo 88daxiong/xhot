@@ -2,7 +2,7 @@
 """合规：检查站点展示过的帖子是否已被删除 / 变为受保护（X API v2 批量查询，每批 ≤100 个 ID）。
 用法：X_BEARER_TOKEN=... python3 check_deleted.py [--days 14] [--apply]
 - 默认只打印；--apply 把查不到的 ID 追加进 takedown.txt（生成器会跳过）。
-- 只读、只查最近 N 天展示过的帖子，请求量 ≈ ⌈帖子数/100⌉ 次。尚未在生产流程里自动运行（见 REFRESH.md 的可选步骤）。"""
+- 只读、只查最近 N 天展示过的帖子，请求量 ≈ ⌈帖子数/100⌉ 次。尚未在生产流程里自动运行（见 README 的可选步骤）。"""
 import os,sys,json,sqlite3,urllib.request,urllib.parse,datetime
 D=os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0,D)
 tok=os.environ.get('X_BEARER_TOKEN'); days=int(sys.argv[sys.argv.index('--days')+1]) if '--days' in sys.argv else 14

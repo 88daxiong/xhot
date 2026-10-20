@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """v15 公开数据导出：python3 export_data.py [data]
 与 v14 的区别：**不导出任何推文全文**。tweets/<handle>.json 只含 id / created_at / lang / 指标 / url；
-daily/*.json 去掉 text_orig、text_orig_zh（只保留 excerpt、excerpt_zh、text_zh、gists、summary_zh 等 agent 撰写的字段）；weekly/*.json 原样复制。
+daily/*.json 去掉 text_orig、text_orig_zh（只保留 excerpt、excerpt_zh、text_zh、gists、summary_zh 等 编辑撰写的字段）；weekly/*.json 原样复制。
 不导出 raw/、xhot.db 或任何密钥。导出后自检：任何 JSON 里出现 text / text_orig* 键或超过 400 字的字符串即报错退出（防止全文泄漏）。"""
 import os,sys,json,sqlite3,glob,shutil
 D=os.path.dirname(os.path.abspath(__file__))

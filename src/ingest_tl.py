@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""用法: python3 ingest_tl.py <API 结果文件>... 把 get_users_posts 结果写入 tweets 表（按 id 去重），每账号保留最新 200 条。"""
+"""用法: python3 ingest_tl.py <API 结果文件>... 把 X API v2 用户时间线（GET /2/users/:id/tweets）结果写入 tweets 表（按 id 去重），每账号保留最新 200 条。"""
 import sys,json,os,sqlite3,shutil,datetime
 D=os.path.dirname(os.path.abspath(__file__))
 db=sqlite3.connect(os.path.join(D,'xhot.db'))
