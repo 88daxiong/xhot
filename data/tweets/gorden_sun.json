@@ -2,6 +2,20 @@
   "handle": "gorden_sun",
   "tweets": [
     {
+      "created_at": "2026-10-20T04:05:16.000Z",
+      "id": "2112394695099994150",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 12,
+        "impression": 2018,
+        "like": 11,
+        "quote": 0,
+        "reply": 11,
+        "retweet": 0
+      },
+      "url": "https://x.com/Gorden_Sun/status/2112394695099994150"
+    },
+    {
       "created_at": "2026-10-20T02:16:05.000Z",
       "id": "2112367218508108120",
       "lang": "zh",
