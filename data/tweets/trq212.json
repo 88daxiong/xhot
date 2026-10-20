@@ -2,6 +2,118 @@
   "handle": "trq212",
   "tweets": [
     {
+      "created_at": "2026-10-19T16:27:48.000Z",
+      "id": "2112219173288120531",
+      "lang": "",
+      "metrics": {
+        "bookmark": 1013,
+        "impression": 253052,
+        "like": 5071,
+        "quote": 110,
+        "reply": 459,
+        "retweet": 261
+      },
+      "url": "https://x.com/trq212/status/2112219173288120531"
+    },
+    {
+      "created_at": "2026-10-18T22:19:40.000Z",
+      "id": "2111945336537420259",
+      "lang": "",
+      "metrics": {
+        "bookmark": 203,
+        "impression": 147766,
+        "like": 2048,
+        "quote": 37,
+        "reply": 284,
+        "retweet": 32
+      },
+      "url": "https://x.com/trq212/status/2111945336537420259"
+    },
+    {
+      "created_at": "2026-10-18T18:17:02.000Z",
+      "id": "2111884272101691613",
+      "lang": "",
+      "metrics": {
+        "bookmark": 3,
+        "impression": 9037,
+        "like": 15,
+        "quote": 0,
+        "reply": 8,
+        "retweet": 0
+      },
+      "url": "https://x.com/trq212/status/2111884272101691613"
+    },
+    {
+      "created_at": "2026-10-18T18:16:44.000Z",
+      "id": "2111884199359897953",
+      "lang": "",
+      "metrics": {
+        "bookmark": 4,
+        "impression": 10005,
+        "like": 28,
+        "quote": 0,
+        "reply": 7,
+        "retweet": 0
+      },
+      "url": "https://x.com/trq212/status/2111884199359897953"
+    },
+    {
+      "created_at": "2026-10-18T18:15:19.000Z",
+      "id": "2111883843846451632",
+      "lang": "",
+      "metrics": {
+        "bookmark": 3,
+        "impression": 4627,
+        "like": 43,
+        "quote": 0,
+        "reply": 3,
+        "retweet": 0
+      },
+      "url": "https://x.com/trq212/status/2111883843846451632"
+    },
+    {
+      "created_at": "2026-10-18T18:13:24.000Z",
+      "id": "2111883360624885783",
+      "lang": "",
+      "metrics": {
+        "bookmark": 2,
+        "impression": 6216,
+        "like": 1,
+        "quote": 0,
+        "reply": 0,
+        "retweet": 0
+      },
+      "url": "https://x.com/trq212/status/2111883360624885783"
+    },
+    {
+      "created_at": "2026-10-18T18:12:38.000Z",
+      "id": "2111883168190275752",
+      "lang": "",
+      "metrics": {
+        "bookmark": 3,
+        "impression": 7046,
+        "like": 38,
+        "quote": 0,
+        "reply": 6,
+        "retweet": 0
+      },
+      "url": "https://x.com/trq212/status/2111883168190275752"
+    },
+    {
+      "created_at": "2026-10-18T18:12:18.000Z",
+      "id": "2111883082953547881",
+      "lang": "",
+      "metrics": {
+        "bookmark": 233,
+        "impression": 70302,
+        "like": 926,
+        "quote": 7,
+        "reply": 99,
+        "retweet": 21
+      },
+      "url": "https://x.com/trq212/status/2111883082953547881"
+    },
+    {
       "created_at": "2026-10-15T02:53:51.000Z",
       "id": "2110564783074463865",
       "lang": "en",

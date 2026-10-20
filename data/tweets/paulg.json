@@ -2,6 +2,160 @@
   "handle": "paulg",
   "tweets": [
     {
+      "created_at": "2026-10-19T15:57:33.000Z",
+      "id": "2112211561091858537",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 396,
+        "impression": 126715,
+        "like": 4493,
+        "quote": 49,
+        "reply": 285,
+        "retweet": 212
+      },
+      "url": "https://x.com/paulg/status/2112211561091858537"
+    },
+    {
+      "created_at": "2026-10-19T15:42:43.000Z",
+      "id": "2112207824914989252",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 128,
+        "impression": 62245,
+        "like": 1185,
+        "quote": 5,
+        "reply": 74,
+        "retweet": 16
+      },
+      "url": "https://x.com/paulg/status/2112207824914989252"
+    },
+    {
+      "created_at": "2026-10-18T15:31:37.000Z",
+      "id": "2111842645928718812",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 117,
+        "impression": 142202,
+        "like": 2160,
+        "quote": 21,
+        "reply": 137,
+        "retweet": 77
+      },
+      "url": "https://x.com/paulg/status/2111842645928718812"
+    },
+    {
+      "created_at": "2026-10-18T15:25:57.000Z",
+      "id": "2111841220133876194",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 509,
+        "impression": 222929,
+        "like": 4151,
+        "quote": 39,
+        "reply": 251,
+        "retweet": 98
+      },
+      "url": "https://x.com/paulg/status/2111841220133876194"
+    },
+    {
+      "created_at": "2026-10-18T14:30:51.000Z",
+      "id": "2111827351608725669",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 420,
+        "impression": 200531,
+        "like": 3016,
+        "quote": 76,
+        "reply": 343,
+        "retweet": 134
+      },
+      "url": "https://x.com/paulg/status/2111827351608725669"
+    },
+    {
+      "created_at": "2026-10-18T14:14:54.000Z",
+      "id": "2111823339953991832",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 920,
+        "impression": 849410,
+        "like": 3770,
+        "quote": 10,
+        "reply": 129,
+        "retweet": 152
+      },
+      "url": "https://x.com/paulg/status/2111823339953991832"
+    },
+    {
+      "created_at": "2026-10-17T17:32:24.000Z",
+      "id": "2111510655681597824",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 75,
+        "impression": 101120,
+        "like": 372,
+        "quote": 18,
+        "reply": 233,
+        "retweet": 14
+      },
+      "url": "https://x.com/paulg/status/2111510655681597824"
+    },
+    {
+      "created_at": "2026-10-17T17:24:39.000Z",
+      "id": "2111508702469529883",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 16,
+        "impression": 174685,
+        "like": 381,
+        "quote": 9,
+        "reply": 157,
+        "retweet": 5
+      },
+      "url": "https://x.com/paulg/status/2111508702469529883"
+    },
+    {
+      "created_at": "2026-10-17T14:09:19.000Z",
+      "id": "2111459546761994556",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 7,
+        "impression": 22061,
+        "like": 33,
+        "quote": 0,
+        "reply": 6,
+        "retweet": 2
+      },
+      "url": "https://x.com/paulg/status/2111459546761994556"
+    },
+    {
+      "created_at": "2026-10-17T13:57:14.000Z",
+      "id": "2111456506021622168",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 38,
+        "impression": 105142,
+        "like": 249,
+        "quote": 1,
+        "reply": 51,
+        "retweet": 7
+      },
+      "url": "https://x.com/paulg/status/2111456506021622168"
+    },
+    {
+      "created_at": "2026-10-17T11:44:11.000Z",
+      "id": "2111423024163586403",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 558,
+        "impression": 222046,
+        "like": 2347,
+        "quote": 30,
+        "reply": 135,
+        "retweet": 116
+      },
+      "url": "https://x.com/paulg/status/2111423024163586403"
+    },
+    {
       "created_at": "2026-10-16T23:13:39.000Z",
       "id": "2111234145007395206",
       "lang": "",

@@ -2,6 +2,188 @@
   "handle": "codie_sanchez",
   "tweets": [
     {
+      "created_at": "2026-10-20T02:59:50.000Z",
+      "id": "2112378227373060297",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 3,
+        "impression": 2819,
+        "like": 12,
+        "quote": 0,
+        "reply": 2,
+        "retweet": 1
+      },
+      "url": "https://x.com/Codie_Sanchez/status/2112378227373060297"
+    },
+    {
+      "created_at": "2026-10-19T22:31:08.000Z",
+      "id": "2112310609253474775",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 32,
+        "impression": 11525,
+        "like": 334,
+        "quote": 2,
+        "reply": 49,
+        "retweet": 12
+      },
+      "url": "https://x.com/Codie_Sanchez/status/2112310609253474775"
+    },
+    {
+      "created_at": "2026-10-19T18:27:23.000Z",
+      "id": "2112249266865373261",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 11,
+        "impression": 12176,
+        "like": 132,
+        "quote": 0,
+        "reply": 25,
+        "retweet": 6
+      },
+      "url": "https://x.com/Codie_Sanchez/status/2112249266865373261"
+    },
+    {
+      "created_at": "2026-10-19T15:27:06.000Z",
+      "id": "2112203898584785221",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 335,
+        "impression": 31213,
+        "like": 1295,
+        "quote": 11,
+        "reply": 115,
+        "retweet": 124
+      },
+      "url": "https://x.com/Codie_Sanchez/status/2112203898584785221"
+    },
+    {
+      "created_at": "2026-10-19T13:34:09.000Z",
+      "id": "2112175471253233981",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 60,
+        "impression": 29436,
+        "like": 608,
+        "quote": 3,
+        "reply": 48,
+        "retweet": 20
+      },
+      "url": "https://x.com/Codie_Sanchez/status/2112175471253233981"
+    },
+    {
+      "created_at": "2026-10-18T23:03:55.000Z",
+      "id": "2111956468626764195",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 76,
+        "impression": 21763,
+        "like": 528,
+        "quote": 9,
+        "reply": 84,
+        "retweet": 47
+      },
+      "url": "https://x.com/Codie_Sanchez/status/2111956468626764195"
+    },
+    {
+      "created_at": "2026-10-18T22:31:16.000Z",
+      "id": "2111948252929040836",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 65,
+        "impression": 22077,
+        "like": 514,
+        "quote": 2,
+        "reply": 48,
+        "retweet": 32
+      },
+      "url": "https://x.com/Codie_Sanchez/status/2111948252929040836"
+    },
+    {
+      "created_at": "2026-10-18T18:27:13.000Z",
+      "id": "2111886835219616116",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 955,
+        "impression": 95994,
+        "like": 7084,
+        "quote": 12,
+        "reply": 143,
+        "retweet": 541
+      },
+      "url": "https://x.com/Codie_Sanchez/status/2111886835219616116"
+    },
+    {
+      "created_at": "2026-10-18T15:27:37.000Z",
+      "id": "2111841640792957292",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 93,
+        "impression": 26072,
+        "like": 487,
+        "quote": 7,
+        "reply": 52,
+        "retweet": 30
+      },
+      "url": "https://x.com/Codie_Sanchez/status/2111841640792957292"
+    },
+    {
+      "created_at": "2026-10-18T13:34:05.000Z",
+      "id": "2111813067210133770",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 103,
+        "impression": 27377,
+        "like": 1253,
+        "quote": 4,
+        "reply": 73,
+        "retweet": 70
+      },
+      "url": "https://x.com/Codie_Sanchez/status/2111813067210133770"
+    },
+    {
+      "created_at": "2026-10-17T18:27:13.000Z",
+      "id": "2111524447358173404",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 44,
+        "impression": 24858,
+        "like": 619,
+        "quote": 4,
+        "reply": 78,
+        "retweet": 34
+      },
+      "url": "https://x.com/Codie_Sanchez/status/2111524447358173404"
+    },
+    {
+      "created_at": "2026-10-17T15:27:06.000Z",
+      "id": "2111479121448493459",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 221,
+        "impression": 69213,
+        "like": 955,
+        "quote": 23,
+        "reply": 154,
+        "retweet": 66
+      },
+      "url": "https://x.com/Codie_Sanchez/status/2111479121448493459"
+    },
+    {
+      "created_at": "2026-10-17T13:34:04.000Z",
+      "id": "2111450676471402799",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 78,
+        "impression": 23945,
+        "like": 768,
+        "quote": 7,
+        "reply": 109,
+        "retweet": 59
+      },
+      "url": "https://x.com/Codie_Sanchez/status/2111450676471402799"
+    },
+    {
       "created_at": "2026-10-16T22:31:00.000Z",
       "id": "2111223410831327664",
       "lang": "",

@@ -2,6 +2,34 @@
   "handle": "aiatmeta",
   "tweets": [
     {
+      "created_at": "2026-10-19T19:33:10.000Z",
+      "id": "2112265822274302066",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 379,
+        "impression": 95335,
+        "like": 893,
+        "quote": 80,
+        "reply": 83,
+        "retweet": 121
+      },
+      "url": "https://x.com/AIatMeta/status/2112265822274302066"
+    },
+    {
+      "created_at": "2026-10-19T18:14:17.000Z",
+      "id": "2112245968750145561",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 481,
+        "impression": 191558,
+        "like": 2789,
+        "quote": 68,
+        "reply": 121,
+        "retweet": 216
+      },
+      "url": "https://x.com/AIatMeta/status/2112245968750145561"
+    },
+    {
       "created_at": "2026-10-15T22:32:35.000Z",
       "id": "2110861420321759269",
       "lang": "",

@@ -1,0 +1,141 @@
+{
+  "changelog": [
+    {
+      "date": "2026-10-20"
+    }
+  ],
+  "date": "2026-10-20",
+  "followers_zh": "10-17 → 10-20：deepseek_ai +24,069、elonmusk +22,494、thsottiaux +18,853、claudeai +13,410；satyanadella −4,634、cz_binance −3,759。",
+  "gists": {
+    "2111977112668086332": "CZ 调侃：他总有一天会说对的……等他改变主意之后。",
+    "2111990254408434095": "Codex 负责人 Tibo（Day 14）：桌面应用终于支持编辑线程里之前的消息。",
+    "2112015643126165669": "马斯克：参议院的控制权将决定美国的未来。",
+    "2112030115752456456": "Ethan Mollick：讨厌“计算机不能做管理决策”那张幻灯片，自动化系统早就在交易、物流、保险中做决策。",
+    "2112039275344941371": "Tibo：买了个新域名，非常兴奋。",
+    "2112073533794971941": "swyx：数据工程师比 AI 工程师更吃香，“RAG 选手”和懂数据密集型应用的人需求差距空前。",
+    "2112111925975032241": "MiniMax 预告：Space Bunny 回来了，M3.1 Flash 即将上线。",
+    "2112152045461680591": "OpenRouter：匿名模型 Space Bunny 曾连续 10 天排名第一、处理 56.7T token，揭晓为 MiniMax M3.1 Flash。",
+    "2112176708447023330": "Tim Ferriss 分享自己的日记系统：用于深度专注、减轻压力。",
+    "2112199261899411579": "Google 演示：用 Gemini 4 Argon 调度子智能体、Blender MCP 和 Nano Banana，把真实桌面照片变成互动游戏。",
+    "2112203259926733091": "Alex Hormozi：敢于尝试的勇气、愿意学习的谦逊、永不放弃的意志。",
+    "2112203898584785221": "Codie Sanchez：做生意只需要 3 件事——转介绍、经常性收入、好评。",
+    "2112214581443498261": "Gemini App：团队用 Gemini 4 Argon + Antigravity 在 Mac 版应用里从零做出可玩的 3D 巫师棋。",
+    "2112218670843969944": "Matthew Berman：软件已经“做完了”，预告自己在做的新东西。",
+    "2112225779782398131": "OpenRouter 上线 Inception 的扩散模型 Mercury 3：每秒 1000+ token、1M 上下文。",
+    "2112229620758265938": "OpenAI Devs 征集：大家最近用 Codex 做了什么？",
+    "2112238098147135880": "Nutlope 实测：M3.1 Flash 做落地页设计很强，成本 0.014 美元，只有 Opus 5.5 的 1/88。",
+    "2112242739198959913": "OpenAI Devs 分享团队正在用 Codex 做的东西。",
+    "2112245968750145561": "Meta：Muse 系列（含 Muse Wonder）在俄亥俄州吉瓦级超算 Prometheus 上训练，介绍如何揪出拖慢训练的故障主机。",
+    "2112247046082363821": "Guillermo Rauch：Vercel 开源超快 HTML 产物构建器，基于 libfx 让智能体在崩溃后可恢复。",
+    "2112295644765585560": "Matthew Berman：你根本不知道接下来会发生什么（预告视频）。",
+    "2112299456255381600": "Eric Zakariasson：Grok Bot 0.71.2 发布，通知更聪明，单文件最大 250MB（视频 1GB），表单可预填。"
+  },
+  "hide": [
+    "2112171435695476762",
+    "2112064321069220271",
+    "2112152931256631787",
+    "2112137934053024006"
+  ],
+  "highlights": [
+    {
+      "excerpt": "Next year, I will give one of my SpaceX shares to every kid in America.\n\nThis will be the first of many.",
+      "excerpt_zh": "明年，我会给美国的每个孩子送一股我的 SpaceX 股份。\n\n这将是很多次中的第一次。",
+      "handle": "elonmusk",
+      "likes": 537194,
+      "name": "Elon Musk",
+      "post_id": "2112089556615123114",
+      "tags": [],
+      "text_zh": "马斯克：明年给每个美国孩子送一股 SpaceX 股票，“这只是第一次”。",
+      "url": "https://x.com/elonmusk/status/2112089556615123114"
+    },
+    {
+      "excerpt": "MiniMax M3.1 Flash: Space Performance + Bunny Speed\n\n🚀🐰 Yes, Space Bunny - which has topped global leaderboards with 200T+ tokens - was an earlier version of M3.1 Flash.\n\n💰Redefining the performance economics of agentic AI. …",
+      "excerpt_zh": "MiniMax M3.1 Flash：太空级性能 + 兔子般的速度\n\n🚀🐰 没错，Space Bunny——那个以 200T+ token 登顶全球排行榜的模型——就是 M3.1 Flash 的早期版本。\n\n💰重新定义智能体 AI 的性能经济学。…",
+      "handle": "MiniMax_AI",
+      "likes": 6690,
+      "name": "MiniMax (official)",
+      "post_id": "2112150867868541221",
+      "tags": [
+        "model"
+      ],
+      "text_zh": "MiniMax 发布 M3.1 Flash：此前霸榜的匿名模型 Space Bunny 就是它，成本为 M3 的 1/3、速度 3 倍，10 月 23 日开放权重。",
+      "url": "https://x.com/MiniMax_AI/status/2112150867868541221"
+    },
+    {
+      "excerpt": "Meta Muse will probably create 1000+ millionaires\n\nThis is the most slept on arbitrage I’ve seen in years and it’s not even close.\n\nHere’s how i’d build a 1 person business powered by AI/Muse with with $0 and 0 social following",
+      "excerpt_zh": "Meta Muse 很可能会造就 1000 多个百万富翁\n\n这是我多年来见过最被低估的套利机会，没有之一。\n\n下面是我会如何用 AI/Muse，在零资金、零社交粉丝的情况下打造一人公司",
+      "handle": "gregisenberg",
+      "likes": 5854,
+      "name": "GREG ISENBERG",
+      "post_id": "2112252038079816082",
+      "tags": [
+        "indie",
+        "startup"
+      ],
+      "text_zh": "Greg Isenberg：Meta Muse 可能造就 1000+ 个百万富翁，分享零成本、零粉丝用 AI/Muse 做一人公司的思路。",
+      "url": "https://x.com/gregisenberg/status/2112252038079816082"
+    },
+    {
+      "excerpt": "I think most people multi-tasking with agents could benefit from slowing down\n\nmost of the stuff you're doing wont really matter- what's your P0? what would it look like if you gave it your full attention?",
+      "excerpt_zh": "我觉得大多数同时用多个智能体干活的人，放慢一点会更好\n\n你在做的大部分事情其实并不重要——你的 P0 是什么？如果你全神贯注地做它，会是什么样子？",
+      "handle": "trq212",
+      "likes": 5071,
+      "name": "Thariq",
+      "post_id": "2112219173288120531",
+      "tags": [
+        "agent"
+      ],
+      "text_zh": "Claude Code 团队的 Thariq：同时开多个智能体的人不妨放慢——想清楚你的 P0，全神贯注做它。",
+      "url": "https://x.com/trq212/status/2112219173288120531"
+    },
+    {
+      "excerpt": "Someone asked what was the best way to get hired by a startup. I told him it was to start one and then hire himself.",
+      "excerpt_zh": "有人问我，被创业公司录用的最好办法是什么。我告诉他：自己创办一家，然后雇用自己。",
+      "handle": "paulg",
+      "likes": 4493,
+      "name": "Paul Graham",
+      "post_id": "2112211561091858537",
+      "tags": [
+        "startup",
+        "career"
+      ],
+      "text_zh": "Paul Graham：想被创业公司录用的最好办法？自己创办一家，然后雇用自己。",
+      "url": "https://x.com/paulg/status/2112211561091858537"
+    },
+    {
+      "excerpt": "Our latest model advances bring stronger capabilities for building and migrating software in low-resource programming languages such as COBOL, Fortran, and Visual Basic.\n\nThese languages power software that banks, governments, and businesses depend on. …",
+      "excerpt_zh": "我们最新的模型进展，增强了用 COBOL、Fortran、Visual Basic 等低资源编程语言构建和迁移软件的能力。\n\n银行、政府和企业都依赖这些语言写成的软件。在这方面取得进展，意味着要理解几十年积累的业务逻辑，帮助开发者在保留可用部分的同时实现系统现代化。…",
+      "handle": "OpenAI",
+      "likes": 4340,
+      "name": "OpenAI",
+      "post_id": "2112310345863930168",
+      "tags": [
+        "model",
+        "code"
+      ],
+      "text_zh": "OpenAI：新模型加强了 COBOL、Fortran、VB 等低资源语言的开发与迁移能力，瞄准银行和政府的老系统。",
+      "url": "https://x.com/OpenAI/status/2112310345863930168"
+    },
+    {
+      "excerpt": "Today we published a technical report on Muse Glimmer, our 30B open-weight model built for agentic tasks on consumer hardware.\n\nIt runs at practical speeds on a Mac or PC with a single consumer GPU at 4-bit precision, and leads comparably-sized open models on tool use and multi-step planning. …",
+      "excerpt_zh": "今天我们发布了 Muse Glimmer 的技术报告，这是一个为在消费级硬件上执行智能体任务而打造的 30B 开放权重模型。\n\n它在 Mac 或 PC 上用单张消费级 GPU、4-bit 精度即可以实用速度运行，在工具调用和多步规划上领先同等规模的开源模型。…",
+      "handle": "AIatMeta",
+      "likes": 893,
+      "name": "AI at Meta",
+      "post_id": "2112265822274302066",
+      "tags": [
+        "oss",
+        "model"
+      ],
+      "text_zh": "Meta 发布 30B 开放权重模型 Muse Glimmer 技术报告：单张消费级显卡 4bit 可跑，工具调用领先同级开源模型。",
+      "url": "https://x.com/AIatMeta/status/2112265822274302066"
+    }
+  ],
+  "pin": [],
+  "summary_zh": [
+    "模型战升温：MiniMax 发布 M3.1 Flash（成本为 M3 的 1/3、速度 3 倍），Meta 开放 30B 的 Muse Glimmer，DeepSeek 话题三天内一直保持在单日 1.3 万帖左右。",
+    "马斯克“明年给每个美国孩子送一股 SpaceX”获 53.7 万赞，是本期最热帖；Anthropic 拿出 5% 股份成立公益基金。",
+    "近三天 deepseek_ai 涨粉 2.4 万居首，马斯克 +2.2 万、Codex 负责人 Tibo +1.9 万；“智能体 Agent”话题单日 2.5 万帖、环比 +30%。"
+  ],
+  "topics_zh": "10-19 对比前一天：智能体 Agent +30%（2.5 万帖）、Gemini +32%、Claude Code +15%、Codex +9%；Dan Koe −16%。DeepSeek 从 10-16 的 3,910 帖涨到 1.3 万帖。"
+}

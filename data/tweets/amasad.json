@@ -2,6 +2,48 @@
   "handle": "amasad",
   "tweets": [
     {
+      "created_at": "2026-10-17T16:29:51.000Z",
+      "id": "2111494912562888939",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 51,
+        "impression": 65998,
+        "like": 505,
+        "quote": 54,
+        "reply": 164,
+        "retweet": 21
+      },
+      "url": "https://x.com/amasad/status/2111494912562888939"
+    },
+    {
+      "created_at": "2026-10-17T01:25:27.000Z",
+      "id": "2111267314012496121",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 101,
+        "impression": 29473,
+        "like": 385,
+        "quote": 9,
+        "reply": 83,
+        "retweet": 31
+      },
+      "url": "https://x.com/amasad/status/2111267314012496121"
+    },
+    {
+      "created_at": "2026-10-17T01:01:51.000Z",
+      "id": "2111261373741383712",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 47,
+        "impression": 21831,
+        "like": 189,
+        "quote": 1,
+        "reply": 24,
+        "retweet": 7
+      },
+      "url": "https://x.com/amasad/status/2111261373741383712"
+    },
+    {
       "created_at": "2026-10-16T21:21:59.000Z",
       "id": "2111206044416500159",
       "lang": "en",

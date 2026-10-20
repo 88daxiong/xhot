@@ -2,6 +2,34 @@
   "handle": "thesamparr",
   "tweets": [
     {
+      "created_at": "2026-10-18T17:43:19.000Z",
+      "id": "2111875789654544858",
+      "lang": "",
+      "metrics": {
+        "bookmark": 1,
+        "impression": 22232,
+        "like": 101,
+        "quote": 1,
+        "reply": 12,
+        "retweet": 2
+      },
+      "url": "https://x.com/thesamparr/status/2111875789654544858"
+    },
+    {
+      "created_at": "2026-10-18T00:22:34.000Z",
+      "id": "2111613874994913470",
+      "lang": "",
+      "metrics": {
+        "bookmark": 29,
+        "impression": 72252,
+        "like": 1088,
+        "quote": 14,
+        "reply": 171,
+        "retweet": 7
+      },
+      "url": "https://x.com/thesamparr/status/2111613874994913470"
+    },
+    {
       "created_at": "2026-10-15T01:56:44.000Z",
       "id": "2110550409190494571",
       "lang": "en",

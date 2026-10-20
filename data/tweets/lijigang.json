@@ -2,6 +2,90 @@
   "handle": "lijigang",
   "tweets": [
     {
+      "created_at": "2026-10-20T01:26:48.000Z",
+      "id": "2112354818115445235",
+      "lang": "",
+      "metrics": {
+        "bookmark": 10,
+        "impression": 2522,
+        "like": 28,
+        "quote": 3,
+        "reply": 7,
+        "retweet": 3
+      },
+      "url": "https://x.com/lijigang/status/2112354818115445235"
+    },
+    {
+      "created_at": "2026-10-19T16:57:17.000Z",
+      "id": "2112226590382080465",
+      "lang": "",
+      "metrics": {
+        "bookmark": 8,
+        "impression": 5254,
+        "like": 38,
+        "quote": 3,
+        "reply": 15,
+        "retweet": 3
+      },
+      "url": "https://x.com/lijigang/status/2112226590382080465"
+    },
+    {
+      "created_at": "2026-10-19T16:49:23.000Z",
+      "id": "2112224602265104474",
+      "lang": "",
+      "metrics": {
+        "bookmark": 1,
+        "impression": 2143,
+        "like": 3,
+        "quote": 0,
+        "reply": 1,
+        "retweet": 0
+      },
+      "url": "https://x.com/lijigang/status/2112224602265104474"
+    },
+    {
+      "created_at": "2026-10-19T02:51:04.000Z",
+      "id": "2112013636105551973",
+      "lang": "",
+      "metrics": {
+        "bookmark": 11,
+        "impression": 4307,
+        "like": 32,
+        "quote": 0,
+        "reply": 9,
+        "retweet": 0
+      },
+      "url": "https://x.com/lijigang/status/2112013636105551973"
+    },
+    {
+      "created_at": "2026-10-18T05:11:36.000Z",
+      "id": "2111686615177499057",
+      "lang": "",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 6047,
+        "like": 19,
+        "quote": 0,
+        "reply": 11,
+        "retweet": 1
+      },
+      "url": "https://x.com/lijigang/status/2111686615177499057"
+    },
+    {
+      "created_at": "2026-10-17T15:08:41.000Z",
+      "id": "2111474484624695523",
+      "lang": "",
+      "metrics": {
+        "bookmark": 21,
+        "impression": 7730,
+        "like": 62,
+        "quote": 0,
+        "reply": 12,
+        "retweet": 5
+      },
+      "url": "https://x.com/lijigang/status/2111474484624695523"
+    },
+    {
       "created_at": "2026-10-15T02:28:44.000Z",
       "id": "2110558461549592847",
       "lang": "",

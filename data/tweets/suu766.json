@@ -2,6 +2,356 @@
   "handle": "suu766",
   "tweets": [
     {
+      "created_at": "2026-10-19T13:47:11.000Z",
+      "id": "2112178750091858244",
+      "lang": "",
+      "metrics": {
+        "bookmark": 1,
+        "impression": 1838,
+        "like": 6,
+        "quote": 0,
+        "reply": 30,
+        "retweet": 0
+      },
+      "url": "https://x.com/Suu766/status/2112178750091858244"
+    },
+    {
+      "created_at": "2026-10-19T12:16:46.000Z",
+      "id": "2112155998567936032",
+      "lang": "",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 3615,
+        "like": 1,
+        "quote": 0,
+        "reply": 0,
+        "retweet": 0
+      },
+      "url": "https://x.com/Suu766/status/2112155998567936032"
+    },
+    {
+      "created_at": "2026-10-19T12:04:35.000Z",
+      "id": "2112152931256631787",
+      "lang": "",
+      "metrics": {
+        "bookmark": 185,
+        "impression": 34824,
+        "like": 171,
+        "quote": 1,
+        "reply": 106,
+        "retweet": 8
+      },
+      "url": "https://x.com/Suu766/status/2112152931256631787"
+    },
+    {
+      "created_at": "2026-10-19T10:52:04.000Z",
+      "id": "2112134684142612825",
+      "lang": "",
+      "metrics": {
+        "bookmark": 18,
+        "impression": 3476,
+        "like": 42,
+        "quote": 0,
+        "reply": 14,
+        "retweet": 2
+      },
+      "url": "https://x.com/Suu766/status/2112134684142612825"
+    },
+    {
+      "created_at": "2026-10-19T07:28:06.000Z",
+      "id": "2112083353910612207",
+      "lang": "",
+      "metrics": {
+        "bookmark": 18,
+        "impression": 3948,
+        "like": 21,
+        "quote": 0,
+        "reply": 26,
+        "retweet": 0
+      },
+      "url": "https://x.com/Suu766/status/2112083353910612207"
+    },
+    {
+      "created_at": "2026-10-19T06:12:46.000Z",
+      "id": "2112064392951120209",
+      "lang": "",
+      "metrics": {
+        "bookmark": 2,
+        "impression": 4566,
+        "like": 1,
+        "quote": 0,
+        "reply": 0,
+        "retweet": 0
+      },
+      "url": "https://x.com/Suu766/status/2112064392951120209"
+    },
+    {
+      "created_at": "2026-10-19T06:12:44.000Z",
+      "id": "2112064385049117109",
+      "lang": "",
+      "metrics": {
+        "bookmark": 8,
+        "impression": 4886,
+        "like": 1,
+        "quote": 0,
+        "reply": 1,
+        "retweet": 1
+      },
+      "url": "https://x.com/Suu766/status/2112064385049117109"
+    },
+    {
+      "created_at": "2026-10-19T06:12:42.000Z",
+      "id": "2112064377541296466",
+      "lang": "",
+      "metrics": {
+        "bookmark": 5,
+        "impression": 4585,
+        "like": 2,
+        "quote": 0,
+        "reply": 1,
+        "retweet": 0
+      },
+      "url": "https://x.com/Suu766/status/2112064377541296466"
+    },
+    {
+      "created_at": "2026-10-19T06:12:40.000Z",
+      "id": "2112064369509204227",
+      "lang": "",
+      "metrics": {
+        "bookmark": 9,
+        "impression": 5010,
+        "like": 3,
+        "quote": 0,
+        "reply": 1,
+        "retweet": 0
+      },
+      "url": "https://x.com/Suu766/status/2112064369509204227"
+    },
+    {
+      "created_at": "2026-10-19T06:12:38.000Z",
+      "id": "2112064361594511553",
+      "lang": "",
+      "metrics": {
+        "bookmark": 10,
+        "impression": 5854,
+        "like": 9,
+        "quote": 0,
+        "reply": 1,
+        "retweet": 1
+      },
+      "url": "https://x.com/Suu766/status/2112064361594511553"
+    },
+    {
+      "created_at": "2026-10-19T06:12:36.000Z",
+      "id": "2112064353944088750",
+      "lang": "",
+      "metrics": {
+        "bookmark": 15,
+        "impression": 6833,
+        "like": 13,
+        "quote": 0,
+        "reply": 1,
+        "retweet": 0
+      },
+      "url": "https://x.com/Suu766/status/2112064353944088750"
+    },
+    {
+      "created_at": "2026-10-19T06:12:35.000Z",
+      "id": "2112064347317117032",
+      "lang": "",
+      "metrics": {
+        "bookmark": 5,
+        "impression": 7904,
+        "like": 7,
+        "quote": 0,
+        "reply": 1,
+        "retweet": 0
+      },
+      "url": "https://x.com/Suu766/status/2112064347317117032"
+    },
+    {
+      "created_at": "2026-10-19T06:12:34.000Z",
+      "id": "2112064342728606192",
+      "lang": "",
+      "metrics": {
+        "bookmark": 8,
+        "impression": 9159,
+        "like": 6,
+        "quote": 0,
+        "reply": 1,
+        "retweet": 0
+      },
+      "url": "https://x.com/Suu766/status/2112064342728606192"
+    },
+    {
+      "created_at": "2026-10-19T06:12:31.000Z",
+      "id": "2112064332062454232",
+      "lang": "",
+      "metrics": {
+        "bookmark": 10,
+        "impression": 9479,
+        "like": 5,
+        "quote": 0,
+        "reply": 1,
+        "retweet": 0
+      },
+      "url": "https://x.com/Suu766/status/2112064332062454232"
+    },
+    {
+      "created_at": "2026-10-19T06:12:30.000Z",
+      "id": "2112064326337216976",
+      "lang": "",
+      "metrics": {
+        "bookmark": 20,
+        "impression": 10494,
+        "like": 19,
+        "quote": 0,
+        "reply": 1,
+        "retweet": 0
+      },
+      "url": "https://x.com/Suu766/status/2112064326337216976"
+    },
+    {
+      "created_at": "2026-10-19T06:12:29.000Z",
+      "id": "2112064321069220271",
+      "lang": "",
+      "metrics": {
+        "bookmark": 650,
+        "impression": 112112,
+        "like": 676,
+        "quote": 1,
+        "reply": 256,
+        "retweet": 34
+      },
+      "url": "https://x.com/Suu766/status/2112064321069220271"
+    },
+    {
+      "created_at": "2026-10-18T13:48:35.000Z",
+      "id": "2111816717295108160",
+      "lang": "",
+      "metrics": {
+        "bookmark": 30,
+        "impression": 10601,
+        "like": 35,
+        "quote": 0,
+        "reply": 35,
+        "retweet": 1
+      },
+      "url": "https://x.com/Suu766/status/2111816717295108160"
+    },
+    {
+      "created_at": "2026-10-18T12:25:30.000Z",
+      "id": "2111795808404426875",
+      "lang": "",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 3191,
+        "like": 20,
+        "quote": 1,
+        "reply": 41,
+        "retweet": 0
+      },
+      "url": "https://x.com/Suu766/status/2111795808404426875"
+    },
+    {
+      "created_at": "2026-10-18T10:25:57.000Z",
+      "id": "2111765723047715022",
+      "lang": "",
+      "metrics": {
+        "bookmark": 16,
+        "impression": 8973,
+        "like": 44,
+        "quote": 1,
+        "reply": 47,
+        "retweet": 4
+      },
+      "url": "https://x.com/Suu766/status/2111765723047715022"
+    },
+    {
+      "created_at": "2026-10-18T07:59:45.000Z",
+      "id": "2111728929669361915",
+      "lang": "",
+      "metrics": {
+        "bookmark": 9,
+        "impression": 14177,
+        "like": 12,
+        "quote": 0,
+        "reply": 0,
+        "retweet": 0
+      },
+      "url": "https://x.com/Suu766/status/2111728929669361915"
+    },
+    {
+      "created_at": "2026-10-18T07:59:44.000Z",
+      "id": "2111728925663732097",
+      "lang": "",
+      "metrics": {
+        "bookmark": 8,
+        "impression": 15742,
+        "like": 8,
+        "quote": 0,
+        "reply": 1,
+        "retweet": 0
+      },
+      "url": "https://x.com/Suu766/status/2111728925663732097"
+    },
+    {
+      "created_at": "2026-10-18T07:59:43.000Z",
+      "id": "2111728920840294806",
+      "lang": "",
+      "metrics": {
+        "bookmark": 6,
+        "impression": 16963,
+        "like": 5,
+        "quote": 0,
+        "reply": 1,
+        "retweet": 0
+      },
+      "url": "https://x.com/Suu766/status/2111728920840294806"
+    },
+    {
+      "created_at": "2026-10-18T07:59:42.000Z",
+      "id": "2111728916771779021",
+      "lang": "",
+      "metrics": {
+        "bookmark": 6,
+        "impression": 20293,
+        "like": 7,
+        "quote": 0,
+        "reply": 1,
+        "retweet": 1
+      },
+      "url": "https://x.com/Suu766/status/2111728916771779021"
+    },
+    {
+      "created_at": "2026-10-18T07:59:41.000Z",
+      "id": "2111728913030533510",
+      "lang": "",
+      "metrics": {
+        "bookmark": 7,
+        "impression": 21936,
+        "like": 12,
+        "quote": 0,
+        "reply": 1,
+        "retweet": 0
+      },
+      "url": "https://x.com/Suu766/status/2111728913030533510"
+    },
+    {
+      "created_at": "2026-10-18T07:59:40.000Z",
+      "id": "2111728909045940514",
+      "lang": "",
+      "metrics": {
+        "bookmark": 7,
+        "impression": 23401,
+        "like": 8,
+        "quote": 0,
+        "reply": 1,
+        "retweet": 0
+      },
+      "url": "https://x.com/Suu766/status/2111728909045940514"
+    },
+    {
       "created_at": "2026-10-16T13:55:07.000Z",
       "id": "2111093583168364731",
       "lang": "zh",

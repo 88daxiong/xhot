@@ -2,6 +2,160 @@
   "handle": "openrouter",
   "tweets": [
     {
+      "created_at": "2026-10-19T16:54:07.000Z",
+      "id": "2112225793753653411",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 2,
+        "impression": 4379,
+        "like": 15,
+        "quote": 0,
+        "reply": 0,
+        "retweet": 0
+      },
+      "url": "https://x.com/OpenRouter/status/2112225793753653411"
+    },
+    {
+      "created_at": "2026-10-19T16:54:03.000Z",
+      "id": "2112225779782398131",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 147,
+        "impression": 30422,
+        "like": 618,
+        "quote": 10,
+        "reply": 28,
+        "retweet": 27
+      },
+      "url": "https://x.com/OpenRouter/status/2112225779782398131"
+    },
+    {
+      "created_at": "2026-10-19T12:06:00.000Z",
+      "id": "2112153289907470804",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 1,
+        "impression": 3985,
+        "like": 7,
+        "quote": 0,
+        "reply": 0,
+        "retweet": 0
+      },
+      "url": "https://x.com/OpenRouter/status/2112153289907470804"
+    },
+    {
+      "created_at": "2026-10-19T12:01:13.000Z",
+      "id": "2112152082581160145",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 2,
+        "impression": 4815,
+        "like": 16,
+        "quote": 1,
+        "reply": 2,
+        "retweet": 1
+      },
+      "url": "https://x.com/OpenRouter/status/2112152082581160145"
+    },
+    {
+      "created_at": "2026-10-19T12:01:10.000Z",
+      "id": "2112152070744867162",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 1,
+        "impression": 2983,
+        "like": 23,
+        "quote": 0,
+        "reply": 3,
+        "retweet": 0
+      },
+      "url": "https://x.com/OpenRouter/status/2112152070744867162"
+    },
+    {
+      "created_at": "2026-10-19T12:01:07.000Z",
+      "id": "2112152058912755726",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 1,
+        "impression": 3271,
+        "like": 34,
+        "quote": 0,
+        "reply": 2,
+        "retweet": 1
+      },
+      "url": "https://x.com/OpenRouter/status/2112152058912755726"
+    },
+    {
+      "created_at": "2026-10-19T12:01:04.000Z",
+      "id": "2112152045461680591",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 125,
+        "impression": 111607,
+        "like": 991,
+        "quote": 39,
+        "reply": 55,
+        "retweet": 72
+      },
+      "url": "https://x.com/OpenRouter/status/2112152045461680591"
+    },
+    {
+      "created_at": "2026-10-17T16:00:17.000Z",
+      "id": "2111487472010162199",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 4,
+        "impression": 4513,
+        "like": 12,
+        "quote": 1,
+        "reply": 7,
+        "retweet": 0
+      },
+      "url": "https://x.com/OpenRouter/status/2111487472010162199"
+    },
+    {
+      "created_at": "2026-10-17T16:00:14.000Z",
+      "id": "2111487458819145893",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 48,
+        "impression": 13206,
+        "like": 113,
+        "quote": 3,
+        "reply": 19,
+        "retweet": 6
+      },
+      "url": "https://x.com/OpenRouter/status/2111487458819145893"
+    },
+    {
+      "created_at": "2026-10-17T08:43:02.000Z",
+      "id": "2111377433396179421",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 2,
+        "impression": 7697,
+        "like": 22,
+        "quote": 0,
+        "reply": 2,
+        "retweet": 0
+      },
+      "url": "https://x.com/OpenRouter/status/2111377433396179421"
+    },
+    {
+      "created_at": "2026-10-17T08:42:59.000Z",
+      "id": "2111377421404651714",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 88,
+        "impression": 59077,
+        "like": 1063,
+        "quote": 16,
+        "reply": 40,
+        "retweet": 64
+      },
+      "url": "https://x.com/OpenRouter/status/2111377421404651714"
+    },
+    {
       "created_at": "2026-10-16T20:58:00.000Z",
       "id": "2111200007437402243",
       "lang": "en",
