@@ -14,7 +14,7 @@ var list=[],shown=0,load={};
 /* ===== 个人页 ===== */
 if(PERSON){var D=null,ps={sort:'t',day:''},pdc=DCT?X.dinit(DCT,function(k){ps.day=k;run()}):null,tm;
 var tot=+feed.dataset.pre;if(more){more.hidden=+feed.dataset.total<=tot;more.textContent='再显示更多'}
-function pload(f){if(D)return f();if(pload.w)return pload.w.push(f);pload.w=[f];Promise.all([fetchJ(M.src),X.people()]).then(function(r){D=norm(r[0]);r[1].t.forEach(function(x){TG[x[0]]=x[1]});pload.w.splice(0).forEach(function(g){g()})})}
+function pload(f){if(D)return f();if(pload.w)return pload.w.push(f);pload.w=[f];Promise.all([fetchJ(M.src),Promise.resolve(M.t?{t:M.t}:X.people())]).then(function(r){D=norm(r[0]);r[1].t.forEach(function(x){TG[x[0]]=x[1]});pload.w.splice(0).forEach(function(g){g()})})}
 function run(){var v=(hq.value||'').trim().toLowerCase();pload(function(){list=D.filter(function(r){return(!ps.day||X.dkey(r.ts)===ps.day)&&(!v||r.lc.indexOf(v)>=0)});if(ps.sort==='s')list=list.slice().sort(function(a,b){return b.score-a.score});feed.innerHTML='';shown=0;page();cnt.textContent=(ps.day?X.dfull(ps.day)+' ':'')+(v?'匹配 ':'共 ')+list.length+' 条摘录'+(ps.sort==='s'?' · 按重要度':'');if(!list.length)feed.innerHTML='<div class="empty">'+(v?'没有匹配的推文':'这一天没有推文')+'</div>';hset({sort:ps.sort,day:ps.day,_def:'t'})})}
 function page(){var h='',end=Math.min(list.length,shown+24);for(var k=shown;k<end;k++)h+=card(list[k],null,'../');feed.insertAdjacentHTML('beforeend',h);shown=end;more.hidden=shown>=list.length;more.textContent='再显示 '+Math.min(24,list.length-shown)+' 条（已显示 '+shown+' / '+list.length+'）';X.relabel(feed);X.applyRead(feed)}
 $$('[data-sort]').forEach(function(b){b.addEventListener('click',function(){ps.sort=b.dataset.sort;seg('data-sort',ps.sort);run()})});
@@ -27,7 +27,7 @@ if(!(navigator.connection&&navigator.connection.saveData))addEventListener('load
 return}
 /* ===== 全部归档 ===== */
 var SJ=null,st={dom:'all',sort:'s',day:''},SH={},tmr;
-X.people().then(function(j){SJ=j;j.t.forEach(function(x){TG[x[0]]=x[1]});init()});
+fetchJ(P+'assets/pm.json').then(function(j){SJ=j;j.M={};j.p.forEach(function(x){j.M[x[0]]=x});j.t.forEach(function(x){TG[x[0]]=x[1]});init()});
 function shard(dd){var k=dd[0];if(SH[k])return Promise.resolve(SH[k]);return fetchJ(P+'feed/'+k+'.json?v='+dd[1]).then(function(a){return SH[k]=norm(a)})}
 function days(){var A=SJ.d;if(st.day)return A.filter(function(x){return x[0]===st.day});var t=X.dkey(Date.now()-7*864e5);return A.filter(function(x){return x[0]>=t}).slice(0,8)}
 function ready(){return Promise.all(days().map(shard))}

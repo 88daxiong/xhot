@@ -1,6 +1,9 @@
 (function(){var X=XH,$=X.$,$$=X.$$,seg=X.seg,hget=X.hget,hset=X.hset,dinit=X.dinit,DRE=X.DRE,DCT=X.DCT;
 var ng=$('#ng');
-if(ng){var NB=null,nw=[],wide=matchMedia('(min-width:1001px)');function nload(f){if(NB)return f&&f();if(f)nw.push(f);if(nw.length>1||nload.busy)return;nload.busy=1;fetch(ng.dataset.body).then(function(r){return r.json()}).then(function(B){NB=B;nw.splice(0).forEach(function(f){f()})})}
+if(ng){var NSH=+ng.dataset.nsh||10,NHH=ng.dataset.nh.split(','),NB={},NP={},wide=matchMedia('(min-width:1001px)');
+function nget(i){var k=Math.floor(i/NSH),a=NB[k];return a?a[i-k*NSH]:undefined}
+function nload(i,f){var k=Math.floor(i/NSH);if(NB[k])return f&&f();if(!NP[k])NP[k]=fetch(X.P+'assets/nb/'+k+'.json?v='+NHH[k]).then(function(r){if(!r.ok)throw 0;return r.json()}).then(function(B){NB[k]=B}).catch(function(){delete NP[k]});if(f)NP[k].then(function(){if(NB[k])f()})}
+function npre(ev){var b=ev.target.closest&&ev.target.closest('.nrh');if(b){var li=b.closest('.nr');if(li)nload(+li.dataset.i)}}
 var cur=null,nst={src:'top',day:''};
 /* 首条已在 HTML 里静态渲染（避免窗格成为晚渲染的最大元素）；窄屏不用窗格，去掉选中态 */
 (function(){var f=$('#ntop .nr.sel');if(!f)return;if(wide.matches)cur=f;else f.classList.remove('sel')})();
@@ -9,8 +12,8 @@ function psel(li){if(cur)cur.classList.remove('sel');cur=li;if(li)li.classList.a
 function pempty(){psel(null);$('#nptitle').textContent='阅读窗格';$('#npmeta').innerHTML='';$('#npbody').innerHTML='<p class="nph">这个范围内没有资讯。</p>'}
 function pnum(li){var s=li.closest('.nsec2'),a=$$('.nr',s),n=0;for(var i=0;i<a.length;i++){var x=a[i],g=x.closest('.ndg');if(x.hidden||(g&&g.hidden))continue;n++;if(x===li)return n}return n}
 function popen(li){psel(li);var n=pnum(li);$('#nptitle').textContent=$('.nt2',li).textContent;$('#npmeta').innerHTML='<span class="nn">'+(n<10?'0':'')+n+'</span>'+$('.nrm',li).innerHTML;var bd=$('#npbody');bd.scrollTop=0;
-var x0=NB&&NB[+li.dataset.i];if(typeof x0==='string')bd.innerHTML=x0;else{bd.innerHTML='<p class="nph">加载中…</p>';nload(function(){if(cur!==li)return;var x=NB[+li.dataset.i];if(typeof x==='string')bd.innerHTML=x;bd.scrollTop=0})}nsch()}
-function nopen(li,on){var bd=$('.nrb',li),b=$('.nrh',li);if(on===undefined)on=bd.hidden;if(on&&!bd.dataset.ok){nload(function(){var x=NB[+li.dataset.i];if(typeof x==='string'){bd.innerHTML=x;bd.dataset.ok=1}})}bd.hidden=!on;li.classList.toggle('open',on);b.setAttribute('aria-expanded',on)}
+var x0=nget(+li.dataset.i);if(typeof x0==='string')bd.innerHTML=x0;else{bd.innerHTML='<p class="nph">加载中…</p>';nload(+li.dataset.i,function(){if(cur!==li)return;var x=nget(+li.dataset.i);if(typeof x==='string')bd.innerHTML=x;bd.scrollTop=0})}nsch()}
+function nopen(li,on){var bd=$('.nrb',li),b=$('.nrh',li);if(on===undefined)on=bd.hidden;if(on&&!bd.dataset.ok){nload(+li.dataset.i,function(){var x=nget(+li.dataset.i);if(typeof x==='string'){bd.innerHTML=x;bd.dataset.ok=1}})}bd.hidden=!on;li.classList.toggle('open',on);b.setAttribute('aria-expanded',on)}
 var sheet=$('.nside'),nb=$('#nback'),sopen=false,sret=null;
 function sclose(fromPop){if(!sopen)return;sopen=false;sheet.classList.remove('open');document.documentElement.classList.remove('nlock');sheet.removeAttribute('role');sheet.removeAttribute('aria-modal');if(!fromPop&&history.state&&history.state.nsheet)history.back();if(sret){try{sret.focus({preventScroll:true})}catch(e){}if(cur){var r=cur.getBoundingClientRect();if(r.top<70||r.bottom>innerHeight)cur.scrollIntoView({block:'center'})}}}
 function sshow(li){sret=li.querySelector('.nrh');popen(li);sopen=true;sheet.classList.add('open');document.documentElement.classList.add('nlock');sheet.setAttribute('role','dialog');sheet.setAttribute('aria-modal','true');history.pushState({nsheet:1},'');setTimeout(function(){if(nb)nb.focus({preventScroll:true})},30)}
@@ -38,5 +41,5 @@ var s0=hget();if(s0.src&&/^(a|h|d|s|x)$/.test(s0.src))nst.src=s0.src==='a'?'all'
 if(nst.src!=='top'||nst.day)nsr();
 if(s0.n&&/^\d+$/.test(s0.n)){var li=$('#ntop .nr[data-i="'+s0.n+'"]');if(!li){nst.src='all';nsr();li=$('#nall .nr[data-i="'+s0.n+'"]')}if(li){nact(li);li.classList.add('hl');setTimeout(function(){li.scrollIntoView({block:'center'})},60)}}
 autosel();
-addEventListener('load',function(){(window.requestIdleCallback||function(f){setTimeout(f,2000)})(function(){nload()},{timeout:5000})})}
+ng.addEventListener('pointerover',npre,{passive:true});ng.addEventListener('touchstart',npre,{passive:true});ng.addEventListener('focusin',npre)}
 })();

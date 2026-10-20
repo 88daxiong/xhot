@@ -177,9 +177,9 @@ def fresh(cur):
 # ======================= v15 新增：评分 / 标签 / 摘录 / 帖子表 =======================
 import statistics
 JS_MODS={}   # 模块名 -> 源码
-def av(u,n,cls='',pref='',eager=False):
+def av(u,n,cls='',pref='',eager=False,sm=False):
     ch=e((n or u)[:1].upper()); lz='' if eager else ' loading="lazy"'
-    big=cls in('l','xl'); F=AVF if big else AVS; px=96 if big else 64
+    big=cls in('l','xl') and not sm; F=AVF if big else AVS; px=96 if big else 64
     img=f'<img src="{pref}assets/av/{F[u]}" alt="" width="{px}" height="{px}" decoding="async"{lz}>' if u in F else ''
     return f'<span class="av {cls}" style="--h:{hue(u)}" aria-hidden="true">{ch}{img}</span>'
 TAGS=[('model','模型','ai',r'\b(gpt-?\d\w*|gemini|claude|llama|qwen|deepseek|kimi|mistral|gro[k]|llm|benchmarks?|reasoning|fine-?tun\w*|models?|opus|sonnet|haiku)\b|模型|推理|基准|微调'),
@@ -494,7 +494,9 @@ def news():
     global NEWS
     N=news_items(); NEWS=N; c={k:sum(1 for n in N if n['s']==k) for k in 'hdsx'}
     TOP=ntop(N)
-    nbd=jdump([nbody(n) for n in N]); nbn=f'news.json?v={H8(nbd)}'; put('news.json',nbd)
+    NSH=10; nh=[]   # 正文按 10 条一片：assets/nb/<k>.json，点开（或悬停 / 触摸预取）时只取所在分片
+    for k in range(0,len(N),NSH):
+        d=jdump([nbody(n) for n in N[k:k+NSH]]); put(f'nb/{k//NSH}.json',d); nh.append(H8(d))
     SL=(('h','AIHOT 热点'),('d','AIHOT 日报'),('s','AIHOT 精选'),('x','X 新闻 · 中文要点'))
     seg=('<div class="seg" role="group" aria-label="来源筛选"><button type="button" data-src="top" class="on" aria-pressed="true">⭐ 精选 '+str(len(TOP))+'</button>'
          '<button type="button" data-src="all" aria-pressed="false">全部 '+str(len(N))+'</button>'
@@ -514,7 +516,7 @@ def news():
            '<div class="nrph"><span class="nrpt" id="nptitle">'+(e(N[f0]['t']) if f0 is not None else '阅读窗格')+'</span></div>'
            '<div class="nrpb" id="npbody">'+(nbody(N[f0]) if f0 is not None else '<p class="nph" id="nhint">点左侧任意标题，全文在这里打开；列表位置不变，可以连续点着读。</p>')+'</div></section></aside>')
     body=(tools('资讯',seg,dctl(days),f'<span class="hint">精选 = AIHOT 热点 / 精选优先 {len(TOP)} 条 · 点标题读全文 · 中文 AIHOT 在前 · X 新闻中文为 AI 翻译</span>')+
-          f'<div class="nlay" id="ng" data-body="assets/{nbn}"><div class="nmain">'
+          f'<div class="nlay" id="ng" data-nsh="{NSH}" data-nh="{",".join(nh)}"><div class="nmain">'
           f'<section id="ntop" class="nsec2"><ol class="nl">{"".join(nrow(N[i],i,j==0) for j,i in enumerate(TOP))}</ol>'
           f'<button id="nmore" class="more" type="button">展开更多 · 按日期看全部 {len(N)} 条</button></section>'
           f'<section id="nall" class="nsec2" hidden>{allh}</section><div class="empty" id="nempty" hidden>这个来源 / 日期暂无内容</div></div>{aside}</div>')
@@ -744,7 +746,7 @@ def people_page():
         g,en=pgist(a); n+=1
         dv='' if a['d'] is None else f'<span class="dv {"up" if a["d"]>0 else "dn" if a["d"]<0 else ""}">{"+" if a["d"]>0 else ""}{a["d"]:,}</span>'
         tg=sorted({t for p in a['p7'] for t in p['tags']},key=lambda t:-sum(1 for p in a['p7'] if t in p['tags']))[:2]
-        sec.append(f'<a class="pc fi" href="p/{a["u"]}.html" style="--dc:{DC[a["dom"]]}" data-dom="{" ".join(a["doms"])}" data-f="{a["f"]}" data-d="{a["d"] or 0}" data-w="{a["top3"]}" data-q="{e((a["name"]+" "+a["u"]).lower())}">{av(a["u"],a["name"],"l","",n<=12)}'
+        sec.append(f'<a class="pc fi" href="p/{a["u"]}.html" style="--dc:{DC[a["dom"]]}" data-dom="{" ".join(a["doms"])}" data-f="{a["f"]}" data-d="{a["d"] or 0}" data-w="{a["top3"]}" data-q="{e((a["name"]+" "+a["u"]).lower())}">{av(a["u"],a["name"],"l","",False,True)}'
                    f'<span class="an"><b>{e(a["name"])}</b><small>@{e(a["H"])}</small></span><span class="af">{"".join(f"<span class=tag style=--dc:{DC[x]}>{DN[x]}</span>" for x in a["doms"])}<span class="fv">{fmt(a["f"])}</span>{dv}</span>'
                    f'<span class="pcs">{"<i class=en>EN</i>" if en else ""}{e(g)}</span></a>')
     wp=wk_people(); wl=''
@@ -795,7 +797,7 @@ def person(u):
           '<i id="rdy" hidden></i>'+(f'<section class="sec"><h2>高光帖 <small>近 30 天 · 重要度前 {len(hi)}</small></h2><div class="grid hi4">{hcards}</div></section>' if hi else '')+
           '<section class="sec" id="tl">'+tools('全部推文',f'<input id="q" type="search" aria-label="搜索推文" placeholder="搜索 {e(a["name"])} 的推文摘录…" autocomplete="off" spellcheck="false">',dctl(pdays)+srt,f'<span class="cnt" id="cnt" aria-live="polite">共 {len(ps)} 条摘录</span>',h='h2')+
           f'<div id="feed" class="grid pgrid" data-pre="{len(first)}" data-total="{len(ps)}" data-mode="t">{feed}</div><button id="more" class="more" type="button" hidden>再显示</button></section>'
-          f'<script type="application/json" id="tw-meta">{jsafe({"name":a["name"],"handle":H,"u":u,"dom":a["dom"],"av":AVS.get(u,""),"h":hue(u),"src":jn,"week":WEEK})}</script>')
+          f'<script type="application/json" id="tw-meta">{jsafe({"name":a["name"],"handle":H,"u":u,"dom":a["dom"],"av":AVS.get(u,""),"h":hue(u),"src":jn,"week":WEEK,"t":[[k,l,d] for k,l,d,_ in TAGS]})}</script>')
     return page(f'{a["name"]} (@{H}) · XHOT',body,'ppl',pref='../',mods=('feed',),desc=f'{a["name"]} 本周要点与高光帖。')
 
 def about_page():
@@ -837,7 +839,8 @@ ZHN={'elonmusk':'马斯克 埃隆','sama':'奥特曼 山姆','satyanadella':'纳
 # 搜索索引（⌘K：人物 / 标签 / 话题 / 日期；帖子按需读 feed 分片）
 SJ=jdump({'p':[[u,a['H'],a['name'],AVS.get(u,''),hue(u),a['dom'],','.join(a['doms']),a['f'],a['d'] or 0,ZHN.get(u.lower(),'')] for u,a in ACC.items()],
           't':[[k,l,d] for k,l,d,_ in TAGS],'d':FEEDDAYS,'dy':[x['date'] for x in DAYS],'g':[[i,PBY[i]['u'],t,x['date']] for x in DAYS for i,t in x['gists'].items() if i in PBY],'tp':[[x['name'],d] for d in DOMS for x in DATA[d]['trends']],'gr':[[x['repo'],x['zh'],DTN[x['tags'][0]]] for x in DEVT if x['repo'] in {y['repo'] for y in DTNEW+DTDAY+DTWK}]})
-SJN='search.json'; put(SJN,SJ)   # 稳定文件名：不再把哈希写进每个页面（轻量刷新只改有变化的页面）；Pages 对所有文件都是 max-age=600，哈希对缓存没有实际收益
+SJN='search.json'; put(SJN,SJ)
+put('pm.json',jdump({'p':json.loads(SJ)['p'],'t':json.loads(SJ)['t'],'d':json.loads(SJ)['d']}))   # 全部归档用的精简作者表（不含 ⌘K 的要点 / 话题 / 项目），完整 search.json 只在 ⌘K 打开或空闲时读   # 稳定文件名：不再把哈希写进每个页面（轻量刷新只改有变化的页面）；Pages 对所有文件都是 max-age=600，哈希对缓存没有实际收益
 # ---- JS / CSS ----
 JSN={}
 for m in ('core','news','feed','agents'):
