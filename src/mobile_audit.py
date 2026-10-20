@@ -58,4 +58,30 @@ with sync_playwright() as p:
             g.close()
         c.close()
     b.close()
+# ---- 回归：帖子卡片摘录不得压住标签/按钮；折叠的摘录点「展开」/点卡片能展开（Chromium + WebKit/Safari 引擎）----
+PJS="""()=>{const R=e=>e.getBoundingClientRect(),bad=[];[...document.querySelectorAll('.post')].filter(p=>p.offsetParent&&!p.hidden).slice(0,40).forEach(p=>{const t=p.querySelector('.pt');if(!t)return;
+ const cs=getComputedStyle(t),rg=document.createRange();rg.selectNodeContents(t);const rs=[...rg.getClientRects()].filter(r=>r.height>0);
+ const tb=cs.overflow==='visible'?Math.max(R(t).bottom,...rs.map(r=>r.bottom)):R(t).bottom;
+ if(cs.overflow==='visible'&&rs.length&&Math.max(...rs.map(r=>r.bottom))>R(t).bottom+2)bad.push('text-outside-box '+p.dataset.k);
+ [p.querySelector('.tcs'),p.querySelector('footer')].forEach(x=>{if(x&&tb>R(x).top+1)bad.push('overlap '+x.className+' '+p.dataset.k)})});return bad}"""
+with sync_playwright() as p:
+    for eng in ('chromium','webkit'):
+        try: b=(p.chromium.launch(executable_path='/usr/bin/google-chrome',args=['--no-sandbox']) if eng=='chromium' else p.webkit.launch())
+        except Exception as ex: print('SKIP webkit（无法启动）',str(ex)[:80]) if eng=='webkit' else rec('engine','launch',str(ex)[:80]); continue
+        for vw,mob in ((390,True),(820,True),(1440,False)):
+            c=b.new_context(viewport={'width':vw,'height':900},is_mobile=mob and eng=='chromium',has_touch=mob)
+            for u in ('p/karpathy.html','index.html','d/ai.html','d/all.html'):
+                g=c.new_page();tag=f'{eng}{vw}/{u}'
+                try:
+                    g.goto(B+u,wait_until='load');g.wait_for_timeout(700);res['n']+=1
+                    bad=g.evaluate(PJS); rec(tag,'post-overlap',bad[:3] if bad else None)
+                    if g.locator('.post .ex2').count():
+                        r=g.evaluate("()=>{const b=[...document.querySelectorAll('.post .ex2')].find(x=>x.offsetParent);if(!b)return null;const p=b.closest('.post'),t=p.querySelector('.pt');const h0=t.getBoundingClientRect().height;b.click();return new Promise(ok=>setTimeout(()=>{const h1=t.getBoundingClientRect().height;const o1=p.classList.contains('open');p.querySelector('.pt').click();setTimeout(()=>ok({o1,grow:h1>=h0,closed:!p.classList.contains('open')}),400)},400))}")
+                        rec(tag,'post-expand',r if r and not(r['o1'] and r['grow'] and r['closed']) else None)
+                        bad2=g.evaluate("()=>{document.querySelectorAll('.post .pt.clp').forEach(t=>t.closest('.post').classList.add('open'));return 1}") and g.evaluate(PJS)
+                        rec(tag,'post-overlap-open',bad2[:3] if bad2 else None)
+                except Exception as ex: rec(tag,'post-error',str(ex)[:120])
+                g.close()
+            c.close()
+        b.close()
 json.dump(res,open('mobile_audit_v15_result.json','w'),ensure_ascii=False,indent=0);print('checked',res['n'],'issues',len(res['rows']))

@@ -38,19 +38,23 @@
  "repos": {
   "morluto/rea": {
    "zh": "用 agent 逆向分析任何东西：从应用行为一路拆到原生二进制",
-   "tag": "agent"
+   "tag": "agent",
+   "sum": "一个用于逆向工程的 MCP：从应用行为、运行时到二进制，弄清某个功能是怎么实现的。"
   },
   "HKUDS/CLI-Anything": {
    "zh": "把任意软件包成命令行，让 agent 能直接调用"
   },
   "ifixai-ai/iFixAi": {
-   "zh": "独立审计 AI agent：人或 agent 自己跑，回答“它可信吗”"
+   "zh": "独立审计 AI agent：人或 agent 自己跑，回答“它可信吗”",
+   "sum": "在出事前抓出 agent 的错误和盲点：可测试 agent，也可审计已记录的操作。"
   },
   "heygen-com/hyperframes": {
-   "zh": "写 HTML 出视频，专为 agent 设计的渲染框架"
+   "zh": "写 HTML 出视频，专为 agent 设计的渲染框架",
+   "sum": "HeyGen 开源：把 HTML/CSS/动画渲染成确定性的 MP4 视频，专为 agent 调用设计。"
   },
   "vxcontrol/pentagi": {
-   "zh": "全自动 AI 渗透测试 agent 系统"
+   "zh": "全自动 AI 渗透测试 agent 系统",
+   "sum": "全自动渗透测试 AI 系统 PentAGI，多 agent 协作完成侦察到利用的流程（仅限授权测试）。"
   },
   "usestrix/strix": {
    "zh": "开源 AI 渗透测试工具，找漏洞并给修复"
@@ -63,7 +67,8 @@
   },
   "MadsLorentzen/ai-job-search": {
    "zh": "本地运行的 AI 求职框架，基于 Claude Code 自动投递",
-   "tag": "agent"
+   "tag": "agent",
+   "sum": "Fork 后填好个人资料，Claude Code 帮你评估职位、按岗位改简历、写求职信、准备面试，全部在本机运行。"
   },
   "ShawnPana/phone-harness": {
    "zh": "让 agent 操控你的手机",
@@ -74,7 +79,8 @@
    "tag": "ops"
   },
   "anomalyco/opencode": {
-   "zh": "开源编码代理 opencode，终端里的 Claude Code 替代"
+   "zh": "开源编码代理 opencode，终端里的 Claude Code 替代",
+   "sum": "开源终端编码代理，支持多家模型，另有桌面版；定位是 Claude Code 的开源替代。"
   },
   "anthropics/claude-code": {
    "zh": "Anthropic 官方 Claude Code：终端里的编码代理"
@@ -92,7 +98,8 @@
   },
   "cathrynlavery/diagram-design": {
    "zh": "给 Claude Code / Codex / Cursor 用的图表设计技能",
-   "tag": "mcp"
+   "tag": "mcp",
+   "sum": "agent 技能：按你的品牌风格画图，输出单个 HTML+SVG 文件，45 种图表类型。"
   },
   "google/artemis": {
    "zh": "Google ARTEMIS：自然语言驱动的安卓自动化",
@@ -108,13 +115,16 @@
   },
   "anthropics/claude-plugins-official": {
    "zh": "Anthropic 官方 Claude Code 插件目录",
-   "tag": "mcp"
+   "tag": "mcp",
+   "sum": "Anthropic 维护的 Claude Code 插件目录；官方提醒安装前自行确认插件可信。"
   },
   "cloudflare/security-audit-skill": {
-   "zh": "Cloudflare 出品：编码代理的多阶段安全审计技能"
+   "zh": "Cloudflare 出品：编码代理的多阶段安全审计技能",
+   "sum": "把编码代理变成安全审计员：隔离的子 agent 依次做侦察、覆盖式排查、候选漏洞验证和结构化报告。"
   },
   "Graphify-Labs/graphify": {
-   "zh": "把代码库、文档、SQL 变成可查询的知识图谱，供 agent 使用"
+   "zh": "把代码库、文档、SQL 变成可查询的知识图谱，供 agent 使用",
+   "sum": "把代码库、文档、SQL 和配置做成可查询的知识图谱，给 agent 当记忆，号称省 80% token。"
   },
   "cursor/plugins": {
    "zh": "Cursor 插件规范与官方插件"
@@ -140,7 +150,8 @@
   },
   "stablyai/orca": {
    "zh": "管理一整队 agent（Claude Code 等）的工作台",
-   "tag": "ops"
+   "tag": "ops",
+   "sum": "把 Codex、Claude Code、OpenCode 等多个 agent 并排跑在各自的 git worktree 里统一管理，还能用手机监控和指挥。"
   },
   "ruvnet/ruflo": {
    "zh": "多 agent 集群编排 harness，协调自治 agent 群",
@@ -163,10 +174,12 @@
    "tag": "ops"
   },
   "xerj-org/xerj": {
-   "zh": "本地优先的搜索引擎 + MCP Server，单个 Rust 二进制索引代码和文档"
+   "zh": "本地优先的搜索引擎 + MCP Server，单个 Rust 二进制索引代码和文档",
+   "sum": "本地 AI 搜索：自动索引文件夹，编码代理直接取需要的代码，不再逐个读文件烧 token。"
   },
   "akitaonrails/ai-memory": {
-   "zh": "编码 CLI 的长期记忆，方便在不同 agent 间交接"
+   "zh": "编码 CLI 的长期记忆，方便在不同 agent 间交接",
+   "sum": "编码代理的长期记忆：Claude Code 中途退出后换 Codex 接着干，不用重新解释架构和踩过的坑。"
   },
   "mksglu/context-mode": {
    "zh": "编码代理的上下文优化：把工具输出放进沙箱，缩减 98%"
@@ -205,7 +218,8 @@
    "tag": "infra"
   },
   "DietrichGebert/ponytail": {
-   "zh": "让 agent 像最懒的资深工程师那样思考：最好的代码是不写"
+   "zh": "让 agent 像最懒的资深工程师那样思考：最好的代码是不写",
+   "sum": "一套让 agent“少写代码”的提示/技能：作者实测代码量 -53%、耗时 -41%、成本 -26%，同时保证高风险逻辑带测试。"
   },
   "JuliusBrussee/caveman": {
    "zh": "“少说话省 token”的穴居人技能：让编码代理说话像原始人"
@@ -228,7 +242,8 @@
   },
   "Leonxlnx/earshot": {
    "zh": "给编码代理装上耳朵：能听、能评、能做声音",
-   "tag": "fun"
+   "tag": "fun",
+   "sum": "给编码代理加“听觉”：能听、能评审、能用代码生成音效和配乐。"
   },
   "Oldcircle/geo-sleuth": {
    "zh": "看照片找拍摄地的 agent 技能",
@@ -236,22 +251,27 @@
   },
   "wheresryan22/anatomy": {
    "zh": "把真实机器画成可交互等距剖面图的 agent 技能",
-   "tag": "mcp"
+   "tag": "mcp",
+   "sum": "Claude 技能：把一个概念做成可交互的等距剖面“实物”，支持 SVG、WebGL 和 3D。"
   },
   "simbasjungles/free-my-tv": {
    "zh": "用 Claude Code 写的无广告 Google TV 桌面，一键还原",
-   "tag": "fun"
+   "tag": "fun",
+   "sum": "Google TV 的无广告极速桌面：常用应用、天气、随日落变化的外观，一键可还原。"
   },
   "feder-cr/git-ai": {
-   "zh": "专为 AI agent 设计的 Git"
+   "zh": "专为 AI agent 设计的 Git",
+   "sum": "受 Anthropic Scion 启发、面向成百上千个编码代理并发读写的版本控制系统。"
   },
   "aicodeking/leanrea": {
    "zh": "8KB 技能替代 REA 逆向工具：纯 CLI、不用 MCP，快 38%",
-   "tag": "mcp"
+   "tag": "mcp",
+   "sum": "8KB 的单文件技能，直接用 otool、jadx 等现成 CLI 做 REA 的逆向工作，不需要 MCP 服务器。"
   },
   "Ansub/tv-detox": {
    "zh": "让 Claude Code / Codex 帮旧安卓电视提速去广告",
-   "tag": "fun"
+   "tag": "fun",
+   "sum": "让 Claude Code/Codex 帮老旧安卓电视去广告、换成清爽桌面，你只需按遥控器确认。"
   },
   "deeplethe/solid-glass": {
    "zh": "面向 AI 应用的设计系统：质感、物理、触感"
@@ -335,7 +355,8 @@
   },
   "mattpocock/skills": {
    "zh": "Matt Pocock 的工程师技能集：直接来自他的 .agents 目录",
-   "tag": "mcp"
+   "tag": "mcp",
+   "sum": "TypeScript 名人 Matt Pocock 日常用的 agent 技能，强调真实工程而不是 vibe coding。"
   },
   "obra/superpowers": {
    "zh": "agent 技能框架 + 一套可用的软件开发方法论",
@@ -357,7 +378,8 @@
    "tag": "fun"
   },
   "alchaincyf/huashu-motion": {
-   "zh": "让 agent 一键直出商业级产品宣传片，会作曲、能指着画面改"
+   "zh": "让 agent 一键直出商业级产品宣传片，会作曲、能指着画面改",
+   "sum": "对 agent 说一句“给产品做个 30 秒发布片”，它读产品、出方案、写片配乐，并在浏览器编辑器里按你点选的地方修改。"
   },
   "zcbacxc/mcd-party-planner": {
    "zh": "麦当劳 MCP 聚会团餐组织助手",

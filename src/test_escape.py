@@ -135,8 +135,24 @@ console.log(JSON.stringify(out));'''
     check('JS lnk: rel noopener noreferrer', all(a['rel']=='noopener noreferrer' for _,a in Tg))
     check('JS safeUrl non-http -> #', r['su'][:6]==['#']*6); check('JS safeUrl https escaped', r['su'][6]=='https://ok.com/a?b=1&amp;c=&quot;x&quot;')
     # 前端不得使用危险接收器（innerHTML 只允许拼接 esc/lnk 过的内容；禁止 eval / document.write / insertAdjacentHTML 以外的 outerHTML）
-    allj=''.join(open(os.path.join(D,f'app_{m}.js'),encoding='utf-8').read() for m in ('core','news','feed'))
+    allj=''.join(open(os.path.join(D,f'app_{m}.js'),encoding='utf-8').read() for m in ('core','news','feed','agents'))
     check('JS: no eval / new Function / document.write / outerHTML',not re.search(r'\beval\(|new Function\(|document\.write|outerHTML',allj))
     check('JS: no third-party hosts / analytics',not re.search(r'https?://(?!x\.com|aihot|github)[a-z0-9.-]+\.[a-z]{2,}',re.sub(r"'https://x\.com/'","",allj)) or True)
 else: print('SKIP JS tests (node not found)')
+
+# ---- Agent 页 README 摘要净化（devtools_readme.sanitize）与详情渲染 ----
+from devtools_readme import sanitize as _rs
+RMAL=[('<script>alert(1)</script>Hello world agent tool here','script'),('<img src=x onerror=alert(1)> Real text about the agent','<'),
+      ('[click me please](javascript:alert(1)) more words here','javascript'),('&lt;script&gt;alert(1)&lt;/script&gt; text text text','<'),
+      ('![badge](https://evil.example/x.png) Some description of the tool','evil'),('<a href="https://evil.example">link text words</a> after','evil'),
+      ('```\n<script>bad()</script>\n```\nNormal paragraph text here','bad()'),('<svg onload=alert(1)><text>x</text></svg> Plain words follow here','onload'),
+      ('Text with bidi \u202e override and \u2028 separators in the words','\u202e'),('data:text/html,<script>x</script> trailing words here','data:'),
+      ('<!-- hidden <script>x</script> --> Visible paragraph text','hidden'),('<iframe src="https://evil.example"></iframe> plain words here','iframe')]
+for raw,bad in RMAL:
+    o=_rs(raw); check('readme sanitize: '+raw[:36].replace('\n',' '),'<' not in o and '>' not in o and bad not in o,o)
+check('readme sanitize: length cap',len(_rs('word '*2000))<=605)
+check('readme sanitize: keeps plain text',_rs('# Title\n\nThe open source **AI** coding agent.').endswith('The open source AI coding agent.'),_rs('# Title\n\nThe open source **AI** coding agent.'))
+_aj=open(os.path.join(D,'app_agents_v15.js'),encoding='utf-8').read()
+check('agents.js: no innerHTML / insertAdjacentHTML (only textContent)',not re.search(r'innerHTML|insertAdjacentHTML|outerHTML|document\.write',_aj))
+check('agents.js: GitHub link built from encoded repo path with noopener noreferrer',"rel='noopener noreferrer'" in _aj.replace('"',"'") and 'encodeURIComponent' in _aj)
 print('ALL PASS' if not fails else f'{fails} FAILED'); sys.exit(1 if fails else 0)

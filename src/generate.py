@@ -298,6 +298,9 @@ def page(title,body,cur,pref='',head='',mods=(),desc='XHOT：每天 10 分钟，
 PAGES={}
 def emit(rel,html): PAGES[rel]=html
 MET=lambda p:(f'<div class="met"><span title="点赞"><i aria-hidden="true">♥</i>{fmt(p["like"])}</span><span title="转发"><i aria-hidden="true">⇄</i>{fmt(p["rt"])}</span><span title="评论"><i aria-hidden="true">💬</i>{fmt(p["reply"])}</span><span title="浏览"><i aria-hidden="true">👁</i>{fmt(p["view"])}</span></div>')
+def ptlong(t):   # 摘录是否可能超过 6 行（手机宽度）：中日韩字按 1.8 个拉丁字符计；与 app_feed 的 ptlong 一致
+    t=str(t or ''); c=len(re.findall(r'[\u2e80-\u9fff\uac00-\ud7af\uff00-\uffef]',t)); return c*1.8+(len(t)-c)>190 or t.count('\n')>=5
+EXB='<button class="btn ex2" type="button" aria-expanded="false">展开</button>'
 def post_html(p,pref='',who=True,eager=False):
     a=ACC[p['u']]; dom=pdom(p); H=a['H']
     meta=f'<div class="pm"><span class="heat" title="热度 = 赞 + 2×转 + 3×引用 + 评论 + 收藏">🔥 {fmt(p["heat"])}</span>{tmh(p["ts"])}</div>'
@@ -305,8 +308,9 @@ def post_html(p,pref='',who=True,eager=False):
         else f'<header><span class="tag dtag" data-d="{dkey(p["ts"])}">{dchip(dkey(p["ts"]))}</span><div class="who"></div>{meta}</header>')
     lang=' lang="en"' if p['en'] else ''
     tg=f'<div class="tcs">{tcs(p["tags"])}</div>' if p['tags'] else ''
-    return (f'<article class="post fi" style="--dc:{DC[dom]}" data-k="{p["id"]}" data-ts="{zts(p["ts"])}" data-dom="{" ".join(a["doms"])}" data-tags="{" ".join(p["tags"])}">{hd}<div class="pt"{lang}>{lnk(p["ex"])}</div>{tg}'
-            f'<footer>{MET(p)}<div class="act"><button class="btn cp" type="button" data-l="复制摘录">复制摘录</button><a class="btn op" href="{safe_url(xlink(H,p["id"]))}" target="_blank" rel="noopener noreferrer">在 X 打开 ↗</a></div></footer></article>')
+    cl=ptlong(p['ex'])
+    return (f'<article class="post fi" style="--dc:{DC[dom]}" data-k="{p["id"]}" data-ts="{zts(p["ts"])}" data-dom="{" ".join(a["doms"])}" data-tags="{" ".join(p["tags"])}">{hd}<div class="pt{" clp" if cl else ""}"{lang}>{lnk(p["ex"])}</div>{tg}'
+            f'<footer>{MET(p)}<div class="act">{EXB if cl else ""}<button class="btn cp" type="button" data-l="复制摘录">复制摘录</button><a class="btn op" href="{safe_url(xlink(H,p["id"]))}" target="_blank" rel="noopener noreferrer">在 X 打开 ↗</a></div></footer></article>')
 def seg_dom(cur_attr='button',withall=True,allhref=None):
     b=('<button type="button" data-dom="all" class="on" aria-pressed="true">全部</button>' if withall else '')
     return '<div class="seg" role="group" aria-label="领域">'+b+''.join(f'<button type="button" data-dom="{d}" style="--dc:{DC[d]}" aria-pressed="false"><i class="dot"></i>{DN[d]}</button>' for d in DOMS)+'</div>'
@@ -364,22 +368,46 @@ def dt_row(i,x,mode):
     return (f'<li class="trw fi dtw" style="--dc:{DTC[x["tags"][0]]}" data-tags="{" ".join(x["tags"])}"><details><summary><span class="rk">{i}</span>'
             f'<span class="gm"><b class="gn"><span class="go">{e(own)}/</span>{e(nm)}</b><span class="gx">{meta}</span><span class="gd">{e(x["zh"] or x["desc"])}</span><span class="dtg">{tg}</span></span>'
             f'<span class="gt">{inc}</span></summary><div class="trx">{ex}</div></details></li>')
+def dt_card(i,x,mode):
+    own,nm=x['repo'].split('/',1)
+    tg=''.join(f'<span class="tag" style="--dc:{DTC[t]}">{e(DTN[t])}</span>' for t in x['tags'])
+    if mode=='new': inc=f'<b>{fmt(round(x["vel"]))}</b><small>★/天</small>'
+    elif mode=='day': inc=f'<b>+{x["today"]:,}</b><small>今日 ★</small>'
+    else: inc=f'<b>+{x["week"]:,}</b><small>本周 ★</small>'
+    meta=((f'<span><i class=ld style=--h:{hue(x["lang"])}></i>{e(x["lang"])}</span>') if x['lang'] else '')+f'<span>★ {fmt(x["stars"])}</span>'+(f'<span>{e(x["created"][5:].replace("-","/"))} 创建</span>' if x['created'] else '')
+    hid=' hidden' if i>DPG else ''
+    return (f'<article class="dcard fi" style="--dc:{DTC[x["tags"][0]]}" data-tags="{" ".join(x["tags"])}" data-k="{e(x["repo"])}"{hid}>'
+            f'<div class="dch"><span class="rk">{i}</span><h3 class="gn"><span class="go">{e(own)}/</span>{e(nm)}</h3><span class="dinc">{inc}</span></div>'
+            f'<p class="gd">{e(x["zh"] or x["desc"])}</p><div class="dtg">{tg}</div><div class="gx">{meta}</div>'
+            f'<div class="dca"><button type="button" class="btn dmore" aria-haspopup="dialog">详情</button>'
+            f'<a class="btn dgh" href="{safe_url(x["url"])}" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div></article>')
+DPG=9
 def agents_page():
-    allx={x['repo'] for x in DTNEW+DTDAY+DTWK}; L=[x for x in DEVT if x['repo'] in allx]
+    tabs=[('day','今日热门','GitHub Trending 日榜 · 按今日新增星标',DTDAY,'day'),('week','本周热门','GitHub Trending 周榜 · 按本周新增星标',DTWK,'week'),('new','新出现','近 14 天创建 · 按每天新增星标',DTNEW,'new')]
+    tabs=[t for t in tabs if t[3]]
+    allx=list(dict.fromkeys(x['repo'] for t in tabs for x in t[3])); L=[x for x in DEVT if x['repo'] in set(allx)]
+    try: json.dump(allx,open('raw/agents_repos.json','w'))   # devtools_readme.py 只抓这些
+    except OSError: pass
+    try: RC=json.load(open('raw/readme_cache.json',encoding='utf-8'))
+    except Exception: RC={}
+    try: ZS={k.lower():v for k,v in (json.load(open('devtools_zh.json',encoding='utf-8')).get('repos') or {}).items()}
+    except Exception: ZS={}
+    det={x['repo']:[str((RC.get(x['repo']) or {}).get('text') or '')[:620],str((ZS.get(x['repo'].lower()) or {}).get('sum') or '')[:200],x['desc'],x['topics'],x['stars'],x['today'],x['week'],x['lang'],x['created'],x['zh']] for x in L}
+    dj=jdump(det); put('agents.json',dj); global DT_COV; DT_COV=(sum(1 for v in det.values() if v[0]),len(det))
     cnt={t:sum(1 for x in L if t in x['tags']) for t in DTN}
     chips=('<div class="fchips" role="group" aria-label="子标签筛选"><button type="button" class="on" data-ftag="all" aria-pressed="true">全部<small>'+str(len(L))+'</small></button>'
            +''.join(f'<button type="button" data-ftag="{t}" aria-pressed="false">{e(n)}<small>{cnt[t]}</small></button>' for t,n in DTN.items() if cnt[t])+'</div>')
-    def blk(hid,title,sub,X,mode):
-        if not X: return ''
-        return (f'<div class="panel big dts" id="{hid}"><h2>{title}<small class="mu">{sub}</small></h2>'
-                f'<ol class="dtl" data-fl>{"".join(dt_row(i,x,mode) for i,x in enumerate(X,1))}</ol><p class="empty" hidden>这个子标签下暂时没有项目。</p></div>')
-    body=('<section class="dtp">'+tools('Agent',chips,f'<span class="hint">{e(DEVT_AT)} 更新</span>',info='开源 AI 开发工具：Agent / Harness、编码代理（Codex · Claude Code 类）、MCP 与插件、沙箱等基础设施、agent 管理工具，外加好玩的小项目 · 来源 GitHub Trending 日榜/周榜与 GitHub 公开搜索 · 点行看原描述')
-          +'<div class="dtb">'
-          +blk('new','新出现',f'近 14 天创建 · 按每天新增星标排序 · {len(DTNEW)} 个',DTNEW,'new')
-          +blk('day','今日热门',f'GitHub Trending 日榜 · 今日新增星标 · {len(DTDAY)} 个',DTDAY,'day')
-          +blk('week','本周热门',f'GitHub Trending 周榜 · 本周新增星标 · {len(DTWK)} 个',DTWK,'week')
-          +'</div></section>')
-    return page('XHOT · Agent：AI 开发工具',body,'agents.html',desc='开源 AI agent、编码代理、MCP、沙箱与 agent 管理工具的 GitHub 热门与新项目，每天更新。')
+    tb='<div class="seg dtabs" role="tablist" aria-label="榜单">'+''.join(f'<button type="button" role="tab" id="tab-{k}" aria-controls="{k}" aria-selected="{"true" if j==0 else "false"}" class="{"on" if j==0 else ""}" tabindex="{0 if j==0 else -1}" data-tab="{k}">{t}<small>{len(X)}</small></button>' for j,(k,t,_,X,_) in enumerate(tabs))+'</div>'
+    pans=''.join(f'<div class="dtpan" id="{k}" role="tabpanel" aria-labelledby="tab-{k}"{" hidden" if j else ""}><p class="tinfo">{e(sub)} · {len(X)} 个</p>'
+                 f'<div class="dgrid">{"".join(dt_card(i,x,m) for i,x in enumerate(X,1))}</div><p class="empty" hidden>这个子标签下暂时没有项目。</p>'
+                 f'<nav class="dpg" aria-label="{t}分页"></nav></div>' for j,(k,t,sub,X,m) in enumerate(tabs))
+    sheet=('<div class="dsh" id="dsh" hidden><div class="dshb" data-close></div><div class="dshp" role="dialog" aria-modal="true" aria-labelledby="dshT">'
+           '<div class="dshh"><button type="button" class="nback" data-close aria-label="返回"><i></i>返回</button><h2 id="dshT"></h2><button type="button" class="dshx" data-close aria-label="关闭">×</button></div>'
+           '<div class="dshc"></div></div></div>')
+    body=(f'<section class="dtp" data-dj="agents.json?v={H8(dj)}">'+tools('Agent',chips,f'<span class="hint">{e(DEVT_AT)} 更新</span>',info='开源 AI 开发工具：Agent / Harness、编码代理（Codex · Claude Code 类）、MCP 与插件、沙箱等基础设施、agent 管理工具，外加好玩的小项目 · 来源 GitHub Trending 与 GitHub 公开搜索 · 点卡片看 README 摘要')
+          +tb+pans+'</section>'+sheet)
+    return page('XHOT · Agent：AI 开发工具',body,'agents.html',mods=('agents',),desc='开源 AI agent、编码代理、MCP、沙箱与 agent 管理工具的 GitHub 热门与新项目，每天更新。')
+DT_COV=(0,0)
 def plain(t,n=96):
     t=re.sub(r'https?://\S+','',t or ''); t=re.sub(r'[#*>`_]+','',t); t=re.sub(r'\s+',' ',t).strip()
     return short(t,n)
@@ -812,10 +840,10 @@ SJ=jdump({'p':[[u,a['H'],a['name'],AVS.get(u,''),hue(u),a['dom'],','.join(a['dom
 SJN='search.json'; put(SJN,SJ)   # 稳定文件名：不再把哈希写进每个页面（轻量刷新只改有变化的页面）；Pages 对所有文件都是 max-age=600，哈希对缓存没有实际收益
 # ---- JS / CSS ----
 JSN={}
-for m in ('core','news','feed'):
+for m in ('core','news','feed','agents'):
     src=open(f'app_{m}.js',encoding='utf-8').read(); JSN[m]=f'{m}.{H8(src)}.js'; put(JSN[m],src)
 TOK=re.compile(r'[A-Za-z_][\w-]*')
-JSTOK={m:set(TOK.findall(open(f'app_{m}.js',encoding='utf-8').read())) for m in ('core','news','feed')}
+JSTOK={m:set(TOK.findall(open(f'app_{m}.js',encoding='utf-8').read())) for m in ('core','news','feed','agents')}
 def _split(s,ch=','):
     out=[];d=0;cur=''
     for c in s:

@@ -53,6 +53,7 @@ with sync_playwright() as p:
             # 交互后的状态：展开 / 阅读窗格 / 整页阅读页
             act=None
             if pn=='today': act="()=>{document.querySelector('.dh .ex').click();const s=document.querySelector('.tl30 summary');if(s){s.click()}}"
+            if pn=='agents': act="()=>{document.querySelector('.dtpan:not([hidden]) .dcard:not([hidden]) .dmore').click()}"
             if pn=='news': act="()=>{document.querySelectorAll('.nrh')[2].click()}"
             if act:
                 g.evaluate(act);g.wait_for_timeout(700)

@@ -69,3 +69,59 @@ html.nlock,html.nlock body{overflow:hidden}
 @media(max-width:720px){.dtl .trw summary{grid-template-columns:24px minmax(0,1fr) 64px;gap:var(--s2)}.dtl .trx{padding:0 var(--s3) var(--s4) var(--s3)}}
 :root{--dt-agent:#6d28d9;--dt-coding:#0369a1;--dt-mcp:#047857;--dt-infra:#b45309;--dt-ops:#be185d;--dt-fun:#b91c1c}
 html[data-theme=dark]{--dt-agent:#c4b5fd;--dt-coding:#7dd3fc;--dt-mcp:#6ee7b7;--dt-infra:#fcd34d;--dt-ops:#f9a8d4;--dt-fun:#fca5a5}
+/* ===== Agent 页：榜单标签页 + 卡片网格 + 分页 + 详情抽屉 ===== */
+.dtabs{display:inline-flex;gap:var(--s1);padding:var(--s1);margin:var(--s3) 0 var(--s2);border:1px solid var(--bd);background:var(--card)}
+.dtabs button{min-height:36px;padding:0 var(--s4);border:0;background:none;color:var(--tx2);font-size:var(--t-md);font-weight:500;cursor:pointer}
+.dtabs button small{margin-left:var(--s1);font-size:var(--t-cap);color:var(--mu)}
+.dtabs button.on{background:var(--ac);color:#fff}.dtabs button.on small{color:#fff}
+.dtpan>.tinfo{margin:0 0 var(--s3)}
+.dgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--s4);align-items:stretch}
+.dcard{display:flex;flex-direction:column;gap:var(--s2);padding:var(--s3) var(--s4);border-radius:var(--r3);border:1px solid var(--bd);box-shadow:var(--sh);background:var(--card);cursor:pointer;min-width:0;position:relative}
+.dcard:hover{border-color:color-mix(in srgb,var(--dc) 45%,var(--bd))}
+.dch{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:var(--s2);align-items:start}
+.dch .rk{font-size:var(--t-sm);font-weight:700;color:var(--mu);font-variant-numeric:tabular-nums;line-height:1.5}
+.dch .gn{margin:0;font-size:var(--t-md);font-weight:600;line-height:1.5;overflow-wrap:anywhere}
+.dch .go{font-weight:400;color:var(--mu)}
+.dinc{display:flex;flex-direction:column;align-items:flex-end;font-variant-numeric:tabular-nums;line-height:1.3}
+.dinc b{font-size:var(--t-md);color:var(--heat)}.dinc small{font-size:var(--t-cap);color:var(--mu)}
+.dcard .gd{margin:0;font-size:var(--t-sm);line-height:1.5;color:var(--tx2);display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.dcard .gx{display:flex;flex-wrap:wrap;gap:var(--s3);font-size:var(--t-cap);color:var(--mu)}
+.dca{display:flex;gap:var(--s2);margin-top:auto;padding-top:var(--s2)}
+.dca .btn{display:inline-flex;align-items:center;justify-content:center;min-height:36px;padding:0 var(--s3);border:1px solid var(--bd);background:var(--card);color:var(--tx);text-decoration:none;cursor:pointer}
+.dca .dgh{background:var(--ac);border-color:var(--ac);color:#fff}
+.dca .dmore{flex:1}
+.dpg{display:flex;flex-wrap:wrap;align-items:center;gap:var(--s2);margin-top:var(--s4)}
+.dpg:empty{display:none}
+.dpg button{min-width:36px;min-height:36px;padding:0 var(--s3);border-radius:var(--r2);border:1px solid var(--bd);background:var(--card);color:var(--tx2);font-size:var(--t-sm);cursor:pointer}
+.dpg button.on{background:var(--ac);border-color:var(--ac);color:#fff}
+.dpg button:disabled{opacity:.45;cursor:default}
+.dpn{font-size:var(--t-sm);color:var(--mu);margin-left:var(--s2)}
+.dsh{position:fixed;inset:0;z-index:70}
+.dshb{position:absolute;inset:0;background:rgba(15,12,38,.42)}
+.dshp{position:absolute;top:0;right:0;bottom:0;width:min(560px,100%);display:flex;flex-direction:column;background:var(--bg);border-left:1px solid var(--bd);box-shadow:var(--sh);transform:translateX(24px);opacity:0;transition:transform .22s cubic-bezier(.2,.7,.2,1),opacity .22s}
+.dsh.open .dshp{transform:none;opacity:1}
+.dshh{display:flex;align-items:center;gap:var(--s2);padding:var(--s3) var(--s4);border-bottom:1px solid var(--bd)}
+.dshh h2{flex:1;margin:0;font-size:var(--t-lg);overflow-wrap:anywhere}
+.dshx{width:36px;height:36px;border:0;border-radius:var(--r2);background:none;color:var(--tx2);font-size:var(--t-xl);cursor:pointer}
+.dshh .nback{display:none}
+.dshc{flex:1;overflow:auto;overscroll-behavior:contain;padding:var(--s4) var(--s4) var(--s5);display:flex;flex-direction:column;gap:var(--s3)}
+.dshc p{margin:0}.dshc h3{margin:var(--s2) 0 0;font-size:var(--t-md)}
+.dsz{font-size:var(--t-lg);font-weight:600;line-height:1.5}
+.dsr b{display:block;font-size:var(--t-cap);color:var(--mu);font-weight:500;margin-bottom:var(--s1)}
+.dsr,.dsm{font-size:var(--t-md);line-height:1.65;color:var(--tx2);overflow-wrap:anywhere}
+.dss,.dsl{font-size:var(--t-sm)}
+.dtt{display:flex;flex-wrap:wrap;gap:var(--s1)}
+.dshc .dca{margin-top:var(--s2)}
+@media(max-width:1000px){.dgrid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.dshb{display:none}.dshp{width:100%;border-left:0;padding-top:env(safe-area-inset-top);padding-bottom:env(safe-area-inset-bottom);transform:translateX(100%);opacity:1}
+.dshh{padding:var(--s2) var(--pg)}.dshh .nback{display:inline-flex;margin:0}.dshx{display:none}.dshc{padding:var(--s3) var(--pg) var(--s5)}}
+@media(max-width:720px){.dgrid{grid-template-columns:minmax(0,1fr);gap:var(--s3)}.dtabs{display:flex;width:100%}.dtabs button{flex:1;padding:0 var(--s2)}}
+@media(pointer:coarse),(max-width:720px){.dca .btn,.dpg button,.dtabs button{min-height:44px}.dpg button{min-width:44px}}
+@media(prefers-reduced-motion:reduce){.dshp{transition:none}}
+/* 帖子卡片摘录：Safari 修复 + 6 行折叠渐隐（2026-10-20）
+   Safari/WebKit 在 height:auto 的纵向 flex 容器里把 flex:1（basis 0%）的子项算成 0 高，文字溢出压到标签与按钮下面；改成 basis auto */
+.post .pt{flex:1 0 auto;min-height:0}
+.post .pt.clp{max-height:calc(var(--lh,1.6)*6em);overflow:hidden;-webkit-mask-image:linear-gradient(180deg,#000 calc(100% - 3em),transparent);mask-image:linear-gradient(180deg,#000 calc(100% - 3em),transparent);cursor:pointer}
+.post.open .pt.clp{max-height:none;-webkit-mask-image:none;mask-image:none;cursor:auto}
+.post .tcs,.post footer{position:relative;z-index:1}
+html[data-theme=dark] .dtabs button.on,html[data-theme=dark] .dtabs button.on small,html[data-theme=dark] .dpg button.on,html[data-theme=dark] .dca .dgh{color:#0f0c26}
