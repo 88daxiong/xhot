@@ -15,7 +15,7 @@ return {fcp:Math.round(f?f.startTime:0),lcp:Math.round(window.__lcp),cls:+window
  html:+(n.transferSize/1024).toFixed(1),img:+(rs.filter(x=>x.initiatorType==='img').reduce((s,x)=>s+(x.transferSize||0),0)/1024).toFixed(1)}}"""
 out={}
 with sync_playwright() as p:
-    b=p.chromium.launch(executable_path='/usr/bin/google-chrome',args=['--no-sandbox'])
+    b=p.chromium.launch(executable_path=__import__('os').environ.get('CHROME_PATH') or None,args=['--no-sandbox'])
     def run(base,path,vw,net,cpu):
         c=b.new_context(viewport={'width':vw,'height':900 if vw>600 else 844});pg=c.new_page();cdp=c.new_cdp_session(pg);cdp.send('Network.enable');cdp.send('Network.setCacheDisabled',{'cacheDisabled':True})
         if net=='fast3g': cdp.send('Network.emulateNetworkConditions',F3G)

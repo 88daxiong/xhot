@@ -36,7 +36,7 @@ while(n=w.nextNode()){const t=n.textContent.trim();if(!t)continue;const p=n.pare
 return out}"""
 res={};
 with sync_playwright() as p:
-    b=p.chromium.launch(executable_path=os.environ.get('CHROME_PATH','/usr/bin/google-chrome'),args=['--no-sandbox'])
+    b=p.chromium.launch(executable_path=(os.environ.get('CHROME_PATH') or None),args=['--no-sandbox'])
     for th in ('light','dark'):
         for vw in (1440,390):
             for u in pages:

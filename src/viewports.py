@@ -24,7 +24,7 @@ return out}"""
 res={'fail':[],'n':0}
 def fail(m): res['fail'].append(m); print('FAIL',m,flush=True)
 with sync_playwright() as p:
-    b=p.chromium.launch(executable_path='/usr/bin/google-chrome',args=['--no-sandbox'])
+    b=p.chromium.launch(executable_path=__import__('os').environ.get('CHROME_PATH') or None,args=['--no-sandbox'])
     for vn,vw,vh,touch in VPS:
         for th in ('light','dark'):
             if th=='dark' and vn not in('p390','t820','l1440') : continue

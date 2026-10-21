@@ -13,7 +13,7 @@ o.fixed=[...document.querySelectorAll('body *')].filter(x=>{const c=getComputedS
 const pb=document.querySelector('#npbody');o.pane=pb&&pb.offsetParent&&!document.querySelector('.nside.open')?{len:pb.textContent.trim().length,clip:pb.scrollWidth>pb.clientWidth+1}:null;
 const sh=document.querySelector('.nside.open');if(sh&&pb){o.open={len:pb.textContent.trim().length,clipX:pb.scrollWidth>pb.clientWidth+1,lock:document.documentElement.classList.contains('nlock')}}return o}"""
 with sync_playwright() as p:
-    b=p.chromium.launch(executable_path='/usr/bin/google-chrome',args=['--no-sandbox'])
+    b=p.chromium.launch(executable_path=__import__('os').environ.get('CHROME_PATH') or None,args=['--no-sandbox'])
     for name,vp,mob in [('desk',{'width':1440,'height':900},False),('phone',{'width':390,'height':844},True)]:
         c=b.new_context(viewport=vp,device_scale_factor=2 if mob else 1,is_mobile=mob,has_touch=mob)
         pg=c.new_page(); errs=[]

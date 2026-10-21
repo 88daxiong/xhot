@@ -89,7 +89,7 @@ if os.path.exists(os.path.join(D,'xhot.db')) and _g.glob(os.path.join(D,'daily',
             import http.server,threading,functools
             h=http.server.ThreadingHTTPServer(('127.0.0.1',0),functools.partial(type('Q',(http.server.SimpleHTTPRequestHandler,),{'log_message':lambda *a:None}),directory=out)); port=h.server_address[1]; threading.Thread(target=h.serve_forever,daemon=True).start()
             with sync_playwright() as p:
-                b=p.chromium.launch(executable_path=os.environ.get('CHROME_PATH','/usr/bin/google-chrome'),args=['--no-sandbox']); c=b.new_context(); g=c.new_page(); errs=[]
+                b=p.chromium.launch(executable_path=(os.environ.get('CHROME_PATH') or None),args=['--no-sandbox']); c=b.new_context(); g=c.new_page(); errs=[]
                 g.on('pageerror',lambda x:errs.append(str(x)))
                 g.add_init_script("window.__pwn=0;window.alert=function(){window.__pwn++};")
                 def route(rt):

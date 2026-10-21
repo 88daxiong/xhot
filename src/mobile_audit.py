@@ -28,7 +28,7 @@ def rec(tag,k,v):
     if v: res['rows'].append((tag,k,v)); print(tag,k,str(v)[:300],flush=True)
 os.makedirs('_m',exist_ok=True)
 with sync_playwright() as p:
-    b=p.chromium.launch(executable_path='/usr/bin/google-chrome',args=['--no-sandbox'])
+    b=p.chromium.launch(executable_path=__import__('os').environ.get('CHROME_PATH') or None,args=['--no-sandbox'])
     for dn,w,h,dpr in DEV:
         c=b.new_context(viewport={'width':w,'height':h},device_scale_factor=dpr,is_mobile=True,has_touch=True);c.add_init_script("window.open=()=>null")
         for pn,u in PG:
@@ -66,7 +66,7 @@ PJS="""()=>{const R=e=>e.getBoundingClientRect(),bad=[];[...document.querySelect
  [p.querySelector('.tcs'),p.querySelector('footer')].forEach(x=>{if(x&&tb>R(x).top+1)bad.push('overlap '+x.className+' '+p.dataset.k)})});return bad}"""
 with sync_playwright() as p:
     for eng in ('chromium','webkit'):
-        try: b=(p.chromium.launch(executable_path='/usr/bin/google-chrome',args=['--no-sandbox']) if eng=='chromium' else p.webkit.launch())
+        try: b=(p.chromium.launch(executable_path=__import__('os').environ.get('CHROME_PATH') or None,args=['--no-sandbox']) if eng=='chromium' else p.webkit.launch())
         except Exception as ex: print('SKIP webkit（无法启动）',str(ex)[:80]) if eng=='webkit' else rec('engine','launch',str(ex)[:80]); continue
         for vw,mob in ((390,True),(820,True),(1440,False)):
             c=b.new_context(viewport={'width':vw,'height':900},is_mobile=mob and eng=='chromium',has_touch=mob)

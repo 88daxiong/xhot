@@ -75,7 +75,7 @@ html[data-theme=dark]{--dt-agent:#c4b5fd;--dt-coding:#7dd3fc;--dt-mcp:#6ee7b7;--
 .dtabs button small{margin-left:var(--s1);font-size:var(--t-cap);color:var(--mu)}
 .dtabs button.on{background:var(--ac);color:#fff}.dtabs button.on small{color:#fff}
 .dtpan>.tinfo{margin:0 0 var(--s3)}
-.dgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--s4);align-items:stretch}
+.dtpan .dgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--s4);align-items:stretch}
 .dcard{display:flex;flex-direction:column;gap:var(--s2);padding:var(--s3) var(--s4);border-radius:var(--r3);border:1px solid var(--bd);box-shadow:var(--sh);background:var(--card);cursor:pointer;min-width:0;position:relative}
 .dcard:hover{border-color:color-mix(in srgb,var(--dc) 45%,var(--bd))}
 .dch{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:var(--s2);align-items:start}
@@ -112,10 +112,10 @@ html[data-theme=dark]{--dt-agent:#c4b5fd;--dt-coding:#7dd3fc;--dt-mcp:#6ee7b7;--
 .dss,.dsl{font-size:var(--t-sm)}
 .dtt{display:flex;flex-wrap:wrap;gap:var(--s1)}
 .dshc .dca{margin-top:var(--s2)}
-@media(max-width:1000px){.dgrid{grid-template-columns:repeat(2,minmax(0,1fr))}
+@media(max-width:1000px){.dtpan .dgrid{grid-template-columns:repeat(2,minmax(0,1fr))}
 .dshb{display:none}.dshp{width:100%;border-left:0;padding-top:env(safe-area-inset-top);padding-bottom:env(safe-area-inset-bottom);transform:translateX(100%);opacity:1}
 .dshh{padding:var(--s2) var(--pg)}.dshh .nback{display:inline-flex;margin:0}.dshx{display:none}.dshc{padding:var(--s3) var(--pg) var(--s5)}}
-@media(max-width:720px){.dgrid{grid-template-columns:minmax(0,1fr);gap:var(--s3)}.dtabs{display:flex;width:100%}.dtabs button{flex:1;padding:0 var(--s2)}}
+@media(max-width:720px){.dtpan .dgrid{grid-template-columns:minmax(0,1fr);gap:var(--s3)}.dtabs{display:flex;width:100%}.dtabs button{flex:1;padding:0 var(--s2)}}
 @media(pointer:coarse),(max-width:720px){.dca .btn,.dpg button,.dtabs button{min-height:44px}.dpg button{min-width:44px}}
 @media(prefers-reduced-motion:reduce){.dshp{transition:none}}
 /* 帖子卡片摘录：Safari 修复 + 6 行折叠渐隐（2026-10-20）
@@ -139,3 +139,10 @@ html[data-theme=dark] .dtabs button.on,html[data-theme=dark] .dtabs button.on sm
 .dsh .dca{flex-wrap:wrap}
 .srl{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 @media(pointer:coarse),(max-width:720px){.cpy,.dca .cpy{width:44px;height:44px}}
+/* 数据健康「N 项待更新」：原 #d97706 在白底只有 3.2:1，改为 AA 对比度 */
+details.fr summary b{color:#b45309}
+html[data-theme=dark] details.fr summary b{color:#fbbf24}
+/* 必读卡片头部：桌面 / 平板上作者名不换行；空间不够时让点赞与按钮整体换到下一行，而不是把名字挤成多行 */
+@media(min-width:721px){.dh .hh{min-width:auto}.dh .hh b,.dh .hh small{white-space:nowrap;overflow-wrap:normal}}
+/* 帖子卡片动作区：链接复制图标放在最后，紧凑不拉伸 */
+.act .cpy{order:9;flex:none}

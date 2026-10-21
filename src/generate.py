@@ -627,7 +627,7 @@ def dhl(h,pref,n=0,k=''):
     u=h['handle'].lower(); a=ACC.get(u)
     who=(f'<a class="hh" href="{pref}p/{u}.html">{av(u,a["name"],"",pref,n<6)}<b>{e(a["name"])}</b><small>@{e(a["H"])}</small></a>' if a
          else f'<a class="hh" href="{safe_url("https://x.com/"+h["handle"])}" target="_blank" rel="noopener noreferrer"><b>{e(h["name"])}</b><small>@{e(h["handle"])}</small></a>')
-    lk=f'<a class="btn op" href="{safe_url(h["url"])}" target="_blank" rel="noopener noreferrer">原帖 ↗</a>'+CPY(safe_url(h["url"]),"复制帖子链接")
+    lk=f'<a class="btn op" href="{safe_url(h["url"])}" target="_blank" rel="noopener noreferrer">原帖 ↗</a>'   # 必读卡片头部动作区是固定 4 列网格，不放链接复制按钮（「复制译文 / 摘录」已附带原帖链接）
     lv=f'<span class="lk">♥ {fmt(h["likes"])}</span>' if h['likes'] is not None else '<span class="lk"></span>'
     og,oz=h['orig'],h['orig_zh']; ex=cp=ob=''
     if og:

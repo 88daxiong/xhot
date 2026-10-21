@@ -29,7 +29,7 @@ def rawhtml(u):
     import urllib.request
     return urllib.request.urlopen(B+u).read().decode('utf-8')
 with sync_playwright() as p:
-    b=p.chromium.launch(executable_path=os.environ.get('CHROME_PATH','/usr/bin/google-chrome'),args=['--no-sandbox'])
+    b=p.chromium.launch(executable_path=(os.environ.get('CHROME_PATH') or None),args=['--no-sandbox'])
     for mn,vw,cs in MODES:
         todo=[x for x in PAGES if not os.environ.get('ONLY') or x[0] in os.environ['ONLY'].split(',')]
         if ALL: todo+=[('x','p/'+os.path.basename(f)) for f in sorted(glob.glob(S+'/p/*.html'))]+[('x','day/'+os.path.basename(f)) for f in dayfiles[1:]]+[('x','hot.html'),('x','accounts.html')]
