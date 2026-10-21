@@ -2,6 +2,48 @@
   "handle": "ai_jasonyu",
   "tweets": [
     {
+      "created_at": "2026-10-21T02:58:40.000Z",
+      "id": "2112740322618839128",
+      "lang": "",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 453,
+        "like": 0,
+        "quote": 0,
+        "reply": 0,
+        "retweet": 0
+      },
+      "url": "https://x.com/AI_Jasonyu/status/2112740322618839128"
+    },
+    {
+      "created_at": "2026-10-21T02:58:39.000Z",
+      "id": "2112740319439487050",
+      "lang": "",
+      "metrics": {
+        "bookmark": 1,
+        "impression": 1716,
+        "like": 2,
+        "quote": 0,
+        "reply": 3,
+        "retweet": 1
+      },
+      "url": "https://x.com/AI_Jasonyu/status/2112740319439487050"
+    },
+    {
+      "created_at": "2026-10-21T01:14:01.000Z",
+      "id": "2112713987754545436",
+      "lang": "",
+      "metrics": {
+        "bookmark": 15,
+        "impression": 3482,
+        "like": 19,
+        "quote": 0,
+        "reply": 5,
+        "retweet": 2
+      },
+      "url": "https://x.com/AI_Jasonyu/status/2112713987754545436"
+    },
+    {
       "created_at": "2026-10-20T15:28:32.000Z",
       "id": "2112566644228718805",
       "lang": "zh",
