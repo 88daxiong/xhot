@@ -2,6 +2,48 @@
   "handle": "petergyang",
   "tweets": [
     {
+      "created_at": "2026-10-20T23:11:32.000Z",
+      "id": "2112683163633975713",
+      "lang": "",
+      "metrics": {
+        "bookmark": 1,
+        "impression": 579,
+        "like": 1,
+        "quote": 0,
+        "reply": 0,
+        "retweet": 0
+      },
+      "url": "https://x.com/petergyang/status/2112683163633975713"
+    },
+    {
+      "created_at": "2026-10-20T23:11:29.000Z",
+      "id": "2112683151504159073",
+      "lang": "",
+      "metrics": {
+        "bookmark": 5,
+        "impression": 2134,
+        "like": 16,
+        "quote": 0,
+        "reply": 4,
+        "retweet": 1
+      },
+      "url": "https://x.com/petergyang/status/2112683151504159073"
+    },
+    {
+      "created_at": "2026-10-20T18:12:42.000Z",
+      "id": "2112607957586452724",
+      "lang": "",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 4468,
+        "like": 57,
+        "quote": 1,
+        "reply": 12,
+        "retweet": 2
+      },
+      "url": "https://x.com/petergyang/status/2112607957586452724"
+    },
+    {
       "created_at": "2026-10-20T17:49:31.000Z",
       "id": "2112602126119747763",
       "lang": "",

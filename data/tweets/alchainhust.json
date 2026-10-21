@@ -2,6 +2,132 @@
   "handle": "alchainhust",
   "tweets": [
     {
+      "created_at": "2026-10-20T17:12:34.000Z",
+      "id": "2112592825917264258",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 17,
+        "impression": 9999,
+        "like": 22,
+        "quote": 0,
+        "reply": 8,
+        "retweet": 0
+      },
+      "url": "https://x.com/AlchainHust/status/2112592825917264258"
+    },
+    {
+      "created_at": "2026-10-20T15:47:34.000Z",
+      "id": "2112571433717023032",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 85,
+        "impression": 5779,
+        "like": 74,
+        "quote": 1,
+        "reply": 13,
+        "retweet": 11
+      },
+      "url": "https://x.com/AlchainHust/status/2112571433717023032"
+    },
+    {
+      "created_at": "2026-10-20T12:29:54.000Z",
+      "id": "2112521689116365121",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 144,
+        "impression": 9086,
+        "like": 94,
+        "quote": 1,
+        "reply": 13,
+        "retweet": 12
+      },
+      "url": "https://x.com/AlchainHust/status/2112521689116365121"
+    },
+    {
+      "created_at": "2026-10-20T09:11:40.000Z",
+      "id": "2112471804795060245",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 42,
+        "impression": 10573,
+        "like": 83,
+        "quote": 3,
+        "reply": 30,
+        "retweet": 7
+      },
+      "url": "https://x.com/AlchainHust/status/2112471804795060245"
+    },
+    {
+      "created_at": "2026-10-20T07:48:42.000Z",
+      "id": "2112450926393139666",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 120,
+        "impression": 27450,
+        "like": 120,
+        "quote": 1,
+        "reply": 37,
+        "retweet": 7
+      },
+      "url": "https://x.com/AlchainHust/status/2112450926393139666"
+    },
+    {
+      "created_at": "2026-10-20T05:42:06.000Z",
+      "id": "2112419064840667571",
+      "lang": "ja",
+      "metrics": {
+        "bookmark": 3,
+        "impression": 1612,
+        "like": 5,
+        "quote": 0,
+        "reply": 0,
+        "retweet": 0
+      },
+      "url": "https://x.com/AlchainHust/status/2112419064840667571"
+    },
+    {
+      "created_at": "2026-10-20T05:41:48.000Z",
+      "id": "2112418987707400607",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 8,
+        "impression": 3786,
+        "like": 21,
+        "quote": 0,
+        "reply": 19,
+        "retweet": 0
+      },
+      "url": "https://x.com/AlchainHust/status/2112418987707400607"
+    },
+    {
+      "created_at": "2026-10-20T04:14:17.000Z",
+      "id": "2112396962947608591",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 2,
+        "impression": 5322,
+        "like": 8,
+        "quote": 1,
+        "reply": 2,
+        "retweet": 0
+      },
+      "url": "https://x.com/AlchainHust/status/2112396962947608591"
+    },
+    {
+      "created_at": "2026-10-20T04:11:19.000Z",
+      "id": "2112396219003859295",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 22,
+        "impression": 20724,
+        "like": 34,
+        "quote": 1,
+        "reply": 22,
+        "retweet": 4
+      },
+      "url": "https://x.com/AlchainHust/status/2112396219003859295"
+    },
+    {
       "created_at": "2026-10-19T16:14:25.000Z",
       "id": "2112215803172925729",
       "lang": "",

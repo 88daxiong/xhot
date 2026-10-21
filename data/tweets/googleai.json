@@ -2,6 +2,20 @@
   "handle": "googleai",
   "tweets": [
     {
+      "created_at": "2026-10-20T13:27:38.000Z",
+      "id": "2112536218646806986",
+      "lang": "",
+      "metrics": {
+        "bookmark": 30,
+        "impression": 30862,
+        "like": 116,
+        "quote": 5,
+        "reply": 22,
+        "retweet": 14
+      },
+      "url": "https://x.com/GoogleAI/status/2112536218646806986"
+    },
+    {
       "created_at": "2026-10-15T14:49:00.000Z",
       "id": "2110744759111213217",
       "lang": "en",

@@ -2,6 +2,90 @@
   "handle": "openrouter",
   "tweets": [
     {
+      "created_at": "2026-10-20T21:00:27.000Z",
+      "id": "2112650173382074540",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 13,
+        "impression": 6964,
+        "like": 76,
+        "quote": 4,
+        "reply": 10,
+        "retweet": 8
+      },
+      "url": "https://x.com/OpenRouter/status/2112650173382074540"
+    },
+    {
+      "created_at": "2026-10-20T17:25:17.000Z",
+      "id": "2112596027547230628",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 2,
+        "impression": 1527,
+        "like": 3,
+        "quote": 0,
+        "reply": 0,
+        "retweet": 0
+      },
+      "url": "https://x.com/OpenRouter/status/2112596027547230628"
+    },
+    {
+      "created_at": "2026-10-20T17:25:14.000Z",
+      "id": "2112596015455047882",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 1,
+        "impression": 1584,
+        "like": 2,
+        "quote": 0,
+        "reply": 1,
+        "retweet": 0
+      },
+      "url": "https://x.com/OpenRouter/status/2112596015455047882"
+    },
+    {
+      "created_at": "2026-10-20T17:25:12.000Z",
+      "id": "2112596003744616838",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 269,
+        "like": 3,
+        "quote": 0,
+        "reply": 1,
+        "retweet": 0
+      },
+      "url": "https://x.com/OpenRouter/status/2112596003744616838"
+    },
+    {
+      "created_at": "2026-10-20T17:25:09.000Z",
+      "id": "2112595992096977366",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 469,
+        "like": 10,
+        "quote": 0,
+        "reply": 2,
+        "retweet": 0
+      },
+      "url": "https://x.com/OpenRouter/status/2112595992096977366"
+    },
+    {
+      "created_at": "2026-10-20T17:25:06.000Z",
+      "id": "2112595979950334291",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 10,
+        "impression": 6001,
+        "like": 69,
+        "quote": 0,
+        "reply": 7,
+        "retweet": 4
+      },
+      "url": "https://x.com/OpenRouter/status/2112595979950334291"
+    },
+    {
       "created_at": "2026-10-19T16:54:07.000Z",
       "id": "2112225793753653411",
       "lang": "en",

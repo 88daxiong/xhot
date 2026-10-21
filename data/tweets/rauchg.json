@@ -2,6 +2,34 @@
   "handle": "rauchg",
   "tweets": [
     {
+      "created_at": "2026-10-20T21:33:50.000Z",
+      "id": "2112658577110520122",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 139,
+        "impression": 18087,
+        "like": 209,
+        "quote": 2,
+        "reply": 62,
+        "retweet": 9
+      },
+      "url": "https://x.com/rauchg/status/2112658577110520122"
+    },
+    {
+      "created_at": "2026-10-20T20:12:30.000Z",
+      "id": "2112638107749355867",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 230,
+        "impression": 34419,
+        "like": 1368,
+        "quote": 28,
+        "reply": 135,
+        "retweet": 96
+      },
+      "url": "https://x.com/rauchg/status/2112638107749355867"
+    },
+    {
       "created_at": "2026-10-19T18:57:00.000Z",
       "id": "2112256718281551955",
       "lang": "",

@@ -2,6 +2,20 @@
   "handle": "nvidiaai",
   "tweets": [
     {
+      "created_at": "2026-10-20T22:47:39.000Z",
+      "id": "2112677152735076822",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 2,
+        "impression": 4094,
+        "like": 43,
+        "quote": 2,
+        "reply": 4,
+        "retweet": 8
+      },
+      "url": "https://x.com/NVIDIAAI/status/2112677152735076822"
+    },
+    {
       "created_at": "2026-10-20T17:00:07.000Z",
       "id": "2112589691241574704",
       "lang": "es",

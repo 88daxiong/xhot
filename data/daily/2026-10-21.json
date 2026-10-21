@@ -1,0 +1,159 @@
+{
+  "changelog": [
+    {
+      "date": "2026-10-21"
+    }
+  ],
+  "date": "2026-10-21",
+  "followers_zh": "10-20 → 10-21：deepseek_ai +9,113、thsottiaux +5,371、AnthropicAI +3,256、OpenAI +3,211、claudeai +2,427；elonmusk −5,847、cz_binance −1,779、satyanadella −1,242。",
+  "gists": {
+    "2112348601255125059": "马斯克难得夸欧盟监管：强制苹果全线产品改用 USB-C，这件事做对了。",
+    "2112414184738804118": "摩根大通资管首次把比特币纳入长期回报预测，预计未来十年年化约 10%，跑赢美股和黄金。",
+    "2112432076767289678": "Codex 负责人 Tibo：“第 15 天”，原以为要收尾，结果还在继续——再给大家重置一次用量额度。",
+    "2112481939563438091": "Tibo Louis-Lucas：来自 ChatGPT 的流量暴涨；AI 回答时参考的内容 73% 来自博客，博客远没死。",
+    "2112518218057392519": "ZachXBT：Hyperliquid 上的洗钱服务 FreedomXMR，超过 87% 的流入资金与非法活动有关。",
+    "2112534057879765260": "Hugging Face CEO 看完 Netflix 关于“OpenAI 网络攻击 Hugging Face”的纪录短片很失望：过度拟人化、满是末日论调，他曾花两小时帮忙纠错。",
+    "2112535629833625895": "Tim Ferriss 新文：人生短暂——如何给自己增加一点紧迫感。",
+    "2112537843541102741": "Codie Sanchez 的成功三条：爱上被拒绝、愿意好几年看起来很傻、比所有人坚持得更久。",
+    "2112538315589103641": "levelsio 晒图配文“行吧，为什么不呢”。",
+    "2112541511032426857": "Simon Willison 好奇那些让人抓狂的 AI 回复机器人用的提示词：谁说出提示词，他就多容忍一次回复。",
+    "2112544287745302743": "levelsio：奥地利小镇一位做传统软件工作的朋友第一次彻底被 AI 折服，“现在什么事 5 秒就搞定”。",
+    "2112552114467602487": "Google：Gemini 4 Argon 在 Antigravity 里写出 WebGL2 毛发引擎，在浏览器里实时渲染影视级 3D 毛发动态。",
+    "2112557925264752930": "Google DeepMind：Gemini 4 Argon 在 Antigravity 里做出与 Tom Lehrer《The Elements》同步的 3D 元素周期表。",
+    "2112560809809498187": "swyx 推荐一期被低估的播客，吐槽推特算法让大家错过了好内容。",
+    "2112565702552940794": "ChatGPT 新增团队任务：可自动化每周例行工程汇报（如本周上线与阻塞项），队友可审阅并调整下一次的内容。",
+    "2112570131721167159": "Sam Parr：高手都懂《网球的内心游戏》——要听“第二个大脑”，也就是潜意识。",
+    "2112571535731106013": "steipete 周末换用 TS 编译器替代品 tsrs，OC 快约 5 倍；感叹智能体几周就做出比微软团队两年重写更好的东西。",
+    "2112574615318876178": "Mistral 发布 Voxtral 3 转写与语音模型，为其新的语音智能体 API 提供支持。",
+    "2112583333825950207": "Perplexity CEO：Perplexity Computer 可在 Mac 上完全本地运行，无需云端推理，断网也能用。",
+    "2112597587987689912": "Jim Fan 团队开源 Flora：一套解析物理世界的开放模型，以低 125 倍的成本做到 Astra 级机器人数据引擎。",
+    "2112602976321786352": "Ryan Carson 转发一段视频，只说“这个很难看下去”。",
+    "2112611630060106152": "Codie Sanchez 的赢法：做事、展示、教会别人，最后把方法做成系统卖出去。",
+    "2112618716605083775": "Hassan（nutlope）预告 Hallmark v2 将在 24 小时内上线，先放出抢先看。",
+    "2112629459027145164": "Claude Code 2.1.305 即将发布。",
+    "2112638107749355867": "Vercel CEO Guillermo Rauch：AI 能算出你懂与不懂之间的精确差距，循序渐进教会你任何东西——免费的终极教育。",
+    "2112655614132285592": "Gemini 的 Personal Intelligence 上线 Android Auto，未来几个月进入内置 Google 的汽车，开车时可免提获得个性化帮助。"
+  },
+  "hide": [
+    "2112602976321786352",
+    "2112538315589103641"
+  ],
+  "highlights": [
+    {
+      "excerpt": "🚀 Introducing DeepInfer, our in-house inference framework, now fully open source!\n\nPowering DeepSeek-V4.1-Flash at scale with high throughput and low latency. We’re sharing our production stack to help the community lower compute costs, reduce energy use, and make AI more affordable.\n\n🔗\n\n1/4",
+      "excerpt_zh": "🚀 隆重推出 DeepInfer——我们自研的推理框架，现已完全开源！\n\n它以高吞吐、低延迟支撑 DeepSeek-V4.1-Flash 的大规模服务。我们公开自己的生产栈，帮助社区降低算力成本、减少能耗，让 AI 更实惠。\n\n🔗\n\n1/4",
+      "handle": "deepseek_ai",
+      "likes": 32239,
+      "name": "DeepSeek",
+      "post_id": "2112476496283775135",
+      "tags": [
+        "model",
+        "oss"
+      ],
+      "text_zh": "DeepSeek 开源自研推理框架 DeepInfer：支撑 V4.1-Flash 大规模服务的生产栈，高吞吐低延迟。",
+      "url": "https://x.com/deepseek_ai/status/2112476496283775135"
+    },
+    {
+      "excerpt": "As crazy as this sounds, $1T in SpaceX revenue in 2028 is no longer impossible",
+      "excerpt_zh": "听起来很疯狂，但 SpaceX 在 2028 年实现 1 万亿美元营收已经不再是不可能的事了",
+      "handle": "elonmusk",
+      "likes": 26352,
+      "name": "Elon Musk",
+      "post_id": "2112666467712073815",
+      "tags": [
+        "startup"
+      ],
+      "text_zh": "马斯克：听起来疯狂，但 SpaceX 在 2028 年实现 1 万亿美元营收已不再是不可能。",
+      "url": "https://x.com/elonmusk/status/2112666467712073815"
+    },
+    {
+      "excerpt": "We’ve acquired Orchestra Bio, a platform that helps biopharma teams coordinate the complex process of drug development.\n\nTogether, we’ll build on Rosalind, our AI models and tools for life sciences research, to streamline those operations and help new treatments reach patients sooner.\n\nWelcome @ashokaraj_ and team!",
+      "excerpt_zh": "我们收购了 Orchestra Bio，这是一个帮助生物医药团队协调复杂药物研发流程的平台。\n\n我们将基于 Rosalind（我们面向生命科学研究的 AI 模型与工具），一起简化这些流程，帮助新疗法更快惠及患者。\n\n欢迎 @ashokaraj_ 和团队！",
+      "handle": "OpenAI",
+      "likes": 5065,
+      "name": "OpenAI",
+      "post_id": "2112607347688583586",
+      "tags": [
+        "research",
+        "model"
+      ],
+      "text_zh": "OpenAI 收购生物医药协作平台 Orchestra Bio，将结合生命科学模型 Rosalind 加速新药研发流程。",
+      "url": "https://x.com/OpenAI/status/2112607347688583586"
+    },
+    {
+      "excerpt": "There were reports of usage draining faster than anticipated for some users over the weekend. We've identified approximately 40,000 accounts that had an inconsistency on which usage limits where the actual usage that was applied did not correspond to their actual selected plan.",
+      "excerpt_zh": "周末有部分用户反映用量消耗比预期快。我们查明约 40,000 个账号存在不一致：实际应用的用量限额与其所选套餐不符。",
+      "handle": "thsottiaux",
+      "likes": 4424,
+      "name": "Tibo",
+      "post_id": "2112592264686149749",
+      "tags": [
+        "code",
+        "product"
+      ],
+      "text_zh": "Codex 负责人 Tibo：周末用量消耗过快，查明约 4 万个账号实际适用的额度与所选套餐不符。",
+      "url": "https://x.com/thsottiaux/status/2112592264686149749"
+    },
+    {
+      "excerpt": "New on our Science Blog: designing protein binders against scorpion neurotoxins.\n\nScorpions sting about 1.2m people every year, and antivenoms are often costly or in short supply. Claude has made an early step toward finding new treatments.",
+      "excerpt_zh": "我们科学博客的新文章：设计对抗蝎子神经毒素的蛋白结合剂。\n\n全球每年约有 120 万人被蝎子蜇伤，而抗毒血清往往价格昂贵或供应短缺。Claude 在寻找新疗法上迈出了早期的一步。",
+      "handle": "AnthropicAI",
+      "likes": 2831,
+      "name": "Anthropic",
+      "post_id": "2112579251555721573",
+      "tags": [
+        "research"
+      ],
+      "text_zh": "Anthropic 科学博客：用 Claude 设计对抗蝎毒神经毒素的蛋白结合剂，全球每年约 120 万人被蝎子蜇。",
+      "url": "https://x.com/AnthropicAI/status/2112579251555721573"
+    },
+    {
+      "excerpt": "deepseek posted way more alpha on their zhihu page, if you only read twitter you are reading the laowai approved stuff\n\n\"Based on this framework, we have implemented a high-throughput, low-latency large-scale inference service for DeepSeek V4.1 Flash. …",
+      "excerpt_zh": "DeepSeek 在知乎上放出的干货多得多，如果你只看推特，你读到的只是“老外认可版”的内容\n\n“基于这一框架，我们为 DeepSeek V4.1 Flash 实现了高吞吐、低延迟的大规模推理服务。…",
+      "handle": "swyx",
+      "likes": 1503,
+      "name": "swyx",
+      "post_id": "2112587397380943953",
+      "tags": [
+        "model",
+        "chips"
+      ],
+      "text_zh": "swyx：DeepSeek 知乎称单集群日吞吐 155 万亿 token、每卡时营收 38 美元，毛利约八成。",
+      "url": "https://x.com/swyx/status/2112587397380943953"
+    },
+    {
+      "excerpt": "Perplexity Computer can now run fully local on your Mac.\n\nWork with your native Mac apps and local files, and run tasks without sending sensitive data to the cloud. The model and the agent both run on your Mac.\n\nAvailable now in the Perplexity Mac app.",
+      "excerpt_zh": "Perplexity Computer 现在可以完全在你的 Mac 上本地运行。\n\n可操作 Mac 原生应用和本地文件，执行任务时不会把敏感数据发送到云端。模型和智能体都在你的 Mac 上运行。\n\n现已在 Perplexity Mac 应用中上线。",
+      "handle": "perplexity_ai",
+      "likes": 601,
+      "name": "Perplexity",
+      "post_id": "2112571597798461920",
+      "tags": [
+        "agent",
+        "product"
+      ],
+      "text_zh": "Perplexity Computer 可在 Mac 上完全本地运行：模型和智能体都在本机，敏感数据不出设备。",
+      "url": "https://x.com/perplexity_ai/status/2112571597798461920"
+    },
+    {
+      "excerpt": "真逆天！Codex 6.1 接入 Serena，token 消耗直接降低 90%\n\n昨天让 AI 改个 Bug，动不动就把整个文件读一遍。项目越大，代码没改多少，Token 先烧了一堆\n\n今天发现，给 Codex 接上 Serena MCP，直接按函数、类、引用精准定位代码，跨文件查找和重构也更方便，消耗大幅降低\n\n参照视频，用上这段提示词，用过后你会感谢我的：\n\n“\n请阅读 Serena 官方 GitHub 项目：oraios/serena 检查当前环境与 Codex 配置，按照官方推荐方式安装 Serena，并将其配置为 Codex MCP 服务。优先使用官方支持的安装方式，保留现有 MCP 配置，不要覆盖或删除已有内容\n” …",
+      "handle": "goan999999",
+      "likes": 484,
+      "name": "govin.eth | G哥",
+      "post_id": "2112454522379304964",
+      "tags": [
+        "code",
+        "agent"
+      ],
+      "text_zh": "Codex 接入 Serena MCP 后按函数、类、引用精准定位代码，作者称 token 消耗降低约 90%。",
+      "url": "https://x.com/goan999999/status/2112454522379304964"
+    }
+  ],
+  "pin": [],
+  "summary_zh": [
+    "DeepSeek 开源推理框架 DeepInfer 获 3.2 万赞居首，知乎称单集群日吞吐 155 万亿 token。",
+    "马斯克称 SpaceX 2028 年营收万亿美元“不再不可能”，获 2.6 万赞；OpenAI 收购生物平台。",
+    "DeepSeek 话题单日 1.78 万帖（+63%），官号涨粉 9,113 居首；Codex 4 万账号额度出错。"
+  ],
+  "topics_zh": "对比前几日均值：DeepSeek +63%（1.78 万帖）、Kimi +42%、solopreneur +24%、智能体 Agent +15%（2.5 万帖）；GLM 智谱 −23%、Dan Koe −17%、vibe coding −11%。"
+}

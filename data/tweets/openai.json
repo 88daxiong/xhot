@@ -2,6 +2,20 @@
   "handle": "openai",
   "tweets": [
     {
+      "created_at": "2026-10-20T18:10:16.000Z",
+      "id": "2112607347688583586",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 898,
+        "impression": 416751,
+        "like": 5065,
+        "quote": 239,
+        "reply": 313,
+        "retweet": 420
+      },
+      "url": "https://x.com/OpenAI/status/2112607347688583586"
+    },
+    {
       "created_at": "2026-10-19T22:30:05.000Z",
       "id": "2112310345863930168",
       "lang": "en",
