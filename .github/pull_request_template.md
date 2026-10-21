@@ -15,6 +15,7 @@
 - [ ] `check_links.py site` 通过 / passes
 - [ ] `ds_audit.py` 通过（只用设计令牌）/ passes
 - [ ] `mobile_audit.py` 通过（Chromium + WebKit）/ passes
+- [ ] `expand.py` 通过（每张帖子卡片 / GitHub 条目可展开，768 无布局偏移）/ passes
 - [ ] `card_layout.py` 通过（卡片头部一行，按钮不重叠）/ passes
 - [ ] `news_all.py` 通过 / passes
 - [ ] `shots.py --all` 通过（体积预算、CLS、CSP、无 JS 错误）/ passes

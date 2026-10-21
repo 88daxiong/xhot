@@ -309,8 +309,8 @@ def post_html(p,pref='',who=True,eager=False):
     lang=' lang="en"' if p['en'] else ''
     tg=f'<div class="tcs">{tcs(p["tags"])}</div>' if p['tags'] else ''
     cl=ptlong(p['ex'])
-    return (f'<article class="post fi" style="--dc:{DC[dom]}" data-k="{p["id"]}" data-ts="{zts(p["ts"])}" data-dom="{" ".join(a["doms"])}" data-tags="{" ".join(p["tags"])}">{hd}<div class="pt{" clp" if cl else ""}"{lang}>{lnk(p["ex"])}</div>{tg}'
-            f'<footer>{MET(p)}<div class="act">{EXB if cl else ""}<button class="btn cp" type="button" data-l="复制摘录">复制摘录</button><a class="btn op" href="{safe_url(xlink(H,p["id"]))}" target="_blank" rel="noopener noreferrer">在 X 打开 ↗</a>{CPY(safe_url(xlink(H,p["id"])),"复制帖子链接")}</div></footer></article>')
+    return (f'<article class="post fi" style="--dc:{DC[dom]}" data-k="{p["id"]}" data-ts="{zts(p["ts"])}" data-dom="{" ".join(a["doms"])}" data-tags="{" ".join(p["tags"])}" data-m="{p["like"]},{p["rt"]},{p["reply"]},{p["quote"]},{p["view"]},{p["heat"]}">{hd}<div class="pt{" clp" if cl else ""}"{lang}>{lnk(p["ex"])}</div>{tg}<div class="pxd" hidden></div>'
+            f'<footer>{MET(p)}<div class="act">{EXB}<button class="btn cp" type="button" data-l="复制摘录">复制摘录</button><a class="btn op" href="{safe_url(xlink(H,p["id"]))}" target="_blank" rel="noopener noreferrer">在 X 打开 ↗</a>{CPY(safe_url(xlink(H,p["id"])),"复制帖子链接")}</div></footer></article>')
 def seg_dom(cur_attr='button',withall=True,allhref=None):
     b=('<button type="button" data-dom="all" class="on" aria-pressed="true">全部</button>' if withall else '')
     return '<div class="seg" role="group" aria-label="领域">'+b+''.join(f'<button type="button" data-dom="{d}" style="--dc:{DC[d]}" aria-pressed="false"><i class="dot"></i>{DN[d]}</button>' for d in DOMS)+'</div>'
@@ -540,6 +540,13 @@ def trows(L,mx,tag=False):
               f'{spark(x["vals"])}<span class="tc">{fmt(x["last"])}</span><span class="tb"><i class="{"up" if g>=0 else "dn"}" style="width:{w:.0f}%"></i></span><span class="tg2 {"up" if g>=0 else "dn"}">{g:+.0f}%</span></a></li>')
     return out or '<li class="empty">暂无话题数据</li>'
 TH='<div class="th"><span>#</span><span>话题</span><span>近 6 日</span><span>昨日条数</span><span>较均值</span></div>'
+def gh_json():
+    try: rc=json.load(open('raw/readme_cache.json',encoding='utf-8'))
+    except Exception: rc={}
+    try: zs={k.lower():v for k,v in (json.load(open('devtools_zh.json',encoding='utf-8')).get('repos') or {}).items()}
+    except Exception: zs={}
+    wk={x['repo']:x.get('week') for x in DEVT}
+    d=jdump({r['repo']:[str((rc.get(r['repo']) or {}).get('text') or '')[:620],str((zs.get(r['repo'].lower()) or {}).get('sum') or '')[:200],r['desc'],r['lang'],r['stars'],r['today'],wk.get(r['repo'])] for r in GHR[:12]}); put('gh.json',d); return f'gh.json?v={H8(d)}'
 def trends():
     T=[(x,'ai') for x in DATA['ai']['trends']]
     M=sorted([(x,d) for d in DOMS if d!='ai' for x in DATA[d]['trends']],key=lambda z:-z[0]['g'])
@@ -552,12 +559,14 @@ def trends():
          ('GitHub 今日最热',e(gtop['repo'].split('/')[-1]) if gtop else '—',f'+{gtop["today"]:,} ★ 今日' if gtop else '')]
     kpis='<div class="kpis">'+''.join(f'<div class="kpi"><span class="kl">{a}</span><b class="kv">{b}</b><span class="ks">{c}</span></div>' for a,b,c in kp_)+'</div>'
     gmx=max([r['today'] for r in GHR[:12]] or [1])
-    gl=''.join(f'<li><a class="grow" href="{safe_url(r["url"])}" target="_blank" rel="noopener noreferrer"><span class="rk">{i}</span><span class="gm"><b class="gn"><span class="go">{e(r["repo"].split("/")[0])}/</span>{e(r["repo"].split("/")[-1])}</b><span class="gd">{e(r["desc"])}</span><span class="gx">{(f"<i class=ld style=--h:{hue(r[chr(108)+chr(97)+chr(110)+chr(103)])}></i>"+e(r["lang"])) if r["lang"] else ""}<span>★ {fmt(r["stars"])}</span></span></span><span class="gt"><b>+{r["today"]:,}</b><span class="tb"><i class="up" style="width:{(r["today"]/gmx)**.5*100:.0f}%"></i></span><small>今日 ★</small></span></a>{CPY(safe_url(r["url"]),"复制仓库链接 "+r["repo"])}</li>' for i,r in enumerate(GHR[:12],1))
+    gl=''.join(f'<li><button class="grow" type="button" aria-expanded="false" aria-controls="gx{i}" data-repo="{e(r["repo"])}"><span class="rk">{i}</span><span class="gm"><b class="gn"><span class="go">{e(r["repo"].split("/")[0])}/</span>{e(r["repo"].split("/")[-1])}</b><span class="gd">{e(r["desc"])}</span><span class="gx">{(f"<i class=ld style=--h:{hue(r[chr(108)+chr(97)+chr(110)+chr(103)])}></i>"+e(r["lang"])) if r["lang"] else ""}<span>★ {fmt(r["stars"])}</span></span></span><span class="gt"><b>+{r["today"]:,}</b><span class="tb"><i class="up" style="width:{(r["today"]/gmx)**.5*100:.0f}%"></i></span><small>今日 ★</small></span></button>'
+                f'<div class="gxd" id="gx{i}" hidden><p class="gsum">{e(r["desc"])}</p><div class="act"><a class="btn" href="{safe_url(r["url"])}" target="_blank" rel="noopener noreferrer">GitHub ↗</a>{CPY(safe_url(r["url"]),"复制仓库链接 "+r["repo"])}</div></div></li>' for i,r in enumerate(GHR[:12],1))
+    gj=gh_json()
     # hot=''.join(f'<li><a class="hrow" href="{e((it.get("links") or {}).get("aihot",""))}" target="_blank" rel="noopener noreferrer"><span class="rk">{i}</span><span class="hn">{e(it["title"])}</span><span class="hc">{it.get("sourceCount",0)} 信源</span></a></li>' for i,it in enumerate(AH_HOT[:10],1))
     body=(tools('趋势','<span class="hint">话题 = X 上相关帖子每日条数，涨跌 = 昨日 vs 前几日均值 · 点行在 X 搜索</span>')+f'{kpis}'
           f'<div class="tcols"><div class="tstack"><section class="panel big" style="--dc:{DC["ai"]}"><h2><i class="dot"></i>AI 话题涨跌<small>{len(T)} 个 · 按涨幅排序</small></h2>{TH}<ul class="list tl">{trows(T,mx)}</ul></section>'
           f'<section class="panel" style="--dc:{DC["money"]}"><h2><i class="dot" style="--dc:{DC["money"]}"></i><i class="dot" style="--dc:{DC["growth"]}"></i>搞钱 + 个人成长<small>{len(M)} 个话题</small></h2>{TH}<ul class="list tl">{trows(M,mx,True)}</ul></section></div>'
-          f'<section class="panel big" style="--dc:#0ea5e9"><h2>GitHub 技术趋势<small>AI / 开发工具 · 今日新增 ★（条长按平方根缩放）</small></h2><ul class="list gl">{gl}</ul></section></div>'
+          f'<section class="panel big" style="--dc:#0ea5e9"><h2>GitHub 技术趋势<small>AI / 开发工具 · 今日新增 ★（条长按平方根缩放）</small></h2><ul class="list gl" data-gj="{gj}">{gl}</ul></section></div>'
           '')
     return page('XHOT · 趋势',body,'trends.html')
 # ---- 个人页 ----
@@ -642,12 +651,16 @@ def dhl(h,pref,n=0,k=''):
             hd='<div class="dorh"><span class="dlab">原帖摘录</span></div>'; tx=f'<div class="pt pto">{lnk(og)}</div>'
         ob=f'<div class="dor" id="{did}" hidden>{hd}{tx}<p class="dnote">摘录自原帖，全文请点「原帖 ↗」。</p></div>'
     p=PBY.get(h['pid']); ts=f' data-ts="{zts(p["ts"])}"' if p else ''
+    if not og:
+        did=f'o{k}-{n}'; ex=f'<button class="btn ex" type="button" aria-expanded="false" aria-controls="{did}">展开</button>'
+        ob=f'<div class="dor" id="{did}" hidden><div class="dorh"><span class="dlab">原帖</span></div><p class="dnote">暂无原帖摘录，请点「原帖 ↗」在 X 查看全文。</p></div>'
+    if p: ob=ob.replace('<p class="dnote">',MET(p)+'<p class="dnote">',1)
     return f'<li class="dh fi" style="--dc:{DC[a["dom"]] if a else "var(--ac)"}" data-dom="{" ".join(a["doms"]) if a else ""}" data-tags="{" ".join(h["tags"])}" data-k="{e(str(h["pid"]))}"{ts}>{who}<div class="dha">{lv}{ex}{cp}{lk}</div><p class="dsm">{e(h["text"])}</p>{("<div class=tcs>"+tcs(h["tags"])+"</div>") if h["tags"] else ""}{ob}</li>'
 def t30row(p,rk,G,pref,eager=False):
     a=ACC[p['u']]; dom=pdom(p); g,en=gist_of(p,G)
     return (f'<li class="trw fi" style="--dc:{DC[dom]}" data-dom="{" ".join(a["doms"])}" data-tags="{" ".join(p["tags"])}" data-ts="{zts(p["ts"])}" data-k="{p["id"]}"><details><summary><span class="rk">{rk}</span>{av(p["u"],a["name"],"s",pref,eager)}'
             f'<span class="trbd"><span class="trh"><b>{e(a["name"])}</b><small>@{e(a["H"])}</small>{tcs(p["tags"])}</span><span class="trg">{"<i class=en>EN</i>" if en else ""}{e(g)}</span></span><span class="trm">🔥 {fmt(p["heat"])}</span></summary>'
-            f'<div class="trx"><div class="pt"{" lang=en" if p["en"] else ""}>{lnk(p["ex"])}</div><div class="act"><a class="btn" href="{pref}p/{p["u"]}.html">看 {e(a["name"])} 主页</a><button class="btn cp" type="button" data-l="复制摘录">复制摘录</button><a class="btn op" href="{safe_url(xlink(a["H"],p["id"]))}" target="_blank" rel="noopener noreferrer">在 X 打开 ↗</a>{CPY(safe_url(xlink(a["H"],p["id"])),"复制帖子链接")}</div></div></details></li>')
+            f'<div class="trx"><div class="pt"{" lang=en" if p["en"] else ""}>{lnk(p["ex"])}</div>{MET(p)}<div class="act"><a class="btn" href="{pref}p/{p["u"]}.html">看 {e(a["name"])} 主页</a><button class="btn cp" type="button" data-l="复制摘录">复制摘录</button><a class="btn op" href="{safe_url(xlink(a["H"],p["id"]))}" target="_blank" rel="noopener noreferrer">在 X 打开 ↗</a>{CPY(safe_url(xlink(a["H"],p["id"])),"复制帖子链接")}</div></div></details></li>')
 def mini_trends():
     T=[(x,d) for d in DOMS for x in DATA[d]['trends']]; T.sort(key=lambda z:-z[0]['g'])
     pick=T[:4]+[z for z in T[::-1][:2] if z[0]['g']<0]

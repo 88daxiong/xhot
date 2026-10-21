@@ -33,6 +33,7 @@ XHOT 是一个**纯静态**的 X（Twitter）热点简报：关注 AI、搞钱�
 | 资讯 | `news.html` | 两栏阅读器：AIHOT 中文资讯在前，X 新闻在后 |
 | 趋势 | `trends.html` | X 话题讨论量 7 天涨跌 + GitHub 今日 AI / 开发工具趋势 |
 | Agent | `agents.html` | AI 开发工具雷达：今日热门 / 本周热门 / 新出现 三个标签页，分类筛选，每页 9 张卡片（3/2/1 列），点卡片打开详情（README 纯文本摘要 + 中文一句话），数据懒加载自 `assets/agents.json` |
+| — | 展开 | **每张帖子卡片都能展开**（今日 / 日报 / 领域 / 全部归档 / 人物页，含「再显示」载入的帖子与高光帖）：长摘录解除 6 行折叠，并显示详情（北京时间发布时间、点赞 / 转发 / 评论 / 引用 / 浏览 / 热度，及「全文请看原帖」说明）；必读卡片展开原帖摘录与译文切换（没有摘录时也能展开看数据）；Top30 与 Agent 列表行展开摘录、数据与动作区。**每个 GitHub 条目都能展开**：趋势页仓库行展开 README 摘要（有缓存时）、中文简介、描述、语言、★、今日 / 本周增星，以及 GitHub 与复制按钮（详情首次展开时才读 `assets/gh.json`）；Agent 卡片打开详情面板。⌘K 搜索结果是跳转链接，不是卡片 |
 | — | 一键复制 | Agent 卡片与趋势页每个仓库有复制链接按钮；Agent 详情可复制仓库链接、`git clone https://github.com/<owner>/<repo>.git` 与仓库名；帖子卡片（今日 Top 30 / 领域 / 全部 / 人物页）复制帖子链接（放在动作区最后）；必读卡片不单独放链接复制按钮（「复制译文 / 复制摘录」已附带原帖链接，头部保持一行）；资讯正文复制原文链接 |
 | — | `about.html` | 数据来源、AI 生成内容说明、撤下方式、免责声明（每页页脚有入口） |
 
@@ -76,6 +77,7 @@ flowchart LR
   - `assets/pm.json`：精简作者表（账号、名字、头像、领域、标签表、日期），只给全部归档用；个人页的标签表直接内联在页面的 `#tw-meta` 里，不发请求。
   - `assets/search.json`：⌘K 完整索引（人物、要点、话题、Agent 项目），**只在 ⌘K 首次打开时**读取。
   - `assets/agents.json`：Agent 详情（README 摘要等），首次打开详情时读取；`assets/status.html`：数据健康表，点开才读。
+  - `assets/gh.json`：趋势页 GitHub 条目详情（与 `agents.json` 同一份 README 摘要缓存），首次展开某个仓库时读取。
   - 文件名稳定，内容哈希只作 `?v=` 版本号写在引用处，所以轻量刷新只会改到真正有变化的文件。
 - 头像：列表、卡片与人物网格统一用 64px 小图（`assets/av/<handle>.s.<hash>.webp`，约 0.6–1KB），只有个人页头部用 96px；首屏以下全部 `loading="lazy"`。
 - 相对时间（x 小时前 / 今天 / 昨天）由前端补齐，**页面源码里不烘焙相对时间**，页面稳定、无数据变化就不改写文件；新 / 已读标记只存浏览器 localStorage。
@@ -143,7 +145,7 @@ src/
 ├─ .env.example          # 环境变量模板（复制为 .env，不入库）
 ├─ requirements.txt
 ├─ gzserve.py            # 本地预览：带 gzip 的静态服务器（模拟 GitHub Pages）
-└─ 测试：test_escape.py fuzz.py qa.py check_links.py ds_audit.py mobile_audit.py card_layout.py shots.py
+└─ 测试：test_escape.py fuzz.py qa.py check_links.py ds_audit.py mobile_audit.py card_layout.py expand.py shots.py
         viewports.py news_all.py speed.py speedtab.py audit.py prof.py prof2.py
 ```
 
@@ -244,7 +246,7 @@ d/{ai,money,growth,all}.html      day/<YYYY-MM-DD>.html      p/<handle>.html + p
 feed/<YYYY-MM-DD>.json            # 全部归档按天分片
 assets/core|feed|news|agents.<hash>.js
 assets/nb/<k>.json                # 资讯正文分片（每 10 条）
-assets/pm.json  assets/search.json  assets/agents.json  assets/status.html
+assets/pm.json  assets/search.json  assets/agents.json  assets/gh.json  assets/status.html
 assets/av/*.webp                  # 头像（64px .s 小图 + 96px）
 hot.html accounts.html daily/<日期>.html   # 旧链接跳转页
 ```
@@ -261,6 +263,7 @@ python3 gzserve.py site 8840 &         # 以下浏览器测试需要预览服务
 python3 ds_audit.py                    # 设计令牌一致性（字号 / 间距 / 圆角 / 字重）
 python3 mobile_audit.py                # 手机 / 平板（Chromium + WebKit）：溢出、截断、字号下限、触控 44px、展开
 python3 news_all.py                    # 逐条打开每条资讯（桌面窗格 + 手机就地展开）
+python3 expand.py                      # 展开回归：每张帖子卡片 / 必读 / 列表行 / GitHub 条目都能展开并收起（含「再显示」与键盘），1440/1024/768/390 × Chromium+WebKit；另测 721–1100px 今日 / 日报页 CLS ≤ 0.001
 python3 card_layout.py                 # 卡片头部回归：1440/1280/1024/768/390 × Chromium+WebKit，作者名 / handle 不换行、按钮互不重叠、今日页两栏占满宽度
 python3 shots.py --all                 # 截图 + CSP / JS 错误 / 体积预算 / 功能断言
 python3 viewports.py                   # 可选：12 种视口溢出检查
@@ -392,7 +395,8 @@ jobs:
 - 共享组件都在 `style_ds.css`：页面容器、标题层级、卡片、列表行、标签、按钮、分段控件、标签页、分页、底部详情面板、手机整页阅读页。
 - 所有对比度需达到 WCAG AA；彩色底上的选中态文字用深色（`#0f0c26`），不要用白字。
 - 触控目标 ≥44px（手机）；阅读文字 ≥15px、次要 ≥13px、元信息 ≥12px（手机）。
-- 展开 / 收起统一走 `app_core.js` 的 `xp()`：高度动画、`aria-expanded`、滚入视口、减少动效时直接切换。长帖正文默认折叠为 6 行并渐隐（`.pt.clp`），点击卡片或「展开」查看完整摘录。
+- 展开 / 收起统一走 `app_core.js` 的 `xp()`：高度动画、`aria-expanded`、滚入视口、减少动效时直接切换。长帖正文默认折叠为 6 行并渐隐（`.pt.clp`）。所有帖子卡片都有「展开」（`app_core.js` 的 `pexp()`）：点击卡片空白处或按钮，解除折叠并展开详情 `.pxd`（由卡片的 `data-ts` / `data-m=赞,转,评论,引用,浏览,热度` 在首次展开时生成，只用 textContent）。`<details>` 行（Top30、Agent 列表）打开走原生开合再用 `xp()` 补动画，收起由 `xp()` 动画后关闭；趋势页 GitHub 行是 `button.grow`，展开区 `.gxd` 首次展开时读 `assets/gh.json` 填充。新增可展开的东西必须复用这几条路径，不要另写一套。
+- 今日 / 日报页头日期栏在 ≥721px 保持一行（说明文字放不下时省略号），因为前端会把日期改写成「今天 · 10月21日」，换行会造成布局偏移。
 - 复制按钮：图标按钮 `.cpy`（与 `.btn` 同边框、同圆角，桌面 32×28 / Agent 卡片 36×36，触屏与 ≤720px 为 44×44），纯 CSS mask 图标，成功后换成对勾并浮出 12px「已复制」提示（深色模式下为深底浅字的反色气泡）；Agent 详情里是带文字的 `.btn.cpb`，就地换成「已复制 ✓」。都带 `aria-label`，可用键盘 Enter / Space 触发，并通过 `aria-live` 读出「已复制」。
 - 卡片头部（头像 + 作者名 + handle + 点赞 + 动作按钮）在桌面 / 平板上必须保持作者名与 handle 各自一行；空间不够时让点赞与按钮整体换到下一行，不要再往头部塞按钮。新增按钮放进卡片底部动作区（`.act`，复制图标排在最后）。
 - 样式选择器要带页面作用域：通用类名（如 `.dgrid`）在多个页面复用，Agent 页网格写成 `.dtpan .dgrid`，否则会改坏今日页的两栏布局。
@@ -455,6 +459,6 @@ Want to refactor the pages (front end / templates / CSS / JS)? See [CONTRIBUTING
 
 **XHOT** is a static briefing of hot posts on X across AI, making money and personal growth (~130 accounts), plus AI news and an AI developer-tools radar from GitHub. It is fully refreshed daily at 08:00 (Asia/Shanghai), with light refreshes at 14:00, 20:00 and 02:00. Pages: Today, Domains, People, News, Trends, Agent (GitHub AI tools: today / this week / new), plus ⌘K search. Repo cards, the detail view (URL, `git clone`, repo name), post cards and news items have one-click copy buttons.
 
-**Replicate it:** `pip install -r src/requirements.txt`; run `cd src && python3 demo_seed.py && python3 generate.py && python3 gzserve.py site 8840` for an offline demo. For real data, create your own X developer App, put its Bearer Token in `.env` as `X_BEARER_TOKEN` (never commit it), edit `watchlist.json`, then run `x_fetch.py full`, `aihot_fetch.py`, `gh_trending.py`, `devtools_fetch.py`, `devtools_readme.py`, `avatars_fetch.py`, then `generate.py`. Run the tests one by one, export `data/` with `export_data.py`, and publish `site/` to GitHub Pages (Settings → Pages → Deploy from a branch → `main` / root). A GitHub Actions example is above. Light refreshes run `XHOT_QA_LIGHT=1 python3 qa.py`, which accepts English-excerpt fallbacks for new Top 30 entries; full refreshes run qa in strict mode. Environment variables are listed in the 环境变量 table. Browser tests use Playwright's bundled browsers unless `CHROME_PATH` is set.
+**Replicate it:** `pip install -r src/requirements.txt`; run `cd src && python3 demo_seed.py && python3 generate.py && python3 gzserve.py site 8840` for an offline demo. For real data, create your own X developer App, put its Bearer Token in `.env` as `X_BEARER_TOKEN` (never commit it), edit `watchlist.json`, then run `x_fetch.py full`, `aihot_fetch.py`, `gh_trending.py`, `devtools_fetch.py`, `devtools_readme.py`, `avatars_fetch.py`, then `generate.py`. Run the tests one by one, export `data/` with `export_data.py`, and publish `site/` to GitHub Pages (Settings → Pages → Deploy from a branch → `main` / root). A GitHub Actions example is above. Light refreshes run `XHOT_QA_LIGHT=1 python3 qa.py`, which accepts English-excerpt fallbacks for new Top 30 entries; full refreshes run qa in strict mode. Environment variables are listed in the 环境变量 table. Browser tests use Playwright's bundled browsers unless `CHROME_PATH` is set. Every X post card and every GitHub item on the site is expandable through the shared expander in `app_core.js` (`pexp()` / `xp()`); trending-repo details are lazy-loaded from `assets/gh.json`. `expand.py` checks this at four widths in Chromium and WebKit.
 
 The repo and site publish **only post IDs, metrics, short excerpts (≤220–320 characters), editor-written Chinese summaries and links back to X — never full post text**. They follow the X Developer Agreement. There are no analytics and no third-party requests. Pages use a strict meta CSP, escape everything, filter links through safeUrl and only accept avatars from `pbs.twimg.com`. To request a takedown, open an issue. Post content belongs to the original authors; AIHOT summaries are MIT-licensed.

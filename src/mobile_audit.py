@@ -76,7 +76,7 @@ with sync_playwright() as p:
                     g.goto(B+u,wait_until='load');g.wait_for_timeout(700);res['n']+=1
                     bad=g.evaluate(PJS); rec(tag,'post-overlap',bad[:3] if bad else None)
                     if g.locator('.post .ex2').count():
-                        r=g.evaluate("()=>{const b=[...document.querySelectorAll('.post .ex2')].find(x=>x.offsetParent);if(!b)return null;const p=b.closest('.post'),t=p.querySelector('.pt');const h0=t.getBoundingClientRect().height;b.click();return new Promise(ok=>setTimeout(()=>{const h1=t.getBoundingClientRect().height;const o1=p.classList.contains('open');p.querySelector('.pt').click();setTimeout(()=>ok({o1,grow:h1>=h0,closed:!p.classList.contains('open')}),400)},400))}")
+                        r=g.evaluate("()=>{const b=[...document.querySelectorAll('.post .ex2')].find(x=>x.offsetParent&&(t=>t&&t.scrollHeight>t.clientHeight+2)(x.closest('.post').querySelector('.pt.clp')));if(!b)return null;const p=b.closest('.post'),t=p.querySelector('.pt');const h0=t.getBoundingClientRect().height;b.click();return new Promise(ok=>setTimeout(()=>{const h1=t.getBoundingClientRect().height;const o1=p.classList.contains('open');p.querySelector('.pt').click();setTimeout(()=>ok({o1,grow:h1>=h0,closed:!p.classList.contains('open')}),400)},400))}")
                         rec(tag,'post-expand',r if r and not(r['o1'] and r['grow'] and r['closed']) else None)
                         bad2=g.evaluate("()=>{document.querySelectorAll('.post .pt.clp').forEach(t=>t.closest('.post').classList.add('open'));return 1}") and g.evaluate(PJS)
                         rec(tag,'post-overlap-open',bad2[:3] if bad2 else None)

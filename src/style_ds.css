@@ -18,7 +18,7 @@ html[data-density=compact]{--cp:8px;--rowp:8px}
 .post,.pc,.acard,.kpi,.panel,.glance,.brief{border-radius:var(--r3);border:1px solid var(--bd);box-shadow:var(--sh)}
 .post,.pc,.acard,.kpi{padding:var(--s3) var(--s4)}
 /* 列表行：同一纵向内边距 */
-.trw summary,.nrh,.list a.trow,.gl a.grow{padding-top:var(--rowp);padding-bottom:var(--rowp);padding-left:var(--s4);padding-right:var(--s4)}
+.trw summary,.nrh,.list a.trow,.gl .grow{padding-top:var(--rowp);padding-bottom:var(--rowp);padding-left:var(--s4);padding-right:var(--s4)}
 .trx{padding:0 var(--s4) var(--s4)}
 /* 头像里的首字母 */
 .av,.hh .av{font-size:var(--t-sm)}
@@ -135,7 +135,7 @@ html[data-theme=dark] .dtabs button.on,html[data-theme=dark] .dtabs button.on sm
 .cpy.ok::after,.cpy.bad::after{content:attr(data-tip);position:absolute;bottom:calc(100% + 6px);left:50%;transform:translateX(-50%);padding:var(--s1) var(--s2);border-radius:var(--r1,6px);background:var(--tx);color:var(--bg);font-size:var(--t-cap);font-weight:500;line-height:1.4;white-space:nowrap;pointer-events:none;z-index:5}
 .dca .cpy{width:36px;height:36px}
 .cpb.ok{color:var(--up);border-color:var(--up)}
-.gl li{display:flex;align-items:center;gap:var(--s2)}.gl li>a.grow{flex:1;min-width:0}.gl li>.cpy{margin-right:var(--s3)}
+.gl li{display:flex;align-items:center;gap:var(--s2)}.gl li>.grow{flex:1;min-width:0}.gl li>.cpy{margin-right:var(--s3)}
 .dsh .dca{flex-wrap:wrap}
 .srl{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 @media(pointer:coarse),(max-width:720px){.cpy,.dca .cpy{width:44px;height:44px}}
@@ -146,3 +146,16 @@ html[data-theme=dark] details.fr summary b{color:#fbbf24}
 @media(min-width:721px){.dh .hh{min-width:auto}.dh .hh b,.dh .hh small{white-space:nowrap;overflow-wrap:normal}}
 /* 帖子卡片动作区：链接复制图标放在最后，紧凑不拉伸 */
 .act .cpy{order:9;flex:none}
+/* 今日 / 日报页头日期：前端会把「10月21日 周三」改写成「今天 · 10月21日」（更宽）；日期框预留两种写法中较宽者的宽度，服务端渲染与前端改写后的换行位置一致，不产生布局偏移 */
+.tmid>.ddl{flex:none;min-width:7.5em;white-space:nowrap}.tmid>.dnew{flex:none}
+/* 帖子展开详情（.pxd）与 GitHub 条目展开区（.gxd） */
+.pxd{margin-top:var(--s3);padding:var(--s3);border-radius:8px;background:var(--bd2);font-size:var(--t-sm);color:var(--tx2)}
+.pxd dl{display:grid;grid-template-columns:repeat(auto-fill,minmax(96px,1fr));gap:var(--s2) var(--s3);margin:0}
+.pxd dt{font-size:var(--t-cap);color:var(--mu)}.pxd dd{margin:0;font-weight:600;color:var(--tx);overflow-wrap:anywhere}
+.pxd dl div:first-child{grid-column:1/-1}.pxd p{margin:var(--s2) 0 0;font-size:var(--t-cap);color:var(--mu)}
+.dor .met{margin-top:var(--s2)}.trx .met{margin:var(--s2) 0}
+.gl li{flex-wrap:wrap}.gl .grow{flex:1;min-width:0;width:100%;margin:0;border:0;background:none;font:inherit;color:inherit;text-align:left;cursor:pointer}
+.gl .grow:focus-visible{outline:2px solid var(--ac);outline-offset:-2px}.gl li.open>.grow{background:var(--bd2)}
+.gxd{flex:0 0 100%;padding:0 var(--s4) var(--s4);font-size:var(--t-sm);color:var(--tx2);display:flow-root}
+.gxd p{margin:var(--s2) 0 0;overflow-wrap:anywhere}.gxd .gzh{color:var(--tx);font-weight:600}.gxd .dlab{display:block;margin-top:var(--s3);font-size:var(--t-cap);color:var(--mu)}
+.gxd .gmt{color:var(--mu);font-size:var(--t-cap)}.gxd .act{margin-top:var(--s3);display:flex;flex-wrap:wrap;gap:var(--s2);align-items:center}

@@ -85,7 +85,7 @@ python3 gzserve.py site 8840  # 打开 http://127.0.0.1:8840/
 
 | 文件 | 内容 |
 |---|---|
-| `app_core.js`（每页都加载） | 主题切换；**`xp()` 展开 / 收起**（高度动画、`aria-expanded`、减少动效时直接切换，长帖 `.pt.clp` 6 行折叠）；**一键复制**：`[data-copy]` 按钮在捕获阶段处理，优先 `navigator.clipboard`，不可用时退回 textarea；相对时间补齐；日期选择器；**⌘K 搜索**：首次打开时才读 `assets/search.json`；`esc()` / `lnk()` / `safeUrl()` |
+| `app_core.js`（每页都加载） | 主题切换；**`xp()` 展开 / 收起**（高度动画、`aria-expanded`、减少动效时直接切换，长帖 `.pt.clp` 6 行折叠）；**帖子展开 `pexp()`**：每张 `.post` 都有「展开」，解除折叠并按 `data-ts` / `data-m` 生成详情 `.pxd`；`<details>` 行（Top30、Agent 列表）也走 `xp()` 动画；**GitHub 条目** `button.grow` 展开 `.gxd`，首次展开时读 `assets/gh.json`；**一键复制**：`[data-copy]` 按钮在捕获阶段处理，优先 `navigator.clipboard`，不可用时退回 textarea；相对时间补齐；日期选择器；**⌘K 搜索**：首次打开时才读 `assets/search.json`；`esc()` / `lnk()` / `safeUrl()` |
 | `app_feed.js`（全部归档 `d/all` / 个人页 `p/*`） | 读 `feed/<日期>.json` 与 `p/<handle>.json` 分片；全部归档的作者表读 **`assets/pm.json`**，个人页直接用页面内联的 `#tw-meta`，不发请求 |
 | `app_news.js`（资讯页） | 列表与首条正文由服务端渲染；点开某条时只读它所在的 **`assets/nb/<k>.json`** 分片（每片 10 条），悬停、触摸或聚焦时预取 |
 | `app_agents.js`（Agent 页） | 标签页、分页、详情面板；首次打开详情时读 **`assets/agents.json`** |
@@ -101,6 +101,8 @@ python3 gzserve.py site 8840  # 打开 http://127.0.0.1:8840/
 | `feed/<YYYY-MM-DD>.json` | `[[id, UTC时间, 摘录, 赞, 转, 回复, 引用, 浏览, 热度, 重要度, handle, "标签,…", 是否英文0/1]]`，每天最多 200 条 |
 | `p/<handle>.json` | 个人页「再显示」用的时间线分片（字段同上） |
 | `assets/nb/<k>.json` | `["<div class=nb>…</div><div class=act>…</div>", …]`：第 k 片，对应第 k×10 起的 10 条资讯，内容是**生成器已转义**的 HTML 片段 |
+| `assets/gh.json` | `{"owner/repo":[README摘要, 中文简介, 描述, 语言, stars, 今日增星, 本周增星或null]}`（趋势页 GitHub 条目，列表元素 `data-gj` 给出带版本号的文件名） |
+| 帖子卡片 `data-m` | `"赞,转,评论,引用,浏览,热度"`（服务端 `post_html()` 与 `app_feed.js` 的 `card()` 都要写） |
 | `assets/agents.json` | `{"owner/repo":[README摘要, 中文简介, 描述, 话题[], stars, 今日增星, 本周增星, 语言, 创建时间, 中文名]}` |
 | `assets/status.html` | 数据健康表的 HTML 片段 |
 | 页面上的 `data-*` 属性与 `#tw-meta` | 例如 `data-copy`、`data-days` / `data-cur` / `data-mode`（日期选择器）、`data-src`（资讯来源筛选）。JS 和测试都会选中这些属性，改名要同步修改 |
@@ -118,6 +120,7 @@ python3 gzserve.py site 8840  # 打开 http://127.0.0.1:8840/
 - **转义 / XSS**：服务端文本一律走 `e()`，即先脱敏再转义；链接走 `safe_url()`。前端只用 `textContent` 或 `esc()` 插入外部数据，链接走 `safeUrl()`。禁止 `eval`、`document.write`、`outerHTML` 和内联事件属性。CSP 不得放宽：不加第三方源，不加新的内联脚本；`img-src` 只允许本站和 `data:`。
 - **GitHub / X 合规**：不展示推文全文，只展示摘录，并保留「原帖 ↗」链接；头像只来自 X 官方图床并重新编码；不加跟踪脚本，不加第三方嵌入。详见 [README · 合规与内容策略](README.md#合规与内容策略)。
 - **卡片头部一行**：头像 + 作者名 + handle + 点赞 + 动作按钮。桌面和平板上作者名、handle 都不得换行；空间不够时，让点赞和按钮整体换到下一行。
+- **一切皆可展开**：每张帖子卡片、每个 GitHub 条目都必须能展开，并且复用 `pexp()` / `xp()` / `button.grow` + `.gxd` 这几条路径（键盘可用、减少动效时直接切换）；展开详情要懒加载，不能挤占体积预算。
 - **复制按钮只放动作区**：新的复制按钮一律放进卡片底部的 `.act`，排在最后；不要往卡片头部塞按钮。按钮要带 `aria-label`，并且必须通过 `CPY()` 生成，它只接受经过 `safe_url()` 校验的链接。
 
 ## 5. 提 PR 前必须通过的检查
@@ -134,6 +137,7 @@ python3 check_links.py site            # 站内链接与分片文件
 python3 gzserve.py site 8840 &         # 以下需要预览服务器
 python3 ds_audit.py                    # 设计令牌
 python3 mobile_audit.py                # 手机 / 平板，Chromium + WebKit
+python3 expand.py                      # 每张帖子卡片 / GitHub 条目都能展开收起（四个宽度 × 两个引擎）+ 721–1100px CLS
 python3 card_layout.py                 # 卡片头部：1440/1280/1024/768/390 × Chromium+WebKit，作者名不换行、按钮不重叠
 python3 news_all.py                    # 逐条打开资讯
 python3 shots.py --all                 # 截图 1440（浅 / 深）/ 390 + CSP / JS 错误 / 体积预算断言，输出到 shots/
@@ -158,6 +162,6 @@ python3 mobile_audit.py --shots        # 同时输出平板截图到 _m/：ipadm
 - **Workflow**: fork → branch from `main` as `refactor/<topic>` → PR to `main` using the PR template. Edit `src/` only; root `*.html`, `assets/`, `d/`, `day/`, `p/`, `feed/`, `data/` are build outputs, so don't commit them. Never commit a real `.env`, tokens, `xhot.db`, `raw/`, `site/`, `shots/`, or any personal data.
 - **Setup**: `pip install -r requirements.txt`, `playwright install chromium webkit`, then `python3 demo_seed.py && python3 generate.py && python3 gzserve.py site 8840`. Always preview with `gzserve.py`, not `http.server`.
 - **Architecture**: one generator, `src/generate.py`, with one function per page (`today_page`, `domain_page`, `all_page`, `people_page`, `person`, `news`, `trends`, `agents_page`, `about_page`). Shared partials are `page`, `post_html`, `av`, `dctl`, `CPY`. Tokens live in `ds_tokens.json`, components in `style_ds.css`. JS: `app_core.js` (xp expander, copy buttons, ⌘K with lazy `search.json`), `app_feed.js` (feed shards, `pm.json`), `app_news.js` (lazy `assets/nb/<k>.json` shards), `app_agents.js` (`agents.json`). The JSON shapes in §3.4 are contracts; if you change one, change the generator and every reader in the same PR.
-- **Hard constraints**: AIHOT type scale and tokens only; shared components; works on mobile, tablet and desktop; WCAG AA in light and dark; budgets of ≤80KB first screen on home and ≤150KB on other pages; CLS ≈ 0; escape/XSS rules and a strict CSP; GitHub/X compliance (no full tweet text). The card header stays on one line, and copy buttons go only in the `.act` action row.
-- **Required checks**: qa (strict; `XHOT_QA_LIGHT=1` is the light-refresh variant), test_escape, fuzz 8, check_links, ds_audit, mobile_audit (Chromium + WebKit), card_layout, news_all, `shots.py --all` (1440/390 shots plus budgets) and `mobile_audit.py --shots` (768/1024 shots in `_m/`). Attach screenshots at 1440/1024/768/390.
+- **Hard constraints**: AIHOT type scale and tokens only; shared components; works on mobile, tablet and desktop; WCAG AA in light and dark; budgets of ≤80KB first screen on home and ≤150KB on other pages; CLS ≈ 0; escape/XSS rules and a strict CSP; GitHub/X compliance (no full tweet text). The card header stays on one line, and copy buttons go only in the `.act` action row.Every post card and GitHub item must be expandable via the shared `pexp()` / `xp()` paths, with lazy-loaded details.
+- **Required checks**: qa (strict; `XHOT_QA_LIGHT=1` is the light-refresh variant), test_escape, fuzz 8, check_links, ds_audit, mobile_audit (Chromium + WebKit), card_layout, expand, news_all, `shots.py --all` (1440/390 shots plus budgets) and `mobile_audit.py --shots` (768/1024 shots in `_m/`). Attach screenshots at 1440/1024/768/390.
 - **Process**: keep PRs small, one page each. The maintainer reviews and merges. `main` is regenerated and published by an automated job, so it must always stay deployable.
