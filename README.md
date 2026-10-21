@@ -1,6 +1,6 @@
 # XHOT · X 热点雷达
 
-在线访问：<https://88daxiong.github.io/xhot/>　·　源码：[`src/`](src/)　·　第三方许可：[`LICENSE-THIRD-PARTY.md`](LICENSE-THIRD-PARTY.md)
+在线访问：<https://88daxiong.github.io/xhot/>　·　源码：[`src/`](src/)　·　参与重构：[`CONTRIBUTING.md`](CONTRIBUTING.md)　·　第三方许可：[`LICENSE-THIRD-PARTY.md`](LICENSE-THIRD-PARTY.md)
 
 XHOT 是一个**纯静态**的 X（Twitter）热点简报：关注 AI、搞钱（创业 / 创作者经济）、个人成长三个领域约 130 个账号，外加 AI 资讯与 GitHub 上的 AI 开发工具。每天北京时间 08:00 完整刷新，14:00 / 20:00 / 次日 02:00 各做一次轻量刷新。目标是**每天 10 分钟看完重点**。
 
@@ -20,6 +20,8 @@ XHOT 是一个**纯静态**的 X（Twitter）热点简报：关注 AI、搞钱�
 11. [自定义：账号、领域、标签](#自定义账号领域标签)
 12. [常见问题与排错](#常见问题与排错)
 13. [English](#english)
+
+想重构页面（前端 / 模板 / CSS / JS）？请先读 [贡献指南 CONTRIBUTING.md](CONTRIBUTING.md)。
 
 ## 页面地图
 
@@ -448,6 +450,8 @@ jobs:
 - **字体或间距审计报越界**：新写的 CSS 数值没落在令牌刻度上，改用 `var(--s*)` / `var(--t-*)` / `var(--r*)`。
 
 ## English
+
+Want to refactor the pages (front end / templates / CSS / JS)? See [CONTRIBUTING.md](CONTRIBUTING.md) (fork → `refactor/<topic>` → PR; demo data only, no tokens needed).
 
 **XHOT** is a static briefing of hot posts on X across AI, making money and personal growth (~130 accounts), plus AI news and an AI developer-tools radar from GitHub. It is fully refreshed daily at 08:00 (Asia/Shanghai), with light refreshes at 14:00, 20:00 and 02:00. Pages: Today, Domains, People, News, Trends, Agent (GitHub AI tools: today / this week / new), plus ⌘K search. Repo cards, the detail view (URL, `git clone`, repo name), post cards and news items have one-click copy buttons.
 
