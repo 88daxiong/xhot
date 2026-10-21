@@ -21,6 +21,7 @@ with sync_playwright() as p:
         pg.goto(B+'news.html'); pg.wait_for_timeout(1500); pg.wait_for_function("()=>true")
         seen=set(); n=0
         for src in ['top','all','h','d','s','x']:
+            if not pg.locator(f'[data-src={src}]').count(): continue   # 该来源本次没有条目（如演示数据只有 AIHOT 精选）
             pg.click(f'[data-src={src}]'); pg.wait_for_timeout(200)
             idx=pg.evaluate("[...document.querySelectorAll('.nr')].map((e,i)=>e.offsetParent?i:-1).filter(i=>i>=0)")
             for i in idx:

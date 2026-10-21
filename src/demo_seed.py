@@ -28,7 +28,7 @@ for i,h in enumerate(hs):
         tid+=random.randint(1000,99999); t=now-datetime.timedelta(hours=random.randint(1,24*28))
         lk=random.randint(5,20000)
         db.execute('insert or replace into tweets values(?,?,?,?,?,?,?,?,?,?,?,?,?)',(str(tid),uid,t.strftime('%Y-%m-%dT%H:%M:%S.000Z'),
-            (TOPIC_EN[n%2] if n%3==0 else f'这是 {h} 的第 {n+1} 条演示帖子（虚构）：{TOPIC[n%len(TOPIC)]}'),lk,lk//10,lk//20,lk//50,lk*30,lk//15,
+            (f'Demo {h} #{n+1}: '+TOPIC_EN[n%2][6:] if n%3==0 else f'这是 {h} 的第 {n+1} 条演示帖子（虚构）：{TOPIC[n%len(TOPIC)]}'),lk,lk//10,lk//20,lk//50,lk*30,lk//15,
             f'https://x.com/{h}/status/{tid}','en' if n%3==0 else 'zh',now.isoformat()))
 db.commit()
 ts=now.strftime('%Y%m%d_%H%M%S')
@@ -40,14 +40,25 @@ for d in DOMS:
 print('demo: 账号',len(hs),'帖子',db.execute('select count(*) from tweets').fetchone()[0])
 # 演示日报：最近 24 小时点赞最高的 6 条为必读，前 40 条写一句话要点（真实站点由编辑撰写）
 os.makedirs('daily',exist_ok=True)
-_day=now.astimezone(datetime.timezone(datetime.timedelta(hours=8))).strftime('%Y-%m-%d')
+_cst=now.astimezone(datetime.timezone(datetime.timedelta(hours=8)))
+_end=_cst.replace(hour=9,minute=0,second=0,microsecond=0)
+if _cst<_end: _end-=datetime.timedelta(days=1)
+_day=_end.strftime('%Y-%m-%d')   # 日报窗口 = 该日 09:00（北京时间）往前 25 小时，与生成器一致
+_w0=(_end-datetime.timedelta(hours=25)).astimezone(datetime.timezone.utc).strftime('%Y-%m-%dT%H:%M:%S'); _w1=_end.astimezone(datetime.timezone.utc).strftime('%Y-%m-%dT%H:%M:%S')
 _un={u['id']:u for u in users}
-_top=db.execute("select id,author_id,likes,text from tweets where created_at>=? order by likes desc limit 40",((now-datetime.timedelta(hours=24)).strftime('%Y-%m-%dT%H:%M:%S'),)).fetchall()
+_top=[];_seen=set()
+for r in db.execute("select id,author_id,likes,text from tweets where created_at>=? and created_at<? order by likes desc",(_w0,_w1)).fetchall():
+    if r[1] in _seen: continue   # 每人 1 条，避免与「每人最多 2 条」的榜单规则冲突
+    _seen.add(r[1]); _top.append(r)
+    if len(_top)>=40: break
 if not os.listdir('daily') and _top:
+    _sel=sorted(_top[:4]+[x for x in _top[4:24] if x[3].startswith('Demo ')][:2],key=lambda x:-x[2])
+    for i,a,lk,t in _sel: db.execute('update tweets set likes=likes*20+100000 where id=?',(i,))   # 必读要稳进当日 Top 30
+    db.commit(); _sel=[(i,a,lk*20+100000,t) for i,a,lk,t in _sel]
     hl=[{'handle':_un[a]['username'],'name':_un[a]['name'],'post_id':i,'url':f'https://x.com/{_un[a]["username"]}/status/{i}','likes':lk,
-         'text_zh':'演示要点：'+t[:30],'excerpt':t[:200],'tags':[],**({'excerpt_zh':'（演示译文）发布一个新的开源智能体框架。'} if t.startswith('Demo:') else {})} for i,a,lk,t in sorted(_top[:4]+[x for x in _top[4:] if x[3].startswith('Demo:')][:2],key=lambda x:-x[2])]   # 至少 2 条英文必读（测试中文译文 / EN 切换）
+         'text_zh':f'演示要点（{_un[a]["name"]}）：'+t[:30],'excerpt':t[:200],'tags':[],**({'excerpt_zh':'（演示译文）发布一个新的开源智能体框架。'} if t.startswith('Demo ') else {})} for i,a,lk,t in _sel]   # 至少 2 条英文必读（测试中文译文 / EN 切换）
     json.dump({'date':_day,'summary_zh':['演示第一句：今天的重点（虚构）。','演示第二句。','演示第三句。'],'highlights':hl,
-               'gists':{i:'一句话要点：'+t[:24] for i,a,lk,t in _top},'pin':[],'hide':[],'topics_zh':'','followers_zh':'','changelog':[]},
+               'gists':{i:f'一句话要点（{_un[a]["name"]} #{n+1}）：'+t[:24] for n,(i,a,lk,t) in enumerate(_top)},'pin':[],'hide':[],'topics_zh':'','followers_zh':'','changelog':[]},
               open(f'daily/{_day}.json','w',encoding='utf-8'),ensure_ascii=False,indent=1)
 # 日报 / 周要点示例（仅当目录里还没有任何文件时写入；test_escape.py / fuzz.py 需要至少各一份）
 for sub,sample,name in (('daily','daily.sample.json',now.astimezone(datetime.timezone(datetime.timedelta(hours=8))).strftime('%Y-%m-%d')),

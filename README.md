@@ -12,7 +12,7 @@ XHOT 是一个**纯静态**的 X（Twitter）热点简报：关注 AI、搞钱�
 3. [数据来源、条款与配额](#数据来源条款与配额)
 4. [源码结构 src/](#源码结构-src)
 5. [环境准备](#环境准备)
-6. [从零复刻：分步指南](#从零复刻分步指南)
+6. [从零复刻：分步指南](#从零复刻分步指南)（含[环境变量](#环境变量)）
 7. [定时刷新（cron / GitHub Actions）](#定时刷新cron--github-actions)
 8. [设计系统](#设计系统)
 9. [安全设计](#安全设计)
@@ -31,6 +31,7 @@ XHOT 是一个**纯静态**的 X（Twitter）热点简报：关注 AI、搞钱�
 | 资讯 | `news.html` | 两栏阅读器：AIHOT 中文资讯在前，X 新闻在后 |
 | 趋势 | `trends.html` | X 话题讨论量 7 天涨跌 + GitHub 今日 AI / 开发工具趋势 |
 | Agent | `agents.html` | AI 开发工具雷达：今日热门 / 本周热门 / 新出现 三个标签页，分类筛选，每页 9 张卡片（3/2/1 列），点卡片打开详情（README 纯文本摘要 + 中文一句话），数据懒加载自 `assets/agents.json` |
+| — | 一键复制 | Agent 卡片与趋势页每个仓库有复制链接按钮；Agent 详情可复制仓库链接、`git clone https://github.com/<owner>/<repo>.git` 与仓库名；帖子卡片（今日 Top 30 / 领域 / 全部 / 人物页）复制帖子链接（放在动作区最后）；必读卡片不单独放链接复制按钮（「复制译文 / 复制摘录」已附带原帖链接，头部保持一行）；资讯正文复制原文链接 |
 | — | `about.html` | 数据来源、AI 生成内容说明、撤下方式、免责声明（每页页脚有入口） |
 
 全站：⌘K（或 `/`）搜索人物、标签、话题、日期、Agent 项目；浅色 / 深色 / 跟随系统；舒适 / 紧凑两档密度；**无统计脚本、无第三方请求**；已读 / 新增标记只存在浏览器 localStorage。
@@ -57,7 +58,7 @@ flowchart LR
   RAW --> GEN
   WEBP --> GEN
   GEN --> SITE["site/<br/>HTML + 分片 JSON"]
-  SITE --> T{"测试<br/>test_escape · fuzz · qa · check_links<br/>ds_audit · mobile_audit · shots"}
+  SITE --> T{"测试<br/>test_escape · fuzz · qa · check_links<br/>ds_audit · mobile_audit · news_all · card_layout · shots"}
   T -->|全部通过| PUB["GitHub Pages<br/>main 分支根目录"]
   DB --> EXP["export_data.py"] --> DATA["data/<br/>仅 ID 与指标"] --> PUB
 ```
@@ -67,16 +68,17 @@ flowchart LR
 ### 前端性能设计（均有测试与预算）
 - 每页只有 **一个内联脚本（主题预绘，带 sha256 的 CSP）和一个内联 `<style>`（按页裁剪，约 7KB gzip）**；JS 拆成 `core`（所有页）与 `news` / `feed`（按页），文件名带内容哈希、`defer`。
 - 外链 CSS 在 Fast 3G 下会多一次往返（实测 FCP 约 +1s），所以 CSS 内联；若日后换到支持 HTTP/2 push / Early Hints 的主机，可改回外链。
-- 数据分片：`feed/<日期>.json`（按天）、`p/<handle>.json`（个人时间线）、`assets/search.json`（⌘K 索引，首次呼出时才读）、`assets/status.html`（数据健康表，点开才读）；文件名稳定，内容哈希只作 `?v=` 版本号写在引用处，所以轻量刷新只会改到真正有变化的文件。首屏服务端渲染，无 JS 也能读正文。
+- 数据分片（全部按需读取，首屏服务端渲染，无 JS 也能读正文）：
+  - `feed/<日期>.json`：全部归档按天的摘录分片；`p/<handle>.json`：个人页时间线（「再显示」时读）。
+  - `assets/nb/<k>.json`：资讯正文，每 10 条一片；点开某条时只读它所在的分片，鼠标悬停 / 触摸 / 键盘聚焦时预取。列表与首条正文直接渲染在 `news.html` 里。
+  - `assets/pm.json`：精简作者表（账号、名字、头像、领域、标签表、日期），只给全部归档用；个人页的标签表直接内联在页面的 `#tw-meta` 里，不发请求。
+  - `assets/search.json`：⌘K 完整索引（人物、要点、话题、Agent 项目），**只在 ⌘K 首次打开时**读取。
+  - `assets/agents.json`：Agent 详情（README 摘要等），首次打开详情时读取；`assets/status.html`：数据健康表，点开才读。
+  - 文件名稳定，内容哈希只作 `?v=` 版本号写在引用处，所以轻量刷新只会改到真正有变化的文件。
+- 头像：列表、卡片与人物网格统一用 64px 小图（`assets/av/<handle>.s.<hash>.webp`，约 0.6–1KB），只有个人页头部用 96px；首屏以下全部 `loading="lazy"`。
 - 相对时间（x 小时前 / 今天 / 昨天）由前端补齐，**页面源码里不烘焙相对时间**，页面稳定、无数据变化就不改写文件；新 / 已读标记只存浏览器 localStorage。
 - `<link rel="expect" blocking="render">` 等页头与工具条解析完再首次绘制，布局偏移（CLS）≈ 0；头像为 64px / 96px webp（约 0.7 / 1.5KB），首屏之外懒加载。
 - 目标：首页首屏 ≤80KB gzip、LCP ≤1.0s（Fast 3G）、INP ≤100ms（CPU 4×）、CLS = 0；可用 `speed.py` 自测。
-
-### 限制（诚实说明）
-- GitHub Pages **不能设置响应头**：CSP 只能写在 `<meta>`，因此没有 `frame-ancestors`（页面可被 iframe 嵌套）、HSTS 不可控；`_headers` 文件只在 Cloudflare Pages / Netlify 等主机上生效。
-- GitHub Pages 有软限制（站点 ≤1GB、月流量约 100GB、构建 10 分钟）；`github.io` 在中国大陆访问不稳定。当前规模远低于限制，若流量增长需要换托管（架构已与托管无关）。
-- 每天约 150 个文件会变化（人物页的指标 / 摘录），仓库会持续增长；公开 `data/` 已去掉全文以控制体积和合规风险。
-- 没有自定义 404 页（GitHub Pages 默认 404）；旧链接的跳转页不会保留 `#` 之后的参数。
 
 ### 限制（诚实说明）
 - GitHub Pages **不能设置响应头**：CSP 只能写在 `<meta>`，因此没有 `frame-ancestors`（页面可被 iframe 嵌套）、HSTS 不可控；`_headers` 文件只在 Cloudflare Pages / Netlify 等主机上生效。
@@ -139,7 +141,7 @@ src/
 ├─ .env.example          # 环境变量模板（复制为 .env，不入库）
 ├─ requirements.txt
 ├─ gzserve.py            # 本地预览：带 gzip 的静态服务器（模拟 GitHub Pages）
-└─ 测试：test_escape.py fuzz.py qa.py check_links.py ds_audit.py mobile_audit.py shots.py
+└─ 测试：test_escape.py fuzz.py qa.py check_links.py ds_audit.py mobile_audit.py card_layout.py shots.py
         viewports.py news_all.py speed.py speedtab.py audit.py prof.py prof2.py
 ```
 
@@ -164,6 +166,23 @@ CREATE TABLE tweets(id TEXT PRIMARY KEY, author_id TEXT, created_at TEXT, text T
 - 浏览器（仅测试）：`python3 -m playwright install chromium webkit`；Linux 上首次还需 `python3 -m playwright install-deps webkit`。
 - 一个 X 开发者账号与 App（见下一节第 1 步）。不想申请也可以先用 `demo_seed.py` 离线体验。
 
+### 环境变量
+
+| 变量 | 用于 | 说明 |
+|---|---|---|
+| `X_BEARER_TOKEN` | `x_fetch.py`、`check_deleted.py` | 你的 X API Bearer Token，**只放环境变量 / CI Secrets** |
+| `HOT_N` / `MAX_CALLS` / `X_NEWS` | `x_fetch.py` | 轻量刷新的热门账号数（默认 60）/ 本次 X 调用上限（默认 400）/ `0` 跳过 X 新闻 |
+| `MAXREQ` | `devtools_readme.py` | README 抓取请求上限（默认 100） |
+| `XHOT_QA_LIGHT` | `qa.py` | `1` = 轻量刷新模式（见测试一节），完整刷新不要设 |
+| `XHOT_LIVE_LIKES` | `generate.py` | `1` = 必读的点赞数取库里最新值（轻量刷新用），否则用日报里记录的值 |
+| `XHOT_WEEKLY` | `generate.py` | `1` = 输出本周 Top 30 人物的周要点草稿 |
+| `XHOT_DRAFT` | `generate.py`（`daily_draft.py` 内部调用） | `YYYY-MM-DD` = 只打印当天候选后退出，不写站点 |
+| `XHOT_DAILY_DIR` / `XHOT_WEEKLY_DIR` | `generate.py` | 日报 / 周要点目录（默认 `daily/`、`weekly/`；`test_escape.py` / `fuzz.py` 用它指向临时目录） |
+| `XHOT_TEXT_MODE` | `generate.py` | 默认 `excerpt`（只发布短摘录），**请保持默认** |
+| `XHOT_DB` | `export_data.py` | 数据库路径（默认 `xhot.db`） |
+| `CHROME_PATH` | 浏览器测试 | 可选，系统 Chrome 路径；不设时用 playwright 自带浏览器 |
+| `ONLY` / `SITE_DIR` | `shots.py` | 只截指定页面（逗号分隔）/ 站点目录（默认 `site`） |
+
 ## 从零复刻：分步指南
 
 以下命令都在 `src/` 目录中执行。
@@ -175,7 +194,7 @@ python3 demo_seed.py          # 生成虚构的 xhot.db + raw/ + daily/weekly �
 python3 generate.py           # 输出 site/
 python3 gzserve.py site 8840  # 浏览器打开 http://127.0.0.1:8840/
 ```
-演示数据没有资讯与 GitHub 数据，`qa.py` 会提示这些区块为空，属正常。
+演示数据全部是虚构的（帖子、资讯、GitHub 仓库都是占位内容，链接指向 example.com 或不存在的 demo 仓库），但覆盖了所有页面，第 6 步的测试可以在演示数据上全部跑通。
 
 ### 1. 申请自己的 X Bearer Token
 1. 在 [developer.x.com](https://developer.x.com/) 注册开发者账号，创建 Project 与 App。
@@ -216,18 +235,36 @@ python3 avatars_fetch.py       # 头像缓存
 ```bash
 python3 generate.py            # → site/
 ```
+产物结构（即发布到 Pages 仓库根目录的内容）：
+```
+index.html news.html trends.html people.html agents.html about.html _headers
+d/{ai,money,growth,all}.html      day/<YYYY-MM-DD>.html      p/<handle>.html + p/<handle>.json
+feed/<YYYY-MM-DD>.json            # 全部归档按天分片
+assets/core|feed|news|agents.<hash>.js
+assets/nb/<k>.json                # 资讯正文分片（每 10 条）
+assets/pm.json  assets/search.json  assets/agents.json  assets/status.html
+assets/av/*.webp                  # 头像（64px .s 小图 + 96px）
+hot.html accounts.html daily/<日期>.html   # 旧链接跳转页
+```
+注意：生成器不会删除 `site/` 里已不再生成的旧文件；同步到 Pages 仓库前先删掉上一版的 `assets/ feed/ d/ day/ daily/ p/` 再整体复制（Actions 示例已这样做）。
 
 ### 6. 测试（逐个运行，每个必须通过）
 ```bash
 python3 test_escape.py                 # 转义 / XSS / safeUrl / 脱敏 / README 清洗回归，必须 ALL PASS
 python3 fuzz.py 8                      # 8 组随机恶意字符串灌进日报 / 周要点所有字段
-python3 qa.py                          # 内容 QA：重复、空区块、未翻译、领域错配
+python3 qa.py                          # 内容 QA：重复、空区块、未翻译、领域错配（完整刷新用严格模式）
+XHOT_QA_LIGHT=1 python3 qa.py          # 轻量刷新用：只放行 Top30 里带 EN 标记的「英文摘录」兜底（新入榜还没写中文一句话的英文帖）
 python3 check_links.py site            # 站内链接与分片文件存在性
 python3 gzserve.py site 8840 &         # 以下浏览器测试需要预览服务器（务必用 gzserve，不要用 http.server）
 python3 ds_audit.py                    # 设计令牌一致性（字号 / 间距 / 圆角 / 字重）
 python3 mobile_audit.py                # 手机 / 平板（Chromium + WebKit）：溢出、截断、字号下限、触控 44px、展开
+python3 news_all.py                    # 逐条打开每条资讯（桌面窗格 + 手机就地展开）
+python3 card_layout.py                 # 卡片头部回归：1440/1280/1024/768/390 × Chromium+WebKit，作者名 / handle 不换行、按钮互不重叠、今日页两栏占满宽度
 python3 shots.py --all                 # 截图 + CSP / JS 错误 / 体积预算 / 功能断言
+python3 viewports.py                   # 可选：12 种视口溢出检查
+python3 speed.py http://127.0.0.1:8840/ http://127.0.0.1:8840/ > speed.json   # 可选：Fast 3G + CPU 4× 测速（两个参数为对比的两个站点，可相同）
 ```
+浏览器测试默认使用 playwright 自带的 Chromium / WebKit；想用系统 Chrome 时设 `CHROME_PATH=/path/to/chrome`。所有浏览器测试的默认地址是 `http://127.0.0.1:8840/`，也可以把地址作为第一个参数传入。
 
 ### 7. 导出公开数据
 ```bash
@@ -255,8 +292,8 @@ JSON 键排序固定、缩进 2。导出脚本在末尾做「全文泄漏检查�
 
 **cron（自己的服务器）：**
 ```cron
-0 8 * * *       cd /path/to/xhot/src && set -a && . ./.env && set +a && python3 x_fetch.py full  && python3 aihot_fetch.py && python3 gh_trending.py && python3 devtools_fetch.py && python3 devtools_readme.py && python3 avatars_fetch.py && python3 generate.py && python3 test_escape.py >> refresh.log 2>&1
-0 14,20,2 * * * cd /path/to/xhot/src && set -a && . ./.env && set +a && python3 x_fetch.py light && python3 aihot_fetch.py && python3 generate.py && python3 test_escape.py >> refresh.log 2>&1
+0 8 * * *       cd /path/to/xhot/src && set -a && . ./.env && set +a && python3 x_fetch.py full  && python3 aihot_fetch.py && python3 gh_trending.py && python3 devtools_fetch.py && python3 devtools_readme.py && python3 avatars_fetch.py && python3 generate.py && python3 test_escape.py && python3 qa.py >> refresh.log 2>&1
+0 14,20,2 * * * cd /path/to/xhot/src && set -a && . ./.env && set +a && python3 x_fetch.py light && python3 aihot_fetch.py && python3 generate.py && python3 test_escape.py && XHOT_QA_LIGHT=1 python3 qa.py >> refresh.log 2>&1
 ```
 （生成通过后再把 `site/` 同步到 Pages 仓库并推送。）
 
@@ -280,7 +317,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with: { python-version: "3.13" }
-      - run: pip install Pillow==12.3.0
+      - run: pip install Pillow==12.3.0 beautifulsoup4==4.15.0
       - uses: actions/cache@v4
         with:
           path: |
@@ -301,10 +338,12 @@ jobs:
           fi
           python3 aihot_fetch.py
           python3 generate.py
+          if [ "${{ github.event.schedule }}" = "0 0 * * *" ] || [ "${{ github.event_name }}" = "workflow_dispatch" ]; then python3 qa.py; else XHOT_QA_LIGHT=1 python3 qa.py; fi
           python3 check_links.py site
           python3 export_data.py
       - name: publish
         run: |
+          rm -rf assets feed d day daily p ./*.html   # 先删上一版生成物，避免旧分片残留
           cp -r src/site/. .
           git config user.name "${{ github.actor }}"
           git config user.email "${{ github.actor }}@users.noreply.github.com"
@@ -352,6 +391,9 @@ jobs:
 - 所有对比度需达到 WCAG AA；彩色底上的选中态文字用深色（`#0f0c26`），不要用白字。
 - 触控目标 ≥44px（手机）；阅读文字 ≥15px、次要 ≥13px、元信息 ≥12px（手机）。
 - 展开 / 收起统一走 `app_core.js` 的 `xp()`：高度动画、`aria-expanded`、滚入视口、减少动效时直接切换。长帖正文默认折叠为 6 行并渐隐（`.pt.clp`），点击卡片或「展开」查看完整摘录。
+- 复制按钮：图标按钮 `.cpy`（与 `.btn` 同边框、同圆角，桌面 32×28 / Agent 卡片 36×36，触屏与 ≤720px 为 44×44），纯 CSS mask 图标，成功后换成对勾并浮出 12px「已复制」提示（深色模式下为深底浅字的反色气泡）；Agent 详情里是带文字的 `.btn.cpb`，就地换成「已复制 ✓」。都带 `aria-label`，可用键盘 Enter / Space 触发，并通过 `aria-live` 读出「已复制」。
+- 卡片头部（头像 + 作者名 + handle + 点赞 + 动作按钮）在桌面 / 平板上必须保持作者名与 handle 各自一行；空间不够时让点赞与按钮整体换到下一行，不要再往头部塞按钮。新增按钮放进卡片底部动作区（`.act`，复制图标排在最后）。
+- 样式选择器要带页面作用域：通用类名（如 `.dgrid`）在多个页面复用，Agent 页网格写成 `.dtpan .dgrid`，否则会改坏今日页的两栏布局。
 - Agent 卡片网格：>1000px 3 列，721–1000px 2 列，手机 1 列；每页 9 张。
 - 改样式后必须跑 `ds_audit.py` 与 `mobile_audit.py`，不得有越界值。
 
@@ -360,6 +402,7 @@ jobs:
 - **CSP**：每页 `<meta>` CSP，`script-src` 只允许本站与主题预绘脚本的 sha256，`connect-src 'self'`，`img-src 'self' data:`，`object-src` / `frame-src` / `form-action` 全部禁用，无任何第三方源；另有 referrer meta。
 - **转义**：所有文本先转义再渲染（服务端 `e()` 先脱敏再 HTML 转义，含译文、摘录、⌘K 结果、分片数据）；嵌入 HTML 的 JSON 额外转义 `<>&`、U+2028/2029；前端只用 `textContent` 插入外部数据（Agent 页详情面板也是），无 `eval` / `document.write` / `outerHTML`。
 - **链接**：所有外链经 `safe_url()` / `safeUrl()`，只放行 `http(s)`，带 `rel="noopener noreferrer"`；指向内网 / 本机地址的链接不渲染为链接。
+- **一键复制**：复制内容放在按钮的 `data-copy` 属性里，生成器端只接受 `safe_url()` 校验过的 http(s) 链接（已转义），Agent 详情里的仓库名先校验 `owner/repo` 格式再拼接；复制用 `navigator.clipboard`，不可用时（Safari / iOS 非安全上下文等）退回隐藏 textarea + `execCommand`。按钮在捕获阶段处理点击并阻止冒泡，不会触发卡片打开或展开。
 - **头像白名单**：只接受 `pbs.twimg.com`，下载后用 Pillow 重新编码为 webp。
 - **README 清洗**：Agent 详情只保留纯文本（去掉 HTML、图片、徽章、链接目标、代码块），≤600 字。
 - **隐私脱敏**（`redact.py`）：简介与摘录中的邮箱、11 位手机号、微信号统一隐藏。
@@ -397,13 +440,17 @@ jobs:
 - **429 Too Many Requests**：`x_fetch.py` 会按重置时间等待重试一次；仍失败就降低 `HOT_N` / 话题数，或调大刷新间隔。GitHub 搜索 403 / 429 通常是未认证搜索的 10 次/分钟限制。
 - **X 新闻为空**：`/2/news/search` 取决于你的 API 套餐，不支持时设 `X_NEWS=0`，资讯页只显示 AIHOT。
 - **`test_escape.py` 找不到 daily / weekly**：先放至少一份日报和周要点（`demo_seed.py` 会自动放示例）。
+- **轻量刷新时 qa 报「Top30 一句话 无中文」**：新入榜的英文帖还没有中文一句话，轻量刷新应以 `XHOT_QA_LIGHT=1` 运行 qa（只放行带 EN 标记的英文摘录）；完整刷新时补写 `daily/<日期>.json` 的 `gists` 后用严格模式。
+- **复制按钮没反应**：非 https / 非 localhost 页面里浏览器不提供 `navigator.clipboard`，会自动退回 textarea 方案；若仍失败按钮会显示「复制失败」。
+- **浏览器测试报找不到 Chrome**：先 `python3 -m playwright install chromium webkit`，或设 `CHROME_PATH`。
+- **改了样式后某个宽度下布局错乱**：先跑 `card_layout.py` 与 `mobile_audit.py`，它们覆盖 1440 / 1280 / 1024 / 768 / 390 与 Chromium、WebKit；1001–1100px 是最容易挤压的区间。
 - **页面没变化**：生成器不烘焙相对时间，数据没变就不改写文件，这是有意的（减少提交噪声）。
 - **字体或间距审计报越界**：新写的 CSS 数值没落在令牌刻度上，改用 `var(--s*)` / `var(--t-*)` / `var(--r*)`。
 
 ## English
 
-**XHOT** is a static briefing of hot posts on X across AI, making money and personal growth (~130 accounts), plus AI news and an AI developer-tools radar from GitHub. It is fully refreshed daily at 08:00 (Asia/Shanghai), with light refreshes at 14:00, 20:00 and 02:00. Pages: Today, Domains, People, News, Trends, Agent (GitHub AI tools: today / this week / new), plus ⌘K search.
+**XHOT** is a static briefing of hot posts on X across AI, making money and personal growth (~130 accounts), plus AI news and an AI developer-tools radar from GitHub. It is fully refreshed daily at 08:00 (Asia/Shanghai), with light refreshes at 14:00, 20:00 and 02:00. Pages: Today, Domains, People, News, Trends, Agent (GitHub AI tools: today / this week / new), plus ⌘K search. Repo cards, the detail view (URL, `git clone`, repo name), post cards and news items have one-click copy buttons.
 
-**Replicate it:** `pip install -r src/requirements.txt`; run `python3 demo_seed.py && python3 generate.py && python3 gzserve.py site 8840` for an offline demo. For real data, create your own X developer App, put its Bearer Token in `.env` as `X_BEARER_TOKEN` (never commit it), edit `watchlist.json`, then run `x_fetch.py full`, `aihot_fetch.py`, `gh_trending.py`, `devtools_fetch.py`, `devtools_readme.py`, `avatars_fetch.py`, then `generate.py`. Run the tests one by one, export `data/` with `export_data.py`, and publish `site/` to GitHub Pages (Settings → Pages → Deploy from a branch → `main` / root). A GitHub Actions example is above.
+**Replicate it:** `pip install -r src/requirements.txt`; run `cd src && python3 demo_seed.py && python3 generate.py && python3 gzserve.py site 8840` for an offline demo. For real data, create your own X developer App, put its Bearer Token in `.env` as `X_BEARER_TOKEN` (never commit it), edit `watchlist.json`, then run `x_fetch.py full`, `aihot_fetch.py`, `gh_trending.py`, `devtools_fetch.py`, `devtools_readme.py`, `avatars_fetch.py`, then `generate.py`. Run the tests one by one, export `data/` with `export_data.py`, and publish `site/` to GitHub Pages (Settings → Pages → Deploy from a branch → `main` / root). A GitHub Actions example is above. Light refreshes run `XHOT_QA_LIGHT=1 python3 qa.py`, which accepts English-excerpt fallbacks for new Top 30 entries; full refreshes run qa in strict mode. Environment variables are listed in the 环境变量 table. Browser tests use Playwright's bundled browsers unless `CHROME_PATH` is set.
 
 The repo and site publish **only post IDs, metrics, short excerpts (≤220–320 characters), editor-written Chinese summaries and links back to X — never full post text**. They follow the X Developer Agreement. There are no analytics and no third-party requests. Pages use a strict meta CSP, escape everything, filter links through safeUrl and only accept avatars from `pbs.twimg.com`. To request a takedown, open an issue. Post content belongs to the original authors; AIHOT summaries are MIT-licensed.
