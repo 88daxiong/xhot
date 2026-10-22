@@ -2,6 +2,20 @@
   "handle": "dotey",
   "tweets": [
     {
+      "created_at": "2026-10-22T07:04:40.000Z",
+      "id": "2113164619078341049",
+      "lang": "",
+      "metrics": {
+        "bookmark": 1,
+        "impression": 18818,
+        "like": 32,
+        "quote": 0,
+        "reply": 42,
+        "retweet": 1
+      },
+      "url": "https://x.com/dotey/status/2113164619078341049"
+    },
+    {
       "created_at": "2026-10-22T04:24:50.000Z",
       "id": "2113124395321360646",
       "lang": "zh",

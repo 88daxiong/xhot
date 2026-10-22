@@ -2,6 +2,34 @@
   "handle": "vista8",
   "tweets": [
     {
+      "created_at": "2026-10-22T10:07:53.000Z",
+      "id": "2113210728580857908",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 17,
+        "impression": 2691,
+        "like": 27,
+        "quote": 2,
+        "reply": 18,
+        "retweet": 2
+      },
+      "url": "https://x.com/vista8/status/2113210728580857908"
+    },
+    {
+      "created_at": "2026-10-22T09:54:54.000Z",
+      "id": "2113207458189705483",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 2,
+        "impression": 3061,
+        "like": 5,
+        "quote": 0,
+        "reply": 9,
+        "retweet": 0
+      },
+      "url": "https://x.com/vista8/status/2113207458189705483"
+    },
+    {
       "created_at": "2026-10-22T01:04:08.000Z",
       "id": "2113073886527123922",
       "lang": "",
