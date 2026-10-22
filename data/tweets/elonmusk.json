@@ -2,6 +2,20 @@
   "handle": "elonmusk",
   "tweets": [
     {
+      "created_at": "2026-10-22T01:33:33.000Z",
+      "id": "2113081289570127971",
+      "lang": "",
+      "metrics": {
+        "bookmark": 874,
+        "impression": 10181113,
+        "like": 26301,
+        "quote": 207,
+        "reply": 2804,
+        "retweet": 3408
+      },
+      "url": "https://x.com/elonmusk/status/2113081289570127971"
+    },
+    {
       "created_at": "2026-10-21T22:53:03.000Z",
       "id": "2113040898644967726",
       "lang": "",
