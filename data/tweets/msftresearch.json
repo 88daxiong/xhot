@@ -2,6 +2,48 @@
   "handle": "msftresearch",
   "tweets": [
     {
+      "created_at": "2026-10-21T22:00:05.000Z",
+      "id": "2113027570870497540",
+      "lang": "",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 832,
+        "like": 0,
+        "quote": 0,
+        "reply": 0,
+        "retweet": 0
+      },
+      "url": "https://x.com/MSFTResearch/status/2113027570870497540"
+    },
+    {
+      "created_at": "2026-10-21T19:19:44.000Z",
+      "id": "2112987215496093979",
+      "lang": "",
+      "metrics": {
+        "bookmark": 120,
+        "impression": 9651,
+        "like": 144,
+        "quote": 1,
+        "reply": 15,
+        "retweet": 30
+      },
+      "url": "https://x.com/MSFTResearch/status/2112987215496093979"
+    },
+    {
+      "created_at": "2026-10-21T16:11:25.000Z",
+      "id": "2112939825804243012",
+      "lang": "",
+      "metrics": {
+        "bookmark": 76,
+        "impression": 15926,
+        "like": 175,
+        "quote": 0,
+        "reply": 6,
+        "retweet": 23
+      },
+      "url": "https://x.com/MSFTResearch/status/2112939825804243012"
+    },
+    {
       "created_at": "2026-10-20T21:04:00.000Z",
       "id": "2112651068677017871",
       "lang": "",

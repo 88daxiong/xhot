@@ -2,6 +2,76 @@
   "handle": "thesamparr",
   "tweets": [
     {
+      "created_at": "2026-10-21T18:52:08.000Z",
+      "id": "2112980269875757337",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 5902,
+        "like": 7,
+        "quote": 0,
+        "reply": 5,
+        "retweet": 0
+      },
+      "url": "https://x.com/thesamparr/status/2112980269875757337"
+    },
+    {
+      "created_at": "2026-10-21T16:54:37.000Z",
+      "id": "2112950697478234154",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 4147,
+        "like": 32,
+        "quote": 0,
+        "reply": 6,
+        "retweet": 0
+      },
+      "url": "https://x.com/thesamparr/status/2112950697478234154"
+    },
+    {
+      "created_at": "2026-10-21T16:10:26.000Z",
+      "id": "2112939576746733633",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 109,
+        "impression": 46445,
+        "like": 340,
+        "quote": 7,
+        "reply": 279,
+        "retweet": 4
+      },
+      "url": "https://x.com/thesamparr/status/2112939576746733633"
+    },
+    {
+      "created_at": "2026-10-21T16:00:17.000Z",
+      "id": "2112937023317368985",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 44,
+        "impression": 8815,
+        "like": 69,
+        "quote": 0,
+        "reply": 11,
+        "retweet": 4
+      },
+      "url": "https://x.com/thesamparr/status/2112937023317368985"
+    },
+    {
+      "created_at": "2026-10-21T15:04:54.000Z",
+      "id": "2112923087683690991",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 3,
+        "impression": 26065,
+        "like": 42,
+        "quote": 2,
+        "reply": 21,
+        "retweet": 3
+      },
+      "url": "https://x.com/thesamparr/status/2112923087683690991"
+    },
+    {
       "created_at": "2026-10-20T21:00:14.000Z",
       "id": "2112650121901150256",
       "lang": "en",

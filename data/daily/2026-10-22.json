@@ -1,0 +1,140 @@
+{
+  "changelog": [],
+  "date": "2026-10-22",
+  "followers_zh": "10-21 → 10-22：deepseek_ai +8,802、claudeai +6,610、thsottiaux +5,058、OpenAI +4,892、DarioAmodei +3,554；satyanadella −844、jordanbpeterson −299、Meta −278。",
+  "gists": {
+    "2112732230124818891": "Dario Amodei 回应 Nathan Calvin 的批评，称赞其 AI 安全调查工作，认为公众需要这样的监督者。",
+    "2112748699734479305": "Claude Code 2.1.306 发布：修复云端会话 claude -p 误报未登录，以及 MCP 重度会话中 API 错误被替换为“提示词过长”。",
+    "2112804427962970271": "swyx：市场还没意识到今天发生了什么，每块已售 GPU 的终身价值涨了约 30%。",
+    "2112849969640259611": "swyx：Jediah Katz 的演讲 24 小时破 10 万播放，或成 AIE NYC 最出圈演讲。",
+    "2112854401207439553": "NVIDIA 只发了一句：1 petaflop。",
+    "2112882448530800716": "NVIDIA 在 GTC Berlin 推出 DSX POD：AI 工厂出厂前集成测试，最快 14 天在现场部署。",
+    "2112887674251976827": "levelsio 先把自己所有网站和 VPS 断网，等 UTC 14 点 PHP 补丁；称 69.3% 的网站跑 PHP。",
+    "2112891358226645334": "levelsio 提醒大厂朋友 PHP 漏洞，对方说休假中、过几天再补，他担心补丁一出漏洞就被逆向利用。",
+    "2112891905415737459": "Ryan Holiday：多进入自己是最不懂的那个人的房间，观察、学习、提问。",
+    "2112910566885068999": "Peter Yang 发布免费 AI skill /video-short，配合智能体把原始录像剪成带 B-roll 的短视频。",
+    "2112914740058181739": "Wiz 研究员实测 Gemini 4 Argon：发现的漏洞是基线模型的两倍多，还抓到前沿模型漏掉的高危风险。",
+    "2112930776811806874": "Matthew Berman 专访 Sam Altman：AI 新药、编程岗位、个人助理、AI 意识之争与 OpenAI 的芯片押注。",
+    "2112934688557818190": "马斯克发帖称 Talarico“有很深的问题”。",
+    "2112939576746733633": "Sam Parr：WordPress 主题和插件生意要被 Claude 颠覆，问大家还用 WP 还是自己建站。",
+    "2112942727482761342": "马斯克再发帖称 Talarico 是个怪人，附图。",
+    "2112950495958700344": "Alex Hormozi：很多人盼着你失败来证明自己不冒险是对的，果断把他们移出生活。",
+    "2112974723659247896": "Google DeepMind：Gemini 4 Argon 融合三个开源数据集，做出可交互的 3D 人体解剖可视化。",
+    "2112978260808376411": "Perplexity 新研究 JOLT：一个模型兼任师生，在 MATH 上以少 6.5 倍训练 token 达到 GRPO 精度。",
+    "2112984669943968099": "Claude Duet 仅限美国 Pro/Max 用户候补名单体验，官方承认它仍可能误判紧急程度。",
+    "2112986457040134166": "Google 汇总开发者用 Gemini 4 Argon 做的创意作品，从摄像头“雾中作画”到 HTML 合成器。",
+    "2112988947639099501": "Matthew Berman 调侃 Claude Duet：应该叫 Clawdbot。",
+    "2112995494612082931": "Peter Yang 提前体验 Claude Duet，视频谈它为何最主动、Artifacts 优势及与同类产品对比。",
+    "2113018506392551732": "Eric Zakariasson 展示用 Grok Bot 的 Pages 功能给它自己做了一个落地页。",
+    "2113037629000446011": "McKay Wrigley：你有责任告诉家人朋友当下的网络安全形势，并附了一份入门待办清单。"
+  },
+  "hide": [
+    "2112931457786081428",
+    "2112942522486202504"
+  ],
+  "highlights": [
+    {
+      "excerpt": "We’re opening a research preview of Claude Duet, a new app where Claude works as a proactive agent.\n\nIt comes to you with what needs your attention, completes tasks you ask of it, keeps working when you step away, and checks with you before it acts on your behalf.",
+      "excerpt_zh": "我们正在开放 Claude Duet 的研究预览。这是一款新应用，Claude 在其中作为主动型智能体工作。\n\n它会主动告诉你哪些事需要关注，完成你交代的任务，你离开时也会继续工作，并在代表你行动之前先征求你的确认。",
+      "handle": "claudeai",
+      "likes": 33586,
+      "name": "Claude",
+      "post_id": "2112984664256241837",
+      "tags": [
+        "agent",
+        "product"
+      ],
+      "text_zh": "Anthropic 推出 Claude Duet 研究预览：主动型智能体，会提醒待办、离开时继续干活，行动前先确认。",
+      "url": "https://x.com/claudeai/status/2112984664256241837"
+    },
+    {
+      "excerpt": "OpenAI models helped researchers—operating as part of our Patch the Planet initiative—discover critical security flaws in PHP, an open-source programming language used to run an estimated 70% of websites.\n\nOver the past two months, we led a coalition of maintainers, researchers,",
+      "excerpt_zh": "OpenAI 的模型帮助研究人员（作为我们 Patch the Planet 计划的一部分）发现了 PHP 中的严重安全漏洞。PHP 是一种开源编程语言，估计支撑着约 70% 的网站。\n\n过去两个月里，我们牵头组织了一个由维护者、研究人员、",
+      "handle": "OpenAI",
+      "likes": 10731,
+      "name": "OpenAI",
+      "post_id": "2112907856018309586",
+      "tags": [
+        "model",
+        "oss"
+      ],
+      "text_zh": "OpenAI 称其模型协助“Patch the Planet”联盟发现 PHP 严重安全漏洞，PHP 约支撑 70% 网站。",
+      "url": "https://x.com/OpenAI/status/2112907856018309586"
+    },
+    {
+      "excerpt": "Day 16/\n\nYou can now cache for 12h in the API and for logged in users across Codex & Work we keep cache forever and you don’t have any penalty for coming back to an old conversation or resuming after a few hours and are now guaranteed to hit the cache.",
+      "excerpt_zh": "第 16 天/\n\n现在 API 可以缓存 12 小时；对于 Codex 和 Work 的登录用户，我们会永久保留缓存，回到旧对话或隔几个小时再继续都不会有任何损失，而且保证命中缓存。",
+      "handle": "thsottiaux",
+      "likes": 9984,
+      "name": "Tibo",
+      "post_id": "2112712984644784534",
+      "tags": [
+        "code",
+        "product"
+      ],
+      "text_zh": "OpenAI 的 Tibo：API 缓存延长到 12 小时，Codex 与 Work 登录用户缓存永久保留，回到旧对话也必定命中。",
+      "url": "https://x.com/thsottiaux/status/2112712984644784534"
+    },
+    {
+      "excerpt": "That PHP vulnerability that’s gonna cause havoc this week was found with… GPT‑5.6 Sol.",
+      "excerpt_zh": "本周要掀起大乱的那个 PHP 漏洞，是用……GPT‑5.6 Sol 找到的。",
+      "handle": "steipete",
+      "likes": 8046,
+      "name": "Peter Steinberger 🦞",
+      "post_id": "2112913060709228764",
+      "tags": [
+        "model",
+        "code"
+      ],
+      "text_zh": "Peter Steinberger：本周将引发大乱的 PHP 漏洞，是用 GPT‑5.6 Sol 找到的。",
+      "url": "https://x.com/steipete/status/2112913060709228764"
+    },
+    {
+      "excerpt": "If you are wondering whether your website is affected, we have packaged a Codex skill to help check.\n\nPoint your Codex at this repo to guide you through it:",
+      "excerpt_zh": "如果你在想自己的网站是否受到影响，我们打包了一个 Codex skill 来帮你检查。\n\n把你的 Codex 指向这个仓库，它会一步步引导你完成检查：",
+      "handle": "OpenAI",
+      "likes": 4251,
+      "name": "OpenAI",
+      "post_id": "2112945805686604033",
+      "tags": [
+        "code",
+        "product"
+      ],
+      "text_zh": "OpenAI 打包了一个 Codex skill，指向仓库即可引导检查你的网站是否受 PHP 漏洞影响。",
+      "url": "https://x.com/OpenAI/status/2112945805686604033"
+    },
+    {
+      "excerpt": "Call me paranoid, but be extra careful visiting ANY web site in the next few days, as some web admins are not always up-to-date with security patches.\n\nTwo vulnerabilities (CVE-2026-109618 and CVE-2026-109619) reported for PHP, the web programming language, affecting servers running popular apps like WordPress and…",
+      "excerpt_zh": "说我多疑也行，但未来几天访问任何网站都要格外小心，因为有些网站管理员并不总是及时打安全补丁。\n\nPHP 这门网页编程语言被报告了两个漏洞（CVE-2026-109618 和 CVE-2026-109619），影响运行 WordPress、Magento 等热门应用的服务器……",
+      "handle": "cz_binance",
+      "likes": 4049,
+      "name": "CZ 🔶 BNB",
+      "post_id": "2113029289155178716",
+      "tags": [
+        "policy"
+      ],
+      "text_zh": "CZ 提醒未来几天访问任何网站都要格外小心：PHP 两个漏洞 CVE-2026-109618/109619 波及 WordPress、Magento。",
+      "url": "https://x.com/cz_binance/status/2113029289155178716"
+    },
+    {
+      "excerpt": "今天互联网上最危险的东西出现了\n\n有人做了一个 AI，能像 GPT 读英文那样读 K 线图，而且 100% 免费放出来了\n\n它能接进 TradingView 配置，配上 opus 5.5， AI 交易系统会读每一根 K 线，在行情走出来之前就预测下一步（而且挺准）\n\n先搞懂 KRONOS 是怎么运作的：\n\n> ChatGPT、Claude 这类大模型把词变成 token，预测下一个词\n> Kronos 把每根 K 线变成 token，预测下一根 K 线\n> 它预训练用了 120 亿根 K 线\n\n下面是怎么免费把整套系统搭起来：\n\n1. …",
+      "handle": "laobaishare",
+      "likes": 1234,
+      "name": "老白（每日 AI 干货✊）",
+      "post_id": "2112760298373632069",
+      "tags": [
+        "oss",
+        "model"
+      ],
+      "text_zh": "老白介绍开源 K 线模型 Kronos：把每根 K 线当 token 预测下一根，预训练 120 亿根，可免费搭建。",
+      "url": "https://x.com/laobaishare/status/2112760298373632069"
+    }
+  ],
+  "pin": [],
+  "summary_zh": [
+    "Anthropic 发布主动型智能体 Claude Duet 研究预览，3.4 万赞居今日之首。",
+    "PHP 曝两个严重漏洞，OpenAI 称其模型参与发现并发布 Codex 检查 skill，CZ、levelsio 纷纷示警。",
+    "solopreneur 话题 +22%、Gemini +19%；DeepSeek 官号涨粉 8,802 居首，Claude 涨 6,610。"
+  ],
+  "topics_zh": "对比前几日均值：solopreneur +22%、Gemini +19%（4,277 帖）、智能体 Agent +18%（2.6 万帖）、Codex +9%；Dan Koe −52%、GLM 智谱 −23%、Kimi −15%、DeepSeek −10%。"
+}

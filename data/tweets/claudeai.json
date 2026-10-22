@@ -2,6 +2,104 @@
   "handle": "claudeai",
   "tweets": [
     {
+      "created_at": "2026-10-21T19:09:37.000Z",
+      "id": "2112984669943968099",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 686,
+        "impression": 352601,
+        "like": 2523,
+        "quote": 94,
+        "reply": 124,
+        "retweet": 99
+      },
+      "url": "https://x.com/claudeai/status/2112984669943968099"
+    },
+    {
+      "created_at": "2026-10-21T19:09:36.000Z",
+      "id": "2112984667758510197",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 57,
+        "impression": 286408,
+        "like": 1712,
+        "quote": 1,
+        "reply": 19,
+        "retweet": 28
+      },
+      "url": "https://x.com/claudeai/status/2112984667758510197"
+    },
+    {
+      "created_at": "2026-10-21T19:09:36.000Z",
+      "id": "2112984666437546104",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 126,
+        "impression": 377213,
+        "like": 2728,
+        "quote": 18,
+        "reply": 34,
+        "retweet": 40
+      },
+      "url": "https://x.com/claudeai/status/2112984666437546104"
+    },
+    {
+      "created_at": "2026-10-21T19:09:35.000Z",
+      "id": "2112984664256241837",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 10560,
+        "impression": 3374588,
+        "like": 33586,
+        "quote": 2672,
+        "reply": 1366,
+        "retweet": 2374
+      },
+      "url": "https://x.com/claudeai/status/2112984664256241837"
+    },
+    {
+      "created_at": "2026-10-21T17:40:32.000Z",
+      "id": "2112962252706124134",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 15,
+        "impression": 13218,
+        "like": 77,
+        "quote": 0,
+        "reply": 2,
+        "retweet": 1
+      },
+      "url": "https://x.com/claudeai/status/2112962252706124134"
+    },
+    {
+      "created_at": "2026-10-21T17:40:32.000Z",
+      "id": "2112962250537369654",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 4,
+        "impression": 16252,
+        "like": 113,
+        "quote": 1,
+        "reply": 8,
+        "retweet": 2
+      },
+      "url": "https://x.com/claudeai/status/2112962250537369654"
+    },
+    {
+      "created_at": "2026-10-21T17:40:31.000Z",
+      "id": "2112962248218148878",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 254,
+        "impression": 65308,
+        "like": 1198,
+        "quote": 50,
+        "reply": 124,
+        "retweet": 59
+      },
+      "url": "https://x.com/claudeai/status/2112962248218148878"
+    },
+    {
       "created_at": "2026-10-16T19:29:57.000Z",
       "id": "2111177848228823102",
       "lang": "",

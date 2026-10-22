@@ -2,6 +2,76 @@
   "handle": "therundownai",
   "tweets": [
     {
+      "created_at": "2026-10-21T19:52:30.000Z",
+      "id": "2112995463896945079",
+      "lang": "",
+      "metrics": {
+        "bookmark": 10,
+        "impression": 4179,
+        "like": 22,
+        "quote": 1,
+        "reply": 7,
+        "retweet": 2
+      },
+      "url": "https://x.com/TheRundownAI/status/2112995463896945079"
+    },
+    {
+      "created_at": "2026-10-21T16:15:53.000Z",
+      "id": "2112940948435149088",
+      "lang": "",
+      "metrics": {
+        "bookmark": 2,
+        "impression": 4843,
+        "like": 21,
+        "quote": 0,
+        "reply": 7,
+        "retweet": 2
+      },
+      "url": "https://x.com/TheRundownAI/status/2112940948435149088"
+    },
+    {
+      "created_at": "2026-10-21T14:45:33.000Z",
+      "id": "2112918214246044031",
+      "lang": "",
+      "metrics": {
+        "bookmark": 5,
+        "impression": 5257,
+        "like": 17,
+        "quote": 1,
+        "reply": 11,
+        "retweet": 1
+      },
+      "url": "https://x.com/TheRundownAI/status/2112918214246044031"
+    },
+    {
+      "created_at": "2026-10-21T10:30:19.000Z",
+      "id": "2112853985367384366",
+      "lang": "",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 1547,
+        "like": 3,
+        "quote": 0,
+        "reply": 0,
+        "retweet": 0
+      },
+      "url": "https://x.com/TheRundownAI/status/2112853985367384366"
+    },
+    {
+      "created_at": "2026-10-21T10:30:18.000Z",
+      "id": "2112853980246081711",
+      "lang": "",
+      "metrics": {
+        "bookmark": 2,
+        "impression": 4815,
+        "like": 17,
+        "quote": 1,
+        "reply": 20,
+        "retweet": 2
+      },
+      "url": "https://x.com/TheRundownAI/status/2112853980246081711"
+    },
+    {
       "created_at": "2026-10-20T21:41:04.000Z",
       "id": "2112660394837737863",
       "lang": "en",

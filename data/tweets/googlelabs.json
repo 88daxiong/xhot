@@ -2,6 +2,20 @@
   "handle": "googlelabs",
   "tweets": [
     {
+      "created_at": "2026-10-21T18:05:52.000Z",
+      "id": "2112968628861878648",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 5,
+        "impression": 5275,
+        "like": 27,
+        "quote": 1,
+        "reply": 1,
+        "retweet": 2
+      },
+      "url": "https://x.com/GoogleLabs/status/2112968628861878648"
+    },
+    {
       "created_at": "2026-10-20T18:05:58.000Z",
       "id": "2112606263163203970",
       "lang": "",

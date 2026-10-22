@@ -2,6 +2,188 @@
   "handle": "nvidia",
   "tweets": [
     {
+      "created_at": "2026-10-21T14:54:03.000Z",
+      "id": "2112920354230296993",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 6,
+        "impression": 21273,
+        "like": 180,
+        "quote": 4,
+        "reply": 40,
+        "retweet": 27
+      },
+      "url": "https://x.com/nvidia/status/2112920354230296993"
+    },
+    {
+      "created_at": "2026-10-21T12:23:26.000Z",
+      "id": "2112882451978784980",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 4,
+        "impression": 12897,
+        "like": 43,
+        "quote": 0,
+        "reply": 5,
+        "retweet": 1
+      },
+      "url": "https://x.com/nvidia/status/2112882451978784980"
+    },
+    {
+      "created_at": "2026-10-21T12:23:25.000Z",
+      "id": "2112882448530800716",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 122,
+        "impression": 55837,
+        "like": 911,
+        "quote": 27,
+        "reply": 88,
+        "retweet": 97
+      },
+      "url": "https://x.com/nvidia/status/2112882448530800716"
+    },
+    {
+      "created_at": "2026-10-21T10:41:11.000Z",
+      "id": "2112856720741740719",
+      "lang": "",
+      "metrics": {
+        "bookmark": 64,
+        "impression": 33766,
+        "like": 651,
+        "quote": 25,
+        "reply": 55,
+        "retweet": 81
+      },
+      "url": "https://x.com/nvidia/status/2112856720741740719"
+    },
+    {
+      "created_at": "2026-10-21T10:31:58.000Z",
+      "id": "2112854401207439553",
+      "lang": "",
+      "metrics": {
+        "bookmark": 140,
+        "impression": 51854,
+        "like": 1501,
+        "quote": 10,
+        "reply": 72,
+        "retweet": 85
+      },
+      "url": "https://x.com/nvidia/status/2112854401207439553"
+    },
+    {
+      "created_at": "2026-10-21T10:18:01.000Z",
+      "id": "2112850890642383262",
+      "lang": "",
+      "metrics": {
+        "bookmark": 16,
+        "impression": 26403,
+        "like": 186,
+        "quote": 3,
+        "reply": 17,
+        "retweet": 23
+      },
+      "url": "https://x.com/nvidia/status/2112850890642383262"
+    },
+    {
+      "created_at": "2026-10-21T10:16:54.000Z",
+      "id": "2112850606545334359",
+      "lang": "",
+      "metrics": {
+        "bookmark": 15,
+        "impression": 15551,
+        "like": 254,
+        "quote": 9,
+        "reply": 22,
+        "retweet": 27
+      },
+      "url": "https://x.com/nvidia/status/2112850606545334359"
+    },
+    {
+      "created_at": "2026-10-21T10:03:40.000Z",
+      "id": "2112847277282721888",
+      "lang": "",
+      "metrics": {
+        "bookmark": 26,
+        "impression": 30018,
+        "like": 231,
+        "quote": 21,
+        "reply": 68,
+        "retweet": 37
+      },
+      "url": "https://x.com/nvidia/status/2112847277282721888"
+    },
+    {
+      "created_at": "2026-10-21T09:48:59.000Z",
+      "id": "2112843581287231650",
+      "lang": "",
+      "metrics": {
+        "bookmark": 60,
+        "impression": 32748,
+        "like": 739,
+        "quote": 7,
+        "reply": 31,
+        "retweet": 69
+      },
+      "url": "https://x.com/nvidia/status/2112843581287231650"
+    },
+    {
+      "created_at": "2026-10-21T09:43:40.000Z",
+      "id": "2112842244583833746",
+      "lang": "",
+      "metrics": {
+        "bookmark": 29,
+        "impression": 22839,
+        "like": 720,
+        "quote": 5,
+        "reply": 25,
+        "retweet": 36
+      },
+      "url": "https://x.com/nvidia/status/2112842244583833746"
+    },
+    {
+      "created_at": "2026-10-21T09:39:25.000Z",
+      "id": "2112841174213902450",
+      "lang": "",
+      "metrics": {
+        "bookmark": 25,
+        "impression": 23235,
+        "like": 396,
+        "quote": 12,
+        "reply": 48,
+        "retweet": 43
+      },
+      "url": "https://x.com/nvidia/status/2112841174213902450"
+    },
+    {
+      "created_at": "2026-10-21T09:26:10.000Z",
+      "id": "2112837840791035958",
+      "lang": "",
+      "metrics": {
+        "bookmark": 16,
+        "impression": 17470,
+        "like": 139,
+        "quote": 5,
+        "reply": 20,
+        "retweet": 15
+      },
+      "url": "https://x.com/nvidia/status/2112837840791035958"
+    },
+    {
+      "created_at": "2026-10-21T09:03:42.000Z",
+      "id": "2112832187351580802",
+      "lang": "",
+      "metrics": {
+        "bookmark": 29,
+        "impression": 35462,
+        "like": 210,
+        "quote": 13,
+        "reply": 26,
+        "retweet": 47
+      },
+      "url": "https://x.com/nvidia/status/2112832187351580802"
+    },
+    {
       "created_at": "2026-10-20T15:49:26.000Z",
       "id": "2112571903676486089",
       "lang": "",

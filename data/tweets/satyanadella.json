@@ -2,6 +2,48 @@
   "handle": "satyanadella",
   "tweets": [
     {
+      "created_at": "2026-10-21T20:45:58.000Z",
+      "id": "2113008920008790488",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 186,
+        "impression": 51723,
+        "like": 441,
+        "quote": 14,
+        "reply": 42,
+        "retweet": 66
+      },
+      "url": "https://x.com/satyanadella/status/2113008920008790488"
+    },
+    {
+      "created_at": "2026-10-21T10:49:20.000Z",
+      "id": "2112858769201979476",
+      "lang": "",
+      "metrics": {
+        "bookmark": 3,
+        "impression": 8278,
+        "like": 17,
+        "quote": 0,
+        "reply": 7,
+        "retweet": 0
+      },
+      "url": "https://x.com/satyanadella/status/2112858769201979476"
+    },
+    {
+      "created_at": "2026-10-21T10:49:19.000Z",
+      "id": "2112858767478190421",
+      "lang": "",
+      "metrics": {
+        "bookmark": 22,
+        "impression": 27057,
+        "like": 222,
+        "quote": 5,
+        "reply": 41,
+        "retweet": 20
+      },
+      "url": "https://x.com/satyanadella/status/2112858767478190421"
+    },
+    {
       "created_at": "2026-10-20T10:59:13.000Z",
       "id": "2112498871368892527",
       "lang": "en",

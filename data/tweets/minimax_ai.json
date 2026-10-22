@@ -2,6 +2,76 @@
   "handle": "minimax_ai",
   "tweets": [
     {
+      "created_at": "2026-10-21T20:27:17.000Z",
+      "id": "2113004214272381365",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 2,
+        "impression": 3686,
+        "like": 42,
+        "quote": 0,
+        "reply": 5,
+        "retweet": 0
+      },
+      "url": "https://x.com/MiniMax_AI/status/2113004214272381365"
+    },
+    {
+      "created_at": "2026-10-21T20:24:21.000Z",
+      "id": "2113003478251614278",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 2,
+        "impression": 3099,
+        "like": 45,
+        "quote": 0,
+        "reply": 5,
+        "retweet": 3
+      },
+      "url": "https://x.com/MiniMax_AI/status/2113003478251614278"
+    },
+    {
+      "created_at": "2026-10-21T19:25:42.000Z",
+      "id": "2112988717963178257",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 2,
+        "impression": 1210,
+        "like": 5,
+        "quote": 0,
+        "reply": 0,
+        "retweet": 0
+      },
+      "url": "https://x.com/MiniMax_AI/status/2112988717963178257"
+    },
+    {
+      "created_at": "2026-10-21T19:19:34.000Z",
+      "id": "2112987176053215566",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 30,
+        "impression": 6285,
+        "like": 106,
+        "quote": 5,
+        "reply": 13,
+        "retweet": 11
+      },
+      "url": "https://x.com/MiniMax_AI/status/2112987176053215566"
+    },
+    {
+      "created_at": "2026-10-21T17:54:47.000Z",
+      "id": "2112965838450176130",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 4,
+        "impression": 4608,
+        "like": 72,
+        "quote": 1,
+        "reply": 2,
+        "retweet": 2
+      },
+      "url": "https://x.com/MiniMax_AI/status/2112965838450176130"
+    },
+    {
       "created_at": "2026-10-20T20:14:56.000Z",
       "id": "2112638721040482341",
       "lang": "en",

@@ -2,6 +2,48 @@
   "handle": "github",
   "tweets": [
     {
+      "created_at": "2026-10-21T23:59:01.000Z",
+      "id": "2113057501985796394",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 2272,
+        "like": 5,
+        "quote": 0,
+        "reply": 1,
+        "retweet": 0
+      },
+      "url": "https://x.com/github/status/2113057501985796394"
+    },
+    {
+      "created_at": "2026-10-21T18:50:12.000Z",
+      "id": "2112979782652813783",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 63,
+        "impression": 25312,
+        "like": 178,
+        "quote": 6,
+        "reply": 26,
+        "retweet": 14
+      },
+      "url": "https://x.com/github/status/2112979782652813783"
+    },
+    {
+      "created_at": "2026-10-21T16:06:48.000Z",
+      "id": "2112938664959562081",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 204,
+        "impression": 39846,
+        "like": 252,
+        "quote": 9,
+        "reply": 28,
+        "retweet": 27
+      },
+      "url": "https://x.com/github/status/2112938664959562081"
+    },
+    {
       "created_at": "2026-10-20T20:50:01.000Z",
       "id": "2112647550658376131",
       "lang": "en",

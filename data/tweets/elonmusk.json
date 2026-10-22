@@ -2,6 +2,286 @@
   "handle": "elonmusk",
   "tweets": [
     {
+      "created_at": "2026-10-21T22:53:03.000Z",
+      "id": "2113040898644967726",
+      "lang": "",
+      "metrics": {
+        "bookmark": 221,
+        "impression": 591588,
+        "like": 7589,
+        "quote": 64,
+        "reply": 796,
+        "retweet": 918
+      },
+      "url": "https://x.com/elonmusk/status/2113040898644967726"
+    },
+    {
+      "created_at": "2026-10-21T20:56:16.000Z",
+      "id": "2113011511429902609",
+      "lang": "",
+      "metrics": {
+        "bookmark": 310,
+        "impression": 860092,
+        "like": 4473,
+        "quote": 51,
+        "reply": 862,
+        "retweet": 529
+      },
+      "url": "https://x.com/elonmusk/status/2113011511429902609"
+    },
+    {
+      "created_at": "2026-10-21T20:54:28.000Z",
+      "id": "2113011056847278486",
+      "lang": "",
+      "metrics": {
+        "bookmark": 248,
+        "impression": 959280,
+        "like": 10330,
+        "quote": 135,
+        "reply": 934,
+        "retweet": 905
+      },
+      "url": "https://x.com/elonmusk/status/2113011056847278486"
+    },
+    {
+      "created_at": "2026-10-21T20:51:43.000Z",
+      "id": "2113010364178964616",
+      "lang": "",
+      "metrics": {
+        "bookmark": 827,
+        "impression": 13588105,
+        "like": 10908,
+        "quote": 75,
+        "reply": 714,
+        "retweet": 655
+      },
+      "url": "https://x.com/elonmusk/status/2113010364178964616"
+    },
+    {
+      "created_at": "2026-10-21T20:49:54.000Z",
+      "id": "2113009907012382829",
+      "lang": "",
+      "metrics": {
+        "bookmark": 135,
+        "impression": 810001,
+        "like": 9367,
+        "quote": 56,
+        "reply": 550,
+        "retweet": 799
+      },
+      "url": "https://x.com/elonmusk/status/2113009907012382829"
+    },
+    {
+      "created_at": "2026-10-21T17:58:44.000Z",
+      "id": "2112966832969708020",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 85,
+        "impression": 344095,
+        "like": 745,
+        "quote": 24,
+        "reply": 218,
+        "retweet": 130
+      },
+      "url": "https://x.com/elonmusk/status/2112966832969708020"
+    },
+    {
+      "created_at": "2026-10-21T17:57:46.000Z",
+      "id": "2112966587149881376",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 31,
+        "impression": 361834,
+        "like": 1233,
+        "quote": 14,
+        "reply": 234,
+        "retweet": 242
+      },
+      "url": "https://x.com/elonmusk/status/2112966587149881376"
+    },
+    {
+      "created_at": "2026-10-21T17:50:02.000Z",
+      "id": "2112964643593269747",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 49,
+        "impression": 442820,
+        "like": 1491,
+        "quote": 24,
+        "reply": 270,
+        "retweet": 229
+      },
+      "url": "https://x.com/elonmusk/status/2112964643593269747"
+    },
+    {
+      "created_at": "2026-10-21T17:48:46.000Z",
+      "id": "2112964322192408813",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 88,
+        "impression": 544042,
+        "like": 3462,
+        "quote": 52,
+        "reply": 450,
+        "retweet": 701
+      },
+      "url": "https://x.com/elonmusk/status/2112964322192408813"
+    },
+    {
+      "created_at": "2026-10-21T17:26:06.000Z",
+      "id": "2112958619448639525",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 26,
+        "impression": 132243,
+        "like": 2941,
+        "quote": 14,
+        "reply": 251,
+        "retweet": 335
+      },
+      "url": "https://x.com/elonmusk/status/2112958619448639525"
+    },
+    {
+      "created_at": "2026-10-21T17:24:50.000Z",
+      "id": "2112958301344264310",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 469,
+        "impression": 2478194,
+        "like": 8009,
+        "quote": 97,
+        "reply": 767,
+        "retweet": 1740
+      },
+      "url": "https://x.com/elonmusk/status/2112958301344264310"
+    },
+    {
+      "created_at": "2026-10-21T16:54:39.000Z",
+      "id": "2112950704327520260",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 83,
+        "impression": 705063,
+        "like": 5276,
+        "quote": 49,
+        "reply": 644,
+        "retweet": 610
+      },
+      "url": "https://x.com/elonmusk/status/2112950704327520260"
+    },
+    {
+      "created_at": "2026-10-21T16:22:57.000Z",
+      "id": "2112942727482761342",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 1017,
+        "impression": 7272476,
+        "like": 23606,
+        "quote": 211,
+        "reply": 2152,
+        "retweet": 2751
+      },
+      "url": "https://x.com/elonmusk/status/2112942727482761342"
+    },
+    {
+      "created_at": "2026-10-21T16:22:08.000Z",
+      "id": "2112942522486202504",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 2249,
+        "impression": 1743654,
+        "like": 59833,
+        "quote": 1004,
+        "reply": 4826,
+        "retweet": 8189
+      },
+      "url": "https://x.com/elonmusk/status/2112942522486202504"
+    },
+    {
+      "created_at": "2026-10-21T16:19:16.000Z",
+      "id": "2112941801510178862",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 863,
+        "impression": 6610225,
+        "like": 13128,
+        "quote": 129,
+        "reply": 1017,
+        "retweet": 1832
+      },
+      "url": "https://x.com/elonmusk/status/2112941801510178862"
+    },
+    {
+      "created_at": "2026-10-21T15:51:00.000Z",
+      "id": "2112934688557818190",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 408,
+        "impression": 1589115,
+        "like": 42158,
+        "quote": 407,
+        "reply": 4608,
+        "retweet": 4295
+      },
+      "url": "https://x.com/elonmusk/status/2112934688557818190"
+    },
+    {
+      "created_at": "2026-10-21T15:50:15.000Z",
+      "id": "2112934500170600679",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 263,
+        "impression": 824698,
+        "like": 2896,
+        "quote": 23,
+        "reply": 408,
+        "retweet": 337
+      },
+      "url": "https://x.com/elonmusk/status/2112934500170600679"
+    },
+    {
+      "created_at": "2026-10-21T15:47:32.000Z",
+      "id": "2112933813647258079",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 337,
+        "impression": 837945,
+        "like": 14525,
+        "quote": 96,
+        "reply": 946,
+        "retweet": 1979
+      },
+      "url": "https://x.com/elonmusk/status/2112933813647258079"
+    },
+    {
+      "created_at": "2026-10-21T15:40:50.000Z",
+      "id": "2112932127901987225",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 68,
+        "impression": 854284,
+        "like": 2251,
+        "quote": 41,
+        "reply": 495,
+        "retweet": 276
+      },
+      "url": "https://x.com/elonmusk/status/2112932127901987225"
+    },
+    {
+      "created_at": "2026-10-21T15:38:10.000Z",
+      "id": "2112931457786081428",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 1150,
+        "impression": 1778259,
+        "like": 72078,
+        "quote": 885,
+        "reply": 4535,
+        "retweet": 9266
+      },
+      "url": "https://x.com/elonmusk/status/2112931457786081428"
+    },
+    {
       "created_at": "2026-10-21T05:44:16.000Z",
       "id": "2112781998624555086",
       "lang": "",

@@ -2,6 +2,76 @@
   "handle": "garyvee",
   "tweets": [
     {
+      "created_at": "2026-10-21T22:15:26.000Z",
+      "id": "2113031433329549767",
+      "lang": "",
+      "metrics": {
+        "bookmark": 1,
+        "impression": 2294,
+        "like": 5,
+        "quote": 0,
+        "reply": 1,
+        "retweet": 1
+      },
+      "url": "https://x.com/garyvee/status/2113031433329549767"
+    },
+    {
+      "created_at": "2026-10-21T22:14:51.000Z",
+      "id": "2113031285476073732",
+      "lang": "",
+      "metrics": {
+        "bookmark": 1,
+        "impression": 2876,
+        "like": 13,
+        "quote": 1,
+        "reply": 4,
+        "retweet": 4
+      },
+      "url": "https://x.com/garyvee/status/2113031285476073732"
+    },
+    {
+      "created_at": "2026-10-21T22:14:16.000Z",
+      "id": "2113031141217194469",
+      "lang": "",
+      "metrics": {
+        "bookmark": 4,
+        "impression": 11455,
+        "like": 41,
+        "quote": 0,
+        "reply": 14,
+        "retweet": 8
+      },
+      "url": "https://x.com/garyvee/status/2113031141217194469"
+    },
+    {
+      "created_at": "2026-10-21T15:14:00.000Z",
+      "id": "2112925374757949614",
+      "lang": "",
+      "metrics": {
+        "bookmark": 12,
+        "impression": 21151,
+        "like": 84,
+        "quote": 1,
+        "reply": 44,
+        "retweet": 10
+      },
+      "url": "https://x.com/garyvee/status/2112925374757949614"
+    },
+    {
+      "created_at": "2026-10-21T12:46:08.000Z",
+      "id": "2112888164826452122",
+      "lang": "",
+      "metrics": {
+        "bookmark": 24,
+        "impression": 20543,
+        "like": 170,
+        "quote": 3,
+        "reply": 33,
+        "retweet": 31
+      },
+      "url": "https://x.com/garyvee/status/2112888164826452122"
+    },
+    {
       "created_at": "2026-10-20T14:17:11.000Z",
       "id": "2112548689038172510",
       "lang": "",
