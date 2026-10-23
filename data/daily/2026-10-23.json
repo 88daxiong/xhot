@@ -1,0 +1,145 @@
+{
+  "changelog": [],
+  "date": "2026-10-23",
+  "followers_zh": "10-22 → 10-23：claudeai +11,047、thsottiaux +8,406、petergyang +7,914、OpenAI +4,293、deepseek_ai +3,053；satyanadella −1,028、sundarpichai −637、jordanbpeterson −368。",
+  "gists": {
+    "2113081289570127971": "Elon：再批 Talarico 仇视德州。",
+    "2113098033705664650": "swyx：晒出自己的量化相关内容。",
+    "2113135080830812545": "Matt Shumer：今日黑客事件后的必读材料，称安全只会更糟。",
+    "2113180249995276363": "吴说：印度交易所 CoinDCX 疑再遭约 1600 万美元黑客攻击。",
+    "2113188454788174293": "Elon：称 Talarico「出了大问题」。",
+    "2113264393756545449": "Clem：生物 AI 护栏浅且易被坏人绕过；Hugging Face 推开源 DNA 模型 Carbon-X。",
+    "2113266130584297708": "levelsio：谈欧洲低质量移民争议与历史类比。",
+    "2113269203323220347": "Peter Yang：各平台疯抢短视频，YouTube Shorts 日播 2000 亿、X 最高付 5000 美元。",
+    "2113281190442487873": "levelsio：调侃又有新的 anabology 内容掉落。",
+    "2113283068274540555": "Google：用 Gemini Canvas 让视频自己生成配乐，Gemini 4 Argon 做工具链。",
+    "2113289090531770470": "levelsio：短帖「我得这么做」。",
+    "2113290464623493373": "GeminiApp：教你从提示词到网页应用再到上线站点的快速路径。",
+    "2113302574053134553": "Matthew Berman 问 Altman：OpenAI 内部模型比公开版领先多少？",
+    "2113302968309277133": "Aravind：专家不再是学习瓶颈，用 AI 即可跨领域自学。",
+    "2113304569128358351": "Tim Ferriss：该专精还是做通才？",
+    "2113316017510191578": "Hassan 发布 Hallmark v2：给智能体设计品味的 skill，已 3 万★/6 万安装，支持 Claude Code/Codex/Opencode。",
+    "2113316775291142572": "Elon：强调投票很重要。",
+    "2113319277092642942": "Elon：抨击 Talarico 仇视德州与美国。",
+    "2113336387684470903": "Codie Sanchez：亏过百万、公开失败、离婚、被炒——每次都回来更强，别把自己玩小了。",
+    "2113345739820777654": "Peter Yang 发紧急视频：互联网正被攻击时的 6 步自保清单。",
+    "2113346642787086538": "OpenAI 开发者：Decisions API 正式可用，近实时分类/评估，少生成全文响应。",
+    "2113353489938075794": "Google：Gemini 4 Argon 从一张 Nano Banana 图生成 3D 大教堂音画场景，Antigravity 里驱动 Blender MCP 闭环。",
+    "2113363050745217364": "Matt Shumer：科技圈在恐慌安全，圈外人几乎不知道；提醒关注近期黑客事件。"
+  },
+  "hide": [
+    "2113319277092642942",
+    "2113316775291142572",
+    "2113098033705664650",
+    "2113266130584297708",
+    "2113289090531770470",
+    "2113081289570127971",
+    "2113188454788174293",
+    "2113281190442487873"
+  ],
+  "highlights": [
+    {
+      "excerpt": "No crypto wallet is 100% safe.\nNo software is bug free.\nNo tech is 100% secure.\n\nThere are risks in everything you do.\nThere are risks if you don't do anything.\n\nThere will be issues, setbacks and problems to solve.\n\nStay up-to-date. Manage risks. Solve problems.",
+      "excerpt_zh": "没有加密钱包是 100% 安全的。\n没有软件没有 bug。\n没有技术是 100% 安全的。\n\n你做的每件事都有风险。\n什么都不做也有风险。\n\n总会有问题、挫折和要解决的麻烦。\n\n保持更新。管理风险。解决问题。",
+      "handle": "cz_binance",
+      "likes": 13832,
+      "name": "CZ 🔶 BNB",
+      "post_id": "2113245235665125831",
+      "tags": [],
+      "text_zh": "CZ：没有钱包百分百安全，软件都有 bug；接受风险、持续更新、解决问题。",
+      "url": "https://x.com/cz_binance/status/2113245235665125831"
+    },
+    {
+      "excerpt": "Starting next week, sessions across Claude web, desktop, and mobile apps will run in auto mode by default on Pro, Max, and Team plans.\n\nRather than asking you to approve each step, an automated check blocks risky actions. Switch back to manual anytime. https://t.co/g9yvbMWH6X",
+      "excerpt_zh": "从下周起，Claude 网页、桌面和移动端会话将在 Pro、Max 和 Team 方案上默认以自动模式运行。\n\n不再让你逐步审批，而是由自动检查拦截危险操作。可随时切回手动。",
+      "handle": "claudeai",
+      "likes": 9952,
+      "name": "Claude",
+      "post_id": "2113360845409583307",
+      "tags": [
+        "model"
+      ],
+      "text_zh": "Claude 下起默认开启自动模式（Pro/Max/Team）：不再逐步审批，危险操作由自动检查拦截。",
+      "url": "https://x.com/claudeai/status/2113360845409583307"
+    },
+    {
+      "excerpt": "Day 17/ Bet you thought we forgot, but no, it’s reset day today.\n\nAlso good time to remind you to get Daybreak Blue access, it only takes 15 mins and you don’t want to have to do it in the middle of an incident.",
+      "excerpt_zh": "第 17 天/ 你以为我们忘了，没有，今天是重置日。\n\n也提醒你去开通 Daybreak Blue，只要 15 分钟；别等到事故中间才办。",
+      "handle": "thsottiaux",
+      "likes": 9034,
+      "name": "Tibo",
+      "post_id": "2113162277688070445",
+      "tags": [],
+      "text_zh": "Tibo Day 17：今天是重置日；提醒尽快开通 Daybreak Blue，出事时再办来不及。",
+      "url": "https://x.com/thsottiaux/status/2113162277688070445"
+    },
+    {
+      "excerpt": "Messi asked ChatGPT to teach him a chess opening that matched his style. It suggested Goat Horns 🤘 https://t.co/7w25w8LEZP",
+      "excerpt_zh": "Messi 让 ChatGPT 教他一个符合自己风格的象棋开局。它建议了 Goat Horns 🤘",
+      "handle": "ChatGPT",
+      "likes": 3126,
+      "name": "ChatGPT",
+      "post_id": "2113336601300676911",
+      "tags": [],
+      "text_zh": "Messi 让 ChatGPT 按自己风格教象棋开局，对方推荐了「Goat Horns」。",
+      "url": "https://x.com/ChatGPT/status/2113336601300676911"
+    },
+    {
+      "excerpt": "I believe that 99% of success is just the ability to outlast uncertainty. The one who can tolerate the most uncertainty will eventually win.",
+      "excerpt_zh": "我相信 99% 的成功只是熬过不确定性的能力。谁能忍受最多的不确定性，最终就会赢。",
+      "handle": "SahilBloom",
+      "likes": 2371,
+      "name": "Sahil Bloom",
+      "post_id": "2113322850425713038",
+      "tags": [],
+      "text_zh": "Sahil Bloom：99% 的成功就是熬过不确定性，谁更能忍谁最终赢。",
+      "url": "https://x.com/SahilBloom/status/2113322850425713038"
+    },
+    {
+      "excerpt": "Vercel now has all the pieces in place to host at-scale backends. \n\nWebSockets, Queues, Workflows, Cron, Services, Containers, Python, Daemons, Long-duration Functions, Blob, Drives, Sandbox…\n\nAny guesses what comes next? https://t.co/iTBNChcP2Q",
+      "excerpt_zh": "Vercel 现在已具备托管大规模后端的全部组件。\n\nWebSockets、队列、工作流、Cron、服务、容器、Python、守护进程、长时函数、Blob、驱动器、沙箱…\n\n猜猜接下来是什么？",
+      "handle": "rauchg",
+      "likes": 1293,
+      "name": "Guillermo Rauch",
+      "post_id": "2113251591822471644",
+      "tags": [
+        "agent"
+      ],
+      "text_zh": "Rauch：Vercel 已齐备规模化后端能力（WS/队列/工作流/容器/沙箱等），下一步留悬念。",
+      "url": "https://x.com/rauchg/status/2113251591822471644"
+    },
+    {
+      "excerpt": "A visible sign of what AI insiders have been warning about since at least the Mythos release. Acceleration of attack and defense, at inhuman speeds, interacting with the very human systems that need to react to them. https://t.co/jEI8WDjslo",
+      "excerpt_zh": "这是至少从 Mythos 发布以来，AI 圈内人就在警告的可见迹象。攻防以非人速度加速，却仍与需要对其作出反应的非常人类的系统相互作用。",
+      "handle": "emollick",
+      "likes": 1121,
+      "name": "Ethan Mollick",
+      "post_id": "2113063313810792916",
+      "tags": [
+        "product"
+      ],
+      "text_zh": "Mollick：攻防被 AI 加速到非人速度，却仍撞上需要反应的人类系统。",
+      "url": "https://x.com/emollick/status/2113063313810792916"
+    },
+    {
+      "excerpt": "Established companies will at best adapt to AI. Newly founded startups will be AI-native from the start. This is an interesting example of a company in the middle, which (by great effort) remade itself as an AI-native company. https://t.co/JGG0JGf21K",
+      "excerpt_zh": "既有公司最多只能适应 AI。新创立的创业公司从一开始就会是 AI 原生。这是一个有趣的中间例子：一家（付出巨大努力）把自己重塑为 AI 原生公司的企业。",
+      "handle": "paulg",
+      "likes": 985,
+      "name": "Paul Graham",
+      "post_id": "2113284574172135639",
+      "tags": [
+        "startup"
+      ],
+      "text_zh": "Paul Graham：老公司最多适应 AI；新创生来即 AI 原生，中间转型者值得关注。",
+      "url": "https://x.com/paulg/status/2113284574172135639"
+    }
+  ],
+  "pin": [],
+  "summary_zh": [
+    "Claude 默认开启自动模式（Pro/Max/Team），危险操作用自动检查拦截，9,952 赞。",
+    "CZ 谈钱包与软件皆无绝对安全；OpenAI Decisions API 正式可用，智能体近实时决策。",
+    "solopreneur 话题 +40%、智能体 Agent +32%、Qwen +27%；claudeai 涨粉 11,047 居首。"
+  ],
+  "topics_zh": "对比前几日均值：solopreneur +40%（316 帖）、智能体 Agent +32%（3.0 万帖）、Qwen 千问 +27%、MCP +20%；DeepSeek −34%、Dan Koe −47%、monk mode −9%。"
+}

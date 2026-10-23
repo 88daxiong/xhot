@@ -2,6 +2,62 @@
   "handle": "googledeepmind",
   "tweets": [
     {
+      "created_at": "2026-10-22T14:38:04.000Z",
+      "id": "2113278722337804299",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 4,
+        "impression": 10815,
+        "like": 24,
+        "quote": 0,
+        "reply": 1,
+        "retweet": 2
+      },
+      "url": "https://x.com/GoogleDeepMind/status/2113278722337804299"
+    },
+    {
+      "created_at": "2026-10-22T14:38:04.000Z",
+      "id": "2113278719447965943",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 6,
+        "impression": 12038,
+        "like": 36,
+        "quote": 0,
+        "reply": 2,
+        "retweet": 2
+      },
+      "url": "https://x.com/GoogleDeepMind/status/2113278719447965943"
+    },
+    {
+      "created_at": "2026-10-22T14:38:03.000Z",
+      "id": "2113278715585307020",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 2,
+        "impression": 2547,
+        "like": 22,
+        "quote": 0,
+        "reply": 5,
+        "retweet": 4
+      },
+      "url": "https://x.com/GoogleDeepMind/status/2113278715585307020"
+    },
+    {
+      "created_at": "2026-10-22T14:38:02.000Z",
+      "id": "2113278710795153785",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 116,
+        "impression": 46016,
+        "like": 505,
+        "quote": 40,
+        "reply": 94,
+        "retweet": 57
+      },
+      "url": "https://x.com/GoogleDeepMind/status/2113278710795153785"
+    },
+    {
       "created_at": "2026-10-21T18:30:05.000Z",
       "id": "2112974723659247896",
       "lang": "",

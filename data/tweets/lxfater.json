@@ -2,6 +2,90 @@
   "handle": "lxfater",
   "tweets": [
     {
+      "created_at": "2026-10-22T16:46:53.000Z",
+      "id": "2113311139958505827",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 3,
+        "impression": 1904,
+        "like": 6,
+        "quote": 0,
+        "reply": 2,
+        "retweet": 0
+      },
+      "url": "https://x.com/lxfater/status/2113311139958505827"
+    },
+    {
+      "created_at": "2026-10-22T14:32:21.000Z",
+      "id": "2113277282533998665",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 6,
+        "impression": 3931,
+        "like": 5,
+        "quote": 1,
+        "reply": 7,
+        "retweet": 0
+      },
+      "url": "https://x.com/lxfater/status/2113277282533998665"
+    },
+    {
+      "created_at": "2026-10-22T12:10:01.000Z",
+      "id": "2113241463438147977",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 1,
+        "impression": 4083,
+        "like": 5,
+        "quote": 0,
+        "reply": 13,
+        "retweet": 0
+      },
+      "url": "https://x.com/lxfater/status/2113241463438147977"
+    },
+    {
+      "created_at": "2026-10-22T08:00:30.000Z",
+      "id": "2113178668831055969",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 15,
+        "impression": 11755,
+        "like": 6,
+        "quote": 0,
+        "reply": 32,
+        "retweet": 0
+      },
+      "url": "https://x.com/lxfater/status/2113178668831055969"
+    },
+    {
+      "created_at": "2026-10-22T04:33:40.000Z",
+      "id": "2113126618684404037",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 29,
+        "impression": 15681,
+        "like": 62,
+        "quote": 5,
+        "reply": 51,
+        "retweet": 3
+      },
+      "url": "https://x.com/lxfater/status/2113126618684404037"
+    },
+    {
+      "created_at": "2026-10-22T04:01:23.000Z",
+      "id": "2113118493474529785",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 3,
+        "impression": 11541,
+        "like": 0,
+        "quote": 0,
+        "reply": 0,
+        "retweet": 1
+      },
+      "url": "https://x.com/lxfater/status/2113118493474529785"
+    },
+    {
       "created_at": "2026-10-21T14:51:29.000Z",
       "id": "2112919709695828162",
       "lang": "",

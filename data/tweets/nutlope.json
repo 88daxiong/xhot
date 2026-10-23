@@ -2,6 +2,34 @@
   "handle": "nutlope",
   "tweets": [
     {
+      "created_at": "2026-10-22T17:19:32.000Z",
+      "id": "2113319356033622221",
+      "lang": "",
+      "metrics": {
+        "bookmark": 90,
+        "impression": 4729,
+        "like": 34,
+        "quote": 0,
+        "reply": 1,
+        "retweet": 2
+      },
+      "url": "https://x.com/nutlope/status/2113319356033622221"
+    },
+    {
+      "created_at": "2026-10-22T17:06:16.000Z",
+      "id": "2113316017510191578",
+      "lang": "",
+      "metrics": {
+        "bookmark": 1311,
+        "impression": 50439,
+        "like": 768,
+        "quote": 5,
+        "reply": 66,
+        "retweet": 32
+      },
+      "url": "https://x.com/nutlope/status/2113316017510191578"
+    },
+    {
       "created_at": "2026-10-21T20:17:29.000Z",
       "id": "2113001748927254938",
       "lang": "en",

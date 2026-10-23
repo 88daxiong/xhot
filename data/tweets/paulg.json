@@ -2,6 +2,48 @@
   "handle": "paulg",
   "tweets": [
     {
+      "created_at": "2026-10-22T20:21:12.000Z",
+      "id": "2113365071652872339",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 60,
+        "impression": 34752,
+        "like": 248,
+        "quote": 3,
+        "reply": 23,
+        "retweet": 16
+      },
+      "url": "https://x.com/paulg/status/2113365071652872339"
+    },
+    {
+      "created_at": "2026-10-22T15:03:25.000Z",
+      "id": "2113285100636979593",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 13,
+        "impression": 12770,
+        "like": 78,
+        "quote": 2,
+        "reply": 11,
+        "retweet": 2
+      },
+      "url": "https://x.com/paulg/status/2113285100636979593"
+    },
+    {
+      "created_at": "2026-10-22T15:01:20.000Z",
+      "id": "2113284574172135639",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 562,
+        "impression": 99911,
+        "like": 985,
+        "quote": 13,
+        "reply": 151,
+        "retweet": 60
+      },
+      "url": "https://x.com/paulg/status/2113284574172135639"
+    },
+    {
       "created_at": "2026-10-20T16:31:21.000Z",
       "id": "2112582455551041891",
       "lang": "en",
