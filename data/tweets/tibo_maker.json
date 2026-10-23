@@ -2,6 +2,34 @@
   "handle": "tibo_maker",
   "tweets": [
     {
+      "created_at": "2026-10-23T11:12:38.000Z",
+      "id": "2113589410813870304",
+      "lang": "",
+      "metrics": {
+        "bookmark": 3,
+        "impression": 1715,
+        "like": 47,
+        "quote": 0,
+        "reply": 28,
+        "retweet": 2
+      },
+      "url": "https://x.com/tibo_maker/status/2113589410813870304"
+    },
+    {
+      "created_at": "2026-10-23T09:30:22.000Z",
+      "id": "2113563672811323726",
+      "lang": "",
+      "metrics": {
+        "bookmark": 18,
+        "impression": 3510,
+        "like": 26,
+        "quote": 0,
+        "reply": 31,
+        "retweet": 4
+      },
+      "url": "https://x.com/tibo_maker/status/2113563672811323726"
+    },
+    {
       "created_at": "2026-10-22T14:06:17.000Z",
       "id": "2113270723548459321",
       "lang": "en",

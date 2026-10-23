@@ -2,6 +2,34 @@
   "handle": "oran_ge",
   "tweets": [
     {
+      "created_at": "2026-10-23T11:33:46.000Z",
+      "id": "2113594727555834264",
+      "lang": "",
+      "metrics": {
+        "bookmark": 4,
+        "impression": 3742,
+        "like": 10,
+        "quote": 0,
+        "reply": 10,
+        "retweet": 1
+      },
+      "url": "https://x.com/oran_ge/status/2113594727555834264"
+    },
+    {
+      "created_at": "2026-10-23T01:30:45.000Z",
+      "id": "2113442974537584672",
+      "lang": "",
+      "metrics": {
+        "bookmark": 3,
+        "impression": 4477,
+        "like": 29,
+        "quote": 2,
+        "reply": 2,
+        "retweet": 1
+      },
+      "url": "https://x.com/oran_ge/status/2113442974537584672"
+    },
+    {
       "created_at": "2026-10-20T14:18:19.000Z",
       "id": "2112548973735219389",
       "lang": "zh",

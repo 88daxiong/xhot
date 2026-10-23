@@ -2,6 +2,20 @@
   "handle": "petergyang",
   "tweets": [
     {
+      "created_at": "2026-10-23T01:30:01.000Z",
+      "id": "2113442789367435735",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 8,
+        "impression": 7492,
+        "like": 22,
+        "quote": 0,
+        "reply": 8,
+        "retweet": 1
+      },
+      "url": "https://x.com/petergyang/status/2113442789367435735"
+    },
+    {
       "created_at": "2026-10-23T00:00:53.000Z",
       "id": "2113420357726257335",
       "lang": "",
