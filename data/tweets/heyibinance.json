@@ -2,6 +2,34 @@
   "handle": "heyibinance",
   "tweets": [
     {
+      "created_at": "2026-10-23T16:46:22.000Z",
+      "id": "2113673396454408522",
+      "lang": "",
+      "metrics": {
+        "bookmark": 2,
+        "impression": 21676,
+        "like": 131,
+        "quote": 1,
+        "reply": 77,
+        "retweet": 5
+      },
+      "url": "https://x.com/heyibinance/status/2113673396454408522"
+    },
+    {
+      "created_at": "2026-10-23T12:30:46.000Z",
+      "id": "2113609074361479302",
+      "lang": "",
+      "metrics": {
+        "bookmark": 6,
+        "impression": 19144,
+        "like": 238,
+        "quote": 5,
+        "reply": 95,
+        "retweet": 12
+      },
+      "url": "https://x.com/heyibinance/status/2113609074361479302"
+    },
+    {
       "created_at": "2026-10-23T11:49:41.000Z",
       "id": "2113598733837549584",
       "lang": "",

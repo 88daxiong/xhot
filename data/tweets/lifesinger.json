@@ -2,6 +2,34 @@
   "handle": "lifesinger",
   "tweets": [
     {
+      "created_at": "2026-10-23T12:53:22.000Z",
+      "id": "2113614758964601198",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 2727,
+        "like": 25,
+        "quote": 0,
+        "reply": 10,
+        "retweet": 0
+      },
+      "url": "https://x.com/lifesinger/status/2113614758964601198"
+    },
+    {
+      "created_at": "2026-10-23T11:35:35.000Z",
+      "id": "2113595185024389338",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 27,
+        "impression": 19496,
+        "like": 107,
+        "quote": 1,
+        "reply": 30,
+        "retweet": 3
+      },
+      "url": "https://x.com/lifesinger/status/2113595185024389338"
+    },
+    {
       "created_at": "2026-10-22T04:59:19.000Z",
       "id": "2113133073437192658",
       "lang": "",

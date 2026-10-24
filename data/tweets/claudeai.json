@@ -2,6 +2,20 @@
   "handle": "claudeai",
   "tweets": [
     {
+      "created_at": "2026-10-23T20:55:50.000Z",
+      "id": "2113736176737845353",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 17,
+        "impression": 23362,
+        "like": 74,
+        "quote": 1,
+        "reply": 13,
+        "retweet": 13
+      },
+      "url": "https://x.com/claudeai/status/2113736176737845353"
+    },
+    {
       "created_at": "2026-10-22T21:21:01.000Z",
       "id": "2113380126561800305",
       "lang": "en",

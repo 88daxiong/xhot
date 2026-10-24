@@ -2,6 +2,34 @@
   "handle": "anthropicai",
   "tweets": [
     {
+      "created_at": "2026-10-23T13:40:39.000Z",
+      "id": "2113626657508516348",
+      "lang": "",
+      "metrics": {
+        "bookmark": 27,
+        "impression": 87635,
+        "like": 162,
+        "quote": 4,
+        "reply": 17,
+        "retweet": 10
+      },
+      "url": "https://x.com/AnthropicAI/status/2113626657508516348"
+    },
+    {
+      "created_at": "2026-10-23T13:40:38.000Z",
+      "id": "2113626655902126442",
+      "lang": "",
+      "metrics": {
+        "bookmark": 1235,
+        "impression": 1260477,
+        "like": 3216,
+        "quote": 325,
+        "reply": 456,
+        "retweet": 332
+      },
+      "url": "https://x.com/AnthropicAI/status/2113626655902126442"
+    },
+    {
       "created_at": "2026-10-22T22:01:06.000Z",
       "id": "2113390212911083894",
       "lang": "",

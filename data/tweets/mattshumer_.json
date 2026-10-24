@@ -2,6 +2,76 @@
   "handle": "mattshumer_",
   "tweets": [
     {
+      "created_at": "2026-10-24T00:10:18.000Z",
+      "id": "2113785117311214036",
+      "lang": "",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 1574,
+        "like": 2,
+        "quote": 0,
+        "reply": 2,
+        "retweet": 0
+      },
+      "url": "https://x.com/mattshumer_/status/2113785117311214036"
+    },
+    {
+      "created_at": "2026-10-23T16:20:56.000Z",
+      "id": "2113666997183529370",
+      "lang": "",
+      "metrics": {
+        "bookmark": 53,
+        "impression": 16382,
+        "like": 38,
+        "quote": 0,
+        "reply": 24,
+        "retweet": 0
+      },
+      "url": "https://x.com/mattshumer_/status/2113666997183529370"
+    },
+    {
+      "created_at": "2026-10-23T03:58:51.000Z",
+      "id": "2113480246007840842",
+      "lang": "",
+      "metrics": {
+        "bookmark": 82,
+        "impression": 24003,
+        "like": 84,
+        "quote": 0,
+        "reply": 13,
+        "retweet": 1
+      },
+      "url": "https://x.com/mattshumer_/status/2113480246007840842"
+    },
+    {
+      "created_at": "2026-10-23T03:08:05.000Z",
+      "id": "2113467468438212893",
+      "lang": "",
+      "metrics": {
+        "bookmark": 50,
+        "impression": 41593,
+        "like": 306,
+        "quote": 4,
+        "reply": 72,
+        "retweet": 11
+      },
+      "url": "https://x.com/mattshumer_/status/2113467468438212893"
+    },
+    {
+      "created_at": "2026-10-23T02:58:43.000Z",
+      "id": "2113465112896164306",
+      "lang": "",
+      "metrics": {
+        "bookmark": 191,
+        "impression": 58312,
+        "like": 186,
+        "quote": 0,
+        "reply": 10,
+        "retweet": 6
+      },
+      "url": "https://x.com/mattshumer_/status/2113465112896164306"
+    },
+    {
       "created_at": "2026-10-22T20:13:10.000Z",
       "id": "2113363050745217364",
       "lang": "",

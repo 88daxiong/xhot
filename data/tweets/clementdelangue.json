@@ -2,6 +2,48 @@
   "handle": "clementdelangue",
   "tweets": [
     {
+      "created_at": "2026-10-23T19:26:03.000Z",
+      "id": "2113713580386222193",
+      "lang": "",
+      "metrics": {
+        "bookmark": 9,
+        "impression": 8426,
+        "like": 125,
+        "quote": 2,
+        "reply": 14,
+        "retweet": 5
+      },
+      "url": "https://x.com/ClementDelangue/status/2113713580386222193"
+    },
+    {
+      "created_at": "2026-10-23T18:51:47.000Z",
+      "id": "2113704957325066735",
+      "lang": "",
+      "metrics": {
+        "bookmark": 84,
+        "impression": 16068,
+        "like": 408,
+        "quote": 2,
+        "reply": 39,
+        "retweet": 21
+      },
+      "url": "https://x.com/ClementDelangue/status/2113704957325066735"
+    },
+    {
+      "created_at": "2026-10-23T17:19:52.000Z",
+      "id": "2113681827583905959",
+      "lang": "",
+      "metrics": {
+        "bookmark": 39,
+        "impression": 11658,
+        "like": 180,
+        "quote": 1,
+        "reply": 15,
+        "retweet": 17
+      },
+      "url": "https://x.com/ClementDelangue/status/2113681827583905959"
+    },
+    {
       "created_at": "2026-10-22T17:32:06.000Z",
       "id": "2113322519423758540",
       "lang": "en",

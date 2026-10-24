@@ -2,6 +2,48 @@
   "handle": "gregisenberg",
   "tweets": [
     {
+      "created_at": "2026-10-23T20:40:13.000Z",
+      "id": "2113732248579330271",
+      "lang": "",
+      "metrics": {
+        "bookmark": 17,
+        "impression": 5256,
+        "like": 10,
+        "quote": 0,
+        "reply": 1,
+        "retweet": 0
+      },
+      "url": "https://x.com/gregisenberg/status/2113732248579330271"
+    },
+    {
+      "created_at": "2026-10-23T19:57:01.000Z",
+      "id": "2113721373482987970",
+      "lang": "",
+      "metrics": {
+        "bookmark": 2915,
+        "impression": 121258,
+        "like": 1422,
+        "quote": 21,
+        "reply": 202,
+        "retweet": 89
+      },
+      "url": "https://x.com/gregisenberg/status/2113721373482987970"
+    },
+    {
+      "created_at": "2026-10-23T13:41:54.000Z",
+      "id": "2113626973465383047",
+      "lang": "",
+      "metrics": {
+        "bookmark": 74,
+        "impression": 70968,
+        "like": 313,
+        "quote": 5,
+        "reply": 146,
+        "retweet": 9
+      },
+      "url": "https://x.com/gregisenberg/status/2113626973465383047"
+    },
+    {
       "created_at": "2026-10-22T17:19:39.000Z",
       "id": "2113319384643219797",
       "lang": "",
