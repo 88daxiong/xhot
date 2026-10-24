@@ -2,6 +2,34 @@
   "handle": "trq212",
   "tweets": [
     {
+      "created_at": "2026-10-24T04:06:31.000Z",
+      "id": "2113844560074019213",
+      "lang": "",
+      "metrics": {
+        "bookmark": 93,
+        "impression": 237158,
+        "like": 1848,
+        "quote": 15,
+        "reply": 24,
+        "retweet": 8
+      },
+      "url": "https://x.com/trq212/status/2113844560074019213"
+    },
+    {
+      "created_at": "2026-10-24T04:04:29.000Z",
+      "id": "2113844051938054167",
+      "lang": "",
+      "metrics": {
+        "bookmark": 3401,
+        "impression": 1774769,
+        "like": 19770,
+        "quote": 560,
+        "reply": 1532,
+        "retweet": 657
+      },
+      "url": "https://x.com/trq212/status/2113844051938054167"
+    },
+    {
       "created_at": "2026-10-19T16:27:48.000Z",
       "id": "2112219173288120531",
       "lang": "",
