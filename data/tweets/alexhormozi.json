@@ -2,6 +2,34 @@
   "handle": "alexhormozi",
   "tweets": [
     {
+      "created_at": "2026-10-24T18:57:25.000Z",
+      "id": "2114068763578654823",
+      "lang": "",
+      "metrics": {
+        "bookmark": 326,
+        "impression": 60114,
+        "like": 3002,
+        "quote": 11,
+        "reply": 139,
+        "retweet": 255
+      },
+      "url": "https://x.com/AlexHormozi/status/2114068763578654823"
+    },
+    {
+      "created_at": "2026-10-24T12:30:21.000Z",
+      "id": "2113971357054902284",
+      "lang": "",
+      "metrics": {
+        "bookmark": 2301,
+        "impression": 221380,
+        "like": 8928,
+        "quote": 50,
+        "reply": 236,
+        "retweet": 897
+      },
+      "url": "https://x.com/AlexHormozi/status/2113971357054902284"
+    },
+    {
       "created_at": "2026-10-23T01:00:05.000Z",
       "id": "2113435258163253564",
       "lang": "en",

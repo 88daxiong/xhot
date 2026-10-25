@@ -2,6 +2,34 @@
   "handle": "laobaishare",
   "tweets": [
     {
+      "created_at": "2026-10-24T04:00:01.000Z",
+      "id": "2113842927684440363",
+      "lang": "",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 1995,
+        "like": 1,
+        "quote": 0,
+        "reply": 0,
+        "retweet": 0
+      },
+      "url": "https://x.com/laobaishare/status/2113842927684440363"
+    },
+    {
+      "created_at": "2026-10-24T04:00:01.000Z",
+      "id": "2113842925914517745",
+      "lang": "",
+      "metrics": {
+        "bookmark": 1,
+        "impression": 6197,
+        "like": 15,
+        "quote": 0,
+        "reply": 2,
+        "retweet": 0
+      },
+      "url": "https://x.com/laobaishare/status/2113842925914517745"
+    },
+    {
       "created_at": "2026-10-23T11:12:14.000Z",
       "id": "2113589307789512863",
       "lang": "zh",

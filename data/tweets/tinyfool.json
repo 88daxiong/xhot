@@ -2,6 +2,34 @@
   "handle": "tinyfool",
   "tweets": [
     {
+      "created_at": "2026-10-24T14:01:31.000Z",
+      "id": "2113994298278682891",
+      "lang": "",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 4358,
+        "like": 13,
+        "quote": 0,
+        "reply": 4,
+        "retweet": 1
+      },
+      "url": "https://x.com/tinyfool/status/2113994298278682891"
+    },
+    {
+      "created_at": "2026-10-24T02:16:12.000Z",
+      "id": "2113816798785356033",
+      "lang": "",
+      "metrics": {
+        "bookmark": 2,
+        "impression": 5763,
+        "like": 8,
+        "quote": 0,
+        "reply": 12,
+        "retweet": 0
+      },
+      "url": "https://x.com/tinyfool/status/2113816798785356033"
+    },
+    {
       "created_at": "2026-10-22T08:36:01.000Z",
       "id": "2113187608755048891",
       "lang": "zh",

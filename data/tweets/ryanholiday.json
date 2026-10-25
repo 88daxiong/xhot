@@ -2,6 +2,34 @@
   "handle": "ryanholiday",
   "tweets": [
     {
+      "created_at": "2026-10-24T19:01:04.000Z",
+      "id": "2114069683897012514",
+      "lang": "",
+      "metrics": {
+        "bookmark": 5,
+        "impression": 8499,
+        "like": 50,
+        "quote": 0,
+        "reply": 8,
+        "retweet": 6
+      },
+      "url": "https://x.com/RyanHoliday/status/2114069683897012514"
+    },
+    {
+      "created_at": "2026-10-24T13:01:00.000Z",
+      "id": "2113979069268471815",
+      "lang": "",
+      "metrics": {
+        "bookmark": 208,
+        "impression": 22789,
+        "like": 483,
+        "quote": 0,
+        "reply": 44,
+        "retweet": 46
+      },
+      "url": "https://x.com/RyanHoliday/status/2113979069268471815"
+    },
+    {
       "created_at": "2026-10-23T19:00:09.000Z",
       "id": "2113707063281115193",
       "lang": "",

@@ -2,6 +2,48 @@
   "handle": "leerob",
   "tweets": [
     {
+      "created_at": "2026-10-24T23:59:29.000Z",
+      "id": "2114144779613171916",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 495,
+        "like": 6,
+        "quote": 0,
+        "reply": 2,
+        "retweet": 0
+      },
+      "url": "https://x.com/leerob/status/2114144779613171916"
+    },
+    {
+      "created_at": "2026-10-24T00:39:45.000Z",
+      "id": "2113792526125768728",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 11,
+        "impression": 40949,
+        "like": 502,
+        "quote": 0,
+        "reply": 46,
+        "retweet": 3
+      },
+      "url": "https://x.com/leerob/status/2113792526125768728"
+    },
+    {
+      "created_at": "2026-10-24T00:39:17.000Z",
+      "id": "2113792409448714468",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 957,
+        "impression": 482310,
+        "like": 4174,
+        "quote": 74,
+        "reply": 5578,
+        "retweet": 185
+      },
+      "url": "https://x.com/leerob/status/2113792409448714468"
+    },
+    {
       "created_at": "2026-10-15T13:55:27.000Z",
       "id": "2110731280312930762",
       "lang": "",

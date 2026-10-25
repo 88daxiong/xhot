@@ -2,6 +2,90 @@
   "handle": "soulsloop99",
   "tweets": [
     {
+      "created_at": "2026-10-24T23:56:26.000Z",
+      "id": "2114144015209898220",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 233,
+        "like": 4,
+        "quote": 0,
+        "reply": 0,
+        "retweet": 1
+      },
+      "url": "https://x.com/SoulSloop99/status/2114144015209898220"
+    },
+    {
+      "created_at": "2026-10-24T13:59:31.000Z",
+      "id": "2113993797046796524",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 3,
+        "impression": 1308,
+        "like": 6,
+        "quote": 1,
+        "reply": 0,
+        "retweet": 1
+      },
+      "url": "https://x.com/SoulSloop99/status/2113993797046796524"
+    },
+    {
+      "created_at": "2026-10-24T13:08:00.000Z",
+      "id": "2113980830594863584",
+      "lang": "ja",
+      "metrics": {
+        "bookmark": 2,
+        "impression": 1525,
+        "like": 15,
+        "quote": 0,
+        "reply": 1,
+        "retweet": 2
+      },
+      "url": "https://x.com/SoulSloop99/status/2113980830594863584"
+    },
+    {
+      "created_at": "2026-10-24T13:05:25.000Z",
+      "id": "2113980179165135116",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 11,
+        "impression": 2248,
+        "like": 13,
+        "quote": 0,
+        "reply": 0,
+        "retweet": 1
+      },
+      "url": "https://x.com/SoulSloop99/status/2113980179165135116"
+    },
+    {
+      "created_at": "2026-10-24T13:01:56.000Z",
+      "id": "2113979302266192151",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 8,
+        "impression": 1354,
+        "like": 8,
+        "quote": 0,
+        "reply": 0,
+        "retweet": 2
+      },
+      "url": "https://x.com/SoulSloop99/status/2113979302266192151"
+    },
+    {
+      "created_at": "2026-10-24T12:40:00.000Z",
+      "id": "2113973783245599051",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 828,
+        "like": 1,
+        "quote": 0,
+        "reply": 0,
+        "retweet": 0
+      },
+      "url": "https://x.com/SoulSloop99/status/2113973783245599051"
+    },
+    {
       "created_at": "2026-10-24T12:02:31.000Z",
       "id": "2113964349530517552",
       "lang": "",
@@ -2716,90 +2800,6 @@
         "retweet": 44
       },
       "url": "https://x.com/SoulSloop99/status/2110753312517824838"
-    },
-    {
-      "created_at": "2026-10-15T15:12:00.000Z",
-      "id": "2110750544189075478",
-      "lang": "",
-      "metrics": {
-        "bookmark": 5,
-        "impression": 1832,
-        "like": 2,
-        "quote": 0,
-        "reply": 0,
-        "retweet": 0
-      },
-      "url": "https://x.com/SoulSloop99/status/2110750544189075478"
-    },
-    {
-      "created_at": "2026-10-15T14:31:00.000Z",
-      "id": "2110740226780037173",
-      "lang": "",
-      "metrics": {
-        "bookmark": 5,
-        "impression": 1924,
-        "like": 4,
-        "quote": 0,
-        "reply": 0,
-        "retweet": 2
-      },
-      "url": "https://x.com/SoulSloop99/status/2110740226780037173"
-    },
-    {
-      "created_at": "2026-10-15T13:32:00.000Z",
-      "id": "2110725378713190869",
-      "lang": "",
-      "metrics": {
-        "bookmark": 28,
-        "impression": 3837,
-        "like": 21,
-        "quote": 0,
-        "reply": 9,
-        "retweet": 7
-      },
-      "url": "https://x.com/SoulSloop99/status/2110725378713190869"
-    },
-    {
-      "created_at": "2026-10-15T13:29:03.000Z",
-      "id": "2110724636451487979",
-      "lang": "",
-      "metrics": {
-        "bookmark": 0,
-        "impression": 140,
-        "like": 2,
-        "quote": 0,
-        "reply": 0,
-        "retweet": 0
-      },
-      "url": "https://x.com/SoulSloop99/status/2110724636451487979"
-    },
-    {
-      "created_at": "2026-10-15T13:28:59.000Z",
-      "id": "2110724619300917544",
-      "lang": "",
-      "metrics": {
-        "bookmark": 0,
-        "impression": 228,
-        "like": 0,
-        "quote": 0,
-        "reply": 1,
-        "retweet": 0
-      },
-      "url": "https://x.com/SoulSloop99/status/2110724619300917544"
-    },
-    {
-      "created_at": "2026-10-15T13:28:55.000Z",
-      "id": "2110724605145239667",
-      "lang": "",
-      "metrics": {
-        "bookmark": 0,
-        "impression": 768,
-        "like": 0,
-        "quote": 0,
-        "reply": 1,
-        "retweet": 0
-      },
-      "url": "https://x.com/SoulSloop99/status/2110724605145239667"
     }
   ],
   "user_id": "1891330878393167872"

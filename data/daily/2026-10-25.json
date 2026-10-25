@@ -1,0 +1,141 @@
+{
+  "changelog": [],
+  "date": "2026-10-25",
+  "followers_zh": "10-24 → 10-25：_catwu +27,657、trq212 +16,162、bcherny +14,770、kimi_moonshot +5,338、openai +5,211；satyanadella −1,060、sundarpichai −484、jordanbpeterson −432。",
+  "gists": {
+    "2113811349281345578": "swyx：澄清假新闻，并晒出自己找到当事人。",
+    "2113828254318776644": "Kraken 联席 CEO：追问用户提款用途不可接受，XMR 将继续上架。",
+    "2113843077353984181": "Shaan Puri：方法简单有效却少见——为什么？",
+    "2113918429774086172": "WuBlockchain：Murad 称某 memecoin 市值有朝一日或超比特币与整个股市。",
+    "2113973979191087401": "CZ 调侃：许多 iPhone 会被加密货币「战壕」玩家搞得「失控」。",
+    "2113979069268471815": "Ryan Holiday 推荐三本斯多葛必读：沉思录、爱比克泰德、塞内卡书信。",
+    "2113984722036785274": "Tibo：用 AI 批量跑 UGC 创作者矩阵其实就这么简单。",
+    "2114026505550647697": "Hassan：项目意外爆火，周一正式发布，将 100% 免费开源。",
+    "2114030784625647855": "Tibo：周六边喝咖啡边修 bug，求推荐旧金山好去处。",
+    "2114052900045590580": "Alex Albert 列出 Claude Code 反馈可 @ 的产品核心成员名单。",
+    "2114064620411666919": "马斯克谈政治部落化：多数人看不见本阵营过错与对方的贡献。",
+    "2114068763578654823": "Hormozi：创业是用数年人生去验证哪些点子是好的。",
+    "2114076637578834407": "Codie：要上瘾于把已经开始的事做完。"
+  },
+  "hide": [
+    "2114026169813414022",
+    "2113844560074019213",
+    "2113998192547332212",
+    "2114074885622501706",
+    "2113985122944831829",
+    "2114073532963668293"
+  ],
+  "highlights": [
+    {
+      "excerpt": "Correct. \n\nUsing Starlink, a civilian commercial service, for offensive drone strikes to kill people has never been allowed, nor should it be. \n\nStarshield, a different system, is controlled by the US government. What they decide to do is up to them.",
+      "excerpt_zh": "没错。\n\n用民用商用服务 Starlink 做进攻性无人机打击杀人，从未被允许，也不该被允许。\n\nStarshield 是另一套系统，由美国政府控制，怎么用由他们决定。\n\n乌克兰军方违反了 Starlink 服务条款，用它做进攻性无人机打击杀人。这个漏洞上周已封堵。\n\nStarlink 对乌克兰防务仍至关重要，至少目前是唯一难以被干扰或摧毁的系统。",
+      "handle": "elonmusk",
+      "likes": 90904,
+      "name": "Elon Musk",
+      "post_id": "2114063986744275011",
+      "tags": [
+        "policy"
+      ],
+      "text_zh": "马斯克澄清：民用 Starlink 禁用于进攻性无人机打击；乌军违规已封堵。",
+      "url": "https://x.com/elonmusk/status/2114063986744275011"
+    },
+    {
+      "excerpt": "I’ve left Anthropic after more than a year of working on Claude Code and seeing it scale larger than I ever imagined.\n\nI have really loved working at Ant and believe deeply in the mission, and most of all, the idea of a race to the top.\n\nThe idea that if we work hard and",
+      "excerpt_zh": "我已离开 Anthropic。过去一年多我在做 Claude Code，亲眼看着它成长到远超我想象的规模。\n\n我很喜欢在 Ant 的工作，深信其使命，尤其是「向上竞赛」的理念。",
+      "handle": "trq212",
+      "likes": 19770,
+      "name": "Thariq",
+      "post_id": "2113844051938054167",
+      "tags": [
+        "code",
+        "model"
+      ],
+      "text_zh": "Claude Code 核心作者 Thariq 离职 Anthropic：共事一年多，见证其规模远超想象。",
+      "url": "https://x.com/trq212/status/2113844051938054167"
+    },
+    {
+      "excerpt": "Everything is hard. Nothing works the first time. It all feels pointless. That’s when you realize you’re going to have to will it into existence with every ounce of your fucking soul. And that’s when it starts to happen.",
+      "excerpt_zh": "凡事都很难。第一次从来行不通。一切都显得毫无意义。这时你才意识到：必须用尽全身力气、凭意志把它拽进现实。然后事情才真正开始发生。",
+      "handle": "AlexHormozi",
+      "likes": 8928,
+      "name": "Alex Hormozi",
+      "post_id": "2113971357054902284",
+      "tags": [
+        "career"
+      ],
+      "text_zh": "Hormozi：凡事都难、首次必败、感觉无意义——这时才要用意志把它拽进现实。",
+      "url": "https://x.com/AlexHormozi/status/2113971357054902284"
+    },
+    {
+      "excerpt": "The difference between having a tool and being a tool is subtle these days and it’s easy to accidentally build yourself into being a tool. Don’t be a tool.",
+      "excerpt_zh": "如今「拥有工具」和「成为工具」的差别很微妙，一不小心就会把自己做成工具。别当工具。",
+      "handle": "thsottiaux",
+      "likes": 7094,
+      "name": "Tibo",
+      "post_id": "2113838156193894447",
+      "tags": [
+        "write"
+      ],
+      "text_zh": "Tibo：拥有工具与成为工具的界限很细——别把自己做成工具。",
+      "url": "https://x.com/thsottiaux/status/2113838156193894447"
+    },
+    {
+      "excerpt": "I regret to inform you that nobody cares about your potential. Potential is nothing without execution. When you're young, everyone cares about your potential. You get used to focusing on it. But as you get older, no one cares about your potential. Just your delivery against it.",
+      "excerpt_zh": "很遗憾地告诉你：没人在乎你的潜力。没有执行，潜力一文不值。年轻时人人在乎你的潜力，你也习惯盯着潜力。年纪大了，没人再在乎潜力，只看你交付了什么。",
+      "handle": "SahilBloom",
+      "likes": 5218,
+      "name": "Sahil Bloom",
+      "post_id": "2114052278697017350",
+      "tags": [
+        "career"
+      ],
+      "text_zh": "Sahil Bloom：没人在乎你的潜力，只看你交付了什么；潜力不等于执行。",
+      "url": "https://x.com/SahilBloom/status/2114052278697017350"
+    },
+    {
+      "excerpt": "Help us improve Grok Bot and I'll send you $100!\n\nReply on this thread with your best bug report or feature suggestion. I'll pick 5 replies and send you $100 through X Money tomorrow.",
+      "excerpt_zh": "帮我们改进 Grok Bot，我给你寄 $100！\n\n在这条帖子下回复你最好的 bug 报告或功能建议。我会挑 5 条，明天通过 X Money 各发 $100。",
+      "handle": "leerob",
+      "likes": 4174,
+      "name": "Lee Robinson",
+      "post_id": "2113792409448714468",
+      "tags": [
+        "product"
+      ],
+      "text_zh": "Lee Robinson：提 Grok Bot 最佳 bug/功能建议，抽 5 人各发 $100。",
+      "url": "https://x.com/leerob/status/2113792409448714468"
+    },
+    {
+      "excerpt": "卧槽，3090要可能要涨价了！！  \n\n因为老黄的刀法被人破解了  \n\n有人给3090解了个锁，同样限制在 360W，PyTorch 测试从 75 TFLOPS 跑到了 135 TFLOPS，提升约 80%！\n \n 你以为是超频，把功耗往上拉？  \n\n但他改的是显卡里控制运算速度的寄存器，这些寄存器平时有权限保护，正常改不了  \n\n他利用 GPU",
+      "handle": "lxfater",
+      "likes": 3933,
+      "name": "铁锤人",
+      "post_id": "2113891680000901380",
+      "tags": [
+        "chips"
+      ],
+      "text_zh": "3090 锁被破解：同 360W 功耗下 PyTorch 从 75 提到 135 TFLOPS，约 +80%。",
+      "url": "https://x.com/lxfater/status/2113891680000901380"
+    },
+    {
+      "excerpt": "There’ll be times where you over-guide the AI. It knows better than you and is more intelligent than you.\n\nThere’ll be times where you under-guide the AI. It can go off-track, have the wrong biases, or miss context.\n\nHow well you manage this superpower is the #0 skill I look for.",
+      "excerpt_zh": "有时你会过度引导 AI——它比你懂、比你聪明。\n\n有时你会引导不足——它会跑偏、带错偏见或漏掉上下文。\n\n管好这种超能力，是我招人时看的第 0 项技能。",
+      "handle": "rauchg",
+      "likes": 1347,
+      "name": "Guillermo Rauch",
+      "post_id": "2114085432749347086",
+      "tags": [
+        "career"
+      ],
+      "text_zh": "Rauch：管好对 AI 的过引导与欠引导，是他招人时看的第 0 技能。",
+      "url": "https://x.com/rauchg/status/2114085432749347086"
+    }
+  ],
+  "pin": [],
+  "summary_zh": [
+    "Claude Code 作者 Thariq 离开 Anthropic，帖子近 2 万赞。",
+    "马斯克澄清 Starlink 禁用于进攻打击，单帖超 9 万赞。",
+    "Kimi 话题暴涨 +358%；_catwu 涨粉 2.8 万，trq212 +1.6 万。"
+  ],
+  "topics_zh": "对比近几日均值：Kimi +358%（5385 帖）、Dan Koe +36%、REA +16%、搞钱·副业 +11%、Opus 5.5 +6%；DeepSeek −32%、Gemini −28%、MCP −16%、Codex −15%。"
+}

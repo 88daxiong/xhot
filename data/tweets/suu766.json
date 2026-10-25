@@ -2,6 +2,34 @@
   "handle": "suu766",
   "tweets": [
     {
+      "created_at": "2026-10-24T14:24:44.000Z",
+      "id": "2114000142491857234",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 3,
+        "impression": 1642,
+        "like": 14,
+        "quote": 0,
+        "reply": 10,
+        "retweet": 0
+      },
+      "url": "https://x.com/Suu766/status/2114000142491857234"
+    },
+    {
+      "created_at": "2026-10-24T13:14:06.000Z",
+      "id": "2113982365358043205",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 1,
+        "impression": 1583,
+        "like": 19,
+        "quote": 0,
+        "reply": 16,
+        "retweet": 1
+      },
+      "url": "https://x.com/Suu766/status/2113982365358043205"
+    },
+    {
       "created_at": "2026-10-24T11:21:49.000Z",
       "id": "2113954108126409140",
       "lang": "",

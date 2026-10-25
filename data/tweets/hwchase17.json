@@ -2,6 +2,76 @@
   "handle": "hwchase17",
   "tweets": [
     {
+      "created_at": "2026-10-24T20:02:53.000Z",
+      "id": "2114085240163676648",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 6,
+        "impression": 3909,
+        "like": 34,
+        "quote": 0,
+        "reply": 14,
+        "retweet": 2
+      },
+      "url": "https://x.com/hwchase17/status/2114085240163676648"
+    },
+    {
+      "created_at": "2026-10-24T20:02:19.000Z",
+      "id": "2114085096882118995",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 3,
+        "impression": 2983,
+        "like": 23,
+        "quote": 1,
+        "reply": 9,
+        "retweet": 0
+      },
+      "url": "https://x.com/hwchase17/status/2114085096882118995"
+    },
+    {
+      "created_at": "2026-10-24T20:00:01.000Z",
+      "id": "2114084516440723525",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 5,
+        "impression": 2746,
+        "like": 16,
+        "quote": 1,
+        "reply": 4,
+        "retweet": 2
+      },
+      "url": "https://x.com/hwchase17/status/2114084516440723525"
+    },
+    {
+      "created_at": "2026-10-24T18:02:59.000Z",
+      "id": "2114055063778070669",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 28,
+        "impression": 8298,
+        "like": 113,
+        "quote": 2,
+        "reply": 67,
+        "retweet": 5
+      },
+      "url": "https://x.com/hwchase17/status/2114055063778070669"
+    },
+    {
+      "created_at": "2026-10-24T17:08:51.000Z",
+      "id": "2114041443836903662",
+      "lang": "zxx",
+      "metrics": {
+        "bookmark": 627,
+        "impression": 22659,
+        "like": 348,
+        "quote": 6,
+        "reply": 57,
+        "retweet": 43
+      },
+      "url": "https://x.com/hwchase17/status/2114041443836903662"
+    },
+    {
       "created_at": "2026-10-23T17:21:47.000Z",
       "id": "2113682309274628382",
       "lang": "",
