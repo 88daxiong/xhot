@@ -2,6 +2,34 @@
   "handle": "petergyang",
   "tweets": [
     {
+      "created_at": "2026-10-26T03:33:07.000Z",
+      "id": "2114560930646487116",
+      "lang": "",
+      "metrics": {
+        "bookmark": 21,
+        "impression": 9577,
+        "like": 52,
+        "quote": 1,
+        "reply": 18,
+        "retweet": 0
+      },
+      "url": "https://x.com/petergyang/status/2114560930646487116"
+    },
+    {
+      "created_at": "2026-10-26T03:17:46.000Z",
+      "id": "2114557067700916723",
+      "lang": "",
+      "metrics": {
+        "bookmark": 2,
+        "impression": 5771,
+        "like": 18,
+        "quote": 0,
+        "reply": 4,
+        "retweet": 0
+      },
+      "url": "https://x.com/petergyang/status/2114557067700916723"
+    },
+    {
       "created_at": "2026-10-26T00:00:19.000Z",
       "id": "2114507378532229214",
       "lang": "",
