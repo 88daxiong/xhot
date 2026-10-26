@@ -1,0 +1,148 @@
+{
+  "changelog": [
+    {
+      "date": "2026-10-26"
+    }
+  ],
+  "date": "2026-10-26",
+  "followers_zh": "涨粉：thsottiaux +6116、_catwu +5551、trq212 +4580、bcherny +3911；jordanbpeterson −374、satyanadella −314。",
+  "gists": {
+    "2114200152701575656": "Tibo：第 20 天——休息与重置。",
+    "2114337256865493250": "Mollick：AI 让高管可直接监控全公司，管理跨度扩大，比重组组织更易落地。",
+    "2114341708125323759": "Ryan Holiday：心胸开阔，容人按己愿生活；乐于被挑战观点，因挑战使人更强。",
+    "2114360145505595842": "Peter Yang：用 Claude Opus + HyperFrames 可从几张图做发布视频、复刻创作者片。",
+    "2114377680715980950": "NVIDIA：黄仁勋柏林 GTC 谈欧洲 AI 工厂、智能体、机器人与医疗。",
+    "2114386038848397760": "Peter Yang 让 bot 根据回复与对他的了解，推荐该买的 Top10 产品。",
+    "2114393315164512559": "Codie Sanchez：没人靠求稳致富；下注自己，否则给人打工。",
+    "2114401303677817065": "Paul Graham：去哥大演讲需证件+二维码；加沙抗议后仍不对访客开放，常春藤唯一。",
+    "2114404221021778347": "Mollick：用 Opus 5.5 重做书站，几乎独自完成；比 4.8 时代进步明显。",
+    "2114429379527004590": "levelsio：轮到 Tailscale 了，发链接让大家自查配置。",
+    "2114442971768647881": "CZ：多链，同一枚币。",
+    "2114445139800461618": "Hassan：口述 prompt → 视觉灵感 → grill-me 澄清 → 再让智能体开工。"
+  },
+  "hide": [
+    "2114200152701575656",
+    "2114245026842837157",
+    "2114240013454196755",
+    "2114234225750913206",
+    "2114275097632706677",
+    "2114447580344320089",
+    "2114216892449845279",
+    "2114377153223795070",
+    "2114440431421538454"
+  ],
+  "highlights": [
+    {
+      "excerpt": "We’re adding long press on like to send someone $1 via 𝕏 Money",
+      "excerpt_zh": "我们要加「长按赞」功能，可经 𝕏 Money 给对方打赏 $1。",
+      "handle": "elonmusk",
+      "likes": 104910,
+      "name": "Elon Musk",
+      "post_id": "2114184998651822094",
+      "tags": [
+        "product"
+      ],
+      "text_zh": "马斯克：点赞长按即可经 𝕏 Money 打赏对方 $1。",
+      "url": "https://x.com/elonmusk/status/2114184998651822094"
+    },
+    {
+      "excerpt": "For the fools out there, Zelensky himself posted about using Starlink for offensive drone strikes, which has always been against Starlink’s terms of service: https://t.co/GlNJ7y27co",
+      "excerpt_zh": "说给那些傻子听：泽连斯基本人就发过用 Starlink 做进攻性无人机打击的帖，这向来违反 Starlink 服务条款：https://t.co/GlNJ7y27co",
+      "handle": "elonmusk",
+      "likes": 39460,
+      "name": "Elon Musk",
+      "post_id": "2114356830776476033",
+      "tags": [
+        "policy"
+      ],
+      "text_zh": "马斯克再澄清：泽连斯基也曾发帖展示用 Starlink 做进攻性无人机打击，一直违规。",
+      "url": "https://x.com/elonmusk/status/2114356830776476033"
+    },
+    {
+      "excerpt": "I need product to fill a giant store for a top secret video. If you’re a brand and want to send product to be in a MrBeast video shoot me a dm or reply here if I don’t follow you 🙏🏻❤️",
+      "excerpt_zh": "我需要产品填满一个巨型商店，拍一部保密视频。品牌若想寄产品上镜，私信我；若我没关注你，直接在这里回复 🙏🏻❤️",
+      "handle": "MrBeast",
+      "likes": 15989,
+      "name": "MrBeast",
+      "post_id": "2114377502453825671",
+      "tags": [
+        "creator"
+      ],
+      "text_zh": "MrBeast 征集品牌寄产品填满巨型商店，拍神秘视频；未互关可回复。",
+      "url": "https://x.com/MrBeast/status/2114377502453825671"
+    },
+    {
+      "excerpt": "It is all propagated. Enjoy some mad codexing tomorrow. Fun week ahead too.",
+      "excerpt_zh": "已经全量推送。明天见些疯狂 Codex。本周也会很好玩。",
+      "handle": "thsottiaux",
+      "likes": 3744,
+      "name": "Tibo",
+      "post_id": "2114237083652882932",
+      "tags": [
+        "code"
+      ],
+      "text_zh": "Tibo：更新已全量推送，明天见「疯狂 Codex」；本周也好玩。",
+      "url": "https://x.com/thsottiaux/status/2114237083652882932"
+    },
+    {
+      "excerpt": "We're sorry for the rate limits and unnecessary quota consumption on the K3.1 Pro subscription plan. These were our issues, and we should have fixed them sooner.\n\nToday, every subscriber on every plan gets a one-time usage reset, restoring 25% of their monthly quota (usage below",
+      "excerpt_zh": "我们为 K3.1 Pro 订阅的限流和不必要配额消耗道歉。这是我们的问题，本该更早修好。\n\n今天起，各档订阅用户均可获得一次性用量重置，返还当月配额的 25%（用量低于",
+      "handle": "Kimi_Moonshot",
+      "likes": 2797,
+      "name": "Kimi.ai",
+      "post_id": "2114450610724708492",
+      "tags": [
+        "product"
+      ],
+      "text_zh": "Kimi 就 K3.1 Pro 限流致歉：全订阅用户一次性返还当月配额 25%。",
+      "url": "https://x.com/Kimi_Moonshot/status/2114450610724708492"
+    },
+    {
+      "excerpt": "If any supervillians are looking for a new HQ, there's one for sale on 22nd st. https://t.co/UqRjI01USG",
+      "excerpt_zh": "要是有超级反派在找新总部，22 街有一处在售。https://t.co/UqRjI01USG",
+      "handle": "paulg",
+      "likes": 2420,
+      "name": "Paul Graham",
+      "post_id": "2114149948916703491",
+      "tags": [
+        "write"
+      ],
+      "text_zh": "Paul Graham 调侃：超级反派找新总部的话，22 街有一处在售。",
+      "url": "https://x.com/paulg/status/2114149948916703491"
+    },
+    {
+      "excerpt": "Insane alpha for anyone worried about cybersecurity right now.\n\nThe account is only days old, and is already doing insane numbers helping startups navigate this era.\n\nCall it now, this is gonna be one of the biggest new accounts over the next 12 months. https://t.co/8N5uj5lcgE",
+      "excerpt_zh": "现在担心网络安全的人，这是狂暴 alpha。\n\n这账号才开几天，已经在帮创业公司渡过这个时代，数据夸张。\n\n我现在就断定：未来 12 个月它会是最大的新号之一。https://t.co/8N5uj5lcgE",
+      "handle": "mattshumer_",
+      "likes": 1581,
+      "name": "Matt Shumer",
+      "post_id": "2114448048168357950",
+      "tags": [
+        "startup"
+      ],
+      "text_zh": "Matt Shumer：只开几天的网络安全账号已爆火，断定未来 12 个月会成最大新号之一。",
+      "url": "https://x.com/mattshumer_/status/2114448048168357950"
+    },
+    {
+      "excerpt": "字节牛逼，直接杀死比赛。\n\n又一波不拥抱 AI 的人要失业了 https://t.co/7JfgSFUXW8",
+      "handle": "laobaishare",
+      "likes": 1229,
+      "name": "老白（每日 AI 干货✊）",
+      "post_id": "2114286679376994651",
+      "tags": [
+        "product"
+      ],
+      "text_zh": "老白：字节「直接杀死比赛」；不拥抱 AI 的人又要失业一波。",
+      "url": "https://x.com/laobaishare/status/2114286679376994651"
+    }
+  ],
+  "pin": [
+    "2114237083652882932"
+  ],
+  "summary_zh": [
+    "马斯克预告长按赞可经 𝕏 Money 打赏 $1，单帖超 10 万赞。",
+    "Qwen 千问话题涨 +21.5%，REA +14.9%；Kimi 致歉并返还 25% 配额。",
+    "thsottiaux 日涨粉 +6116；_catwu +5551、trq212 +4580。"
+  ],
+  "topics_zh": "Qwen 千问 +21.5%、REA +14.9%、Kimi +11.6%、智能体 Agent +11.1%；DeepSeek −32.3%、Gemini −29.6%。"
+}
