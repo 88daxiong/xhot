@@ -2,6 +2,62 @@
   "handle": "openai",
   "tweets": [
     {
+      "created_at": "2026-10-26T18:06:29.000Z",
+      "id": "2114780720170164735",
+      "lang": "",
+      "metrics": {
+        "bookmark": 81,
+        "impression": 167683,
+        "like": 1193,
+        "quote": 30,
+        "reply": 31,
+        "retweet": 52
+      },
+      "url": "https://x.com/OpenAI/status/2114780720170164735"
+    },
+    {
+      "created_at": "2026-10-26T18:06:28.000Z",
+      "id": "2114780717188272382",
+      "lang": "",
+      "metrics": {
+        "bookmark": 306,
+        "impression": 486811,
+        "like": 2281,
+        "quote": 272,
+        "reply": 82,
+        "retweet": 220
+      },
+      "url": "https://x.com/OpenAI/status/2114780717188272382"
+    },
+    {
+      "created_at": "2026-10-26T18:06:27.000Z",
+      "id": "2114780715086754261",
+      "lang": "",
+      "metrics": {
+        "bookmark": 225,
+        "impression": 251471,
+        "like": 3222,
+        "quote": 58,
+        "reply": 47,
+        "retweet": 103
+      },
+      "url": "https://x.com/OpenAI/status/2114780715086754261"
+    },
+    {
+      "created_at": "2026-10-26T18:06:27.000Z",
+      "id": "2114780711664398349",
+      "lang": "",
+      "metrics": {
+        "bookmark": 3079,
+        "impression": 2281960,
+        "like": 19795,
+        "quote": 1406,
+        "reply": 1029,
+        "retweet": 1655
+      },
+      "url": "https://x.com/OpenAI/status/2114780711664398349"
+    },
+    {
       "created_at": "2026-10-23T22:55:45.000Z",
       "id": "2113766354386084338",
       "lang": "en",

@@ -2,6 +2,34 @@
   "handle": "alchainhust",
   "tweets": [
     {
+      "created_at": "2026-10-26T15:36:02.000Z",
+      "id": "2114742861954724012",
+      "lang": "",
+      "metrics": {
+        "bookmark": 4,
+        "impression": 2509,
+        "like": 7,
+        "quote": 0,
+        "reply": 7,
+        "retweet": 0
+      },
+      "url": "https://x.com/AlchainHust/status/2114742861954724012"
+    },
+    {
+      "created_at": "2026-10-26T15:10:18.000Z",
+      "id": "2114736383554359656",
+      "lang": "",
+      "metrics": {
+        "bookmark": 3,
+        "impression": 3667,
+        "like": 7,
+        "quote": 0,
+        "reply": 4,
+        "retweet": 0
+      },
+      "url": "https://x.com/AlchainHust/status/2114736383554359656"
+    },
+    {
       "created_at": "2026-10-26T02:47:42.000Z",
       "id": "2114549503084965957",
       "lang": "zh",

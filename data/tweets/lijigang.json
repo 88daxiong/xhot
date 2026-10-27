@@ -2,6 +2,34 @@
   "handle": "lijigang",
   "tweets": [
     {
+      "created_at": "2026-10-26T03:05:10.000Z",
+      "id": "2114553896437981204",
+      "lang": "",
+      "metrics": {
+        "bookmark": 642,
+        "impression": 39339,
+        "like": 523,
+        "quote": 9,
+        "reply": 44,
+        "retweet": 61
+      },
+      "url": "https://x.com/lijigang/status/2114553896437981204"
+    },
+    {
+      "created_at": "2026-10-26T02:08:41.000Z",
+      "id": "2114539682096968062",
+      "lang": "",
+      "metrics": {
+        "bookmark": 43,
+        "impression": 8157,
+        "like": 69,
+        "quote": 1,
+        "reply": 15,
+        "retweet": 9
+      },
+      "url": "https://x.com/lijigang/status/2114539682096968062"
+    },
+    {
       "created_at": "2026-10-25T04:03:27.000Z",
       "id": "2114206178939146352",
       "lang": "",

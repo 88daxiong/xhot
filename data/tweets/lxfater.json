@@ -2,6 +2,34 @@
   "handle": "lxfater",
   "tweets": [
     {
+      "created_at": "2026-10-26T17:09:02.000Z",
+      "id": "2114766263222485232",
+      "lang": "",
+      "metrics": {
+        "bookmark": 1,
+        "impression": 2037,
+        "like": 0,
+        "quote": 0,
+        "reply": 1,
+        "retweet": 0
+      },
+      "url": "https://x.com/lxfater/status/2114766263222485232"
+    },
+    {
+      "created_at": "2026-10-26T16:44:19.000Z",
+      "id": "2114760044218867733",
+      "lang": "",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 2006,
+        "like": 0,
+        "quote": 0,
+        "reply": 0,
+        "retweet": 0
+      },
+      "url": "https://x.com/lxfater/status/2114760044218867733"
+    },
+    {
       "created_at": "2026-10-26T10:02:49.000Z",
       "id": "2114659002512785662",
       "lang": "zh",

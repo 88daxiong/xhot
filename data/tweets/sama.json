@@ -2,6 +2,20 @@
   "handle": "sama",
   "tweets": [
     {
+      "created_at": "2026-10-26T20:37:05.000Z",
+      "id": "2114818620782248024",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 312,
+        "impression": 298389,
+        "like": 3906,
+        "quote": 56,
+        "reply": 463,
+        "retweet": 197
+      },
+      "url": "https://x.com/sama/status/2114818620782248024"
+    },
+    {
       "created_at": "2026-10-20T21:10:19.000Z",
       "id": "2112652656602923366",
       "lang": "",

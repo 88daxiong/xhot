@@ -2,6 +2,34 @@
   "handle": "goan999999",
   "tweets": [
     {
+      "created_at": "2026-10-26T15:22:20.000Z",
+      "id": "2114739413586698748",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 14,
+        "impression": 2079,
+        "like": 27,
+        "quote": 0,
+        "reply": 1,
+        "retweet": 6
+      },
+      "url": "https://x.com/goan999999/status/2114739413586698748"
+    },
+    {
+      "created_at": "2026-10-26T12:26:42.000Z",
+      "id": "2114695210752147485",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 14,
+        "impression": 1777,
+        "like": 34,
+        "quote": 7,
+        "reply": 33,
+        "retweet": 10
+      },
+      "url": "https://x.com/goan999999/status/2114695210752147485"
+    },
+    {
       "created_at": "2026-10-26T08:11:56.000Z",
       "id": "2114631099687305375",
       "lang": "",

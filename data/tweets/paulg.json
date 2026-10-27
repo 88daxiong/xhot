@@ -2,6 +2,90 @@
   "handle": "paulg",
   "tweets": [
     {
+      "created_at": "2026-10-26T20:25:25.000Z",
+      "id": "2114815685960618081",
+      "lang": "",
+      "metrics": {
+        "bookmark": 2,
+        "impression": 13339,
+        "like": 48,
+        "quote": 0,
+        "reply": 4,
+        "retweet": 0
+      },
+      "url": "https://x.com/paulg/status/2114815685960618081"
+    },
+    {
+      "created_at": "2026-10-26T20:19:53.000Z",
+      "id": "2114814292096700906",
+      "lang": "",
+      "metrics": {
+        "bookmark": 51,
+        "impression": 41154,
+        "like": 327,
+        "quote": 3,
+        "reply": 58,
+        "retweet": 11
+      },
+      "url": "https://x.com/paulg/status/2114814292096700906"
+    },
+    {
+      "created_at": "2026-10-26T19:11:49.000Z",
+      "id": "2114797163372847446",
+      "lang": "",
+      "metrics": {
+        "bookmark": 15,
+        "impression": 16961,
+        "like": 137,
+        "quote": 3,
+        "reply": 9,
+        "retweet": 4
+      },
+      "url": "https://x.com/paulg/status/2114797163372847446"
+    },
+    {
+      "created_at": "2026-10-26T19:06:40.000Z",
+      "id": "2114795869081939998",
+      "lang": "",
+      "metrics": {
+        "bookmark": 47,
+        "impression": 63420,
+        "like": 489,
+        "quote": 6,
+        "reply": 27,
+        "retweet": 10
+      },
+      "url": "https://x.com/paulg/status/2114795869081939998"
+    },
+    {
+      "created_at": "2026-10-26T18:50:03.000Z",
+      "id": "2114791686761247162",
+      "lang": "",
+      "metrics": {
+        "bookmark": 124,
+        "impression": 85293,
+        "like": 893,
+        "quote": 12,
+        "reply": 77,
+        "retweet": 25
+      },
+      "url": "https://x.com/paulg/status/2114791686761247162"
+    },
+    {
+      "created_at": "2026-10-26T18:32:02.000Z",
+      "id": "2114787151619485852",
+      "lang": "",
+      "metrics": {
+        "bookmark": 1250,
+        "impression": 323861,
+        "like": 6180,
+        "quote": 124,
+        "reply": 351,
+        "retweet": 545
+      },
+      "url": "https://x.com/paulg/status/2114787151619485852"
+    },
+    {
       "created_at": "2026-10-25T21:31:55.000Z",
       "id": "2114470032214208687",
       "lang": "",

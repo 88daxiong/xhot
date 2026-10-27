@@ -2,6 +2,216 @@
   "handle": "openaidevs",
   "tweets": [
     {
+      "created_at": "2026-10-26T21:51:13.000Z",
+      "id": "2114837277310361645",
+      "lang": "",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 6499,
+        "like": 12,
+        "quote": 1,
+        "reply": 2,
+        "retweet": 0
+      },
+      "url": "https://x.com/OpenAIDevs/status/2114837277310361645"
+    },
+    {
+      "created_at": "2026-10-26T21:51:12.000Z",
+      "id": "2114837274550747603",
+      "lang": "",
+      "metrics": {
+        "bookmark": 20,
+        "impression": 19247,
+        "like": 255,
+        "quote": 8,
+        "reply": 40,
+        "retweet": 26
+      },
+      "url": "https://x.com/OpenAIDevs/status/2114837274550747603"
+    },
+    {
+      "created_at": "2026-10-26T18:07:35.000Z",
+      "id": "2114780998953304213",
+      "lang": "",
+      "metrics": {
+        "bookmark": 7,
+        "impression": 15264,
+        "like": 84,
+        "quote": 1,
+        "reply": 6,
+        "retweet": 4
+      },
+      "url": "https://x.com/OpenAIDevs/status/2114780998953304213"
+    },
+    {
+      "created_at": "2026-10-26T18:07:32.000Z",
+      "id": "2114780986613682473",
+      "lang": "",
+      "metrics": {
+        "bookmark": 176,
+        "impression": 97168,
+        "like": 1621,
+        "quote": 25,
+        "reply": 120,
+        "retweet": 80
+      },
+      "url": "https://x.com/OpenAIDevs/status/2114780986613682473"
+    },
+    {
+      "created_at": "2026-10-26T14:31:43.000Z",
+      "id": "2114726672763133998",
+      "lang": "",
+      "metrics": {
+        "bookmark": 12,
+        "impression": 8752,
+        "like": 13,
+        "quote": 0,
+        "reply": 3,
+        "retweet": 1
+      },
+      "url": "https://x.com/OpenAIDevs/status/2114726672763133998"
+    },
+    {
+      "created_at": "2026-10-26T14:31:42.000Z",
+      "id": "2114726669881954701",
+      "lang": "",
+      "metrics": {
+        "bookmark": 5,
+        "impression": 9479,
+        "like": 16,
+        "quote": 0,
+        "reply": 1,
+        "retweet": 1
+      },
+      "url": "https://x.com/OpenAIDevs/status/2114726669881954701"
+    },
+    {
+      "created_at": "2026-10-26T14:31:41.000Z",
+      "id": "2114726666459320392",
+      "lang": "",
+      "metrics": {
+        "bookmark": 1,
+        "impression": 1976,
+        "like": 19,
+        "quote": 1,
+        "reply": 2,
+        "retweet": 2
+      },
+      "url": "https://x.com/OpenAIDevs/status/2114726666459320392"
+    },
+    {
+      "created_at": "2026-10-26T14:31:40.000Z",
+      "id": "2114726662873190759",
+      "lang": "",
+      "metrics": {
+        "bookmark": 1,
+        "impression": 739,
+        "like": 13,
+        "quote": 0,
+        "reply": 1,
+        "retweet": 1
+      },
+      "url": "https://x.com/OpenAIDevs/status/2114726662873190759"
+    },
+    {
+      "created_at": "2026-10-26T14:31:39.000Z",
+      "id": "2114726658494337052",
+      "lang": "",
+      "metrics": {
+        "bookmark": 2,
+        "impression": 820,
+        "like": 11,
+        "quote": 0,
+        "reply": 2,
+        "retweet": 2
+      },
+      "url": "https://x.com/OpenAIDevs/status/2114726658494337052"
+    },
+    {
+      "created_at": "2026-10-26T14:31:38.000Z",
+      "id": "2114726655235363206",
+      "lang": "",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 936,
+        "like": 13,
+        "quote": 0,
+        "reply": 1,
+        "retweet": 2
+      },
+      "url": "https://x.com/OpenAIDevs/status/2114726655235363206"
+    },
+    {
+      "created_at": "2026-10-26T14:31:38.000Z",
+      "id": "2114726651686687212",
+      "lang": "",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 1293,
+        "like": 16,
+        "quote": 2,
+        "reply": 1,
+        "retweet": 2
+      },
+      "url": "https://x.com/OpenAIDevs/status/2114726651686687212"
+    },
+    {
+      "created_at": "2026-10-26T14:31:37.000Z",
+      "id": "2114726649149202447",
+      "lang": "",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 1125,
+        "like": 15,
+        "quote": 0,
+        "reply": 2,
+        "retweet": 2
+      },
+      "url": "https://x.com/OpenAIDevs/status/2114726649149202447"
+    },
+    {
+      "created_at": "2026-10-26T14:31:36.000Z",
+      "id": "2114726646569894200",
+      "lang": "",
+      "metrics": {
+        "bookmark": 2,
+        "impression": 2532,
+        "like": 31,
+        "quote": 0,
+        "reply": 1,
+        "retweet": 2
+      },
+      "url": "https://x.com/OpenAIDevs/status/2114726646569894200"
+    },
+    {
+      "created_at": "2026-10-26T14:31:36.000Z",
+      "id": "2114726643067466090",
+      "lang": "",
+      "metrics": {
+        "bookmark": 6,
+        "impression": 6283,
+        "like": 65,
+        "quote": 0,
+        "reply": 6,
+        "retweet": 2
+      },
+      "url": "https://x.com/OpenAIDevs/status/2114726643067466090"
+    },
+    {
+      "created_at": "2026-10-26T14:31:35.000Z",
+      "id": "2114726640571883592",
+      "lang": "",
+      "metrics": {
+        "bookmark": 105,
+        "impression": 48652,
+        "like": 423,
+        "quote": 11,
+        "reply": 63,
+        "retweet": 34
+      },
+      "url": "https://x.com/OpenAIDevs/status/2114726640571883592"
+    },
+    {
       "created_at": "2026-10-23T17:23:57.000Z",
       "id": "2113682853644882361",
       "lang": "en",

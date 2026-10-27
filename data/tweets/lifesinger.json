@@ -2,6 +2,76 @@
   "handle": "lifesinger",
   "tweets": [
     {
+      "created_at": "2026-10-26T13:00:42.000Z",
+      "id": "2114703768797491462",
+      "lang": "zxx",
+      "metrics": {
+        "bookmark": 8,
+        "impression": 3228,
+        "like": 11,
+        "quote": 0,
+        "reply": 4,
+        "retweet": 0
+      },
+      "url": "https://x.com/lifesinger/status/2114703768797491462"
+    },
+    {
+      "created_at": "2026-10-26T12:38:10.000Z",
+      "id": "2114698099914662105",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 15,
+        "impression": 8101,
+        "like": 37,
+        "quote": 0,
+        "reply": 14,
+        "retweet": 1
+      },
+      "url": "https://x.com/lifesinger/status/2114698099914662105"
+    },
+    {
+      "created_at": "2026-10-26T12:34:22.000Z",
+      "id": "2114697142338289718",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 21,
+        "impression": 8547,
+        "like": 73,
+        "quote": 2,
+        "reply": 10,
+        "retweet": 4
+      },
+      "url": "https://x.com/lifesinger/status/2114697142338289718"
+    },
+    {
+      "created_at": "2026-10-26T12:06:42.000Z",
+      "id": "2114690178271117381",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 68,
+        "impression": 23345,
+        "like": 119,
+        "quote": 7,
+        "reply": 37,
+        "retweet": 7
+      },
+      "url": "https://x.com/lifesinger/status/2114690178271117381"
+    },
+    {
+      "created_at": "2026-10-26T11:52:28.000Z",
+      "id": "2114686596993950058",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 5,
+        "impression": 17186,
+        "like": 31,
+        "quote": 3,
+        "reply": 9,
+        "retweet": 1
+      },
+      "url": "https://x.com/lifesinger/status/2114686596993950058"
+    },
+    {
       "created_at": "2026-10-25T09:38:03.000Z",
       "id": "2114290384524452158",
       "lang": "",
