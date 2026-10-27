@@ -2,6 +2,34 @@
   "handle": "levelsio",
   "tweets": [
     {
+      "created_at": "2026-10-27T12:07:05.000Z",
+      "id": "2115052661930434809",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 1540,
+        "like": 1,
+        "quote": 0,
+        "reply": 1,
+        "retweet": 0
+      },
+      "url": "https://x.com/levelsio/status/2115052661930434809"
+    },
+    {
+      "created_at": "2026-10-27T11:09:19.000Z",
+      "id": "2115038124526989711",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 195,
+        "impression": 77762,
+        "like": 846,
+        "quote": 10,
+        "reply": 42,
+        "retweet": 31
+      },
+      "url": "https://x.com/levelsio/status/2115038124526989711"
+    },
+    {
       "created_at": "2026-10-26T23:53:53.000Z",
       "id": "2114868146322415642",
       "lang": "",
