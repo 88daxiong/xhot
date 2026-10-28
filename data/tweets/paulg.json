@@ -2,6 +2,62 @@
   "handle": "paulg",
   "tweets": [
     {
+      "created_at": "2026-10-27T21:49:48.000Z",
+      "id": "2115199307548864774",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 76,
+        "impression": 40326,
+        "like": 346,
+        "quote": 1,
+        "reply": 46,
+        "retweet": 4
+      },
+      "url": "https://x.com/paulg/status/2115199307548864774"
+    },
+    {
+      "created_at": "2026-10-27T21:21:09.000Z",
+      "id": "2115192100127948984",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 9,
+        "impression": 38139,
+        "like": 245,
+        "quote": 0,
+        "reply": 49,
+        "retweet": 4
+      },
+      "url": "https://x.com/paulg/status/2115192100127948984"
+    },
+    {
+      "created_at": "2026-10-27T20:11:07.000Z",
+      "id": "2115174476589441450",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 22,
+        "impression": 49655,
+        "like": 451,
+        "quote": 0,
+        "reply": 39,
+        "retweet": 2
+      },
+      "url": "https://x.com/paulg/status/2115174476589441450"
+    },
+    {
+      "created_at": "2026-10-27T19:52:29.000Z",
+      "id": "2115169785084604880",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 114,
+        "impression": 101778,
+        "like": 1405,
+        "quote": 4,
+        "reply": 123,
+        "retweet": 19
+      },
+      "url": "https://x.com/paulg/status/2115169785084604880"
+    },
+    {
       "created_at": "2026-10-26T20:25:25.000Z",
       "id": "2114815685960618081",
       "lang": "",

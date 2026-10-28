@@ -2,6 +2,76 @@
   "handle": "amasad",
   "tweets": [
     {
+      "created_at": "2026-10-27T22:23:46.000Z",
+      "id": "2115207856496480261",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 50,
+        "impression": 16908,
+        "like": 284,
+        "quote": 8,
+        "reply": 70,
+        "retweet": 13
+      },
+      "url": "https://x.com/amasad/status/2115207856496480261"
+    },
+    {
+      "created_at": "2026-10-27T20:37:17.000Z",
+      "id": "2115181058815660449",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 5,
+        "impression": 11827,
+        "like": 85,
+        "quote": 3,
+        "reply": 32,
+        "retweet": 2
+      },
+      "url": "https://x.com/amasad/status/2115181058815660449"
+    },
+    {
+      "created_at": "2026-10-27T18:36:34.000Z",
+      "id": "2115150680977715419",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 35,
+        "impression": 14326,
+        "like": 207,
+        "quote": 9,
+        "reply": 46,
+        "retweet": 8
+      },
+      "url": "https://x.com/amasad/status/2115150680977715419"
+    },
+    {
+      "created_at": "2026-10-27T17:10:39.000Z",
+      "id": "2115129060267262190",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 34,
+        "impression": 13462,
+        "like": 201,
+        "quote": 7,
+        "reply": 78,
+        "retweet": 21
+      },
+      "url": "https://x.com/amasad/status/2115129060267262190"
+    },
+    {
+      "created_at": "2026-10-27T01:23:41.000Z",
+      "id": "2114890745471545419",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 79,
+        "impression": 42870,
+        "like": 620,
+        "quote": 6,
+        "reply": 103,
+        "retweet": 34
+      },
+      "url": "https://x.com/amasad/status/2114890745471545419"
+    },
+    {
       "created_at": "2026-10-26T17:20:25.000Z",
       "id": "2114769129282601053",
       "lang": "",

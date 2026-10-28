@@ -1,0 +1,149 @@
+{
+  "changelog": [],
+  "date": "2026-10-28",
+  "followers_zh": "涨粉：OpenAI +5617、thsottiaux +5000、Anthropic +4494、gdb +4105、elonmusk +3991、claudeai +3674。跌粉：satyanadella −498、jordanbpeterson −367、aravsrinivas −154。",
+  "gists": {
+    "2114880098746994731": "Sam Parr：记者出身做到 Anthropic 创始人的职业路径很罕见。",
+    "2115028317627687258": "Tibo 自述创业路：从破产到 Tweet Hunter 卖出，再到组合月入破百万美元。",
+    "2115066250938192118": "Mollick：让 Claude/GPT 预测何时解决 ETH，展示 AI 也难预测自身。",
+    "2115089887959359988": "swyx 自嘲错过 Cursor 早期：估损失约 5 亿美元的「bag fumble」。",
+    "2115114625985368299": "Google AI 介绍 Genie 4：可用自然语言实时操控世界与声景。",
+    "2115119252785303813": "马斯克：Grok @Bot 上线新功能。",
+    "2115120818116334084": "Mollick 试用 Genie 4：一分钟生成游戏式环境，再实时加龙与 NPC。",
+    "2115129395195302282": "Matthew Berman：DeepSeek V4.1 Flash 是当前最强开源权重模型。",
+    "2115147639847305503": "马斯克转发并只回「Madness」。",
+    "2115159545307619695": "Hassan 开源 Bygga：用交互 3D 与语音一步步指导装宜家家具，免费。",
+    "2115169785084604880": "Paul Graham：对比 90 年代，今日纽约更富更干净，高瘦新楼多，人行道常有大麻味。",
+    "2115171788812669225": "Gemini 内置 SynthID 检测：可查图片/视频/音频是否 Google AI 生成。",
+    "2115172540238979474": "Greg Isenberg：SaaS 趋于免费，收费点转向真正干活的 agent。",
+    "2115188992861970693": "Thariq：开源分发需新模式——agent 可改本地且能自动合并上游。"
+  },
+  "hide": [
+    "2115129139468673514",
+    "2115092766275543266",
+    "2114879359857422729",
+    "2115071102875808086",
+    "2115083847901593825",
+    "2114973768473039185",
+    "2114930622238200202",
+    "2115119252785303813",
+    "2115147639847305503"
+  ],
+  "highlights": [
+    {
+      "excerpt": "This is Genie 4, our most realistic and interactive world model yet. 🌐\n\nExplore dynamic environments in real time to see how the scene responds, sounds, and how the people in it move, react, and speak. https://t.co/6mmSUm9BBO",
+      "excerpt_zh": "这是 Genie 4，我们迄今最真实、可交互的世界模型。🌐\n\n实时探索动态环境，看场景如何响应、发声，以及其中的人如何移动、反应和说话。",
+      "handle": "GoogleDeepMind",
+      "likes": 14277,
+      "name": "Google DeepMind",
+      "post_id": "2115114028338962672",
+      "tags": [
+        "model"
+      ],
+      "text_zh": "DeepMind 发布 Genie 4：更真实可交互的世界模型，实时探索动态环境。",
+      "url": "https://x.com/GoogleDeepMind/status/2115114028338962672"
+    },
+    {
+      "excerpt": "Excited to share Genie 4 today our most realistic and interactive world model:\n\n- steer dynamic environments in real time, shaping events, camera angles, and actions\n\n- generate native audio matched to the world, from realistic background sounds to characters who can converse in https://t.co/BFgQQH9KUb",
+      "excerpt_zh": "今天很兴奋分享 Genie 4，我们最真实、可交互的世界模型：\n\n- 实时操控动态环境，塑造事件、机位与动作\n\n- 生成与世界匹配的原生音频，从真实背景音到可对话的角色",
+      "handle": "sundarpichai",
+      "likes": 12313,
+      "name": "Sundar Pichai",
+      "post_id": "2115115252690145519",
+      "tags": [
+        "model"
+      ],
+      "text_zh": "Pichai：Genie 4 可实时操控环境、机位与动作，并生成匹配世界的原生音频。",
+      "url": "https://x.com/sundarpichai/status/2115115252690145519"
+    },
+    {
+      "excerpt": "experimenting with a lil personal project: an AI-native macOS dock with custom modes (writing, building, etc.) to help me stay focused\n\nmy agent is able to customize mode behavior and add new modes, it uses jev to classify my activity + notifications in real time & act on them https://t.co/yplDQUwTv5",
+      "excerpt_zh": "在试一个小个人项目：AI 原生的 macOS Dock，带自定义模式（写作、构建等）帮我保持专注\n\n我的 agent 能自定义模式行为并加新模式，用 jev 实时分类我的活动与通知并采取行动",
+      "handle": "trq212",
+      "likes": 6603,
+      "name": "Thariq",
+      "post_id": "2115135857669881939",
+      "tags": [
+        "agent",
+        "write"
+      ],
+      "text_zh": "Thariq 做 AI 原生 macOS Dock：按写作/构建等模式专注，agent 实时分类活动。",
+      "url": "https://x.com/trq212/status/2115135857669881939"
+    },
+    {
+      "excerpt": "Over the past few months, Anthropic scientists have engaged in deep research partnerships with six organizations developing new medicines. We've also begun drug discovery efforts of our own.\n\nIn doing so, we’ve learned much more about how Claude can support the many stages of",
+      "excerpt_zh": "过去几个月，Anthropic 科学家与六家开发新药的组织开展了深度研究合作。我们也启动了自己的药物发现工作。\n\n在此过程中，我们更深入了解了 Claude 如何支持诸多阶段",
+      "handle": "AnthropicAI",
+      "likes": 4928,
+      "name": "Anthropic",
+      "post_id": "2115178675050307942",
+      "tags": [
+        "model",
+        "research"
+      ],
+      "text_zh": "Anthropic：与六家药企深度合作，并启动自有药物发现，探索 Claude 各阶段支持。",
+      "url": "https://x.com/AnthropicAI/status/2115178675050307942"
+    },
+    {
+      "excerpt": "Today we're introducing Genie 4 — our newest interactive world model from @GoogleDeepMind 🌐 https://t.co/iE4WEWZRN4",
+      "excerpt_zh": "今天我们推出 Genie 4——来自 @GoogleDeepMind 的最新交互式世界模型 🌐",
+      "handle": "Google",
+      "likes": 4850,
+      "name": "Google",
+      "post_id": "2115114426827501782",
+      "tags": [
+        "model",
+        "product"
+      ],
+      "text_zh": "Google 官宣 Genie 4：来自 DeepMind 的最新交互式世界模型。",
+      "url": "https://x.com/Google/status/2115114426827501782"
+    },
+    {
+      "excerpt": "Much requested, and now yours to connect: iCloud Mail and Calendar plugins are available in ChatGPT.\n\nAsk ChatGPT to find that email, catch up on your inbox, check what’s next, or update a calendar event. Phew.\n\nAvailable on all ChatGPT plans on web, desktop, and iOS. https://t.co/g68OWoFVg8",
+      "excerpt_zh": "呼声已久，现已可连接：ChatGPT 支持 iCloud 邮件与日历插件。\n\n可让 ChatGPT 找邮件、梳理收件箱、查看日程或更新日历事件。\n\n网页、桌面与 iOS 全套餐可用。",
+      "handle": "ChatGPT",
+      "likes": 4066,
+      "name": "ChatGPT",
+      "post_id": "2115139248458191070",
+      "tags": [
+        "product"
+      ],
+      "text_zh": "ChatGPT 上线 iCloud 邮件与日历插件，全平台全套餐可用。",
+      "url": "https://x.com/ChatGPT/status/2115139248458191070"
+    },
+    {
+      "excerpt": "Before I was even pregnant, I asked my mom & dad for advice from raising me and my brother...\n\nThis is what they told me, maybe you'll find it useful too:\n\n1. Your kids are not your friends. They’re yours to safeguard and support, but set rules. Biggest problem with most kids in https://t.co/8sy7i75ZAW",
+      "excerpt_zh": "在我怀孕之前，我就问爸妈养我和弟弟的经验……\n\n这是他们告诉我的，或许对你也有用：\n\n1. 孩子不是你的朋友。他们要你守护与支持，但要定规则。多数孩子最大的问题在于",
+      "handle": "Codie_Sanchez",
+      "likes": 3478,
+      "name": "Codie Sanchez",
+      "post_id": "2115074635590963354",
+      "tags": [
+        "career"
+      ],
+      "text_zh": "Codie Sanchez 分享父母育儿建议：孩子不是朋友，要设边界与规则。",
+      "url": "https://x.com/Codie_Sanchez/status/2115074635590963354"
+    },
+    {
+      "excerpt": "New in Cursor design mode: Annotate.\n\nGive agents visual prompts: edit elements, draw on the page, and review your designs at different screen sizes. https://t.co/1HEsdFuuig",
+      "excerpt_zh": "Cursor 设计模式新功能：Annotate。\n\n给 agent 视觉提示：编辑元素、在页面上涂画，并在不同屏幕尺寸下审阅设计。",
+      "handle": "cursor_ai",
+      "likes": 2362,
+      "name": "Cursor",
+      "post_id": "2115159585548021814",
+      "tags": [
+        "agent",
+        "code"
+      ],
+      "text_zh": "Cursor 设计模式新增 Annotate：给 agent 视觉提示，可改元素、涂鸦审稿。",
+      "url": "https://x.com/cursor_ai/status/2115159585548021814"
+    }
+  ],
+  "pin": [],
+  "summary_zh": [
+    "DeepMind 发布 Genie 4 交互世界模型；Pichai 与 Google 同步官宣。",
+    "话题：智能体 Agent +47.5%、Qwen +41.6%、MCP +18.8%；Kimi −54%。",
+    "涨粉：OpenAI +5617、Tibo +5000、Anthropic +4494；Nadella −498。"
+  ],
+  "topics_zh": "智能体 Agent 大涨 +47.5%，Qwen 千问 +41.6%，MCP +18.8%、Gemini +16.3%、Claude Code +15.9%；Kimi 大跌 −54.4%，Opus 5.5 −7.2%、DeepSeek −6.3%。"
+}

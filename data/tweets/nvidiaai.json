@@ -2,6 +2,48 @@
   "handle": "nvidiaai",
   "tweets": [
     {
+      "created_at": "2026-10-27T19:47:43.000Z",
+      "id": "2115168584351805628",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 14,
+        "impression": 6818,
+        "like": 82,
+        "quote": 4,
+        "reply": 14,
+        "retweet": 9
+      },
+      "url": "https://x.com/NVIDIAAI/status/2115168584351805628"
+    },
+    {
+      "created_at": "2026-10-27T17:00:11.000Z",
+      "id": "2115126425019896307",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 15,
+        "impression": 7926,
+        "like": 52,
+        "quote": 2,
+        "reply": 5,
+        "retweet": 8
+      },
+      "url": "https://x.com/NVIDIAAI/status/2115126425019896307"
+    },
+    {
+      "created_at": "2026-10-27T16:20:42.000Z",
+      "id": "2115116486671176161",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 80,
+        "impression": 11437,
+        "like": 114,
+        "quote": 6,
+        "reply": 14,
+        "retweet": 16
+      },
+      "url": "https://x.com/NVIDIAAI/status/2115116486671176161"
+    },
+    {
       "created_at": "2026-10-25T15:22:51.000Z",
       "id": "2114377153223795070",
       "lang": "",

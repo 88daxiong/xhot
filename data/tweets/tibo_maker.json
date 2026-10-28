@@ -2,6 +2,76 @@
   "handle": "tibo_maker",
   "tweets": [
     {
+      "created_at": "2026-10-27T17:34:27.000Z",
+      "id": "2115135049695666490",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 25,
+        "impression": 7861,
+        "like": 55,
+        "quote": 4,
+        "reply": 42,
+        "retweet": 1
+      },
+      "url": "https://x.com/tibo_maker/status/2115135049695666490"
+    },
+    {
+      "created_at": "2026-10-27T11:05:30.000Z",
+      "id": "2115037164543054296",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 1,
+        "impression": 1252,
+        "like": 5,
+        "quote": 0,
+        "reply": 0,
+        "retweet": 0
+      },
+      "url": "https://x.com/tibo_maker/status/2115037164543054296"
+    },
+    {
+      "created_at": "2026-10-27T10:30:20.000Z",
+      "id": "2115028317627687258",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 52,
+        "impression": 14081,
+        "like": 266,
+        "quote": 5,
+        "reply": 121,
+        "retweet": 3
+      },
+      "url": "https://x.com/tibo_maker/status/2115028317627687258"
+    },
+    {
+      "created_at": "2026-10-27T08:35:36.000Z",
+      "id": "2114999441300336880",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 1287,
+        "like": 2,
+        "quote": 1,
+        "reply": 1,
+        "retweet": 0
+      },
+      "url": "https://x.com/tibo_maker/status/2114999441300336880"
+    },
+    {
+      "created_at": "2026-10-27T08:35:06.000Z",
+      "id": "2114999318172123556",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 4,
+        "impression": 5208,
+        "like": 31,
+        "quote": 1,
+        "reply": 30,
+        "retweet": 1
+      },
+      "url": "https://x.com/tibo_maker/status/2114999318172123556"
+    },
+    {
       "created_at": "2026-10-26T21:02:17.000Z",
       "id": "2114824963324563576",
       "lang": "en",

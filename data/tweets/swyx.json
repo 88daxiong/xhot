@@ -2,6 +2,48 @@
   "handle": "swyx",
   "tweets": [
     {
+      "created_at": "2026-10-27T18:58:15.000Z",
+      "id": "2115156135875629109",
+      "lang": "",
+      "metrics": {
+        "bookmark": 3,
+        "impression": 5251,
+        "like": 17,
+        "quote": 0,
+        "reply": 1,
+        "retweet": 0
+      },
+      "url": "https://x.com/swyx/status/2115156135875629109"
+    },
+    {
+      "created_at": "2026-10-27T17:36:02.000Z",
+      "id": "2115135448876269782",
+      "lang": "",
+      "metrics": {
+        "bookmark": 8,
+        "impression": 8190,
+        "like": 40,
+        "quote": 0,
+        "reply": 6,
+        "retweet": 0
+      },
+      "url": "https://x.com/swyx/status/2115135448876269782"
+    },
+    {
+      "created_at": "2026-10-27T14:35:00.000Z",
+      "id": "2115089887959359988",
+      "lang": "",
+      "metrics": {
+        "bookmark": 242,
+        "impression": 215409,
+        "like": 1278,
+        "quote": 10,
+        "reply": 186,
+        "retweet": 5
+      },
+      "url": "https://x.com/swyx/status/2115089887959359988"
+    },
+    {
       "created_at": "2026-10-26T23:41:22.000Z",
       "id": "2114864999709753526",
       "lang": "en",
