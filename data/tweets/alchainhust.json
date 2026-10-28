@@ -2,6 +2,20 @@
   "handle": "alchainhust",
   "tweets": [
     {
+      "created_at": "2026-10-28T08:56:25.000Z",
+      "id": "2115367068120092697",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 1,
+        "impression": 1641,
+        "like": 6,
+        "quote": 0,
+        "reply": 10,
+        "retweet": 0
+      },
+      "url": "https://x.com/AlchainHust/status/2115367068120092697"
+    },
+    {
       "created_at": "2026-10-27T04:09:11.000Z",
       "id": "2114932397993320689",
       "lang": "",

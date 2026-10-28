@@ -2,6 +2,34 @@
   "handle": "emollick",
   "tweets": [
     {
+      "created_at": "2026-10-28T02:59:39.000Z",
+      "id": "2115277286123704654",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 216,
+        "impression": 77287,
+        "like": 1082,
+        "quote": 17,
+        "reply": 174,
+        "retweet": 76
+      },
+      "url": "https://x.com/emollick/status/2115277286123704654"
+    },
+    {
+      "created_at": "2026-10-28T02:43:30.000Z",
+      "id": "2115273222061015169",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 70,
+        "impression": 24451,
+        "like": 371,
+        "quote": 11,
+        "reply": 66,
+        "retweet": 22
+      },
+      "url": "https://x.com/emollick/status/2115273222061015169"
+    },
+    {
       "created_at": "2026-10-27T22:31:26.000Z",
       "id": "2115209786157412397",
       "lang": "en",

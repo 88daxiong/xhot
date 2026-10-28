@@ -2,6 +2,34 @@
   "handle": "garyvee",
   "tweets": [
     {
+      "created_at": "2026-10-28T02:26:38.000Z",
+      "id": "2115268976775512260",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 6,
+        "impression": 45655,
+        "like": 312,
+        "quote": 6,
+        "reply": 83,
+        "retweet": 15
+      },
+      "url": "https://x.com/garyvee/status/2115268976775512260"
+    },
+    {
+      "created_at": "2026-10-28T02:01:11.000Z",
+      "id": "2115262570147758278",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 134,
+        "impression": 31330,
+        "like": 273,
+        "quote": 7,
+        "reply": 46,
+        "retweet": 27
+      },
+      "url": "https://x.com/garyvee/status/2115262570147758278"
+    },
+    {
       "created_at": "2026-10-27T16:27:47.000Z",
       "id": "2115118269858222301",
       "lang": "",

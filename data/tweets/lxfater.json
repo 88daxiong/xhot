@@ -2,6 +2,48 @@
   "handle": "lxfater",
   "tweets": [
     {
+      "created_at": "2026-10-28T12:06:29.000Z",
+      "id": "2115414901804114290",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 199,
+        "like": 1,
+        "quote": 0,
+        "reply": 1,
+        "retweet": 0
+      },
+      "url": "https://x.com/lxfater/status/2115414901804114290"
+    },
+    {
+      "created_at": "2026-10-28T08:42:01.000Z",
+      "id": "2115363445424234824",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 6,
+        "impression": 2794,
+        "like": 9,
+        "quote": 1,
+        "reply": 26,
+        "retweet": 1
+      },
+      "url": "https://x.com/lxfater/status/2115363445424234824"
+    },
+    {
+      "created_at": "2026-10-28T07:41:08.000Z",
+      "id": "2115348125195854291",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 7,
+        "impression": 4652,
+        "like": 9,
+        "quote": 2,
+        "reply": 10,
+        "retweet": 1
+      },
+      "url": "https://x.com/lxfater/status/2115348125195854291"
+    },
+    {
       "created_at": "2026-10-27T16:11:24.000Z",
       "id": "2115114147218370666",
       "lang": "",

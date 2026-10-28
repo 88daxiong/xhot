@@ -2,6 +2,48 @@
   "handle": "cz_binance",
   "tweets": [
     {
+      "created_at": "2026-10-28T11:31:09.000Z",
+      "id": "2115406007329534040",
+      "lang": "art",
+      "metrics": {
+        "bookmark": 7,
+        "impression": 148080,
+        "like": 547,
+        "quote": 10,
+        "reply": 142,
+        "retweet": 46
+      },
+      "url": "https://x.com/cz_binance/status/2115406007329534040"
+    },
+    {
+      "created_at": "2026-10-28T04:49:33.000Z",
+      "id": "2115304943934672928",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 1339,
+        "impression": 431847,
+        "like": 2543,
+        "quote": 167,
+        "reply": 464,
+        "retweet": 478
+      },
+      "url": "https://x.com/cz_binance/status/2115304943934672928"
+    },
+    {
+      "created_at": "2026-10-28T04:18:40.000Z",
+      "id": "2115297169112731891",
+      "lang": "art",
+      "metrics": {
+        "bookmark": 13,
+        "impression": 209148,
+        "like": 599,
+        "quote": 9,
+        "reply": 153,
+        "retweet": 29
+      },
+      "url": "https://x.com/cz_binance/status/2115297169112731891"
+    },
+    {
       "created_at": "2026-10-27T23:50:05.000Z",
       "id": "2115229579434746138",
       "lang": "",
