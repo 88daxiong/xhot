@@ -2,6 +2,34 @@
   "handle": "chatgpt",
   "tweets": [
     {
+      "created_at": "2026-10-29T00:26:30.000Z",
+      "id": "2115601130558546226",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 27,
+        "impression": 41951,
+        "like": 71,
+        "quote": 1,
+        "reply": 8,
+        "retweet": 5
+      },
+      "url": "https://x.com/ChatGPT/status/2115601130558546226"
+    },
+    {
+      "created_at": "2026-10-29T00:26:29.000Z",
+      "id": "2115601128733974859",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 1041,
+        "impression": 307757,
+        "like": 1950,
+        "quote": 123,
+        "reply": 167,
+        "retweet": 116
+      },
+      "url": "https://x.com/ChatGPT/status/2115601128733974859"
+    },
+    {
       "created_at": "2026-10-28T17:36:00.000Z",
       "id": "2115497827845476525",
       "lang": "",
