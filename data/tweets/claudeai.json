@@ -2,6 +2,34 @@
   "handle": "claudeai",
   "tweets": [
     {
+      "created_at": "2026-10-28T15:34:17.000Z",
+      "id": "2115467193626571174",
+      "lang": "",
+      "metrics": {
+        "bookmark": 577,
+        "impression": 231201,
+        "like": 534,
+        "quote": 4,
+        "reply": 12,
+        "retweet": 29
+      },
+      "url": "https://x.com/claudeai/status/2115467193626571174"
+    },
+    {
+      "created_at": "2026-10-28T15:34:16.000Z",
+      "id": "2115467192276025500",
+      "lang": "",
+      "metrics": {
+        "bookmark": 12836,
+        "impression": 3662788,
+        "like": 20612,
+        "quote": 802,
+        "reply": 600,
+        "retweet": 1181
+      },
+      "url": "https://x.com/claudeai/status/2115467192276025500"
+    },
+    {
       "created_at": "2026-10-26T18:04:31.000Z",
       "id": "2114780227465338985",
       "lang": "en",

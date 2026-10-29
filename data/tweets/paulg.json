@@ -2,6 +2,20 @@
   "handle": "paulg",
   "tweets": [
     {
+      "created_at": "2026-10-28T14:25:30.000Z",
+      "id": "2115449886086770709",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 60,
+        "impression": 93800,
+        "like": 949,
+        "quote": 7,
+        "reply": 158,
+        "retweet": 10
+      },
+      "url": "https://x.com/paulg/status/2115449886086770709"
+    },
+    {
       "created_at": "2026-10-28T12:05:20.000Z",
       "id": "2115414609570255080",
       "lang": "en",

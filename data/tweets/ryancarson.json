@@ -2,6 +2,34 @@
   "handle": "ryancarson",
   "tweets": [
     {
+      "created_at": "2026-10-28T14:50:41.000Z",
+      "id": "2115456223621554434",
+      "lang": "",
+      "metrics": {
+        "bookmark": 1,
+        "impression": 3491,
+        "like": 13,
+        "quote": 0,
+        "reply": 6,
+        "retweet": 0
+      },
+      "url": "https://x.com/ryancarson/status/2115456223621554434"
+    },
+    {
+      "created_at": "2026-10-28T14:26:23.000Z",
+      "id": "2115450109433655392",
+      "lang": "",
+      "metrics": {
+        "bookmark": 30,
+        "impression": 3615,
+        "like": 22,
+        "quote": 0,
+        "reply": 3,
+        "retweet": 1
+      },
+      "url": "https://x.com/ryancarson/status/2115450109433655392"
+    },
+    {
       "created_at": "2026-10-27T22:32:47.000Z",
       "id": "2115210127280374188",
       "lang": "",

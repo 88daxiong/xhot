@@ -2,6 +2,34 @@
   "handle": "googledeepmind",
   "tweets": [
     {
+      "created_at": "2026-10-28T17:02:21.000Z",
+      "id": "2115489359415890211",
+      "lang": "",
+      "metrics": {
+        "bookmark": 30,
+        "impression": 48853,
+        "like": 455,
+        "quote": 8,
+        "reply": 24,
+        "retweet": 20
+      },
+      "url": "https://x.com/GoogleDeepMind/status/2115489359415890211"
+    },
+    {
+      "created_at": "2026-10-28T17:02:21.000Z",
+      "id": "2115489356437651654",
+      "lang": "",
+      "metrics": {
+        "bookmark": 1054,
+        "impression": 807815,
+        "like": 10749,
+        "quote": 789,
+        "reply": 501,
+        "retweet": 1033
+      },
+      "url": "https://x.com/GoogleDeepMind/status/2115489356437651654"
+    },
+    {
       "created_at": "2026-10-27T16:10:56.000Z",
       "id": "2115114030503166385",
       "lang": "",

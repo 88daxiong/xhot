@@ -2,6 +2,34 @@
   "handle": "msftresearch",
   "tweets": [
     {
+      "created_at": "2026-10-28T21:57:56.000Z",
+      "id": "2115563744289841533",
+      "lang": "",
+      "metrics": {
+        "bookmark": 2,
+        "impression": 1379,
+        "like": 4,
+        "quote": 0,
+        "reply": 0,
+        "retweet": 1
+      },
+      "url": "https://x.com/MSFTResearch/status/2115563744289841533"
+    },
+    {
+      "created_at": "2026-10-28T17:18:28.000Z",
+      "id": "2115493412572951028",
+      "lang": "",
+      "metrics": {
+        "bookmark": 11,
+        "impression": 6324,
+        "like": 38,
+        "quote": 1,
+        "reply": 0,
+        "retweet": 1
+      },
+      "url": "https://x.com/MSFTResearch/status/2115493412572951028"
+    },
+    {
       "created_at": "2026-10-26T16:04:17.000Z",
       "id": "2114749969278116112",
       "lang": "en",

@@ -2,6 +2,34 @@
   "handle": "ericzakariasson",
   "tweets": [
     {
+      "created_at": "2026-10-28T23:30:15.000Z",
+      "id": "2115586975122026626",
+      "lang": "",
+      "metrics": {
+        "bookmark": 1,
+        "impression": 589,
+        "like": 0,
+        "quote": 0,
+        "reply": 0,
+        "retweet": 0
+      },
+      "url": "https://x.com/ericzakariasson/status/2115586975122026626"
+    },
+    {
+      "created_at": "2026-10-28T23:27:36.000Z",
+      "id": "2115586309096083730",
+      "lang": "",
+      "metrics": {
+        "bookmark": 24,
+        "impression": 12394,
+        "like": 223,
+        "quote": 6,
+        "reply": 22,
+        "retweet": 7
+      },
+      "url": "https://x.com/ericzakariasson/status/2115586309096083730"
+    },
+    {
       "created_at": "2026-10-28T00:25:41.000Z",
       "id": "2115238537792815303",
       "lang": "en",

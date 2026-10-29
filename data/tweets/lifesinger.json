@@ -2,6 +2,20 @@
   "handle": "lifesinger",
   "tweets": [
     {
+      "created_at": "2026-10-28T14:50:02.000Z",
+      "id": "2115456061071384710",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 20,
+        "impression": 4202,
+        "like": 23,
+        "quote": 0,
+        "reply": 11,
+        "retweet": 1
+      },
+      "url": "https://x.com/lifesinger/status/2115456061071384710"
+    },
+    {
       "created_at": "2026-10-27T14:54:01.000Z",
       "id": "2115094673857409481",
       "lang": "zh",

@@ -2,6 +2,62 @@
   "handle": "david_perell",
   "tweets": [
     {
+      "created_at": "2026-10-28T23:02:46.000Z",
+      "id": "2115580059822039183",
+      "lang": "",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 1004,
+        "like": 0,
+        "quote": 0,
+        "reply": 0,
+        "retweet": 0
+      },
+      "url": "https://x.com/david_perell/status/2115580059822039183"
+    },
+    {
+      "created_at": "2026-10-28T23:02:05.000Z",
+      "id": "2115579887385727205",
+      "lang": "",
+      "metrics": {
+        "bookmark": 1,
+        "impression": 1807,
+        "like": 0,
+        "quote": 0,
+        "reply": 1,
+        "retweet": 0
+      },
+      "url": "https://x.com/david_perell/status/2115579887385727205"
+    },
+    {
+      "created_at": "2026-10-28T23:01:35.000Z",
+      "id": "2115579762751975914",
+      "lang": "",
+      "metrics": {
+        "bookmark": 1,
+        "impression": 241,
+        "like": 0,
+        "quote": 0,
+        "reply": 1,
+        "retweet": 0
+      },
+      "url": "https://x.com/david_perell/status/2115579762751975914"
+    },
+    {
+      "created_at": "2026-10-28T23:00:50.000Z",
+      "id": "2115579572854878425",
+      "lang": "",
+      "metrics": {
+        "bookmark": 13,
+        "impression": 2811,
+        "like": 15,
+        "quote": 0,
+        "reply": 3,
+        "retweet": 1
+      },
+      "url": "https://x.com/david_perell/status/2115579572854878425"
+    },
+    {
       "created_at": "2026-09-10T19:32:49.000Z",
       "id": "2098132607305416838",
       "lang": "en",

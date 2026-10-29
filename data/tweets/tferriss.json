@@ -2,6 +2,48 @@
   "handle": "tferriss",
   "tweets": [
     {
+      "created_at": "2026-10-28T22:13:36.000Z",
+      "id": "2115567685438525593",
+      "lang": "",
+      "metrics": {
+        "bookmark": 10,
+        "impression": 11790,
+        "like": 13,
+        "quote": 1,
+        "reply": 4,
+        "retweet": 3
+      },
+      "url": "https://x.com/tferriss/status/2115567685438525593"
+    },
+    {
+      "created_at": "2026-10-28T15:06:54.000Z",
+      "id": "2115460304721113272",
+      "lang": "",
+      "metrics": {
+        "bookmark": 8,
+        "impression": 8964,
+        "like": 5,
+        "quote": 0,
+        "reply": 0,
+        "retweet": 0
+      },
+      "url": "https://x.com/tferriss/status/2115460304721113272"
+    },
+    {
+      "created_at": "2026-10-28T15:06:54.000Z",
+      "id": "2115460302297079999",
+      "lang": "",
+      "metrics": {
+        "bookmark": 356,
+        "impression": 36173,
+        "like": 250,
+        "quote": 1,
+        "reply": 10,
+        "retweet": 17
+      },
+      "url": "https://x.com/tferriss/status/2115460302297079999"
+    },
+    {
       "created_at": "2026-10-27T22:33:49.000Z",
       "id": "2115210387570438346",
       "lang": "en",

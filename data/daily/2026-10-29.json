@@ -1,0 +1,165 @@
+{
+  "changelog": [],
+  "date": "2026-10-29",
+  "followers_zh": "涨粉：elonmusk +8581、thsottiaux +7882、claudeai +5655、DeepMind +5550、Pichai +5119。跌粉：paulg −3579、Nadella −1139。",
+  "gists": {
+    "2115238537792815303": "ericzakariasson：Grok Bot 0.77.0 稳定发布，含自动审查权限与多问一卡等。",
+    "2115252244979536381": "Matthew Berman：「立刻安装了」短帖。",
+    "2115256600370024657": "WuBlockchain：韩国第二大交易所 Bithumb 确认内网被未授权访问、数据泄露。",
+    "2115273064481218829": "thsottiaux：Day 23 重启日；iCloud Mail/Calendar 插件仍被催。",
+    "2115277286123704654": "emollick：Artificial Analysis 改用闭测，开源权重模型差距看起来更大。",
+    "2115297093879472332": "thsottiaux：某功能/站点已上线（短链配图）。",
+    "2115304943934672928": "CZ：今日 4 起数据泄露（Coinbase 供应商、Bithumb 等），提醒减暴露。",
+    "2115346075666325755": "Elon：「见过你最差的一面，我仍选择你」配图短帖。",
+    "2115398769030082660": "levelsio：西班牙火车事故今年已致约 85 人死亡，风险远高于民航。",
+    "2115403825557245970": "tibo_maker：恶搞「泄露影像：Anthropic 总部 Dario 向华尔街路演」。",
+    "2115429446148870195": "Sahil Bloom：别因为大家都这样就把坏习惯正常化——抱怨、刷手机、月光族等。",
+    "2115435917708296406": "Arav：用 Perplexity Computer 在 GTA V 里做「边玩边 vibe-code GTA VI」任务很有趣。",
+    "2115444742595260551": "simonw：十月是编程智能体又一拐点，Opus 5.5 已能做出真正好玩的游戏。",
+    "2115447957843821013": "Elon：特斯拉连花栗鼠都关心（配图）。",
+    "2115465379757649925": "Codie Sanchez：员工分 5 级——从只会报问题，到能定位原因并给修复选项。",
+    "2115471764960735355": "Elon 两字回复配图。",
+    "2115480207469560109": "GitHub：Copilot Fusion Max 接近 Opus 5.5 水平，API 成本约一半。",
+    "2115489550256746502": "Hassabis：Carbon 迭代极快，关键基准 SOTA，兼顾前沿能力与安全研究。",
+    "2115489593818816591": "GoogleAI：Carbon 网络与长程 SOTA，自主编程与网络防御更强，开始推送。",
+    "2115490856685990244": "Nadella：GitHub Universe 更新 Copilot Fusion，质量前沿、更快更便宜。",
+    "2115493334324310463": "trq212：勇气比天才更稀缺。",
+    "2115503730368061688": "Elon：「Impressive」短评配图。",
+    "2115507092660289631": "GeminiApp：沉浸式探索新主题，丝绸之路到喷气发动机可层层点开。",
+    "2115516716331536682": "CZ：别点邮件链接、别下附件——即使熟人电脑也可能中毒。",
+    "2115535455156642066": "Pichai：Q3 财报，Alphabet 年化营收跑到半万亿美元，同比增 25%。",
+    "2115583698074755078": "OpenAIDevs：ChatGPT Pro/Business 每月最高可领 $500 API 额度做应用与智能体。"
+  },
+  "hide": [
+    "2115471764960735355",
+    "2115252244979536381",
+    "2115295087202795972",
+    "2115357210457100743",
+    "2115297093879472332",
+    "2115447957843821013",
+    "2115493334324310463",
+    "2115273064481218829",
+    "2115503730368061688",
+    "2115346075666325755"
+  ],
+  "highlights": [
+    {
+      "excerpt": "I did say we'd be releasing our models periodically...introducing Gemini 4 Carbon, our next frontier model.\n\nFollowing Argon's release just two weeks ago, Carbon shows the pace at which we’re pushing the frontier, it ranks #1 on the recently updated v5.0 of @ArtificialAnlys https://t.co/GN9LqZ7Zcf",
+      "excerpt_zh": "我说过我们会定期发布模型……推出下一代前沿模型 Gemini 4 Carbon。\n\n继两周前发布 Argon 之后，Carbon 展现了我们推进前沿的速度，它在最近更新的 @ArtificialAnlys v5.0 上排名第 1。",
+      "handle": "sundarpichai",
+      "likes": 23803,
+      "name": "Sundar Pichai",
+      "post_id": "2115489219804352921",
+      "tags": [
+        "model",
+        "product"
+      ],
+      "text_zh": "Pichai 官宣 Gemini 4 Carbon：继 Argon 后再推前沿模型，AA v5 排名第 1。",
+      "url": "https://x.com/sundarpichai/status/2115489219804352921"
+    },
+    {
+      "excerpt": "New in Claude for Legal: a gallery of ready-made artifacts for contract review, regulatory horizon scans, cite checks, and more.\n\nStart from the built-in example, add your own documents and connectors, and share it with anyone across the business. https://t.co/Wn2VK2HeMU",
+      "excerpt_zh": "Claude for Legal 新增：合同审阅、法规扫描、引用核对等现成工件库。\n\n从内置示例起步，加入你的文档与连接器，即可在全公司共享。",
+      "handle": "claudeai",
+      "likes": 20612,
+      "name": "Claude",
+      "post_id": "2115467192276025500",
+      "tags": [
+        "model",
+        "product"
+      ],
+      "text_zh": "Claude for Legal 上线工件库：合同审阅、法规扫描、引用核对，可共享。",
+      "url": "https://x.com/claudeai/status/2115467192276025500"
+    },
+    {
+      "excerpt": "very weird thing happening rn\n\ntechnical people are sad, they think their skills are now useless\n\nnon-technical people are desperately wishing they were more technical so they could use agents better",
+      "excerpt_zh": "眼下很怪的一件事：\n\n技术人很难过，觉得自己的技能没用了\n\n非技术人却拼命希望自己更懂技术，好把智能体用得更好",
+      "handle": "trq212",
+      "likes": 13856,
+      "name": "Cat Wu",
+      "post_id": "2115544056038350960",
+      "tags": [
+        "agent",
+        "career"
+      ],
+      "text_zh": "怪象：技术人觉得技能没用了，非技术人却更想学技术好用 Agent。",
+      "url": "https://x.com/trq212/status/2115544056038350960"
+    },
+    {
+      "excerpt": "Introducing Gemini 4 Carbon, it's a big jump over Argon which we released just 2 weeks ago.\n\nGemini 4 Carbon is SOTA on cyber, long horizon tasks, ranks #1 on Artificial Analysis V5, significantly improves on usability in domains like coding, and is more aligned. https://t.co/Ikk9YedjCQ",
+      "excerpt_zh": "推出 Gemini 4 Carbon，相对两周前发布的 Argon 是一次大跃升。\n\nGemini 4 Carbon 在网络安全、长程任务上达到 SOTA，Artificial Analysis V5 排名第 1，编程等领域可用性显著提升，对齐也更好。",
+      "handle": "OfficialLoganK",
+      "likes": 13734,
+      "name": "Logan Kilpatrick",
+      "post_id": "2115489284404940898",
+      "tags": [
+        "model",
+        "code"
+      ],
+      "text_zh": "Logan：Carbon 相对 Argon 大跃升，网络/长程 SOTA，编程可用性明显提升。",
+      "url": "https://x.com/OfficialLoganK/status/2115489284404940898"
+    },
+    {
+      "excerpt": "Gemini 4 Carbon is our next frontier model.\n\nIt’s state-of-the-art across cybersecurity and long-horizon capabilities. https://t.co/o7lmCE1ggD",
+      "excerpt_zh": "Gemini 4 Carbon 是我们的下一款前沿模型。\n\n它在网络安全与长程能力上达到业界领先。",
+      "handle": "GoogleDeepMind",
+      "likes": 10749,
+      "name": "Google DeepMind",
+      "post_id": "2115489356437651654",
+      "tags": [
+        "model"
+      ],
+      "text_zh": "DeepMind：Gemini 4 Carbon 为下一前沿模型，网络与长程能力业界领先。",
+      "url": "https://x.com/GoogleDeepMind/status/2115489356437651654"
+    },
+    {
+      "excerpt": "Introducing Gemini 4 Carbon, our latest frontier model.\n\nCarbon delivers improved performance across domains — ranking #1 on v5.0 of the @ArtificialAnlys Intelligence Index and sets a new state-of-the-art in cybersecurity and long-horizon capabilities.\n\nIt’s rolling out starting https://t.co/oQrHzxvMSo",
+      "excerpt_zh": "推出最新前沿模型 Gemini 4 Carbon。\n\nCarbon 多域性能提升——在 @ArtificialAnlys Intelligence Index v5.0 排名第 1，并在网络安全与长程能力上刷新 SOTA。\n\n开始推送。",
+      "handle": "Google",
+      "likes": 7940,
+      "name": "Google",
+      "post_id": "2115489522603466766",
+      "tags": [
+        "model",
+        "product"
+      ],
+      "text_zh": "Google 官宣 Carbon：多域提升、AA Index #1，网络与长程新 SOTA。",
+      "url": "https://x.com/Google/status/2115489522603466766"
+    },
+    {
+      "excerpt": "Meet NVIDIA Nemotron 3.5 Transcribe 🎙️\n\nAn open-weight, promptable 30B MoE model with ~4B active parameters that brings transcription in 40 languages, speaker attribution, translation, contextual prompting and audio understanding into one checkpoint.\n\nWatch it keep track of who https://t.co/PEH1PeURIv",
+      "excerpt_zh": "认识 NVIDIA Nemotron 3.5 Transcribe 🎙️\n\n开源权重、可提示的 30B MoE 模型（约 4B 激活参数），把 40 种语言转录、说话人归属、翻译、上下文提示与音频理解打进同一检查点。",
+      "handle": "NVIDIAAI",
+      "likes": 5282,
+      "name": "NVIDIA AI",
+      "post_id": "2115462300241141882",
+      "tags": [
+        "model",
+        "oss"
+      ],
+      "text_zh": "NVIDIA 开源 Nemotron 3.5 Transcribe：30B MoE，40 语转录+说话人归属。",
+      "url": "https://x.com/NVIDIAAI/status/2115462300241141882"
+    },
+    {
+      "excerpt": "By popular request, you can now text your dot.\n\nGive it a task to take off your plate or something to keep an eye on, using text, photos, or even voice notes. It will text you proactively with relevant updates.\n\nSafe, secure texting via iMessage or RCS. You’re the only one who https://t.co/iuNd3aTCYc",
+      "excerpt_zh": "应众多要求，你现在可以给自己的 dot 发短信了。\n\n用文字、照片甚至语音留言交代任务或盯着某件事，它会主动短信发来相关更新。\n\n经 iMessage 或 RCS 安全短信。",
+      "handle": "ChatGPT",
+      "likes": 5261,
+      "name": "ChatGPT",
+      "post_id": "2115496387613786374",
+      "tags": [
+        "product",
+        "agent"
+      ],
+      "text_zh": "ChatGPT 支持给「dot」发短信交代任务，它会主动短信回更新。",
+      "url": "https://x.com/ChatGPT/status/2115496387613786374"
+    }
+  ],
+  "pin": [],
+  "summary_zh": [
+    "Google 发布 Gemini 4 Carbon，AA v5 登顶；Pichai/DeepMind 同步官宣。",
+    "话题：Gemini +134%、solopreneur +57%、Opus 5.5 +25%；Kimi −60%。",
+    "涨粉：elon +8581、Tibo +7882、claudeai +5655；paulg −3579。"
+  ],
+  "topics_zh": "Gemini 大涨 +133.9%，solopreneur +56.5%，Opus 5.5 +25.2%，Qwen +23.3%，MCP +20.1%；Kimi 大跌 −60.0%，Dan Koe −26.2%。"
+}

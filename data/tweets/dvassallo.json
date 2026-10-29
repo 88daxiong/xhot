@@ -2,6 +2,34 @@
   "handle": "dvassallo",
   "tweets": [
     {
+      "created_at": "2026-10-28T20:31:28.000Z",
+      "id": "2115541982047342758",
+      "lang": "",
+      "metrics": {
+        "bookmark": 5,
+        "impression": 7332,
+        "like": 81,
+        "quote": 3,
+        "reply": 21,
+        "retweet": 1
+      },
+      "url": "https://x.com/dvassallo/status/2115541982047342758"
+    },
+    {
+      "created_at": "2026-10-28T00:35:37.000Z",
+      "id": "2115241037581214135",
+      "lang": "",
+      "metrics": {
+        "bookmark": 1,
+        "impression": 6048,
+        "like": 31,
+        "quote": 0,
+        "reply": 4,
+        "retweet": 0
+      },
+      "url": "https://x.com/dvassallo/status/2115241037581214135"
+    },
+    {
       "created_at": "2026-10-27T19:50:06.000Z",
       "id": "2115169186985193768",
       "lang": "",
