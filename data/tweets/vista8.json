@@ -2,6 +2,20 @@
   "handle": "vista8",
   "tweets": [
     {
+      "created_at": "2026-10-30T07:21:28.000Z",
+      "id": "2116067950956527999",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 4,
+        "impression": 3587,
+        "like": 8,
+        "quote": 0,
+        "reply": 12,
+        "retweet": 0
+      },
+      "url": "https://x.com/vista8/status/2116067950956527999"
+    },
+    {
       "created_at": "2026-10-30T02:57:40.000Z",
       "id": "2116001563420586192",
       "lang": "zh",
