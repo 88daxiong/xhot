@@ -1,0 +1,163 @@
+{
+  "changelog": [
+    {
+      "date": "2026-10-30"
+    }
+  ],
+  "date": "2026-10-30",
+  "followers_zh": "涨粉：Tibo +8708、claudeai +7154、何一 +6179、Anthropic +3521、ChatGPT +3171。跌粉：elon/Nadella/paulg 等大号波动大。",
+  "gists": {
+    "2115601128733974859": "ChatGPT：邀请用 API 构建应用/智能体，Pro/Business 可领额度。",
+    "2115624109841539465": "mattshumer：见过唯一真正 AI-native 的公司是 Spawn。",
+    "2115634093949911506": "马斯克：按预言，Starship 42 将首次完成塔架捕获。",
+    "2115786353300353063": "levelsio 评西班牙交通部长回应：坚称铁路网络安全。",
+    "2115788753797058850": "多数压力来自你在回避的事，而非正在做的难事。",
+    "2115795975553913329": "levelsio 自嘲能 vibe code 出比欧盟更好的政府。",
+    "2115805396753383750": "levelsio 主张对 AI 回复零容忍，一次即永久封号。",
+    "2115808064087732305": "levelsio：自称 Opus 5.5 vibe coding 应用比西班牙铁路系统更管用。",
+    "2115817617911157099": "NVIDIA 祝贺 Mistral 新一代 Le Chonk：1T 参数 MoE 多模态模型。",
+    "2115821668350435645": "simonw：Fable 时代智能体工程极限案例令人侧目。",
+    "2115823011399938182": "马斯克转发配图，仅「Interesting」一词。",
+    "2115845164824711247": "Gemini 可在应用内生成并编辑文档、PDF、演示与表格。",
+    "2115846384850989124": "GitHub：过去一年 179 亿 push、343 亿 commit、13 亿 PR。",
+    "2115852889835114689": "OpenRouter：上线创立以来最大的供应商路由改进。",
+    "2115854891650523391": "免疫学家用 Codex 模拟单细胞对药物的反应。",
+    "2115871180792176993": "公开征集改进 Grok bot 的反馈，直达产品团队。",
+    "2115913677656433035": "Greg Isenberg：SaaS 已死，11 分钟讲清它会如何演化。",
+    "2115915841195942020": "何一：已知潜在安全问题，安全团队正排查调查。",
+    "2115920359559958619": "短句「运气剃刀」。",
+    "2115932500006756686": "CZ：币安损失可能略高于此前说法，但仍会赔付。",
+    "2115933173175689570": "DeepMind CEO：No.1 配钻石 emoji。",
+    "2115935053347786773": "马斯克短句「每天都是零日」配图热帖。",
+    "2115952767647056144": "孙宇晨：正关注币安安全事件，将尽快提供协助。",
+    "2115977741808157030": "Paul Graham：融资轮次不是里程碑；目标应是不需要融资。"
+  },
+  "hide": [
+    "2115935053347786773",
+    "2115795975553913329",
+    "2115920359559958619",
+    "2115871180792176993",
+    "2115823011399938182",
+    "2115786353300353063",
+    "2115808064087732305",
+    "2115933173175689570"
+  ],
+  "highlights": [
+    {
+      "excerpt": "If you look closely enough, breakthroughs in everything are accelerating exponentially. \n\nAn exponential always starts off looking small. https://t.co/cwXQqooR7r",
+      "excerpt_zh": "如果你看得足够仔细，万物的突破都在指数加速。\n\n指数曲线开头总显得很小。",
+      "handle": "elonmusk",
+      "likes": 39384,
+      "name": "Elon Musk",
+      "post_id": "2115640651517939785",
+      "tags": [
+        "research"
+      ],
+      "text_zh": "马斯克：若仔细看，万物突破都在指数加速；指数开头总显得很小。",
+      "url": "https://x.com/elonmusk/status/2115640651517939785"
+    },
+    {
+      "excerpt": "Day 25/\n\nWe are doubling all usage limits for all Pro 100/200/500 tiers and Business Premium, effective today.\n\nWe heard your kind feedback and won’t be reducing usage limits for Pro 200, so your Work and Codex usage will stay the same.",
+      "excerpt_zh": "第 25 天/\n\n即日起，我们将所有 Pro 100/200/500 档与 Business Premium 的用量上限翻倍。\n\n我们听取了你们的反馈，不会降低 Pro 200 的用量上限，因此你的 Work 与 Codex 用量保持不变。…",
+      "handle": "thsottiaux",
+      "likes": 34361,
+      "name": "Tibo",
+      "post_id": "2115850175868727621",
+      "tags": [
+        "model",
+        "product"
+      ],
+      "text_zh": "ChatGPT：Pro 与 Business Premium 用量即日起翻倍，Pro 200 不降。",
+      "url": "https://x.com/thsottiaux/status/2115850175868727621"
+    },
+    {
+      "excerpt": "User funds are safe!\n\nIt does look like a hack on Binance. Appreciate the quick freeze from Tether (~$971m) and Circle (~$823m).\n\nI don't manage Binance (.com) anymore, but as a shareholder, I expect all user funds will be fully covered. https://t.co/oufpyNChxI",
+      "excerpt_zh": "用户资金是安全的！\n\n看起来确实像是币安遭遇黑客攻击。感谢 Tether（约 9.71 亿美元）和 Circle（约 8.23 亿美元）迅速冻结。\n\n我已不再管理 Binance（.com），但作为股东，我预计所有用户资金都会得到全额保障。",
+      "handle": "cz_binance",
+      "likes": 29497,
+      "name": "CZ 🔶 BNB",
+      "post_id": "2115915423174853077",
+      "tags": [
+        "funding"
+      ],
+      "text_zh": "CZ：币安疑似被黑，用户资金安全；Tether/Circle 已冻结约 18 亿。",
+      "url": "https://x.com/cz_binance/status/2115915423174853077"
+    },
+    {
+      "excerpt": "There’s 100% a kind of mania you can get into with coding agents, where it feels like you’re getting a lot done and working all the time but nothing is really happening.\n\nI think it's often a form of avoidance of something else in life.",
+      "excerpt_zh": "用编程智能体时，100% 会陷入一种狂热：感觉自己干了很多、一直在工作，其实什么都没真正发生。\n\n我觉得这常常是在回避生活里的别的事。",
+      "handle": "trq212",
+      "likes": 7790,
+      "name": "Thariq",
+      "post_id": "2115937378674372783",
+      "tags": [
+        "agent",
+        "code"
+      ],
+      "text_zh": "Thariq：编程智能体易陷入假勤奋——感觉一直在干，其实没进展。",
+      "url": "https://x.com/trq212/status/2115937378674372783"
+    },
+    {
+      "excerpt": "A few upgrades to the Claude mobile apps this week:\n\nOn iPad and iPhone Duo: what Claude makes now opens beside the chat instead of over it, and goes full screen when you want a closer look. https://t.co/G1OvDYzkpw",
+      "excerpt_zh": "本周 Claude 移动应用几项升级：\n\n在 iPad 与 iPhone Duo 上：Claude 做出的内容现在在聊天旁打开，而不再盖住聊天；想细看时可全屏。",
+      "handle": "claudeai",
+      "likes": 7304,
+      "name": "Claude",
+      "post_id": "2115859377488072879",
+      "tags": [
+        "product",
+        "model"
+      ],
+      "text_zh": "Claude 移动端：iPad/iPhone Duo 工件旁开聊天，可全屏细看。",
+      "url": "https://x.com/claudeai/status/2115859377488072879"
+    },
+    {
+      "excerpt": "User funds are safe. \n\nBinance will cover all hacking losses.\n\nDeposits and withdrawals are temporarily suspended while our team conducts security checks, freezes funds, and works with law enforcement.",
+      "excerpt_zh": "用户资金是安全的。\n\n币安将承担全部黑客损失。\n\n团队进行安全检查、冻结资金并配合执法期间，充值与提现暂时暂停。\n\n调查结束后我们将发布完整事后复盘。请只信赖币安官方渠道的更新。",
+      "handle": "heyibinance",
+      "likes": 5979,
+      "name": "Yi He",
+      "post_id": "2115958049244631357",
+      "tags": [
+        "funding"
+      ],
+      "text_zh": "何一：币安将承担全部黑客损失；充提暂停，事后发完整复盘。",
+      "url": "https://x.com/heyibinance/status/2115958049244631357"
+    },
+    {
+      "excerpt": "Anthropic will make ~1,000 employees worth +$100m at $2 trillion market cap.\n\nThere's ~11,000 Americans with $100m in investable assets. \n\nSo something like 1 in 12 Americans with $100m (liquid) will be from Anthropic. If you add in Openai, maybe 1 in 7.",
+      "excerpt_zh": "若市值达到 2 万亿美元，Anthropic 将让约 1000 名员工身家超过 1 亿美元。\n\n美国约有 1.1 万名拥有 1 亿美元可投资资产的人。\n\n也就是说，大约每 12 个身家过亿（流动）的美国人里就有 1 个来自 Anthropic。再加上 OpenAI，也许是每 7 个里有 1 个。",
+      "handle": "thesamparr",
+      "likes": 5414,
+      "name": "Sam Parr",
+      "post_id": "2115863464547881014",
+      "tags": [
+        "funding",
+        "startup"
+      ],
+      "text_zh": "若 Anthropic 市值 2 万亿，约 1000 名员工身家将超 1 亿美元。",
+      "url": "https://x.com/thesamparr/status/2115863464547881014"
+    },
+    {
+      "excerpt": "Today, we release the weights of a new and improved Le Chonk, advancing the open frontier for agentic coding and cybersecurity.\n\n💻 Built to build: Le Chonk ranks #1 on @cognition’s FrontierCode among open models, and sets a new benchmark for Pareto efficiency on https://t.co/R9wQ6WTPnl",
+      "excerpt_zh": "今天我们发布改进版 Le Chonk 的权重，推进智能体编程与网络安全的开源前沿。\n\n💻 为构建而生：Le Chonk 在 @cognition 的 FrontierCode 开源模型中排名第 1，并在帕累托效率上树立新基准。",
+      "handle": "MistralAI",
+      "likes": 5227,
+      "name": "Mistral AI",
+      "post_id": "2115811242556137820",
+      "tags": [
+        "model",
+        "oss"
+      ],
+      "text_zh": "Mistral 开源 Le Chonk：FrontierCode 开源第一，主打智能体编程。",
+      "url": "https://x.com/MistralAI/status/2115811242556137820"
+    }
+  ],
+  "pin": [],
+  "summary_zh": [
+    "币安疑似被黑：CZ/何一称资金安全将全额赔付；稳定币侧已冻约 18 亿。",
+    "ChatGPT Pro/Business 用量翻倍；Mistral 开源 Le Chonk 登榜首。",
+    "话题：Gemini +125%、solopreneur +71%、Codex +28%；Kimi −57%。"
+  ],
+  "topics_zh": "Gemini +125%，solopreneur +71%，Codex +28%，vibe coding +17%，MCP +15%；Kimi −57%，Dan Koe −39%。"
+}

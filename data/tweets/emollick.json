@@ -2,6 +2,160 @@
   "handle": "emollick",
   "tweets": [
     {
+      "created_at": "2026-10-30T02:00:02.000Z",
+      "id": "2115987056954417328",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 1,
+        "impression": 3844,
+        "like": 6,
+        "quote": 0,
+        "reply": 3,
+        "retweet": 0
+      },
+      "url": "https://x.com/emollick/status/2115987056954417328"
+    },
+    {
+      "created_at": "2026-10-30T01:51:28.000Z",
+      "id": "2115984902562763062",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 5259,
+        "like": 32,
+        "quote": 0,
+        "reply": 5,
+        "retweet": 0
+      },
+      "url": "https://x.com/emollick/status/2115984902562763062"
+    },
+    {
+      "created_at": "2026-10-30T01:49:00.000Z",
+      "id": "2115984280157593977",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 3128,
+        "like": 24,
+        "quote": 0,
+        "reply": 2,
+        "retweet": 0
+      },
+      "url": "https://x.com/emollick/status/2115984280157593977"
+    },
+    {
+      "created_at": "2026-10-30T01:47:38.000Z",
+      "id": "2115983936195297639",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 12,
+        "impression": 14702,
+        "like": 210,
+        "quote": 3,
+        "reply": 63,
+        "retweet": 8
+      },
+      "url": "https://x.com/emollick/status/2115983936195297639"
+    },
+    {
+      "created_at": "2026-10-30T01:38:15.000Z",
+      "id": "2115981574919393683",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 1,
+        "impression": 4466,
+        "like": 7,
+        "quote": 0,
+        "reply": 2,
+        "retweet": 0
+      },
+      "url": "https://x.com/emollick/status/2115981574919393683"
+    },
+    {
+      "created_at": "2026-10-30T01:37:28.000Z",
+      "id": "2115981377652822479",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 44,
+        "impression": 12889,
+        "like": 93,
+        "quote": 5,
+        "reply": 44,
+        "retweet": 5
+      },
+      "url": "https://x.com/emollick/status/2115981377652822479"
+    },
+    {
+      "created_at": "2026-10-29T20:59:37.000Z",
+      "id": "2115911454994186301",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 96,
+        "impression": 19429,
+        "like": 230,
+        "quote": 12,
+        "reply": 90,
+        "retweet": 20
+      },
+      "url": "https://x.com/emollick/status/2115911454994186301"
+    },
+    {
+      "created_at": "2026-10-29T18:37:30.000Z",
+      "id": "2115875693120676157",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 520,
+        "impression": 42282,
+        "like": 554,
+        "quote": 10,
+        "reply": 135,
+        "retweet": 25
+      },
+      "url": "https://x.com/emollick/status/2115875693120676157"
+    },
+    {
+      "created_at": "2026-10-29T17:19:46.000Z",
+      "id": "2115856130194767937",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 3,
+        "impression": 6309,
+        "like": 28,
+        "quote": 0,
+        "reply": 4,
+        "retweet": 1
+      },
+      "url": "https://x.com/emollick/status/2115856130194767937"
+    },
+    {
+      "created_at": "2026-10-29T16:46:01.000Z",
+      "id": "2115847634250248675",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 5,
+        "impression": 8895,
+        "like": 51,
+        "quote": 0,
+        "reply": 11,
+        "retweet": 2
+      },
+      "url": "https://x.com/emollick/status/2115847634250248675"
+    },
+    {
+      "created_at": "2026-10-29T16:32:06.000Z",
+      "id": "2115844131985494092",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 79,
+        "impression": 29938,
+        "like": 507,
+        "quote": 22,
+        "reply": 194,
+        "retweet": 28
+      },
+      "url": "https://x.com/emollick/status/2115844131985494092"
+    },
+    {
       "created_at": "2026-10-29T00:00:50.000Z",
       "id": "2115594672471195779",
       "lang": "",

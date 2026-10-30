@@ -2,6 +2,160 @@
   "handle": "cz_binance",
   "tweets": [
     {
+      "created_at": "2026-10-30T03:49:28.000Z",
+      "id": "2116014597056659597",
+      "lang": "art",
+      "metrics": {
+        "bookmark": 14,
+        "impression": 138436,
+        "like": 810,
+        "quote": 13,
+        "reply": 256,
+        "retweet": 42
+      },
+      "url": "https://x.com/cz_binance/status/2116014597056659597"
+    },
+    {
+      "created_at": "2026-10-30T02:23:55.000Z",
+      "id": "2115993068507897936",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 196,
+        "impression": 502459,
+        "like": 5837,
+        "quote": 255,
+        "reply": 1266,
+        "retweet": 513
+      },
+      "url": "https://x.com/cz_binance/status/2115993068507897936"
+    },
+    {
+      "created_at": "2026-10-30T00:33:04.000Z",
+      "id": "2115965174243033143",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 76,
+        "impression": 391954,
+        "like": 3668,
+        "quote": 30,
+        "reply": 500,
+        "retweet": 209
+      },
+      "url": "https://x.com/cz_binance/status/2115965174243033143"
+    },
+    {
+      "created_at": "2026-10-29T23:09:10.000Z",
+      "id": "2115944057692434907",
+      "lang": "art",
+      "metrics": {
+        "bookmark": 79,
+        "impression": 410883,
+        "like": 2984,
+        "quote": 19,
+        "reply": 324,
+        "retweet": 204
+      },
+      "url": "https://x.com/cz_binance/status/2115944057692434907"
+    },
+    {
+      "created_at": "2026-10-29T22:25:59.000Z",
+      "id": "2115933190795964544",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 69,
+        "impression": 338131,
+        "like": 3153,
+        "quote": 23,
+        "reply": 316,
+        "retweet": 177
+      },
+      "url": "https://x.com/cz_binance/status/2115933190795964544"
+    },
+    {
+      "created_at": "2026-10-29T22:23:14.000Z",
+      "id": "2115932500006756686",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 627,
+        "impression": 1465710,
+        "like": 12085,
+        "quote": 410,
+        "reply": 1227,
+        "retweet": 1029
+      },
+      "url": "https://x.com/cz_binance/status/2115932500006756686"
+    },
+    {
+      "created_at": "2026-10-29T21:36:50.000Z",
+      "id": "2115920822087098401",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 126,
+        "impression": 552213,
+        "like": 5172,
+        "quote": 36,
+        "reply": 461,
+        "retweet": 284
+      },
+      "url": "https://x.com/cz_binance/status/2115920822087098401"
+    },
+    {
+      "created_at": "2026-10-29T21:31:56.000Z",
+      "id": "2115919590178075039",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 336,
+        "impression": 1033162,
+        "like": 10798,
+        "quote": 145,
+        "reply": 803,
+        "retweet": 696
+      },
+      "url": "https://x.com/cz_binance/status/2115919590178075039"
+    },
+    {
+      "created_at": "2026-10-29T21:15:23.000Z",
+      "id": "2115915423174853077",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 1829,
+        "impression": 4089380,
+        "like": 29497,
+        "quote": 2998,
+        "reply": 4148,
+        "retweet": 4524
+      },
+      "url": "https://x.com/cz_binance/status/2115915423174853077"
+    },
+    {
+      "created_at": "2026-10-29T18:56:30.000Z",
+      "id": "2115880474375749834",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 485,
+        "impression": 950571,
+        "like": 3107,
+        "quote": 118,
+        "reply": 543,
+        "retweet": 270
+      },
+      "url": "https://x.com/cz_binance/status/2115880474375749834"
+    },
+    {
+      "created_at": "2026-10-29T18:54:05.000Z",
+      "id": "2115879862682677706",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 365,
+        "impression": 639223,
+        "like": 3352,
+        "quote": 111,
+        "reply": 377,
+        "retweet": 472
+      },
+      "url": "https://x.com/cz_binance/status/2115879862682677706"
+    },
+    {
       "created_at": "2026-10-29T03:31:26.000Z",
       "id": "2115647673294561568",
       "lang": "",

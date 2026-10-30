@@ -2,6 +2,62 @@
   "handle": "geminiapp",
   "tweets": [
     {
+      "created_at": "2026-10-29T19:15:50.000Z",
+      "id": "2115885338921185595",
+      "lang": "",
+      "metrics": {
+        "bookmark": 11,
+        "impression": 9702,
+        "like": 25,
+        "quote": 0,
+        "reply": 2,
+        "retweet": 2
+      },
+      "url": "https://x.com/GeminiApp/status/2115885338921185595"
+    },
+    {
+      "created_at": "2026-10-29T19:15:28.000Z",
+      "id": "2115885244805251519",
+      "lang": "",
+      "metrics": {
+        "bookmark": 136,
+        "impression": 40686,
+        "like": 541,
+        "quote": 27,
+        "reply": 63,
+        "retweet": 65
+      },
+      "url": "https://x.com/GeminiApp/status/2115885244805251519"
+    },
+    {
+      "created_at": "2026-10-29T16:37:13.000Z",
+      "id": "2115845421750997298",
+      "lang": "",
+      "metrics": {
+        "bookmark": 23,
+        "impression": 16039,
+        "like": 154,
+        "quote": 1,
+        "reply": 4,
+        "retweet": 8
+      },
+      "url": "https://x.com/GeminiApp/status/2115845421750997298"
+    },
+    {
+      "created_at": "2026-10-29T16:36:12.000Z",
+      "id": "2115845164824711247",
+      "lang": "",
+      "metrics": {
+        "bookmark": 864,
+        "impression": 180610,
+        "like": 3023,
+        "quote": 111,
+        "reply": 143,
+        "retweet": 303
+      },
+      "url": "https://x.com/GeminiApp/status/2115845164824711247"
+    },
+    {
       "created_at": "2026-10-28T18:13:47.000Z",
       "id": "2115507334902669354",
       "lang": "en",

@@ -2,6 +2,62 @@
   "handle": "george__mack",
   "tweets": [
     {
+      "created_at": "2026-10-30T02:48:00.000Z",
+      "id": "2115999128337396216",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 15,
+        "impression": 3280,
+        "like": 45,
+        "quote": 0,
+        "reply": 1,
+        "retweet": 0
+      },
+      "url": "https://x.com/george__mack/status/2115999128337396216"
+    },
+    {
+      "created_at": "2026-10-30T00:36:00.000Z",
+      "id": "2115965909340725310",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 68,
+        "impression": 7361,
+        "like": 183,
+        "quote": 0,
+        "reply": 3,
+        "retweet": 2
+      },
+      "url": "https://x.com/george__mack/status/2115965909340725310"
+    },
+    {
+      "created_at": "2026-10-29T21:35:00.000Z",
+      "id": "2115920359559958619",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 645,
+        "impression": 40746,
+        "like": 1667,
+        "quote": 1,
+        "reply": 11,
+        "retweet": 59
+      },
+      "url": "https://x.com/george__mack/status/2115920359559958619"
+    },
+    {
+      "created_at": "2026-10-29T19:20:49.000Z",
+      "id": "2115886593969918188",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 100,
+        "impression": 57040,
+        "like": 306,
+        "quote": 2,
+        "reply": 37,
+        "retweet": 11
+      },
+      "url": "https://x.com/george__mack/status/2115886593969918188"
+    },
+    {
       "created_at": "2026-10-25T21:45:00.000Z",
       "id": "2114473324869013583",
       "lang": "",

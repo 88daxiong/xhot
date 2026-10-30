@@ -2,6 +2,20 @@
   "handle": "suu766",
   "tweets": [
     {
+      "created_at": "2026-10-29T13:36:54.000Z",
+      "id": "2115800043194286205",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 2,
+        "impression": 2939,
+        "like": 15,
+        "quote": 0,
+        "reply": 15,
+        "retweet": 4
+      },
+      "url": "https://x.com/Suu766/status/2115800043194286205"
+    },
+    {
       "created_at": "2026-10-29T11:45:55.000Z",
       "id": "2115772111507853666",
       "lang": "",
@@ -2786,20 +2800,6 @@
         "retweet": 1
       },
       "url": "https://x.com/Suu766/status/2109936198194237640"
-    },
-    {
-      "created_at": "2026-10-13T07:00:29.000Z",
-      "id": "2109902077057179884",
-      "lang": "",
-      "metrics": {
-        "bookmark": 1,
-        "impression": 231,
-        "like": 1,
-        "quote": 0,
-        "reply": 0,
-        "retweet": 0
-      },
-      "url": "https://x.com/Suu766/status/2109902077057179884"
     }
   ],
   "user_id": "1875420384247640064"

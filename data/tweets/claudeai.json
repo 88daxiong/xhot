@@ -2,6 +2,118 @@
   "handle": "claudeai",
   "tweets": [
     {
+      "created_at": "2026-10-29T17:32:44.000Z",
+      "id": "2115859391627039210",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 45,
+        "impression": 319679,
+        "like": 1155,
+        "quote": 96,
+        "reply": 946,
+        "retweet": 24
+      },
+      "url": "https://x.com/claudeai/status/2115859391627039210"
+    },
+    {
+      "created_at": "2026-10-29T17:32:44.000Z",
+      "id": "2115859390075113836",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 22,
+        "impression": 82431,
+        "like": 540,
+        "quote": 2,
+        "reply": 6,
+        "retweet": 7
+      },
+      "url": "https://x.com/claudeai/status/2115859390075113836"
+    },
+    {
+      "created_at": "2026-10-29T17:32:43.000Z",
+      "id": "2115859388191912193",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 324,
+        "impression": 393642,
+        "like": 1890,
+        "quote": 124,
+        "reply": 50,
+        "retweet": 79
+      },
+      "url": "https://x.com/claudeai/status/2115859388191912193"
+    },
+    {
+      "created_at": "2026-10-29T17:32:43.000Z",
+      "id": "2115859386224832956",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 22,
+        "impression": 38006,
+        "like": 416,
+        "quote": 2,
+        "reply": 4,
+        "retweet": 6
+      },
+      "url": "https://x.com/claudeai/status/2115859386224832956"
+    },
+    {
+      "created_at": "2026-10-29T17:32:42.000Z",
+      "id": "2115859384110915893",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 18,
+        "impression": 37438,
+        "like": 380,
+        "quote": 7,
+        "reply": 12,
+        "retweet": 11
+      },
+      "url": "https://x.com/claudeai/status/2115859384110915893"
+    },
+    {
+      "created_at": "2026-10-29T17:32:42.000Z",
+      "id": "2115859382152122787",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 20,
+        "impression": 41549,
+        "like": 406,
+        "quote": 4,
+        "reply": 3,
+        "retweet": 6
+      },
+      "url": "https://x.com/claudeai/status/2115859382152122787"
+    },
+    {
+      "created_at": "2026-10-29T17:32:41.000Z",
+      "id": "2115859380143030507",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 51,
+        "impression": 58559,
+        "like": 809,
+        "quote": 17,
+        "reply": 43,
+        "retweet": 21
+      },
+      "url": "https://x.com/claudeai/status/2115859380143030507"
+    },
+    {
+      "created_at": "2026-10-29T17:32:41.000Z",
+      "id": "2115859377488072879",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 780,
+        "impression": 488664,
+        "like": 7304,
+        "quote": 127,
+        "reply": 345,
+        "retweet": 289
+      },
+      "url": "https://x.com/claudeai/status/2115859377488072879"
+    },
+    {
       "created_at": "2026-10-28T15:34:17.000Z",
       "id": "2115467193626571174",
       "lang": "",
