@@ -2,6 +2,62 @@
   "handle": "emollick",
   "tweets": [
     {
+      "created_at": "2026-10-31T01:00:02.000Z",
+      "id": "2116334347196277141",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 20,
+        "impression": 8392,
+        "like": 81,
+        "quote": 0,
+        "reply": 10,
+        "retweet": 1
+      },
+      "url": "https://x.com/emollick/status/2116334347196277141"
+    },
+    {
+      "created_at": "2026-10-31T00:56:19.000Z",
+      "id": "2116333409760927780",
+      "lang": "und",
+      "metrics": {
+        "bookmark": 68,
+        "impression": 38151,
+        "like": 315,
+        "quote": 5,
+        "reply": 21,
+        "retweet": 16
+      },
+      "url": "https://x.com/emollick/status/2116333409760927780"
+    },
+    {
+      "created_at": "2026-10-31T00:43:50.000Z",
+      "id": "2116330271901360248",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 7,
+        "impression": 7004,
+        "like": 16,
+        "quote": 1,
+        "reply": 3,
+        "retweet": 1
+      },
+      "url": "https://x.com/emollick/status/2116330271901360248"
+    },
+    {
+      "created_at": "2026-10-31T00:15:55.000Z",
+      "id": "2116323245641101729",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 1,
+        "impression": 9187,
+        "like": 36,
+        "quote": 0,
+        "reply": 11,
+        "retweet": 2
+      },
+      "url": "https://x.com/emollick/status/2116323245641101729"
+    },
+    {
       "created_at": "2026-10-31T00:07:18.000Z",
       "id": "2116321075164500438",
       "lang": "",
