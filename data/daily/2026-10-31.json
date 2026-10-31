@@ -1,0 +1,186 @@
+{
+  "changelog": [],
+  "date": "2026-10-31",
+  "followers_zh": "涨粉：Yi He +9744、CZ +6987、claudeai +6488、Tibo +4441；跌粉：Nadella −2.1万、Sundar −1.9万、elon −1.1万、paulg −1.1万。",
+  "gists": {
+    "2115952767647056144": "Justin Sun 称正密切关注 Binance 安全事件并将尽快协助。",
+    "2115977741808157030": "Paul Graham：融资轮次不是里程碑；目标应是不需要再融资。",
+    "2115993068507897936": "CZ：用户资金 SAFU；致谢通宵员工与竞品帮助，称会挺过去。",
+    "2116019939056513218": "Elon：新产品 Blindsight，称可让全盲或先天失明者「看见」，工程上已就绪。",
+    "2116035373361230325": "elonmusk：The Terafab project is going well https://t.co/YdiMcVF8qi",
+    "2116037732845957434": "Elon：在得州提前投票打卡。",
+    "2116039632743702637": "Elon 担忧若民主党 2028 横扫两院+总统，会通过特区州与合法化巩固多数。",
+    "2116046885559414996": "elonmusk：This is what really matters https://t.co/tts6aaqZzr",
+    "2116047608036888796": "elonmusk：It would be game over for America",
+    "2116142341815714212": "Pieter：吐槽欧洲有人「职业倦怠」领两年全薪还环游世界、转租廉租房套利。",
+    "2116153162176622917": "Ryan Holiday：聚焦可控之事；你能控制如何回应。",
+    "2116153238563242385": "steipete：又一例说明应用自己的 harness，别把控制权交给随时改规则的公司。",
+    "2116161095073431906": "Ethan Mollick：同意并补充——会用 AI 的人与不会用的人差距还在拉大。",
+    "2116164353481462158": "Elon 回顾四年前预测，称「正如所说」并配图。",
+    "2116165938525741496": "Elon：称民主党意图永久巩固一党统治，并举加州为例。",
+    "2116170090991484947": "amasad：官方 Claude Code 扩展被篡改并在开发者机器装后门，严重低估；疑与 Binance 黑客有关。",
+    "2116179698267128211": "elonmusk：In his own words https://t.co/bXiH60ADxs",
+    "2116183808211141028": "Elon：称民主党若掌权将执行终结美国民主的计划。",
+    "2116186406544413103": "Elon：称「这就是他们的计划，而且他们公开说了」并配视频。",
+    "2116189354418897261": "Yi He 再发「User funds are SAFU」安抚。",
+    "2116201375613018416": "elonmusk：I miss Larry Page https://t.co/mLGcwyDzxl",
+    "2116207994832838818": "nutlope：想让应用更独特就生成自己的字体。",
+    "2116212861466755509": "gregisenberg：一张图说 SaaS 未来——先免费/极低价再变现。",
+    "2116213830439280809": "rauchg：Next Native 将至，强调原生优化。",
+    "2116218370362122746": "Elon：称民主党对亚裔与白人存在种族歧视。",
+    "2116236188319453386": "OpenAIDevs 介绍 @Scav，把建造者聚到共享机器人社区。",
+    "2116237215026032872": "Google 介绍 DeepMind 新世界模型 Genie 4，可创建可控环境。",
+    "2116240704393351411": "elonmusk：This would be the end of democracy in America https://t.co/2NFxZgZRpn",
+    "2116244898269610456": "Google：轨道上的 TPU 已「打来电话」——十月发射四颗芯片，本周收到首响。",
+    "2116253388883345623": "OpenAI：「未来有很多种，你想建哪一种？」宣传帖。",
+    "2116262634349818190": "NVIDIA AI：展示开源多语种 Nemotron 语音效果对比。",
+    "2116263856628703247": "Arav：分享 Gemini 4 Carbon 早期评测，称是所见最强模型之一。",
+    "2116267934834139391": "James Clear：真正的准备不是为特定场景做计划，而是能应对不确定性的心态。",
+    "2116282740802998627": "eric：建议用 grok bot 提示词回顾近两年工作。",
+    "2116289989914787912": "elonmusk：You can now find out if any reach limitations have been applied to you",
+    "2116291813732495578": "elonmusk：Cool ❤️ https://t.co/XOWzbX9cIw"
+  },
+  "hide": [
+    "2116039632743702637",
+    "2116164353481462158",
+    "2116157847121924420",
+    "2116253388883345623",
+    "2116193690700198059",
+    "2116186406544413103",
+    "2116183808211141028",
+    "2116019939056513218",
+    "2116037732845957434",
+    "2116218370362122746",
+    "2116165938525741496",
+    "2116042226598056033",
+    "2116049311163122143",
+    "2116242885376974965",
+    "2116002744586920092",
+    "2116183558729416712",
+    "2116179698267128211",
+    "2116047608036888796",
+    "2116240704393351411",
+    "2116035373361230325",
+    "2116201375613018416",
+    "2116291813732495578",
+    "2116046885559414996",
+    "2116289989914787912"
+  ],
+  "highlights": [
+    {
+      "excerpt": "We’re renaming our Max plans: \n\nMax 5x → Max\nMax 20x → Ultra\n\nMax is still $100/month, and Ultra is still $200. If you’re a subscriber, there’s nothing you need to do.\n\nWe’re also removing the 5-hour limit for verified Ultra accounts, starting today with most existing subscribers.",
+      "excerpt_zh": "我们正在重命名 Max 套餐：Max 5x → Max，Max 20x → Ultra。Max 仍为每月 100 美元，Ultra 仍为 200 美元。我们还将取消已验证 Ultra 账户的 5 小时限额。",
+      "handle": "claudeai",
+      "likes": 23302,
+      "name": "Claude",
+      "post_id": "2116220869479428500",
+      "tags": [
+        "product"
+      ],
+      "text_zh": "Claude 改名订阅档：Max 5x→Max、Max 20x→Ultra，价格不变；已验证 Ultra 取消 5 小时限额。",
+      "url": "https://x.com/claudeai/status/2116220869479428500"
+    },
+    {
+      "excerpt": "A ‘hello world’ milestone for Project Suncatcher 🚀\n\nAfter launching our prototype satellite a few weeks ago, we’ve now successfully sent a command up to orbit, booted up the TPU, ran the prompt, and received our first complete response back on earth - a haiku! https://t.co/kOFmETUskm",
+      "excerpt_zh": "Project Suncatcher 的「hello world」里程碑🚀：几周前发射原型卫星后，我们已成功向轨道发送指令、启动 TPU、运行提示词，并在地球上收到首个完整响应——一首俳句！",
+      "handle": "sundarpichai",
+      "likes": 16946,
+      "name": "Sundar Pichai",
+      "post_id": "2116214866444943853",
+      "tags": [
+        "chips",
+        "product"
+      ],
+      "text_zh": "Google Project Suncatcher：轨道 TPU 已成功回传首个提示响应（一首俳句）。",
+      "url": "https://x.com/sundarpichai/status/2116214866444943853"
+    },
+    {
+      "excerpt": "I thought it was just a proposal, but it actually passed 🤯\n\nFrance will charge €0.055 per GB on all internet traffic! https://t.co/mfiiPnttK2",
+      "excerpt_zh": "我以为这只是提案，结果真的通过了🤯 法国将对所有互联网流量按每 GB 收取 €0.055！",
+      "handle": "levelsio",
+      "likes": 8083,
+      "name": "Pieter Levels",
+      "post_id": "2116284214131961910",
+      "tags": [
+        "policy"
+      ],
+      "text_zh": "法国将通过按流量计费：每 GB 收 €0.055；Pieter 称原以为只是提案现已通过。",
+      "url": "https://x.com/levelsio/status/2116284214131961910"
+    },
+    {
+      "excerpt": "Saw a few discussions about size of hack, why impact to bitcoin price is small, etc. 👇 \n\n$6.3 billion is the biggest in USD terms, but not in BTC terms. MtGox was 650,000 BTC!\n\nOther important numbers to consider:\n\n% of bitcoin (in relation to BTC total supply), ie, market impact.",
+      "excerpt_zh": "63 亿美元按美元计是最大的，但按 BTC 计仍不及 MtGox（65 万枚 BTC）！还需看占 BTC 总量比例、受影响用户数，以及用户资产占比。",
+      "handle": "cz_binance",
+      "likes": 7922,
+      "name": "CZ 🔶 BNB",
+      "post_id": "2116198836729520420",
+      "tags": [
+        "funding"
+      ],
+      "text_zh": "CZ：本次黑客约 63 亿美元为美元口径最大，但 BTC 口径仍逊于 MtGox；强调用户占比与市场冲击。",
+      "url": "https://x.com/cz_binance/status/2116198836729520420"
+    },
+    {
+      "excerpt": "We're removing the 5-hour limit for verified Ultra accounts. https://t.co/CewlkJkBmj",
+      "excerpt_zh": "我们将取消已验证 Ultra 账户的 5 小时限额。",
+      "handle": "bcherny",
+      "likes": 7331,
+      "name": "Boris Cherny",
+      "post_id": "2116222842413142111",
+      "tags": [
+        "product"
+      ],
+      "text_zh": "Boris：已验证 Ultra 账户取消 5 小时限额（与 Claude 改名同步）。",
+      "url": "https://x.com/bcherny/status/2116222842413142111"
+    },
+    {
+      "excerpt": "I believe the greatest gift you can give your kids is a calm home. It’s not the big house or the best toys that stick with them. It’s a place where they feel safe. Where mistakes are met with patience. Where voices stay low. Where hard conversations are always followed by repair.",
+      "excerpt_zh": "我认为你能给孩子最好的礼物是一个平静的家。不是大房子或最好的玩具让他们记住，而是一个他们感到安全的地方：犯错被耐心对待、声音保持低沉、艰难对话之后总会修复。",
+      "handle": "SahilBloom",
+      "likes": 7262,
+      "name": "Sahil Bloom",
+      "post_id": "2116159509643116957",
+      "tags": [
+        "habit"
+      ],
+      "text_zh": "Sahil：给孩子最好的礼物是平静的家——安全、耐心、低声量、冲突后能修复。",
+      "url": "https://x.com/SahilBloom/status/2116159509643116957"
+    },
+    {
+      "excerpt": "User funds are safe. \n\nBinance will cover all hacking losses.\n\nDeposits and withdrawals are temporarily suspended while our team conducts security checks, freezes funds, and works with law enforcement.\n\nWe will share a full post-mortem once the investigation is complete.",
+      "excerpt_zh": "用户资金安全。Binance 将覆盖全部黑客损失。团队进行安全检查、冻结资金并配合执法期间，充值与提现暂时暂停。",
+      "handle": "heyibinance",
+      "likes": 5979,
+      "name": "Yi He",
+      "post_id": "2115958049244631357",
+      "tags": [
+        "funding"
+      ],
+      "text_zh": "Binance Yi He：用户资金安全，平台将覆盖全部黑客损失；充提暂停并配合执法。",
+      "url": "https://x.com/heyibinance/status/2115958049244631357"
+    },
+    {
+      "excerpt": "We identified a security incident affecting a modified Claude Code VS Code extension accessed through our Cursor IDE extension marketplace, impacting at most 5,000 users. This malicious version of the extension was not developed by Anthropic. It does not impact other extensions",
+      "excerpt_zh": "我们发现一起安全事件：经 Cursor IDE 扩展市场获取的被篡改 Claude Code VS Code 扩展，最多影响约 5000 用户。该恶意版本并非 Anthropic 开发，也不影响其他扩展。",
+      "handle": "cursor_ai",
+      "likes": 3756,
+      "name": "Cursor",
+      "post_id": "2116074289053175808",
+      "tags": [
+        "code",
+        "product"
+      ],
+      "text_zh": "Cursor：市场里被篡改的 Claude Code 扩展致安全事件，最多约 5000 用户；非 Anthropic 官方。",
+      "url": "https://x.com/cursor_ai/status/2116074289053175808"
+    }
+  ],
+  "pin": [
+    "2116170090991484947"
+  ],
+  "summary_zh": [
+    "Binance 遭重大黑客，Yi He/CZ 称将全额覆盖用户损失；美元口径约 63 亿。",
+    "Claude 改名 Max/Ultra 并取消已验证 Ultra 的 5 小时限额；Cursor 曝 Claude Code 扩展遭篡改。",
+    "Google Suncatcher：轨道 TPU 回传首个提示响应；话题 Claude Code +27%。"
+  ],
+  "topics_zh": "涨幅：Dan Koe +93%、Claude Code +27%、搞钱·副业 +13%、Codex +9%；Gemini/vibe coding/MCP 略跌。"
+}

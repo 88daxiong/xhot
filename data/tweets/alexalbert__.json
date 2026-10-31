@@ -2,6 +2,34 @@
   "handle": "alexalbert__",
   "tweets": [
     {
+      "created_at": "2026-10-30T17:54:51.000Z",
+      "id": "2116227346869194935",
+      "lang": "",
+      "metrics": {
+        "bookmark": 3,
+        "impression": 4292,
+        "like": 33,
+        "quote": 0,
+        "reply": 2,
+        "retweet": 0
+      },
+      "url": "https://x.com/alexalbert__/status/2116227346869194935"
+    },
+    {
+      "created_at": "2026-10-30T17:54:51.000Z",
+      "id": "2116227345501880781",
+      "lang": "",
+      "metrics": {
+        "bookmark": 7,
+        "impression": 19657,
+        "like": 323,
+        "quote": 2,
+        "reply": 98,
+        "retweet": 4
+      },
+      "url": "https://x.com/alexalbert__/status/2116227345501880781"
+    },
+    {
       "created_at": "2026-10-25T00:03:13.000Z",
       "id": "2114145722320969943",
       "lang": "",
