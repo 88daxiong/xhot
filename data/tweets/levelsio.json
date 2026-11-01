@@ -2,6 +2,48 @@
   "handle": "levelsio",
   "tweets": [
     {
+      "created_at": "2026-11-01T12:01:06.000Z",
+      "id": "2116863095624667481",
+      "lang": "",
+      "metrics": {
+        "bookmark": 1,
+        "impression": 917,
+        "like": 2,
+        "quote": 0,
+        "reply": 1,
+        "retweet": 0
+      },
+      "url": "https://x.com/levelsio/status/2116863095624667481"
+    },
+    {
+      "created_at": "2026-11-01T10:45:28.000Z",
+      "id": "2116844062523146668",
+      "lang": "",
+      "metrics": {
+        "bookmark": 11,
+        "impression": 8086,
+        "like": 16,
+        "quote": 0,
+        "reply": 0,
+        "retweet": 0
+      },
+      "url": "https://x.com/levelsio/status/2116844062523146668"
+    },
+    {
+      "created_at": "2026-11-01T10:44:23.000Z",
+      "id": "2116843791214629021",
+      "lang": "",
+      "metrics": {
+        "bookmark": 765,
+        "impression": 54069,
+        "like": 847,
+        "quote": 22,
+        "reply": 90,
+        "retweet": 30
+      },
+      "url": "https://x.com/levelsio/status/2116843791214629021"
+    },
+    {
       "created_at": "2026-10-31T19:18:55.000Z",
       "id": "2116610888635707901",
       "lang": "en",
@@ -2758,48 +2800,6 @@
         "retweet": 5
       },
       "url": "https://x.com/levelsio/status/2109387664268943806"
-    },
-    {
-      "created_at": "2026-10-11T20:52:18.000Z",
-      "id": "2109386634080686276",
-      "lang": "",
-      "metrics": {
-        "bookmark": 332,
-        "impression": 129869,
-        "like": 1539,
-        "quote": 21,
-        "reply": 159,
-        "retweet": 32
-      },
-      "url": "https://x.com/levelsio/status/2109386634080686276"
-    },
-    {
-      "created_at": "2026-10-11T20:34:30.000Z",
-      "id": "2109382154752868798",
-      "lang": "",
-      "metrics": {
-        "bookmark": 30,
-        "impression": 56817,
-        "like": 77,
-        "quote": 1,
-        "reply": 17,
-        "retweet": 1
-      },
-      "url": "https://x.com/levelsio/status/2109382154752868798"
-    },
-    {
-      "created_at": "2026-10-11T20:29:34.000Z",
-      "id": "2109380910181396892",
-      "lang": "",
-      "metrics": {
-        "bookmark": 34,
-        "impression": 30005,
-        "like": 76,
-        "quote": 0,
-        "reply": 12,
-        "retweet": 2
-      },
-      "url": "https://x.com/levelsio/status/2109380910181396892"
     }
   ],
   "user_id": "1577241403"
