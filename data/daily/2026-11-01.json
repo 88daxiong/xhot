@@ -1,0 +1,166 @@
+{
+  "changelog": [],
+  "date": "2026-11-01",
+  "followers_zh": "涨粉：CZ +6914、claudeai +6626、Yi He +5316、Tibo +5095；跌粉：elon −1854、MrBeast −1848、Peterson −515。",
+  "gists": {
+    "2116330183049543768": "Naval：孩子是父母度量时间流逝的方式。",
+    "2116353054614442364": "Peter Yang 强烈推荐《Picard》第 3 季作为 TNG 正统收官。",
+    "2116377535818891690": "mattshumer_：多数情况别自造 harness，用模型原配并写好行为提示词。",
+    "2116477848328307187": "Tibo 邀请创作者贴项目链接与一句话介绍，称建造者只占 1%。",
+    "2116505887091130499": "levelsio 晒图调侃：2027 年德国版 ChatGPT 的样子。",
+    "2116526543346483419": "Mollick：AI 正快速解锁约 300 亿美元的遗留系统迁移积压。",
+    "2116552696320708759": "Codie Sanchez 转述 Altman 教练：成功不止靠拼命工作。",
+    "2116553654857867330": "Harrison Chase：智能体工程远未做完，仍有一批新挑战。",
+    "2116570624282014037": "Huberman 发帖坚持自己的措辞，并附相关讨论链接。",
+    "2116570937135083759": "Huberman：把负能量转化为善意，会成为持续的驱动力。",
+    "2116575197146800629": "GitHub 祝万圣节快乐。",
+    "2116610643466088853": "Ryan Holiday 称批评来自「最糟的人」，并附上下文链接。",
+    "2116636372073087124": "GitHub 上线万圣节主题模式。"
+  },
+  "hide": [
+    "2116037732845957434",
+    "2116042226598056033",
+    "2116047608036888796",
+    "2116049311163122143",
+    "2116161635438248169",
+    "2116179698267128211",
+    "2116190494300504403",
+    "2116291813732495578",
+    "2116414789194789254",
+    "2116522067252375965",
+    "2116524242045124920",
+    "2116530550831780131",
+    "2116541008208884211",
+    "2116543047882174662",
+    "2116577726752788617",
+    "2116582992323752147",
+    "2116585219558109596",
+    "2116588737022882138",
+    "2116598893886791944",
+    "2116617926472016007",
+    "2116637338994606271",
+    "2116608316776571063",
+    "2116551882219090231",
+    "2116523818449805452",
+    "2116523096551440822",
+    "2116552766772666796",
+    "2116614579136635120"
+  ],
+  "highlights": [
+    {
+      "excerpt": "Day 26/ You can now easily switch between multiple accounts on mobile, and coming soon to desktop too. Next two days will be resets… banked… do with this what you may 👀.",
+      "excerpt_zh": "第 26 天/ 手机端现在可以轻松切换多个账号，桌面端也即将上线。接下来两天会是重置……攒着……你们看着办 👀。",
+      "handle": "thsottiaux",
+      "likes": 10159,
+      "name": "Tibo",
+      "post_id": "2116405414921384099",
+      "tags": [
+        "product"
+      ],
+      "text_zh": "Grok 手机端现已支持多账号一键切换，桌面端即将上线。",
+      "url": "https://x.com/thsottiaux/status/2116405414921384099"
+    },
+    {
+      "excerpt": "Binance has allocated US$6.34 billion of its own corporate funds to the User Fund. In the current User Fund, BTC, ETH, USDT, BNB, SOL, USDC, XRP, USD1, RLUSD, and ZEC have all achieved 100% full reserve backing. We will continue to purchase other altcoin assets that are not yet",
+      "excerpt_zh": "币安已将自有企业资金 63.4 亿美元划入用户基金。当前用户基金中，BTC、ETH、USDT、BNB、SOL、USDC、XRP、USD1、RLUSD 与 ZEC 均已实现 100% 全额储备。我们将继续购入尚未齐备的其他山寨币资产",
+      "handle": "heyibinance",
+      "likes": 3256,
+      "name": "Yi He",
+      "post_id": "2116545162818318487",
+      "tags": [
+        "funding"
+      ],
+      "text_zh": "币安自有资金划入用户基金 63.4 亿美元，主流币已 100% 储备。",
+      "url": "https://x.com/heyibinance/status/2116545162818318487"
+    },
+    {
+      "excerpt": "New Anthropic research: Automating subtle emergent misalignment research.\n\nRed-teaming is a vital part of model safety testing, but it’s also limited by researchers’ time.",
+      "excerpt_zh": "Anthropic 新研究：自动化发现隐蔽的涌现错位。\n\n红队测试对模型安全至关重要，但受限于研究员时间。为验证能否自动化，他们让数千个 Claude 智能体去规避训练数据监控器。\n\n这些智能体写出了看起来无害、实则教授错位行为的训练数据（例如老摔跤手带新人、养蜂问答）。\n\n这类样本可直接用来改进未来的训练数据监控器。这只是第一步，但暗示用更强模型和更多算力，红队能力还能大幅提升。\n\n全文见 Alignment Science Blog：https://t.co/24Gs1oSw7Q",
+      "handle": "AnthropicAI",
+      "likes": 2676,
+      "name": "Anthropic",
+      "post_id": "2116349211549843666",
+      "tags": [
+        "model",
+        "agent"
+      ],
+      "text_zh": "Anthropic 用数千 Claude 智能体自动红队，生成可骗过监控的错位训练数据。",
+      "url": "https://x.com/AnthropicAI/status/2116349211549843666"
+    },
+    {
+      "excerpt": "Yesterday France announced tax of €0.055 per GB on internet traffic\n\nToday Germany is considering taxing all AI-generated revenue\n\nYou will see European countries keep clawing more and more money from foreign companies as they are slowly running out of money themselves to pay for their pensions and welfare state",
+      "excerpt_zh": "昨天法国宣布对互联网流量征每 GB €0.055 的税。\n\n今天德国在考虑对所有 AI 生成收入征税。\n\n你会看到欧洲国家不断向外企加码抽税，因为它们自己越来越难撑养老金和福利。\n\n再加上计划中的财富税、以及对想离开的欧洲人的退出税（许多欧盟国家已在实施）。\n\n欧洲正在缺钱。",
+      "handle": "levelsio",
+      "likes": 1324,
+      "name": "@levelsio",
+      "post_id": "2116485229779058954",
+      "tags": [
+        "product",
+        "startup"
+      ],
+      "text_zh": "法国拟征流量税、德国讨论 AI 收入税；levelsio 称欧洲在向外企加税。",
+      "url": "https://x.com/levelsio/status/2116485229779058954"
+    },
+    {
+      "excerpt": "We built PlanAssist to help UK Government planning officers speed up building and renovations across the country.\n\nBuilt with Gemini, it has shown it can cut the time planning officers spend assessing householder applications by up to 58%.",
+      "excerpt_zh": "我们打造了 PlanAssist，帮助英国政府规划官员加快全国建设与翻新审批。\n\n基于 Gemini，它可把规划官员评估家庭申请的时间最多缩短约 58%。现已向另外 12 个地方议会开放，帮助更快决策。🏡 → https://t.co/L3tGJNtiAC",
+      "handle": "GoogleDeepMind",
+      "likes": 907,
+      "name": "Google DeepMind",
+      "post_id": "2116524000977285321",
+      "tags": [
+        "model",
+        "policy"
+      ],
+      "text_zh": "DeepMind 的 PlanAssist 帮英国规划官员审房建申请，耗时可降约 58%。",
+      "url": "https://x.com/GoogleDeepMind/status/2116524000977285321"
+    },
+    {
+      "excerpt": "做了一个 DeepSeek Harness 插件，现在 Claude Design 可以运行在 DeepSeek Harness，并且可以方便的标注、评论修改。 \n\nDeepSee Harness 确实越来越优秀了👍 @tianyi \n\n插件地址：https://t.co/5aOb2IXJMa https://t.co/BteewRJLfR https://t.co/BdEr23waTh",
+      "handle": "dotey",
+      "likes": 658,
+      "name": "宝玉",
+      "post_id": "2116336030584574076",
+      "tags": [
+        "model"
+      ],
+      "text_zh": "宝玉发布 DeepSeek Harness 插件，让 Claude Design 可跑在该 Harness 上。",
+      "url": "https://x.com/dotey/status/2116336030584574076"
+    },
+    {
+      "excerpt": "No trick 🎃 Our @GoogleDeepMind team used AI agents powered by Gemini 4 Argon and @Antigravity to bring this robot to life from scratch. Happy Halloween!",
+      "excerpt_zh": "没有套路 🎃 我们的 @GoogleDeepMind 团队用 Gemini 4 Argon 驱动的 AI 智能体，以及 @Antigravity，从零把这台机器人做活了。万圣节快乐！",
+      "handle": "Google",
+      "likes": 583,
+      "name": "Google",
+      "post_id": "2116522684154585227",
+      "tags": [
+        "model",
+        "agent"
+      ],
+      "text_zh": "DeepMind 用 Gemini 4 Argon 智能体从零驱动万圣节机器人演示。",
+      "url": "https://x.com/Google/status/2116522684154585227"
+    },
+    {
+      "excerpt": "花了大精力搞的Claude多号方案，光解决好几个apple id注册探索就花了几个小时，索性终于稳定了，没弹出KYC也没封号，把经验记录了下来，照着操作也很快，长文如下👇",
+      "handle": "Pluvio9yte",
+      "likes": 543,
+      "name": "雪踏乌云",
+      "post_id": "2116385910879379608",
+      "tags": [
+        "habit"
+      ],
+      "text_zh": "雪踏乌云分享 Claude 多号稳定方案：多 Apple ID、少 KYC、少封号。",
+      "url": "https://x.com/Pluvio9yte/status/2116385910879379608"
+    }
+  ],
+  "pin": [
+    "2116386357752832091"
+  ],
+  "summary_zh": [
+    "币安自掏 63.4 亿美元补齐用户基金；Yi He/CZ 称主流币 100% 储备。",
+    "Anthropic 用数千 Claude 智能体自动化红队，挖出隐蔽错位训练样本。",
+    "话题搞钱·副业 +16%、Qwen +9%；涨粉 CZ +6914、claudeai +6626。"
+  ],
+  "topics_zh": "涨幅：搞钱·副业 +16%、Qwen 千问 +9%、GLM 智谱 +3%；智能体 Agent −14%、Gemini/Codex 偏弱。"
+}

@@ -2,6 +2,34 @@
   "handle": "github",
   "tweets": [
     {
+      "created_at": "2026-10-31T21:00:10.000Z",
+      "id": "2116636372073087124",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 20,
+        "impression": 24026,
+        "like": 378,
+        "quote": 7,
+        "reply": 23,
+        "retweet": 26
+      },
+      "url": "https://x.com/github/status/2116636372073087124"
+    },
+    {
+      "created_at": "2026-10-31T16:57:05.000Z",
+      "id": "2116575197146800629",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 11,
+        "impression": 24015,
+        "like": 293,
+        "quote": 3,
+        "reply": 31,
+        "retweet": 30
+      },
+      "url": "https://x.com/github/status/2116575197146800629"
+    },
+    {
       "created_at": "2026-10-30T23:07:41.000Z",
       "id": "2116306073581662416",
       "lang": "en",
