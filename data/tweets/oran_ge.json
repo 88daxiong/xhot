@@ -2,6 +2,20 @@
   "handle": "oran_ge",
   "tweets": [
     {
+      "created_at": "2026-11-02T11:42:48.000Z",
+      "id": "2117220878157283721",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 1,
+        "impression": 2118,
+        "like": 12,
+        "quote": 0,
+        "reply": 18,
+        "retweet": 0
+      },
+      "url": "https://x.com/oran_ge/status/2117220878157283721"
+    },
+    {
       "created_at": "2026-11-01T22:46:49.000Z",
       "id": "2117025598375870876",
       "lang": "zh",
