@@ -1,0 +1,180 @@
+{
+  "exclude": [
+    "Suu766",
+    "SoulSloop99"
+  ],
+  "people": {
+    "anthropicai": {
+      "bullets": [
+        "向 SEC 提交拟 IPO 的 S-1 注册声明（约 1.5 万赞）。",
+        "训练 Claude 对话中自检滥用（self-awareness 手法）。"
+      ]
+    },
+    "chatgpt": {
+      "bullets": [
+        "可向 Dot 发短信派任务；推出 GPT-6.1 Terra。",
+        "iCloud 邮件/日历插件上线。"
+      ]
+    },
+    "claudeai": {
+      "bullets": [
+        "Max 套餐改名：Max 5x→Max、Max 20x→Ultra，Max 仍 $100/月。",
+        "Claude for Legal 上线合同审阅等现成 artifact 图库。"
+      ]
+    },
+    "codie_sanchez": {
+      "bullets": [
+        "分享孕前向父母请教育儿；员工分 5 级选型法。"
+      ]
+    },
+    "cursor_ai": {
+      "bullets": [
+        "披露影响改装 Claude Code VS Code 扩展的安全事件。",
+        "Agent SDK 上线；设计模式新增 Annotate 标注。"
+      ]
+    },
+    "cz_binance": {
+      "bullets": [
+        "确认疑似黑客攻击但用户资金安全，将覆盖损失。",
+        "提现恢复 12h 净流出仅 2.1%，逾 10 亿美元流动。"
+      ]
+    },
+    "dotey": {
+      "bullets": [
+        "发布 baoyu-design v2，移植 Claude Design/Slides/Dashboard。",
+        "做 DeepSeek Harness 插件，并观察 Opus 5.5 已能做初级视频剪辑。"
+      ]
+    },
+    "elonmusk": {
+      "bullets": [
+        "本周 129 帖；最热谈 2028 若民主党横扫或让 DC/波多黎各成州（13.0 万赞）。",
+        "另有「数学对不上」等短帖热度近 9.8 万赞。"
+      ]
+    },
+    "ericzakariasson": {
+      "bullets": [
+        "grok @bot 0.77.0 稳定推送；征集产品反馈直达团队。"
+      ]
+    },
+    "geminiapp": {
+      "bullets": [
+        "Gemini 可生成/预览/编辑文档 PDF 演示文稿表格等。",
+        "新增沉浸式探索与可分享虚拟形象。"
+      ]
+    },
+    "google": {
+      "bullets": [
+        "官宣 Gemini 4 Carbon 与 Genie 4；TPU 在轨「打来电话」。"
+      ]
+    },
+    "googledeepmind": {
+      "bullets": [
+        "发布 Genie 4 交互世界模型与 Gemini 4 Carbon。",
+        "PlanAssist 助英国规划审批，耗时可降约 58%。"
+      ]
+    },
+    "gregisenberg": {
+      "bullets": [
+        "解读 Anthropic S-1：历史时刻、营收数字引热议。",
+        "断言 SaaS 趋零，靠赠送 CRM/面板换收费模式。"
+      ]
+    },
+    "heyibinance": {
+      "bullets": [
+        "自掏补用户 $12；反复强调 User funds are SAFU。",
+        "宣布分阶段恢复提现，并称币安覆盖黑客损失。"
+      ]
+    },
+    "levelsio": {
+      "bullets": [
+        "吐槽德国/法国数字税：法国已通过每 GB €0.055 流量税。",
+        "强调 VPS 应收口公网端口，走 Tailscale + Cloudflare Tunnel。"
+      ]
+    },
+    "nvidiaai": {
+      "bullets": [
+        "发布开源权重 Nemotron 3.5 Transcribe（30B MoE/~4B 激活）。"
+      ]
+    },
+    "op7418": {
+      "bullets": [
+        "盘点 DeepSeek Harness 插件生态；合并设计 Skill 为 dsh 插件。"
+      ]
+    },
+    "openai": {
+      "bullets": [
+        "发布 GPT-6.1 Terra：更便宜的计算机使用能力。",
+        "分享扩展后的前沿模型监控体系。"
+      ]
+    },
+    "openaidevs": {
+      "bullets": [
+        "ChatGPT Pro/Business 可领最高 $500/月 API 额度。",
+        "GPT-6.1 Terra 进入 API 与 Codex。"
+      ]
+    },
+    "oran_ge": {
+      "bullets": [
+        "解读微软向约 6 万员工发自愿离职邀约（约占 27%）。",
+        "摘要赫拉利演讲：AI 已能改写文明底层信任语言。"
+      ]
+    },
+    "paulg": {
+      "bullets": [
+        "预言「不读不写」将像吸烟一样普遍。",
+        "提醒融资轮次不是里程碑，目标应是做出好公司。"
+      ]
+    },
+    "pluvio9yte": {
+      "bullets": [
+        "整理 Claude 多号稳定方案与封号后环境清理清单。",
+        "试 20+ 视频 skill，筛出可起号的三款动画工具。"
+      ]
+    },
+    "sahilbloom": {
+      "bullets": [
+        "强调给孩子最大礼物是平静的家，而非大房子。",
+        "连续输出压力/常态化行为等人生建议帖，最热 7k+ 赞。"
+      ]
+    },
+    "sundarpichai": {
+      "bullets": [
+        "发布 Gemini 4 Carbon 下一代前沿模型（约 2.4 万赞）。",
+        "Project Suncatcher 原型卫星与 Genie 4 世界模型同步放出。"
+      ]
+    },
+    "swyx": {
+      "bullets": [
+        "自曝 SpaceX IPO 相关 cursor 仓位「翻车」；关注 Opus effort 档。"
+      ]
+    },
+    "thesamparr": {
+      "bullets": [
+        "估算 Anthropic 若 $2T 市值将造约千名 +$1 亿员工。"
+      ]
+    },
+    "thsottiaux": {
+      "bullets": [
+        "Day 25：全档 Pro/Business 用量限额翻倍。",
+        "Day 26：手机端多账号切换上线，桌面端将至。"
+      ]
+    },
+    "trq212": {
+      "bullets": [
+        "技术人焦虑技能贬值与 coding agent「狂热」并存，写了多条观察。",
+        "展示 AI 原生 macOS Dock 个人项目（多模式：写作等）。"
+      ]
+    },
+    "vista8": {
+      "bullets": [
+        "追更 AI 短剧《持械入宋》；安利开源雅思单词工具与 DSH 插件。"
+      ]
+    },
+    "yhslgg": {
+      "bullets": [
+        "拆解抖音「强子的荒野」纯 AI 账号：80 作冲 30 万粉。"
+      ]
+    }
+  },
+  "week": "2026-W45"
+}

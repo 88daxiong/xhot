@@ -2,6 +2,20 @@
   "handle": "microsoft",
   "tweets": [
     {
+      "created_at": "2026-11-01T23:48:49.000Z",
+      "id": "2117041202205990990",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 1,
+        "impression": 8444,
+        "like": 27,
+        "quote": 0,
+        "reply": 2,
+        "retweet": 2
+      },
+      "url": "https://x.com/Microsoft/status/2117041202205990990"
+    },
+    {
       "created_at": "2026-10-29T01:15:06.000Z",
       "id": "2115613363875221930",
       "lang": "",

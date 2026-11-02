@@ -1,0 +1,155 @@
+{
+  "changelog": [],
+  "date": "2026-11-02",
+  "followers_zh": "涨粉：thedankoe +7888、karpathy +4671、heyibinance +3340、thsottiaux +3264；跌粉：elonmusk −5125、mrbeast −2329。",
+  "gists": {
+    "2116721995178225799": "Mollick：不到三年前 GPT-4 还是世界最强，如今两边猜测都已被否定。",
+    "2116723717829230932": "Mollick：智能体难隔离，因共享「大脑」易识别彼此暗号。",
+    "2116754265121366112": "Yi He：币安拟 11-01 UTC 06–09 恢复第一批 15 币种提现。",
+    "2116768459451469945": "CZ 致谢美执法机构协助追踪冻结涉案资产。",
+    "2116773135668404286": "swyx：Karpathy 做 HackerTube 用 Opus 5.5 medium 档。",
+    "2116886496150004078": "Codie：强者不需为侮辱辩解，嘲笑即可。",
+    "2116892768752808001": "Ryan Holiday：别只读，要反复重读喜欢的书。",
+    "2116937012859261242": "Rauch：沙子炼成超级智能，炼金梦成真。",
+    "2116946320674152810": "Peter Yang：浏览器/电脑用 ChatGPT+Codex，设计剪辑用 Claude，7×24 智能体用 Grok Bot。",
+    "2116975418313953463": "Codie：心上伤疤从不来自敌人，而来自以为爱你的人。",
+    "2116990224257491106": "Greg：Opus 5.5 或成个人 vlog/视频营销无需团队的转折点。",
+    "2116996123164569606": "MiniMax 发布 M3.1 Flash 量化版，428B 更易本地跑。",
+    "2117010858845089805": "Amjad：享受补贴价 AI 订阅的人，当心随时被割。"
+  },
+  "hide": [
+    "2116990933103509723",
+    "2116875604889112772",
+    "2116692529970311254",
+    "2117003477079761397",
+    "2116943684881007070",
+    "2116837468184199431",
+    "2116913528246595625",
+    "2117000712223690890",
+    "2116879037175898424",
+    "2116969654849868192",
+    "2116935650511585696",
+    "2116985908268572975",
+    "2116881187394445633",
+    "2116963596462600249",
+    "2116991729660575998",
+    "2116880652389728748",
+    "2116968674590441904"
+  ],
+  "highlights": [
+    {
+      "excerpt": "Weekend hack: HackerTube. I was annoyed with YouTube's recommendations so I had Claude filter down 43M comments over 20 years of HN to 6,454 videos that keep being recommended.",
+      "excerpt_zh": "周末黑客作品：HackerTube。受够了 YouTube 推荐，于是让 Claude 把 HN 20 年里约 4300 万条评论筛成持续被推荐的 6454 个视频。观感明显更好，用 Opus 5.5 大约两小时做成：https://t.co/JIhXN7OSh1",
+      "handle": "karpathy",
+      "likes": 26265,
+      "name": "Andrej Karpathy",
+      "post_id": "2116957135661945283",
+      "tags": [
+        "model",
+        "code"
+      ],
+      "text_zh": "Karpathy 周末用 Opus 5.5 两小时做成 HackerTube：从 4300 万 HN 评论筛出 6454 条片。",
+      "url": "https://x.com/karpathy/status/2116957135661945283"
+    },
+    {
+      "excerpt": "We’ll make sure your $12 is still there; we’ve already moved $12 from our own wallet to cover it.💁🏻‍♀️ https://t.co/rZk4RxPAw6",
+      "excerpt_zh": "我们会确保你的那 12 美元还在；已经从我们自己的钱包划了 12 美元补上。💁🏻‍♀️",
+      "handle": "heyibinance",
+      "likes": 10545,
+      "name": "Yi He",
+      "post_id": "2116743380885746028",
+      "tags": [
+        "funding"
+      ],
+      "text_zh": "Yi He：用户那 12 美元已从自有钱包补上，保证还在。",
+      "url": "https://x.com/heyibinance/status/2116743380885746028"
+    },
+    {
+      "excerpt": "12 hours after withdrawals resumed: 2.1% net outflow, with most occurring in the first couple of hours. Over $1 billion in flow, too.\n\n98% choose to stay!\n\nTrust isn’t earned by what you say in good times. It’s earned by what you do in hard times.\n\nThank you for your trust! 🙏🙏🙏🙏",
+      "excerpt_zh": "提现恢复 12 小时后：净流出 2.1%，大部分发生在最初几小时。资金流动也超过 10 亿美元。\n\n98% 选择留下！\n\n信任不是顺境时说什么挣来的，而是逆境时你做什么挣来的。\n\n感谢信任！🙏🙏🙏🙏",
+      "handle": "cz_binance",
+      "likes": 9435,
+      "name": "CZ 🔶 BNB",
+      "post_id": "2116954044988354798",
+      "tags": [
+        "funding"
+      ],
+      "text_zh": "CZ：提现恢复 12 小时净流出仅 2.1%，逾 10 亿美元流动，98% 选择留下。",
+      "url": "https://x.com/cz_binance/status/2116954044988354798"
+    },
+    {
+      "excerpt": "This is why I said you want your VPS ports all closed\n\nThen only let it be accessible inside your Tailscale for SSH and via a Cloudflare Tunnel to receive web traffic\n\nAny Linux box can be taken over with just a single TCP port exposed to the internet now\n\nA stop gap is disabling MPTCP on your VPS now but even better…",
+      "excerpt_zh": "这就是为什么我说要把 VPS 端口全关。\n\n然后只允许在 Tailscale 内做 SSH，并通过 Cloudflare Tunnel 收网页流量。\n\n现在只要有一个 TCP 端口暴露在公网，任意 Linux 机器都可能被拿下。\n\n权宜之计是现在关掉 VPS 上的 MPTCP，但更好是根本不暴露任何公网端口！",
+      "handle": "levelsio",
+      "likes": 2717,
+      "name": "@levelsio",
+      "post_id": "2116949634111115348",
+      "tags": [
+        "product"
+      ],
+      "text_zh": "levelsio：单开公网 TCP 端口即可被攻陷；VPS 应收口，走 Tailscale/Cloudflare Tunnel。",
+      "url": "https://x.com/levelsio/status/2116949634111115348"
+    },
+    {
+      "excerpt": "My brutally honest advice to someone who wants to make a lot of money.\n\n3 things nobody told you:\n\n1. The only way to make a lot of money is to create a lot of value.\n\nNo one hands out money. No one is going to pay you just because they like you or think you're cool.\n\nMoney https://t.co/QAWw3CwXkt",
+      "excerpt_zh": "给想赚很多钱的人几句残酷实话。\n\n三件没人告诉你的事：\n\n1. 赚很多钱的唯一办法是创造很多价值。\n\n没人发钱。不会有人因为喜欢你或觉得你酷就付钱。",
+      "handle": "SahilBloom",
+      "likes": 1187,
+      "name": "Sahil Bloom",
+      "post_id": "2116915784173719948",
+      "tags": [
+        "career"
+      ],
+      "text_zh": "Sahil Bloom：想赚大钱的三条实话——先创造大量价值，没人白送钱。",
+      "url": "https://x.com/SahilBloom/status/2116915784173719948"
+    },
+    {
+      "excerpt": "Own your intelligence.\n\nAnyone that opposes this has something to sell you (perhaps your own intelligence back to you.)\n\nLocal models need to continue proliferating. The “absolute unit” massive models may be out of reach for now locally, so your best option is to, indeed, keep your options open.",
+      "excerpt_zh": "掌握你自己的智能。\n\n反对这一点的人，多半有东西要卖给你（也许就是把你自己的智能再卖回给你）。\n\n本地模型需要继续扩散。那些「巨无霸」级大模型眼下本地还够不着，所以最好的选择确实是保持选项开放。掌握你的 harness、数据、连接与运行时：你的智能体。拥抱开源。",
+      "handle": "rauchg",
+      "likes": 1164,
+      "name": "Guillermo Rauch",
+      "post_id": "2117000819623243925",
+      "tags": [
+        "model",
+        "agent"
+      ],
+      "text_zh": "Rauch：掌握自己的智能与 harness；本地模型要继续扩散，拥抱开源。",
+      "url": "https://x.com/rauchg/status/2117000819623243925"
+    },
+    {
+      "excerpt": "My vlog today was fully edited by Claude Code with Opus 5.5!\n\nI copied the video clips from my DJI to a folder, then opened Claude Code in it and asked it to edit it into a 10 minute vlog\n\nI made a few adjustments but not a lot\n\nIt transcribed everything I said with mlx-whisper (Whisper large-v3-turbo running on my…",
+      "excerpt_zh": "我今天的 vlog 完全由 Claude Code 配合 Opus 5.5 剪辑！\n\n把 DJI 片段拷进文件夹，打开 Claude Code，让它剪成 10 分钟 vlog。\n\n我只做了少量调整。",
+      "handle": "levelsio",
+      "likes": 1107,
+      "name": "@levelsio",
+      "post_id": "2116959423117857026",
+      "tags": [
+        "model",
+        "code"
+      ],
+      "text_zh": "levelsio：今日 vlog 由 Claude Code + Opus 5.5 全自动剪辑（Whisper/OpenCV）。",
+      "url": "https://x.com/levelsio/status/2116959423117857026"
+    },
+    {
+      "excerpt": "细思恐极，今天看了《人类简史》的作者尤瓦尔赫拉利的演讲：\n《AI已经破解了人类文明底层代码》\n大概的内容是这样的：\n\n人类通过合作成为了世界的主宰\n合作的工具是语言\n合作的本质是信任\n通过语言，我们构建了政治、经济、法律系统，他们的本质是信任系统\n有了这些系统，人类才可以进行大规模的合作\n比如股票，数万人可以购买一个公司的股票，他们并不直接认识这家公司的任何人，但是通过金融系统他们就可以完成投资\n可以说，基于语言所构建的信任系统，是人类文明的底层代码\n\n几千年来，这段代码只有人类能读写。文字、印刷、电报、互联网，都只是搬运人写下的语言，作者永远是人 。\n而现在，AI ，也就是大语言模型来了。",
+      "handle": "oran_ge",
+      "likes": 404,
+      "name": "Orange AI",
+      "post_id": "2116873991432667494",
+      "tags": [
+        "model",
+        "agent"
+      ],
+      "text_zh": "oran_ge 摘要赫拉利演讲：AI 已能改写人类文明底层「信任语言」代码。",
+      "url": "https://x.com/oran_ge/status/2116873991432667494"
+    }
+  ],
+  "pin": [],
+  "summary_zh": [
+    "Karpathy 用 Opus 5.5 两小时做出 HackerTube：4300 万 HN 评论筛出 6454 片。",
+    "币安提现恢复 12h 净流出仅 2.1%；Yi He 自掏补用户 12 美元。",
+    "话题 Dan Koe +272%、DeepSeek +14%；涨粉 thedankoe +7888、karpathy +4671。"
+  ],
+  "topics_zh": "增长侧 Dan Koe +272%、monk mode +19%；AI 里 DeepSeek +14%、Qwen +2.6%，MCP/Kimi 各跌约三成，智能体 Agent −16.6%。"
+}

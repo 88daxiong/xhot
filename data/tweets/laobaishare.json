@@ -2,6 +2,20 @@
   "handle": "laobaishare",
   "tweets": [
     {
+      "created_at": "2026-11-01T12:33:08.000Z",
+      "id": "2116871157228212505",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 45,
+        "impression": 5835,
+        "like": 32,
+        "quote": 0,
+        "reply": 3,
+        "retweet": 1
+      },
+      "url": "https://x.com/laobaishare/status/2116871157228212505"
+    },
+    {
       "created_at": "2026-10-31T00:28:38.000Z",
       "id": "2116326443693347243",
       "lang": "ja",
