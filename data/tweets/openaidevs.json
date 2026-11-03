@@ -2,6 +2,62 @@
   "handle": "openaidevs",
   "tweets": [
     {
+      "created_at": "2026-11-03T00:12:44.000Z",
+      "id": "2117409608352559584",
+      "lang": "",
+      "metrics": {
+        "bookmark": 152,
+        "impression": 45336,
+        "like": 376,
+        "quote": 4,
+        "reply": 6,
+        "retweet": 12
+      },
+      "url": "https://x.com/OpenAIDevs/status/2117409608352559584"
+    },
+    {
+      "created_at": "2026-11-03T00:09:40.000Z",
+      "id": "2117408834348310581",
+      "lang": "",
+      "metrics": {
+        "bookmark": 29,
+        "impression": 46831,
+        "like": 250,
+        "quote": 0,
+        "reply": 4,
+        "retweet": 11
+      },
+      "url": "https://x.com/OpenAIDevs/status/2117408834348310581"
+    },
+    {
+      "created_at": "2026-11-03T00:09:34.000Z",
+      "id": "2117408809224470742",
+      "lang": "",
+      "metrics": {
+        "bookmark": 27,
+        "impression": 51717,
+        "like": 298,
+        "quote": 1,
+        "reply": 2,
+        "retweet": 9
+      },
+      "url": "https://x.com/OpenAIDevs/status/2117408809224470742"
+    },
+    {
+      "created_at": "2026-11-03T00:09:30.000Z",
+      "id": "2117408792346509663",
+      "lang": "",
+      "metrics": {
+        "bookmark": 2304,
+        "impression": 944843,
+        "like": 5223,
+        "quote": 282,
+        "reply": 296,
+        "retweet": 394
+      },
+      "url": "https://x.com/OpenAIDevs/status/2117408792346509663"
+    },
+    {
       "created_at": "2026-10-30T23:08:03.000Z",
       "id": "2116306164375863343",
       "lang": "en",

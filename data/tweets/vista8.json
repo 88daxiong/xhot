@@ -2,6 +2,132 @@
   "handle": "vista8",
   "tweets": [
     {
+      "created_at": "2026-11-03T10:52:45.000Z",
+      "id": "2117570671178092887",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 1618,
+        "like": 9,
+        "quote": 0,
+        "reply": 5,
+        "retweet": 1
+      },
+      "url": "https://x.com/vista8/status/2117570671178092887"
+    },
+    {
+      "created_at": "2026-11-03T06:59:20.000Z",
+      "id": "2117511929807933494",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 14,
+        "impression": 12310,
+        "like": 47,
+        "quote": 0,
+        "reply": 38,
+        "retweet": 1
+      },
+      "url": "https://x.com/vista8/status/2117511929807933494"
+    },
+    {
+      "created_at": "2026-11-03T06:44:27.000Z",
+      "id": "2117508185426964782",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 2,
+        "impression": 3481,
+        "like": 0,
+        "quote": 0,
+        "reply": 0,
+        "retweet": 0
+      },
+      "url": "https://x.com/vista8/status/2117508185426964782"
+    },
+    {
+      "created_at": "2026-11-03T06:44:14.000Z",
+      "id": "2117508130431283416",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 82,
+        "impression": 40112,
+        "like": 91,
+        "quote": 7,
+        "reply": 67,
+        "retweet": 6
+      },
+      "url": "https://x.com/vista8/status/2117508130431283416"
+    },
+    {
+      "created_at": "2026-11-03T04:39:23.000Z",
+      "id": "2117476713504604365",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 289,
+        "impression": 13585,
+        "like": 194,
+        "quote": 9,
+        "reply": 27,
+        "retweet": 33
+      },
+      "url": "https://x.com/vista8/status/2117476713504604365"
+    },
+    {
+      "created_at": "2026-11-03T04:03:31.000Z",
+      "id": "2117467684376088757",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 64,
+        "impression": 6305,
+        "like": 50,
+        "quote": 2,
+        "reply": 26,
+        "retweet": 8
+      },
+      "url": "https://x.com/vista8/status/2117467684376088757"
+    },
+    {
+      "created_at": "2026-11-03T03:34:12.000Z",
+      "id": "2117460309212537193",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 7,
+        "impression": 1997,
+        "like": 4,
+        "quote": 0,
+        "reply": 0,
+        "retweet": 0
+      },
+      "url": "https://x.com/vista8/status/2117460309212537193"
+    },
+    {
+      "created_at": "2026-11-03T03:33:05.000Z",
+      "id": "2117460027921645973",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 27,
+        "impression": 6078,
+        "like": 53,
+        "quote": 0,
+        "reply": 23,
+        "retweet": 6
+      },
+      "url": "https://x.com/vista8/status/2117460027921645973"
+    },
+    {
+      "created_at": "2026-11-03T02:26:12.000Z",
+      "id": "2117443194229231622",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 104,
+        "impression": 8175,
+        "like": 86,
+        "quote": 0,
+        "reply": 37,
+        "retweet": 9
+      },
+      "url": "https://x.com/vista8/status/2117443194229231622"
+    },
+    {
       "created_at": "2026-11-02T17:12:31.000Z",
       "id": "2117303854308212895",
       "lang": "",
@@ -2674,34 +2800,6 @@
         "retweet": 9
       },
       "url": "https://x.com/vista8/status/2109133350980251952"
-    },
-    {
-      "created_at": "2026-10-11T04:05:23.000Z",
-      "id": "2109133236244996263",
-      "lang": "zh",
-      "metrics": {
-        "bookmark": 642,
-        "impression": 38451,
-        "like": 372,
-        "quote": 14,
-        "reply": 95,
-        "retweet": 47
-      },
-      "url": "https://x.com/vista8/status/2109133236244996263"
-    },
-    {
-      "created_at": "2026-10-11T01:17:34.000Z",
-      "id": "2109091000597745740",
-      "lang": "zh",
-      "metrics": {
-        "bookmark": 52,
-        "impression": 9317,
-        "like": 21,
-        "quote": 0,
-        "reply": 1,
-        "retweet": 2
-      },
-      "url": "https://x.com/vista8/status/2109091000597745740"
     }
   ],
   "user_id": "6690032"

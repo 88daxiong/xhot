@@ -2,6 +2,20 @@
   "handle": "levelsio",
   "tweets": [
     {
+      "created_at": "2026-11-03T11:54:04.000Z",
+      "id": "2117586103158853806",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 5,
+        "impression": 7087,
+        "like": 30,
+        "quote": 2,
+        "reply": 17,
+        "retweet": 1
+      },
+      "url": "https://x.com/levelsio/status/2117586103158853806"
+    },
+    {
       "created_at": "2026-11-02T23:31:59.000Z",
       "id": "2117399350150123748",
       "lang": "",
@@ -2786,20 +2800,6 @@
         "retweet": 3
       },
       "url": "https://x.com/levelsio/status/2110309126219984994"
-    },
-    {
-      "created_at": "2026-10-14T09:24:31.000Z",
-      "id": "2110300711917379691",
-      "lang": "en",
-      "metrics": {
-        "bookmark": 137,
-        "impression": 68948,
-        "like": 817,
-        "quote": 3,
-        "reply": 55,
-        "retweet": 7
-      },
-      "url": "https://x.com/levelsio/status/2110300711917379691"
     }
   ],
   "user_id": "1577241403"
