@@ -1,0 +1,144 @@
+{
+  "changelog": [],
+  "date": "2026-11-03",
+  "followers_zh": "涨粉：karpathy +8245、thedankoe +4306、thsottiaux +3438、naval +2636；跌粉：elonmusk −18771、google −2837、microsoft −2689。",
+  "gists": {
+    "2117080117881282964": "吴说：币安攻击者两日经 Tron 转移约2.42亿美元，超30亿仍未动。",
+    "2117113121102045347": "Pichai：称赞高质量基准与 Carbon 成本曲线空间。",
+    "2117229259425038344": "Mistral Large 4 短提示写出量子化学 SCF 求解器并可视化。",
+    "2117233673749831965": "吴说转发ZachXBT：欧盟实体疑遭窃超1.06亿美元加密资产。",
+    "2117242199335407803": "CZ：各国或发本地稳定币以抬升本币与国债需求。",
+    "2117250560202035509": "gregisenberg：用 Opus 5.5/Astra/达芬奇做调色等剪辑技巧。",
+    "2117251343467291120": "levelsio：对比私人飞机与民航致死率，Learjet 60 约 1/110万次。",
+    "2117252866503290905": "Elon：Starlink 能救命。",
+    "2117256163075260788": "RyanHoliday 引《搏击俱乐部》：买不需要的东西取悦不喜欢的人。",
+    "2117256379107061858": "Tim Ferriss 转发 Huberman：如何练出强壮的脖子。",
+    "2117270512657395899": "Huberman×Robert Greene：如何在日常触及崇高体验。",
+    "2117272451545514001": "levelsio：Ubuntu 公网漏洞仍未修，考虑全量迁 Debian。",
+    "2117283561019515097": "nutlope 开源发布 Fontzz：36 款免费新字体。",
+    "2117330909443543343": "Peterson：西方危机更深层是意义被抽空后的无目的痛苦。",
+    "2117338841749029221": "emollick：一项待复现结果，若成立影响很大。",
+    "2117341332645826945": "swyx：无实质文字的表情反应帖。",
+    "2117355427138543629": "gregisenberg：给 SMB 配 Grok Bot（电脑/邮箱/电话）或成好生意。"
+  },
+  "hide": [
+    "2117232519984848984",
+    "2117341332645826945",
+    "2117360990119506022",
+    "2117210062804647984"
+  ],
+  "highlights": [
+    {
+      "excerpt": "I have a YouTube video I really really want to make but it will take over 1,000 days to film and I need someone logical to talk me out of it plz",
+      "excerpt_zh": "我有一部特别想拍的 YouTube 视频，但拍摄要超过 1000 天，求有个理性的人把我劝退。",
+      "handle": "MrBeast",
+      "likes": 25791,
+      "name": "MrBeast",
+      "post_id": "2117113346549817376",
+      "tags": [
+        "creator"
+      ],
+      "text_zh": "想拍一部需拍摄超1000天的YouTube视频，求理性的人劝自己别上。",
+      "url": "https://x.com/MrBeast/status/2117113346549817376"
+    },
+    {
+      "excerpt": "A little something that's not mentioned, and ppl may not even think about:\n\nBinance did not borrow money\nBinance did not sell assets\nBinance did not raise money\n\nBinance covered from its balance sheet.\n\nThis differs from other incidents that people keep wanting to compare to. 🙏",
+      "excerpt_zh": "很少有人提、甚至想不到的一点：\n\n币安没有借钱\n币安没有卖资产\n币安没有融资\n\n损失由自有资产负债表覆盖。\n\n这与大家总想拿来对比的其他事件不同。🙏",
+      "handle": "cz_binance",
+      "likes": 10130,
+      "name": "CZ 🔶 BNB",
+      "post_id": "2117302637574144147",
+      "tags": [
+        "startup"
+      ],
+      "text_zh": "币安强调：未借贷、未卖资产、未融资，用自有资产负债表覆盖损失。",
+      "url": "https://x.com/cz_binance/status/2117302637574144147"
+    },
+    {
+      "excerpt": "Applications are now open for the Anthropic Residency, a paid, fixed-term research program for academics, technical founders, and staff-level engineers who want to make AI safe and beneficial for everyone. No ML background is required.\n\nApply by November 22:",
+      "excerpt_zh": "Anthropic Residency 现已开放申请：面向学者、技术创始人与资深工程师的带薪定期研究项目，目标是让 AI 安全且有益于所有人。不要求机器学习背景。\n\n申请截止 11 月 22 日：",
+      "handle": "AnthropicAI",
+      "likes": 9503,
+      "name": "Anthropic",
+      "post_id": "2117343929960112486",
+      "tags": [
+        "research"
+      ],
+      "text_zh": "Anthropic Residency带薪研究项目开放申请，截止11月22日，不要求ML背景。",
+      "url": "https://x.com/AnthropicAI/status/2117343929960112486"
+    },
+    {
+      "excerpt": "Fellow resetters, heads up that we're working on expanding the family of frontier models that power dots, including GPT-6 Astra and GPT-6.1 Terra and some others in the future. Terra brings speed and a nice personality upgrade, and will help us bring dots to more people.",
+      "excerpt_zh": "各位 resetters 注意：我们正扩展驱动 dots 的前沿模型家族，包括 GPT-6 Astra、GPT-6.1 Terra 以及后续更多。Terra 更快、人设更好，也有助于把 dots 带给更多人。",
+      "handle": "thsottiaux",
+      "likes": 9022,
+      "name": "Tibo",
+      "post_id": "2117283124833055196",
+      "tags": [
+        "model"
+      ],
+      "text_zh": "dots将扩展接入GPT-6 Astra与GPT-6.1 Terra等前沿模型家族。",
+      "url": "https://x.com/thsottiaux/status/2117283124833055196"
+    },
+    {
+      "excerpt": "one week in my takeaway is that you don't need unlimited tokens to do great work, the $200 plans are amazing\n\nand this is the most expensive intelligence will ever be",
+      "excerpt_zh": "用了一周的体会：不必无限 token 也能做出好活，$200 档套餐很香。\n\n而且这大概是智能有史以来最贵的时候了。",
+      "handle": "trq212",
+      "likes": 5535,
+      "name": "Theo",
+      "post_id": "2117305792923889731",
+      "tags": [
+        "product"
+      ],
+      "text_zh": "一周体感：不必无限额度，$200档就够；智能只会越来越便宜。",
+      "url": "https://x.com/trq212/status/2117305792923889731"
+    },
+    {
+      "excerpt": "I regret to inform you that nobody cares. When you’re winning, nobody cares. When you’re losing, nobody cares. Stop fearing the judgement of people who were never even thinking about you. Nobody is thinking about you. They’re too busy thinking about themselves. Go do the thing.",
+      "excerpt_zh": "很遗憾地告诉你：没人在意。你赢了没人在意，你输了也没人在意。别再害怕那些根本没想过你的人的评判。没人在想你，他们只顾着想自己。去做那件事吧。",
+      "handle": "SahilBloom",
+      "likes": 5290,
+      "name": "Sahil Bloom",
+      "post_id": "2117280539518681590",
+      "tags": [
+        "career"
+      ],
+      "text_zh": "没人真正在意你的成败，别怕评判，去做你想做的事。",
+      "url": "https://x.com/SahilBloom/status/2117280539518681590"
+    },
+    {
+      "excerpt": "For AGI to benefit all of humanity, it should help people with the everyday tasks that matter most to them. So we built LifeVal, a new benchmark shaped by feedback from thousands of ChatGPT users on where they most want help from a personal assistant—from finding childcare to",
+      "excerpt_zh": "若要 AGI 惠及全人类，就该帮人们完成最要紧的日常事。于是我们做了 LifeVal：依据数千名 ChatGPT 用户反馈、围绕个人助手最想被帮之处打造的新基准——从找托儿到",
+      "handle": "OpenAI",
+      "likes": 4854,
+      "name": "OpenAI",
+      "post_id": "2117307611338997846",
+      "tags": [
+        "research",
+        "model"
+      ],
+      "text_zh": "OpenAI发布LifeVal：按数千用户日常助手需求打磨的新基准。",
+      "url": "https://x.com/OpenAI/status/2117307611338997846"
+    },
+    {
+      "excerpt": "Our team used Gemini 4 Argon to build and edit this entire video, then displayed it on a real vintage CRT TV 📺\n\nWe used Argon in @Antigravity to script the 3D Blender boot animations and retro SuperCollider audio, then piped the signal via Raspberry Pi to a real TV screen.",
+      "excerpt_zh": "我们团队用 Gemini 4 Argon 制作并剪辑了整支视频，再投到一台真实的复古 CRT 电视上📺\n\n在 @Antigravity 里用 Argon 编写 3D Blender 开机动画和复古 SuperCollider 音频，再经树莓派把信号接到真电视屏。",
+      "handle": "Google",
+      "likes": 3179,
+      "name": "Google",
+      "post_id": "2117305921936269425",
+      "tags": [
+        "model"
+      ],
+      "text_zh": "团队用Gemini 4 Argon全流程做视频，并投放到真实复古CRT电视。",
+      "url": "https://x.com/Google/status/2117305921936269425"
+    }
+  ],
+  "pin": [],
+  "summary_zh": [
+    "Anthropic Residency开放申请(截止11/22)；OpenAI发LifeVal基准。",
+    "话题Dan Koe+45%、GLM+26%、Qwen/DeepSeek约+25%；Gemini-35%。",
+    "涨粉karpathy+8245、thedankoe+4306；跌粉elon约-1.9万。"
+  ],
+  "topics_zh": "增长侧 Dan Koe +45%、monk mode +13.5%；AI 里 GLM +26%、Qwen +25%、DeepSeek +24%、Opus 5.5 +22%，Gemini −35%、solopreneur −29%。"
+}

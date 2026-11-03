@@ -2,6 +2,104 @@
   "handle": "cz_binance",
   "tweets": [
     {
+      "created_at": "2026-11-02T17:10:08.000Z",
+      "id": "2117303255499968865",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 36,
+        "impression": 90636,
+        "like": 1532,
+        "quote": 20,
+        "reply": 266,
+        "retweet": 103
+      },
+      "url": "https://x.com/cz_binance/status/2117303255499968865"
+    },
+    {
+      "created_at": "2026-11-02T17:07:41.000Z",
+      "id": "2117302637574144147",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 295,
+        "impression": 581718,
+        "like": 10130,
+        "quote": 159,
+        "reply": 1170,
+        "retweet": 979
+      },
+      "url": "https://x.com/cz_binance/status/2117302637574144147"
+    },
+    {
+      "created_at": "2026-11-02T16:58:15.000Z",
+      "id": "2117300264738889901",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 83,
+        "impression": 803321,
+        "like": 3305,
+        "quote": 39,
+        "reply": 457,
+        "retweet": 271
+      },
+      "url": "https://x.com/cz_binance/status/2117300264738889901"
+    },
+    {
+      "created_at": "2026-11-02T16:54:38.000Z",
+      "id": "2117299356747604211",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 32,
+        "impression": 320707,
+        "like": 673,
+        "quote": 24,
+        "reply": 361,
+        "retweet": 45
+      },
+      "url": "https://x.com/cz_binance/status/2117299356747604211"
+    },
+    {
+      "created_at": "2026-11-02T13:07:31.000Z",
+      "id": "2117242199335407803",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 235,
+        "impression": 406866,
+        "like": 3768,
+        "quote": 53,
+        "reply": 396,
+        "retweet": 421
+      },
+      "url": "https://x.com/cz_binance/status/2117242199335407803"
+    },
+    {
+      "created_at": "2026-11-02T13:03:06.000Z",
+      "id": "2117241088054616201",
+      "lang": "art",
+      "metrics": {
+        "bookmark": 17,
+        "impression": 264711,
+        "like": 1854,
+        "quote": 14,
+        "reply": 266,
+        "retweet": 152
+      },
+      "url": "https://x.com/cz_binance/status/2117241088054616201"
+    },
+    {
+      "created_at": "2026-11-02T13:00:28.000Z",
+      "id": "2117240423576162481",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 42,
+        "impression": 287751,
+        "like": 1644,
+        "quote": 15,
+        "reply": 242,
+        "retweet": 146
+      },
+      "url": "https://x.com/cz_binance/status/2117240423576162481"
+    },
+    {
       "created_at": "2026-11-01T23:21:40.000Z",
       "id": "2117034367763787926",
       "lang": "en",

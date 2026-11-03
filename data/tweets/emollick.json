@@ -2,6 +2,90 @@
   "handle": "emollick",
   "tweets": [
     {
+      "created_at": "2026-11-02T21:45:13.000Z",
+      "id": "2117372481191239762",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 82,
+        "impression": 24722,
+        "like": 211,
+        "quote": 5,
+        "reply": 46,
+        "retweet": 13
+      },
+      "url": "https://x.com/emollick/status/2117372481191239762"
+    },
+    {
+      "created_at": "2026-11-02T20:01:39.000Z",
+      "id": "2117346417979384162",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 223,
+        "impression": 36497,
+        "like": 532,
+        "quote": 5,
+        "reply": 73,
+        "retweet": 25
+      },
+      "url": "https://x.com/emollick/status/2117346417979384162"
+    },
+    {
+      "created_at": "2026-11-02T19:31:32.000Z",
+      "id": "2117338841749029221",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 240,
+        "impression": 49110,
+        "like": 1097,
+        "quote": 5,
+        "reply": 70,
+        "retweet": 59
+      },
+      "url": "https://x.com/emollick/status/2117338841749029221"
+    },
+    {
+      "created_at": "2026-11-02T19:28:39.000Z",
+      "id": "2117338116185035004",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 70,
+        "impression": 15685,
+        "like": 198,
+        "quote": 1,
+        "reply": 35,
+        "retweet": 12
+      },
+      "url": "https://x.com/emollick/status/2117338116185035004"
+    },
+    {
+      "created_at": "2026-11-02T15:48:22.000Z",
+      "id": "2117282677493580028",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 6,
+        "impression": 6599,
+        "like": 90,
+        "quote": 0,
+        "reply": 4,
+        "retweet": 1
+      },
+      "url": "https://x.com/emollick/status/2117282677493580028"
+    },
+    {
+      "created_at": "2026-11-02T15:35:11.000Z",
+      "id": "2117279363175739630",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 77,
+        "impression": 27989,
+        "like": 585,
+        "quote": 15,
+        "reply": 203,
+        "retweet": 31
+      },
+      "url": "https://x.com/emollick/status/2117279363175739630"
+    },
+    {
       "created_at": "2026-11-02T06:33:38.000Z",
       "id": "2117143076443746659",
       "lang": "en",

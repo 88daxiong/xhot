@@ -2,6 +2,34 @@
   "handle": "tferriss",
   "tweets": [
     {
+      "created_at": "2026-11-02T22:37:14.000Z",
+      "id": "2117385573531029750",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 10,
+        "impression": 10995,
+        "like": 40,
+        "quote": 0,
+        "reply": 7,
+        "retweet": 1
+      },
+      "url": "https://x.com/tferriss/status/2117385573531029750"
+    },
+    {
+      "created_at": "2026-11-02T14:03:52.000Z",
+      "id": "2117256379107061858",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 409,
+        "impression": 34225,
+        "like": 360,
+        "quote": 0,
+        "reply": 13,
+        "retweet": 17
+      },
+      "url": "https://x.com/tferriss/status/2117256379107061858"
+    },
+    {
       "created_at": "2026-10-30T16:18:26.000Z",
       "id": "2116203082329493955",
       "lang": "",

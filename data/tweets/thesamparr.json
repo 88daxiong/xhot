@@ -2,6 +2,48 @@
   "handle": "thesamparr",
   "tweets": [
     {
+      "created_at": "2026-11-02T22:00:32.000Z",
+      "id": "2117376336243425403",
+      "lang": "",
+      "metrics": {
+        "bookmark": 10,
+        "impression": 4258,
+        "like": 23,
+        "quote": 0,
+        "reply": 13,
+        "retweet": 1
+      },
+      "url": "https://x.com/thesamparr/status/2117376336243425403"
+    },
+    {
+      "created_at": "2026-11-02T19:12:39.000Z",
+      "id": "2117334086318744035",
+      "lang": "",
+      "metrics": {
+        "bookmark": 41,
+        "impression": 11001,
+        "like": 86,
+        "quote": 0,
+        "reply": 28,
+        "retweet": 5
+      },
+      "url": "https://x.com/thesamparr/status/2117334086318744035"
+    },
+    {
+      "created_at": "2026-11-02T18:35:32.000Z",
+      "id": "2117324745670840636",
+      "lang": "",
+      "metrics": {
+        "bookmark": 48,
+        "impression": 14326,
+        "like": 73,
+        "quote": 2,
+        "reply": 22,
+        "retweet": 6
+      },
+      "url": "https://x.com/thesamparr/status/2117324745670840636"
+    },
+    {
       "created_at": "2026-10-30T21:50:23.000Z",
       "id": "2116286621280841804",
       "lang": "en",

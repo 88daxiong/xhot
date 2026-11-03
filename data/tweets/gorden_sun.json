@@ -2,6 +2,48 @@
   "handle": "gorden_sun",
   "tweets": [
     {
+      "created_at": "2026-11-02T13:55:23.000Z",
+      "id": "2117254245795958884",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 19,
+        "impression": 3102,
+        "like": 36,
+        "quote": 0,
+        "reply": 14,
+        "retweet": 4
+      },
+      "url": "https://x.com/Gorden_Sun/status/2117254245795958884"
+    },
+    {
+      "created_at": "2026-11-02T13:41:35.000Z",
+      "id": "2117250771851022594",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 101,
+        "impression": 4644,
+        "like": 106,
+        "quote": 0,
+        "reply": 9,
+        "retweet": 9
+      },
+      "url": "https://x.com/Gorden_Sun/status/2117250771851022594"
+    },
+    {
+      "created_at": "2026-11-02T06:27:28.000Z",
+      "id": "2117141523645235538",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 22,
+        "impression": 2479,
+        "like": 12,
+        "quote": 0,
+        "reply": 15,
+        "retweet": 1
+      },
+      "url": "https://x.com/Gorden_Sun/status/2117141523645235538"
+    },
+    {
       "created_at": "2026-11-01T14:29:53.000Z",
       "id": "2116900539732807991",
       "lang": "zh",
