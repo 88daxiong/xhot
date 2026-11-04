@@ -1,0 +1,153 @@
+{
+  "changelog": [],
+  "date": "2026-11-04",
+  "followers_zh": "涨粉：anthropicai +8906、karpathy +4715、naval +4109、thsottiaux +3606；跌粉：elonmusk −7211、microsoft −2085、google −1500。",
+  "gists": {
+    "2117409608352559584": "OpenAI Dev：已向上游 Git 回馈中断 packfile 清理等修复。",
+    "2117425552361480278": "Dickie Bush：手写三页日记逼自己慢下来思考。",
+    "2117445039211086096": "Ethan Mollick：呼吁大规模复现旧 LLM 研究发现。",
+    "2117479668768981376": "马斯克：Starlink 能救人。",
+    "2117481616943820843": "Amjad：金融圈同类操作普遍，封禁大棒要落下。",
+    "2117489367417803042": "Tibo 短帖「Le GPT Fat」。",
+    "2117554052003508357": "GaryVee 祝福式刷屏短帖。",
+    "2117611190377386079": "Google 汇总十月最大 AI 更新一览。",
+    "2117618047016214990": "Ryan Holiday：知识的目的是行动。",
+    "2117619305479286993": "孙宇晨律师申请制裁 WLFI：诉讼中才披露其阿联酋身份。",
+    "2117626744668905487": "马斯克短帖动员：今天投红党。",
+    "2117646042070151611": "Jordan Peterson 短帖：Dr. Strange 回归。",
+    "2117649850644705591": "马斯克补充：电力设备、冷却、网络与电池同样关键。",
+    "2117656478689775862": "马斯克一句「Prophetic」配图转发。",
+    "2117659447518740960": "Perplexity Computer 可自动化电商全流程示例。",
+    "2117667631004086761": "Sam Parr：吐槽特斯拉错过「Elon 车用香氛」商机。",
+    "2117667922357457107": "Huberman：爱是一种反叛；嘉宾 Robert Greene 新一期播客。",
+    "2117671678650294437": "用 Grok Bot 跟 Comcast 客服砍价并提速；还被问天气。",
+    "2117698643843047690": "levelsio：呼吁 FAA 立刻禁 Learjet 60。",
+    "2117712705901728199": "OpenRouter 上线隐身模型 Crouton Alpha：免费、1M 上下文、多模态。",
+    "2117734977312047537": "Greg：公司 50+ 人分布 12 国，管理越来越有点赛博朋克。"
+  },
+  "hide": [
+    "2117626744668905487",
+    "2117656478689775862",
+    "2117646042070151611",
+    "2117489367417803042",
+    "2117554052003508357",
+    "2117698643843047690"
+  ],
+  "highlights": [
+    {
+      "excerpt": "We built Pando, a new Git backend for our monorepo, to handle more pushes and fetches without changing how our engineers and agents use Git.\n\nPando cut push latency by ~80% and now serves nearly a petabyte of Git data a day. We can grow Git capacity alongside agent usage.",
+      "excerpt_zh": "我们为 monorepo 自研了新的 Git 后端 Pando，工程师和智能体照常用 Git，推送/拉取更稳。\n\nPando 把推送延迟砍了约 80%，每天服务近 1 PB 的 Git 数据，容量能跟着智能体用量一起长。",
+      "handle": "OpenAIDevs",
+      "likes": 5223,
+      "name": "OpenAI Developers",
+      "post_id": "2117408792346509663",
+      "tags": [
+        "agent",
+        "code"
+      ],
+      "text_zh": "OpenAI 为 monorepo 自研 Pando Git 后端，推送延迟降约 80%，日服近 PB。",
+      "url": "https://x.com/OpenAIDevs/status/2117408792346509663"
+    },
+    {
+      "excerpt": "this is basically the bitter lesson at work\n\nthe smartest models will need fewer and fewer tokens, they won't need to verify their work or check it for bugs, they will just be right",
+      "excerpt_zh": "这基本就是苦涩教训在起作用。\n\n最聪明的模型会越来越少依赖 token，不必再反复核验或查 bug，它们会直接做对。",
+      "handle": "trq212",
+      "likes": 4843,
+      "name": "Thariq",
+      "post_id": "2117670540148347273",
+      "tags": [
+        "model"
+      ],
+      "text_zh": "苦涩教训：更强模型会越来越少用 token，不必反复自检也能一次做对。",
+      "url": "https://x.com/trq212/status/2117670540148347273"
+    },
+    {
+      "excerpt": "Friday was my last day at Anthropic.\n\nTwo years ago, when Claude Code was a small internal tool, I asked it to build an RL env. I steered it for tens of hours but never manually wrote a line of code. It worked, I was hooked, and I joined the team.",
+      "excerpt_zh": "周五是我在 Anthropic 的最后一天。\n\n两年前 Claude Code 还只是内部小工具时，我让它搭了一个 RL 环境——盯了几十小时，自己一行代码没写。跑通了，上瘾了，于是加入了团队。",
+      "handle": "_catwu",
+      "likes": 4714,
+      "name": "cat",
+      "post_id": "2117731934340337676",
+      "tags": [
+        "code",
+        "agent"
+      ],
+      "text_zh": "Claude Code 核心贡献者 cat 离开 Anthropic：从内部小工具到行业标杆。",
+      "url": "https://x.com/_catwu/status/2117731934340337676"
+    },
+    {
+      "excerpt": "ChatGPT and Codex are helping engineers build for the physical world.\n\nWe’re sharing our progress across mechanical design, electrical engineering, and simulation—from helping our hardware teams iterate faster to testing new workflows with industry collaborators.",
+      "excerpt_zh": "ChatGPT 和 Codex 正在帮工程师面向物理世界做设计。\n\n我们分享机械设计、电气工程与仿真上的进展——从加速硬件团队迭代，到与行业伙伴试新工作流。",
+      "handle": "OpenAI",
+      "likes": 4198,
+      "name": "OpenAI",
+      "post_id": "2117692475775258785",
+      "tags": [
+        "agent",
+        "code"
+      ],
+      "text_zh": "ChatGPT 与 Codex 正帮工程师做机械/电气/仿真等物理世界设计。",
+      "url": "https://x.com/OpenAI/status/2117692475775258785"
+    },
+    {
+      "excerpt": "如果你是一个刚学会翻墙的大学生，千万不要只会在X看每日大赛、Telegram找片、YouTube刷视频！！！\n\n海外其实藏着很多非常实用的网站，有些你可能用了之后，才发现以前浪费了多少时间\n\n很多人翻墙几年，依然不知道这些网站的存在\n\n整理了12个国外实用网站，建议全部收藏，说不定里面就有你一直在找的工具👇",
+      "handle": "Suu766",
+      "likes": 3790,
+      "name": "Suu",
+      "post_id": "2117484547084517715",
+      "tags": [
+        "creator"
+      ],
+      "text_zh": "整理 12 个国外实用网站：翻墙别只会刷短视频，工具站值得收藏。",
+      "url": "https://x.com/Suu766/status/2117484547084517715"
+    },
+    {
+      "excerpt": "There's a buzzy new paper about GPT-6 Astra being able to directly interpret model weights (prompts full of floating point numbers) - I tried it with Qwen 3.8 27B on my laptop and found that, after 45+ minutes, that model could achieve the same thing",
+      "excerpt_zh": "有篇很火的论文说 GPT-6 Astra 能直接解读模型权重（提示词里塞满浮点数）——我在笔记本上用 Qwen 3.8 27B 试了，跑了 45 分钟以上，也能做到类似的事。",
+      "handle": "simonw",
+      "likes": 3438,
+      "name": "Simon Willison",
+      "post_id": "2117655816581071203",
+      "tags": [
+        "model",
+        "research"
+      ],
+      "text_zh": "热议「GPT-6 Astra 读权重」论文；他用本机 Qwen 3.8 27B 复现同类能力。",
+      "url": "https://x.com/simonw/status/2117655816581071203"
+    },
+    {
+      "excerpt": "Underrated life advice: Your best years don't have to be behind you. You can be in the best shape of your life at 50. Start the company at 60. Fall in love at 70. Reinvent yourself at 80. Change doesn’t have an expiration date. Your best years are yours to create. So just start.",
+      "excerpt_zh": "被低估的人生建议：你最好的年份不必已经过去。50 岁可以是身材巅峰，60 岁创业，70 岁恋爱，80 岁重塑自己。改变没有保质期。最好的年份由你创造——所以现在就开始。",
+      "handle": "SahilBloom",
+      "likes": 3216,
+      "name": "Sahil Bloom",
+      "post_id": "2117609417524863121",
+      "tags": [
+        "career"
+      ],
+      "text_zh": "被低估的人生建议：最好的年份没有保质期，50/60/70 都能重新开始。",
+      "url": "https://x.com/SahilBloom/status/2117609417524863121"
+    },
+    {
+      "excerpt": "💸 Update: My total biz expenses have now dropped to just ~$300/mo!\n\nThis is to run all my websites/apps serving per year:\n- 20,000 paying customers\n- 252 million visitors\n- 2.4 billion requests\n- 2.4 petabyte (PB) in bandwidth\n\n(~$8,000/mo if you add the $7,000/mo GPU bill and",
+      "excerpt_zh": "💸 更新：我的业务总开支已降到约 $300/月！\n\n支撑全年所有网站/应用：\n- 2 万付费用户\n- 2.52 亿访问\n- 24 亿请求\n- 2.4 PB 带宽\n\n（若加上约 $7000/月的 GPU 账单，大约是 $8000/月）",
+      "handle": "levelsio",
+      "likes": 2529,
+      "name": "@levelsio",
+      "post_id": "2117694259558293692",
+      "tags": [
+        "indie",
+        "startup"
+      ],
+      "text_zh": "独立站月成本压到约 $300：服务 2 万付费用户、年 2.5 亿访问。",
+      "url": "https://x.com/levelsio/status/2117694259558293692"
+    }
+  ],
+  "pin": [],
+  "summary_zh": [
+    "OpenAI 开源 Pando Git 后端：推送延迟降约 80%，日服近 PB 级数据。",
+    "话题 GLM +33%、Qwen +32%、solopreneur +31%；vibe coding +26%。",
+    "涨粉 Anthropic +8906、karpathy +4715；跌粉 elon 约 −7211。"
+  ],
+  "topics_zh": "AI：GLM +33%、Qwen +32%、vibe coding +26%、MCP +16%；金钱：solopreneur +31%，搞钱·副业 −2%。"
+}
