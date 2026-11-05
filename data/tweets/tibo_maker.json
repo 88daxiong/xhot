@@ -2,6 +2,48 @@
   "handle": "tibo_maker",
   "tweets": [
     {
+      "created_at": "2026-11-05T10:30:35.000Z",
+      "id": "2118289869428380138",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 29,
+        "impression": 3947,
+        "like": 44,
+        "quote": 3,
+        "reply": 44,
+        "retweet": 0
+      },
+      "url": "https://x.com/tibo_maker/status/2118289869428380138"
+    },
+    {
+      "created_at": "2026-11-05T10:04:02.000Z",
+      "id": "2118283187340120302",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 646,
+        "like": 4,
+        "quote": 0,
+        "reply": 1,
+        "retweet": 0
+      },
+      "url": "https://x.com/tibo_maker/status/2118283187340120302"
+    },
+    {
+      "created_at": "2026-11-05T08:43:32.000Z",
+      "id": "2118262930462712134",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 4,
+        "impression": 2556,
+        "like": 19,
+        "quote": 0,
+        "reply": 18,
+        "retweet": 0
+      },
+      "url": "https://x.com/tibo_maker/status/2118262930462712134"
+    },
+    {
       "created_at": "2026-11-04T14:33:39.000Z",
       "id": "2117988652190216427",
       "lang": "en",
