@@ -2,6 +2,90 @@
   "handle": "gosailglobal",
   "tweets": [
     {
+      "created_at": "2026-11-05T02:09:57.000Z",
+      "id": "2118163880220483924",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 453,
+        "like": 2,
+        "quote": 0,
+        "reply": 1,
+        "retweet": 0
+      },
+      "url": "https://x.com/GoSailGlobal/status/2118163880220483924"
+    },
+    {
+      "created_at": "2026-11-05T01:55:33.000Z",
+      "id": "2118160256991981738",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 527,
+        "like": 2,
+        "quote": 0,
+        "reply": 3,
+        "retweet": 0
+      },
+      "url": "https://x.com/GoSailGlobal/status/2118160256991981738"
+    },
+    {
+      "created_at": "2026-11-05T01:47:07.000Z",
+      "id": "2118158136851018239",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 312,
+        "like": 0,
+        "quote": 0,
+        "reply": 0,
+        "retweet": 0
+      },
+      "url": "https://x.com/GoSailGlobal/status/2118158136851018239"
+    },
+    {
+      "created_at": "2026-11-04T15:29:25.000Z",
+      "id": "2118002685194752389",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 1,
+        "impression": 1005,
+        "like": 4,
+        "quote": 0,
+        "reply": 1,
+        "retweet": 0
+      },
+      "url": "https://x.com/GoSailGlobal/status/2118002685194752389"
+    },
+    {
+      "created_at": "2026-11-04T13:40:47.000Z",
+      "id": "2117975348931637610",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 2,
+        "impression": 792,
+        "like": 2,
+        "quote": 0,
+        "reply": 0,
+        "retweet": 0
+      },
+      "url": "https://x.com/GoSailGlobal/status/2117975348931637610"
+    },
+    {
+      "created_at": "2026-11-04T13:21:48.000Z",
+      "id": "2117970571468443787",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 3,
+        "impression": 1056,
+        "like": 4,
+        "quote": 0,
+        "reply": 1,
+        "retweet": 0
+      },
+      "url": "https://x.com/GoSailGlobal/status/2117970571468443787"
+    },
+    {
       "created_at": "2026-11-04T11:26:18.000Z",
       "id": "2117941502462849078",
       "lang": "zh",
@@ -2716,90 +2800,6 @@
         "retweet": 0
       },
       "url": "https://x.com/GoSailGlobal/status/2111994993347064045"
-    },
-    {
-      "created_at": "2026-10-18T15:21:01.000Z",
-      "id": "2111839978271686768",
-      "lang": "",
-      "metrics": {
-        "bookmark": 0,
-        "impression": 7495,
-        "like": 8,
-        "quote": 0,
-        "reply": 2,
-        "retweet": 0
-      },
-      "url": "https://x.com/GoSailGlobal/status/2111839978271686768"
-    },
-    {
-      "created_at": "2026-10-18T15:19:11.000Z",
-      "id": "2111839515010810242",
-      "lang": "",
-      "metrics": {
-        "bookmark": 22,
-        "impression": 46481,
-        "like": 67,
-        "quote": 3,
-        "reply": 49,
-        "retweet": 4
-      },
-      "url": "https://x.com/GoSailGlobal/status/2111839515010810242"
-    },
-    {
-      "created_at": "2026-10-18T07:38:59.000Z",
-      "id": "2111723704258641977",
-      "lang": "",
-      "metrics": {
-        "bookmark": 1,
-        "impression": 2991,
-        "like": 7,
-        "quote": 0,
-        "reply": 4,
-        "retweet": 1
-      },
-      "url": "https://x.com/GoSailGlobal/status/2111723704258641977"
-    },
-    {
-      "created_at": "2026-10-18T04:52:37.000Z",
-      "id": "2111681835184816153",
-      "lang": "",
-      "metrics": {
-        "bookmark": 1,
-        "impression": 1400,
-        "like": 5,
-        "quote": 0,
-        "reply": 0,
-        "retweet": 0
-      },
-      "url": "https://x.com/GoSailGlobal/status/2111681835184816153"
-    },
-    {
-      "created_at": "2026-10-18T04:20:35.000Z",
-      "id": "2111673775343456274",
-      "lang": "",
-      "metrics": {
-        "bookmark": 5,
-        "impression": 1834,
-        "like": 5,
-        "quote": 0,
-        "reply": 1,
-        "retweet": 0
-      },
-      "url": "https://x.com/GoSailGlobal/status/2111673775343456274"
-    },
-    {
-      "created_at": "2026-10-18T03:49:38.000Z",
-      "id": "2111665986093154332",
-      "lang": "",
-      "metrics": {
-        "bookmark": 7,
-        "impression": 691,
-        "like": 2,
-        "quote": 0,
-        "reply": 0,
-        "retweet": 0
-      },
-      "url": "https://x.com/GoSailGlobal/status/2111665986093154332"
     }
   ],
   "user_id": "1928711169419956224"

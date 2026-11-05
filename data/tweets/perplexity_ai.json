@@ -2,6 +2,34 @@
   "handle": "perplexity_ai",
   "tweets": [
     {
+      "created_at": "2026-11-04T17:39:50.000Z",
+      "id": "2118035507582238770",
+      "lang": "",
+      "metrics": {
+        "bookmark": 38,
+        "impression": 9289,
+        "like": 28,
+        "quote": 0,
+        "reply": 3,
+        "retweet": 0
+      },
+      "url": "https://x.com/perplexity_ai/status/2118035507582238770"
+    },
+    {
+      "created_at": "2026-11-04T17:39:47.000Z",
+      "id": "2118035494898704781",
+      "lang": "",
+      "metrics": {
+        "bookmark": 532,
+        "impression": 113699,
+        "like": 517,
+        "quote": 32,
+        "reply": 69,
+        "retweet": 33
+      },
+      "url": "https://x.com/perplexity_ai/status/2118035494898704781"
+    },
+    {
       "created_at": "2026-11-03T16:45:31.000Z",
       "id": "2117659447518740960",
       "lang": "en",

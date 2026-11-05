@@ -2,6 +2,48 @@
   "handle": "justinsuntron",
   "tweets": [
     {
+      "created_at": "2026-11-05T04:06:58.000Z",
+      "id": "2118193327564820778",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 13,
+        "like": 0,
+        "quote": 0,
+        "reply": 0,
+        "retweet": 0
+      },
+      "url": "https://x.com/justinsuntron/status/2118193327564820778"
+    },
+    {
+      "created_at": "2026-11-05T04:02:39.000Z",
+      "id": "2118192244054499604",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 9854,
+        "like": 10,
+        "quote": 0,
+        "reply": 9,
+        "retweet": 2
+      },
+      "url": "https://x.com/justinsuntron/status/2118192244054499604"
+    },
+    {
+      "created_at": "2026-11-04T12:17:00.000Z",
+      "id": "2117954261229482070",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 23,
+        "impression": 78467,
+        "like": 364,
+        "quote": 12,
+        "reply": 121,
+        "retweet": 59
+      },
+      "url": "https://x.com/justinsuntron/status/2117954261229482070"
+    },
+    {
       "created_at": "2026-11-04T11:41:04.000Z",
       "id": "2117945217840283797",
       "lang": "",

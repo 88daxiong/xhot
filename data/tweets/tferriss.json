@@ -2,6 +2,62 @@
   "handle": "tferriss",
   "tweets": [
     {
+      "created_at": "2026-11-04T23:31:18.000Z",
+      "id": "2118123954095128843",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 67,
+        "impression": 24014,
+        "like": 199,
+        "quote": 4,
+        "reply": 16,
+        "retweet": 17
+      },
+      "url": "https://x.com/tferriss/status/2118123954095128843"
+    },
+    {
+      "created_at": "2026-11-04T19:51:01.000Z",
+      "id": "2118068519657254984",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 1,
+        "impression": 6420,
+        "like": 4,
+        "quote": 0,
+        "reply": 0,
+        "retweet": 0
+      },
+      "url": "https://x.com/tferriss/status/2118068519657254984"
+    },
+    {
+      "created_at": "2026-11-04T19:47:29.000Z",
+      "id": "2118067628317319354",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 23,
+        "impression": 69120,
+        "like": 45,
+        "quote": 1,
+        "reply": 8,
+        "retweet": 3
+      },
+      "url": "https://x.com/tferriss/status/2118067628317319354"
+    },
+    {
+      "created_at": "2026-11-04T19:07:00.000Z",
+      "id": "2118057442361942358",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 14,
+        "impression": 19892,
+        "like": 37,
+        "quote": 0,
+        "reply": 64,
+        "retweet": 3
+      },
+      "url": "https://x.com/tferriss/status/2118057442361942358"
+    },
+    {
       "created_at": "2026-11-03T22:17:42.000Z",
       "id": "2117743044875461016",
       "lang": "",

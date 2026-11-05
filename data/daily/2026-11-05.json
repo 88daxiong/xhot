@@ -1,0 +1,156 @@
+{
+  "changelog": [],
+  "date": "2026-11-05",
+  "followers_zh": "涨粉：_catwu +31897、sama +7500、openai +4303、thsottiaux +4268；跌粉：elonmusk −8549、satyanadella −8488、sundarpichai −8243、paulg −7591。",
+  "gists": {
+    "2117785925480505776": "Dickie Bush：假设世界对自己有利后心态显著改善。",
+    "2117794005165748448": "Sam Altman：人应掌控未来，反对把人类贬为 AI 认为该奖励的角色。",
+    "2117848335264702710": "Naval：贪婪可被满足，嫉妒永远不能。",
+    "2117862462976594112": "马斯克称太空数据中心现在看起来相当有吸引力。",
+    "2117862767831159287": "马斯克调侃「干涉选举的太空激光」这次没管用。",
+    "2117904733658845218": "amasad 用沙威玛段子调侃密歇根选举结果。",
+    "2117953640799555986": "Hormozi：别指望别人先为你加油——先自己相信自己。",
+    "2117989803493081163": "Huberman 短帖：认识你自己。",
+    "2117996293188718856": "马斯克：终于会有一张信号到处都好的网络。",
+    "2118015296816747005": "Codie：调侃迁来德州却想重造原州的人。",
+    "2118027058794148099": "Google：Gemini 3.8 Flash TTS 语音混音上线 AI Studio/API。",
+    "2118028897203913011": "Shaan：人们零证据就信方便的谎言，却要无穷证据才信难受的真相。",
+    "2118030700641415532": "Shaan 对副总统发帖感到困惑，怀疑表面真诚背后另有动机。",
+    "2118031557470626292": "Paul Graham：众议院将难以再阻挠 Epstein 文件公开投票。",
+    "2118035494898704781": "Perplexity Computer 代管 3 万美元 Meta 广告，ROAS 比原代理高 63%。",
+    "2118037327796973770": "Aravind：Perplexity 智能体帮商家投广告已优于传统代理。",
+    "2118048180168483229": "swyx 配图回击：你们以为我在开玩笑。",
+    "2118059572472828223": "Hormozi：想变强之前，你必须先在这件事上很菜。",
+    "2118077202764013695": "CZ：比特币很有韧性。",
+    "2118092439873540152": "Codie Sanchez：不想和建立在连环错误前提上的人争论。",
+    "2118166970273292299": "rauchg：AI 将多次重写人类软件，使其更快、更省、更安全。"
+  },
+  "hide": [
+    "2117862767831159287",
+    "2117904733658845218",
+    "2117989803493081163",
+    "2118048180168483229",
+    "2118092439873540152",
+    "2118015296816747005"
+  ],
+  "highlights": [
+    {
+      "excerpt": "Images, upgraded—introducing ChatGPT Images 2.6.\n\nNow with GIFs and reference images.\n\nPlus, two new models are coming to the API with 50% faster image generation.",
+      "excerpt_zh": "图像升级——推出 ChatGPT Images 2.6。\n\n现已支持 GIF 与参考图。\n\n此外，两款新模型即将登陆 API，图像生成速度提升约 50%。",
+      "handle": "OpenAI",
+      "likes": 12540,
+      "name": "OpenAI",
+      "post_id": "2118124944928432327",
+      "tags": [
+        "product",
+        "model"
+      ],
+      "text_zh": "ChatGPT Images 2.6 上线：支持 GIF 与参考图；API 两款新图像模型生成提速约 50%。",
+      "url": "https://x.com/OpenAI/status/2118124944928432327"
+    },
+    {
+      "excerpt": "Some news: I’m joining OpenAI to lead product management for Core Products!\n\nI have a lot of respect for OpenAI for showing the world that scaling works, for bringing AI to over a billion people, and for believing great products are core to the mission.",
+      "excerpt_zh": "有个消息：我将加入 OpenAI，负责 Core Products 的产品管理！\n\n我很尊重 OpenAI：向世界证明了 scaling 可行，把 AI 带给超过十亿人，并相信伟大的产品是使命的核心。",
+      "handle": "_catwu",
+      "likes": 9776,
+      "name": "cat",
+      "post_id": "2118137612577968402",
+      "tags": [
+        "career",
+        "product"
+      ],
+      "text_zh": "原 Cursor 产品负责人 _catwu 官宣加入 OpenAI，负责 Core Products 产品管理。",
+      "url": "https://x.com/_catwu/status/2118137612577968402"
+    },
+    {
+      "excerpt": "Releasing the model weights of Kimi K3.1 Pro:\nWe'll keep advancing open intelligence.",
+      "excerpt_zh": "发布 Kimi K3.1 Pro 的模型权重：\n我们将继续推进开放智能。",
+      "handle": "Kimi_Moonshot",
+      "likes": 6573,
+      "name": "Kimi.ai",
+      "post_id": "2118010528123773297",
+      "tags": [
+        "model",
+        "oss"
+      ],
+      "text_zh": "月之暗面开源发布 Kimi K3.1 Pro 模型权重，继续推进开放智能。",
+      "url": "https://x.com/Kimi_Moonshot/status/2118010528123773297"
+    },
+    {
+      "excerpt": "Our security researchers built an autonomous cyber vulnerability discovery, exploitation, and patching pipeline.\n\nIn a single run with an upcoming cyber model, it validated and generated patches for 948 local privilege escalation vulnerabilities in the Linux kernel at a total API cost of $1.2 million.",
+      "excerpt_zh": "我们的安全研究人员构建了一套自主的网络漏洞发现、利用与修补流水线。\n\n使用即将发布的网络模型单次运行，就在 Linux 内核中验证并生成了 948 个本地提权漏洞的补丁，API 总成本约 120 万美元。",
+      "handle": "OpenAI",
+      "likes": 5416,
+      "name": "OpenAI",
+      "post_id": "2118119451401048497",
+      "tags": [
+        "research",
+        "model"
+      ],
+      "text_zh": "OpenAI 安全研究：即将发布的网络模型单次跑通发现并修补 948 个 Linux 内核提权漏洞，API 成本约 120 万美元。",
+      "url": "https://x.com/OpenAI/status/2118119451401048497"
+    },
+    {
+      "excerpt": "Underrated life advice: Have a Bad-Day Protocol. Go for a walk. Eat something clean. Hit a workout. Take a long shower. Get to bed early. Whatever. You don’t need to solve every problem when you’re at your worst. You need a few moves that stop a bad day from becoming a bad week.",
+      "excerpt_zh": "被低估的人生建议：准备一套「坏日子协议」。去散步。吃点干净的东西。做一次锻炼。好好洗个澡。早点睡觉。随便什么。你不必在状态最差时解决所有问题。你需要的是几招，阻止坏日子变成坏一周。",
+      "handle": "SahilBloom",
+      "likes": 4778,
+      "name": "Sahil Bloom",
+      "post_id": "2118062106989723947",
+      "tags": [
+        "habit",
+        "career"
+      ],
+      "text_zh": "被低估的建议：准备一套「坏日子协议」——散步、清淡饮食、锻炼、早睡，先阻止坏日变成坏周。",
+      "url": "https://x.com/SahilBloom/status/2118062106989723947"
+    },
+    {
+      "excerpt": "We’re sharing how our biology research team worked with Claude to map the first 3D structure of a vault particle from bacterial life.\n\nVault particles are a longstanding mystery. They are barrel-shaped objects, among the largest protein structures found in our cells.",
+      "excerpt_zh": "我们分享生物研究团队如何与 Claude 合作，解析来自细菌生命的 vault 粒子首个 3D 结构。\n\nVault 粒子是长期未解之谜。它们呈桶状，是细胞中发现的最大蛋白结构之一。",
+      "handle": "AnthropicAI",
+      "likes": 3210,
+      "name": "Anthropic",
+      "post_id": "2118073665296228863",
+      "tags": [
+        "research",
+        "model"
+      ],
+      "text_zh": "Anthropic 生物团队用 Claude 解析细菌 vault 粒子首个 3D 结构，攻克长期未解的蛋白组装谜题。",
+      "url": "https://x.com/AnthropicAI/status/2118073665296228863"
+    },
+    {
+      "excerpt": "Today, we’re bringing GPT-Image-2.6 to Codex and the API.\n\nImage-2.6 Flare and Sunburst, our two new API image models, generate images 50% faster than before.\n\nAt medium or high quality, Sunburst keeps details more consistent from one edit to the next.",
+      "excerpt_zh": "今天，我们将 GPT-Image-2.6 带到 Codex 与 API。\n\nImage-2.6 Flare 与 Sunburst 两款新的 API 图像模型，生成速度比以前快约 50%。\n\n在中等或高质量下，Sunburst 能在多次编辑间保持细节更一致。",
+      "handle": "OpenAIDevs",
+      "likes": 2162,
+      "name": "OpenAI Developers",
+      "post_id": "2118124753340756055",
+      "tags": [
+        "model",
+        "code"
+      ],
+      "text_zh": "GPT-Image-2.6 登陆 Codex 与 API；Flare/Sunburst 两款模型生成提速约 50%，编辑一致性更好。",
+      "url": "https://x.com/OpenAIDevs/status/2118124753340756055"
+    },
+    {
+      "excerpt": "前两天我还在推上问大家，刚装好 DeepSeek Harness 应该装哪些插件呢？\n\n结果这两天大肥鱼出圈，DSH 官号一入驻小破站就冲上热搜第一，第一条视频 12 小时干到百万播放，涨粉超过 30 万！\n\n你以为评论区都在纯看热闹吗？",
+      "handle": "lxfater",
+      "likes": 279,
+      "name": "铁锤人",
+      "post_id": "2117880528024330518",
+      "tags": [
+        "model",
+        "creator"
+      ],
+      "text_zh": "DeepSeek Harness 官号入驻 B 站即冲热搜第一：首条视频 12 小时破百万播放、涨粉超 30 万。",
+      "url": "https://x.com/lxfater/status/2117880528024330518"
+    }
+  ],
+  "pin": [],
+  "summary_zh": [
+    "OpenAI 发布 ChatGPT Images 2.6：支持 GIF/参考图，API 新模型生成提速约 50%。",
+    "Kimi 开源 K3.1 Pro 权重；OpenAI 安全团队用即将发布的网络模型一次修了 948 个内核提权洞。",
+    "涨粉 _catwu +3.2 万（官宣入职 OpenAI）、sama +7500；跌粉 elon −8549、纳德拉 −8488。"
+  ],
+  "topics_zh": "AI：GLM +33%、Qwen +32%、vibe coding +26%、MCP +16%；金钱：solopreneur +31%，搞钱·副业 −2%；Gemini −20%。"
+}
