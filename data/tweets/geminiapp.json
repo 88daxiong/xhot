@@ -2,6 +2,20 @@
   "handle": "geminiapp",
   "tweets": [
     {
+      "created_at": "2026-11-05T18:12:57.000Z",
+      "id": "2118406227533435391",
+      "lang": "",
+      "metrics": {
+        "bookmark": 140,
+        "impression": 47432,
+        "like": 770,
+        "quote": 17,
+        "reply": 48,
+        "retweet": 65
+      },
+      "url": "https://x.com/GeminiApp/status/2118406227533435391"
+    },
+    {
       "created_at": "2026-10-30T23:09:40.000Z",
       "id": "2116306570514772225",
       "lang": "",

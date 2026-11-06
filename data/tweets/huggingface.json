@@ -2,6 +2,48 @@
   "handle": "huggingface",
   "tweets": [
     {
+      "created_at": "2026-11-05T19:50:50.000Z",
+      "id": "2118430862949945612",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 86,
+        "impression": 12651,
+        "like": 93,
+        "quote": 6,
+        "reply": 29,
+        "retweet": 14
+      },
+      "url": "https://x.com/huggingface/status/2118430862949945612"
+    },
+    {
+      "created_at": "2026-11-05T11:38:08.000Z",
+      "id": "2118306869848744437",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 16,
+        "impression": 13340,
+        "like": 29,
+        "quote": 0,
+        "reply": 3,
+        "retweet": 1
+      },
+      "url": "https://x.com/huggingface/status/2118306869848744437"
+    },
+    {
+      "created_at": "2026-11-05T11:36:58.000Z",
+      "id": "2118306577203822976",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 281,
+        "impression": 35060,
+        "like": 501,
+        "quote": 15,
+        "reply": 77,
+        "retweet": 82
+      },
+      "url": "https://x.com/huggingface/status/2118306577203822976"
+    },
+    {
       "created_at": "2026-11-04T15:38:18.000Z",
       "id": "2118004921597665638",
       "lang": "en",

@@ -1,0 +1,174 @@
+{
+  "changelog": [
+    {
+      "date": "2026-11-06"
+    }
+  ],
+  "date": "2026-11-06",
+  "followers_zh": "粉丝大涨：_catwu +16652、OpenAI +5251、Claude +4025、thsottiaux +3765；Jordan Peterson 等小幅下滑。",
+  "gists": {
+    "2118124753340756055": "OpenAIDevs：GPT-Image-2.6 进 Codex/API，Flare/Sunburst 提速约 50%。",
+    "2118129415213244831": "levelsio：又到了那种熟悉的“又来了”时刻。",
+    "2118129547443056763": "Greg：已发现、验证并准备了大量补丁（安全/工程相关）。",
+    "2118137681616179444": "Aravind：世界需要更多 Larry Page 式的能量与魄力。",
+    "2118138648214585591": "Tibo 欢迎 Cat 加入，期待一起做事。",
+    "2118166970273292299": "Rauch：AI 将反复重写人类软件，使其更快、更省、更安全。",
+    "2118248670915404057": "Elon 转发短评「美丽新世界」，配外链。",
+    "2118306577203822976": "Hugging Face 下周二直播讲量化：用 llama.cpp/vLLM 把模型塞进笔记本。",
+    "2118332032635810006": "Dickie Bush 分享防脑腐日常：纸笔计划、无手机锻炼、手写三页等。",
+    "2118342822768345233": "Ryan Holiday 列 5 个毁掉效率的习惯，引用斯多葛名言。",
+    "2118349605616398731": "Tim Ferriss 分享 Gabor Maté 关于重构困难时刻的内容。",
+    "2118369618821890375": "Peter Yang 反讽：若因怕 AI「邪恶」而放缓治病研发并不合理。",
+    "2118370229466153299": "Mistral：Studio 上线托管智能体/应用与工作流、可观测与评测。",
+    "2118380771853705309": "Elon 仅发「Interesting」配外链。",
+    "2118380813498892301": "Jim Fan：宣布 System One 视觉模型时代到来。",
+    "2118381856454524939": "Elon：短评「Starlink 能救命」配外链。",
+    "2118386439675420743": "OpenAIDevs：Private Safety Processing 可在本地审安全而不留存提示词。",
+    "2118388400730591469": "Aravind：Perplexity Teammates 是工作个人智能体，先从给目标开始。",
+    "2118388941267317134": "Elon：短评「True」配外链。",
+    "2118389326459670825": "Perplexity 推出 Teammates：可主动干活、协作并接 Slack，Max 可用。",
+    "2118389961426874879": "Google AI：Omni 1.2 Flash 更省成本，视频上限 15 秒并改善连贯性。",
+    "2118390792490541103": "Elon：称 Banks 对未来愿景最好，配外链。",
+    "2118392015226544617": "Elon 仅发「True」配外链。",
+    "2118394240636215480": "Rauch：警惕「一无所知却快乐」；应用 AI 去理解世界。",
+    "2118399561324699655": "Trq：喜欢给 Instinct 类智能体设基于位置的提醒提示词。",
+    "2118400203158163638": "Elon：短评「Interesting」配外链。",
+    "2118402103907655903": "Tibo：最新网络安全专用模型上线，多项网安场景表现突出。",
+    "2118406227533435391": "Gemini 应用端 Omni 1.2 Flash 开推；Ultra 可做最长 15 秒视频。",
+    "2118431051253239889": "Elon 仅发「Interesting」配图/链接。",
+    "2118435009354694853": "levelsio：提醒大厂会逐个吃掉各行业。",
+    "2118458629091426304": "Cursor：可在编辑器内构建并一键分享线上应用，含库与安全检查。"
+  },
+  "hide": [
+    "2118129415213244831",
+    "2118138648214585591",
+    "2118248670915404057",
+    "2118380771853705309",
+    "2118381856454524939",
+    "2118388941267317134",
+    "2118390792490541103",
+    "2118392015226544617",
+    "2118400203158163638",
+    "2118431051253239889"
+  ],
+  "highlights": [
+    {
+      "excerpt": "Introducing Personal Finance in Claude, in beta in the US.\n\nConnect the accounts you choose, and Claude answers your money questions in everyday language, from your own balances and transactions. Access is read-only, and Claude can't move, manage, or invest your money.",
+      "excerpt_zh": "Claude 个人理财功能在美国进入测试。\n\n连接你选择的账户后，Claude 用日常语言根据余额与交易回答钱相关问题。权限只读，不能转账、管理或投资。",
+      "handle": "claudeai",
+      "likes": 23160,
+      "name": "Claude",
+      "post_id": "2118403114890137895",
+      "tags": [
+        "product",
+        "model"
+      ],
+      "text_zh": "Claude 美国上线个人理财测试：只读账户数据，用白话答钱相关问题。",
+      "url": "https://x.com/claudeai/status/2118403114890137895"
+    },
+    {
+      "excerpt": "Introducing GPT‑6 Cyber: a major advance in security research that pairs stronger capabilities with better model alignment.\n\nThe model powered the Linux kernel research we announced yesterday, and security teams at companies like Mozilla, Palo Alto Networks, Calif, and",
+      "excerpt_zh": "推出 GPT‑6 Cyber：安全研究重大进展，更强能力搭配更好对齐。\n\n该模型支撑了昨日公布的 Linux 内核研究，Mozilla、Palo Alto Networks 等安全团队也在使用。",
+      "handle": "OpenAI",
+      "likes": 13092,
+      "name": "OpenAI",
+      "post_id": "2118390190246879554",
+      "tags": [
+        "model",
+        "research"
+      ],
+      "text_zh": "OpenAI 发布 GPT-6 Cyber：强化安全研究能力并改进对齐，已用于内核研究。",
+      "url": "https://x.com/OpenAI/status/2118390190246879554"
+    },
+    {
+      "excerpt": "Images, upgraded—introducing ChatGPT Images 2.6.\n\nNow with GIFs and reference images.\n\nPlus, two new models are coming to the API with 50% faster image generation.",
+      "excerpt_zh": "图像升级——推出 ChatGPT Images 2.6。\n\n现支持 GIF 与参考图。\n\n另有两款新模型将进入 API，图像生成提速约 50%。",
+      "handle": "OpenAI",
+      "likes": 12540,
+      "name": "OpenAI",
+      "post_id": "2118124944928432327",
+      "tags": [
+        "model",
+        "product"
+      ],
+      "text_zh": "ChatGPT Images 2.6 上线：支持 GIF 与参考图，API 图像生成提速约 50%。",
+      "url": "https://x.com/OpenAI/status/2118124944928432327"
+    },
+    {
+      "excerpt": "Some news: I’m joining OpenAI to lead product management for Core Products!\n\nI have a lot of respect for OpenAI for showing the world that scaling works, for bringing AI to over a billion people, and for believing great products are core to the mission.",
+      "excerpt_zh": "有个消息：我将加入 OpenAI，负责核心产品的产品管理！\n\n我很敬佩 OpenAI：证明扩展有效、把 AI 带给超十亿人，并相信伟大产品是使命核心。",
+      "handle": "_catwu",
+      "likes": 9776,
+      "name": "cat",
+      "post_id": "2118137612577968402",
+      "tags": [
+        "career",
+        "agent"
+      ],
+      "text_zh": "Cat Wu 加盟 OpenAI，负责核心产品 PM，将与 Tibo 等一起做可控智能体。",
+      "url": "https://x.com/_catwu/status/2118137612577968402"
+    },
+    {
+      "excerpt": "You have to reach the point where your fear of dying mediocre outweighs your fear of looking like an idiot. The first version of anything you do will be embarrassing, that should be obvious, but too many people let that thought keep them the same for decades on end.",
+      "excerpt_zh": "你得走到这一步：对平庸死去的恐惧，大于怕自己像个傻瓜。任何事的第一版都会尴尬，这本该显而易见，但太多人让这个念头把他们困住几十年。",
+      "handle": "thedankoe",
+      "likes": 4658,
+      "name": "DAN KOE",
+      "post_id": "2118387157794496581",
+      "tags": [
+        "habit",
+        "career"
+      ],
+      "text_zh": "Dan Koe：对平庸死去的恐惧，必须大过怕出丑；第一版总会尴尬。",
+      "url": "https://x.com/thedankoe/status/2118387157794496581"
+    },
+    {
+      "excerpt": "Watching my sons learn to write has explained a lot about why good writing is rare. They're both convinced they have to produce bloated word salad when writing essays in school, and that if they wrote simply and clearly they'd get bad grades. The sad thing is they may be right.",
+      "excerpt_zh": "看儿子学写作，让我更明白好文章为何稀缺。他们都以为学校作文必须写臃肿的词沙拉，简洁清楚反而会低分。可悲的是他们可能是对的。",
+      "handle": "paulg",
+      "likes": 3434,
+      "name": "Paul Graham",
+      "post_id": "2118383370350502136",
+      "tags": [
+        "write",
+        "career"
+      ],
+      "text_zh": "Paul Graham：孩子以为学校作文必须堆砌辞藻，简洁反而会低分。",
+      "url": "https://x.com/paulg/status/2118383370350502136"
+    },
+    {
+      "excerpt": "Today was the worst market decline since the last one you don’t remember or care about anymore.",
+      "excerpt_zh": "今天是自你已不记得、也不再在意的那次以来，最差的市场跌幅。",
+      "handle": "morganhousel",
+      "likes": 3160,
+      "name": "Morgan Housel",
+      "post_id": "2118457352651235476",
+      "tags": [
+        "startup"
+      ],
+      "text_zh": "Morgan Housel：今天是自你已不记得的那次以来最差的市场跌幅。",
+      "url": "https://x.com/morganhousel/status/2118457352651235476"
+    },
+    {
+      "excerpt": "Meet Gemini Omni 1.2 Flash, our updated video generation model from @GoogleDeepMind 🎬\n\nGet stronger consistency, more creative control, and faster, more cost-effective video creation at scale:\n\n⚡ Fast & 30% lower cost: Draft at 360p or 720p ($0.07/s) and upscale to 1080p or 4K",
+      "excerpt_zh": "认识 Gemini Omni 1.2 Flash，来自 @GoogleDeepMind 的更新视频生成模型。\n\n更强一致性、更多创意控制，以及更快速、更省成本的规模化视频创作：\n\n⚡ 更快且成本约降 30%：以 360p 或 720p（$0.07/秒）打草稿，再升到 1080p 或 4K",
+      "handle": "Google",
+      "likes": 2276,
+      "name": "Google",
+      "post_id": "2118390406316728555",
+      "tags": [
+        "model",
+        "product"
+      ],
+      "text_zh": "Google 发布 Gemini Omni 1.2 Flash：视频更稳、最长 15 秒，成本约降 30%。",
+      "url": "https://x.com/Google/status/2118390406316728555"
+    }
+  ],
+  "pin": [],
+  "summary_zh": [
+    "Claude 上线个人理财测试版；OpenAI 发布 GPT-6 Cyber 与 Images 2.6。",
+    "Cat Wu 加盟 OpenAI 负责核心产品；粉丝一日暴增约 1.7 万。",
+    "话题 solopreneur 涨约 60%、Kimi 涨约 56%；Google 推出 Gemini Omni 1.2。"
+  ],
+  "topics_zh": "涨幅领先：solopreneur +59.5%、Kimi +55.8%、Dan Koe +24%；MCP +18.6%、Claude Code +10.3%。"
+}

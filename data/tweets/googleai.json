@@ -2,6 +2,34 @@
   "handle": "googleai",
   "tweets": [
     {
+      "created_at": "2026-11-05T17:08:19.000Z",
+      "id": "2118389964056547374",
+      "lang": "",
+      "metrics": {
+        "bookmark": 11,
+        "impression": 11327,
+        "like": 46,
+        "quote": 4,
+        "reply": 2,
+        "retweet": 3
+      },
+      "url": "https://x.com/GoogleAI/status/2118389964056547374"
+    },
+    {
+      "created_at": "2026-11-05T17:08:19.000Z",
+      "id": "2118389961426874879",
+      "lang": "",
+      "metrics": {
+        "bookmark": 429,
+        "impression": 139995,
+        "like": 1574,
+        "quote": 84,
+        "reply": 79,
+        "retweet": 158
+      },
+      "url": "https://x.com/GoogleAI/status/2118389961426874879"
+    },
+    {
       "created_at": "2026-10-28T17:03:18.000Z",
       "id": "2115489597547221261",
       "lang": "",

@@ -2,6 +2,62 @@
   "handle": "gefei55",
   "tweets": [
     {
+      "created_at": "2026-11-05T16:30:10.000Z",
+      "id": "2118380363315916981",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 6,
+        "impression": 1586,
+        "like": 7,
+        "quote": 1,
+        "reply": 5,
+        "retweet": 0
+      },
+      "url": "https://x.com/gefei55/status/2118380363315916981"
+    },
+    {
+      "created_at": "2026-11-05T08:50:22.000Z",
+      "id": "2118264649644998809",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 1085,
+        "like": 0,
+        "quote": 0,
+        "reply": 1,
+        "retweet": 0
+      },
+      "url": "https://x.com/gefei55/status/2118264649644998809"
+    },
+    {
+      "created_at": "2026-11-05T08:36:20.000Z",
+      "id": "2118261117021729067",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 20,
+        "impression": 6766,
+        "like": 24,
+        "quote": 0,
+        "reply": 6,
+        "retweet": 0
+      },
+      "url": "https://x.com/gefei55/status/2118261117021729067"
+    },
+    {
+      "created_at": "2026-11-05T04:48:35.000Z",
+      "id": "2118203803224920415",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 9378,
+        "like": 44,
+        "quote": 0,
+        "reply": 13,
+        "retweet": 1
+      },
+      "url": "https://x.com/gefei55/status/2118203803224920415"
+    },
+    {
       "created_at": "2026-11-05T01:57:48.000Z",
       "id": "2118160822036029462",
       "lang": "",
