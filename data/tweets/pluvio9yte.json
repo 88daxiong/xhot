@@ -2,6 +2,48 @@
   "handle": "pluvio9yte",
   "tweets": [
     {
+      "created_at": "2026-11-07T10:33:42.000Z",
+      "id": "2119015429956059442",
+      "lang": "",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 613,
+        "like": 0,
+        "quote": 0,
+        "reply": 0,
+        "retweet": 0
+      },
+      "url": "https://x.com/Pluvio9yte/status/2119015429956059442"
+    },
+    {
+      "created_at": "2026-11-07T06:59:45.000Z",
+      "id": "2118961586396360980",
+      "lang": "",
+      "metrics": {
+        "bookmark": 63,
+        "impression": 4924,
+        "like": 39,
+        "quote": 1,
+        "reply": 15,
+        "retweet": 3
+      },
+      "url": "https://x.com/Pluvio9yte/status/2118961586396360980"
+    },
+    {
+      "created_at": "2026-11-07T06:49:29.000Z",
+      "id": "2118959003665613289",
+      "lang": "",
+      "metrics": {
+        "bookmark": 63,
+        "impression": 6878,
+        "like": 47,
+        "quote": 6,
+        "reply": 9,
+        "retweet": 2
+      },
+      "url": "https://x.com/Pluvio9yte/status/2118959003665613289"
+    },
+    {
       "created_at": "2026-11-06T17:47:22.000Z",
       "id": "2118762179231146300",
       "lang": "zh",
