@@ -2,6 +2,20 @@
   "handle": "huggingface",
   "tweets": [
     {
+      "created_at": "2026-11-06T14:43:51.000Z",
+      "id": "2118715992343789911",
+      "lang": "",
+      "metrics": {
+        "bookmark": 66,
+        "impression": 18117,
+        "like": 158,
+        "quote": 6,
+        "reply": 72,
+        "retweet": 17
+      },
+      "url": "https://x.com/huggingface/status/2118715992343789911"
+    },
+    {
       "created_at": "2026-11-05T19:50:50.000Z",
       "id": "2118430862949945612",
       "lang": "en",

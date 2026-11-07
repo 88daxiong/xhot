@@ -2,6 +2,34 @@
   "handle": "openai",
   "tweets": [
     {
+      "created_at": "2026-11-06T19:58:39.000Z",
+      "id": "2118795218099253606",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 126,
+        "impression": 175448,
+        "like": 944,
+        "quote": 41,
+        "reply": 279,
+        "retweet": 69
+      },
+      "url": "https://x.com/OpenAI/status/2118795218099253606"
+    },
+    {
+      "created_at": "2026-11-06T19:08:57.000Z",
+      "id": "2118782708767965238",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 357,
+        "impression": 384337,
+        "like": 2336,
+        "quote": 188,
+        "reply": 553,
+        "retweet": 156
+      },
+      "url": "https://x.com/OpenAI/status/2118782708767965238"
+    },
+    {
       "created_at": "2026-11-05T17:09:14.000Z",
       "id": "2118390195099930906",
       "lang": "",

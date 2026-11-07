@@ -2,6 +2,48 @@
   "handle": "thsottiaux",
   "tweets": [
     {
+      "created_at": "2026-11-06T20:29:10.000Z",
+      "id": "2118802895604994463",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 7,
+        "impression": 34515,
+        "like": 101,
+        "quote": 4,
+        "reply": 50,
+        "retweet": 4
+      },
+      "url": "https://x.com/thsottiaux/status/2118802895604994463"
+    },
+    {
+      "created_at": "2026-11-06T05:01:30.000Z",
+      "id": "2118569441860723112",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 131,
+        "impression": 335021,
+        "like": 1920,
+        "quote": 23,
+        "reply": 124,
+        "retweet": 63
+      },
+      "url": "https://x.com/thsottiaux/status/2118569441860723112"
+    },
+    {
+      "created_at": "2026-11-06T05:00:41.000Z",
+      "id": "2118569235953893573",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 966,
+        "impression": 908984,
+        "like": 12617,
+        "quote": 215,
+        "reply": 966,
+        "retweet": 533
+      },
+      "url": "https://x.com/thsottiaux/status/2118569235953893573"
+    },
+    {
       "created_at": "2026-11-05T22:39:25.000Z",
       "id": "2118473288368406582",
       "lang": "en",

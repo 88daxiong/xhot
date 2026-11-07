@@ -2,6 +2,34 @@
   "handle": "minimax_ai",
   "tweets": [
     {
+      "created_at": "2026-11-06T22:38:42.000Z",
+      "id": "2118835494465536470",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 928,
+        "like": 0,
+        "quote": 0,
+        "reply": 0,
+        "retweet": 0
+      },
+      "url": "https://x.com/MiniMax_AI/status/2118835494465536470"
+    },
+    {
+      "created_at": "2026-11-06T22:37:22.000Z",
+      "id": "2118835158606610575",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 2276,
+        "like": 12,
+        "quote": 0,
+        "reply": 5,
+        "retweet": 0
+      },
+      "url": "https://x.com/MiniMax_AI/status/2118835158606610575"
+    },
+    {
       "created_at": "2026-11-01T20:49:42.000Z",
       "id": "2116996123164569606",
       "lang": "",

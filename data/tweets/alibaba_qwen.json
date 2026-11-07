@@ -2,6 +2,20 @@
   "handle": "alibaba_qwen",
   "tweets": [
     {
+      "created_at": "2026-11-06T12:00:18.000Z",
+      "id": "2118674834632978755",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 1201,
+        "impression": 1569832,
+        "like": 14150,
+        "quote": 1087,
+        "reply": 1297,
+        "retweet": 1177
+      },
+      "url": "https://x.com/Alibaba_Qwen/status/2118674834632978755"
+    },
+    {
       "created_at": "2026-10-14T03:43:40.000Z",
       "id": "2110214931559899630",
       "lang": "",

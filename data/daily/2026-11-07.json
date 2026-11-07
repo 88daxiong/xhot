@@ -1,0 +1,149 @@
+{
+  "changelog": [],
+  "date": "2026-11-07",
+  "followers_zh": "粉丝大涨：Claude +7996、Qwen +5795、OpenAI +5045、_catwu +3473；Elon/Satya/Sundar 等大号小幅下滑。",
+  "gists": {
+    "2118497026329518238": "Ethan Mollick：AI 股价回调不会改变轨迹；采用与研发仍在加速，需更好政策。",
+    "2118505165099577772": "Dickie Bush：一次只做一件事——吃饭不看手机、健身不听播客，专注力回来了。",
+    "2118534211854626833": "CZ：尽快更新 iOS；钱包软件无法更新系统，自托管即自担责。",
+    "2118545162670383517": "GitHub：推出 Copilot Verified Proficiency，用工作数据持续评估能力、无需考试。",
+    "2118560972319408551": "Matthew Berman：惊叹于「模拟国家级攻击」的演示。",
+    "2118565647403876794": "Chainalysis 泄露用户名、密码哈希与有效令牌；部分明文密码亦外泄。",
+    "2118629941059412464": "孙宇晨现身香港数字资产峰会：稳定币结算是传统金融与链上市场的基础。",
+    "2118704203749319052": "Ryan Holiday 引用马可·奥勒留：满足于哪怕最小的进步。",
+    "2118730966311063747": "James Clear：悲观主义者批评，乐观主义者创造。",
+    "2118732082843435305": "马斯克：SpaceX 下次飞行将尝试同时接住助推器与星舰，首次全部完好返回。",
+    "2118737314943754500": "levelsio：将公开 1 万+ AI 刷评论账号黑名单，AI 回复将被永久拉黑。",
+    "2118761247583973388": "Sahil Bloom：事先决定不在乎什么——戏剧、计较、制造愤怒，只聚焦少数事。",
+    "2118768974779634084": "Meta：将 Muse Wonder 训练的专用模型带到 Muse 与 Meta AI，含 Active Memory。",
+    "2118779058519785921": "mreflow：触控 LED 线已织入衣物，任意服装可变成触控屏。",
+    "2118800021013643269": "NVIDIA AI：Lyra 2.0 单图生成可探索 3D 世界，结合视频生成与三维重建。",
+    "2118801504803123659": "美国财政部拟切断 MEXC Global 接入美金融系统，涉约 160 亿美元非法交易。"
+  },
+  "hide": [
+    "2118628232002158682",
+    "2118674834632978755",
+    "2118626855976931477",
+    "2118642061515936142",
+    "2118512190953304219",
+    "2118645971420959072",
+    "2118703441782751628"
+  ],
+  "highlights": [
+    {
+      "excerpt": "Exactly 😂\n\nTesla has no government contracts and President Trump ended federal incentives for electric vehicles. \n\nSpaceX contracts with the government are BOTH the best product AND the lowest price! Moreover government revenue will be less than 10% of SpaceX revenue this quarter and less then 5% a year from now.",
+      "excerpt_zh": "没错 😂\n\n特斯拉没有政府合同，特朗普总统也已取消电动车联邦补贴。\n\nSpaceX 与政府的合同既是最好的产品，也是最低的价格！而且本季度政府收入将不到 SpaceX 收入的 10%，一年后不到 5%。",
+      "handle": "elonmusk",
+      "likes": 73989,
+      "name": "Elon Musk",
+      "post_id": "2118737725964837353",
+      "tags": [
+        "policy",
+        "startup"
+      ],
+      "text_zh": "马斯克回应：特斯拉无政府合同；SpaceX 政府收入本季将低于 10%",
+      "url": "https://x.com/elonmusk/status/2118737725964837353"
+    },
+    {
+      "excerpt": "I can confidently say that humans were not very good at writing secure infrastructure. The endstate will be hypersecure infrastructure and software for all, but we're going to go through some turbulence before we reach that.",
+      "excerpt_zh": "我可以很有把握地说：人类并不擅长写安全的基础设施。终态会是人人可用的超安全基础设施与软件，但到达之前我们还会经历一些动荡。",
+      "handle": "thsottiaux",
+      "likes": 12617,
+      "name": "Tibo",
+      "post_id": "2118569235953893573",
+      "tags": [
+        "write"
+      ],
+      "text_zh": "Tibo：人类不擅长写安全基础设施，终态将是人人可用的超安全软件",
+      "url": "https://x.com/thsottiaux/status/2118569235953893573"
+    },
+    {
+      "excerpt": "Memory is what allows Claude to learn from experience. In a new Engineering Blog post, we share how “dreaming” helps Claude organize what it’s learned, correct its mistakes, and find what it needs more easily the next time.",
+      "excerpt_zh": "记忆让 Claude 能从经验中学习。在新的工程博客中，我们介绍「做梦」如何帮助 Claude 整理所学、纠正错误，并在下次更容易找到所需信息。",
+      "handle": "AnthropicAI",
+      "likes": 3890,
+      "name": "Anthropic",
+      "post_id": "2118814753154064501",
+      "tags": [
+        "model"
+      ],
+      "text_zh": "Anthropic：用「做梦」整理 Claude 记忆，纠正错误并更快检索",
+      "url": "https://x.com/AnthropicAI/status/2118814753154064501"
+    },
+    {
+      "excerpt": "A new way to measure how AI agents handle the routine analyses of wet-lab science—BioBasicsBench.\n\nDeveloped with Ligo, a biotech company focused on enzyme design, the benchmark draws on 100 tasks from real experiments to test whether agents can interpret raw lab data, identify errors, and recognize when the evidence…",
+      "excerpt_zh": "衡量 AI 智能体处理湿实验日常分析的新方式——BioBasicsBench。\n\n与专注酶设计的生物技术公司 Ligo 合作开发，该基准基于真实实验的 100 项任务，测试智能体能否解读原始实验数据、识别错误，并判断证据何时不足以支持结论。",
+      "handle": "OpenAI",
+      "likes": 2336,
+      "name": "OpenAI",
+      "post_id": "2118782708767965238",
+      "tags": [
+        "model",
+        "agent"
+      ],
+      "text_zh": "OpenAI 发布 BioBasicsBench：100 项湿实验任务测 AI 智能体",
+      "url": "https://x.com/OpenAI/status/2118782708767965238"
+    },
+    {
+      "excerpt": "I did the same a few months ago\n\nI shut down my 13-year old $300/mo Linode VPS server that hosted all my 100+ sites for over a decade!\n\nThat Linode VPS called Tommy is where everything started for me, I knew to build startups I needed a server so I just made one and SSH'd into it",
+      "excerpt_zh": "几个月前我也这么做了\n\n关掉了用了 13 年、每月 $300 的 Linode VPS，它托管了我 100 多个站点超过十年！\n\n那台叫 Tommy 的 Linode 是一切的起点——我知道做创业需要服务器，于是就建了一台然后 SSH 进去。",
+      "handle": "levelsio",
+      "likes": 1547,
+      "name": "@levelsio",
+      "post_id": "2118656759564824818",
+      "tags": [
+        "startup"
+      ],
+      "text_zh": "levelsio：关掉用了 13 年、托管 100+ 站点的 $300/月 Linode",
+      "url": "https://x.com/levelsio/status/2118656759564824818"
+    },
+    {
+      "excerpt": "uhh so this is how i found out that i'm not only no longer a Sequoia Scout, my main partner (and boardmember since @Temporalio) is also gone.\n\nno email from sequoia yet about anything in the past month. no response to my texts from any partner. …",
+      "excerpt_zh": "呃，我就这样发现自己不再是 Sequoia Scout，连我的主要合伙人（也是 @Temporalio 董事会成员）也走了。\n\n过去一个月 Sequoia 没有任何邮件，合伙人对我的短信也没回复。\n\n我当初离开上一段合伙关系加入 Sequoia，是因为尊重他们所建立的，觉得那代表硅谷长期伙伴关系的极致，想从内部靠近，而不是只在 @colossusmag 的传记里读到。\n\n很失望。我尊重新方向，但附带伤害很大。\n\n好的一面是，我想我当 Scout 到头了。@mariadlzollo 和我将募集一只小型附属基金，由创始人服务创始人。",
+      "handle": "swyx",
+      "likes": 1278,
+      "name": "swyx",
+      "post_id": "2118512013228077063",
+      "tags": [
+        "research"
+      ],
+      "text_zh": "swyx：发现已非 Sequoia Scout，拟与合伙人自建小型基金",
+      "url": "https://x.com/swyx/status/2118512013228077063"
+    },
+    {
+      "excerpt": "We’re sharing new research demonstrating how AI agents can accelerate the science of stress-testing encryption.\n\nGuided by humans, our models uncovered two major weaknesses in legacy 1024-bit RSA cryptosystems.\n\nOur VP Science @Pushmeet explains more ↓",
+      "excerpt_zh": "我们分享新研究：展示 AI 智能体如何加速加密压力测试科学。\n\n在人类引导下，我们的模型发现了旧版 1024 位 RSA 密码系统的两大弱点。\n\n科学副总裁 @Pushmeet 有更多说明 ↓",
+      "handle": "GoogleDeepMind",
+      "likes": 932,
+      "name": "Google DeepMind",
+      "post_id": "2118755418675765656",
+      "tags": [
+        "model",
+        "agent"
+      ],
+      "text_zh": "DeepMind：AI 智能体助攻压力测试加密，发现旧版 1024 位 RSA 两大弱点",
+      "url": "https://x.com/GoogleDeepMind/status/2118755418675765656"
+    },
+    {
+      "excerpt": "Introducing our next generation of model routers:\n\nAuto Router for general q&a + agents\nAuto Code for coding agents\n\nAuto Code benchmarks similar to Opus 5.5 while costing 74% less, they have a p90 latency of just 0.65s, and we show how routing decisions are made per request.",
+      "excerpt_zh": "推出下一代模型路由：\n\nAuto Router 用于通用问答 + 智能体\nAuto Code 用于编程智能体\n\nAuto Code 基准接近 Opus 5.5，成本低 74%，p90 延迟仅 0.65 秒，并展示每次请求的路由决策。",
+      "handle": "OpenRouter",
+      "likes": 318,
+      "name": "OpenRouter",
+      "post_id": "2118740149106573670",
+      "tags": [
+        "model",
+        "agent"
+      ],
+      "text_zh": "OpenRouter 新一代路由：Auto Code 接近 Opus 5.5、成本低 74%",
+      "url": "https://x.com/OpenRouter/status/2118740149106573670"
+    }
+  ],
+  "pin": [],
+  "summary_zh": [
+    "Anthropic 介绍 Claude「做梦」记忆整理；OpenAI 发布 BioBasicsBench（100 项湿实验）。",
+    "马斯克称特斯拉无政府合同、SpaceX 政府收入本季将低于 10%；获约 7.4 万赞。",
+    "话题 Gemini 涨约 16%、REA/Qwen 各涨约 9%；Claude 粉丝一日 +7996。"
+  ],
+  "topics_zh": "涨幅领先：Gemini +15.7%、REA +9.1%、Qwen 千问 +9.0%、搞钱·副业 +5.5%；Codex −17.6%、Dan Koe −42.6%。"
+}
