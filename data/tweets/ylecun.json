@@ -1,5 +1,20 @@
 {
   "handle": "ylecun",
-  "tweets": [],
+  "tweets": [
+    {
+      "created_at": "2026-11-07T21:45:19.000Z",
+      "id": "2119184445987287449",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 158,
+        "impression": 65812,
+        "like": 800,
+        "quote": 6,
+        "reply": 66,
+        "retweet": 87
+      },
+      "url": "https://x.com/ylecun/status/2119184445987287449"
+    }
+  ],
   "user_id": "48008938"
 }

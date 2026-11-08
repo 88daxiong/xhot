@@ -1,0 +1,145 @@
+{
+  "changelog": [],
+  "date": "2026-11-08",
+  "followers_zh": "粉丝大涨：Qwen +3798、Anthropic +3451、OpenAI +2856、Karpathy +2601、Claude +2368；Elon −20162、CZ −2148、Satya −1067。",
+  "gists": {
+    "2118859267314958761": "调侃做智能体的人太多，用软件改善鱼类品质的人太少。",
+    "2118864032098611279": "分享自己的写作系统：长时间走路、断网、口述转录、随手记想法、读优质材料、远离手机后再动笔。",
+    "2118871211363238328": "报道称币安法国因未获欧盟 MiCA 授权，将于 12 月 31 日关闭客户账户，11 月 29 日起收月费。",
+    "2118871902366441879": "只发了一句 It's Friday。",
+    "2118916001152803057": "转引一句：某处正有非凡之物等待被发现。",
+    "2118925309739495932": "报道新加坡金管局在币安遭黑客后提醒：加密交易不适合普通公众。",
+    "2118938956301779171": "配图发了一句 Get me out of the basement。",
+    "2118963367314645220": "分享牛津联盟演讲照片，自嘲白头发所剩无几。",
+    "2118966640486555947": "提醒应用挡不住操作系统漏洞，请立即更新系统。",
+    "2119059822683295900": "说喜欢在欧洲远程工作：上午深度工作、中午健身、下午开会，走路也方便思考。",
+    "2119068352845074919": "把混蛋傻瓜比作街区里的浣熊和鹿：迟早会碰到，做好准备、别慌。",
+    "2119083280381383072": "他认为 LLM 能把调查报道里分析公开文件和数据的效率提升约 10 倍，调查新闻或迎来黄金时代。",
+    "2119090811149467757": "一句励志：你明天就可能死去，所以今天要战斗。",
+    "2119094823160586401": "说帮儿子学玩塞尔达，感觉非常奇妙。",
+    "2119116338765685094": "预告 11 月 9 日 13:45 在奥斯汀 Hilton 的 CoRL 主题演讲，称会有非凡内容。",
+    "2119125579391766579": "分享印第安纳波利斯马拉松成绩 2:48:23，配速 6:23，后半程更快，回击solo马拉松不算数的质疑。",
+    "2119134064091484422": "他认为「学会营销」正在取代「学会编程」。",
+    "2119134858534416596": "他认为 AI 设计家具、用户买原材料再找木工组装，可能给木工和木匠打开大市场。",
+    "2119184445987287449": "转发三年前提醒，并配了一条旧帖链接。"
+  },
+  "hide": [
+    "2118871902366441879",
+    "2118938956301779171",
+    "2118859267314958761",
+    "2119090811149467757",
+    "2119094823160586401",
+    "2118963367314645220"
+  ],
+  "highlights": [
+    {
+      "excerpt": "The Tesla Cybertruck order backlog is currently far more than we can make before dismantling the line for Cybercab expansion around June/July next year. \n\nWe will add an extra shift to try to get all orders done in time.",
+      "excerpt_zh": "特斯拉 Cybertruck 的订单积压目前远超我们的产能，产线大约会在明年 6/7 月拆除以扩建 Cybercab。\n\n我们会加开一班，尽量在改线前做完所有订单。",
+      "handle": "elonmusk",
+      "likes": 39072,
+      "name": "Elon Musk",
+      "post_id": "2119130949434888330",
+      "tags": [],
+      "text_zh": "Cybertruck 积压订单远超产能，将加开一班赶在明年 6–7 月改线扩 Cybercab 前交完。",
+      "url": "https://x.com/elonmusk/status/2119130949434888330"
+    },
+    {
+      "excerpt": "It is so tempting to make a 500 ton thrust Raptor 4 in place of the 250 ton Raptor 3 for the outer ring of the Starship booster",
+      "excerpt_zh": "真想把星舰助推器外圈的 250 吨推力 Raptor 3，换成 500 吨推力的 Raptor 4",
+      "handle": "elonmusk",
+      "likes": 33184,
+      "name": "Elon Musk",
+      "post_id": "2118880932014997910",
+      "tags": [],
+      "text_zh": "马斯克说很想把星舰助推器外圈的 Raptor 3 换成 500 吨推力的 Raptor 4。",
+      "url": "https://x.com/elonmusk/status/2118880932014997910"
+    },
+    {
+      "excerpt": "I regret to inform you that being married, waking up early, going to church, reading books, drinking less, staying home more, and being in bed by 10pm is actually amazing.",
+      "excerpt_zh": "很遗憾地通知各位：结婚、早起、去教堂、读书、少喝酒、多待在家、晚上 10 点上床，其实非常棒。",
+      "handle": "Codie_Sanchez",
+      "likes": 8058,
+      "name": "Codie Sanchez",
+      "post_id": "2119075928407986269",
+      "tags": [
+        "write"
+      ],
+      "text_zh": "她说结婚、早起、去教堂、读书、少喝酒、多待家里、10 点睡，其实非常爽。",
+      "url": "https://x.com/Codie_Sanchez/status/2119075928407986269"
+    },
+    {
+      "excerpt": "Earlier this week Tristan published his top YouTube channels:\nhttps://t.co/NZ3UCNo6cT\nWhich looked excellent so clearly I had to turn it into TristanTube:\nhttps://t.co/l0KyW1WdNH\n47K super nerdy videos +TV mode for laid back watching. (One-shotted with Claude Code in 3 minutes) https://t.co/FZU0ltwVxL",
+      "excerpt_zh": "本周早些时候 Tristan 公布了他最推荐的 YouTube 频道：\nhttps://t.co/NZ3UCNo6cT\n看起来非常棒，所以我当然得做成 TristanTube：\nhttps://t.co/l0KyW1WdNH\n4.7 万支超级极客视频，外加适合躺着看的 TV 模式。（用 Claude Code 三分钟一次生成） https://t.co/FZU0ltwVxL",
+      "handle": "karpathy",
+      "likes": 4941,
+      "name": "Andrej Karpathy",
+      "post_id": "2119114537442189652",
+      "tags": [
+        "model",
+        "code"
+      ],
+      "text_zh": "用 Claude Code 三分钟做出 TristanTube：4.7 万支极客视频，还带 TV 模式。",
+      "url": "https://x.com/karpathy/status/2119114537442189652"
+    },
+    {
+      "excerpt": "i think we've reached the point where the cracked marketer is more in demand than the cracked engineer",
+      "excerpt_zh": "我觉得现在已经到了顶尖营销比顶尖工程师更抢手的时候",
+      "handle": "gregisenberg",
+      "likes": 1676,
+      "name": "GREG ISENBERG",
+      "post_id": "2118867930113057131",
+      "tags": [
+        "career"
+      ],
+      "text_zh": "他认为现在顶尖营销人才比顶尖工程师更抢手。",
+      "url": "https://x.com/gregisenberg/status/2118867930113057131"
+    },
+    {
+      "excerpt": "Claude Code can design furniture part by part and then give you a bill of materials to order each part and put it together yourself \n\nAnd way cheaper than big interior brands sell you their furniture\n\nFurnishing my house I discovered how absolutely insane prices are for the most https://t.co/tCV4AHYPnn",
+      "excerpt_zh": "Claude Code 可以一件件设计家具，再给你物料清单，自己下单零件然后组装\n\n而且比大家具品牌卖的家具便宜得多\n\n给自己房子置办家具时我才发现，大多数东西的价格有多离谱 https://t.co/tCV4AHYPnn",
+      "handle": "levelsio",
+      "likes": 1326,
+      "name": "@levelsio",
+      "post_id": "2119132202952798369",
+      "tags": [
+        "model",
+        "code"
+      ],
+      "text_zh": "Claude Code 能一件件设计家具并给出物料清单，比品牌家具便宜得多。",
+      "url": "https://x.com/levelsio/status/2119132202952798369"
+    },
+    {
+      "excerpt": "I think there is way too much concern expressed about verification of AI output in everyday work due to a risk of factual errors.\n\nIt used to be true, but data on more recent models suggest they beat human experts, including PhD specialists, in finding facts and checking claims. https://t.co/OVlzW3S17n",
+      "excerpt_zh": "我觉得大家对日常工作中核实 AI 输出、担心事实错误这件事过度焦虑了。\n\n以前确实如此，但更新模型的数据显示，它们在找事实和核对主张上已经超过人类专家，包括博士级专家。 https://t.co/OVlzW3S17n",
+      "handle": "emollick",
+      "likes": 777,
+      "name": "Ethan Mollick",
+      "post_id": "2119140502746308674",
+      "tags": [
+        "model"
+      ],
+      "text_zh": "他认为不必过度担心核实 AI 输出：新模型找事实已超过含博士在内的人类专家。",
+      "url": "https://x.com/emollick/status/2119140502746308674"
+    },
+    {
+      "excerpt": "全体起立，Vercel推出的agent-desktop现在才是Agent操控电脑的真神。\n\n它是 Vercel Labs 的开源项目，Apache-2.0 协议，GitHub 已经有 1.8 万 star，仓库地址在下面\n\n它是一个命令行工具，让 Claude Code、Codex 这类 Agent 直接操作你电脑上的 App：点按钮、填表单、打字、切菜单、读界面。 https://t.co/6ZcztjqbRx",
+      "handle": "Pluvio9yte",
+      "likes": 629,
+      "name": "雪踏乌云",
+      "post_id": "2119080693233754506",
+      "tags": [
+        "model",
+        "agent"
+      ],
+      "text_zh": "介绍 Vercel 开源 agent-desktop（已 1.8 万星），能让 Agent 直接操作电脑 App。",
+      "url": "https://x.com/Pluvio9yte/status/2119080693233754506"
+    }
+  ],
+  "pin": [],
+  "summary_zh": [
+    "马斯克称 Cybertruck 积压订单远超产能，将加开一班赶在明年 6–7 月改线前交完。",
+    "Karpathy 用 Claude Code 三分钟做出 TristanTube：4.7 万支极客视频与 TV 模式。",
+    "话题仅 Qwen 千问上涨约 9%；Qwen/Anthropic 粉丝一日各增约 3800/3450。"
+  ],
+  "topics_zh": "涨幅领先：Qwen 千问 +9.0%、REA +2.8%、搞钱·副业 +1.4%；其余话题全线下滑，GLM 智谱 −31.4%、solopreneur −36.3%、Dan Koe −72.1%。"
+}

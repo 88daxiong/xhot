@@ -2,6 +2,34 @@
   "handle": "amasad",
   "tweets": [
     {
+      "created_at": "2026-11-07T23:55:53.000Z",
+      "id": "2119217304953053419",
+      "lang": "",
+      "metrics": {
+        "bookmark": 1,
+        "impression": 3156,
+        "like": 38,
+        "quote": 0,
+        "reply": 9,
+        "retweet": 3
+      },
+      "url": "https://x.com/amasad/status/2119217304953053419"
+    },
+    {
+      "created_at": "2026-11-07T17:53:19.000Z",
+      "id": "2119126064815608270",
+      "lang": "",
+      "metrics": {
+        "bookmark": 26,
+        "impression": 22109,
+        "like": 339,
+        "quote": 1,
+        "reply": 34,
+        "retweet": 16
+      },
+      "url": "https://x.com/amasad/status/2119126064815608270"
+    },
+    {
       "created_at": "2026-11-06T00:50:55.000Z",
       "id": "2118506378440400951",
       "lang": "en",

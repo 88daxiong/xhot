@@ -2,6 +2,62 @@
   "handle": "dickiebush",
   "tweets": [
     {
+      "created_at": "2026-11-07T16:18:14.000Z",
+      "id": "2119102136361300449",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 5,
+        "impression": 11389,
+        "like": 36,
+        "quote": 0,
+        "reply": 19,
+        "retweet": 2
+      },
+      "url": "https://x.com/dickiebush/status/2119102136361300449"
+    },
+    {
+      "created_at": "2026-11-07T13:30:06.000Z",
+      "id": "2119059822683295900",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 17,
+        "impression": 9476,
+        "like": 97,
+        "quote": 0,
+        "reply": 39,
+        "retweet": 1
+      },
+      "url": "https://x.com/dickiebush/status/2119059822683295900"
+    },
+    {
+      "created_at": "2026-11-07T03:32:12.000Z",
+      "id": "2118909355651195192",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 3,
+        "impression": 1284,
+        "like": 2,
+        "quote": 0,
+        "reply": 0,
+        "retweet": 0
+      },
+      "url": "https://x.com/dickiebush/status/2118909355651195192"
+    },
+    {
+      "created_at": "2026-11-07T00:32:06.000Z",
+      "id": "2118864032098611279",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 120,
+        "impression": 13249,
+        "like": 192,
+        "quote": 2,
+        "reply": 59,
+        "retweet": 9
+      },
+      "url": "https://x.com/dickiebush/status/2118864032098611279"
+    },
+    {
       "created_at": "2026-11-06T16:03:09.000Z",
       "id": "2118735950687682979",
       "lang": "",

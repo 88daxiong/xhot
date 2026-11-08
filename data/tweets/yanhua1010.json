@@ -2,6 +2,48 @@
   "handle": "yanhua1010",
   "tweets": [
     {
+      "created_at": "2026-11-07T14:30:01.000Z",
+      "id": "2119074899612586027",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 1219,
+        "like": 2,
+        "quote": 0,
+        "reply": 3,
+        "retweet": 0
+      },
+      "url": "https://x.com/yanhua1010/status/2119074899612586027"
+    },
+    {
+      "created_at": "2026-11-07T14:00:14.000Z",
+      "id": "2119067406500876339",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 13,
+        "impression": 2116,
+        "like": 11,
+        "quote": 1,
+        "reply": 4,
+        "retweet": 0
+      },
+      "url": "https://x.com/yanhua1010/status/2119067406500876339"
+    },
+    {
+      "created_at": "2026-11-07T11:59:57.000Z",
+      "id": "2119037137144426705",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 3,
+        "impression": 4973,
+        "like": 12,
+        "quote": 0,
+        "reply": 8,
+        "retweet": 0
+      },
+      "url": "https://x.com/yanhua1010/status/2119037137144426705"
+    },
+    {
       "created_at": "2026-11-06T13:08:44.000Z",
       "id": "2118692056373899455",
       "lang": "",
