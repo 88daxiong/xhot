@@ -2,6 +2,356 @@
   "handle": "y1cxmm",
   "tweets": [
     {
+      "created_at": "2026-11-08T23:31:27.000Z",
+      "id": "2119573542912307339",
+      "lang": "",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 318,
+        "like": 29,
+        "quote": 0,
+        "reply": 39,
+        "retweet": 1
+      },
+      "url": "https://x.com/y1cxmm/status/2119573542912307339"
+    },
+    {
+      "created_at": "2026-11-08T22:50:27.000Z",
+      "id": "2119563225666818087",
+      "lang": "",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 447,
+        "like": 12,
+        "quote": 0,
+        "reply": 12,
+        "retweet": 0
+      },
+      "url": "https://x.com/y1cxmm/status/2119563225666818087"
+    },
+    {
+      "created_at": "2026-11-08T22:35:28.000Z",
+      "id": "2119559455025266817",
+      "lang": "",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 487,
+        "like": 28,
+        "quote": 0,
+        "reply": 48,
+        "retweet": 2
+      },
+      "url": "https://x.com/y1cxmm/status/2119559455025266817"
+    },
+    {
+      "created_at": "2026-11-08T22:09:00.000Z",
+      "id": "2119552795334594608",
+      "lang": "",
+      "metrics": {
+        "bookmark": 1,
+        "impression": 580,
+        "like": 51,
+        "quote": 0,
+        "reply": 68,
+        "retweet": 0
+      },
+      "url": "https://x.com/y1cxmm/status/2119552795334594608"
+    },
+    {
+      "created_at": "2026-11-08T15:06:19.000Z",
+      "id": "2119446423012036897",
+      "lang": "",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 290,
+        "like": 8,
+        "quote": 0,
+        "reply": 8,
+        "retweet": 0
+      },
+      "url": "https://x.com/y1cxmm/status/2119446423012036897"
+    },
+    {
+      "created_at": "2026-11-08T14:21:50.000Z",
+      "id": "2119435229983330767",
+      "lang": "",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 358,
+        "like": 8,
+        "quote": 0,
+        "reply": 7,
+        "retweet": 1
+      },
+      "url": "https://x.com/y1cxmm/status/2119435229983330767"
+    },
+    {
+      "created_at": "2026-11-08T14:08:22.000Z",
+      "id": "2119431838783705584",
+      "lang": "",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 288,
+        "like": 8,
+        "quote": 0,
+        "reply": 14,
+        "retweet": 0
+      },
+      "url": "https://x.com/y1cxmm/status/2119431838783705584"
+    },
+    {
+      "created_at": "2026-11-08T13:52:26.000Z",
+      "id": "2119427830253813921",
+      "lang": "",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 313,
+        "like": 3,
+        "quote": 0,
+        "reply": 4,
+        "retweet": 0
+      },
+      "url": "https://x.com/y1cxmm/status/2119427830253813921"
+    },
+    {
+      "created_at": "2026-11-08T13:47:03.000Z",
+      "id": "2119426477334929802",
+      "lang": "",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 177,
+        "like": 2,
+        "quote": 0,
+        "reply": 6,
+        "retweet": 0
+      },
+      "url": "https://x.com/y1cxmm/status/2119426477334929802"
+    },
+    {
+      "created_at": "2026-11-08T13:31:38.000Z",
+      "id": "2119422595175268854",
+      "lang": "",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 315,
+        "like": 11,
+        "quote": 0,
+        "reply": 10,
+        "retweet": 0
+      },
+      "url": "https://x.com/y1cxmm/status/2119422595175268854"
+    },
+    {
+      "created_at": "2026-11-08T13:13:17.000Z",
+      "id": "2119417976718086600",
+      "lang": "",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 267,
+        "like": 9,
+        "quote": 0,
+        "reply": 9,
+        "retweet": 0
+      },
+      "url": "https://x.com/y1cxmm/status/2119417976718086600"
+    },
+    {
+      "created_at": "2026-11-08T12:51:09.000Z",
+      "id": "2119412409366614495",
+      "lang": "",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 214,
+        "like": 5,
+        "quote": 0,
+        "reply": 8,
+        "retweet": 1
+      },
+      "url": "https://x.com/y1cxmm/status/2119412409366614495"
+    },
+    {
+      "created_at": "2026-11-08T12:34:00.000Z",
+      "id": "2119408093713059977",
+      "lang": "",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 253,
+        "like": 8,
+        "quote": 0,
+        "reply": 10,
+        "retweet": 0
+      },
+      "url": "https://x.com/y1cxmm/status/2119408093713059977"
+    },
+    {
+      "created_at": "2026-11-08T12:02:25.000Z",
+      "id": "2119400142810108210",
+      "lang": "",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 227,
+        "like": 7,
+        "quote": 0,
+        "reply": 13,
+        "retweet": 0
+      },
+      "url": "https://x.com/y1cxmm/status/2119400142810108210"
+    },
+    {
+      "created_at": "2026-11-08T11:09:31.000Z",
+      "id": "2119386832928682295",
+      "lang": "",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 424,
+        "like": 31,
+        "quote": 0,
+        "reply": 39,
+        "retweet": 0
+      },
+      "url": "https://x.com/y1cxmm/status/2119386832928682295"
+    },
+    {
+      "created_at": "2026-11-08T09:54:37.000Z",
+      "id": "2119367982560510033",
+      "lang": "",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 232,
+        "like": 5,
+        "quote": 0,
+        "reply": 8,
+        "retweet": 0
+      },
+      "url": "https://x.com/y1cxmm/status/2119367982560510033"
+    },
+    {
+      "created_at": "2026-11-08T09:37:35.000Z",
+      "id": "2119363693343560133",
+      "lang": "",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 391,
+        "like": 6,
+        "quote": 0,
+        "reply": 12,
+        "retweet": 0
+      },
+      "url": "https://x.com/y1cxmm/status/2119363693343560133"
+    },
+    {
+      "created_at": "2026-11-08T09:26:13.000Z",
+      "id": "2119360836674494645",
+      "lang": "",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 777,
+        "like": 41,
+        "quote": 0,
+        "reply": 49,
+        "retweet": 0
+      },
+      "url": "https://x.com/y1cxmm/status/2119360836674494645"
+    },
+    {
+      "created_at": "2026-11-08T09:09:03.000Z",
+      "id": "2119356514557448569",
+      "lang": "",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 398,
+        "like": 17,
+        "quote": 0,
+        "reply": 22,
+        "retweet": 0
+      },
+      "url": "https://x.com/y1cxmm/status/2119356514557448569"
+    },
+    {
+      "created_at": "2026-11-08T08:29:39.000Z",
+      "id": "2119346598555906450",
+      "lang": "",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 317,
+        "like": 12,
+        "quote": 0,
+        "reply": 16,
+        "retweet": 0
+      },
+      "url": "https://x.com/y1cxmm/status/2119346598555906450"
+    },
+    {
+      "created_at": "2026-11-08T08:01:55.000Z",
+      "id": "2119339619544334394",
+      "lang": "",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 255,
+        "like": 6,
+        "quote": 0,
+        "reply": 8,
+        "retweet": 0
+      },
+      "url": "https://x.com/y1cxmm/status/2119339619544334394"
+    },
+    {
+      "created_at": "2026-11-08T07:46:44.000Z",
+      "id": "2119335799930163385",
+      "lang": "",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 330,
+        "like": 12,
+        "quote": 0,
+        "reply": 18,
+        "retweet": 0
+      },
+      "url": "https://x.com/y1cxmm/status/2119335799930163385"
+    },
+    {
+      "created_at": "2026-11-08T06:32:08.000Z",
+      "id": "2119317026414252095",
+      "lang": "",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 330,
+        "like": 10,
+        "quote": 0,
+        "reply": 9,
+        "retweet": 0
+      },
+      "url": "https://x.com/y1cxmm/status/2119317026414252095"
+    },
+    {
+      "created_at": "2026-11-08T05:13:55.000Z",
+      "id": "2119297340867748115",
+      "lang": "",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 421,
+        "like": 21,
+        "quote": 0,
+        "reply": 23,
+        "retweet": 0
+      },
+      "url": "https://x.com/y1cxmm/status/2119297340867748115"
+    },
+    {
+      "created_at": "2026-11-08T04:58:30.000Z",
+      "id": "2119293462755610787",
+      "lang": "",
+      "metrics": {
+        "bookmark": 1,
+        "impression": 342,
+        "like": 11,
+        "quote": 0,
+        "reply": 11,
+        "retweet": 0
+      },
+      "url": "https://x.com/y1cxmm/status/2119293462755610787"
+    },
+    {
       "created_at": "2026-11-07T23:50:05.000Z",
       "id": "2119215846476435718",
       "lang": "",
@@ -2450,356 +2800,6 @@
         "retweet": 0
       },
       "url": "https://x.com/y1cxmm/status/2116511147553931527"
-    },
-    {
-      "created_at": "2026-10-31T12:30:55.000Z",
-      "id": "2116508211897606637",
-      "lang": "zh",
-      "metrics": {
-        "bookmark": 1,
-        "impression": 1816,
-        "like": 67,
-        "quote": 0,
-        "reply": 91,
-        "retweet": 0
-      },
-      "url": "https://x.com/y1cxmm/status/2116508211897606637"
-    },
-    {
-      "created_at": "2026-10-31T11:56:51.000Z",
-      "id": "2116499642104062348",
-      "lang": "zh",
-      "metrics": {
-        "bookmark": 0,
-        "impression": 406,
-        "like": 18,
-        "quote": 0,
-        "reply": 23,
-        "retweet": 0
-      },
-      "url": "https://x.com/y1cxmm/status/2116499642104062348"
-    },
-    {
-      "created_at": "2026-10-31T11:41:00.000Z",
-      "id": "2116495652129828927",
-      "lang": "zh",
-      "metrics": {
-        "bookmark": 0,
-        "impression": 176,
-        "like": 4,
-        "quote": 0,
-        "reply": 3,
-        "retweet": 0
-      },
-      "url": "https://x.com/y1cxmm/status/2116495652129828927"
-    },
-    {
-      "created_at": "2026-10-31T11:24:27.000Z",
-      "id": "2116491485239734378",
-      "lang": "zh",
-      "metrics": {
-        "bookmark": 0,
-        "impression": 681,
-        "like": 24,
-        "quote": 0,
-        "reply": 46,
-        "retweet": 0
-      },
-      "url": "https://x.com/y1cxmm/status/2116491485239734378"
-    },
-    {
-      "created_at": "2026-10-31T11:01:42.000Z",
-      "id": "2116485762497867913",
-      "lang": "zh",
-      "metrics": {
-        "bookmark": 0,
-        "impression": 633,
-        "like": 25,
-        "quote": 0,
-        "reply": 61,
-        "retweet": 0
-      },
-      "url": "https://x.com/y1cxmm/status/2116485762497867913"
-    },
-    {
-      "created_at": "2026-10-31T09:44:45.000Z",
-      "id": "2116466394749620312",
-      "lang": "zh",
-      "metrics": {
-        "bookmark": 0,
-        "impression": 543,
-        "like": 22,
-        "quote": 0,
-        "reply": 36,
-        "retweet": 0
-      },
-      "url": "https://x.com/y1cxmm/status/2116466394749620312"
-    },
-    {
-      "created_at": "2026-10-31T08:31:07.000Z",
-      "id": "2116447865732317535",
-      "lang": "zh",
-      "metrics": {
-        "bookmark": 0,
-        "impression": 224,
-        "like": 7,
-        "quote": 0,
-        "reply": 8,
-        "retweet": 0
-      },
-      "url": "https://x.com/y1cxmm/status/2116447865732317535"
-    },
-    {
-      "created_at": "2026-10-31T07:09:01.000Z",
-      "id": "2116427204141944898",
-      "lang": "zh",
-      "metrics": {
-        "bookmark": 0,
-        "impression": 420,
-        "like": 21,
-        "quote": 0,
-        "reply": 27,
-        "retweet": 0
-      },
-      "url": "https://x.com/y1cxmm/status/2116427204141944898"
-    },
-    {
-      "created_at": "2026-10-31T07:00:58.000Z",
-      "id": "2116425176799985975",
-      "lang": "zh",
-      "metrics": {
-        "bookmark": 0,
-        "impression": 389,
-        "like": 14,
-        "quote": 0,
-        "reply": 16,
-        "retweet": 0
-      },
-      "url": "https://x.com/y1cxmm/status/2116425176799985975"
-    },
-    {
-      "created_at": "2026-10-31T06:13:29.000Z",
-      "id": "2116413227823448524",
-      "lang": "zh",
-      "metrics": {
-        "bookmark": 0,
-        "impression": 409,
-        "like": 16,
-        "quote": 0,
-        "reply": 20,
-        "retweet": 0
-      },
-      "url": "https://x.com/y1cxmm/status/2116413227823448524"
-    },
-    {
-      "created_at": "2026-10-30T23:48:00.000Z",
-      "id": "2116316220446409039",
-      "lang": "",
-      "metrics": {
-        "bookmark": 0,
-        "impression": 185,
-        "like": 10,
-        "quote": 0,
-        "reply": 11,
-        "retweet": 0
-      },
-      "url": "https://x.com/y1cxmm/status/2116316220446409039"
-    },
-    {
-      "created_at": "2026-10-30T23:20:48.000Z",
-      "id": "2116309374100754925",
-      "lang": "",
-      "metrics": {
-        "bookmark": 0,
-        "impression": 510,
-        "like": 29,
-        "quote": 0,
-        "reply": 44,
-        "retweet": 0
-      },
-      "url": "https://x.com/y1cxmm/status/2116309374100754925"
-    },
-    {
-      "created_at": "2026-10-30T23:05:22.000Z",
-      "id": "2116305489936162861",
-      "lang": "",
-      "metrics": {
-        "bookmark": 0,
-        "impression": 446,
-        "like": 39,
-        "quote": 0,
-        "reply": 50,
-        "retweet": 1
-      },
-      "url": "https://x.com/y1cxmm/status/2116305489936162861"
-    },
-    {
-      "created_at": "2026-10-30T22:31:06.000Z",
-      "id": "2116296865125896205",
-      "lang": "",
-      "metrics": {
-        "bookmark": 0,
-        "impression": 666,
-        "like": 33,
-        "quote": 0,
-        "reply": 41,
-        "retweet": 1
-      },
-      "url": "https://x.com/y1cxmm/status/2116296865125896205"
-    },
-    {
-      "created_at": "2026-10-30T22:07:34.000Z",
-      "id": "2116290942227616035",
-      "lang": "",
-      "metrics": {
-        "bookmark": 0,
-        "impression": 673,
-        "like": 49,
-        "quote": 0,
-        "reply": 78,
-        "retweet": 1
-      },
-      "url": "https://x.com/y1cxmm/status/2116290942227616035"
-    },
-    {
-      "created_at": "2026-10-30T16:01:57.000Z",
-      "id": "2116198933433335864",
-      "lang": "",
-      "metrics": {
-        "bookmark": 0,
-        "impression": 266,
-        "like": 18,
-        "quote": 0,
-        "reply": 12,
-        "retweet": 0
-      },
-      "url": "https://x.com/y1cxmm/status/2116198933433335864"
-    },
-    {
-      "created_at": "2026-10-30T15:44:35.000Z",
-      "id": "2116194563996172578",
-      "lang": "",
-      "metrics": {
-        "bookmark": 0,
-        "impression": 343,
-        "like": 11,
-        "quote": 0,
-        "reply": 10,
-        "retweet": 0
-      },
-      "url": "https://x.com/y1cxmm/status/2116194563996172578"
-    },
-    {
-      "created_at": "2026-10-30T15:25:02.000Z",
-      "id": "2116189641326080008",
-      "lang": "",
-      "metrics": {
-        "bookmark": 0,
-        "impression": 267,
-        "like": 10,
-        "quote": 0,
-        "reply": 4,
-        "retweet": 0
-      },
-      "url": "https://x.com/y1cxmm/status/2116189641326080008"
-    },
-    {
-      "created_at": "2026-10-30T15:12:53.000Z",
-      "id": "2116186584441897434",
-      "lang": "",
-      "metrics": {
-        "bookmark": 0,
-        "impression": 81,
-        "like": 2,
-        "quote": 0,
-        "reply": 1,
-        "retweet": 0
-      },
-      "url": "https://x.com/y1cxmm/status/2116186584441897434"
-    },
-    {
-      "created_at": "2026-10-30T15:12:31.000Z",
-      "id": "2116186492431466692",
-      "lang": "",
-      "metrics": {
-        "bookmark": 0,
-        "impression": 283,
-        "like": 9,
-        "quote": 0,
-        "reply": 9,
-        "retweet": 0
-      },
-      "url": "https://x.com/y1cxmm/status/2116186492431466692"
-    },
-    {
-      "created_at": "2026-10-30T14:59:22.000Z",
-      "id": "2116183183121322378",
-      "lang": "",
-      "metrics": {
-        "bookmark": 0,
-        "impression": 345,
-        "like": 15,
-        "quote": 0,
-        "reply": 11,
-        "retweet": 0
-      },
-      "url": "https://x.com/y1cxmm/status/2116183183121322378"
-    },
-    {
-      "created_at": "2026-10-30T14:44:53.000Z",
-      "id": "2116179540145995856",
-      "lang": "",
-      "metrics": {
-        "bookmark": 0,
-        "impression": 692,
-        "like": 26,
-        "quote": 0,
-        "reply": 42,
-        "retweet": 0
-      },
-      "url": "https://x.com/y1cxmm/status/2116179540145995856"
-    },
-    {
-      "created_at": "2026-10-30T14:14:14.000Z",
-      "id": "2116171824644137070",
-      "lang": "",
-      "metrics": {
-        "bookmark": 1,
-        "impression": 860,
-        "like": 6,
-        "quote": 0,
-        "reply": 11,
-        "retweet": 0
-      },
-      "url": "https://x.com/y1cxmm/status/2116171824644137070"
-    },
-    {
-      "created_at": "2026-10-30T12:48:55.000Z",
-      "id": "2116150356002680984",
-      "lang": "",
-      "metrics": {
-        "bookmark": 0,
-        "impression": 682,
-        "like": 29,
-        "quote": 0,
-        "reply": 43,
-        "retweet": 0
-      },
-      "url": "https://x.com/y1cxmm/status/2116150356002680984"
-    },
-    {
-      "created_at": "2026-10-30T12:14:48.000Z",
-      "id": "2116141768018428200",
-      "lang": "",
-      "metrics": {
-        "bookmark": 1,
-        "impression": 541,
-        "like": 33,
-        "quote": 0,
-        "reply": 32,
-        "retweet": 0
-      },
-      "url": "https://x.com/y1cxmm/status/2116141768018428200"
     }
   ],
   "user_id": "1406138092767956996"

@@ -2,6 +2,90 @@
   "handle": "dickiebush",
   "tweets": [
     {
+      "created_at": "2026-11-08T15:00:02.000Z",
+      "id": "2119444843852128611",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 23,
+        "impression": 4093,
+        "like": 33,
+        "quote": 0,
+        "reply": 27,
+        "retweet": 3
+      },
+      "url": "https://x.com/dickiebush/status/2119444843852128611"
+    },
+    {
+      "created_at": "2026-11-08T13:02:02.000Z",
+      "id": "2119415146535592363",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 70,
+        "impression": 9714,
+        "like": 163,
+        "quote": 1,
+        "reply": 33,
+        "retweet": 10
+      },
+      "url": "https://x.com/dickiebush/status/2119415146535592363"
+    },
+    {
+      "created_at": "2026-11-08T10:00:02.000Z",
+      "id": "2119369344857587740",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 4,
+        "impression": 4080,
+        "like": 20,
+        "quote": 0,
+        "reply": 12,
+        "retweet": 0
+      },
+      "url": "https://x.com/dickiebush/status/2119369344857587740"
+    },
+    {
+      "created_at": "2026-11-08T09:00:07.000Z",
+      "id": "2119354265571369047",
+      "lang": "zxx",
+      "metrics": {
+        "bookmark": 11,
+        "impression": 9296,
+        "like": 10,
+        "quote": 1,
+        "reply": 2,
+        "retweet": 1
+      },
+      "url": "https://x.com/dickiebush/status/2119354265571369047"
+    },
+    {
+      "created_at": "2026-11-08T03:42:08.000Z",
+      "id": "2119274245310074891",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 1,
+        "impression": 1444,
+        "like": 2,
+        "quote": 0,
+        "reply": 0,
+        "retweet": 0
+      },
+      "url": "https://x.com/dickiebush/status/2119274245310074891"
+    },
+    {
+      "created_at": "2026-11-08T00:42:01.000Z",
+      "id": "2119228914249732488",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 84,
+        "impression": 15158,
+        "like": 438,
+        "quote": 1,
+        "reply": 45,
+        "retweet": 21
+      },
+      "url": "https://x.com/dickiebush/status/2119228914249732488"
+    },
+    {
       "created_at": "2026-11-07T16:18:14.000Z",
       "id": "2119102136361300449",
       "lang": "en",

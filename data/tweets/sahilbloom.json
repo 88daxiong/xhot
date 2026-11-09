@@ -2,6 +2,48 @@
   "handle": "sahilbloom",
   "tweets": [
     {
+      "created_at": "2026-11-08T21:16:48.000Z",
+      "id": "2119539659764379678",
+      "lang": "",
+      "metrics": {
+        "bookmark": 62,
+        "impression": 88006,
+        "like": 421,
+        "quote": 1,
+        "reply": 44,
+        "retweet": 12
+      },
+      "url": "https://x.com/SahilBloom/status/2119539659764379678"
+    },
+    {
+      "created_at": "2026-11-08T16:07:22.000Z",
+      "id": "2119461789113237944",
+      "lang": "",
+      "metrics": {
+        "bookmark": 1,
+        "impression": 5675,
+        "like": 16,
+        "quote": 0,
+        "reply": 2,
+        "retweet": 0
+      },
+      "url": "https://x.com/SahilBloom/status/2119461789113237944"
+    },
+    {
+      "created_at": "2026-11-08T15:55:37.000Z",
+      "id": "2119458832053150134",
+      "lang": "",
+      "metrics": {
+        "bookmark": 741,
+        "impression": 113558,
+        "like": 3205,
+        "quote": 29,
+        "reply": 175,
+        "retweet": 355
+      },
+      "url": "https://x.com/SahilBloom/status/2119458832053150134"
+    },
+    {
       "created_at": "2026-11-08T00:39:12.000Z",
       "id": "2119228205299085683",
       "lang": "en",

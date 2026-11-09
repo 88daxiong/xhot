@@ -2,6 +2,20 @@
   "handle": "thedankoe",
   "tweets": [
     {
+      "created_at": "2026-11-08T16:15:46.000Z",
+      "id": "2119463899774767513",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 2255,
+        "impression": 164095,
+        "like": 7659,
+        "quote": 70,
+        "reply": 202,
+        "retweet": 878
+      },
+      "url": "https://x.com/thedankoe/status/2119463899774767513"
+    },
+    {
       "created_at": "2026-11-05T16:57:10.000Z",
       "id": "2118387157794496581",
       "lang": "en",
