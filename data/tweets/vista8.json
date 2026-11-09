@@ -2,6 +2,104 @@
   "handle": "vista8",
   "tweets": [
     {
+      "created_at": "2026-11-09T10:51:48.000Z",
+      "id": "2119744759157891187",
+      "lang": "",
+      "metrics": {
+        "bookmark": 5,
+        "impression": 1026,
+        "like": 0,
+        "quote": 0,
+        "reply": 0,
+        "retweet": 0
+      },
+      "url": "https://x.com/vista8/status/2119744759157891187"
+    },
+    {
+      "created_at": "2026-11-09T10:50:49.000Z",
+      "id": "2119744512448987155",
+      "lang": "",
+      "metrics": {
+        "bookmark": 25,
+        "impression": 3907,
+        "like": 30,
+        "quote": 3,
+        "reply": 24,
+        "retweet": 4
+      },
+      "url": "https://x.com/vista8/status/2119744512448987155"
+    },
+    {
+      "created_at": "2026-11-09T08:54:13.000Z",
+      "id": "2119715171572781117",
+      "lang": "",
+      "metrics": {
+        "bookmark": 32,
+        "impression": 5259,
+        "like": 40,
+        "quote": 1,
+        "reply": 26,
+        "retweet": 7
+      },
+      "url": "https://x.com/vista8/status/2119715171572781117"
+    },
+    {
+      "created_at": "2026-11-09T05:35:29.000Z",
+      "id": "2119665155089027437",
+      "lang": "",
+      "metrics": {
+        "bookmark": 4,
+        "impression": 3159,
+        "like": 3,
+        "quote": 0,
+        "reply": 1,
+        "retweet": 0
+      },
+      "url": "https://x.com/vista8/status/2119665155089027437"
+    },
+    {
+      "created_at": "2026-11-09T05:34:04.000Z",
+      "id": "2119664801546916266",
+      "lang": "",
+      "metrics": {
+        "bookmark": 22,
+        "impression": 16007,
+        "like": 45,
+        "quote": 4,
+        "reply": 62,
+        "retweet": 2
+      },
+      "url": "https://x.com/vista8/status/2119664801546916266"
+    },
+    {
+      "created_at": "2026-11-09T04:52:18.000Z",
+      "id": "2119654289060897227",
+      "lang": "",
+      "metrics": {
+        "bookmark": 11,
+        "impression": 7154,
+        "like": 39,
+        "quote": 0,
+        "reply": 10,
+        "retweet": 3
+      },
+      "url": "https://x.com/vista8/status/2119654289060897227"
+    },
+    {
+      "created_at": "2026-11-09T04:26:41.000Z",
+      "id": "2119647840784019790",
+      "lang": "",
+      "metrics": {
+        "bookmark": 3,
+        "impression": 8164,
+        "like": 21,
+        "quote": 1,
+        "reply": 23,
+        "retweet": 0
+      },
+      "url": "https://x.com/vista8/status/2119647840784019790"
+    },
+    {
       "created_at": "2026-11-08T23:37:00.000Z",
       "id": "2119574943021371755",
       "lang": "",
@@ -2702,104 +2800,6 @@
         "retweet": 0
       },
       "url": "https://x.com/vista8/status/2111819519299928282"
-    },
-    {
-      "created_at": "2026-10-18T12:56:03.000Z",
-      "id": "2111803497322881505",
-      "lang": "zh",
-      "metrics": {
-        "bookmark": 8,
-        "impression": 2287,
-        "like": 5,
-        "quote": 0,
-        "reply": 1,
-        "retweet": 2
-      },
-      "url": "https://x.com/vista8/status/2111803497322881505"
-    },
-    {
-      "created_at": "2026-10-18T12:55:11.000Z",
-      "id": "2111803276501086278",
-      "lang": "zh",
-      "metrics": {
-        "bookmark": 75,
-        "impression": 9824,
-        "like": 87,
-        "quote": 1,
-        "reply": 25,
-        "retweet": 6
-      },
-      "url": "https://x.com/vista8/status/2111803276501086278"
-    },
-    {
-      "created_at": "2026-10-18T04:29:56.000Z",
-      "id": "2111676128121491902",
-      "lang": "zh",
-      "metrics": {
-        "bookmark": 236,
-        "impression": 28189,
-        "like": 194,
-        "quote": 7,
-        "reply": 61,
-        "retweet": 14
-      },
-      "url": "https://x.com/vista8/status/2111676128121491902"
-    },
-    {
-      "created_at": "2026-10-18T03:46:20.000Z",
-      "id": "2111665154182320347",
-      "lang": "zh",
-      "metrics": {
-        "bookmark": 2,
-        "impression": 2455,
-        "like": 3,
-        "quote": 0,
-        "reply": 0,
-        "retweet": 0
-      },
-      "url": "https://x.com/vista8/status/2111665154182320347"
-    },
-    {
-      "created_at": "2026-10-18T03:43:58.000Z",
-      "id": "2111664560038195380",
-      "lang": "zh",
-      "metrics": {
-        "bookmark": 84,
-        "impression": 12030,
-        "like": 96,
-        "quote": 3,
-        "reply": 41,
-        "retweet": 13
-      },
-      "url": "https://x.com/vista8/status/2111664560038195380"
-    },
-    {
-      "created_at": "2026-10-18T03:17:05.000Z",
-      "id": "2111657794516701272",
-      "lang": "zh",
-      "metrics": {
-        "bookmark": 11,
-        "impression": 5605,
-        "like": 28,
-        "quote": 2,
-        "reply": 20,
-        "retweet": 2
-      },
-      "url": "https://x.com/vista8/status/2111657794516701272"
-    },
-    {
-      "created_at": "2026-10-17T16:10:36.000Z",
-      "id": "2111490070100488616",
-      "lang": "zh",
-      "metrics": {
-        "bookmark": 2,
-        "impression": 7777,
-        "like": 8,
-        "quote": 0,
-        "reply": 11,
-        "retweet": 0
-      },
-      "url": "https://x.com/vista8/status/2111490070100488616"
     }
   ],
   "user_id": "6690032"
