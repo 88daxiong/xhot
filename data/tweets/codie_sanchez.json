@@ -2,6 +2,48 @@
   "handle": "codie_sanchez",
   "tweets": [
     {
+      "created_at": "2026-11-10T11:52:03.000Z",
+      "id": "2120122311668048211",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 1090,
+        "like": 0,
+        "quote": 0,
+        "reply": 0,
+        "retweet": 1
+      },
+      "url": "https://x.com/Codie_Sanchez/status/2120122311668048211"
+    },
+    {
+      "created_at": "2026-11-10T11:36:23.000Z",
+      "id": "2120118366879023307",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 12,
+        "impression": 6014,
+        "like": 94,
+        "quote": 1,
+        "reply": 21,
+        "retweet": 7
+      },
+      "url": "https://x.com/Codie_Sanchez/status/2120118366879023307"
+    },
+    {
+      "created_at": "2026-11-10T03:40:30.000Z",
+      "id": "2119998609647440026",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 150,
+        "impression": 23047,
+        "like": 855,
+        "quote": 10,
+        "reply": 76,
+        "retweet": 97
+      },
+      "url": "https://x.com/Codie_Sanchez/status/2119998609647440026"
+    },
+    {
       "created_at": "2026-11-09T19:27:05.000Z",
       "id": "2119874436203467107",
       "lang": "en",

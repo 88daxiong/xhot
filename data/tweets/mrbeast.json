@@ -2,6 +2,34 @@
   "handle": "mrbeast",
   "tweets": [
     {
+      "created_at": "2026-11-10T00:56:41.000Z",
+      "id": "2119957381064917109",
+      "lang": "",
+      "metrics": {
+        "bookmark": 39,
+        "impression": 183373,
+        "like": 2925,
+        "quote": 2,
+        "reply": 106,
+        "retweet": 35
+      },
+      "url": "https://x.com/MrBeast/status/2119957381064917109"
+    },
+    {
+      "created_at": "2026-11-10T00:46:51.000Z",
+      "id": "2119954907193115028",
+      "lang": "",
+      "metrics": {
+        "bookmark": 1864,
+        "impression": 2240956,
+        "like": 30163,
+        "quote": 196,
+        "reply": 966,
+        "retweet": 634
+      },
+      "url": "https://x.com/MrBeast/status/2119954907193115028"
+    },
+    {
       "created_at": "2026-11-02T04:35:30.000Z",
       "id": "2117113346549817376",
       "lang": "",

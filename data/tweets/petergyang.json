@@ -2,6 +2,90 @@
   "handle": "petergyang",
   "tweets": [
     {
+      "created_at": "2026-11-10T05:29:48.000Z",
+      "id": "2120026112722137345",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 2,
+        "impression": 5303,
+        "like": 50,
+        "quote": 0,
+        "reply": 8,
+        "retweet": 0
+      },
+      "url": "https://x.com/petergyang/status/2120026112722137345"
+    },
+    {
+      "created_at": "2026-11-10T05:08:24.000Z",
+      "id": "2120020729546862979",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 5,
+        "impression": 3850,
+        "like": 18,
+        "quote": 0,
+        "reply": 10,
+        "retweet": 0
+      },
+      "url": "https://x.com/petergyang/status/2120020729546862979"
+    },
+    {
+      "created_at": "2026-11-10T05:03:40.000Z",
+      "id": "2120019538763002179",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 1456,
+        "like": 0,
+        "quote": 0,
+        "reply": 0,
+        "retweet": 0
+      },
+      "url": "https://x.com/petergyang/status/2120019538763002179"
+    },
+    {
+      "created_at": "2026-11-10T03:30:35.000Z",
+      "id": "2119996112073576556",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 1229,
+        "impression": 198677,
+        "like": 771,
+        "quote": 7,
+        "reply": 71,
+        "retweet": 27
+      },
+      "url": "https://x.com/petergyang/status/2119996112073576556"
+    },
+    {
+      "created_at": "2026-11-10T03:20:52.000Z",
+      "id": "2119993666718794148",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 30,
+        "impression": 11033,
+        "like": 47,
+        "quote": 0,
+        "reply": 14,
+        "retweet": 1
+      },
+      "url": "https://x.com/petergyang/status/2119993666718794148"
+    },
+    {
+      "created_at": "2026-11-10T02:40:32.000Z",
+      "id": "2119983517795065921",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 29,
+        "impression": 12529,
+        "like": 72,
+        "quote": 3,
+        "reply": 16,
+        "retweet": 6
+      },
+      "url": "https://x.com/petergyang/status/2119983517795065921"
+    },
+    {
       "created_at": "2026-11-09T21:15:15.000Z",
       "id": "2119901658394358005",
       "lang": "",
@@ -2716,20 +2800,6 @@
         "retweet": 0
       },
       "url": "https://x.com/petergyang/status/2108241935777554909"
-    },
-    {
-      "created_at": "2026-10-08T17:03:40.000Z",
-      "id": "2108241933684634081",
-      "lang": "en",
-      "metrics": {
-        "bookmark": 73,
-        "impression": 9134,
-        "like": 87,
-        "quote": 0,
-        "reply": 9,
-        "retweet": 6
-      },
-      "url": "https://x.com/petergyang/status/2108241933684634081"
     }
   ],
   "user_id": "84490044"

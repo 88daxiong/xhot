@@ -2,6 +2,90 @@
   "handle": "pluvio9yte",
   "tweets": [
     {
+      "created_at": "2026-11-10T08:40:29.000Z",
+      "id": "2120074099380965859",
+      "lang": "zxx",
+      "metrics": {
+        "bookmark": 8,
+        "impression": 1885,
+        "like": 7,
+        "quote": 0,
+        "reply": 6,
+        "retweet": 0
+      },
+      "url": "https://x.com/Pluvio9yte/status/2120074099380965859"
+    },
+    {
+      "created_at": "2026-11-10T06:20:18.000Z",
+      "id": "2120038823333970432",
+      "lang": "ja",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 944,
+        "like": 0,
+        "quote": 0,
+        "reply": 0,
+        "retweet": 0
+      },
+      "url": "https://x.com/Pluvio9yte/status/2120038823333970432"
+    },
+    {
+      "created_at": "2026-11-10T04:55:29.000Z",
+      "id": "2120017478311154040",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 3,
+        "impression": 2502,
+        "like": 2,
+        "quote": 0,
+        "reply": 2,
+        "retweet": 1
+      },
+      "url": "https://x.com/Pluvio9yte/status/2120017478311154040"
+    },
+    {
+      "created_at": "2026-11-10T03:44:15.000Z",
+      "id": "2119999550563979275",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 33,
+        "impression": 4318,
+        "like": 15,
+        "quote": 0,
+        "reply": 9,
+        "retweet": 1
+      },
+      "url": "https://x.com/Pluvio9yte/status/2119999550563979275"
+    },
+    {
+      "created_at": "2026-11-10T02:02:01.000Z",
+      "id": "2119973822548058307",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 105,
+        "impression": 7912,
+        "like": 50,
+        "quote": 2,
+        "reply": 16,
+        "retweet": 6
+      },
+      "url": "https://x.com/Pluvio9yte/status/2119973822548058307"
+    },
+    {
+      "created_at": "2026-11-10T01:57:41.000Z",
+      "id": "2119972735426383993",
+      "lang": "zxx",
+      "metrics": {
+        "bookmark": 741,
+        "impression": 47524,
+        "like": 347,
+        "quote": 15,
+        "reply": 34,
+        "retweet": 50
+      },
+      "url": "https://x.com/Pluvio9yte/status/2119972735426383993"
+    },
+    {
       "created_at": "2026-11-09T17:27:49.000Z",
       "id": "2119844421995053532",
       "lang": "zh",
