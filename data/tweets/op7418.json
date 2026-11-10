@@ -2,6 +2,104 @@
   "handle": "op7418",
   "tweets": [
     {
+      "created_at": "2026-11-09T09:01:02.000Z",
+      "id": "2119716887009657129",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 11,
+        "impression": 11898,
+        "like": 36,
+        "quote": 1,
+        "reply": 12,
+        "retweet": 0
+      },
+      "url": "https://x.com/op7418/status/2119716887009657129"
+    },
+    {
+      "created_at": "2026-11-09T08:21:35.000Z",
+      "id": "2119706957712113681",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 27,
+        "impression": 9778,
+        "like": 27,
+        "quote": 0,
+        "reply": 13,
+        "retweet": 1
+      },
+      "url": "https://x.com/op7418/status/2119706957712113681"
+    },
+    {
+      "created_at": "2026-11-09T04:24:10.000Z",
+      "id": "2119647207746121763",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 14,
+        "impression": 33723,
+        "like": 67,
+        "quote": 2,
+        "reply": 93,
+        "retweet": 1
+      },
+      "url": "https://x.com/op7418/status/2119647207746121763"
+    },
+    {
+      "created_at": "2026-11-09T04:09:49.000Z",
+      "id": "2119643600103567813",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 8,
+        "impression": 5486,
+        "like": 21,
+        "quote": 0,
+        "reply": 6,
+        "retweet": 1
+      },
+      "url": "https://x.com/op7418/status/2119643600103567813"
+    },
+    {
+      "created_at": "2026-11-09T03:52:31.000Z",
+      "id": "2119639244784472559",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 7,
+        "impression": 51609,
+        "like": 42,
+        "quote": 4,
+        "reply": 50,
+        "retweet": 0
+      },
+      "url": "https://x.com/op7418/status/2119639244784472559"
+    },
+    {
+      "created_at": "2026-11-09T03:51:45.000Z",
+      "id": "2119639050969813445",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 4,
+        "impression": 39935,
+        "like": 39,
+        "quote": 2,
+        "reply": 19,
+        "retweet": 0
+      },
+      "url": "https://x.com/op7418/status/2119639050969813445"
+    },
+    {
+      "created_at": "2026-11-09T00:59:52.000Z",
+      "id": "2119595793514676509",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 6,
+        "impression": 30250,
+        "like": 66,
+        "quote": 0,
+        "reply": 24,
+        "retweet": 0
+      },
+      "url": "https://x.com/op7418/status/2119595793514676509"
+    },
+    {
       "created_at": "2026-11-08T14:09:04.000Z",
       "id": "2119432018450870276",
       "lang": "",
@@ -2702,20 +2800,6 @@
         "retweet": 0
       },
       "url": "https://x.com/op7418/status/2108604561753874568"
-    },
-    {
-      "created_at": "2026-10-09T17:03:35.000Z",
-      "id": "2108604299383337210",
-      "lang": "",
-      "metrics": {
-        "bookmark": 50,
-        "impression": 35454,
-        "like": 74,
-        "quote": 1,
-        "reply": 23,
-        "retweet": 3
-      },
-      "url": "https://x.com/op7418/status/2108604299383337210"
     }
   ],
   "user_id": "1669276256"

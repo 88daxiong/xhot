@@ -1,0 +1,163 @@
+{
+  "changelog": [],
+  "date": "2026-11-10",
+  "followers_zh": "粉丝大涨：Elon +20760、Claude +8566、OpenAI Developers +4895、Anthropic +2895、Karpathy +2428；Jordan Peterson −388、Google −379、Meta −321。",
+  "gists": {
+    "2119593840579379624": "Dickie Bush 分享内容支柱流程：周报长文再拆成视频、短帖和卡片。",
+    "2119617455102333206": "埃隆与 Grok Bot 工程团队开会：修复连夜上线，称明天会有明显改善。",
+    "2119624561100755305": "埃隆称 Dave Chappelle 很残酷，并配图。",
+    "2119650353142747181": "Simon Willison 把 AI 生成的 PR 描述折进 details 标签，减少「PR 水文」打扰。",
+    "2119656485420708034": "NVIDIA AI Day 在首尔举行，超 2000 人测试智能体、机器人并分享韩国开源模型。",
+    "2119667551982813584": "NVIDIA Dynamo 新配方支持韩国开源模型上线，推理速度最高约快一倍。",
+    "2119775037687259452": "Pieter Levels 调侃在加州变得更聪明、更健康、更壮似乎不合法。",
+    "2119777595034415164": "Tibo 吐槽法国 GDPR 可罚两千万美元，但学校群发仍把所有家长邮箱抄送给所有人。",
+    "2119780865131548954": "Tibo 分享让产品出现在谷歌和 AI 回答里的 SEO/AEO 方法，包括 Reddit 和榜单占位。",
+    "2119788086490001906": "谷歌第八代 TPU 再添两款系统，一年内共推出四款，面向智能体时代。",
+    "2119791368004649147": "Ryan Holiday：你无法控制发生什么，只能控制自己如何回应。",
+    "2119803712705294398": "Huberman 引用 Lembke：共依赖家人停止控制后，成瘾者往往才开始康复。",
+    "2119813386502275421": "Sahil Bloom：坦诚做自己，对的人会留下，不对的人离开反而是好事。",
+    "2119828257940083148": "OpenRouter 升级了 MCP，可在智能体里直接试用全部能力，无需先写代码。",
+    "2119835793942540341": "Hormozi：收入增长与你对平庸、拖延和现状的零容忍程度成正比。",
+    "2119853691130056796": "Housel 说《金钱心理学》在法国被偷太多次，书店已把它锁起来。",
+    "2119857335871164769": "Pichai：与 DeepMind 协同设计，一年内推出四款同代 TPU 系统。",
+    "2119860904024314002": "Meta 的 Muse Ember 登陆 OpenRouter，可用前沿模型规划、再把子任务分给 Ember。",
+    "2119864571733446774": "OpenAI 推出 Codex 版 ModRetro Chromatic，可在掌机上设计关卡、动画并试玩。",
+    "2119865330210140339": "Isenberg 演示用智能体批量出广告和低成本 UGC 视频的营销流程。",
+    "2119867707546071125": "Anthropic 宣布 Claude Fable 5.2 与 Mythos 5.2 现已上线。",
+    "2119868627885441389": "Matthew Berman 称 Fable 5.2 极其强，并放出早期试用的演示串。",
+    "2119869925288558799": "Alex Albert 认为机器人领域最终也会服从 scaling 的苦涩教训。",
+    "2119870150845599972": "Mollick 称 Fable 5.2 已接近「锯齿状 AGI」，能创业、做研究、改硬件和建 3D 模型。",
+    "2119877065701036047": "Matt Shumer 展示 Fable 5.2 做的 Mirror Earth 游戏，天气与真实地球实时同步。",
+    "2119878364794372162": "Rauch 称 Fable 代模型能并行承担空前工作量，Vercel 发布前已内部测试。",
+    "2119880754956206543": "Matthew Berman 称测了超过 1000 亿 token，认为 Fable 5.2 是目前最强模型。",
+    "2119880829212172509": "Cursor 已上线 Fable 5.2，CursorBench 最高 60%，默认 56.9%。",
+    "2119884951550386671": "每次新模型发布，Alex 都会让它通读整个项目、找出问题并修复有把握的部分。",
+    "2119889516152414518": "Isenberg 观察 Fable/Mythos 5.2：可独立工作 10–12 小时，自由职业完成度升至 41%。",
+    "2119913172039868579": "OpenAI 建了 Control Room，用于追踪研究推理负载并在安全问题时迅速停掉。"
+  },
+  "hide": [
+    "2119624561100755305",
+    "2119594419355578548",
+    "2119775037687259452"
+  ],
+  "highlights": [
+    {
+      "excerpt": "Introducing Claude Fable 5.2 and Claude Mythos 5.2, designed to tackle the most daunting technical challenges.\n\nThey’re capable collaborators on ambitious projects in many fields, and show improvements in areas like coding, reasoning, and vision.",
+      "excerpt_zh": "正式推出 Claude Fable 5.2 和 Claude Mythos 5.2，用来应对最棘手的技术挑战。\n\n它们能在许多领域的高难度项目中担任得力协作者，并在编程、推理和视觉等方面有所提升。",
+      "handle": "claudeai",
+      "likes": 69793,
+      "name": "Claude",
+      "post_id": "2119867114450268322",
+      "tags": [
+        "model",
+        "code"
+      ],
+      "text_zh": "Claude 发布 Fable 5.2 与 Mythos 5.2，编程、推理和视觉均有提升",
+      "url": "https://x.com/claudeai/status/2119867114450268322"
+    },
+    {
+      "excerpt": "During pre-release testing, Claude Fable 5.2 and Claude Mythos 5.2 worked on ambitious projects in many different fields. Here are a few.\n\nFrom a one-paragraph prompt, Fable 5.2 designed three working electronic devices, including this home voice assistant hub.",
+      "excerpt_zh": "在预发布测试中，Claude Fable 5.2 和 Claude Mythos 5.2 在许多不同领域完成了高难度项目。下面是其中几例。\n\n仅凭一段提示，Fable 5.2 就设计出三款能工作的电子设备，包括这个家用语音助手中枢。",
+      "handle": "claudeai",
+      "likes": 12935,
+      "name": "Claude",
+      "post_id": "2119899459761131615",
+      "tags": [
+        "model",
+        "product"
+      ],
+      "text_zh": "Fable 5.2 仅凭一段提示就设计出三款能工作的电子设备",
+      "url": "https://x.com/claudeai/status/2119899459761131615"
+    },
+    {
+      "excerpt": "We wanted to do more for the people who’ve been with us the longest. So with Fable 5.2, the longer you’ve been subscribed, the more Fable resets you get.",
+      "excerpt_zh": "我们想为陪伴最久的用户多做一些。所以在 Fable 5.2 上，订阅越久，获得的 Fable 重置次数就越多。",
+      "handle": "bcherny",
+      "likes": 11817,
+      "name": "Boris Cherny",
+      "post_id": "2119873095129550880",
+      "tags": [
+        "model",
+        "product"
+      ],
+      "text_zh": "Fable 5.2 按订阅时长发放更多 Fable 重置次数",
+      "url": "https://x.com/bcherny/status/2119873095129550880"
+    },
+    {
+      "excerpt": "It's never been this easy to build software\n\nAnd never this hard to make money with it",
+      "excerpt_zh": "做软件从未如此容易\n\n靠它赚钱却从未如此困难",
+      "handle": "levelsio",
+      "likes": 6539,
+      "name": "@levelsio",
+      "post_id": "2119773878222549451",
+      "tags": [
+        "indie"
+      ],
+      "text_zh": "做软件从未如此容易，靠它赚钱却从未如此困难",
+      "url": "https://x.com/levelsio/status/2119773878222549451"
+    },
+    {
+      "excerpt": "You can now connect multiple local computers to the same dot and choose which one it uses for a task.\n\nIt can build and test your app on a dedicated machine while you keep coding on your laptop.",
+      "excerpt_zh": "你现在可以把多台本地电脑连到同一个 dot，并选择用哪一台执行任务。\n\n它可以在专用机器上构建和测试应用，同时你继续在笔记本电脑上写代码。",
+      "handle": "OpenAIDevs",
+      "likes": 4098,
+      "name": "OpenAI Developers",
+      "post_id": "2119883176726409645",
+      "tags": [
+        "code"
+      ],
+      "text_zh": "Codex 的 dot 可同时连接多台本地电脑并指定执行机器",
+      "url": "https://x.com/OpenAIDevs/status/2119883176726409645"
+    },
+    {
+      "excerpt": "Btw the new meta is:\n- Fable 5.2 for planning\n- Opus 5.5 for execution\n\nTrust me, and thank me later.",
+      "excerpt_zh": "顺便说一下，新的最佳组合是：\n- Fable 5.2 负责规划\n- Opus 5.5 负责执行\n\n相信我，回头再谢我。",
+      "handle": "mattshumer_",
+      "likes": 3168,
+      "name": "Matt Shumer",
+      "post_id": "2119880176112660707",
+      "tags": [
+        "model"
+      ],
+      "text_zh": "新组合：Fable 5.2 负责规划，Opus 5.5 负责执行",
+      "url": "https://x.com/mattshumer_/status/2119880176112660707"
+    },
+    {
+      "excerpt": "Today we're introducing Muse Ember, our smallest and most efficient model, built for complex reasoning execution and everyday agent work.\n\nMuse Ember can carry workflows across apps, call tools in sequence, run tests and make targeted code fixes. With a 1M-token context window",
+      "excerpt_zh": "今天我们推出 Muse Ember，这是我们最小、最高效的模型，专为复杂推理执行和日常智能体工作而打造。\n\nMuse Ember 可以跨应用推进工作流、依次调用工具、跑测试并做针对性代码修复。它拥有 100 万 token 的上下文窗口",
+      "handle": "AIatMeta",
+      "likes": 2387,
+      "name": "AI at Meta",
+      "post_id": "2119853591703998787",
+      "tags": [
+        "model",
+        "agent"
+      ],
+      "text_zh": "Meta 发布最小高效模型 Muse Ember，面向智能体日常工作",
+      "url": "https://x.com/AIatMeta/status/2119853591703998787"
+    },
+    {
+      "excerpt": "Claude Fable 5.2 is now available in Cursor!\n\nAt max effort, it's the top model on CursorBench at 60%.\n\nFable 5.2 scores 56.9% on CursorBench at default effort, up from 49.2% for Fable 5.1.",
+      "excerpt_zh": "Claude Fable 5.2 现已在 Cursor 中可用！\n\n在最高努力程度下，它是 CursorBench 上的第一名，得分 60%。\n\nFable 5.2 在默认努力程度下 CursorBench 得分为 56.9%，高于 Fable 5.1 的 49.2%。",
+      "handle": "cursor_ai",
+      "likes": 1551,
+      "name": "Cursor",
+      "post_id": "2119880829212172509",
+      "tags": [
+        "model",
+        "code"
+      ],
+      "text_zh": "Cursor 已上线 Fable 5.2，CursorBench 最高 60%",
+      "url": "https://x.com/cursor_ai/status/2119880829212172509"
+    }
+  ],
+  "pin": [
+    "2119617455102333206"
+  ],
+  "summary_zh": [
+    "Claude 发布 Fable 5.2 与 Mythos 5.2，官宣帖约 7.0 万赞。",
+    "话题涨幅：Opus 5.5 +87.8%（8407 条）、monk mode +35.3%、MCP +17.1%。",
+    "粉丝大涨：Elon +20760、Claude +8566、OpenAI Developers +4895。"
+  ],
+  "topics_zh": "涨幅领先：Opus 5.5 +87.8%、monk mode·dopamine detox +35.3%、MCP +17.1%；回落较多的是 Dan Koe −47.9%、solopreneur −23.2%、Kimi −13.1%。"
+}

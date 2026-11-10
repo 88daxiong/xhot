@@ -2,6 +2,62 @@
   "handle": "yanhua1010",
   "tweets": [
     {
+      "created_at": "2026-11-09T23:29:05.000Z",
+      "id": "2119935336063315988",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 273,
+        "like": 1,
+        "quote": 0,
+        "reply": 2,
+        "retweet": 0
+      },
+      "url": "https://x.com/yanhua1010/status/2119935336063315988"
+    },
+    {
+      "created_at": "2026-11-09T14:52:59.000Z",
+      "id": "2119805457611309120",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 11,
+        "impression": 1518,
+        "like": 14,
+        "quote": 0,
+        "reply": 0,
+        "retweet": 0
+      },
+      "url": "https://x.com/yanhua1010/status/2119805457611309120"
+    },
+    {
+      "created_at": "2026-11-09T12:52:10.000Z",
+      "id": "2119775052308869513",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 3,
+        "impression": 1473,
+        "like": 5,
+        "quote": 0,
+        "reply": 1,
+        "retweet": 0
+      },
+      "url": "https://x.com/yanhua1010/status/2119775052308869513"
+    },
+    {
+      "created_at": "2026-11-09T03:23:58.000Z",
+      "id": "2119632059253862906",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 1153,
+        "like": 0,
+        "quote": 0,
+        "reply": 3,
+        "retweet": 0
+      },
+      "url": "https://x.com/yanhua1010/status/2119632059253862906"
+    },
+    {
       "created_at": "2026-11-09T00:01:08.000Z",
       "id": "2119581013978546333",
       "lang": "",

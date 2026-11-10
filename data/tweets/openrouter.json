@@ -2,6 +2,174 @@
   "handle": "openrouter",
   "tweets": [
     {
+      "created_at": "2026-11-09T22:27:03.000Z",
+      "id": "2119919726445080599",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 4,
+        "impression": 3268,
+        "like": 28,
+        "quote": 0,
+        "reply": 6,
+        "retweet": 1
+      },
+      "url": "https://x.com/OpenRouter/status/2119919726445080599"
+    },
+    {
+      "created_at": "2026-11-09T19:29:40.000Z",
+      "id": "2119875084521447767",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 7,
+        "impression": 7491,
+        "like": 112,
+        "quote": 2,
+        "reply": 8,
+        "retweet": 3
+      },
+      "url": "https://x.com/OpenRouter/status/2119875084521447767"
+    },
+    {
+      "created_at": "2026-11-09T18:33:22.000Z",
+      "id": "2119860915986464848",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 2388,
+        "like": 7,
+        "quote": 0,
+        "reply": 0,
+        "retweet": 1
+      },
+      "url": "https://x.com/OpenRouter/status/2119860915986464848"
+    },
+    {
+      "created_at": "2026-11-09T18:33:19.000Z",
+      "id": "2119860904024314002",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 9,
+        "impression": 27446,
+        "like": 151,
+        "quote": 3,
+        "reply": 12,
+        "retweet": 12
+      },
+      "url": "https://x.com/OpenRouter/status/2119860904024314002"
+    },
+    {
+      "created_at": "2026-11-09T16:24:05.000Z",
+      "id": "2119828383827894410",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 1,
+        "impression": 1836,
+        "like": 3,
+        "quote": 0,
+        "reply": 1,
+        "retweet": 0
+      },
+      "url": "https://x.com/OpenRouter/status/2119828383827894410"
+    },
+    {
+      "created_at": "2026-11-09T16:24:01.000Z",
+      "id": "2119828365947638173",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 1970,
+        "like": 2,
+        "quote": 0,
+        "reply": 2,
+        "retweet": 0
+      },
+      "url": "https://x.com/OpenRouter/status/2119828365947638173"
+    },
+    {
+      "created_at": "2026-11-09T16:23:57.000Z",
+      "id": "2119828348201542034",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 240,
+        "like": 2,
+        "quote": 0,
+        "reply": 1,
+        "retweet": 0
+      },
+      "url": "https://x.com/OpenRouter/status/2119828348201542034"
+    },
+    {
+      "created_at": "2026-11-09T16:23:53.000Z",
+      "id": "2119828330203709794",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 432,
+        "like": 9,
+        "quote": 1,
+        "reply": 2,
+        "retweet": 3
+      },
+      "url": "https://x.com/OpenRouter/status/2119828330203709794"
+    },
+    {
+      "created_at": "2026-11-09T16:23:48.000Z",
+      "id": "2119828312130462205",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 262,
+        "like": 4,
+        "quote": 0,
+        "reply": 1,
+        "retweet": 0
+      },
+      "url": "https://x.com/OpenRouter/status/2119828312130462205"
+    },
+    {
+      "created_at": "2026-11-09T16:23:44.000Z",
+      "id": "2119828294027845973",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 436,
+        "like": 6,
+        "quote": 0,
+        "reply": 1,
+        "retweet": 0
+      },
+      "url": "https://x.com/OpenRouter/status/2119828294027845973"
+    },
+    {
+      "created_at": "2026-11-09T16:23:40.000Z",
+      "id": "2119828276139135445",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 2,
+        "impression": 705,
+        "like": 6,
+        "quote": 0,
+        "reply": 1,
+        "retweet": 0
+      },
+      "url": "https://x.com/OpenRouter/status/2119828276139135445"
+    },
+    {
+      "created_at": "2026-11-09T16:23:35.000Z",
+      "id": "2119828257940083148",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 49,
+        "impression": 11362,
+        "like": 134,
+        "quote": 4,
+        "reply": 15,
+        "retweet": 13
+      },
+      "url": "https://x.com/OpenRouter/status/2119828257940083148"
+    },
+    {
       "created_at": "2026-11-06T21:32:28.000Z",
       "id": "2118818826859225525",
       "lang": "en",

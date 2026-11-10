@@ -2,6 +2,76 @@
   "handle": "nvidiaai",
   "tweets": [
     {
+      "created_at": "2026-11-09T07:04:02.000Z",
+      "id": "2119687441934397926",
+      "lang": "",
+      "metrics": {
+        "bookmark": 1,
+        "impression": 5442,
+        "like": 17,
+        "quote": 0,
+        "reply": 3,
+        "retweet": 2
+      },
+      "url": "https://x.com/NVIDIAAI/status/2119687441934397926"
+    },
+    {
+      "created_at": "2026-11-09T07:04:02.000Z",
+      "id": "2119687439518208353",
+      "lang": "",
+      "metrics": {
+        "bookmark": 21,
+        "impression": 17265,
+        "like": 248,
+        "quote": 5,
+        "reply": 31,
+        "retweet": 25
+      },
+      "url": "https://x.com/NVIDIAAI/status/2119687439518208353"
+    },
+    {
+      "created_at": "2026-11-09T05:45:01.000Z",
+      "id": "2119667554256044349",
+      "lang": "",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 5501,
+        "like": 15,
+        "quote": 0,
+        "reply": 0,
+        "retweet": 0
+      },
+      "url": "https://x.com/NVIDIAAI/status/2119667554256044349"
+    },
+    {
+      "created_at": "2026-11-09T05:45:00.000Z",
+      "id": "2119667551982813584",
+      "lang": "",
+      "metrics": {
+        "bookmark": 38,
+        "impression": 24493,
+        "like": 316,
+        "quote": 13,
+        "reply": 41,
+        "retweet": 29
+      },
+      "url": "https://x.com/NVIDIAAI/status/2119667551982813584"
+    },
+    {
+      "created_at": "2026-11-09T05:01:02.000Z",
+      "id": "2119656485420708034",
+      "lang": "",
+      "metrics": {
+        "bookmark": 38,
+        "impression": 52922,
+        "like": 495,
+        "quote": 20,
+        "reply": 67,
+        "retweet": 51
+      },
+      "url": "https://x.com/NVIDIAAI/status/2119656485420708034"
+    },
+    {
       "created_at": "2026-11-06T20:26:15.000Z",
       "id": "2118802160188379186",
       "lang": "en",

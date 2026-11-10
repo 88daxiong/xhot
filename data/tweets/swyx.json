@@ -2,6 +2,104 @@
   "handle": "swyx",
   "tweets": [
     {
+      "created_at": "2026-11-09T23:28:42.000Z",
+      "id": "2119935240202539147",
+      "lang": "",
+      "metrics": {
+        "bookmark": 10,
+        "impression": 3309,
+        "like": 43,
+        "quote": 2,
+        "reply": 22,
+        "retweet": 2
+      },
+      "url": "https://x.com/swyx/status/2119935240202539147"
+    },
+    {
+      "created_at": "2026-11-09T19:44:12.000Z",
+      "id": "2119878742063641056",
+      "lang": "",
+      "metrics": {
+        "bookmark": 13,
+        "impression": 10658,
+        "like": 80,
+        "quote": 0,
+        "reply": 16,
+        "retweet": 1
+      },
+      "url": "https://x.com/swyx/status/2119878742063641056"
+    },
+    {
+      "created_at": "2026-11-09T19:13:22.000Z",
+      "id": "2119870982609608810",
+      "lang": "",
+      "metrics": {
+        "bookmark": 15,
+        "impression": 4843,
+        "like": 79,
+        "quote": 0,
+        "reply": 8,
+        "retweet": 1
+      },
+      "url": "https://x.com/swyx/status/2119870982609608810"
+    },
+    {
+      "created_at": "2026-11-09T18:56:35.000Z",
+      "id": "2119866760723890571",
+      "lang": "",
+      "metrics": {
+        "bookmark": 2,
+        "impression": 1648,
+        "like": 4,
+        "quote": 0,
+        "reply": 0,
+        "retweet": 0
+      },
+      "url": "https://x.com/swyx/status/2119866760723890571"
+    },
+    {
+      "created_at": "2026-11-09T16:08:24.000Z",
+      "id": "2119824433426878643",
+      "lang": "",
+      "metrics": {
+        "bookmark": 5,
+        "impression": 3055,
+        "like": 4,
+        "quote": 0,
+        "reply": 0,
+        "retweet": 1
+      },
+      "url": "https://x.com/swyx/status/2119824433426878643"
+    },
+    {
+      "created_at": "2026-11-09T16:08:20.000Z",
+      "id": "2119824420059697455",
+      "lang": "",
+      "metrics": {
+        "bookmark": 158,
+        "impression": 20942,
+        "like": 164,
+        "quote": 3,
+        "reply": 40,
+        "retweet": 3
+      },
+      "url": "https://x.com/swyx/status/2119824420059697455"
+    },
+    {
+      "created_at": "2026-11-09T15:09:21.000Z",
+      "id": "2119809574563922263",
+      "lang": "",
+      "metrics": {
+        "bookmark": 8,
+        "impression": 7352,
+        "like": 61,
+        "quote": 4,
+        "reply": 85,
+        "retweet": 1
+      },
+      "url": "https://x.com/swyx/status/2119809574563922263"
+    },
+    {
       "created_at": "2026-11-09T08:39:19.000Z",
       "id": "2119711420912939220",
       "lang": "en",
