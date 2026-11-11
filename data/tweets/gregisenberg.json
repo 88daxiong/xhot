@@ -2,6 +2,62 @@
   "handle": "gregisenberg",
   "tweets": [
     {
+      "created_at": "2026-11-10T23:44:29.000Z",
+      "id": "2120301598630936813",
+      "lang": "",
+      "metrics": {
+        "bookmark": 42,
+        "impression": 7213,
+        "like": 74,
+        "quote": 2,
+        "reply": 33,
+        "retweet": 3
+      },
+      "url": "https://x.com/gregisenberg/status/2120301598630936813"
+    },
+    {
+      "created_at": "2026-11-10T20:21:34.000Z",
+      "id": "2120250534670012721",
+      "lang": "",
+      "metrics": {
+        "bookmark": 3910,
+        "impression": 266809,
+        "like": 1910,
+        "quote": 23,
+        "reply": 165,
+        "retweet": 91
+      },
+      "url": "https://x.com/gregisenberg/status/2120250534670012721"
+    },
+    {
+      "created_at": "2026-11-10T17:40:00.000Z",
+      "id": "2120209875544498211",
+      "lang": "",
+      "metrics": {
+        "bookmark": 879,
+        "impression": 56517,
+        "like": 531,
+        "quote": 3,
+        "reply": 60,
+        "retweet": 13
+      },
+      "url": "https://x.com/gregisenberg/status/2120209875544498211"
+    },
+    {
+      "created_at": "2026-11-10T16:15:01.000Z",
+      "id": "2120188488997875828",
+      "lang": "",
+      "metrics": {
+        "bookmark": 127,
+        "impression": 43054,
+        "like": 469,
+        "quote": 6,
+        "reply": 117,
+        "retweet": 21
+      },
+      "url": "https://x.com/gregisenberg/status/2120188488997875828"
+    },
+    {
       "created_at": "2026-11-10T00:22:34.000Z",
       "id": "2119948798638055570",
       "lang": "en",

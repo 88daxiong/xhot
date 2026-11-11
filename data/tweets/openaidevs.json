@@ -2,6 +2,48 @@
   "handle": "openaidevs",
   "tweets": [
     {
+      "created_at": "2026-11-10T20:52:39.000Z",
+      "id": "2120258357533749755",
+      "lang": "",
+      "metrics": {
+        "bookmark": 145,
+        "impression": 46499,
+        "like": 367,
+        "quote": 11,
+        "reply": 72,
+        "retweet": 32
+      },
+      "url": "https://x.com/OpenAIDevs/status/2120258357533749755"
+    },
+    {
+      "created_at": "2026-11-10T17:50:49.000Z",
+      "id": "2120212598385733732",
+      "lang": "",
+      "metrics": {
+        "bookmark": 12,
+        "impression": 14405,
+        "like": 39,
+        "quote": 0,
+        "reply": 2,
+        "retweet": 2
+      },
+      "url": "https://x.com/OpenAIDevs/status/2120212598385733732"
+    },
+    {
+      "created_at": "2026-11-10T17:50:49.000Z",
+      "id": "2120212596850663712",
+      "lang": "",
+      "metrics": {
+        "bookmark": 134,
+        "impression": 89013,
+        "like": 701,
+        "quote": 43,
+        "reply": 125,
+        "retweet": 52
+      },
+      "url": "https://x.com/OpenAIDevs/status/2120212596850663712"
+    },
+    {
       "created_at": "2026-11-09T20:01:52.000Z",
       "id": "2119883189028266171",
       "lang": "",

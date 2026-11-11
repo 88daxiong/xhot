@@ -2,6 +2,34 @@
   "handle": "matthewberman",
   "tweets": [
     {
+      "created_at": "2026-11-10T21:24:19.000Z",
+      "id": "2120266325985751540",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 8281,
+        "like": 34,
+        "quote": 0,
+        "reply": 22,
+        "retweet": 0
+      },
+      "url": "https://x.com/MatthewBerman/status/2120266325985751540"
+    },
+    {
+      "created_at": "2026-11-10T20:17:49.000Z",
+      "id": "2120249590175908110",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 89,
+        "impression": 29765,
+        "like": 602,
+        "quote": 6,
+        "reply": 97,
+        "retweet": 27
+      },
+      "url": "https://x.com/MatthewBerman/status/2120249590175908110"
+    },
+    {
       "created_at": "2026-11-10T04:11:20.000Z",
       "id": "2120006368375803947",
       "lang": "",

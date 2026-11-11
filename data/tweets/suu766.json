@@ -2,6 +2,48 @@
   "handle": "suu766",
   "tweets": [
     {
+      "created_at": "2026-11-10T16:18:54.000Z",
+      "id": "2120189467286003853",
+      "lang": "",
+      "metrics": {
+        "bookmark": 1,
+        "impression": 1938,
+        "like": 43,
+        "quote": 0,
+        "reply": 47,
+        "retweet": 0
+      },
+      "url": "https://x.com/Suu766/status/2120189467286003853"
+    },
+    {
+      "created_at": "2026-11-10T14:39:07.000Z",
+      "id": "2120164354175942842",
+      "lang": "",
+      "metrics": {
+        "bookmark": 64,
+        "impression": 8686,
+        "like": 69,
+        "quote": 0,
+        "reply": 74,
+        "retweet": 4
+      },
+      "url": "https://x.com/Suu766/status/2120164354175942842"
+    },
+    {
+      "created_at": "2026-11-10T12:42:44.000Z",
+      "id": "2120135067116921254",
+      "lang": "",
+      "metrics": {
+        "bookmark": 19,
+        "impression": 4844,
+        "like": 29,
+        "quote": 0,
+        "reply": 11,
+        "retweet": 3
+      },
+      "url": "https://x.com/Suu766/status/2120135067116921254"
+    },
+    {
       "created_at": "2026-11-10T10:49:09.000Z",
       "id": "2120106480129188115",
       "lang": "zh",
@@ -2758,48 +2800,6 @@
         "retweet": 0
       },
       "url": "https://x.com/Suu766/status/2114600720322449443"
-    },
-    {
-      "created_at": "2026-10-26T06:11:13.000Z",
-      "id": "2114600717935915187",
-      "lang": "",
-      "metrics": {
-        "bookmark": 1,
-        "impression": 506,
-        "like": 0,
-        "quote": 0,
-        "reply": 1,
-        "retweet": 0
-      },
-      "url": "https://x.com/Suu766/status/2114600717935915187"
-    },
-    {
-      "created_at": "2026-10-26T06:11:12.000Z",
-      "id": "2114600715654222153",
-      "lang": "",
-      "metrics": {
-        "bookmark": 0,
-        "impression": 140,
-        "like": 0,
-        "quote": 0,
-        "reply": 1,
-        "retweet": 0
-      },
-      "url": "https://x.com/Suu766/status/2114600715654222153"
-    },
-    {
-      "created_at": "2026-10-26T06:11:12.000Z",
-      "id": "2114600713255027152",
-      "lang": "",
-      "metrics": {
-        "bookmark": 0,
-        "impression": 152,
-        "like": 0,
-        "quote": 0,
-        "reply": 1,
-        "retweet": 0
-      },
-      "url": "https://x.com/Suu766/status/2114600713255027152"
     }
   ],
   "user_id": "1875420384247640064"

@@ -2,6 +2,34 @@
   "handle": "demishassabis",
   "tweets": [
     {
+      "created_at": "2026-11-10T17:41:41.000Z",
+      "id": "2120210299643208084",
+      "lang": "",
+      "metrics": {
+        "bookmark": 12,
+        "impression": 15969,
+        "like": 127,
+        "quote": 0,
+        "reply": 1,
+        "retweet": 7
+      },
+      "url": "https://x.com/demishassabis/status/2120210299643208084"
+    },
+    {
+      "created_at": "2026-11-10T17:41:41.000Z",
+      "id": "2120210297948696997",
+      "lang": "",
+      "metrics": {
+        "bookmark": 228,
+        "impression": 97050,
+        "like": 1932,
+        "quote": 37,
+        "reply": 180,
+        "retweet": 168
+      },
+      "url": "https://x.com/demishassabis/status/2120210297948696997"
+    },
+    {
       "created_at": "2026-10-29T22:25:55.000Z",
       "id": "2115933173175689570",
       "lang": "",

@@ -1,0 +1,155 @@
+{
+  "changelog": [],
+  "date": "2026-11-11",
+  "followers_zh": "粉丝大涨：Claude +24142、Anthropic +4359、OpenAI +3789、Alex Albert +2948、MrBeast +2611、Karpathy +2393；Meta −875、Microsoft −841、Jordan Peterson −257、CZ −257。",
+  "gists": {
+    "2119945524514328631": "Simon Willison 调侃：房间箱子里有间歇蜂鸣，是该逐个打开，还是用多台设备写程序三角定位。",
+    "2119954907193115028": "MrBeast 发布现实版饥饿游戏视频，用可探测击中的定制套装，自称这是他们做过最疯狂的一条。",
+    "2119965240066752682": "Amjad 晒出 2024 年 7 月向 Paul Graham 展示后来被称为 vibe coding 时的反应。",
+    "2120000888974766501": "Ethan Mollick：Fable 5.2 在 ECI、Remote Labor、RoboDojo 等尚未饱和的基准上已超过既有陡峭趋势线。",
+    "2120010484103668102": "Huberman 宣布加入 Hims & Hers 董事会，称该平台在做美国本土的综合远程医疗。",
+    "2120021043876106429": "Tibo 称 Dots 除了自带的小云电脑，现在还能控制更多机器。",
+    "2120023950378037617": "吴说：韩国最大交易所 Upbit 将上线 Hyperliquid 的原生代币 HYPE。",
+    "2120029347948220500": "Simon Willison 提醒看 Anthropic 新提示词指南：对 Fable 5.2 说“This codebase is yours”可减少改代码时过保守。",
+    "2120150942674780181": "levelsio 建议业务尽量精简，自建 VPS 可比 PaaS 便宜 100 到 1000 倍，举例月费 $2.5–4。",
+    "2120163085516177456": "Codie Sanchez：多创作、少消费会更快乐，创造能对抗抑郁。",
+    "2120185896469496180": "皮查伊宣布 Gemini 4 Carbon 今日推送，面向长周期软件工程、网络安全与科学发现，API 与 Ultra 可用。",
+    "2120186450927038900": "Gemini 4 Carbon 今日向 Google AI Ultra 用户在桌面、移动和网页推送，主打复杂工作的深度推理。",
+    "2120186651741655428": "Jim Fan 发布开源机器人模型 GR00T 2：完全在机载算力运行，可做 20 多步、5 分钟以上的长周期操作。",
+    "2120187753329791341": "Google AI 宣布最强前沿模型 Gemini 4 Carbon 上线，面向长周期智能体工作流、知识工作与编程。",
+    "2120189656549486823": "GaryVee 鼓励不断尝试新事物；他 31 岁才发现自己热爱公开演讲。",
+    "2120198811297694192": "皮查伊展示 Carbon 用 Antigravity /swarm，让构建与批评子智能体迭代做出可玩的鹈鹕骑车 3D 小游戏。",
+    "2120198832202125322": "Mollick 提前体验 Gemini 4 Carbon：比 Argon 更好，风格有别于 Claude/GPT，并能把视频片段复现为 3js。",
+    "2120202353907486826": "OpenAI 将于周四举办 Cyber at the Frontier 发布会，把防御经验做成客户可用的安全工具。",
+    "2120212596850663712": "ChatGPT Business 方案现可在 Notion、v0、Amp、Kilo、Warp、OpenCode 等工具里登录使用。",
+    "2120241577649909899": "OpenRouter 正式并入 Stripe；称超 1000 万开发者与公司在用，将加强成本与数据去向的控制。",
+    "2120249590175908110": "Matthew Berman 警告：如果你在做软件，模型实验室很可能成为你的竞争对手。",
+    "2120250534670012721": "Greg Isenberg 认为 ChatGPT 商家主页或成 AI 版「Google 我的商家」，本地认领业务与广告会有新机会。",
+    "2120282133503820150": "Matt Shumer 调侃：Rockstar 做了 8 年的东西，Fable 5.2 七天就能做完。"
+  },
+  "hide": [
+    "2119945847009862137",
+    "2120155961159549079",
+    "2120024720510984234",
+    "2119989362725396589",
+    "2119996112073576556",
+    "2119998102342082970",
+    "2120198640123740392"
+  ],
+  "highlights": [
+    {
+      "excerpt": "Starting to roll out today: Claude Whiteboards, Claude Sheets and Claude Data.\n\nThink a plan through on a board, build a tracker in a sheet, and tell a story with your data. https://t.co/S8M32FMrce",
+      "excerpt_zh": "即日起开始推送：Claude Whiteboards、Claude Sheets 和 Claude Data。\n\n在白板上把计划想清楚，用表格搭建追踪器，再用数据把故事讲出来。",
+      "handle": "claudeai",
+      "likes": 38165,
+      "name": "Claude",
+      "post_id": "2120206365759094857",
+      "tags": [
+        "model"
+      ],
+      "text_zh": "Claude 开始推送白板 Whiteboards、表格 Sheets 与数据 Data，可在板上推演、用表格追踪。",
+      "url": "https://x.com/claudeai/status/2120206365759094857"
+    },
+    {
+      "excerpt": "Turns out that the Starlink software, built for managing the movement of vast amounts of data through space and to the ground, is also very well suited to training super intelligence",
+      "excerpt_zh": "事实证明，Starlink 这套为管理大量数据在太空中传输并送达地面而建的软件，同样非常适合用来训练超级智能。",
+      "handle": "elonmusk",
+      "likes": 18063,
+      "name": "Elon Musk",
+      "post_id": "2120102767624880364",
+      "tags": [],
+      "text_zh": "马斯克称，Starlink 调度天地间海量数据的软件，也很适合用来训练超级智能。",
+      "url": "https://x.com/elonmusk/status/2120102767624880364"
+    },
+    {
+      "excerpt": "A thread of early experiments with Claude Fable 5.2:\n\nA 3D model of a cell, built entirely from code one organelle at a time. Built by @kevin_t_ngo. https://t.co/3J3JLJZzoD",
+      "excerpt_zh": "一组 Claude Fable 5.2 的早期实验：\n\n一个三维细胞模型，完全用代码一个细胞器一个细胞器搭起来。由 @kevin_t_ngo 完成。",
+      "handle": "claudeai",
+      "likes": 11565,
+      "name": "Claude",
+      "post_id": "2120174844822298730",
+      "tags": [
+        "model"
+      ],
+      "text_zh": "汇总 Fable 5.2 早期实验：有人纯用代码、逐个细胞器搭出三维细胞模型。",
+      "url": "https://x.com/claudeai/status/2120174844822298730"
+    },
+    {
+      "excerpt": "Now in beta: Businesses in ChatGPT.\n\nClaim your business, manage your information, and get insights on how people engage with you.\n\nEligible businesses can also build a Business Agent to answer customers’ questions and help them explore what you offer.\n\nhttps://t.co/N2GEZX0mFT https://t.co/lYj2Z48fhQ",
+      "excerpt_zh": "现已进入测试：ChatGPT 中的商家功能。\n\n认领你的商家、管理信息，并了解人们如何与你互动。\n\n符合条件的商家还可以打造一个 Business Agent，回答客户问题并帮助他们了解你的产品。",
+      "handle": "OpenAI",
+      "likes": 10379,
+      "name": "OpenAI",
+      "post_id": "2120216592395174382",
+      "tags": [
+        "agent"
+      ],
+      "text_zh": "ChatGPT 上线商业主页测试：商家可认领资料、看互动，还可做应答客户的 Agent。",
+      "url": "https://x.com/OpenAI/status/2120216592395174382"
+    },
+    {
+      "excerpt": "Gemini 4 Carbon is now available.\n\nIt’s our strongest model, built to dig deeper, handle long-horizon tasks, and multi-step reasoning.\n\nIf Argon is great for complex tasks, Carbon is the model you bring in for your hardest problems.",
+      "excerpt_zh": "Gemini 4 Carbon 现已推出。\n\n这是我们最强的模型，为更深挖掘、处理长周期任务和多步推理而打造。\n\n如果说 Argon 擅长复杂任务，Carbon 就是你拿来应对最难问题的模型。",
+      "handle": "Google",
+      "likes": 7899,
+      "name": "Google",
+      "post_id": "2120186185423159331",
+      "tags": [
+        "model",
+        "product"
+      ],
+      "text_zh": "Gemini 4 Carbon 发布，Google 称这是其最强模型，擅长长周期任务与多步推理。",
+      "url": "https://x.com/Google/status/2120186185423159331"
+    },
+    {
+      "excerpt": "Gemini 4 Carbon, now available in the Gemini API and to Ultra subscribers!\n\nJust a few weeks after Argon was launched, this model makes significant progress on lots of the feedback from Argon and pushes the frontier in cyber, knowledge work, and code! It's a great model : )",
+      "excerpt_zh": "Gemini 4 Carbon 现已在 Gemini API 上线，并向 Ultra 订阅用户开放！\n\n距离 Argon 发布才几周，这个模型就针对大量 Argon 反馈取得明显进展，并在网络安全、知识工作与编程上推进前沿。这是一个很棒的模型 : )",
+      "handle": "OfficialLoganK",
+      "likes": 3585,
+      "name": "Logan Kilpatrick",
+      "post_id": "2120186016254624039",
+      "tags": [
+        "model",
+        "product"
+      ],
+      "text_zh": "Logan：Carbon 已进 Gemini API 与 Ultra，在安全、知识工作与编程上较 Argon 明显进步。",
+      "url": "https://x.com/OfficialLoganK/status/2120186016254624039"
+    },
+    {
+      "excerpt": "Gemini Robotics 2.5 is here. 🤖\n\nOur latest physical AI is able to learn hundreds of everyday skills - from folding laundry and serving pastries to autonomously sorting car parts on the factory floor.\n\nHere’s a snapshot of its capabilities 🧵",
+      "excerpt_zh": "Gemini Robotics 2.5 来了。🤖\n\n我们最新的实体 AI 能够学习数百项日常技能——从叠衣服、端点心，到在工厂流水线上自动分拣汽车零件。\n\n下面是它的能力速览 🧵",
+      "handle": "GoogleDeepMind",
+      "likes": 3404,
+      "name": "Google DeepMind",
+      "post_id": "2120169787896525104",
+      "tags": [
+        "model"
+      ],
+      "text_zh": "Gemini Robotics 2.5 发布，号称能学数百项日常技能，从叠衣到工厂分拣零件。",
+      "url": "https://x.com/GoogleDeepMind/status/2120169787896525104"
+    },
+    {
+      "excerpt": "4K image generation in 10 seconds! ⚡\n\nMeet MiniMax H3-Image.\n\n16 million pixel resolution. Stunning realism. Precise prompt following & editing. Up to 16 reference images. All in 10 seconds.\n\nAnd it's open-weight. 🚀",
+      "excerpt_zh": "10 秒生成 4K 图像！⚡\n\n认识 MiniMax H3-Image。\n\n1600 万像素分辨率。出色的真实感。精确跟随提示词并支持编辑。最多 16 张参考图。全部只要 10 秒。\n\n而且是开源权重。🚀",
+      "handle": "MiniMax_AI",
+      "likes": 2800,
+      "name": "MiniMax (official)",
+      "post_id": "2120179737695826420",
+      "tags": [
+        "oss",
+        "product"
+      ],
+      "text_zh": "MiniMax 发布开源权重 H3-Image：10 秒出 4K 图，最多 16 张参考图，已开放 API。",
+      "url": "https://x.com/MiniMax_AI/status/2120179737695826420"
+    }
+  ],
+  "pin": [
+    "2120186651741655428"
+  ],
+  "summary_zh": [
+    "Claude 上线白板、表格与数据（约 3.8 万赞）；Google 发布最强模型 Gemini 4 Carbon。",
+    "话题涨幅：Opus 5.5 +110.2%（11056 条）、Gemini +91.3%、MCP +29.6%。",
+    "粉丝大涨：Claude +24142、Anthropic +4359、OpenAI +3789。"
+  ],
+  "topics_zh": "涨幅领先：Opus 5.5 +110.2%、Gemini +91.3%、MCP +29.6%；回落较多的是 Dan Koe −70.8%、Kimi −19.6%、DeepSeek −12.5%。"
+}
