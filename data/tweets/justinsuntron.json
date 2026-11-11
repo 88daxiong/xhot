@@ -2,6 +2,34 @@
   "handle": "justinsuntron",
   "tweets": [
     {
+      "created_at": "2026-11-11T11:49:03.000Z",
+      "id": "2120483942109466658",
+      "lang": "",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 17157,
+        "like": 17,
+        "quote": 0,
+        "reply": 14,
+        "retweet": 2
+      },
+      "url": "https://x.com/justinsuntron/status/2120483942109466658"
+    },
+    {
+      "created_at": "2026-11-11T09:19:06.000Z",
+      "id": "2120446206463848679",
+      "lang": "",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 29143,
+        "like": 43,
+        "quote": 0,
+        "reply": 25,
+        "retweet": 5
+      },
+      "url": "https://x.com/justinsuntron/status/2120446206463848679"
+    },
+    {
       "created_at": "2026-11-10T09:22:52.000Z",
       "id": "2120084765751792080",
       "lang": "zh",
