@@ -2,6 +2,62 @@
   "handle": "ryanholiday",
   "tweets": [
     {
+      "created_at": "2026-11-11T20:02:07.000Z",
+      "id": "2120608028483625011",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 3,
+        "impression": 6478,
+        "like": 15,
+        "quote": 0,
+        "reply": 4,
+        "retweet": 0
+      },
+      "url": "https://x.com/RyanHoliday/status/2120608028483625011"
+    },
+    {
+      "created_at": "2026-11-11T19:13:36.000Z",
+      "id": "2120595820282360267",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 2,
+        "impression": 11769,
+        "like": 36,
+        "quote": 0,
+        "reply": 2,
+        "retweet": 2
+      },
+      "url": "https://x.com/RyanHoliday/status/2120595820282360267"
+    },
+    {
+      "created_at": "2026-11-11T17:12:22.000Z",
+      "id": "2120565309207703597",
+      "lang": "zxx",
+      "metrics": {
+        "bookmark": 191,
+        "impression": 16607,
+        "like": 240,
+        "quote": 4,
+        "reply": 10,
+        "retweet": 30
+      },
+      "url": "https://x.com/RyanHoliday/status/2120565309207703597"
+    },
+    {
+      "created_at": "2026-11-11T14:03:00.000Z",
+      "id": "2120517654083694646",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 75,
+        "impression": 26709,
+        "like": 684,
+        "quote": 7,
+        "reply": 43,
+        "retweet": 56
+      },
+      "url": "https://x.com/RyanHoliday/status/2120517654083694646"
+    },
+    {
       "created_at": "2026-11-10T20:46:42.000Z",
       "id": "2120256860427051034",
       "lang": "",

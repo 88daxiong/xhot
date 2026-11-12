@@ -2,6 +2,48 @@
   "handle": "op7418",
   "tweets": [
     {
+      "created_at": "2026-11-11T15:36:52.000Z",
+      "id": "2120541276970094774",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 38,
+        "impression": 9418,
+        "like": 45,
+        "quote": 1,
+        "reply": 19,
+        "retweet": 3
+      },
+      "url": "https://x.com/op7418/status/2120541276970094774"
+    },
+    {
+      "created_at": "2026-11-11T14:47:28.000Z",
+      "id": "2120528843031334915",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 24,
+        "impression": 21954,
+        "like": 54,
+        "quote": 4,
+        "reply": 30,
+        "retweet": 3
+      },
+      "url": "https://x.com/op7418/status/2120528843031334915"
+    },
+    {
+      "created_at": "2026-11-11T01:19:10.000Z",
+      "id": "2120325429181739309",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 43,
+        "impression": 15457,
+        "like": 38,
+        "quote": 2,
+        "reply": 46,
+        "retweet": 5
+      },
+      "url": "https://x.com/op7418/status/2120325429181739309"
+    },
+    {
       "created_at": "2026-11-10T12:02:49.000Z",
       "id": "2120125019158417590",
       "lang": "zh",
@@ -2758,48 +2800,6 @@
         "retweet": 40
       },
       "url": "https://x.com/op7418/status/2109515395749310821"
-    },
-    {
-      "created_at": "2026-10-12T02:31:04.000Z",
-      "id": "2109471885960647082",
-      "lang": "",
-      "metrics": {
-        "bookmark": 98,
-        "impression": 17975,
-        "like": 127,
-        "quote": 0,
-        "reply": 18,
-        "retweet": 9
-      },
-      "url": "https://x.com/op7418/status/2109471885960647082"
-    },
-    {
-      "created_at": "2026-10-12T02:23:38.000Z",
-      "id": "2109470015091261561",
-      "lang": "",
-      "metrics": {
-        "bookmark": 8,
-        "impression": 3801,
-        "like": 5,
-        "quote": 0,
-        "reply": 0,
-        "retweet": 0
-      },
-      "url": "https://x.com/op7418/status/2109470015091261561"
-    },
-    {
-      "created_at": "2026-10-12T02:23:17.000Z",
-      "id": "2109469928852230518",
-      "lang": "",
-      "metrics": {
-        "bookmark": 87,
-        "impression": 16976,
-        "like": 50,
-        "quote": 2,
-        "reply": 10,
-        "retweet": 4
-      },
-      "url": "https://x.com/op7418/status/2109469928852230518"
     }
   ],
   "user_id": "1669276256"

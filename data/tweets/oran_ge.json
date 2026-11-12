@@ -2,6 +2,90 @@
   "handle": "oran_ge",
   "tweets": [
     {
+      "created_at": "2026-11-12T00:05:52.000Z",
+      "id": "2120669369013555248",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 360,
+        "like": 2,
+        "quote": 0,
+        "reply": 0,
+        "retweet": 0
+      },
+      "url": "https://x.com/oran_ge/status/2120669369013555248"
+    },
+    {
+      "created_at": "2026-11-11T23:39:44.000Z",
+      "id": "2120662791829008806",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 4,
+        "impression": 1599,
+        "like": 7,
+        "quote": 0,
+        "reply": 3,
+        "retweet": 0
+      },
+      "url": "https://x.com/oran_ge/status/2120662791829008806"
+    },
+    {
+      "created_at": "2026-11-11T23:34:50.000Z",
+      "id": "2120661560129655116",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 1715,
+        "like": 6,
+        "quote": 0,
+        "reply": 1,
+        "retweet": 0
+      },
+      "url": "https://x.com/oran_ge/status/2120661560129655116"
+    },
+    {
+      "created_at": "2026-11-11T23:23:49.000Z",
+      "id": "2120658787002683842",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 1597,
+        "like": 0,
+        "quote": 1,
+        "reply": 2,
+        "retweet": 0
+      },
+      "url": "https://x.com/oran_ge/status/2120658787002683842"
+    },
+    {
+      "created_at": "2026-11-11T15:03:15.000Z",
+      "id": "2120532815980958166",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 1,
+        "impression": 6975,
+        "like": 8,
+        "quote": 0,
+        "reply": 16,
+        "retweet": 0
+      },
+      "url": "https://x.com/oran_ge/status/2120532815980958166"
+    },
+    {
+      "created_at": "2026-11-11T01:11:59.000Z",
+      "id": "2120323619331231948",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 10,
+        "impression": 9314,
+        "like": 13,
+        "quote": 2,
+        "reply": 5,
+        "retweet": 1
+      },
+      "url": "https://x.com/oran_ge/status/2120323619331231948"
+    },
+    {
       "created_at": "2026-11-10T15:19:55.000Z",
       "id": "2120174622851428807",
       "lang": "zh",

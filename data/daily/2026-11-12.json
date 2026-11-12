@@ -1,0 +1,151 @@
+{
+  "changelog": [],
+  "date": "2026-11-12",
+  "followers_zh": "粉丝大涨：Claude +17304、OpenAI +4212、Tibo +3359、Anthropic +3343、Qwen +2594、DeepMind +2012；马斯克 −43665、CZ −6304、Nadella −5905、Pichai −5095、Paul Graham −3387。",
+  "gists": {
+    "2120308139153326225": "Matt Shumer 演示自己在 Mac 上实机游玩该项目，称上线约 13 小时，后面还会好很多。",
+    "2120320377163501817": "Peter Yang 称更看重 Anthropic 加速攻克严重疾病，而不是靠短视频和梗去赢传播。",
+    "2120494284499554691": "Mollick：游戏圈反 AI 浪潮更伤独立工作室；若在乎人类创作，应奖励以人为核心的作品，而不是禁 AI 代码。",
+    "2120506245131977026": "Aravind 让 Teammate 在 Fable 5.2 上跑数小时，纯代码做出可在浏览器玩的无尽僵尸射击游戏。",
+    "2120517654083694646": "Ryan Holiday：哪怕对自己，也不要被别人听见你在抱怨。",
+    "2120525475789357557": "Codie Sanchez 总结好运方法：靠近领先自己 10 倍的人、付出超常工作量、做说到做到的人。",
+    "2120532824465805749": "DeepMind 介绍 AlphaGenome 2：同一 DNA 序列下，模型能聚焦特定细胞，解释变异如何致病。",
+    "2120537635991019897": "Sam Parr：靠自筹更可能致富；若业务并不超级可规模化，融资反而会进一步降低本来就很小的成功率。",
+    "2120542766191276199": "OpenRouter 的 Extractions API 进入 alpha：按你描述的字段从文本、图像和 PDF 中抽出结构化数据。",
+    "2120549258692882702": "Google Labs 推出实验产品 Tabletop：把链接和文件放进共享空间，让同伴一起把想法做成方案。",
+    "2120553924348318010": "Codie Sanchez 分享乔布斯去世前一年写给自己的邮件，提醒人与人彼此依赖。",
+    "2120570459335131606": "马斯克补充：延长 Cybertruck 生产并非利润最大化之举，但世上总该留一点人情。",
+    "2120581155078729728": "Pichai：Gemini Decisions API 上线，由 Decision 1 驱动，一次可对最多 1000 题做封闭选择评分。",
+    "2120582147107078356": "swyx：@poteto 的主题演讲现场站满了人。",
+    "2120583966272983331": "Google 在 AI Studio 上线 Gemini Decisions API：一次对最多 1000 题做封闭选择，输出 token 不计费。",
+    "2120601000176439478": "Rauch 提醒：做出好产品仍需要大量人类专注、努力、动力与爱，以及持续的注意力。",
+    "2120616179815637316": "Sahil Bloom：做一个别人愿意分享好消息的人，为小胜利喝彩，且不要拿自己或他人比较。",
+    "2120617173286883692": "NVIDIA 发布 Déjà View：1.17 亿参数模型把多角度照片变成三维几何与相机位，论文将在 NeurIPS 宣讲。",
+    "2120649149389627493": "Peter Yang 对黄仁勋表示失望，认为其励志与家庭形象近期受损。"
+  },
+  "hide": [
+    "2120372550354280848",
+    "2120410006273380750",
+    "2120410480204525936",
+    "2120337703120302590",
+    "2120400644066754880",
+    "2120375837145084121",
+    "2120330156325867529",
+    "2120336656226230282"
+  ],
+  "highlights": [
+    {
+      "excerpt": "In order to work through more of the Cybertruck order backlog, production will be extended through the end of summer 2027",
+      "excerpt_zh": "为了消化更多 Cybertruck 积压订单，生产将延长至 2027 年夏末。",
+      "handle": "elonmusk",
+      "likes": 35369,
+      "name": "Elon Musk",
+      "post_id": "2120565056429814073",
+      "tags": [],
+      "text_zh": "马斯克宣布，为消化 Cybertruck 积压订单，生产将延长至 2027 年夏末。",
+      "url": "https://x.com/elonmusk/status/2120565056429814073"
+    },
+    {
+      "excerpt": "Qwen4 is coming.\n\nDeeper knowledge. Richer world understanding. Stronger coding and agentic capabilities.\n\nBuilt for real-world tasks — from complex coding and knowledge work to front-end builds and professional software workflows.",
+      "excerpt_zh": "Qwen4 要来了。\n\n更深厚的知识、更丰富的世界理解，以及更强的编程与智能体能力。\n\n面向真实任务——从复杂编程和知识工作，到前端构建与专业软件流程。\n\nQwen4-Max 现已在阿里巴巴 Token Plan 开放预览。也可在 QwenWork、Qoder、Qwen APP 和 QwenStudio 提前体验。",
+      "handle": "Alibaba_Qwen",
+      "likes": 9848,
+      "name": "Qwen",
+      "post_id": "2120335993643684315",
+      "tags": [
+        "model",
+        "agent"
+      ],
+      "text_zh": "通义预告 Qwen4：知识、编程与智能体更强，Qwen4-Max 已在 Token Plan 预览。",
+      "url": "https://x.com/Alibaba_Qwen/status/2120335993643684315"
+    },
+    {
+      "excerpt": "Introducing Gemini Decision 1, our new frontier decision  model in the Gemini API.\n\nIt is $0.10 per 1M input tokens with no additional cost. With support for image, audio, video, and PDF natively, 256K context window, & 1K questions.\n\nYou can try it for free in the API! https://t.co/Pa6pIaQyoy",
+      "excerpt_zh": "介绍 Gemini Decision 1，我们在 Gemini API 中的新前沿决策模型。\n\n输入 $0.10/百万 token，无额外费用。原生支持图像、音频、视频和 PDF，256K 上下文窗口，最多 1000 题。\n\n可以在 API 里免费试用！",
+      "handle": "OfficialLoganK",
+      "likes": 7511,
+      "name": "Logan Kilpatrick",
+      "post_id": "2120581433639198885",
+      "tags": [
+        "model",
+        "product"
+      ],
+      "text_zh": "Logan：Gemini Decision 1 进 API，输入 $0.10/百万 token，一次可评 1000 题。",
+      "url": "https://x.com/OfficialLoganK/status/2120581433639198885"
+    },
+    {
+      "excerpt": "Anyhow, in a little over a week we will see the release of The Last Human Game.\n\nThere will never be another AAA game at the scale of GTA 6 with no AI assistance. People will look back at an all-human game with a billion dollar budget and wonder how they did it, like the Pyramids",
+      "excerpt_zh": "总之，再过一周多，我们将看到「最后一款人类游戏」发售。\n\n再也不会有 GTA 6 这种体量、完全没有 AI 协助的 3A 游戏。人们会回头看一款十亿美元预算的纯人类游戏，好奇他们是怎么做到的，就像金字塔一样。",
+      "handle": "emollick",
+      "likes": 3278,
+      "name": "Ethan Mollick",
+      "post_id": "2120502534695514279",
+      "tags": [
+        "product"
+      ],
+      "text_zh": "Mollick：再过一周多 GTA 6 将上线，此后难再有同等体量、完全不用 AI 的 3A 游戏。",
+      "url": "https://x.com/emollick/status/2120502534695514279"
+    },
+    {
+      "excerpt": "Super proud to announce AlphaGenome 2 - our new DNA sequence model! 🧬 It predicts the impact of DNA variants in different specific cell types - unlocking crucial information for understanding complex diseases. Available for academic research via our API: https://t.co/dEyrvpTxIl https://t.co/3pLBKJSyFz",
+      "excerpt_zh": "非常自豪地宣布 AlphaGenome 2——我们新的 DNA 序列模型！🧬 它能预测 DNA 变异在不同特定细胞类型中的影响，为理解复杂疾病提供关键信息。已通过我们的 API 向学术研究开放：",
+      "handle": "demishassabis",
+      "likes": 2572,
+      "name": "Demis Hassabis",
+      "post_id": "2120565316619284734",
+      "tags": [
+        "model",
+        "research"
+      ],
+      "text_zh": "Hassabis 发布 AlphaGenome 2：预测 DNA 变异在特定细胞中的影响，学术 API 已开放。",
+      "url": "https://x.com/demishassabis/status/2120565316619284734"
+    },
+    {
+      "excerpt": "🤑🤑🤑 Cha-ching 🤑🤑🤑\n\nFinances are now in the desktop app.\n\nFind ways to save, understand your spending, and make sense of your investments. You can also build custom financial tools.\n\nUpdate the desktop app to get started. Finances is available to Free, Go, Plus and Pro users https://t.co/jCGZHirKUF",
+      "excerpt_zh": "🤑🤑🤑 Cha-ching 🤑🤑🤑\n\n理财功能现已进入桌面应用。\n\n可以找省钱办法、看懂开销，并理清投资。还可以搭建自定义理财工具。\n\n更新桌面应用即可开始。Finances 对 Free、Go、Plus 和 Pro 用户开放。",
+      "handle": "ChatGPT",
+      "likes": 1810,
+      "name": "ChatGPT",
+      "post_id": "2120604108893896965",
+      "tags": [
+        "product"
+      ],
+      "text_zh": "ChatGPT 桌面端上线 Finances：可看花费与投资，也能做自定义理财工具。",
+      "url": "https://x.com/ChatGPT/status/2120604108893896965"
+    },
+    {
+      "excerpt": "For the first time, AI has mathematically proven @signalapp’s protocol is secure down to the code level.\n\nUsing our breakthrough AlphaProof Code framework, we verified the messaging app’s cryptographic system – which protects billions of private messages every day. https://t.co/iWNJ8UiTSQ",
+      "excerpt_zh": "AI 首次在代码层面数学证明了 @signalapp 的协议是安全的。\n\n我们用突破性的 AlphaProof Code 框架，验证了这款通讯应用的密码系统——它每天保护着数十亿条私信。",
+      "handle": "GoogleDeepMind",
+      "likes": 1740,
+      "name": "Google DeepMind",
+      "post_id": "2120484246401777737",
+      "tags": [
+        "research"
+      ],
+      "text_zh": "DeepMind 用 AlphaProof Code 首次在代码层证明 Signal 协议安全，覆盖数十亿条私信。",
+      "url": "https://x.com/GoogleDeepMind/status/2120484246401777737"
+    },
+    {
+      "excerpt": "Introducing Gemini Robotics 2.5, our most capable vision-language-action (VLA) model to date. 🤖 \n\nIt increases both the breadth of skills a robot can learn and the speed at which it acquires them — helping robots step out of the lab and into real-world environments.",
+      "excerpt_zh": "介绍 Gemini Robotics 2.5，我们迄今最强的视觉-语言-动作（VLA）模型。🤖\n\n它同时提升了机器人可学习技能的广度，以及掌握这些技能的速度——帮助机器人走出实验室、进入真实环境。\n\n了解更多关于 Gemini Robotics 2.5 的信息，现已开始向我们的机器人合作伙伴推送。",
+      "handle": "Google",
+      "likes": 1436,
+      "name": "Google",
+      "post_id": "2120549213826093271",
+      "tags": [
+        "model",
+        "product"
+      ],
+      "text_zh": "Google 发布 Gemini Robotics 2.5，称是迄今最强视觉-语言-动作模型，正向合作方推送。",
+      "url": "https://x.com/Google/status/2120549213826093271"
+    }
+  ],
+  "pin": [],
+  "summary_zh": [
+    "通义预告 Qwen4，Qwen4-Max 已在 Token Plan 等平台开放预览（约 9848 赞）。",
+    "Google 推出 Gemini Decision 1：输入 $0.10/百万 token，一次可评最多 1000 题。",
+    "话题涨幅：Gemini +112.6%（8406 条）、千问 +29.4%、MCP +25.4%。"
+  ],
+  "topics_zh": "涨幅领先：Gemini +112.6%、Qwen 千问 +29.4%、MCP +25.4%；回落较多的是 Dan Koe −74.0%、DeepSeek −13.3%、REA −7.9%。"
+}

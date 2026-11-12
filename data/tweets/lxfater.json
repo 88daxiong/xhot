@@ -2,6 +2,20 @@
   "handle": "lxfater",
   "tweets": [
     {
+      "created_at": "2026-11-11T08:52:30.000Z",
+      "id": "2120439514959077446",
+      "lang": "",
+      "metrics": {
+        "bookmark": 45,
+        "impression": 6639,
+        "like": 36,
+        "quote": 2,
+        "reply": 39,
+        "retweet": 4
+      },
+      "url": "https://x.com/lxfater/status/2120439514959077446"
+    },
+    {
       "created_at": "2026-11-10T15:39:13.000Z",
       "id": "2120179480723587294",
       "lang": "",
@@ -2786,20 +2800,6 @@
         "retweet": 0
       },
       "url": "https://x.com/lxfater/status/2110256213883838588"
-    },
-    {
-      "created_at": "2026-10-14T06:06:25.000Z",
-      "id": "2110250857551847624",
-      "lang": "",
-      "metrics": {
-        "bookmark": 1,
-        "impression": 4846,
-        "like": 5,
-        "quote": 0,
-        "reply": 8,
-        "retweet": 0
-      },
-      "url": "https://x.com/lxfater/status/2110250857551847624"
     }
   ],
   "user_id": "452072245"

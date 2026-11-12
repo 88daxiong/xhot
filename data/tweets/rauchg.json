@@ -2,6 +2,48 @@
   "handle": "rauchg",
   "tweets": [
     {
+      "created_at": "2026-11-11T19:34:11.000Z",
+      "id": "2120601000176439478",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 275,
+        "impression": 54741,
+        "like": 2127,
+        "quote": 36,
+        "reply": 171,
+        "retweet": 250
+      },
+      "url": "https://x.com/rauchg/status/2120601000176439478"
+    },
+    {
+      "created_at": "2026-11-11T19:24:52.000Z",
+      "id": "2120598652825809186",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 16,
+        "impression": 11757,
+        "like": 70,
+        "quote": 0,
+        "reply": 10,
+        "retweet": 0
+      },
+      "url": "https://x.com/rauchg/status/2120598652825809186"
+    },
+    {
+      "created_at": "2026-11-11T18:15:30.000Z",
+      "id": "2120581196363268265",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 37,
+        "impression": 12544,
+        "like": 119,
+        "quote": 3,
+        "reply": 20,
+        "retweet": 3
+      },
+      "url": "https://x.com/rauchg/status/2120581196363268265"
+    },
+    {
       "created_at": "2026-11-11T02:06:41.000Z",
       "id": "2120337388178379178",
       "lang": "en",

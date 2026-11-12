@@ -2,6 +2,20 @@
   "handle": "gefei55",
   "tweets": [
     {
+      "created_at": "2026-11-11T08:06:00.000Z",
+      "id": "2120427811529728069",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 9,
+        "impression": 3649,
+        "like": 15,
+        "quote": 0,
+        "reply": 4,
+        "retweet": 0
+      },
+      "url": "https://x.com/gefei55/status/2120427811529728069"
+    },
+    {
       "created_at": "2026-11-11T00:10:11.000Z",
       "id": "2120308069578223654",
       "lang": "zh",
@@ -2786,20 +2800,6 @@
         "retweet": 0
       },
       "url": "https://x.com/gefei55/status/2109889240305967415"
-    },
-    {
-      "created_at": "2026-10-13T05:26:56.000Z",
-      "id": "2109878532461711735",
-      "lang": "",
-      "metrics": {
-        "bookmark": 42,
-        "impression": 3433,
-        "like": 30,
-        "quote": 2,
-        "reply": 7,
-        "retweet": 1
-      },
-      "url": "https://x.com/gefei55/status/2109878532461711735"
     }
   ],
   "user_id": "362252075"

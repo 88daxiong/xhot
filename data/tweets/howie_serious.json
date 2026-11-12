@@ -2,6 +2,20 @@
   "handle": "howie_serious",
   "tweets": [
     {
+      "created_at": "2026-11-11T01:50:23.000Z",
+      "id": "2120333285507424755",
+      "lang": "",
+      "metrics": {
+        "bookmark": 42,
+        "impression": 86853,
+        "like": 129,
+        "quote": 1,
+        "reply": 72,
+        "retweet": 1
+      },
+      "url": "https://x.com/howie_serious/status/2120333285507424755"
+    },
+    {
       "created_at": "2026-10-22T00:32:59.000Z",
       "id": "2113066047498793235",
       "lang": "zh",
