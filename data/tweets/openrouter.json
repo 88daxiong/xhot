@@ -2,6 +2,48 @@
   "handle": "openrouter",
   "tweets": [
     {
+      "created_at": "2026-11-12T17:52:18.000Z",
+      "id": "2120937747594756547",
+      "lang": "",
+      "metrics": {
+        "bookmark": 2,
+        "impression": 1816,
+        "like": 10,
+        "quote": 0,
+        "reply": 1,
+        "retweet": 0
+      },
+      "url": "https://x.com/OpenRouter/status/2120937747594756547"
+    },
+    {
+      "created_at": "2026-11-12T17:52:18.000Z",
+      "id": "2120937745220780376",
+      "lang": "",
+      "metrics": {
+        "bookmark": 13,
+        "impression": 10836,
+        "like": 71,
+        "quote": 6,
+        "reply": 8,
+        "retweet": 14
+      },
+      "url": "https://x.com/OpenRouter/status/2120937745220780376"
+    },
+    {
+      "created_at": "2026-11-12T16:17:09.000Z",
+      "id": "2120913801507897575",
+      "lang": "",
+      "metrics": {
+        "bookmark": 14,
+        "impression": 8481,
+        "like": 94,
+        "quote": 6,
+        "reply": 22,
+        "retweet": 4
+      },
+      "url": "https://x.com/OpenRouter/status/2120913801507897575"
+    },
+    {
       "created_at": "2026-11-11T18:23:00.000Z",
       "id": "2120583084005605816",
       "lang": "en",

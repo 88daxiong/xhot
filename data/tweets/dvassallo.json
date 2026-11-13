@@ -2,6 +2,48 @@
   "handle": "dvassallo",
   "tweets": [
     {
+      "created_at": "2026-11-12T20:38:18.000Z",
+      "id": "2120979522799747115",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 11,
+        "impression": 5404,
+        "like": 34,
+        "quote": 0,
+        "reply": 13,
+        "retweet": 2
+      },
+      "url": "https://x.com/dvassallo/status/2120979522799747115"
+    },
+    {
+      "created_at": "2026-11-12T17:15:28.000Z",
+      "id": "2120928478019416397",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 7,
+        "impression": 4445,
+        "like": 26,
+        "quote": 0,
+        "reply": 10,
+        "retweet": 0
+      },
+      "url": "https://x.com/dvassallo/status/2120928478019416397"
+    },
+    {
+      "created_at": "2026-11-12T14:41:27.000Z",
+      "id": "2120889718728781833",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 328,
+        "impression": 94546,
+        "like": 1013,
+        "quote": 3,
+        "reply": 23,
+        "retweet": 79
+      },
+      "url": "https://x.com/dvassallo/status/2120889718728781833"
+    },
+    {
       "created_at": "2026-11-05T22:48:47.000Z",
       "id": "2118475643067531322",
       "lang": "en",

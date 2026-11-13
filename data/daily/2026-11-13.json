@@ -1,0 +1,151 @@
+{
+  "changelog": [],
+  "date": "2026-11-13",
+  "followers_zh": "粉丝大涨：Claude +6928、NVIDIA +6900、Naval +4640、Anthropic +3366、Tibo +3300、Karpathy +3016；马斯克 −31.3 万、Meta −3935、Nadella −3057、Pichai −2398。",
+  "gists": {
+    "2120671838909194695": "Replit 创始人质疑旧事为何突然变成国际新闻，并问谁会从黄仁勋被拿下中受益。",
+    "2120719300168454387": "Telegram 创始人杜罗夫称 GRAM 是嵌入大型社交平台的加密货币，被严重低估。",
+    "2120746227172352351": "吴说区块链：黄仁勋去职赔率一度升至 88%，英伟达盘后跌逾 8%。",
+    "2120780042326474994": "Replit 创始人转发一篇文章，称不背书结论，但其中的资金与机构关系值得审视。",
+    "2120826495375458474": "Tibo 分享 2005 年 YouTube 创始人曾因只有约 40 条视频而焦虑，用来鼓励早期产品。",
+    "2120841923237683462": "DeepMind 播客介绍 AlphaGenome 2，帮助科学家在海量 DNA 变异中寻找罕见病线索。",
+    "2120879308835344543": "Ryan Holiday 引塞内卡：没有规划的生活会失序，有规律日程才能把拖延关在门外。",
+    "2120884121748623643": "Sahil Bloom 认为脱颖而出的最快方法是把全部注意力给人：放下手机，先听完再准备回答。",
+    "2120889718728781833": "David Vassallo 用汉密尔顿 1797 年的故事，影射一段「婚外情压过功业」的叙事。",
+    "2120901953505177996": "Gemini 智能眼镜可用「Hey Gemini」看街拍、推荐书架上的书、实时翻译和查日程。",
+    "2120912138772369758": "马斯克发帖称「SpaceX 的社区收益」。",
+    "2120940236805169182": "Pichai 介绍 Gemini 4 Hydrogen：比 3.8 Flash 快 2.5 倍，并按任务需要提供 4 档思考深度。",
+    "2120940338869055788": "Google DeepMind 发布 Gemini 4 Hydrogen：面向快速编程与日常工作流，官方称比 3.8 Flash 快 2.5 倍。",
+    "2120940601319260164": "Gemini 应用宣布 Gemini 4 Hydrogen 上线，强调更快完成日常任务、更跟指令、更少来回。",
+    "2120940683233984862": "Google AI 称 Hydrogen 补齐 Gemini 4 系列，Carbon 攻克难题，Hydrogen 服务日常编程与智能体工作流。",
+    "2120941982004523367": "Google 称 Gemini 4 Hydrogen 面向日常编程与智能体工作，可单独使用或与 Carbon、Argon 搭配。",
+    "2120955557465223337": "Greg Isenberg 列出一长串当下「身份符号」，从健康指标、戒酒到空掉的日历。",
+    "2120960715011883148": "Google 搜索上线 Gemini 4 Hydrogen：更好理解复杂意图，并改进可视化结果与查询拆分。",
+    "2120970988796170275": "ChatGPT 称 dot 更新：回复更快、少套话、执行更好，并可在对话里遵循自定义指令。",
+    "2120974913679040680": "Peter Steinberger 引用一句推销语：你不必学着写这些，智能体会写，而且已经写得很好。",
+    "2120995132359188491": "Pieter Levels 说一段内容「真实到我都不是在开玩笑」。",
+    "2120999993079451919": "Tibo 称 dots 今日有更新，积压的重置已启动，即将到账。"
+  },
+  "hide": [
+    "2120710314195038543",
+    "2120856303161770082",
+    "2120738935261585576",
+    "2120757730977988841",
+    "2120944565448548658",
+    "2120675442571251997",
+    "2120692395142725796"
+  ],
+  "highlights": [
+    {
+      "excerpt": "It's a mistake for Nvidia to let Jensen resign.",
+      "excerpt_zh": "让黄仁勋辞职，是英伟达的一个错误。",
+      "handle": "cz_binance",
+      "likes": 67764,
+      "name": "CZ 🔶 BNB",
+      "post_id": "2120888881717612576",
+      "tags": [
+        "chips"
+      ],
+      "text_zh": "CZ 称让黄仁勋辞职是英伟达的错误，该帖约 6.8 万赞。",
+      "url": "https://x.com/cz_binance/status/2120888881717612576"
+    },
+    {
+      "excerpt": "Introducing Claude Meetings: add Claude to your team’s video call and it builds docs, whiteboards, and other artifacts with you while you’re still talking.\n\nStarting to roll out in beta on Team and Enterprise plans.",
+      "excerpt_zh": "推出 Claude Meetings：把 Claude 加进团队视频会议，它会在你们还在讨论时一起生成文档、白板和其他产物。\n\n已开始向 Team 和 Enterprise 方案以公测形式推送。",
+      "handle": "claudeai",
+      "likes": 37749,
+      "name": "Claude",
+      "post_id": "2120973994191094179",
+      "tags": [
+        "model",
+        "product"
+      ],
+      "text_zh": "Anthropic 推出 Claude Meetings：加入视频会议即可当场生成文档和白板，现已公测。",
+      "url": "https://x.com/claudeai/status/2120973994191094179"
+    },
+    {
+      "excerpt": "Robotaxi works 168 hours a week",
+      "excerpt_zh": "Robotaxi 每周可运行 168 小时。",
+      "handle": "elonmusk",
+      "likes": 18779,
+      "name": "Elon Musk",
+      "post_id": "2120746428720988408",
+      "tags": [],
+      "text_zh": "马斯克称 Robotaxi 每周可运行 168 小时。",
+      "url": "https://x.com/elonmusk/status/2120746428720988408"
+    },
+    {
+      "excerpt": "Thank you @JensenHuang for 33 years of bold leadership. You built a small startup into America’s most valuable company, with relentless improvement. Your grit and perseverance should always be remembered. Your personal generosity with time and advice to founders like me has secured a bright future for America and AI.",
+      "excerpt_zh": "感谢 @JensenHuang 33 年来的果敢领导。你把一家小创业公司做成了美国最有价值的公司，并不断改进。你的毅力与坚持应当被铭记。你对像我这样的创始人慷慨付出时间与建议，为美国和 AI 赢得了光明的未来。",
+      "handle": "AravSrinivas",
+      "likes": 17688,
+      "name": "Aravind Srinivas",
+      "post_id": "2120891190333607989",
+      "tags": [
+        "startup",
+        "career"
+      ],
+      "text_zh": "Perplexity CEO 感谢黄仁勋 33 年领导，把小公司做成美国市值最高的企业。",
+      "url": "https://x.com/AravSrinivas/status/2120891190333607989"
+    },
+    {
+      "excerpt": "You’d think we’d have learned from Steve Jobs and Travis Kalanick that one does not just simply replace the founder…",
+      "excerpt_zh": "按理说，我们该从 Steve Jobs 和 Travis Kalanick 那里学到：创始人不是能随随便便换掉的……",
+      "handle": "naval",
+      "likes": 15336,
+      "name": "Naval",
+      "post_id": "2120752211588452715",
+      "tags": [
+        "startup",
+        "career"
+      ],
+      "text_zh": "Naval 说，乔布斯和卡兰尼克已经说明：创始人不是能随便换掉的。",
+      "url": "https://x.com/naval/status/2120752211588452715"
+    },
+    {
+      "excerpt": "If that Spy’s goal was to destabilize one of the most successful American companies, they achieved their goal. Ousting Jensen feels rushed and not right.",
+      "excerpt_zh": "如果那个 Spy 的目标是动摇美国最成功的公司之一，那他们已经达到目的。赶走黄仁勋让人觉得仓促，也不对。",
+      "handle": "steipete",
+      "likes": 11070,
+      "name": "Peter Steinberger",
+      "post_id": "2120903527803564397",
+      "tags": [],
+      "text_zh": "Peter Steinberger 认为赶走黄仁勋过于仓促，若目的是动摇这家成功公司则已经达成。",
+      "url": "https://x.com/steipete/status/2120903527803564397"
+    },
+    {
+      "excerpt": "Introducing Gemini 4 Hydrogen, an extremely capable and fast model built to bring Gemini 4 to everyone!\n\nAvailable to all tiers of Google AI Studio, Gemini API, Gemini for business, the Gemini app, Google Search, and paid Google AI Pro + Ultra subscribers in Google Antigravity.",
+      "excerpt_zh": "推出 Gemini 4 Hydrogen，这是一款非常强、也非常快的模型，旨在把 Gemini 4 带给所有人！\n\n已面向 Google AI Studio、Gemini API、Gemini for business、Gemini 应用、Google 搜索，以及 Google Antigravity 中的付费 Google AI Pro + Ultra 订阅者全档位开放。",
+      "handle": "OfficialLoganK",
+      "likes": 8274,
+      "name": "Logan Kilpatrick",
+      "post_id": "2120940951292268640",
+      "tags": [
+        "model",
+        "product"
+      ],
+      "text_zh": "Logan 宣布 Gemini 4 Hydrogen，将覆盖 AI Studio、API、应用与搜索。",
+      "url": "https://x.com/OfficialLoganK/status/2120940951292268640"
+    },
+    {
+      "excerpt": "This whole thing sucks, and I wish none of it had happened. It’s a really sad day!\n\nBut I want to make one thing clear: we’ll keep fighting for open-source AI, harder than ever. This is too important to slow down now. Let’s go!",
+      "excerpt_zh": "整件事糟透了，我希望它从来没有发生过。这真是悲伤的一天！\n\n但我想说清楚一点：我们会继续为开源 AI 奋斗，而且会比以往更努力。这件事太重要了，现在不能放慢。走起！",
+      "handle": "ClementDelangue",
+      "likes": 7803,
+      "name": "clem 🤗",
+      "post_id": "2120883918119592037",
+      "tags": [
+        "oss"
+      ],
+      "text_zh": "Hugging Face CEO 称今天很难过，但会更努力推动开源 AI。",
+      "url": "https://x.com/ClementDelangue/status/2120883918119592037"
+    }
+  ],
+  "pin": [],
+  "summary_zh": [
+    "市场热议英伟达黄仁勋去留：CZ 称让其辞职是错误，该帖约 6.8 万赞。",
+    "Anthropic 推出 Claude Meetings，可加入视频会议并当场生成文档，约 3.8 万赞。",
+    "Gemini 4 Hydrogen 发布，称比 3.8 Flash 快 2.5 倍；智能体话题涨 72.8%。"
+  ],
+  "topics_zh": "涨幅领先：智能体 Agent +72.8%、DeepSeek +37.4%、MCP +17.6%；回落较多的是 Dan Koe −65.0%、Opus 5.5 −38.6%、Kimi −25.8%。"
+}

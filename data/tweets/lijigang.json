@@ -2,6 +2,20 @@
   "handle": "lijigang",
   "tweets": [
     {
+      "created_at": "2026-11-12T05:10:02.000Z",
+      "id": "2120745913908183059",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 5204,
+        "like": 13,
+        "quote": 0,
+        "reply": 6,
+        "retweet": 1
+      },
+      "url": "https://x.com/lijigang/status/2120745913908183059"
+    },
+    {
       "created_at": "2026-11-10T04:40:39.000Z",
       "id": "2120013746974212464",
       "lang": "zh",

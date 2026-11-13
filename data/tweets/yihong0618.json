@@ -2,6 +2,90 @@
   "handle": "yihong0618",
   "tweets": [
     {
+      "created_at": "2026-11-12T22:18:00.000Z",
+      "id": "2121004611754721331",
+      "lang": "ja",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 1281,
+        "like": 0,
+        "quote": 0,
+        "reply": 1,
+        "retweet": 0
+      },
+      "url": "https://x.com/yihong0618/status/2121004611754721331"
+    },
+    {
+      "created_at": "2026-11-12T22:07:46.000Z",
+      "id": "2121002036770832846",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 3,
+        "impression": 5207,
+        "like": 47,
+        "quote": 0,
+        "reply": 10,
+        "retweet": 2
+      },
+      "url": "https://x.com/yihong0618/status/2121002036770832846"
+    },
+    {
+      "created_at": "2026-11-12T16:15:17.000Z",
+      "id": "2120913329581596847",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 3,
+        "impression": 4417,
+        "like": 88,
+        "quote": 0,
+        "reply": 4,
+        "retweet": 1
+      },
+      "url": "https://x.com/yihong0618/status/2120913329581596847"
+    },
+    {
+      "created_at": "2026-11-12T11:20:54.000Z",
+      "id": "2120839245892083997",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 21,
+        "impression": 6507,
+        "like": 74,
+        "quote": 2,
+        "reply": 2,
+        "retweet": 2
+      },
+      "url": "https://x.com/yihong0618/status/2120839245892083997"
+    },
+    {
+      "created_at": "2026-11-12T10:19:10.000Z",
+      "id": "2120823713344127433",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 1,
+        "impression": 17507,
+        "like": 244,
+        "quote": 2,
+        "reply": 14,
+        "retweet": 12
+      },
+      "url": "https://x.com/yihong0618/status/2120823713344127433"
+    },
+    {
+      "created_at": "2026-11-12T00:32:11.000Z",
+      "id": "2120675991949598917",
+      "lang": "art",
+      "metrics": {
+        "bookmark": 6,
+        "impression": 6252,
+        "like": 25,
+        "quote": 0,
+        "reply": 1,
+        "retweet": 2
+      },
+      "url": "https://x.com/yihong0618/status/2120675991949598917"
+    },
+    {
       "created_at": "2026-11-11T23:28:17.000Z",
       "id": "2120659911239757980",
       "lang": "qst",
