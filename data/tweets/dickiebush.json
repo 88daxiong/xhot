@@ -2,6 +2,20 @@
   "handle": "dickiebush",
   "tweets": [
     {
+      "created_at": "2026-11-13T01:24:01.000Z",
+      "id": "2121051423404097983",
+      "lang": "",
+      "metrics": {
+        "bookmark": 141,
+        "impression": 9521,
+        "like": 185,
+        "quote": 3,
+        "reply": 28,
+        "retweet": 22
+      },
+      "url": "https://x.com/dickiebush/status/2121051423404097983"
+    },
+    {
       "created_at": "2026-11-12T22:45:06.000Z",
       "id": "2121011432573510091",
       "lang": "en",

@@ -2,6 +2,34 @@
   "handle": "swyx",
   "tweets": [
     {
+      "created_at": "2026-11-13T03:53:13.000Z",
+      "id": "2121088973372334443",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 2,
+        "impression": 5946,
+        "like": 48,
+        "quote": 1,
+        "reply": 6,
+        "retweet": 0
+      },
+      "url": "https://x.com/swyx/status/2121088973372334443"
+    },
+    {
+      "created_at": "2026-11-13T01:58:49.000Z",
+      "id": "2121060183988486493",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 2,
+        "impression": 8044,
+        "like": 150,
+        "quote": 1,
+        "reply": 28,
+        "retweet": 2
+      },
+      "url": "https://x.com/swyx/status/2121060183988486493"
+    },
+    {
       "created_at": "2026-11-12T20:46:22.000Z",
       "id": "2120981552561844593",
       "lang": "en",
