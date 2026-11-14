@@ -1,0 +1,170 @@
+{
+  "changelog": [],
+  "date": "2026-11-14",
+  "followers_zh": "粉丝大涨：Microsoft +1.7 万、Claude +9892、NVIDIA +6682、Anthropic +3676、Naval +3042、DeepSeek +2968；马斯克 −14.0 万、CZ −2923、Meta −646、Mira Murati −613。",
+  "gists": {
+    "2121037830797271522": "Google 展示 Gemini 4 Hydrogen 上线后社区的创意，包括一架从日出飞到夜晚的 3D 水上飞机。",
+    "2121058770767982997": "Peter Steinberger 分享团队如何在 OpenAI 内部运行持久化智能体。",
+    "2121081862659739870": "Amjad 嘲讽主导调查黄仁勋“海外关系”的议员，曾穿着外国军装出现在国会。",
+    "2121149363502084346": "Tibo 梳理黄仁勋生平：9 岁赴美、曾被误送进改革学校，引出“要不要像他一样”的问题。",
+    "2121178555883438572": "Justin Sun 称黄仁勋辞去英伟达职务对双方和 AI 产业都是重大挫折。",
+    "2121266842451034492": "微软称服务可用性和邮件投递正在更多受影响基础设施上恢复，并对造成的影响表示遗憾。",
+    "2121272083863011714": "Anthropic 将于美东时间中午 12 点直播：Jamie Dimon 与 Dario 的炉边谈话。",
+    "2121274901898170752": "Google 用 Gemini 4 Carbon 把 Chrome 离线恐龙做成可玩的 3D 峡谷冒险游戏。",
+    "2121276381925650469": "Paul Graham 表示，他开始认真怀疑英伟达董事会的判断力。",
+    "2121279197154877816": "Paul Graham 分享他爱在旧书店买书，再拿到咖啡馆或餐厅读，并推荐海伊镇。",
+    "2121287996540416365": "CZ 称日本上市的 ASIAN STAR 将发放 800 万日元，并称之为日本与世界的首次。",
+    "2121288322161225992": "Gemini 4 Hydrogen 把全球实时雷击映射成互动 3D 地球，并生成环境配乐。",
+    "2121294533879267683": "Perplexity 在 Mac 应用向 Max 订阅用户推出 Teammates，可分担研究、客服、增长等任务。",
+    "2121297629711909166": "Matthew Berman 开源了自己的剪辑加速工具，称仍有 bug，欢迎反馈。",
+    "2121317227618340990": "Anthropic 强调安全评估对判断模型是否可部署至关重要。",
+    "2121319866712076769": "NVIDIA 发布开源机器人模型 GR00T 2：可从人类演示学习技能，并迁移到不同机器人本体。",
+    "2121322098924941464": "Hormozi 说：在金钱、财富和收入上属于前 1% 的人，往往在压力、牺牲上也是前 1%。",
+    "2121324004887687387": "Codie Sanchez 提醒：曾试图毁掉你声誉、财务或诚信的人，不要再加回好友。",
+    "2121331227009364340": "Greg Isenberg 提出打造“最 AI 化公司”的方法：个人与公司第二大脑、语音记录并交给智能体归档。",
+    "2121335377902588352": "levelsio 用 Anker 160W 充电器替换硕大的官方 140W 苹果充电器，称更小、更配黑色线材。",
+    "2121363868425306372": "Gemini 4 Hydrogen 可用自定义 skill 和简短 brief，把公开影像剪成带旁白的宣传片。",
+    "2121377395244749097": "Amjad 呼吁阅读并联署支持黄仁勋的公开信 #standwithjensen。"
+  },
+  "hide": [
+    "2121118775210868871",
+    "2121268692453343344",
+    "2121241929254064362",
+    "2121351007615811799",
+    "2121121962911273062",
+    "2121115028447531353",
+    "2121138486891942184",
+    "2121208727248486720",
+    "2121141205371351420",
+    "2121081410882572721",
+    "2121317331179614676",
+    "2121250205806772283",
+    "2121316611974185273",
+    "2121242367684661286",
+    "2121250804447445203",
+    "2121267716023546027",
+    "2121388517540716839",
+    "2121266455442292980",
+    "2121120295884837183",
+    "2121123425213399408",
+    "2121323469002437065",
+    "2121335897744372073",
+    "2121346941175083149"
+  ],
+  "highlights": [
+    {
+      "excerpt": "We are deeply sorry for the disruption this incident has caused our customers and partners. We know the trust they place in our services and take that responsibility extremely seriously. We are seeing broad recovery and stability across our services.\n\nThis was a technical issue",
+      "excerpt_zh": "我们对本次故障给客户和合作伙伴造成的中断深表歉意。我们知道他们对我们服务寄予的信任，并极其认真地对待这份责任。目前各项服务已出现广泛恢复并趋于稳定。\n\n这是一次技术问题",
+      "handle": "Microsoft",
+      "likes": 46687,
+      "name": "Microsoft",
+      "post_id": "2121282013600907325",
+      "tags": [],
+      "text_zh": "微软就服务中断致歉，称客户信任被认真对待，目前服务已广泛恢复并趋于稳定。",
+      "url": "https://x.com/Microsoft/status/2121282013600907325"
+    },
+    {
+      "excerpt": "Jensen Huang is the Steve Jobs of Nvidia. He is irreplaceable .",
+      "excerpt_zh": "黄仁勋就是英伟达的史蒂夫·乔布斯。他不可替代。",
+      "handle": "naval",
+      "likes": 24549,
+      "name": "Naval",
+      "post_id": "2121143697161236839",
+      "tags": [
+        "chips"
+      ],
+      "text_zh": "Naval 称黄仁勋就是英伟达的史蒂夫·乔布斯，不可替代。",
+      "url": "https://x.com/naval/status/2121143697161236839"
+    },
+    {
+      "excerpt": "How can codex be improved? Try not to say model.",
+      "excerpt_zh": "Codex 还能怎么改进？尽量别只说模型本身。",
+      "handle": "thsottiaux",
+      "likes": 7840,
+      "name": "Tibo",
+      "post_id": "2121062974161092792",
+      "tags": [
+        "code"
+      ],
+      "text_zh": "Tibo 向社区征集 Codex 改进建议，并要求尽量不要只谈模型本身。",
+      "url": "https://x.com/thsottiaux/status/2121062974161092792"
+    },
+    {
+      "excerpt": "🚀 The full DeepSeek App experience, now via API\n\nSearch, files, links, safety, and voice. The capabilities behind the DeepSeek App are now available through the DeepSeek API.\nEnable built-in features with a few parameters, or call standalone APIs such as OCR, ASR, and TTS. …",
+      "excerpt_zh": "🚀 完整的 DeepSeek App 体验，现已通过 API 提供\n\n搜索、文件、链接、安全与语音。DeepSeek App 背后的能力现已通过 DeepSeek API 开放。\n用几个参数即可启用内置功能，也可调用 OCR、ASR、TTS 等独立 API。…",
+      "handle": "deepseek_ai",
+      "likes": 7067,
+      "name": "DeepSeek",
+      "post_id": "2121247896918253875",
+      "tags": [
+        "product",
+        "oss"
+      ],
+      "text_zh": "DeepSeek 将 App 中的搜索、文件、语音等能力通过 API 开放，并提供开源前端演示。",
+      "url": "https://x.com/deepseek_ai/status/2121247896918253875"
+    },
+    {
+      "excerpt": "What we shipped this week @google\n\nMonday: Two new 8th-gen TPUs\nTuesday: Gemini 4 Carbon\n- AlphaProof Code verified Signal protocol\n- Gemini Robotics 2.5\nWednesday: AlphaGenome 2 for disease research\n- Gemini Decisions API in AI Studio\nThursday: Gemini 4 Hydrogen\n- intelligent eyewear pre-orders\nFriday: U2 new album…",
+      "excerpt_zh": "我们本周在 @google 发布了什么\n\n周一：两款新的第 8 代 TPU\n周二：Gemini 4 Carbon\n- AlphaProof 代码验证了 Signal 协议\n- Gemini Robotics 2.5\n周三：面向疾病研究的 AlphaGenome 2\n- AI Studio 中的 Gemini Decisions API\n周四：Gemini 4 Hydrogen\n- 智能眼镜开始预购\n周五：U2 新专辑…",
+      "handle": "sundarpichai",
+      "likes": 5121,
+      "name": "Sundar Pichai",
+      "post_id": "2121338095664808238",
+      "tags": [
+        "model",
+        "product"
+      ],
+      "text_zh": "Pichai 盘点本周：新一代 TPU、Gemini 4 系列、机器人与基因组模型。",
+      "url": "https://x.com/sundarpichai/status/2121338095664808238"
+    },
+    {
+      "excerpt": "Now your dot can securely complete purchases on your behalf—with your approval.\n\nWith ChatGPT Wallet, agents pay without access to your actual card details. Every purchase requires a security check.\n\nChatGPT Wallet is rolling out starting today to dots, for Pro subscribers in the US.",
+      "excerpt_zh": "现在，你的 dot 可以在获得你批准后，安全地代为完成购买。\n\n借助 ChatGPT Wallet，智能体付款时无法接触你的真实卡号。每笔购买都需要安全校验。\n\nChatGPT Wallet 即日起向美国 Pro 订阅用户的 dots 推出。",
+      "handle": "ChatGPT",
+      "likes": 3526,
+      "name": "ChatGPT",
+      "post_id": "2121283151729496235",
+      "tags": [
+        "agent",
+        "product"
+      ],
+      "text_zh": "ChatGPT Wallet 上线：智能体可代购且看不到真实卡号，面向美国 Pro 用户的 dots。",
+      "url": "https://x.com/ChatGPT/status/2121283151729496235"
+    },
+    {
+      "excerpt": "We’re not going to win by lobbying, plotting, or manipulating. We’re going to win by building, in the open, with the whole community!\n\nToday, with @ggerganov we’re super excited to announce the release of llama.cpp v1, the first major fully stable version of the most used library to run AI models locally, meaning on…",
+      "excerpt_zh": "我们不会靠游说、密谋或操控取胜。我们会与整个社区一起，公开地靠动手构建取胜！\n\n今天，我们与 @ggerganov 一起，非常兴奋地宣布发布 llama.cpp v1：这是用于在本地运行 AI 模型的最常用库的首个完全稳定的主要版本，也就是在…",
+      "handle": "ClementDelangue",
+      "likes": 2302,
+      "name": "clem",
+      "post_id": "2121260104913768931",
+      "tags": [
+        "oss",
+        "model"
+      ],
+      "text_zh": "Hugging Face 与 llama.cpp 发布首个完全稳定的 v1，强调在本地免费运行并掌控模型。",
+      "url": "https://x.com/ClementDelangue/status/2121260104913768931"
+    },
+    {
+      "excerpt": "Today we announced that LangChain raised $300M at a $3B valuation.\n\nWe think agents will transform the economy, and the companies that own their intelligence will build lasting competitive advantages.\n\nThat's why we're building LangSmith, the framework-agnostic platform to run,",
+      "excerpt_zh": "今天我们宣布，LangChain 以 30 亿美元估值融资 3 亿美元。\n\n我们认为智能体将改造经济，而掌握自身智能的公司将建立持久竞争优势。\n\n这就是我们正在打造 LangSmith 的原因：一个与框架无关、用于运行",
+      "handle": "hwchase17",
+      "likes": 928,
+      "name": "Harrison Chase",
+      "post_id": "2121279222912352574",
+      "tags": [
+        "agent",
+        "funding"
+      ],
+      "text_zh": "LangChain 宣布融资 3 亿美元、估值 30 亿美元，并将继续打造框架无关的 LangSmith。",
+      "url": "https://x.com/hwchase17/status/2121279222912352574"
+    }
+  ],
+  "pin": [],
+  "summary_zh": [
+    "微软就服务中断致歉并称已广泛恢复，该帖约 4.7 万赞。",
+    "Naval 称黄仁勋对英伟达不可替代，该帖约 2.5 万赞。",
+    "DeepSeek 开放 App API；LangChain 融资 3 亿美元；Gemini 话题涨 50.9%。"
+  ],
+  "topics_zh": "涨幅领先：Dan Koe +68.7%、Gemini +50.9%、Kimi +32.7%；回落较多的是 Opus 5.5 −44.4%、monk mode −36.8%、Qwen 千问 −25.2%。"
+}

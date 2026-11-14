@@ -2,6 +2,48 @@
   "handle": "googledeepmind",
   "tweets": [
     {
+      "created_at": "2026-11-13T13:12:44.000Z",
+      "id": "2121229780573888544",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 13,
+        "impression": 15382,
+        "like": 62,
+        "quote": 0,
+        "reply": 1,
+        "retweet": 5
+      },
+      "url": "https://x.com/GoogleDeepMind/status/2121229780573888544"
+    },
+    {
+      "created_at": "2026-11-13T13:12:44.000Z",
+      "id": "2121229777835089974",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 12,
+        "impression": 18046,
+        "like": 76,
+        "quote": 0,
+        "reply": 10,
+        "retweet": 5
+      },
+      "url": "https://x.com/GoogleDeepMind/status/2121229777835089974"
+    },
+    {
+      "created_at": "2026-11-13T13:12:43.000Z",
+      "id": "2121229774865527097",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 175,
+        "impression": 54313,
+        "like": 574,
+        "quote": 52,
+        "reply": 159,
+        "retweet": 81
+      },
+      "url": "https://x.com/GoogleDeepMind/status/2121229774865527097"
+    },
+    {
       "created_at": "2026-11-12T18:02:37.000Z",
       "id": "2120940342505566438",
       "lang": "",

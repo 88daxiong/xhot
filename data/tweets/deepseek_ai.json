@@ -2,6 +2,62 @@
   "handle": "deepseek_ai",
   "tweets": [
     {
+      "created_at": "2026-11-13T14:24:46.000Z",
+      "id": "2121247907076813077",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 11,
+        "impression": 44232,
+        "like": 256,
+        "quote": 1,
+        "reply": 6,
+        "retweet": 3
+      },
+      "url": "https://x.com/deepseek_ai/status/2121247907076813077"
+    },
+    {
+      "created_at": "2026-11-13T14:24:45.000Z",
+      "id": "2121247903603941471",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 66,
+        "impression": 66913,
+        "like": 455,
+        "quote": 15,
+        "reply": 11,
+        "retweet": 21
+      },
+      "url": "https://x.com/deepseek_ai/status/2121247903603941471"
+    },
+    {
+      "created_at": "2026-11-13T14:24:44.000Z",
+      "id": "2121247899699036516",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 30,
+        "impression": 65391,
+        "like": 398,
+        "quote": 1,
+        "reply": 12,
+        "retweet": 7
+      },
+      "url": "https://x.com/deepseek_ai/status/2121247899699036516"
+    },
+    {
+      "created_at": "2026-11-13T14:24:44.000Z",
+      "id": "2121247896918253875",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 2018,
+        "impression": 537896,
+        "like": 7067,
+        "quote": 345,
+        "reply": 310,
+        "retweet": 582
+      },
+      "url": "https://x.com/deepseek_ai/status/2121247896918253875"
+    },
+    {
       "created_at": "2026-10-20T09:30:21.000Z",
       "id": "2112476503673864665",
       "lang": "",
