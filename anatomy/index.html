@@ -140,8 +140,27 @@ ul.act li,ol.act li{margin:6px 0}
   </div>
   <h1>开源解剖</h1>
   <div class="essence"><strong>这一栏要回答的不是「多少星、哪天创建」，而是：</strong>它到底在搬动什么状态，核心算法闭环是什么，和常见替代方案差在哪，以及在什么边界上会失效。</div>
-  <p class="muted" style="margin-top:12px">每篇文章都是零外部依赖的单页（样式内联，脚本在同目录 <code>anatomy.js</code>），可点击架构图和阶段卡片。结论按「源码确认 / 作者宣称 / 推断 / 待验证」标注，并给出分析时的版本、提交与永久链接。分析由助手根据公开源码整理，可能有误，以仓库原文为准。</p>
+  <p class="muted" style="margin-top:12px">站点页与同目录 <code>anatomy.js</code> 搭配，可点击架构图、逐步播放流程、查看 Schema 并做误区自测。重要篇目另提供 CSS/JS 全部内联的单文件导出，可下载后用浏览器直接打开。结论按「源码确认 / 作者宣称 / 推断 / 待验证」标注，并给出分析时的版本、提交与永久链接。分析由助手根据公开源码整理，可能有误，以仓库原文为准。</p>
 </article>
+
+
+<section class="liquid cmp" id="compare">
+  <h2>这一批怎么对照：ai-memory 与 WeKnora</h2>
+  <p>它们都和「Agent + 知识」有关，但<b>不在同一层，不宜当直接竞品</b>。一个管编码 Agent 的工作记忆，一个管组织文档如何被授权检索并引用。下面是简要定位，细节分别在两篇拆解里。</p>
+  <table>
+    <thead><tr><th></th><th><a href="ai-memory.html">ai-memory</a></th><th><a href="weknora.html">WeKnora</a></th></tr></thead>
+    <tbody>
+      <tr><td>要解决的问题</td><td>记忆跟着人跨越 CLI、项目和机器，且可被队友检索</td><td>把分散文档编成可搜索、可引用的企业知识，并支撑问答 / Agent / Wiki</td></tr>
+      <tr><td>内容真源</td><td>git 版本的 Markdown 页面；数据库可重建</td><td>对象存储中的原文件 + 知识行；检索文本以块表为准（块可被编辑）</td></tr>
+      <tr><td>默认是否调用 LLM</td><td>否。采集、检索、交接在零模型下可工作</td><td>完整问答路径通常需要聊天模型，向量检索需要嵌入</td></tr>
+      <tr><td>检索对象</td><td>Wiki 页面（外加观察流给会话页投票）</td><td>文档切块，以及可选 FAQ / 生成问题 / 网页结果</td></tr>
+      <tr><td>隔离模型</td><td>工作区 / 项目 / 路径，可选按操作者或会话隔离</td><td>多租户 + 知识库授权 + 成员角色</td></tr>
+      <tr><td>写入节奏</td><td>钩子即发即弃，单 SQLite writer</td><td>HTTP 入队，asynq worker 异步解析，带重试与 attempt</td></tr>
+      <tr><td>何时该用</td><td>多个编程 Agent 共享一份可 grep 的项目记忆</td><td>需要带引用的文档问答，或要把知识库接进企业渠道与 Agent</td></tr>
+    </tbody>
+  </table>
+  <p class="muted" style="margin-top:12px">对照是架构定位，不是跑分。两边都可以出现在同一工作流里：例如用 WeKnora 检索制度文档，用 ai-memory 记住「这个仓库上周踩过的坑」。</p>
+</section>
 
 <section class="liquid">
   <h2>项目</h2>
@@ -152,11 +171,26 @@ ul.act li,ol.act li{margin:6px 0}
       <button type="button" data-filter-tag="git" aria-pressed="false">Git / 存储</button>
       <button type="button" data-filter-tag="video" aria-pressed="false">视频渲染</button>
       <button type="button" data-filter-tag="agent" aria-pressed="false">Agent 工作流</button>
+      <button type="button" data-filter-tag="memory" aria-pressed="false">Agent 记忆</button>
+      <button type="button" data-filter-tag="rag" aria-pressed="false">文档 RAG</button>
       <button type="button" data-filter-tag="rust" aria-pressed="false">Rust</button>
+      <button type="button" data-filter-tag="go" aria-pressed="false">Go</button>
       <button type="button" data-filter-tag="js" aria-pressed="false">JavaScript</button>
     </div>
   </div>
   <div class="cards">
+    <a class="proj-card liquid" href="ai-memory.html" data-tags="memory agent rust" data-hay="ai-memory akitaonrails wiki markdown sqlite fts rrf hook mcp 记忆 交接 handoff 编程 agent rust 零llm 衰减">
+      <div class="badge-row"><span class="pill">Agent 记忆</span><span class="pill purple">Rust</span><span class="pill">v3.4.7</span></div>
+      <h2>ai-memory</h2>
+      <p>给编程 Agent 用的跨工具长期记忆：真源是 git 管理的 Markdown wiki，SQLite 只是可重建的派生索引。钩子静默采集，会话结束编译成页面，检索默认不必调用大模型。</p>
+      <p class="muted" style="margin-top:10px">分析提交 b38c6e5 · 2026-11-17 10:10 北京时间 · MIT</p>
+    </a>
+    <a class="proj-card liquid" href="weknora.html" data-tags="rag agent go" data-hay="weknora tencent 腾讯 rag 知识库 混合检索 rerank 引用 租户 asynq 切块 docreader go">
+      <div class="badge-row"><span class="pill">文档 RAG</span><span class="pill purple">Go</span><span class="pill">v0.9.0</span></div>
+      <h2>WeKnora</h2>
+      <p>企业知识平台：文档经异步解析、切块并写入派生索引；提问时先按租户授权做混合检索，再重排、合并，把通过的块登记为可核对的引用后生成回答。</p>
+      <p class="muted" style="margin-top:10px">分析提交 7d064bc · 2026-11-16 21:29 北京时间 · MIT + 第三方声明</p>
+    </a>
     <a class="proj-card liquid" href="git-twig.html" data-tags="git agent rust" data-hay="git-twig leostera worktree cow clonefile ficlone 写时复制 工作树 rust agent 并行检出">
       <div class="badge-row"><span class="pill">Git / 存储</span><span class="pill purple">Rust</span><span class="pill">v0.4.0</span></div>
       <h2>git-twig</h2>

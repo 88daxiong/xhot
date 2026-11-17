@@ -1,0 +1,524 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="light" data-pref="auto">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-eySqtWEMW2APPEHKl4ofjbb4sL/hbt3uVDrovVQbBOY='; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'none'; connect-src 'self'; media-src 'none'; frame-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%E2%9A%A1%3C/text%3E%3C/svg%3E">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#7c3aed">
+<meta name="description" content="从第一性原理拆解 ai-memory：以 git 版本的 Markdown wiki 为真源，SQLite 为派生索引，跨编程 Agent 采集、编译、检索并注入有界记忆。">
+<title>ai-memory · 开源解剖 · XHOT</title>
+<script>(function(){var d=document.documentElement,t,s;try{t=localStorage.getItem('xhot-theme');s=localStorage.getItem('xhot-density')}catch(e){}t=(t==='light'||t==='dark')?t:'auto';d.setAttribute('data-pref',t);d.setAttribute('data-theme',t==='auto'?(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'):t);if(s==='compact')d.setAttribute('data-density','compact')})();</script>
+<style>
+:root{--t-cap:0.75rem;--t-sm:0.8125rem;--t-md:0.875rem;--t-lg:1rem;--t-xl:1.25rem;--t-xxl:1.75rem;--bg:#f6f5fb;--card:#fff;--bd:#e6e4ef;--bd2:#f0eef6;--hov:#f4f2fa;--tx:#18181b;--tx2:#3f3f46;--mu:#6b6880;--ac:#7c3aed;--actx:#6d28d9;--glow:rgba(124,58,237,.18);--up:#16a34a;--dn:#dc2626;--g1:#7c3aed;--g2:#db2777;--g3:#f97316;--ai:#7c3aed;--money:#d97706;--growth:#0d9488;--heat:#ea580c;--sh:0 1px 2px rgba(24,24,27,.05),0 4px 14px -8px rgba(76,29,149,.18);--glass:rgba(255,255,255,.72);--glass2:rgba(255,255,255,.5);--glass-bd:rgba(255,255,255,.55);--glass-hi:rgba(255,255,255,.85);--accent-blue:#0284c7;--accent-purple:#7c3aed;--accent-emerald:#059669;--accent-amber:#d97706;--accent-rose:#e11d48;color-scheme:light}
+@media(max-width:720px){:root{--t-cap:0.75rem;--t-sm:0.8125rem;--t-md:0.9375rem;--t-lg:1.0625rem;--t-xl:1.25rem;--t-xxl:1.75rem}}
+html[data-theme=dark]{--bg:#0f0c26;--card:#1a1640;--bd:#2c2856;--bd2:#221e48;--hov:#221e4a;--tx:#f4f4f5;--tx2:#d4d4d8;--mu:#a5a3c9;--ac:#c084fc;--actx:#e9d5ff;--glow:rgba(192,132,252,.28);--up:#4ade80;--dn:#fb7185;--ai:#a78bfa;--money:#fbbf24;--growth:#2dd4bf;--heat:#fb923c;--sh:none;--glass:rgba(255,255,255,.07);--glass2:rgba(255,255,255,.04);--glass-bd:rgba(255,255,255,.16);--glass-hi:rgba(255,255,255,.28);--accent-blue:#38bdf8;--accent-purple:#a78bfa;--accent-emerald:#34d399;--accent-amber:#fbbf24;--accent-rose:#fb7185;color-scheme:dark}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--tx);font:400 0.9375rem/1.6 system-ui,"Noto Sans CJK SC",-apple-system,"PingFang SC","Helvetica Neue",sans-serif;touch-action:manipulation;min-height:100vh;overflow-x:hidden}
+a{color:inherit}
+button{font:inherit}
+:focus-visible{outline:2px solid var(--ac);outline-offset:2px;border-radius:6px}
+.skip{position:absolute;left:12px;top:-60px;z-index:100;padding:8px 16px;border-radius:8px;background:#5b21b6;color:#fff;font-weight:600;text-decoration:none}
+.skip:focus{top:8px}
+.top{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 96%,transparent);backdrop-filter:blur(16px) saturate(180%);-webkit-backdrop-filter:blur(16px) saturate(180%);border-bottom:1px solid var(--bd)}
+.top::before{content:"";display:block;height:3px;background:linear-gradient(90deg,var(--g1),var(--g2),var(--g3))}
+.bar{max-width:1760px;margin:0 auto;padding:0 clamp(12px,2vw,36px);height:56px;display:flex;align-items:center;gap:16px}
+.lg{display:flex;align-items:center;gap:8px;font-weight:600;font-size:var(--t-lg);letter-spacing:0;text-decoration:none;white-space:nowrap}
+.lg i{font-style:normal;width:28px;height:28px;border-radius:8px;display:grid;place-items:center;color:#fff;background:linear-gradient(135deg,var(--g1),var(--g2) 60%,var(--g3));font-size:var(--t-lg)}
+.lg span{font-weight:500;font-size:var(--t-sm);color:var(--mu)}
+.nav{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none;flex:1;min-width:0}
+.nav::-webkit-scrollbar{display:none}
+.nav a{display:inline-flex;align-items:center;gap:4px;height:36px;padding:0 12px;border-radius:8px;text-decoration:none;color:var(--tx2);font-weight:500;white-space:nowrap;min-height:44px}
+.nav a:hover{background:var(--hov);color:var(--tx)}
+.nav a[aria-current=page]{color:#fff;background:linear-gradient(135deg,var(--g1),var(--g2));box-shadow:0 4px 14px -6px var(--g2)}
+.sp0{flex:0 0 auto;margin-left:auto}
+.tg{display:inline-flex;padding:2px;border-radius:8px;background:var(--hov);border:1px solid var(--bd);flex:none}
+.tg button{height:36px;min-width:44px;padding:0 8px;border:0;border-radius:6px;background:none;color:var(--mu);cursor:pointer;font-size:var(--t-sm);min-height:44px}
+.tg button.on{background:var(--card);color:var(--tx);box-shadow:0 1px 3px rgba(0,0,0,.14)}
+.wrap{max-width:1120px;margin:0 auto;padding:24px clamp(12px,2vw,36px) 48px}
+.ft{margin-top:32px;font-size:var(--t-sm);color:var(--mu);text-align:center}
+.ft p{margin:0 0 4px}
+.ft a{color:var(--actx);text-decoration:underline;text-underline-offset:2px}
+@media(max-width:1060px){.bar{flex-wrap:wrap;height:auto;padding-top:8px;padding-bottom:8px;gap:8px}}
+@media(max-width:720px){.bar{gap:8px}.lg span{display:none}.wrap{padding:16px 12px 40px}}
+
+.ambient{position:fixed;inset:0;z-index:-1;overflow:hidden;pointer-events:none}
+.orb{position:absolute;border-radius:50%;filter:blur(110px);opacity:.28;animation:float 18s ease-in-out infinite alternate}
+html[data-theme=dark] .orb{opacity:.45}
+.orb-1{width:520px;height:520px;background:radial-gradient(circle,#7c3aed,transparent 70%);top:-120px;left:-80px}
+.orb-2{width:460px;height:460px;background:radial-gradient(circle,#db2777,transparent 70%);bottom:-100px;right:-60px;animation-delay:-6s}
+.orb-3{width:360px;height:360px;background:radial-gradient(circle,#0d9488,transparent 70%);top:42%;left:52%;animation-delay:-12s}
+@keyframes float{0%{transform:translate(0,0) scale(1)}100%{transform:translate(40px,-30px) scale(1.08)}}
+
+.liquid{background:linear-gradient(135deg,var(--glass) 0%,var(--glass2) 100%);backdrop-filter:blur(28px) saturate(185%);-webkit-backdrop-filter:blur(28px) saturate(185%);border:1px solid var(--glass-bd);border-top-color:var(--glass-hi);border-radius:24px;box-shadow:var(--sh),inset 0 1px 0 0 var(--glass-hi);padding:28px}
+.hero{margin-bottom:20px;overflow:hidden}
+.badge-row{display:flex;gap:8px;align-items:center;margin-bottom:14px;flex-wrap:wrap}
+.pill{font-size:var(--t-cap);font-weight:600;letter-spacing:.04em;padding:4px 12px;border-radius:999px;background:color-mix(in srgb,var(--accent-blue) 14%,transparent);border:1px solid color-mix(in srgb,var(--accent-blue) 35%,transparent);color:var(--accent-blue)}
+.pill.purple{background:color-mix(in srgb,var(--accent-purple) 14%,transparent);border-color:color-mix(in srgb,var(--accent-purple) 35%,transparent);color:var(--accent-purple)}
+h1{font-size:var(--t-xxl);font-weight:700;letter-spacing:-.02em;margin-bottom:12px;line-height:1.25}
+h2{font-size:var(--t-xl);font-weight:600;letter-spacing:-.02em;margin-bottom:8px}
+h3{font-size:var(--t-lg);font-weight:600}
+.essence{font-size:var(--t-lg);color:var(--tx);background:color-mix(in srgb,var(--tx) 4%,transparent);border-left:3px solid var(--accent-blue);padding:14px 18px;border-radius:0 14px 14px 0}
+.meta{margin-top:14px;font-size:var(--t-sm);color:var(--mu);display:flex;flex-wrap:wrap;gap:8px 16px}
+.meta a{color:var(--actx)}
+.seg{display:inline-flex;background:color-mix(in srgb,var(--tx) 6%,transparent);backdrop-filter:blur(20px);border:1px solid var(--bd);border-radius:16px;padding:5px;margin:0 0 20px;gap:4px;flex-wrap:wrap}
+.seg-btn{background:transparent;border:none;color:var(--tx2);font-size:var(--t-sm);font-weight:500;padding:9px 16px;border-radius:12px;cursor:pointer;min-height:44px}
+.seg-btn:hover{color:var(--tx)}
+.seg-btn.active{background:color-mix(in srgb,var(--card) 90%,transparent);color:var(--tx);box-shadow:0 4px 12px rgba(0,0,0,.08),inset 0 1px 0 var(--glass-hi)}
+.tab-panel{display:none}
+.tab-panel.active{display:block;animation:fadeIn .3s ease}
+@keyframes fadeIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.flow{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-top:16px}
+.flow-node{background:color-mix(in srgb,var(--card) 70%,transparent);border:1px solid var(--bd);border-radius:18px;padding:16px;cursor:pointer;text-align:left;color:inherit}
+.flow-node:hover,.flow-node.selected{background:color-mix(in srgb,var(--accent-blue) 12%,var(--card));border-color:var(--accent-blue);transform:translateY(-2px)}
+.node-step{font-size:11px;color:var(--accent-blue);font-weight:700;letter-spacing:.04em;text-transform:uppercase}
+.node-title{font-size:var(--t-md);font-weight:600;margin:6px 0}
+.node-desc{font-size:var(--t-sm);color:var(--tx2)}
+.drawer{margin-top:16px;padding:16px 18px;border-radius:16px;background:color-mix(in srgb,var(--tx) 4%,var(--card));border:1px solid color-mix(in srgb,var(--accent-blue) 28%,var(--bd));font-size:var(--t-sm);color:var(--tx2)}
+.drawer strong{color:var(--tx);display:inline;margin-right:8px}
+.detail-body{margin-top:8px}
+.grid-2{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;margin-top:16px}
+table{width:100%;border-collapse:collapse;margin-top:14px;font-size:var(--t-sm)}
+th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--bd);vertical-align:top}
+th{color:var(--mu);font-weight:600;font-size:var(--t-cap);text-transform:uppercase}
+pre,code{font-family:ui-monospace,"SF Mono",Menlo,Consolas,monospace}
+pre{background:color-mix(in srgb,var(--tx) 8%,var(--card));border:1px solid var(--bd);border-radius:14px;padding:16px;overflow-x:auto;font-size:12px;color:var(--tx);margin-top:12px;line-height:1.55;white-space:pre-wrap;word-break:break-word}
+.warn{border-left:3px solid var(--accent-rose);background:color-mix(in srgb,var(--accent-rose) 7%,transparent);padding:14px 16px;border-radius:0 14px 14px 0;margin-top:12px}
+.ev{display:inline-block;font-size:11px;font-weight:600;padding:1px 8px;border-radius:999px;margin-left:6px;vertical-align:middle}
+.ev-source{background:color-mix(in srgb,var(--accent-emerald) 16%,transparent);color:var(--accent-emerald)}
+.ev-claim{background:color-mix(in srgb,var(--accent-amber) 16%,transparent);color:var(--accent-amber)}
+.ev-infer{background:color-mix(in srgb,var(--accent-purple) 16%,transparent);color:var(--accent-purple)}
+.ev-pending{background:color-mix(in srgb,var(--accent-rose) 16%,transparent);color:var(--accent-rose)}
+.legend{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 16px;font-size:var(--t-sm);color:var(--mu)}
+.arch{width:100%;overflow-x:auto;margin:12px 0}
+.arch svg{width:100%;min-width:640px;height:auto;display:block}
+.arch-node{cursor:pointer}
+.arch-node rect,.arch-node polygon{fill:color-mix(in srgb,var(--card) 80%,transparent);stroke:var(--bd);stroke-width:1.5}
+.arch-node.selected rect,.arch-node.selected polygon{fill:color-mix(in srgb,var(--accent-blue) 18%,var(--card));stroke:var(--accent-blue)}
+.arch-node text{fill:var(--tx);font-size:12px;font-family:inherit;pointer-events:none}
+.arch-label{fill:var(--mu);font-size:11px}
+.arch line,.arch path.arrow{stroke:var(--mu);stroke-width:1.25;fill:none;marker-end:url(#arr)}
+.story{margin-top:12px;font-size:var(--t-md);color:var(--tx);background:color-mix(in srgb,var(--tx) 4%,transparent);padding:16px;border-radius:14px}
+.story p+p{margin-top:10px}
+ul.act,ol.act{margin:12px 0 0 1.15em;color:var(--tx2)}
+ul.act li,ol.act li{margin:6px 0}
+.src a{color:var(--actx)}
+.muted{color:var(--mu);font-size:var(--t-sm)}
+.filter-bar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:16px 0}
+.filter-bar input{flex:1;min-width:200px;height:44px;padding:0 14px;border-radius:12px;border:1px solid var(--bd);background:var(--card);color:var(--tx);font:inherit}
+.filter-chips{display:flex;flex-wrap:wrap;gap:6px}
+.filter-chips button{height:36px;min-height:44px;padding:0 12px;border-radius:999px;border:1px solid var(--bd);background:var(--card);color:var(--tx2);cursor:pointer}
+.filter-chips button.on{background:var(--ac);color:#fff;border-color:transparent}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;margin-top:8px}
+.proj-card{display:block;text-decoration:none;color:inherit;padding:22px;border-radius:20px;min-height:100%}
+.proj-card:hover{border-color:var(--ac)}
+.proj-card h2{font-size:var(--t-xl);margin:4px 0 8px}
+.howto{margin-top:28px}
+.howto ol{margin:10px 0 0 1.2em;color:var(--tx2)}
+
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation:none !important;transition:none !important}
+  .orb{animation:none;filter:none;opacity:.12}
+  .tab-panel.active{animation:none}
+  .flow-node:hover,.flow-node.selected{transform:none}
+}
+.toc-layers{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 18px}
+.toc-layers a{display:inline-flex;align-items:center;min-height:44px;padding:0 12px;border-radius:999px;border:1px solid var(--bd);background:var(--card);color:var(--tx2);text-decoration:none;font-size:var(--t-sm)}
+.toc-layers a:hover{color:var(--tx);border-color:var(--ac)}
+.play-controls{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:12px 0 4px}
+.play-controls button{min-height:44px;padding:0 14px;border-radius:12px;border:1px solid var(--bd);background:var(--card);color:var(--tx);cursor:pointer}
+.play-controls button.primary{background:var(--ac);color:#fff;border-color:transparent}
+.play-status{font-size:var(--t-sm);color:var(--mu)}
+.play-track{height:6px;background:var(--bd);border-radius:99px;overflow:hidden;margin:8px 0 12px}
+.play-track>span{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--g1),var(--g2))}
+.schema-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;margin-top:12px}
+.schema-card{text-align:left;background:color-mix(in srgb,var(--card) 70%,transparent);border:1px solid var(--bd);border-radius:16px;padding:14px;cursor:pointer;color:inherit;min-height:44px}
+.schema-card:hover,.schema-card.selected{border-color:var(--accent-blue);background:color-mix(in srgb,var(--accent-blue) 12%,var(--card))}
+.schema-card b{display:block;margin-bottom:4px}
+.quiz{margin-top:12px;padding:16px;border-radius:16px;border:1px solid var(--bd);background:color-mix(in srgb,var(--card) 80%,transparent)}
+.quiz .q{font-weight:600;margin-bottom:10px}
+.quiz-opts{display:flex;flex-direction:column;gap:8px}
+.quiz-opts button{text-align:left;min-height:44px;padding:10px 14px;border-radius:12px;border:1px solid var(--bd);background:var(--card);color:var(--tx);cursor:pointer}
+.quiz-opts button:disabled{cursor:default;opacity:.95}
+.quiz-ok{border-color:var(--accent-emerald)!important;background:color-mix(in srgb,var(--accent-emerald) 14%,var(--card))!important}
+.quiz-bad{border-color:var(--accent-rose)!important;background:color-mix(in srgb,var(--accent-rose) 12%,var(--card))!important}
+.quiz-answers{margin-top:10px;font-size:var(--t-sm);color:var(--tx2)}
+.formula{background:color-mix(in srgb,var(--tx) 6%,var(--card));border:1px solid var(--bd);border-radius:14px;padding:14px 16px;overflow-x:auto;font-family:ui-monospace,"SF Mono",Menlo,Consolas,monospace;font-size:13px;margin:12px 0;line-height:1.6}
+.cmp{margin-top:16px}
+.dl{margin-top:8px}
+.kbd{font-family:ui-monospace,monospace;font-size:11px;border:1px solid var(--bd);border-bottom-width:2px;border-radius:6px;padding:0 5px;background:var(--card)}
+.stand-note{margin:0 0 16px;padding:12px 16px;border-radius:14px;border:1px dashed var(--bd);font-size:var(--t-sm);color:var(--mu)}
+p+ p{margin-top:10px}
+.tab-panel h2{margin-top:4px}
+.tab-panel h3{margin-top:18px}
+section.block{margin-top:8px}
+
+</style>
+<script src="anatomy.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">跳到正文</a>
+<div class="ambient" aria-hidden="true"><div class="orb orb-1"></div><div class="orb orb-2"></div><div class="orb orb-3"></div></div>
+<header class="top"><div class="bar">
+<a class="lg" href="../index.html"><i aria-hidden="true">⚡</i>XHOT<span>X 热点雷达</span></a>
+<nav class="nav" aria-label="栏目"><a href="../index.html">今日</a><a href="../d/ai.html">领域</a><a href="../people.html">人物</a><a href="../news.html">资讯</a><a href="../trends.html">趋势</a><a href="../agents.html">Agent</a><a href="index.html" aria-current=page>解剖</a></nav>
+<span class="sp0"></span>
+<div class="tg" role="group" aria-label="主题"><button type="button" data-set-theme="light" aria-label="浅色">☀</button><button type="button" data-set-theme="dark" aria-label="深色">☾</button><button type="button" data-set-theme="auto">自动</button></div>
+</div></header>
+<main id="main" class="wrap">
+
+
+<nav class="toc-layers" aria-label="分层阅读">
+  <a href="#tab-problem" data-tab-jump="problem">1. 问题与分层</a>
+  <a href="#tab-flow" data-tab-jump="flow">2. 架构与状态机</a>
+  <a href="#tab-play" data-tab-jump="play">3. 一条记忆如何写入再被召回</a>
+  <a href="#tab-schema" data-tab-jump="schema">4. Schema 与不变量</a>
+  <a href="#tab-trade" data-tab-jump="trade">5. 并发、安全与失效</a>
+  <a href="#tab-use" data-tab-jump="use">6. 接入清单与证据</a>
+</nav>
+
+<article class="liquid hero">
+  <div class="badge-row">
+    <span class="pill">开源解剖</span>
+    <span class="pill purple">Tech Precision</span>
+    <span class="pill">MIT</span>
+    <span class="pill">v3.4.7</span>
+  </div>
+  <h1>ai-memory：以 Markdown Wiki 为真源的跨 Agent 记忆层</h1>
+  <div class="essence"><strong>物理本质：</strong>它不是「又一个向量数据库」，也不是给模型的自动日记本。内核是一棵 git 版本管理的 Markdown 页面树：路径就是身份，编辑通过「取代（supersede）」留下版本链；SQLite 只是可重建的派生索引。默认路径不调用任何大模型——生命周期钩子静默采集、会话结束用规则写成摘要页、下一次会话用全文/实体/链接（可选向量）融合检索，并把有界的简报注入新会话。</div>
+  <div class="meta">
+    <span>仓库 <a href="https://github.com/akitaonrails/ai-memory" target="_blank" rel="noopener noreferrer">akitaonrails/ai-memory</a></span>
+    <span>版本 3.4.7（仓库标记）</span>
+    <span>分析提交 <a href="https://github.com/akitaonrails/ai-memory/tree/b38c6e573be9333d060b8970f40d8afae7857652" target="_blank" rel="noopener noreferrer"><code>b38c6e573be9333d060b8970f40d8afae7857652</code></a>（提交时间 2026-11-16 23:10 −03:00，合 <strong>2026-11-17 10:10 北京时间</strong>）</span>
+    <span>许可 MIT（Copyright 2026 Fabio Akita）</span>
+    <span>语言 Rust workspace · 仓库创建于 2026-05-21（GitHub API，日期本身为 UTC）</span>
+    <span>单文件导出 <a href="exports/ai-memory.standalone.html">ai-memory.standalone.html</a>（CSS/JS 全部内联，可本地下载打开）</span>
+  </div>
+</article>
+
+<div class="legend">证据分级：<span class="ev ev-source">源码确认</span> 对照指定提交源码　<span class="ev ev-claim">作者宣称</span> 来自 README / 架构文档，本文未复跑　<span class="ev ev-infer">推断</span> 由源码推出但作者未写明　<span class="ev ev-pending">待验证</span> 尚未在本机验证　<span class="ev ev-sim">模拟演示</span> 交互用的虚构数据，不是仓库实测</div>
+
+<div class="seg" role="tablist" aria-label="解剖视图">
+  <button class="seg-btn active" data-tab="problem" role="tab" aria-selected="true">1. 问题与分层</button>
+  <button class="seg-btn" data-tab="flow" role="tab" aria-selected="false">2. 架构与状态机</button>
+  <button class="seg-btn" data-tab="play" role="tab" aria-selected="false">3. 写入再召回</button>
+  <button class="seg-btn" data-tab="schema" role="tab" aria-selected="false">4. Schema</button>
+  <button class="seg-btn" data-tab="trade" role="tab" aria-selected="false">5. 取舍与失效</button>
+  <button class="seg-btn" data-tab="use" role="tab" aria-selected="false">6. 清单与证据</button>
+</div>
+
+<section class="tab-panel active" id="tab-problem" role="tabpanel">
+  <div class="liquid">
+    <h2>它到底在解什么问题</h2>
+    <p>编程 Agent 的「记忆」通常绑定在单一产品里：Claude Code 自己记笔记，Cursor 自己记上下文，换一个 CLI 或换一台电脑，这些笔记就看不见了。README 把这一点说成核心动机：记忆要能跟着人跨越 Agent、项目与机器，并且对团队可共享。<span class="ev ev-claim">作者宣称</span></p>
+    <p>从源码看，它选择的解法不是「把对话全文塞进向量库」，而是把长期记忆建成 <strong>Karpathy 风格的 LLM Wiki</strong>：磁盘上的 Markdown 是唯一内容真源，SQLite 负责检索、会话、观察、交接、审计和可选嵌入。<span class="ev ev-source">源码确认</span> 见 <a href="https://github.com/akitaonrails/ai-memory/blob/b38c6e573be9333d060b8970f40d8afae7857652/docs/ARCHITECTURE.md#L16-L21" target="_blank" rel="noopener noreferrer"><code>docs/ARCHITECTURE.md:16–21</code></a> 与 <a href="https://github.com/akitaonrails/ai-memory/blob/b38c6e573be9333d060b8970f40d8afae7857652/README.md#L739-L758" target="_blank" rel="noopener noreferrer"><code>README.md:739–758</code></a>。</p>
+    <h3>和普通笔记、普通向量库差在哪</h3>
+    <table>
+      <thead><tr><th>方案</th><th>真源</th><th>采集</th><th>召回后怎么用</th><th>跨工具</th></tr></thead>
+      <tbody>
+        <tr><td>手写笔记 / Obsidian</td><td>文件</td><td>人写</td><td>人打开或自己检索</td><td>与 Agent 无关</td></tr>
+        <tr><td>单一 Agent 的 Memory 功能</td><td>该产品内部存储</td><td>该 Agent 自己记</td><td>只在该产品里注入</td><td>换工具即失效</td></tr>
+        <tr><td>通用向量 RAG</td><td>常以切块+向量为检索主索引</td><td>文档导入</td><td>把切块拼进提示，生成答案</td><td>作为知识库服务，不理解会话生命周期</td></tr>
+        <tr><td>ai-memory（本提交）</td><td>git 管理的 Markdown 页面；数据库可重建</td><td>钩子采集观察，会话结束编译成页面；也可 MCP 手写</td><td>有界简报注入 + 混合检索；默认不调用 LLM 生成「答案」</td><td>多种 CLI 钩子与 MCP 共享同一服务器</td></tr>
+      </tbody>
+    </table>
+    <p>可选嵌入存在于 SQLite，而不是独立向量库；且 <code>{provider, model, dim}</code> 与每条向量绑在一起，模型一换就忽略旧向量。<span class="ev ev-source">源码确认</span> 不变量第 8 条 <a href="https://github.com/akitaonrails/ai-memory/blob/b38c6e573be9333d060b8970f40d8afae7857652/docs/ARCHITECTURE.md#L1201-L1203" target="_blank" rel="noopener noreferrer"><code>docs/ARCHITECTURE.md:1201–1203</code></a>。作者说「没有要维护的向量库」，指的是不必另起一套向量服务，并不是「系统里没有向量」。<span class="ev ev-claim">作者宣称</span> + <span class="ev ev-infer">推断</span></p>
+
+    <h3>洋葱分层</h3>
+    <div class="grid-2">
+      <div>
+        <h3>内核</h3>
+        <ul class="act">
+          <li>页面身份是三元组 <code>(workspace_id, project_id, path)</code>，从初始迁移就写进每张领域表。</li>
+          <li>同一路径同时只有一行 <code>is_latest=1</code>；内容变化就新开一行并 <code>supersedes</code> 旧行。</li>
+          <li>观察（observation）是会话里的原始事件；页面是编译产物。二者不是同一层对象。</li>
+          <li>交接（handoff）是有主人、只被领取一次的协议对象，不是又一篇摘要。</li>
+        </ul>
+      </div>
+      <div>
+        <h3>控制流</h3>
+        <ul class="act">
+          <li>所有写入走单一 SQLite writer 线程（mpsc）。</li>
+          <li>索引与数据在同一事务提交。</li>
+          <li>会话结束：规则生成 <code>sessions/&lt;id&gt;.md</code>、写入自动交接、标记会话结束，在同一事务里完成数据库侧效果，再自动提交 wiki。</li>
+          <li>检索：FTS5 + 实体 + 图邻居 + 可选向量，用 RRF（k=60）融合，后再做有界权威调整。</li>
+        </ul>
+      </div>
+    </div>
+    <h3>适配器</h3>
+    <p>生命周期钩子（Claude Code、Codex、OpenCode 等）、MCP 工具面（如 <code>memory_query</code> / <code>memory_write_page</code> / <code>memory_briefing</code> / <code>memory_handoff_*</code>）、HTTP/Web、可选 LLM 用于会话整理、嵌入和「dream」。管理控制台要同时打开编译特征与运行时开关。<span class="ev ev-source">源码确认</span> <a href="https://github.com/akitaonrails/ai-memory/blob/b38c6e573be9333d060b8970f40d8afae7857652/crates/ai-memory-mcp/src/server.rs#L11436-L11457" target="_blank" rel="noopener noreferrer"><code>crates/ai-memory-mcp/src/server.rs:11436–11457</code></a>。</p>
+    <details>
+      <summary>术语</summary>
+      <ul class="act">
+        <li><b>Page / 页面</b>：wiki 里一篇 Markdown，带 frontmatter、层级（working / episodic / semantic / procedural）。</li>
+        <li><b>Observation / 观察</b>：一次钩子事件经净化后的记录，隶属于 session。</li>
+        <li><b>Supersede / 取代</b>：同一 path 的新版本取代旧版本，旧行保留并 <code>is_latest=0</code>。</li>
+        <li><b>Tombstone / 墓碑</b>：<code>is_latest=0</code> 且 <code>superseded_at</code> 有值，表示「存储认为这个路径现在没有文件」（衰减驱逐或对账删除），与普通历史版本不同。</li>
+        <li><b>Brief / 简报</b>：会话开始时按预算注入的项目摘要，不是全库倒入。</li>
+        <li><b>OKF</b>：页面 frontmatter 的规范形态，在唯一写入扼点被 conform。</li>
+      </ul>
+    </details>
+  </div>
+</section>
+
+<section class="tab-panel" id="tab-flow" role="tabpanel">
+  <div class="liquid">
+    <h2>架构：真源在文件，索引在库</h2>
+    <p>一个 Rust 二进制拥有一个数据目录：<code>wiki/</code>、<code>raw/</code>、<code>db/</code>、<code>models/</code>、<code>logs/</code>。作者与架构文档反复强调：Markdown wiki 是真源，SQLite 是派生索引。<span class="ev ev-source">源码确认</span> <a href="https://github.com/akitaonrails/ai-memory/blob/b38c6e573be9333d060b8970f40d8afae7857652/docs/ARCHITECTURE.md#L36-L39" target="_blank" rel="noopener noreferrer"><code>docs/ARCHITECTURE.md:36–39</code></a>。</p>
+    <div class="arch" role="img" aria-label="可点击的 ai-memory 架构图">
+      <svg viewBox="0 0 980 420" xmlns="http://www.w3.org/2000/svg">
+        <defs><marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="currentColor"/></marker></defs>
+        <text class="arch-label" x="40" y="28">适配器</text>
+        <g class="arch-node" data-stage="hooks" tabindex="0" role="button">
+          <rect x="30" y="40" width="170" height="64" rx="12"/><text x="115" y="78" text-anchor="middle">生命周期钩子</text>
+        </g>
+        <g class="arch-node" data-stage="mcp" tabindex="0" role="button">
+          <rect x="220" y="40" width="170" height="64" rx="12"/><text x="305" y="78" text-anchor="middle">MCP / CLI / HTTP</text>
+        </g>
+        <g class="arch-node" data-stage="llm" tabindex="0" role="button">
+          <rect x="410" y="40" width="170" height="64" rx="12"/><text x="495" y="78" text-anchor="middle">可选 LLM / 嵌入</text>
+        </g>
+        <text class="arch-label" x="40" y="140">控制面</text>
+        <g class="arch-node" data-stage="sanitize" tabindex="0" role="button">
+          <rect x="30" y="152" width="200" height="64" rx="12"/><text x="130" y="190" text-anchor="middle">净化边界 sanitize()</text>
+        </g>
+        <g class="arch-node" data-stage="writer" tabindex="0" role="button">
+          <rect x="260" y="152" width="200" height="64" rx="12"/><text x="360" y="190" text-anchor="middle">单 writer SQLite 线程</text>
+        </g>
+        <g class="arch-node" data-stage="end" tabindex="0" role="button">
+          <rect x="490" y="152" width="220" height="64" rx="12"/><text x="600" y="190" text-anchor="middle">SessionEnd 编译 + 交接</text>
+        </g>
+        <g class="arch-node" data-stage="search" tabindex="0" role="button">
+          <rect x="740" y="152" width="210" height="64" rx="12"/><text x="845" y="190" text-anchor="middle">混合检索 + 简报注入</text>
+        </g>
+        <text class="arch-label" x="40" y="254">内核存储</text>
+        <g class="arch-node" data-stage="wiki" tabindex="0" role="button">
+          <rect x="30" y="268" width="280" height="80" rx="12"/><text x="170" y="304" text-anchor="middle">wiki/*.md + git（真源）</text>
+        </g>
+        <g class="arch-node" data-stage="sqlite" tabindex="0" role="button">
+          <rect x="350" y="268" width="300" height="80" rx="12"/><text x="500" y="304" text-anchor="middle">SQLite 派生索引 / 会话 / 审计</text>
+        </g>
+        <g class="arch-node" data-stage="decay" tabindex="0" role="button">
+          <rect x="690" y="268" width="260" height="80" rx="12"/><text x="820" y="304" text-anchor="middle">衰减 / 整理 / 可选 dream</text>
+        </g>
+        <line x1="115" y1="104" x2="130" y2="152"/><line x1="305" y1="104" x2="360" y2="152"/><line x1="495" y1="104" x2="600" y2="152"/>
+        <line x1="230" y1="216" x2="170" y2="268"/><line x1="360" y1="216" x2="500" y2="268"/><line x1="845" y1="216" x2="820" y2="268"/>
+      </svg>
+    </div>
+    <div class="drawer" id="flow-detail" aria-live="polite">点击图中节点或下面的阶段卡片，查看对应机制。</div>
+    <div class="flow">
+      <button class="flow-node" data-stage="hooks" type="button"><div class="node-step">采集</div><div class="node-title">钩子静默观察</div><div class="node-desc">热路径不阻塞网络，饱和返回 429。</div></button>
+      <button class="flow-node" data-stage="sanitize" type="button"><div class="node-step">边界</div><div class="node-title">类型化净化</div><div class="node-desc">Sanitized&lt;NewObservation&gt; 只能由 sanitize() 构造。</div></button>
+      <button class="flow-node" data-stage="writer" type="button"><div class="node-step">写入</div><div class="node-title">单写者事务</div><div class="node-desc">幂等键与观察一起提交。</div></button>
+      <button class="flow-node" data-stage="end" type="button"><div class="node-step">编译</div><div class="node-title">会话结束成页</div><div class="node-desc">规则摘要 + 自动交接同事务。</div></button>
+      <button class="flow-node" data-stage="search" type="button"><div class="node-step">召回</div><div class="node-title">RRF 混合检索</div><div class="node-desc">FTS / 实体 / 图 / 可选向量。</div></button>
+      <button class="flow-node" data-stage="wiki" type="button"><div class="node-step">真源</div><div class="node-title">原子写 + git</div><div class="node-desc">tmp+rename+fsync，然后 checkpoint。</div></button>
+      <button class="flow-node" data-stage="decay" type="button"><div class="node-step">老化</div><div class="node-title">无 LLM 衰减</div><div class="node-desc">访问会减慢遗忘；破坏性整理默认关闭。</div></button>
+      <button class="flow-node" data-stage="llm" type="button"><div class="node-step">可选</div><div class="node-title">整理 / 嵌入 / dream</div><div class="node-desc">零 LLM 是默认路径。</div></button>
+    </div>
+
+    <h3>采集、去重、冲突、删除</h3>
+    <ul class="act">
+      <li><b>采集：</b>钩子把 SessionStart、UserPromptSubmit、PostToolUse、SessionEnd 等事件 POST 到 <code>/hook</code>。原生命令用稳定的幂等键本地暂存，再交给 drain。被最近标记策略丢弃的文件工具事件不会进入暂存、队列、传输、日志或存储。<span class="ev ev-source">源码确认</span> <a href="https://github.com/akitaonrails/ai-memory/blob/b38c6e573be9333d060b8970f40d8afae7857652/docs/ARCHITECTURE.md#L55-L92" target="_blank" rel="noopener noreferrer"><code>docs/ARCHITECTURE.md:55–92</code></a></li>
+      <li><b>更新 / 去重：</b><code>upsert_page_in_tx</code> 用 body SHA-256 加上去掉 <code>generated.at</code> 后的 frontmatter、标题、层级、置顶标志做短路径：完全一样就复用当前 id，只补证据。内容变了则把旧行 <code>is_latest=0</code>，新行 <code>supersedes</code> 旧 id。<span class="ev ev-source">源码确认</span> <a href="https://github.com/akitaonrails/ai-memory/blob/b38c6e573be9333d060b8970f40d8afae7857652/crates/ai-memory-store/src/ops.rs#L2164-L2296" target="_blank" rel="noopener noreferrer"><code>crates/ai-memory-store/src/ops.rs:2164–2296</code></a></li>
+      <li><b>条件写入 / 冲突：</b><code>upsert_page_if</code> 在同一事务里检查「路径不存在」或「最新版本仍是这个 id」，不满足则不写。批量版本一处失败则全部不写。这是并发下的乐观冲突处理，不是三路合并。<span class="ev ev-source">源码确认</span> <a href="https://github.com/akitaonrails/ai-memory/blob/b38c6e573be9333d060b8970f40d8afae7857652/crates/ai-memory-store/src/ops.rs#L305-L351" target="_blank" rel="noopener noreferrer"><code>crates/ai-memory-store/src/ops.rs:305–351</code></a></li>
+      <li><b>墓碑复活：</b>若路径上已有带 <code>superseded_at</code> 的墓碑，新写入必须接上旧链并清除 <code>superseded_at</code>，否则之后的硬删除会把「曾经误删、文件又回来了」的历史链清掉。<span class="ev ev-source">源码确认</span> <a href="https://github.com/akitaonrails/ai-memory/blob/b38c6e573be9333d060b8970f40d8afae7857652/crates/ai-memory-store/src/ops.rs#L2304-L2337" target="_blank" rel="noopener noreferrer"><code>crates/ai-memory-store/src/ops.rs:2304–2337</code></a></li>
+      <li><b>删除：</b>衰减驱逐把最新行打成墓碑；<code>hard_delete_after_days</code> 默认 180 天后可硬删整条墓碑链。会话清除（purge）会留下墓碑，阻止磁盘对账把已删会话摘要写回来。观察在巩固后可被修剪，而且作者写明：修剪后无法用更好的模型重新巩固，摘要页成为该会话仅存的叙述。<span class="ev ev-source">源码确认</span> <a href="https://github.com/akitaonrails/ai-memory/blob/b38c6e573be9333d060b8970f40d8afae7857652/docs/ARCHITECTURE.md#L263-L268" target="_blank" rel="noopener noreferrer"><code>docs/ARCHITECTURE.md:263–268</code></a> README 说「没有东西会被硬删除，原件留在 git」——这描述的是页面编辑/整理默认不丢 git 历史；它不能否定库内硬删与观察修剪的存在。两者都要同时看。<span class="ev ev-claim">作者宣称</span></li>
+    </ul>
+
+    <h3>何时检索、何时注入上下文</h3>
+    <p>检索入口是 <code>hybrid_search_inner</code>：先做实体命中和页面 FTS，若调用方提供查询向量再查正文嵌入和可选摘要嵌入，用这些种子扩展图邻居；默认还开启观察流，用原始观察文本给对应的最新会话页投票。<span class="ev ev-source">源码确认</span> <a href="https://github.com/akitaonrails/ai-memory/blob/b38c6e573be9333d060b8970f40d8afae7857652/crates/ai-memory-store/src/reader.rs#L8733-L8911" target="_blank" rel="noopener noreferrer"><code>crates/ai-memory-store/src/reader.rs:8733–8911</code></a></p>
+    <p>融合公式是经典 RRF：<code>score(d) = Σ 1/(k + rank_i(d))</code>，k=60。若观察流已经给某会话页投票，该页的页面 FTS 贡献被置零，避免「标题里碰巧有几个主题词」压过真正命中观察正文的会话。<span class="ev ev-source">源码确认</span> <a href="https://github.com/akitaonrails/ai-memory/blob/b38c6e573be9333d060b8970f40d8afae7857652/crates/ai-memory-store/src/reader.rs#L8920-L8950" target="_blank" rel="noopener noreferrer"><code>crates/ai-memory-store/src/reader.rs:8920–8950</code></a></p>
+    <div class="warn"><strong>反常识：</strong>向量流没有相似度下限。只要库里有任何嵌入，向量检索几乎会对每个查询返回若干页，图扩展还会跟着这些种子走。因此源码用「是否存在词法命中」（FTS、实体或观察流）来判断这是不是一次真正的匹配。<span class="ev ev-source">源码确认</span> <a href="https://github.com/akitaonrails/ai-memory/blob/b38c6e573be9333d060b8970f40d8afae7857652/crates/ai-memory-store/src/reader.rs#L8913-L8918" target="_blank" rel="noopener noreferrer"><code>crates/ai-memory-store/src/reader.rs:8913–8918</code></a></div>
+    <p>注入发生在 SessionStart：若仓库标记打开了 <code>[briefing] inject_on_session_start</code>（查询也可带 briefing 标志），服务器按 <code>max_chars</code> 预算生成项目简报，标题为「ai-memory: project brief」。简报是有界数据包，不是把整个 wiki 塞进上下文。跨项目 profile 也可在会话开始注入，作为仓库规则文件之下的默认习惯。<span class="ev ev-source">源码确认</span> <a href="https://github.com/akitaonrails/ai-memory/blob/b38c6e573be9333d060b8970f40d8afae7857652/crates/ai-memory-hooks/src/router.rs#L3145-L3482" target="_blank" rel="noopener noreferrer"><code>crates/ai-memory-hooks/src/router.rs:3145–3482</code></a> 附近。</p>
+    <p>MCP 的 <code>memory_query</code> 可以在检索命中之外再选配「回答合成」，但默认关闭，且需要配置 LLM；失败时退回只返回命中。<span class="ev ev-source">源码确认</span> <a href="https://github.com/akitaonrails/ai-memory/blob/b38c6e573be9333d060b8970f40d8afae7857652/crates/ai-memory-mcp/src/server.rs#L3757-L3757" target="_blank" rel="noopener noreferrer"><code>crates/ai-memory-mcp/src/server.rs:3757–3757</code></a> README「query_answer」一节。</p>
+  </div>
+</section>
+
+<section class="tab-panel" id="tab-play" role="tabpanel">
+  <div class="liquid">
+    <h2>一条信息如何写入，再在下一次会话被召回</h2>
+    <p>下面是可逐步播放的控制流。右侧状态是<strong>模拟数据</strong>，用来看对象怎么变，不是仓库里的真实记录。<span class="ev ev-sim">模拟演示</span> 每一步的机制说明则对应本提交源码。<kbd>←</kbd> <kbd>→</kbd> 翻步，<kbd>空格</kbd> 播放/暂停。</p>
+    <div id="play-controls" class="play-controls" tabindex="0" aria-label="流程播放控制">
+      <button type="button" id="play-reset">回到第一步</button>
+      <button type="button" id="play-prev">上一步</button>
+      <button type="button" id="play-toggle" class="primary" aria-pressed="false">播放</button>
+      <button type="button" id="play-next">下一步</button>
+      <span class="play-status" id="play-status" aria-live="polite"></span>
+    </div>
+    <div class="play-track" aria-hidden="true"><span id="play-bar"></span></div>
+    <div id="play-steps" class="flow"></div>
+    <div class="drawer" id="play-detail" aria-live="polite"></div>
+    <div class="story" id="play-sim" aria-live="polite"></div>
+    <p class="muted">成功路径：钩子被接收 → 观察落库 → SessionEnd 生成页面并提交 git → 新会话注入简报或 <code>memory_query</code> 命中该页。失败路径见下一步清单。</p>
+    <h3>最短成功路径与典型失败</h3>
+    <div class="grid-2">
+      <div>
+        <h3>成功</h3>
+        <ol class="act">
+          <li>在项目目录安装钩子，服务器只绑回环，读到数据目录里的根令牌。</li>
+          <li>Agent 正常工作，事件在 202 下被承认；幂等键防止重放重复插入观察。</li>
+          <li>SessionEnd（或 idle_end / finalize-session）写出 <code>sessions/&lt;id&gt;.md</code> 并打开交接。</li>
+          <li>下次任意已接入的 Agent 在同一项目启动，拿到简报和待领取交接。</li>
+        </ol>
+      </div>
+      <div>
+        <h3>失败 / 降级</h3>
+        <ul class="act">
+          <li>服务器饱和：钩子收到 429，不在 Agent 热路径里死等。</li>
+          <li>会话已绑定另一 Agent：409，且该判断走内存视图，不打数据库。</li>
+          <li>cwd 探测卡住（权限、死掉的网络盘）：2 秒截止，该事件失败，不拖垮整个服务器。</li>
+          <li>没有可靠 SessionEnd 的客户端：必须显式 <code>finalize-session</code>，否则只能等空闲结束维护任务。</li>
+          <li>进程在「下游效果尚未打完成标记」时崩溃：效果是至少一次，可能重复已经做过的 wiki/交接，而不是悄悄丢后半段。</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="tab-panel" id="tab-schema" role="tabpanel">
+  <div class="liquid">
+    <h2>关键字段与不变量</h2>
+    <p>初始表在 <a href="https://github.com/akitaonrails/ai-memory/blob/b38c6e573be9333d060b8970f40d8afae7857652/crates/ai-memory-store/migrations/V01__init.sql#L1-L126" target="_blank" rel="noopener noreferrer"><code>crates/ai-memory-store/migrations/V01__init.sql:1–126</code></a>。后续迁移增加有效窗口、嵌入、衰减、幂等键、实体、反馈等列；写入扼点仍是 <code>upsert_page_in_tx</code>。</p>
+    <div class="schema-grid">
+      <button class="schema-card" type="button" data-schema="pages"><b>pages</b> 页面版本链与最新唯一约束</button>
+      <button class="schema-card" type="button" data-schema="fts"><b>pages_fts</b> 与页面同行提交的 FTS5</button>
+      <button class="schema-card" type="button" data-schema="obs"><b>sessions / observations</b> 会话与原始事件</button>
+      <button class="schema-card" type="button" data-schema="links"><b>links</b> 页面间引用，允许悬空</button>
+      <button class="schema-card" type="button" data-schema="ident"><b>三元组身份</b> workspace / project / path</button>
+      <button class="schema-card" type="button" data-schema="embed"><b>embeddings</b> 可选，带模型三元组</button>
+    </div>
+    <div class="drawer" id="schema-detail" aria-live="polite"></div>
+    <h3>交叉不变量（必须守住的规则）</h3>
+    <ol class="act">
+      <li>配置只在启动时读一次。</li>
+      <li>单一 SQLite writer 线程；最后一个句柄丢弃时仍要排空并加入该线程。</li>
+      <li>索引与数据同一事务提交，禁止「先返回再后台建索引」。</li>
+      <li>领域行从第一天起带三元组身份。</li>
+      <li>钩子是即发即弃：脚本硬超时 ≤200ms；服务器立即 202 或饱和 429；会话冲突 409 例外。</li>
+      <li>隐私剥离是类型边界：只有 <code>sanitize()</code> 能构造已净化观察。</li>
+      <li>LLM 结构化输出只用原生 JSON schema 模式。</li>
+      <li>每条嵌入旁边都有 <code>{provider, model, dim}</code>，不匹配就忽略。</li>
+      <li>会改磁盘的生命周期命令先检查是否有活进程；备份走服务器在线备份 API。</li>
+      <li>文件写入原子（临时文件 + rename + fsync）；wiki 的 git 打开时带 <code>core.fsyncObjectFiles=true</code>。</li>
+      <li>零 LLM 是默认路径。</li>
+    </ol>
+    <p class="muted">以上摘自 <a href="https://github.com/akitaonrails/ai-memory/blob/b38c6e573be9333d060b8970f40d8afae7857652/docs/ARCHITECTURE.md#L1165-L1231" target="_blank" rel="noopener noreferrer"><code>docs/ARCHITECTURE.md:1165–1231</code></a>。文档还列有「无全局单例」「provider 认证先于构造」等。</p>
+    <h3>衰减公式（纯函数，默认不算 LLM）</h3>
+    <div class="formula">λ = ln(2) / half_life_days
+retention = salience · exp(−λ_tier · age_days)
+          + σ · ln(1 + access_count) · exp(−μ · days_since_access) · breadth
+breadth = 1 + breadth_weight · ln(1 + max(distinct_actors,1) − 1)
+默认：λ=0.02（约 35 天半衰期），σ=0.6，μ=0.04，cold_threshold=0.20，hard_delete_after_days=180，breadth_weight=0</div>
+    <p>「被用过的记忆忘得更慢」来自第二项：打开、检索命中或沿链接到达会增加 access。广度权重默认 0，因此开启按操作者计数的表不会立刻改变历史分数。<span class="ev ev-source">源码确认</span> <a href="https://github.com/akitaonrails/ai-memory/blob/b38c6e573be9333d060b8970f40d8afae7857652/crates/ai-memory-store/src/decay.rs#L1-L203" target="_blank" rel="noopener noreferrer"><code>crates/ai-memory-store/src/decay.rs:1–203</code></a>。压缩、去重、按层曲线默认关闭；只加长保留期的访问加权默认开启。<span class="ev ev-claim">作者宣称</span> 与配置注释一致，本文未跑衰减作业。</p>
+  </div>
+</section>
+
+<section class="tab-panel" id="tab-trade" role="tabpanel">
+  <div class="liquid">
+    <h2>并发、一致性、安全、成本、规模</h2>
+    <ul class="act">
+      <li><b>并发：</b>所有写操作排队进一个 OS 线程，避免 SQLite 多写者。条件 upsert 解决「读了最新 id 再写」的竞态。钩子侧用每项目/键的门闩串行化重叠重试。</li>
+      <li><b>一致性：</b>真源是文件 + git；库是派生。磁盘对账不能复活已被 purge 的会话页。SessionEnd 的交接插入、结束戳、覆盖观察计数在同一事务，避免恢复时只看到一半。</li>
+      <li><b>安全：</b>默认只绑回环；新的 <code>init</code> 会在数据目录生成根令牌，不写进 Agent 配置。净化在入库前发生。人文登录越过回环默认要求 HTTPS 姿态；<code>--allow-insecure-human-auth</code> 必须显式打开。仓库可用 <code>[capture]</code> 排除路径或改成允许名单。</li>
+      <li><b>成本：</b>默认零 API 调用。LLM 只升级摘要、语义检索和可选 dream/auto-improve。作者宣称写入上限约 700/s 是测出来的，本文未复测。<span class="ev ev-claim">作者宣称</span> <span class="ev ev-pending">待验证</span></li>
+      <li><b>规模：</b>一个数据目录只允许一个服务器。大规模观察修剪按批进行，以免长时间占写锁；SQLite 文件删数据后不一定缩小，但备份包会变小。</li>
+    </ul>
+    <h3>反常识设计</h3>
+    <ul class="act">
+      <li>默认不做 LLM 总结，也能工作。</li>
+      <li>向量不是权威：没有词法命中就不算真正匹配。</li>
+      <li>观察流会关掉同一会话页的 FTS 投票，防止标题词干扰。</li>
+      <li>墓碑和普通历史版本刻意用 <code>superseded_at</code> 区分，复活必须接回旧链。</li>
+      <li>破坏性整理（压缩、去重、按层丢弃）默认关；「用得越多留得越久」默认开。</li>
+    </ul>
+    <h3>最小反例（说明它不是万能记忆）</h3>
+    <ul class="act">
+      <li>两个服务器对着同一 <code>data_dir</code> 启动：违反「一目录一服务器」，索引与 git 会打架。</li>
+      <li>把企业制度 PDF 知识库的期望套上来：它可以导入文档，但产品内核是 Agent 会话记忆与 wiki 页面，不是多租户文档平台。</li>
+      <li>只开向量、关掉 FTS：查询仍可能因「无下限的向量命中」返回一堆不太相关的页。</li>
+      <li>以为 purge 会话后，对账扫描磁盘就能把摘要救回来：<code>upsert_page_from_disk</code> 会检查 <code>purged_sessions</code> 并拒绝。</li>
+      <li>在没有 SessionEnd 的 harness 里指望记忆「自动完整」：可能只有观察，没有会话页和交接，直到空闲结束或手工 finalize。</li>
+    </ul>
+    <h3>不适用</h3>
+    <p>需要带引用的企业文档问答、多租户隔离、异步解析 PDF/Office、混合检索后重排序再生成——那是另一层系统（例如 WeKnora），不要把它和 ai-memory 当成直接竞品。ai-memory 适合「多个编码 Agent 共享同一份项目记忆，并且希望记忆是可 grep 的 Markdown」。</p>
+  </div>
+</section>
+
+<section class="tab-panel" id="tab-use" role="tabpanel">
+  <div class="liquid">
+    <h2>最小接入实践</h2>
+    <ol class="act">
+      <li>单用户先在本机跑一个服务器，确认 <code>ai-memory status</code> 的认证状态（旧安装或 Docker 快速开始可能在开启 auth 前无认证）。</li>
+      <li>只对需要的仓库安装钩子；用 <code>.ai-memory.toml</code> 明确 workspace/project，避免目录被收进错误项目。</li>
+      <li>先不配 LLM，验证采集、会话页、交接和 <code>memory_query</code>。</li>
+      <li>需要跨机器时再把服务器放到可达位置，配承载令牌或用户账号；人文流量走 HTTPS 反代。</li>
+      <li>需要语义检索再配嵌入，并接受一次全量重嵌。</li>
+      <li>打开压缩/去重/dream 之前，先理解它们会改写页面（历史版本仍可恢复，但检索看到的是新正文）。</li>
+    </ol>
+    <h3>落地核对清单</h3>
+    <ul class="act">
+      <li>是否做到「一个数据目录只有一个 server 进程」？</li>
+      <li>钩子是否从数据目录读令牌，而不是把令牌写进 harness 配置？</li>
+      <li>目标仓库的 capture 规则是否排除了密钥、.env、大型生成物？</li>
+      <li>所使用的 Agent 是否有可靠的 SessionEnd，否则是否安排了 finalize 或 idle_end？</li>
+      <li>团队场景下，个人交接是否保持个人可见、项目知识才共享？</li>
+      <li>备份是否包含 wiki（真源）以及服务器在线备份的数据库，而不只是复制可能正在写的文件？</li>
+    </ul>
+    <h3>误区自测</h3>
+    <div class="quiz" data-quiz="q1">
+      <div class="q">1. 一条观察写入 SQLite 之后，它是不是已经等于一篇可检索的 wiki 页面？</div>
+      <div class="quiz-opts">
+        <button type="button" data-ok="0">是。观察和页面是同一张表的两种视图。</button>
+        <button type="button" data-ok="1">不是。观察属于会话；页面是会话结束（或整理作业）编译出的 Markdown，索引跟页面走。</button>
+        <button type="button" data-ok="0">不是，因为必须先做向量嵌入才能检索。</button>
+      </div>
+      <div class="quiz-answers" hidden>默认检索的主对象是页面（FTS 建在 pages 上）。观察流可以给会话页投票，但观察本身不是 wiki 真源。零 LLM 时也不会先等嵌入。</div>
+    </div>
+    <div class="quiz" data-quiz="q2">
+      <div class="q">2. 两次内容相同的写入（只是 generated.at 不同）会怎样？</div>
+      <div class="quiz-opts">
+        <button type="button" data-ok="1">短路径复用当前页面 id，不新建版本，但仍可记下证据。</button>
+        <button type="button" data-ok="0">必定新开一行 supersedes，因为时间戳变了。</button>
+        <button type="button" data-ok="0">直接报冲突，需要人工合并。</button>
+      </div>
+      <div class="quiz-answers" hidden>upsert_page_in_tx 比较 body_sha256 以及去掉 generated.at 后的 frontmatter。相同则返回旧 id，并可 insert_evidence。</div>
+    </div>
+    <div class="quiz" data-quiz="q3">
+      <div class="q">3. 配置了嵌入之后，一次查询只命中向量、命中不了 FTS/实体/观察，算不算源码意义上的「词法匹配」？</div>
+      <div class="quiz-opts">
+        <button type="button" data-ok="0">算。有向量分数就说明相关。</button>
+        <button type="button" data-ok="1">不算。源码把 lexical_match 定义为 FTS、实体或观察流非空；向量没有相似度下限。</button>
+      </div>
+      <div class="quiz-answers" hidden>见 hybrid_search_inner 对 lexical_match 的注释：向量一旦存在就会对几乎每个查询给答案。</div>
+    </div>
+    <h3>结论证据表</h3>
+    <table>
+      <thead><tr><th>命题</th><th>级别</th><th>依据</th></tr></thead>
+      <tbody>
+        <tr><td>Markdown wiki 是内容真源，SQLite 是派生索引</td><td><span class="ev ev-source">源码确认</span></td><td><a href="https://github.com/akitaonrails/ai-memory/blob/b38c6e573be9333d060b8970f40d8afae7857652/docs/ARCHITECTURE.md#L36-L39" target="_blank" rel="noopener noreferrer"><code>docs/ARCHITECTURE.md:36–39</code></a></td></tr>
+        <tr><td>默认路径可以零 LLM</td><td><span class="ev ev-source">源码确认</span></td><td>不变量 13；README How it works</td></tr>
+        <tr><td>页面更新走 supersede + body_sha256 幂等</td><td><span class="ev ev-source">源码确认</span></td><td><a href="https://github.com/akitaonrails/ai-memory/blob/b38c6e573be9333d060b8970f40d8afae7857652/crates/ai-memory-store/src/ops.rs#L2164-L2296" target="_blank" rel="noopener noreferrer"><code>crates/ai-memory-store/src/ops.rs:2164–2296</code></a></td></tr>
+        <tr><td>混合检索为多路 RRF，k=60</td><td><span class="ev ev-source">源码确认</span></td><td><a href="https://github.com/akitaonrails/ai-memory/blob/b38c6e573be9333d060b8970f40d8afae7857652/crates/ai-memory-store/src/reader.rs#L8920-L8950" target="_blank" rel="noopener noreferrer"><code>crates/ai-memory-store/src/reader.rs:8920–8950</code></a></td></tr>
+        <tr><td>衰减公式与默认系数</td><td><span class="ev ev-source">源码确认</span></td><td><a href="https://github.com/akitaonrails/ai-memory/blob/b38c6e573be9333d060b8970f40d8afae7857652/crates/ai-memory-store/src/decay.rs#L92-L203" target="_blank" rel="noopener noreferrer"><code>crates/ai-memory-store/src/decay.rs:92–203</code></a></td></tr>
+        <tr><td>支持 20+ harness、写入约 700/s</td><td><span class="ev ev-claim">作者宣称</span></td><td>README；本文未做兼容矩阵复测或压测</td></tr>
+        <tr><td>「没有任何内容被硬删除」</td><td><span class="ev ev-claim">作者宣称</span> 需限定范围</td><td>git 保留页面历史；但存在墓碑硬删与观察修剪</td></tr>
+        <tr><td>与 WeKnora 可互补、不是同类竞品</td><td><span class="ev ev-infer">推断</span></td><td>一层是 Agent 工作记忆，一层是企业文档平台；见对照页</td></tr>
+      </tbody>
+    </table>
+    <p class="muted">本文没有编译或运行该仓库，也没有复现基准。交互演示中的对象纯属虚构。</p>
+    <p><a href="weknora.html">下一篇：WeKnora 的文档到带引用回答</a> · <a href="index.html">返回开源解剖索引</a></p>
+  </div>
+</section>
+
+<footer class="ft">
+<p>XHOT 是独立的个人项目，与 X Corp.、AIHOT、GitHub、Tencent 及本文所述开源项目无隶属或背书关系。开源解剖根据公开源码整理，可能有误，以仓库原文与指定版本为准。文中不含任何个人或公司私密信息。</p>
+<p><a href="../about.html">关于 · 数据来源 · 免责声明</a> · <a href="index.html">开源解剖索引</a> · <a href="https://github.com/88daxiong/xhot/issues" target="_blank" rel="noopener noreferrer">反馈 / 撤下请求（GitHub Issues）</a></p>
+</footer>
+</main>
+<script type="application/json" id="anatomy-data">{"stages":[{"id":"hooks","title":"生命周期钩子","evidence":"source","detail":"<p>Agent CLI 发出 SessionStart、UserPromptSubmit、PostToolUse、SessionEnd 等事件。Shell 钩子短超时 curl 到 <code>POST /hook</code>；原生命令先按稳定幂等键本地暂存，再交给 hook-drain。热路径不因网络而阻塞；饱和时 429。被最近标记策略丢弃的文件工具事件不会进入暂存或存储。</p><p class='src'>依据：docs/ARCHITECTURE.md 数据流第 1 步。</p>"},{"id":"mcp","title":"MCP / CLI / HTTP","evidence":"source","detail":"<p>同一服务器暴露 MCP 工具（memory_query、memory_write_page、memory_briefing、memory_handoff_* 等）、CLI 与可选 Web。写页面需要 wiki handle。查询侧可在无 LLM 时只返回命中。</p>"},{"id":"llm","title":"可选 LLM / 嵌入","evidence":"source","detail":"<p>整理、语义检索、dream、auto-improve 都是可选。不变量第 13 条：零 LLM 为默认。嵌入必须带 provider/model/dim；不匹配的旧向量被忽略直到重嵌。</p>"},{"id":"sanitize","title":"类型化净化边界","evidence":"source","detail":"<p><code>Sanitized&lt;NewObservation&gt;</code> 没有除 <code>sanitize()</code> 以外的构造器。客户端先净化，服务器按配置模式再刮一遍。这是进入存储的唯一文本入口。</p>"},{"id":"writer","title":"单 writer SQLite 线程","evidence":"source","detail":"<p>全部写入经 mpsc 到一个专用 OS 线程。索引与数据同一事务提交。原生带键事件把项目级键和观察一起提交；普通键 30 天后过期，恢复键绑定到会话与事件身份，直到会话或项目删除。</p>"},{"id":"end","title":"SessionEnd 编译与交接","evidence":"source","detail":"<p>真正的 SessionEnd 用规则（无 LLM）合成 <code>sessions/&lt;id&gt;.md</code>，并在同一事务里插入自动交接、标记会话结束、记录覆盖的观察数。随后自动提交 wiki。Stop 检查点可以在会话仍打开时原地刷新页面和那一条未关闭交接。</p>"},{"id":"search","title":"混合检索与简报注入","evidence":"source","detail":"<p>hybrid_search_inner 融合 FTS、实体、图邻居、可选向量与默认开启的观察流。RRF 的 k=60。SessionStart 可按标记注入有界项目简报，而不是倾倒整个库。</p>"},{"id":"wiki","title":"Markdown + git 真源","evidence":"source","detail":"<p>页面以原子写（临时文件 + rename + fsync）落在 wiki/。git 句柄打开时带 core.fsyncObjectFiles=true。数据库应当总能从文件重建。</p>"},{"id":"sqlite","title":"派生索引","evidence":"source","detail":"<p>SQLite 保存 FTS5、实体、链接、嵌入、会话、观察、交接、审计。它不是内容真源。FTS 触发器与 pages 同行更新，符合「索引与数据同事务」。</p>"},{"id":"decay","title":"衰减与整理","evidence":"source","detail":"<p>保留分数 = 显著度乘年龄衰减，再加上访问强化项。压缩、去重、按层曲线默认关。访问加权默认开。dream 要另配 LLM，且在有人回来工作时取消。</p>"}],"schemas":{"pages":{"title":"pages：路径上的版本链","evidence":"source","detail":"<p>主键 id，身份列 workspace_id / project_id / path，title、tier（working|episodic|semantic|procedural）、body、body_sha256、frontmatter_json、is_latest、supersedes、pinned、时间戳。后续迁移加入 valid_from/valid_to、superseded_at、expires_at、author_id、compacted_at、salience、access_count 等。</p><p>部分唯一索引保证同一 (workspace, project, path) 只有一行 is_latest=1。</p>"},"fts":{"title":"pages_fts：内容外置的 FTS5","evidence":"source","detail":"<p>content='pages' 的虚拟表，对 title 与 body 分词（unicode61，保留 /_-）。INSERT/UPDATE/DELETE 触发器同步。CJK 另有辅助索引路径（index_page_cjk），README 称可匹配无空格的中日韩子串。</p>"},"obs":{"title":"sessions 与 observations","evidence":"source","detail":"<p>session 记录 agent_kind、cwd、起止时间、可选 summary_page_id。observation 属于 session，有 kind、title、body、importance。它们是编译前的原料。巩固后的观察可被修剪，且不可再重新巩固。</p>"},"links":{"title":"links：允许未解析的目标","evidence":"source","detail":"<p>主键 (from_page_id, to_path, link_type)。to_page_id 可空，因为目标也许还不存在。页面 upsert 时在同一事务替换出边并刷新入边。</p>"},"ident":{"title":"三元组身份","evidence":"source","detail":"<p>V01 注释写明：身份是 (workspace_id, project_id, path)，从第一天起写在每张领域表上，避免 basic-memory 后期补身份的痛苦（其 issue #783/#834）。项目还有 repo_path 用于 cwd 匹配。</p>"},"embed":{"title":"可选 embeddings","evidence":"source","detail":"<p>V01 就预留了 embedding_provider/model/dim 列（当时为 NULL）。后来的表按页面存向量，并强制 {provider, model, dim} 一致。另有 abstract 嵌入表，检索时可单独作为一路。</p>"}},"play":[{"title":"Agent 发出一次用户提示","evidence":"source","detail":"<p>钩子脚本或原生命令捕获 UserPromptSubmit。热路径只做本地暂存或短超时 POST，不在这里调用 LLM，也不直接改 wiki 文件。</p>","sim":"<p><strong>模拟状态：</strong>事件 <code>UserPromptSubmit</code>，会话 <code>ses_01</code>，项目 <code>demo/app</code>，原文「把登录改成只允许公司邮箱」。尚未入库。</p>"},{"title":"净化后成为观察","evidence":"source","detail":"<p>路由器调用 sanitize()，得到唯一能构造的 Sanitized&lt;NewObservation&gt;，再经 writer 线程插入 observations。带幂等键则与键同行提交。重复投递在键已完成后会被跳过。</p>","sim":"<p><strong>模拟状态：</strong>observations 新增一行 kind=prompt，body 已去掉明显密钥。ingest_key=「ses_01:prompt:3」状态=已完成。wiki/ 仍无新文件。</p>"},{"title":"SessionEnd 编译成页面并开交接","evidence":"source","detail":"<p>规则合成 sessions/&lt;id&gt;.md（默认无 LLM）。同一 SQLite 事务：插入自动交接、标记 ended、记下观察计数。然后 wiki 原子写文件并 git checkpoint。条件写入避免闲置结束任务覆盖更新的版本。</p>","sim":"<p><strong>模拟状态：</strong>新页面 path=<code>sessions/ses_01.md</code>，tier=episodic，is_latest=1，supersedes=空。handoffs 一行 owner=ses_01，accepted_by 为空。git 出现一次 checkpoint。</p>"},{"title":"内容相同的再写入被短路径合并","evidence":"source","detail":"<p>若随后一次整理写出相同 body_sha256 和（去掉 generated.at 的）frontmatter，upsert 不新建版本，只记下证据。这是去重，不是删除。</p>","sim":"<p><strong>模拟状态：</strong>再次 upsert 同一 path，返回旧 PageId。pages 行数不变。evidence 表多了一条「被 ses_02 再次确认」。</p>"},{"title":"下次会话注入简报","evidence":"source","detail":"<p>新的 SessionStart 若打开 briefing 注入，服务器按字符预算组装项目简报（含最近页面与未领取交接），注入 Agent 启动上下文。这不是把全库向量倒进去。</p>","sim":"<p><strong>模拟状态：</strong>Codex 在同一 repo 启动。注入文本以「ai-memory: project brief」开头，提到 ses_01 的登录限制，以及一条待领取交接。预算内截断已标注。</p>"},{"title":"主动查询时多路融合","evidence":"source","detail":"<p>memory_query 走 hybrid_search_inner。FTS 命中会话页标题/正文，观察流用原始提示文本投票（并取消该页的 FTS 投票以免双计），图邻居扩展相关过程页。若未配嵌入，向量路为空，检索仍然成立。</p>","sim":"<p><strong>模拟状态：</strong>查询「公司邮箱登录」。FTS 排名 1、观察流排名 1、向量路未启用。RRF 后 sessions/ses_01.md 居首。access_count +1，衰减会变慢。</p>"},{"title":"失败分支：会话已 purge","evidence":"source","detail":"<p>若操作者 purge 了 ses_01，purged_sessions 留下墓碑。之后即便磁盘上又出现同名文件，upsert_page_from_disk 也会拒绝把该会话摘要救回索引。</p>","sim":"<p><strong>模拟状态：</strong>pages 上该 path 不再有 is_latest=1。对账扫描到残留文件 → 错误 SessionPurged。简报不再提到这次会话。</p>"}]}</script>
+</body>
+</html>

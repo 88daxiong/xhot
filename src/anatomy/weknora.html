@@ -1,0 +1,507 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="light" data-pref="auto">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-eySqtWEMW2APPEHKl4ofjbb4sL/hbt3uVDrovVQbBOY='; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'none'; connect-src 'self'; media-src 'none'; frame-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%E2%9A%A1%3C/text%3E%3C/svg%3E">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#7c3aed">
+<meta name="description" content="从第一性原理拆解腾讯开源的 WeKnora：文档如何异步解析切块并建立派生索引，再经授权后的混合检索与引用登记，生成可核对来源的回答。">
+<title>WeKnora · 开源解剖 · XHOT</title>
+<script>(function(){var d=document.documentElement,t,s;try{t=localStorage.getItem('xhot-theme');s=localStorage.getItem('xhot-density')}catch(e){}t=(t==='light'||t==='dark')?t:'auto';d.setAttribute('data-pref',t);d.setAttribute('data-theme',t==='auto'?(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'):t);if(s==='compact')d.setAttribute('data-density','compact')})();</script>
+<style>
+:root{--t-cap:0.75rem;--t-sm:0.8125rem;--t-md:0.875rem;--t-lg:1rem;--t-xl:1.25rem;--t-xxl:1.75rem;--bg:#f6f5fb;--card:#fff;--bd:#e6e4ef;--bd2:#f0eef6;--hov:#f4f2fa;--tx:#18181b;--tx2:#3f3f46;--mu:#6b6880;--ac:#7c3aed;--actx:#6d28d9;--glow:rgba(124,58,237,.18);--up:#16a34a;--dn:#dc2626;--g1:#7c3aed;--g2:#db2777;--g3:#f97316;--ai:#7c3aed;--money:#d97706;--growth:#0d9488;--heat:#ea580c;--sh:0 1px 2px rgba(24,24,27,.05),0 4px 14px -8px rgba(76,29,149,.18);--glass:rgba(255,255,255,.72);--glass2:rgba(255,255,255,.5);--glass-bd:rgba(255,255,255,.55);--glass-hi:rgba(255,255,255,.85);--accent-blue:#0284c7;--accent-purple:#7c3aed;--accent-emerald:#059669;--accent-amber:#d97706;--accent-rose:#e11d48;color-scheme:light}
+@media(max-width:720px){:root{--t-cap:0.75rem;--t-sm:0.8125rem;--t-md:0.9375rem;--t-lg:1.0625rem;--t-xl:1.25rem;--t-xxl:1.75rem}}
+html[data-theme=dark]{--bg:#0f0c26;--card:#1a1640;--bd:#2c2856;--bd2:#221e48;--hov:#221e4a;--tx:#f4f4f5;--tx2:#d4d4d8;--mu:#a5a3c9;--ac:#c084fc;--actx:#e9d5ff;--glow:rgba(192,132,252,.28);--up:#4ade80;--dn:#fb7185;--ai:#a78bfa;--money:#fbbf24;--growth:#2dd4bf;--heat:#fb923c;--sh:none;--glass:rgba(255,255,255,.07);--glass2:rgba(255,255,255,.04);--glass-bd:rgba(255,255,255,.16);--glass-hi:rgba(255,255,255,.28);--accent-blue:#38bdf8;--accent-purple:#a78bfa;--accent-emerald:#34d399;--accent-amber:#fbbf24;--accent-rose:#fb7185;color-scheme:dark}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--tx);font:400 0.9375rem/1.6 system-ui,"Noto Sans CJK SC",-apple-system,"PingFang SC","Helvetica Neue",sans-serif;touch-action:manipulation;min-height:100vh;overflow-x:hidden}
+a{color:inherit}
+button{font:inherit}
+:focus-visible{outline:2px solid var(--ac);outline-offset:2px;border-radius:6px}
+.skip{position:absolute;left:12px;top:-60px;z-index:100;padding:8px 16px;border-radius:8px;background:#5b21b6;color:#fff;font-weight:600;text-decoration:none}
+.skip:focus{top:8px}
+.top{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 96%,transparent);backdrop-filter:blur(16px) saturate(180%);-webkit-backdrop-filter:blur(16px) saturate(180%);border-bottom:1px solid var(--bd)}
+.top::before{content:"";display:block;height:3px;background:linear-gradient(90deg,var(--g1),var(--g2),var(--g3))}
+.bar{max-width:1760px;margin:0 auto;padding:0 clamp(12px,2vw,36px);height:56px;display:flex;align-items:center;gap:16px}
+.lg{display:flex;align-items:center;gap:8px;font-weight:600;font-size:var(--t-lg);letter-spacing:0;text-decoration:none;white-space:nowrap}
+.lg i{font-style:normal;width:28px;height:28px;border-radius:8px;display:grid;place-items:center;color:#fff;background:linear-gradient(135deg,var(--g1),var(--g2) 60%,var(--g3));font-size:var(--t-lg)}
+.lg span{font-weight:500;font-size:var(--t-sm);color:var(--mu)}
+.nav{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none;flex:1;min-width:0}
+.nav::-webkit-scrollbar{display:none}
+.nav a{display:inline-flex;align-items:center;gap:4px;height:36px;padding:0 12px;border-radius:8px;text-decoration:none;color:var(--tx2);font-weight:500;white-space:nowrap;min-height:44px}
+.nav a:hover{background:var(--hov);color:var(--tx)}
+.nav a[aria-current=page]{color:#fff;background:linear-gradient(135deg,var(--g1),var(--g2));box-shadow:0 4px 14px -6px var(--g2)}
+.sp0{flex:0 0 auto;margin-left:auto}
+.tg{display:inline-flex;padding:2px;border-radius:8px;background:var(--hov);border:1px solid var(--bd);flex:none}
+.tg button{height:36px;min-width:44px;padding:0 8px;border:0;border-radius:6px;background:none;color:var(--mu);cursor:pointer;font-size:var(--t-sm);min-height:44px}
+.tg button.on{background:var(--card);color:var(--tx);box-shadow:0 1px 3px rgba(0,0,0,.14)}
+.wrap{max-width:1120px;margin:0 auto;padding:24px clamp(12px,2vw,36px) 48px}
+.ft{margin-top:32px;font-size:var(--t-sm);color:var(--mu);text-align:center}
+.ft p{margin:0 0 4px}
+.ft a{color:var(--actx);text-decoration:underline;text-underline-offset:2px}
+@media(max-width:1060px){.bar{flex-wrap:wrap;height:auto;padding-top:8px;padding-bottom:8px;gap:8px}}
+@media(max-width:720px){.bar{gap:8px}.lg span{display:none}.wrap{padding:16px 12px 40px}}
+
+.ambient{position:fixed;inset:0;z-index:-1;overflow:hidden;pointer-events:none}
+.orb{position:absolute;border-radius:50%;filter:blur(110px);opacity:.28;animation:float 18s ease-in-out infinite alternate}
+html[data-theme=dark] .orb{opacity:.45}
+.orb-1{width:520px;height:520px;background:radial-gradient(circle,#7c3aed,transparent 70%);top:-120px;left:-80px}
+.orb-2{width:460px;height:460px;background:radial-gradient(circle,#db2777,transparent 70%);bottom:-100px;right:-60px;animation-delay:-6s}
+.orb-3{width:360px;height:360px;background:radial-gradient(circle,#0d9488,transparent 70%);top:42%;left:52%;animation-delay:-12s}
+@keyframes float{0%{transform:translate(0,0) scale(1)}100%{transform:translate(40px,-30px) scale(1.08)}}
+
+.liquid{background:linear-gradient(135deg,var(--glass) 0%,var(--glass2) 100%);backdrop-filter:blur(28px) saturate(185%);-webkit-backdrop-filter:blur(28px) saturate(185%);border:1px solid var(--glass-bd);border-top-color:var(--glass-hi);border-radius:24px;box-shadow:var(--sh),inset 0 1px 0 0 var(--glass-hi);padding:28px}
+.hero{margin-bottom:20px;overflow:hidden}
+.badge-row{display:flex;gap:8px;align-items:center;margin-bottom:14px;flex-wrap:wrap}
+.pill{font-size:var(--t-cap);font-weight:600;letter-spacing:.04em;padding:4px 12px;border-radius:999px;background:color-mix(in srgb,var(--accent-blue) 14%,transparent);border:1px solid color-mix(in srgb,var(--accent-blue) 35%,transparent);color:var(--accent-blue)}
+.pill.purple{background:color-mix(in srgb,var(--accent-purple) 14%,transparent);border-color:color-mix(in srgb,var(--accent-purple) 35%,transparent);color:var(--accent-purple)}
+h1{font-size:var(--t-xxl);font-weight:700;letter-spacing:-.02em;margin-bottom:12px;line-height:1.25}
+h2{font-size:var(--t-xl);font-weight:600;letter-spacing:-.02em;margin-bottom:8px}
+h3{font-size:var(--t-lg);font-weight:600}
+.essence{font-size:var(--t-lg);color:var(--tx);background:color-mix(in srgb,var(--tx) 4%,transparent);border-left:3px solid var(--accent-blue);padding:14px 18px;border-radius:0 14px 14px 0}
+.meta{margin-top:14px;font-size:var(--t-sm);color:var(--mu);display:flex;flex-wrap:wrap;gap:8px 16px}
+.meta a{color:var(--actx)}
+.seg{display:inline-flex;background:color-mix(in srgb,var(--tx) 6%,transparent);backdrop-filter:blur(20px);border:1px solid var(--bd);border-radius:16px;padding:5px;margin:0 0 20px;gap:4px;flex-wrap:wrap}
+.seg-btn{background:transparent;border:none;color:var(--tx2);font-size:var(--t-sm);font-weight:500;padding:9px 16px;border-radius:12px;cursor:pointer;min-height:44px}
+.seg-btn:hover{color:var(--tx)}
+.seg-btn.active{background:color-mix(in srgb,var(--card) 90%,transparent);color:var(--tx);box-shadow:0 4px 12px rgba(0,0,0,.08),inset 0 1px 0 var(--glass-hi)}
+.tab-panel{display:none}
+.tab-panel.active{display:block;animation:fadeIn .3s ease}
+@keyframes fadeIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.flow{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-top:16px}
+.flow-node{background:color-mix(in srgb,var(--card) 70%,transparent);border:1px solid var(--bd);border-radius:18px;padding:16px;cursor:pointer;text-align:left;color:inherit}
+.flow-node:hover,.flow-node.selected{background:color-mix(in srgb,var(--accent-blue) 12%,var(--card));border-color:var(--accent-blue);transform:translateY(-2px)}
+.node-step{font-size:11px;color:var(--accent-blue);font-weight:700;letter-spacing:.04em;text-transform:uppercase}
+.node-title{font-size:var(--t-md);font-weight:600;margin:6px 0}
+.node-desc{font-size:var(--t-sm);color:var(--tx2)}
+.drawer{margin-top:16px;padding:16px 18px;border-radius:16px;background:color-mix(in srgb,var(--tx) 4%,var(--card));border:1px solid color-mix(in srgb,var(--accent-blue) 28%,var(--bd));font-size:var(--t-sm);color:var(--tx2)}
+.drawer strong{color:var(--tx);display:inline;margin-right:8px}
+.detail-body{margin-top:8px}
+.grid-2{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;margin-top:16px}
+table{width:100%;border-collapse:collapse;margin-top:14px;font-size:var(--t-sm)}
+th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--bd);vertical-align:top}
+th{color:var(--mu);font-weight:600;font-size:var(--t-cap);text-transform:uppercase}
+pre,code{font-family:ui-monospace,"SF Mono",Menlo,Consolas,monospace}
+pre{background:color-mix(in srgb,var(--tx) 8%,var(--card));border:1px solid var(--bd);border-radius:14px;padding:16px;overflow-x:auto;font-size:12px;color:var(--tx);margin-top:12px;line-height:1.55;white-space:pre-wrap;word-break:break-word}
+.warn{border-left:3px solid var(--accent-rose);background:color-mix(in srgb,var(--accent-rose) 7%,transparent);padding:14px 16px;border-radius:0 14px 14px 0;margin-top:12px}
+.ev{display:inline-block;font-size:11px;font-weight:600;padding:1px 8px;border-radius:999px;margin-left:6px;vertical-align:middle}
+.ev-source{background:color-mix(in srgb,var(--accent-emerald) 16%,transparent);color:var(--accent-emerald)}
+.ev-claim{background:color-mix(in srgb,var(--accent-amber) 16%,transparent);color:var(--accent-amber)}
+.ev-infer{background:color-mix(in srgb,var(--accent-purple) 16%,transparent);color:var(--accent-purple)}
+.ev-pending{background:color-mix(in srgb,var(--accent-rose) 16%,transparent);color:var(--accent-rose)}
+.legend{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 16px;font-size:var(--t-sm);color:var(--mu)}
+.arch{width:100%;overflow-x:auto;margin:12px 0}
+.arch svg{width:100%;min-width:640px;height:auto;display:block}
+.arch-node{cursor:pointer}
+.arch-node rect,.arch-node polygon{fill:color-mix(in srgb,var(--card) 80%,transparent);stroke:var(--bd);stroke-width:1.5}
+.arch-node.selected rect,.arch-node.selected polygon{fill:color-mix(in srgb,var(--accent-blue) 18%,var(--card));stroke:var(--accent-blue)}
+.arch-node text{fill:var(--tx);font-size:12px;font-family:inherit;pointer-events:none}
+.arch-label{fill:var(--mu);font-size:11px}
+.arch line,.arch path.arrow{stroke:var(--mu);stroke-width:1.25;fill:none;marker-end:url(#arr)}
+.story{margin-top:12px;font-size:var(--t-md);color:var(--tx);background:color-mix(in srgb,var(--tx) 4%,transparent);padding:16px;border-radius:14px}
+.story p+p{margin-top:10px}
+ul.act,ol.act{margin:12px 0 0 1.15em;color:var(--tx2)}
+ul.act li,ol.act li{margin:6px 0}
+.src a{color:var(--actx)}
+.muted{color:var(--mu);font-size:var(--t-sm)}
+.filter-bar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:16px 0}
+.filter-bar input{flex:1;min-width:200px;height:44px;padding:0 14px;border-radius:12px;border:1px solid var(--bd);background:var(--card);color:var(--tx);font:inherit}
+.filter-chips{display:flex;flex-wrap:wrap;gap:6px}
+.filter-chips button{height:36px;min-height:44px;padding:0 12px;border-radius:999px;border:1px solid var(--bd);background:var(--card);color:var(--tx2);cursor:pointer}
+.filter-chips button.on{background:var(--ac);color:#fff;border-color:transparent}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;margin-top:8px}
+.proj-card{display:block;text-decoration:none;color:inherit;padding:22px;border-radius:20px;min-height:100%}
+.proj-card:hover{border-color:var(--ac)}
+.proj-card h2{font-size:var(--t-xl);margin:4px 0 8px}
+.howto{margin-top:28px}
+.howto ol{margin:10px 0 0 1.2em;color:var(--tx2)}
+
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation:none !important;transition:none !important}
+  .orb{animation:none;filter:none;opacity:.12}
+  .tab-panel.active{animation:none}
+  .flow-node:hover,.flow-node.selected{transform:none}
+}
+.toc-layers{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 18px}
+.toc-layers a{display:inline-flex;align-items:center;min-height:44px;padding:0 12px;border-radius:999px;border:1px solid var(--bd);background:var(--card);color:var(--tx2);text-decoration:none;font-size:var(--t-sm)}
+.toc-layers a:hover{color:var(--tx);border-color:var(--ac)}
+.play-controls{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:12px 0 4px}
+.play-controls button{min-height:44px;padding:0 14px;border-radius:12px;border:1px solid var(--bd);background:var(--card);color:var(--tx);cursor:pointer}
+.play-controls button.primary{background:var(--ac);color:#fff;border-color:transparent}
+.play-status{font-size:var(--t-sm);color:var(--mu)}
+.play-track{height:6px;background:var(--bd);border-radius:99px;overflow:hidden;margin:8px 0 12px}
+.play-track>span{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--g1),var(--g2))}
+.schema-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;margin-top:12px}
+.schema-card{text-align:left;background:color-mix(in srgb,var(--card) 70%,transparent);border:1px solid var(--bd);border-radius:16px;padding:14px;cursor:pointer;color:inherit;min-height:44px}
+.schema-card:hover,.schema-card.selected{border-color:var(--accent-blue);background:color-mix(in srgb,var(--accent-blue) 12%,var(--card))}
+.schema-card b{display:block;margin-bottom:4px}
+.quiz{margin-top:12px;padding:16px;border-radius:16px;border:1px solid var(--bd);background:color-mix(in srgb,var(--card) 80%,transparent)}
+.quiz .q{font-weight:600;margin-bottom:10px}
+.quiz-opts{display:flex;flex-direction:column;gap:8px}
+.quiz-opts button{text-align:left;min-height:44px;padding:10px 14px;border-radius:12px;border:1px solid var(--bd);background:var(--card);color:var(--tx);cursor:pointer}
+.quiz-opts button:disabled{cursor:default;opacity:.95}
+.quiz-ok{border-color:var(--accent-emerald)!important;background:color-mix(in srgb,var(--accent-emerald) 14%,var(--card))!important}
+.quiz-bad{border-color:var(--accent-rose)!important;background:color-mix(in srgb,var(--accent-rose) 12%,var(--card))!important}
+.quiz-answers{margin-top:10px;font-size:var(--t-sm);color:var(--tx2)}
+.formula{background:color-mix(in srgb,var(--tx) 6%,var(--card));border:1px solid var(--bd);border-radius:14px;padding:14px 16px;overflow-x:auto;font-family:ui-monospace,"SF Mono",Menlo,Consolas,monospace;font-size:13px;margin:12px 0;line-height:1.6}
+.cmp{margin-top:16px}
+.dl{margin-top:8px}
+.kbd{font-family:ui-monospace,monospace;font-size:11px;border:1px solid var(--bd);border-bottom-width:2px;border-radius:6px;padding:0 5px;background:var(--card)}
+.stand-note{margin:0 0 16px;padding:12px 16px;border-radius:14px;border:1px dashed var(--bd);font-size:var(--t-sm);color:var(--mu)}
+p+ p{margin-top:10px}
+.tab-panel h2{margin-top:4px}
+.tab-panel h3{margin-top:18px}
+section.block{margin-top:8px}
+
+</style>
+<script src="anatomy.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">跳到正文</a>
+<div class="ambient" aria-hidden="true"><div class="orb orb-1"></div><div class="orb orb-2"></div><div class="orb orb-3"></div></div>
+<header class="top"><div class="bar">
+<a class="lg" href="../index.html"><i aria-hidden="true">⚡</i>XHOT<span>X 热点雷达</span></a>
+<nav class="nav" aria-label="栏目"><a href="../index.html">今日</a><a href="../d/ai.html">领域</a><a href="../people.html">人物</a><a href="../news.html">资讯</a><a href="../trends.html">趋势</a><a href="../agents.html">Agent</a><a href="index.html" aria-current=page>解剖</a></nav>
+<span class="sp0"></span>
+<div class="tg" role="group" aria-label="主题"><button type="button" data-set-theme="light" aria-label="浅色">☀</button><button type="button" data-set-theme="dark" aria-label="深色">☾</button><button type="button" data-set-theme="auto">自动</button></div>
+</div></header>
+<main id="main" class="wrap">
+
+
+<nav class="toc-layers" aria-label="分层阅读">
+  <a href="#tab-problem" data-tab-jump="problem">1. 问题与分层</a>
+  <a href="#tab-flow" data-tab-jump="flow">2. 架构与状态机</a>
+  <a href="#tab-play" data-tab-jump="play">3. 一份文档如何成为带引用的回答</a>
+  <a href="#tab-schema" data-tab-jump="schema">4. Schema 与隔离</a>
+  <a href="#tab-trade" data-tab-jump="trade">5. 并发、安全与失效</a>
+  <a href="#tab-use" data-tab-jump="use">6. 接入清单与证据</a>
+</nav>
+
+<article class="liquid hero">
+  <div class="badge-row">
+    <span class="pill">开源解剖</span>
+    <span class="pill purple">Tech Precision</span>
+    <span class="pill">MIT + 第三方声明</span>
+    <span class="pill">v0.9.0</span>
+  </div>
+  <h1>WeKnora：把文档编成可引用知识，再交给问答与 Agent</h1>
+  <div class="essence"><strong>物理本质：</strong>它是一套企业知识平台，而不是「又一个 Embedding 封装」。一份文件先作为知识条目落库并写入对象存储，再经异步任务解析、切块、写入块表，并（在开启索引时）同步派生到向量/关键词引擎。提问时按租户与知识库授权做混合检索，用加权重排融合把分数折到 [0,1]，再经可选重排、合并与截断，把通过的块变成模型上下文里的可引用证据，最后流式生成。</div>
+  <div class="meta">
+    <span>仓库 <a href="https://github.com/Tencent/WeKnora" target="_blank" rel="noopener noreferrer">Tencent/WeKnora</a></span>
+    <span>版本 0.9.0（仓库 VERSION 文件；README 标注 2026-10-29 发布说明）</span>
+    <span>分析提交 <a href="https://github.com/Tencent/WeKnora/tree/7d064bc3a259f87634840199f565ec4dd644ba1e" target="_blank" rel="noopener noreferrer"><code>7d064bc3a259f87634840199f565ec4dd644ba1e</code></a>（提交时间 2026-11-16 07:29 −06:00，合 <strong>2026-11-16 21:29 北京时间</strong>）</span>
+    <span>许可：MIT，但发行包含第三方组件与腾讯修改声明（见 LICENSE 与 THIRD_PARTY_NOTICES.md；GitHub 许可探测为 NOASSERTION）</span>
+    <span>语言 Go · 仓库创建于 2025-07-22（GitHub API，日期本身为 UTC）</span>
+    <span>单文件导出 <a href="exports/weknora.standalone.html">weknora.standalone.html</a></span>
+  </div>
+</article>
+
+<div class="legend">证据分级：<span class="ev ev-source">源码确认</span> 对照指定提交源码　<span class="ev ev-claim">作者宣称</span> 来自 README / 产品文档，本文未复跑　<span class="ev ev-infer">推断</span> 由源码推出但作者未写明　<span class="ev ev-pending">待验证</span> 尚未在本机验证　<span class="ev ev-sim">模拟演示</span> 交互用的虚构数据</div>
+
+<div class="seg" role="tablist" aria-label="解剖视图">
+  <button class="seg-btn active" data-tab="problem" role="tab" aria-selected="true">1. 问题与分层</button>
+  <button class="seg-btn" data-tab="flow" role="tab" aria-selected="false">2. 架构与状态机</button>
+  <button class="seg-btn" data-tab="play" role="tab" aria-selected="false">3. 文档到回答</button>
+  <button class="seg-btn" data-tab="schema" role="tab" aria-selected="false">4. Schema</button>
+  <button class="seg-btn" data-tab="trade" role="tab" aria-selected="false">5. 取舍与失效</button>
+  <button class="seg-btn" data-tab="use" role="tab" aria-selected="false">6. 清单与证据</button>
+</div>
+
+<section class="tab-panel active" id="tab-problem" role="tabpanel">
+  <div class="liquid">
+    <h2>它到底在解什么问题</h2>
+    <p>组织里的知识分散在 PDF、Office、Wiki、网盘和聊天里。人要的不是「把文件存进去」，而是：问一句能得到可核对来源的回答，复杂任务能走多步 Agent，并且同一套知识还能整理成 Wiki。README 把产品分成 RAG、Agent、Wiki 三条模式，共享知识库。<span class="ev ev-claim">作者宣称</span></p>
+    <p>从源码看，真正的闭环是两条控制流：<strong>文档处理任务</strong>（asynq 上的 <code>ProcessDocument</code>）把字节变成块和索引；<strong>问答管道</strong>（<code>sessionService</code> 动态组装的事件列表）把问题变成检索证据再生成。Agent、MCP、IM 渠道是同一管道和同一知识库上的适配器，而不是另一套存储。<span class="ev ev-source">源码确认</span></p>
+    <h3>真源与派生（必须分开说）</h3>
+    <ul class="act">
+      <li><b>原始对象：</b>上传或同步得到的文件保存在可替换的对象存储里，知识行记下 <code>file_path</code>、<code>file_hash</code>、<code>file_size</code>。<span class="ev ev-source">源码确认</span> <a href="https://github.com/Tencent/WeKnora/blob/7d064bc3a259f87634840199f565ec4dd644ba1e/migrations/mysql/00-init-db.sql#L65-L90" target="_blank" rel="noopener noreferrer"><code>migrations/mysql/00-init-db.sql:65–90</code></a></li>
+      <li><b>知识条目：</b><code>knowledges</code> 是这份文档在系统里的身份，带 <code>parse_status</code>、<code>enable_status</code>、租户与知识库外键。它不是检索单元。</li>
+      <li><b>块表：</b><code>chunks</code> 是检索与引用的正文单元，可人工编辑，并有 <code>chunk_revisions</code>。编辑之后，检索看到的是块表，不一定再等于原文件。<span class="ev ev-infer">推断</span>：对「被编辑过的块」而言，块表成为检索文本的实际来源。</li>
+      <li><b>向量 / 关键词索引：</b>按知识库绑定的引擎派生而来。重建索引可以删了再写；处理任务在删除旧块之前先解析向量存储，避免删完却写不进去。<span class="ev ev-source">源码确认</span> <a href="https://github.com/Tencent/WeKnora/blob/7d064bc3a259f87634840199f565ec4dd644ba1e/internal/application/service/knowledge_process.go#L481-L514" target="_blank" rel="noopener noreferrer"><code>internal/application/service/knowledge_process.go:481–514</code></a></li>
+    </ul>
+    <h3>洋葱分层</h3>
+    <div class="grid-2">
+      <div>
+        <h3>内核</h3>
+        <ul class="act">
+          <li>租户（workspace）→ 知识库 → 知识条目 → 块 →（可选）父块/子块、FAQ、生成问题、图谱。</li>
+          <li>所有核心表带 tenant_id；任务执行要写入 <code>WithExecutionTenant</code>。</li>
+          <li>会话保存检索与生成参数，消息保存 <code>knowledge_references</code>。</li>
+        </ul>
+      </div>
+      <div>
+        <h3>控制流</h3>
+        <ul class="act">
+          <li>入库：convert（DocReader / 网页 / 纯文本）→ 切块 → 写块表 → 向量化 → 可选摘要/问题/多模态后续任务。</li>
+          <li>问答：历史 → 记忆召回 → 查询理解 → 并行检索（知识库 + 可选网页）→ 重排 → 合并 → TopK → 拼进消息 → 流式生成。</li>
+          <li>失败靠 asynq 重试；最后一次重试才把知识打成 failed。解析轮次（attempt）防止过期任务覆盖新一轮。</li>
+        </ul>
+      </div>
+    </div>
+    <h3>适配器</h3>
+    <p>Web UI、Go SDK、内置 MCP、IM 渠道、嵌入式聊天挂件、数据源连接器（飞书、Notion、GitLab 等）、可替换的 LLM / 嵌入 / 向量库 / 对象存储。这些都不是内核，但决定部署面。README 列出的后端与格式以产品说明为准，本文未逐个打通。<span class="ev ev-claim">作者宣称</span></p>
+    <details>
+      <summary>术语</summary>
+      <ul class="act">
+        <li><b>Knowledge / 知识条目</b>：一篇文档或一条导入记录。</li>
+        <li><b>Chunk / 块</b>：带偏移、类型、可选父块的检索单元。</li>
+        <li><b>Hybrid search</b>：同一查询同时走向量与关键词，再按配置融合。</li>
+        <li><b>RRF</b>：倒数排名融合。本仓库在混合模式下用加权 RRF，再除以理论最大值，把分数映射到 [0,1]。</li>
+        <li><b>Attempt</b>：一次用户发起的解析轮次；重试共用同一 attempt，用户重新解析会开新号，旧任务必须退出。</li>
+        <li><b>Citation / 引用</b>：生成前把通过筛选的块登记进模型上下文；消息里保留 knowledge_references。默认开启，可关。</li>
+      </ul>
+    </details>
+    <p>它和 ai-memory 不在同一层：WeKnora 解决「组织文档如何被授权检索并引用」；ai-memory 解决「编码 Agent 的工作记忆如何跨工具保存为 Markdown」。二者可以同时用，不宜直接比星标或当成替代品。<span class="ev ev-infer">推断</span></p>
+  </div>
+</section>
+
+<section class="tab-panel" id="tab-flow" role="tabpanel">
+  <div class="liquid">
+    <h2>两端控制流：入库任务与问答管道</h2>
+    <div class="arch" role="img" aria-label="可点击的 WeKnora 架构图">
+      <svg viewBox="0 0 1000 460" xmlns="http://www.w3.org/2000/svg">
+        <defs><marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="currentColor"/></marker></defs>
+        <text class="arch-label" x="30" y="26">入口</text>
+        <g class="arch-node" data-stage="upload" tabindex="0" role="button"><rect x="20" y="38" width="160" height="58" rx="12"/><text x="100" y="72" text-anchor="middle">上传 / 数据源</text></g>
+        <g class="arch-node" data-stage="authz" tabindex="0" role="button"><rect x="200" y="38" width="160" height="58" rx="12"/><text x="280" y="72" text-anchor="middle">租户与授权</text></g>
+        <g class="arch-node" data-stage="queue" tabindex="0" role="button"><rect x="380" y="38" width="160" height="58" rx="12"/><text x="460" y="72" text-anchor="middle">asynq 任务队列</text></g>
+        <text class="arch-label" x="30" y="126">入库</text>
+        <g class="arch-node" data-stage="convert" tabindex="0" role="button"><rect x="20" y="140" width="180" height="58" rx="12"/><text x="110" y="174" text-anchor="middle">解析 convert</text></g>
+        <g class="arch-node" data-stage="chunk" tabindex="0" role="button"><rect x="220" y="140" width="180" height="58" rx="12"/><text x="310" y="174" text-anchor="middle">切块 / 父子块</text></g>
+        <g class="arch-node" data-stage="index" tabindex="0" role="button"><rect x="420" y="140" width="200" height="58" rx="12"/><text x="520" y="174" text-anchor="middle">写块表并建索引</text></g>
+        <g class="arch-node" data-stage="post" tabindex="0" role="button"><rect x="640" y="140" width="200" height="58" rx="12"/><text x="740" y="174" text-anchor="middle">摘要 / 问题 / 多模态</text></g>
+        <text class="arch-label" x="30" y="228">问答</text>
+        <g class="arch-node" data-stage="pipe" tabindex="0" role="button"><rect x="20" y="242" width="200" height="58" rx="12"/><text x="120" y="276" text-anchor="middle">动态组装管道</text></g>
+        <g class="arch-node" data-stage="hybrid" tabindex="0" role="button"><rect x="240" y="242" width="200" height="58" rx="12"/><text x="340" y="276" text-anchor="middle">混合检索 + RRF</text></g>
+        <g class="arch-node" data-stage="rerank" tabindex="0" role="button"><rect x="460" y="242" width="200" height="58" rx="12"/><text x="560" y="276" text-anchor="middle">重排 / 合并 / TopK</text></g>
+        <g class="arch-node" data-stage="cite" tabindex="0" role="button"><rect x="680" y="242" width="200" height="58" rx="12"/><text x="780" y="276" text-anchor="middle">引用登记与生成</text></g>
+        <text class="arch-label" x="30" y="338">存储</text>
+        <g class="arch-node" data-stage="store" tabindex="0" role="button"><rect x="20" y="352" width="280" height="70" rx="12"/><text x="160" y="392" text-anchor="middle">对象存储 + PostgreSQL/MySQL</text></g>
+        <g class="arch-node" data-stage="vector" tabindex="0" role="button"><rect x="320" y="352" width="260" height="70" rx="12"/><text x="450" y="392" text-anchor="middle">可替换向量 / 关键词引擎</text></g>
+        <g class="arch-node" data-stage="graph" tabindex="0" role="button"><rect x="600" y="352" width="240" height="70" rx="12"/><text x="720" y="392" text-anchor="middle">可选 Neo4j 图谱</text></g>
+      </svg>
+    </div>
+    <div class="drawer" id="flow-detail" aria-live="polite">点击节点或阶段卡片查看机制。</div>
+    <div class="flow">
+      <button class="flow-node" data-stage="upload" type="button"><div class="node-step">入口</div><div class="node-title">上传与同步</div><div class="node-desc">文件、URL、纯文本段落或数据源。</div></button>
+      <button class="flow-node" data-stage="queue" type="button"><div class="node-step">异步</div><div class="node-title">ProcessDocument</div><div class="node-desc">幂等、可取消、可被新 attempt 取代。</div></button>
+      <button class="flow-node" data-stage="convert" type="button"><div class="node-step">解析</div><div class="node-title">DocReader / 网页</div><div class="node-desc">URL 先做 SSRF 检查。</div></button>
+      <button class="flow-node" data-stage="chunk" type="button"><div class="node-step">切分</div><div class="node-title">策略化切块</div><div class="node-desc">可父子块，图片可派生 OCR/Caption 块。</div></button>
+      <button class="flow-node" data-stage="hybrid" type="button"><div class="node-step">检索</div><div class="node-title">多库混合检索</div><div class="node-desc">先授权，再按存储分组扇出。</div></button>
+      <button class="flow-node" data-stage="cite" type="button"><div class="node-step">生成</div><div class="node-title">带引用的上下文</div><div class="node-desc">先登记证据，再流式回答。</div></button>
+    </div>
+
+    <h3>入库：ProcessDocument 状态机</h3>
+    <p>任务载荷包含 tenant、知识库、知识 id、文件路径或 URL、语言、以及 <code>Attempt</code>。入口先注入执行租户，再读取知识行做校验。<span class="ev ev-source">源码确认</span> <a href="https://github.com/Tencent/WeKnora/blob/7d064bc3a259f87634840199f565ec4dd644ba1e/internal/application/service/knowledge_process.go#L3856-L3991" target="_blank" rel="noopener noreferrer"><code>internal/application/service/knowledge_process.go:3856–3991</code></a></p>
+    <ul class="act">
+      <li>知识不存在：直接成功返回（不再重试）。</li>
+      <li>attempt 已被更新的一轮取代：跳过，避免旧任务改新一轮的块和计数器。</li>
+      <li><code>parse_status</code> 为删除中或用户取消：退出。</li>
+      <li>已经 <code>completed</code>：幂等跳过。</li>
+      <li>先前 <code>failed</code>：目前允许再试（注释写「暂时允许重试」）。</li>
+      <li>知识库易主或租户不一致：<code>SkipRetry</code>。</li>
+      <li>在把状态翻成 processing 之前再查一次取消，关闭「取消与状态写入」之间的窗口。</li>
+      <li>文件路径变化或源被替换：跳过陈旧任务。</li>
+      <li>图片未开多模态、音频未配 ASR：失败且不重试；视频在本提交明确不再支持入库解析。</li>
+    </ul>
+    <p>文件 URL 导入会再次做 SSRF 校验、下载、写入对象存储，再进入 <code>convert()</code>。下载失败在非最后一次重试时返回错误以触发重试，最后一次才把知识标记 failed。<span class="ev ev-source">源码确认</span> <a href="https://github.com/Tencent/WeKnora/blob/7d064bc3a259f87634840199f565ec4dd644ba1e/internal/application/service/knowledge_process.go#L4044-L4070" target="_blank" rel="noopener noreferrer"><code>internal/application/service/knowledge_process.go:4044–4070</code></a></p>
+    <p><code>processChunks</code> 会先清洗非法 UTF-8，再解析嵌入模型和向量存储——如果先删旧块再发现引擎不可用，文档会处于「旧索引已没、新索引也没有」的中间态，所以源码把解析顺序写在清理之前。<span class="ev ev-source">源码确认</span> <a href="https://github.com/Tencent/WeKnora/blob/7d064bc3a259f87634840199f565ec4dd644ba1e/internal/application/service/knowledge_process.go#L423-L514" target="_blank" rel="noopener noreferrer"><code>internal/application/service/knowledge_process.go:423–514</code></a></p>
+
+    <h3>问答：实际组装的管道（不是文档里那张便利表这么简单）</h3>
+    <p><code>types.Pipeline["rag_stream"]</code> 是一份便利查找表。线上 <code>KnowledgeQA</code> 用 <code>PipelineBuilder</code> 按特征动态组装。有知识库范围或开启网页搜索时，实际顺序是：<span class="ev ev-source">源码确认</span> <a href="https://github.com/Tencent/WeKnora/blob/7d064bc3a259f87634840199f565ec4dd644ba1e/internal/application/service/session_knowledge_qa.go#L195-L238" target="_blank" rel="noopener noreferrer"><code>internal/application/service/session_knowledge_qa.go:195–238</code></a></p>
+    <div class="formula">[LOAD_HISTORY?] → MEMORY_RECALL → QUERY_UNDERSTAND → CHUNK_SEARCH_PARALLEL
+→ CHUNK_RERANK → [WEB_FETCH?] → CHUNK_MERGE → FILTER_TOP_K
+→ [DATA_ANALYSIS?] → INTO_CHAT_MESSAGE → CHAT_COMPLETION_STREAM</div>
+    <p>没有检索范围且未开网页搜索时，退化为纯聊天：可选历史 + 记忆召回 + 流式生成。附件内容在这条路上直接拼进用户消息；RAG 路上则在 INTO_CHAT_MESSAGE 处理。</p>
+    <p>检索插件会并发打知识库与网页搜索；知识库失败但网页仍有结果时记警告并继续，两边都空才返回「什么都没搜到」。召回偏少且打开查询扩展时，会再跑一轮偏关键词的扩展。<span class="ev ev-source">源码确认</span> <a href="https://github.com/Tencent/WeKnora/blob/7d064bc3a259f87634840199f565ec4dd644ba1e/internal/application/service/chat_pipeline/search.go#L62-L162" target="_blank" rel="noopener noreferrer"><code>internal/application/service/chat_pipeline/search.go:62–162</code></a></p>
+
+    <h3>混合检索与融合</h3>
+    <p><code>HybridSearch</code> 先规范化 MatchCount（0 或负数会落到默认 50，并封顶），取出融合后的候选，再截断并做上下文 enrich。<span class="ev ev-source">源码确认</span> <a href="https://github.com/Tencent/WeKnora/blob/7d064bc3a259f87634840199f565ec4dd644ba1e/internal/application/service/knowledgebase_search.go#L183-L200" target="_blank" rel="noopener noreferrer"><code>internal/application/service/knowledgebase_search.go:183–200</code></a></p>
+    <ul class="act">
+      <li>仓库层按 ID 取知识库是「故意不按租户过滤」的，以便加载组织共享、属于其他租户的库；但随后必须对每一个库做 <code>authorizeKBAccess</code>，否则调用者只要塞入别人的 UUID 就能打到对应向量存储。<span class="ev ev-source">源码确认</span> <a href="https://github.com/Tencent/WeKnora/blob/7d064bc3a259f87634840199f565ec4dd644ba1e/internal/application/service/knowledgebase_search.go#L225-L248" target="_blank" rel="noopener noreferrer"><code>internal/application/service/knowledgebase_search.go:225–248</code></a></li>
+      <li>跨库必须通过同一嵌入模型校验（wiki/graph 库有例外）。查询向量只算一次，再按 (storeID, 所属租户) 分组扇出。</li>
+      <li>过检量是 <code>max(MatchCount*5, 50) * 库数量</code>，再封顶，给融合和 FAQ 迭代留池子。</li>
+      <li>融合：只用向量时保留余弦分；只用关键词时把 BM25 按该列表最大值缩放到 [0,1]（否则会撑死后面的合成分数和 MMR）；混合时用加权 RRF，再除以 <code>(vectorWeight+keywordWeight)/(k+1)</code>，使「两路都排第一」的块得 1 分。默认 k=60，向量权重 0.7，关键词 0.3。<span class="ev ev-source">源码确认</span> <a href="https://github.com/Tencent/WeKnora/blob/7d064bc3a259f87634840199f565ec4dd644ba1e/internal/application/service/knowledgebase_search_fusion.go#L48-L176" target="_blank" rel="noopener noreferrer"><code>internal/application/service/knowledgebase_search_fusion.go:48–176</code></a> 与 <a href="https://github.com/Tencent/WeKnora/blob/7d064bc3a259f87634840199f565ec4dd644ba1e/internal/types/retrieval_config.go#L92-L118" target="_blank" rel="noopener noreferrer"><code>internal/types/retrieval_config.go:92–118</code></a></li>
+    </ul>
+    <div class="warn"><strong>反常识：</strong>混合检索的原始 RRF 总分大约只有 0.016 量级。若不做「除以最大值」的归一化，这些块在和「向量-only / 关键词-only」结果（分数已在 [0,1]）一起排序时会全面落败，重排和 MMR 也几乎看不到相关性信号。这是源码注释里明确写出的历史缺陷与修复。</div>
+  </div>
+</section>
+
+<section class="tab-panel" id="tab-play" role="tabpanel">
+  <div class="liquid">
+    <h2>一份文档如何成为带引用的回答</h2>
+    <p>可逐步播放。状态区是<strong>模拟数据</strong>，机制说明对应本提交源码。<kbd>←</kbd> <kbd>→</kbd> 翻步，<kbd>空格</kbd> 播放/暂停。<span class="ev ev-sim">模拟演示</span></p>
+    <div id="play-controls" class="play-controls" tabindex="0" aria-label="流程播放控制">
+      <button type="button" id="play-reset">回到第一步</button>
+      <button type="button" id="play-prev">上一步</button>
+      <button type="button" id="play-toggle" class="primary" aria-pressed="false">播放</button>
+      <button type="button" id="play-next">下一步</button>
+      <span class="play-status" id="play-status" aria-live="polite"></span>
+    </div>
+    <div class="play-track" aria-hidden="true"><span id="play-bar"></span></div>
+    <div id="play-steps" class="flow"></div>
+    <div class="drawer" id="play-detail" aria-live="polite"></div>
+    <div class="story" id="play-sim" aria-live="polite"></div>
+    <h3>最短成功路径与失败路径</h3>
+    <div class="grid-2">
+      <div>
+        <h3>成功</h3>
+        <ol class="act">
+          <li>租户已配置嵌入模型与向量存储，知识库绑定它们。</li>
+          <li>上传被接受，知识行进入 pending/processing，asynq 投递 ProcessDocument。</li>
+          <li>解析与切块成功，块表与索引写入，parse_status=completed。</li>
+          <li>提问走 RAG 管道，混合检索命中块，重排与 TopK 后登记引用，流式生成并写入 knowledge_references。</li>
+        </ol>
+      </div>
+      <div>
+        <h3>失败 / 降级</h3>
+        <ul class="act">
+          <li>嵌入模型被删或停用：本轮解析在取模型时失败并记录原因，而不是一直停在 processing 直到清扫。</li>
+          <li>向量存储解析失败：属「找不到」可重试；属写入/不可用则失败该知识。</li>
+          <li>用户取消、删除、更换源文件、发起新 attempt：旧任务退出，不覆盖新数据。</li>
+          <li>URL 被 SSRF 规则拒绝：失败且不重试。</li>
+          <li>检索管道中知识库失败但网页有结果：部分失败，仍可能回答，只是引用可能主要来自网页。</li>
+          <li>两路检索都空：Search 插件返回 ErrSearchNothing，不会若无其事地编造引用。</li>
+          <li>引用正文无法核验：提示模型不要引用或推断不存在的证据。</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="tab-panel" id="tab-schema" role="tabpanel">
+  <div class="liquid">
+    <h2>关键表、权限隔离与任务</h2>
+    <p>初始关系见 <a href="https://github.com/Tencent/WeKnora/blob/7d064bc3a259f87634840199f565ec4dd644ba1e/migrations/mysql/00-init-db.sql#L9-L230" target="_blank" rel="noopener noreferrer"><code>migrations/mysql/00-init-db.sql:9–230</code></a>。部署还包含 PostgreSQL / ParadeDB / SQLite 的版本化迁移，字段会随版本增加，但核心身份关系保持一致。<span class="ev ev-source">源码确认</span></p>
+    <div class="schema-grid">
+      <button class="schema-card" type="button" data-schema="tenant"><b>tenants</b> 配额、检索配置、软删除</button>
+      <button class="schema-card" type="button" data-schema="kb"><b>knowledge_bases</b> 切分、模型与存储绑定</button>
+      <button class="schema-card" type="button" data-schema="kn"><b>knowledges</b> 文档身份与解析状态</button>
+      <button class="schema-card" type="button" data-schema="chunk"><b>chunks / revisions</b> 检索单元与编辑历史</button>
+      <button class="schema-card" type="button" data-schema="sess"><b>sessions / messages</b> 参数与引用</button>
+      <button class="schema-card" type="button" data-schema="task"><b>asynq payloads</b> 文档与后续任务</button>
+    </div>
+    <div class="drawer" id="schema-detail" aria-live="polite"></div>
+    <h3>租户与知识库隔离</h3>
+    <ul class="act">
+      <li>认证中间件把调用者的租户放入上下文。访问路径里的租户时：自己的主租户永远允许；否则查成员关系，禁止仅凭「当前执行租户」去碰别人的库。<span class="ev ev-source">源码确认</span> <a href="https://github.com/Tencent/WeKnora/blob/7d064bc3a259f87634840199f565ec4dd644ba1e/internal/middleware/access.go#L61-L90" target="_blank" rel="noopener noreferrer"><code>internal/middleware/access.go:61–90</code></a></li>
+      <li>混合检索对每个目标知识库单独授权，包括组织共享库。注释写明：在别人租户里执行，并不等于可以看见该租户的其他库。</li>
+      <li>后台任务用载荷里的 TenantID 设置执行租户，并用 <code>WithKBTaskWrite</code> 校验知识库仍属于该租户，防止处理过程中所有权变化。</li>
+      <li>多角色 RBAC、作用域 API Key、OIDC、凭证加密、SSRF 与可选白名单，是 README 宣布的安全面；本页只把源码里能直接读到的检索与任务路径写死，其余按产品说明看待。<span class="ev ev-claim">作者宣称</span></li>
+    </ul>
+    <h3>不变量（从实现里抽出）</h3>
+    <ol class="act">
+      <li>没有知识库或网页范围，就不要走检索管道。</li>
+      <li>跨库检索必须先授权、再校验嵌入空间一致，查询向量只计算一次。</li>
+      <li>清理旧块与旧索引之前，必须先能解析到写入用的向量引擎。</li>
+      <li>过期的 process 任务不得改写更新一轮 attempt 的行、块和计数。</li>
+      <li>融合后的分数在进入跨检索比较或重排之前，应落在 [0,1]（混合路径靠归一化 RRF）。</li>
+      <li>MatchCount 的缺省、过检与最终截断必须用同一套规范化规则，避免 0 把结果切成空切片。</li>
+      <li>生成用的引用集合以管道过滤后的结果为准，并应告诉模型「这可能只是候选池的子集」。</li>
+    </ol>
+  </div>
+</section>
+
+<section class="tab-panel" id="tab-trade" role="tabpanel">
+  <div class="liquid">
+    <h2>并发、一致性、安全、成本、规模</h2>
+    <ul class="act">
+      <li><b>并发：</b>文档处理在 worker 池里并行，同一知识的新 attempt 会让旧任务变成空操作。问答检索按存储分组扇出，知识库搜索与网页搜索并发。插件式 EventManager 按注册顺序包装 handler。</li>
+      <li><b>一致性：</b>原文件、块表、向量索引可能暂时不一致——这是异步系统的常态。幂等清理会在重跑时删除旧块和旧索引再写新的。块被人工编辑后，检索文本以块表/修订为准，原文件不会自动改写。<span class="ev ev-infer">推断</span></li>
+      <li><b>安全：</b>租户授权发生在检索扇出之前；URL 导入有 SSRF 复查；日志会清洗查询文本以防 CR/LF 注入。凭证与模型密钥处理有专门模块，本页不展开密钥格式。</li>
+      <li><b>成本：</b>问答路径几乎总需要聊天模型；向量检索需要嵌入。摘要、问题生成、重排、多模态、图谱抽取都是额外调用。与 ai-memory 的「默认零 LLM」相反，这里的完整成功路径通常是付费/自建模型路径。<span class="ev ev-infer">推断</span></li>
+      <li><b>规模：</b>过检池有上限；FAQ 路径还能迭代扩大 TopK。任务仪表盘与 worker 池权重在 types/task.go 中定义。具体能撑多大的知识库，README 没有给出可引用的本机数字，本文也不编造。<span class="ev ev-pending">待验证</span></li>
+    </ul>
+    <h3>多模态与外部依赖</h3>
+    <p>知识库带 image_processing_config、vlm_config；音频依赖 ASR；视频在本提交的 ProcessDocument 中直接失败。解析依赖 DocReader（Office 由 README 所称的 in-process anydoc 处理，本文未逐步跟进 anydoc 源码）。向量库、对象存储、可选 Neo4j、Langfuse、沙箱（Docker/E2B/Cube）都是可替换或可选组件。缺了对应组件，对应分支会失败或跳过，而不是在本进程里静默伪造。<span class="ev ev-source">源码确认</span> 视频/ASR 分支；其余后端列表为 <span class="ev ev-claim">作者宣称</span>。</p>
+    <h3>最小反例</h3>
+    <ul class="act">
+      <li>跨两个使用不同嵌入模型的知识库做一次 HybridSearch：会被一致性检查拒绝，而不是悄悄给出不可比的分数。</li>
+      <li>只把别人的 knowledge_base_id 塞进参数：授权失败。仓库层「能读到行」不等于「能检索」。</li>
+      <li>以为 <code>types.Pipeline["rag_stream"]</code> 就是线上路径：会漏掉 MEMORY_RECALL，也会漏掉按开关插入的 WEB_FETCH / DATA_ANALYSIS，以及「有历史才 LOAD_HISTORY」。</li>
+      <li>在解析过程中删除嵌入模型：任务应失败并写明原因，而不是悬挂在 processing。</li>
+      <li>把 WeKnora 当成「编码 Agent 的跨工具工作记忆」：它可以给 Agent 提供知识检索工具，但不会替 Claude Code / Codex 做会话级 Markdown 记忆与交接协议。</li>
+    </ul>
+    <h3>不适用</h3>
+    <p>单机、默认不配模型、只想让几个编程 Agent 共享一份可 grep 的项目笔记时，它太重。也不是离线即可用的纯文件 wiki：生成与（通常情况下的）向量检索都依赖模型与外部存储。</p>
+  </div>
+</section>
+
+<section class="tab-panel" id="tab-use" role="tabpanel">
+  <div class="liquid">
+    <h2>最小接入实践</h2>
+    <ol class="act">
+      <li>按 README 用 Docker Compose 启动核心服务，完成引导里的模型与存储配置。默认 Web 在本机 80 端口、API 在 8080，这是文档中的端口，本文未在本机启动验证。<span class="ev ev-claim">作者宣称</span> <span class="ev ev-pending">待验证</span></li>
+      <li>先建一个知识库，明确嵌入模型、切块策略、是否父子块、是否启用向量/关键词。</li>
+      <li>上传一份小的纯文本或 Markdown，盯 parse_status 直到 completed，并在界面或 API 里抽查块内容和修订。</li>
+      <li>用同一句话先打 HybridSearch（不生成），确认命中和分数；再走一次带引用的问答。</li>
+      <li>需要多用户时再配置成员角色与 API Key 作用域，不要把管理密钥发给客户端。</li>
+      <li>打开网页搜索、多模态、图谱、沙箱前，先单独验证对应依赖和 SSRF/网络策略。</li>
+    </ol>
+    <h3>落地核对清单</h3>
+    <ul class="act">
+      <li>每个知识库的嵌入模型与向量维度是否与目标引擎一致？</li>
+      <li>对象存储、数据库、向量引擎失败时，是否能从任务仪表盘看到重试与死信，而不是只有「处理中」？</li>
+      <li>共享库是否走了授权，而不是只把 UUID 加入检索列表？</li>
+      <li>块被编辑后，是否重建或更新了对应向量？旧索引会不会继续回答过时句子？</li>
+      <li>引用开关是否符合产品要求？关闭后模型上下文的协议提示与公开引用都会变。</li>
+      <li>升级是否让版本化迁移先跑完，再让 worker 接管积压任务？</li>
+    </ul>
+    <h3>误区自测</h3>
+    <div class="quiz" data-quiz="q1">
+      <div class="q">1. 知识库表里有了文件路径，是不是就已经可以混合检索了？</div>
+      <div class="quiz-opts">
+        <button type="button" data-ok="0">可以。文件在对象存储里就等于索引完成。</button>
+        <button type="button" data-ok="1">不可以。必须等 ProcessDocument 把块写入 chunks 并（在开启索引时）写入检索引擎，且 parse_status 完成。</button>
+        <button type="button" data-ok="0">只要生成了摘要就能检索，块表是可选的。</button>
+      </div>
+      <div class="quiz-answers" hidden>检索单元是块以及派生索引。知识行只是文档身份和解析状态。</div>
+    </div>
+    <div class="quiz" data-quiz="q2">
+      <div class="q">2. 混合检索时，为什么要把 RRF 分数除以理论最大值？</div>
+      <div class="quiz-opts">
+        <button type="button" data-ok="1">因为原始 RRF 大约只有 0.016 量级，不归一化就会输给已经位于 [0,1] 的单路结果。</button>
+        <button type="button" data-ok="0">只是为了让分数更好看，不影响排序。</button>
+        <button type="button" data-ok="0">这是 BM25 的固有步骤，向量路不会用到。</button>
+      </div>
+      <div class="quiz-answers" hidden>fuseWithRRF 的注释把这个缺陷和修复写得很清楚。单路路径不走 RRF：向量保留余弦，关键词单独缩放。</div>
+    </div>
+    <div class="quiz" data-quiz="q3">
+      <div class="q">3. 一次问答请求一定会执行 types.Pipeline["rag_stream"] 里写死的阶段吗？</div>
+      <div class="quiz-opts">
+        <button type="button" data-ok="0">会。那张表就是运行时定义。</button>
+        <button type="button" data-ok="1">不一定。KnowledgeQA 用 PipelineBuilder 按是否有历史、是否网页搜索、是否数据分析等动态组装，并且固定包含 MEMORY_RECALL。</button>
+      </div>
+      <div class="quiz-answers" hidden>以 session_knowledge_qa.go 为准。便利表会漏掉记忆召回和若干条件阶段。</div>
+    </div>
+    <h3>结论证据表</h3>
+    <table>
+      <thead><tr><th>命题</th><th>级别</th><th>依据</th></tr></thead>
+      <tbody>
+        <tr><td>文档处理是 asynq 任务，含 attempt、取消与幂等</td><td><span class="ev ev-source">源码确认</span></td><td><a href="https://github.com/Tencent/WeKnora/blob/7d064bc3a259f87634840199f565ec4dd644ba1e/internal/application/service/knowledge_process.go#L3856-L3991" target="_blank" rel="noopener noreferrer"><code>internal/application/service/knowledge_process.go:3856–3991</code></a></td></tr>
+        <tr><td>先解析向量引擎再删旧块/旧索引</td><td><span class="ev ev-source">源码确认</span></td><td><a href="https://github.com/Tencent/WeKnora/blob/7d064bc3a259f87634840199f565ec4dd644ba1e/internal/application/service/knowledge_process.go#L481-L514" target="_blank" rel="noopener noreferrer"><code>internal/application/service/knowledge_process.go:481–514</code></a></td></tr>
+        <tr><td>线上 RAG 管道由 PipelineBuilder 动态组装</td><td><span class="ev ev-source">源码确认</span></td><td><a href="https://github.com/Tencent/WeKnora/blob/7d064bc3a259f87634840199f565ec4dd644ba1e/internal/application/service/session_knowledge_qa.go#L204-L238" target="_blank" rel="noopener noreferrer"><code>internal/application/service/session_knowledge_qa.go:204–238</code></a></td></tr>
+        <tr><td>混合检索先授权再扇出，RRF 归一化到 [0,1]</td><td><span class="ev ev-source">源码确认</span></td><td><a href="https://github.com/Tencent/WeKnora/blob/7d064bc3a259f87634840199f565ec4dd644ba1e/internal/application/service/knowledgebase_search.go#L225-L248" target="_blank" rel="noopener noreferrer"><code>internal/application/service/knowledgebase_search.go:225–248</code></a>；fusion.go</td></tr>
+        <tr><td>默认 RRF k=60，向量/关键词权重 0.7/0.3</td><td><span class="ev ev-source">源码确认</span></td><td><a href="https://github.com/Tencent/WeKnora/blob/7d064bc3a259f87634840199f565ec4dd644ba1e/internal/types/retrieval_config.go#L92-L118" target="_blank" rel="noopener noreferrer"><code>internal/types/retrieval_config.go:92–118</code></a></td></tr>
+        <tr><td>生成前把过滤后的块登记为可引用证据</td><td><span class="ev ev-source">源码确认</span></td><td><a href="https://github.com/Tencent/WeKnora/blob/7d064bc3a259f87634840199f565ec4dd644ba1e/internal/application/service/chat_pipeline/references.go#L13-L114" target="_blank" rel="noopener noreferrer"><code>internal/application/service/chat_pipeline/references.go:13–114</code></a></td></tr>
+        <tr><td>本提交不再支持视频文件入库解析</td><td><span class="ev ev-source">源码确认</span></td><td><a href="https://github.com/Tencent/WeKnora/blob/7d064bc3a259f87634840199f565ec4dd644ba1e/internal/application/service/knowledge_process.go#L4033-L4041" target="_blank" rel="noopener noreferrer"><code>internal/application/service/knowledge_process.go:4033–4041</code></a></td></tr>
+        <tr><td>支持 29 家模型、多种向量库与数据源</td><td><span class="ev ev-claim">作者宣称</span></td><td>README；本文未逐个联通验证</td></tr>
+        <tr><td>与 ai-memory 互补而非直接竞品</td><td><span class="ev ev-infer">推断</span></td><td>问题层级不同，见索引对照</td></tr>
+      </tbody>
+    </table>
+    <p class="muted">本文没有部署或压测 WeKnora，也没有复现官方评测中的召回或 BLEU/ROUGE。交互演示中的文档和问答纯属虚构。</p>
+    <p><a href="ai-memory.html">上一篇：ai-memory 的写入与召回</a> · <a href="index.html">返回开源解剖索引</a></p>
+  </div>
+</section>
+
+<footer class="ft">
+<p>XHOT 是独立的个人项目，与 X Corp.、AIHOT、GitHub、Tencent 及本文所述开源项目无隶属或背书关系。开源解剖根据公开源码整理，可能有误，以仓库原文与指定版本为准。文中不含任何个人或公司私密信息。</p>
+<p><a href="../about.html">关于 · 数据来源 · 免责声明</a> · <a href="index.html">开源解剖索引</a> · <a href="https://github.com/88daxiong/xhot/issues" target="_blank" rel="noopener noreferrer">反馈 / 撤下请求（GitHub Issues）</a></p>
+</footer>
+</main>
+<script type="application/json" id="anatomy-data">{"stages":[{"id":"upload","title":"上传 / 数据源","evidence":"source","detail":"<p>知识可以来自本地文件、URL、纯文本段落，或由连接器同步。创建知识行后投递异步处理任务，而不是在 HTTP 请求里把解析做完。</p>"},{"id":"authz","title":"租户与授权","evidence":"source","detail":"<p>调用者主租户可直接访问；访问其他租户必须有成员关系。检索路径会对每一个知识库再做授权，包括组织共享库。任务路径用 WithKBTaskWrite 确认库仍属于载荷中的租户。</p>"},{"id":"queue","title":"asynq 任务队列","evidence":"source","detail":"<p>ProcessDocument 读取重试计数（Lite 模式改用注入的 TaskRetryMetadata）。completed 幂等跳过；取消/删除/新 attempt/源替换使旧任务退出。非最后一次重试可返回错误以再试，最后一次才把知识标 failed。</p>"},{"id":"convert","title":"解析 convert","evidence":"source","detail":"<p>文件走 DocReader；URL 先 SSRF 再抓取；纯文本段落可直接切块。图片无多模态、音频无 ASR、视频文件会失败。解析结果带内容和图片元数据（OCR、caption、位置）。</p>"},{"id":"chunk","title":"切块 / 父子块","evidence":"source","detail":"<p>infrastructure/chunker 按知识库切分配置工作，可生成父块与子块，并维护前后块指针。含图的块还可派生 OCR 与 Caption 子块。写入前清洗非法 UTF-8。</p>"},{"id":"index","title":"写块表并建索引","evidence":"source","detail":"<p>先解析向量引擎，再删除该知识的旧块、旧索引和旧图谱，然后插入新块并 BatchIndex。关闭向量/关键词时可以跳过嵌入模型。</p>"},{"id":"post","title":"摘要 / 问题 / 多模态","evidence":"source","detail":"<p>完成后可再入队摘要生成、问题生成、自动标签和图像多模态任务。这些问题可参与后续检索，但它们是派生增强，不是原文件本身。</p>"},{"id":"pipe","title":"动态组装管道","evidence":"source","detail":"<p>有检索范围或网页搜索时走 RAG 管道，始终包括 MEMORY_RECALL 与 QUERY_UNDERSTAND，以及并行检索到流式生成。无范围时走纯聊天。不要把 types.Pipeline 便利表当成线上定义。</p>"},{"id":"hybrid","title":"混合检索 + RRF","evidence":"source","detail":"<p>授权 → 嵌入一致性 → 查询只嵌入一次 → 按存储分组扇出 → 分类向量/关键词列表 → fuseOrDeduplicate。混合模式用加权 RRF 并归一化到 [0,1]。默认 k=60，权重 0.7/0.3。</p>"},{"id":"rerank","title":"重排 / 合并 / TopK","evidence":"source","detail":"<p>聊天管道在融合之后还可重排、抓取网页正文、合并（含父块展开与去重）、按 TopK 截断，以及可选数据分析。截断信息会带进模型上下文，说明展示的是候选子集。</p>"},{"id":"cite","title":"引用登记与生成","evidence":"source","detail":"<p>prepareMessagesWithModelContext 把过滤后的知识块和网页结果登记到 request-local registry，拼进提示。引用默认开启。消息表保存 knowledge_references。证据无法核验时，明确要求模型不要引用。</p>"},{"id":"store","title":"对象存储 + 关系库","evidence":"source","detail":"<p>原文件在对象存储；知识、块、会话、消息在关系库（MySQL / PostgreSQL / SQLite 变体）。块可编辑并有修订表，因此检索文本可能偏离原文件。</p>"},{"id":"vector","title":"可替换检索引擎","evidence":"claim","detail":"<p>知识库绑定 VectorStoreID。README 列出 pgvector/ParadeDB、Elasticsearch、OpenSearch、Milvus、Weaviate、Qdrant、Doris、腾讯向量库等。本文未逐个验证驱动。</p>"},{"id":"graph","title":"可选图谱","evidence":"source","detail":"<p>processChunks 在重建前会尝试删除该知识命名空间下的旧图。图谱是可选增强，wiki/graph 类知识库在多库嵌入一致性检查里有例外。未配置时删除失败只记警告。</p>"}],"schemas":{"tenant":{"title":"tenants","evidence":"source","detail":"<p>自增 id（示例 SQL 从 10000 起），名称、检索引擎 JSON、状态、storage_quota/storage_used、agent_config，以及软删除时间。后续还可挂 RetrievalConfig（含 RRF 参数）。它是隔离与配额的根。</p>"},"kb":{"title":"knowledge_bases","evidence":"source","detail":"<p>id、tenant_id、chunking_config、image_processing_config，以及 embedding/summary/rerank 模型 id、对象存储与 VLM 配置、抽取/自动标签/profile。混合检索用这些绑定决定能否向量化、去哪座引擎。</p>"},"kn":{"title":"knowledges","evidence":"source","detail":"<p>文档身份：type、title、source、parse_status、enable_status、文件名/类型/大小/路径/哈希、metadata 与 custom_metadata、error_message、processed_at。处理任务的幂等与取消都看这些状态，而不是看向量库里有没有残留。</p>"},"chunk":{"title":"chunks 与 chunk_revisions","evidence":"source","detail":"<p>块含 tenant/kb/knowledge 外键、content 与 source_content、content_revision、index_status、context_header、chunk_index、起止偏移、前后块与父块、chunk_type、图片信息与关系。修订表记录每次人工或系统编辑，便于回滚。</p>"},"sess":{"title":"sessions 与 messages","evidence":"source","detail":"<p>会话保存检索阈值、embedding_top_k、rerank 参数、摘要模型、context_config 等。消息含 role、content、knowledge_references、agent_steps、execution_context。引用是生成结果的一部分，不是临时日志。</p>"},"task":{"title":"任务载荷","evidence":"source","detail":"<p>types/task.go 定义 DocumentProcess、QuestionGeneration、SummaryGeneration、IndexDelete、ImageMultimodal、KnowledgePostProcess 等载荷，以及队列与 worker 池。ProcessDocument 载荷里的 Attempt 把「同一用户动作的重试」和「用户重新解析」分开。</p>"}},"play":[{"title":"上传并入队","evidence":"source","detail":"<p>API 在租户上下文中创建知识行，把原文件写入对象存储，投递 DocumentProcessPayload。HTTP 请求此时返回，解析在 worker 中进行。</p>","sim":"<p><strong>模拟状态：</strong>knowledge_id=kn_42，file_path=ten-7/handbook.md，parse_status=pending，attempt=1。对象存储已有原件，chunks 仍为空。</p>"},{"title":"任务开始并翻成 processing","evidence":"source","detail":"<p>ProcessDocument 注入执行租户，校验知识仍属于该库，确认 attempt 未被取代、未被取消，然后 markKnowledgeProcessing。源文件若已更换，旧任务在此退出。</p>","sim":"<p><strong>模拟状态：</strong>parse_status=processing，retry=0/max。租户 7、知识库 kb_hr 校验通过。</p>"},{"title":"解析与切块","evidence":"source","detail":"<p>convert() 得到 ReadResult。切块器按知识库配置切出带偏移的 ParsedChunk，必要时生成父块；图片派生 OCR/Caption 子块。非法 UTF-8 被清洗。</p>","sim":"<p><strong>模拟状态：</strong>3 个文本块。块 2 含一句「报销需部门负责人书面批准」。无图片，无 ASR。</p>"},{"title":"先解析引擎，再替换旧索引","evidence":"source","detail":"<p>取嵌入模型并解析向量存储。成功后删除该知识的旧块、旧索引、旧图，再插入新块并批量索引。这样不会在引擎不可用时先把旧检索面拆掉。</p>","sim":"<p><strong>模拟状态：</strong>chunks 写入 3 行，index_status=ready。向量库中 kn_42 的旧向量已删并重写。parse_status=completed。</p>"},{"title":"提问并动态组装管道","evidence":"source","detail":"<p>用户问「报销谁能批？」。KnowledgeQA 发现有知识库范围，组装：历史（若有）→ 记忆召回 → 查询理解 → 并行检索 → 重排 → 合并 → TopK → 进入消息 → 流式生成。</p>","sim":"<p><strong>模拟状态：</strong>RewriteQuery 仍接近原问句。SearchTargets=[kb_hr]。Web 搜索关闭。Memory 未命中个人偏好。</p>"},{"title":"混合检索并归一化融合","evidence":"source","detail":"<p>对 kb_hr 授权后计算一次查询向量，同时走关键词与向量。假设块 2 在两路都排第一。加权 RRF 再除以最大值后得分为 1.0，进入重排与 TopK。</p>","sim":"<p><strong>模拟状态：</strong>向量排名 1，关键词排名 1，归一化 RRF=1.00。另有一块只在向量路排第 4，融合分较低。MatchCount 截断后块 2 保留。</p>"},{"title":"登记引用并生成","evidence":"source","detail":"<p>INTO_CHAT_MESSAGE / prepareMessagesWithModelContext 把块 2 登记为可引用证据，必要时注明这是候选子集。聊天模型流式输出，消息写入 knowledge_references。若检索为空，管道不会假装有引用。</p>","sim":"<p><strong>模拟状态：</strong>回答写明需部门负责人书面批准，并引用 handbook.md 的 chunk 2。messages.knowledge_references 含该 chunk_id。这是模拟，不是一次真实调用。</p>"},{"title":"失败分支：旧 attempt 与取消","evidence":"source","detail":"<p>若用户在 worker 跑到一半时点了重新解析，新 attempt=2 已占用行和计数器，attempt=1 的任务必须跳过。若用户取消，processing 之前的复查会阻止状态被写回 processing。</p>","sim":"<p><strong>模拟状态：</strong>attempt=1 的迟到任务看到 superseded，return nil。界面只展示 attempt=2 的进度。</p>"}]}</script>
+</body>
+</html>
