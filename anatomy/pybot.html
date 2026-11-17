@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="light" data-pref="auto">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-eySqtWEMW2APPEHKl4ofjbb4sL/hbt3uVDrovVQbBOY='; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'none'; connect-src 'self'; media-src 'none'; frame-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%E2%9A%A1%3C/text%3E%3C/svg%3E">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#6d28d9">
+<meta name="description" content="从第一性原理拆解 PyBot：固定的观察-提议-仲裁运行时，如何驱动一份没有权重的规则聊天机器人。">
+<title>PyBot · 开源解剖 · XHOT</title>
+<script>(function(){var d=document.documentElement,t,s;try{t=localStorage.getItem('xhot-theme');s=localStorage.getItem('xhot-density')}catch(e){}t=(t==='light'||t==='dark')?t:'auto';d.setAttribute('data-pref',t);d.setAttribute('data-theme',t==='auto'?(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'):t);if(s==='compact')d.setAttribute('data-density','compact')})();</script>
+<link rel="stylesheet" href="anatomy.css">
+<script src="anatomy.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">跳到正文</a>
+<div class="ambient" aria-hidden="true"><div class="orb orb-1"></div><div class="orb orb-2"></div></div>
+<header class="top">
+<div class="bar">
+<a class="lg" href="../index.html"><i aria-hidden="true">⚡</i>XHOT<span>X 热点雷达</span></a>
+<nav class="nav" aria-label="栏目"><a href="../index.html">今日</a><a href="../d/ai.html">领域</a><a href="../people.html">人物</a><a href="../news.html">资讯</a><a href="../trends.html">趋势</a><a href="../agents.html">Agent</a><a href="index.html">解剖</a></nav>
+<span class="sp0"></span>
+<div class="tg" role="group" aria-label="主题"><button type="button" data-set-theme="light" aria-label="浅色">☀</button><button type="button" data-set-theme="dark" aria-label="深色">☾</button><button type="button" data-set-theme="auto">自动</button></div>
+</div>
+<div class="subbar">  <a class="back" href="index.html">← 返回开源解剖主页</a>
+  <nav class="page-toc" aria-label="本页目录">
+    <a href="#highlight">亮点</a>
+    <a href="#flow">流程</a>
+    <a href="#use">怎么用</a>
+    <a href="#deep">深入</a>
+  </nav></div>
+</header>
+<main id="main" class="wrap">
+
+<article class="card hero">
+  <div class="badge-row"><span class="pill">开源解剖</span><span class="pill purple">v0.1.0</span><span class="pill">Apache-2.0</span></div>
+  <h1>PyBot</h1>
+  <p class="essence">用纯 Python 规则做成的聊天机器人：没有权重、不用训练。智能体群写出规则与查表，运行时每轮只做「观察 → 提议 → 仲裁 → 记账」。</p>
+  <div class="meta">
+    <span>仓库 <a href="https://github.com/huggingface/pybot" target="_blank" rel="noopener noreferrer">huggingface/pybot</a></span>
+    <span>演示 <a href="https://huggingface.co/spaces/HuggingFaceSwarms/PyBot" target="_blank" rel="noopener noreferrer">Hugging Face Space</a></span>
+    <span>分析提交 <a href="https://github.com/huggingface/pybot/tree/7d63c7fbebb44c7e466e5c8b5c1f341ab767929e" target="_blank" rel="noopener noreferrer"><code>7d63c7f</code></a>（2026-11-16 19:07 北京时间）</span>
+    <span>GitHub API 星标 453（观察于 2026-11-17 20:16 北京时间，会变动）</span>
+    <span>创建于 2026-11-12</span>
+    <span>语言 Python · 许可 Apache-2.0</span>
+    <span>单文件版 <a href="exports/pybot.standalone.html">下载</a></span>
+  </div>
+</article>
+
+<section class="card" id="highlight">
+  <div class="highlight">
+    <div class="kicker">最大亮点</div>
+    <p class="lead">把「聊天模型」替换成一份可检查的规则程序：小而固定的运行时负责一轮对话的状态转换，海量 if / 正则 / 查表由智能体群写成模块，仲裁器从多个提议里只放出一句。</p>
+    <p class="why">ELIZA 一类规则机器人要靠人手加规则，覆盖面窄；现在的做法是训练权重，推理必须加载模型。PyBot 把「扩展能力」交给生成代码，把「如何选一句、如何记住」留在 <a href="https://github.com/huggingface/pybot/blob/7d63c7fbebb44c7e466e5c8b5c1f341ab767929e/bot/runtime.py#L1-L16" target="_blank" rel="noopener noreferrer"><code>bot/runtime.py:1–16</code></a>。这是一份实验产物，不是通用助手替代品。<span class="ev ev-source">源码确认</span></p>
+  </div>
+  <p class="muted" style="margin-top:12px">一句话输入输出：输入是一句用户文本和一份内存中的 <code>memory</code> 字典；输出是一句回复、胜出的模块名，以及更新后的会话记忆。</p>
+</section>
+
+<section class="card" id="flow">
+  <h2>它怎么运转</h2>
+  <p>下面这条路径默认就能看完。每个框里写了动作、数据去向和进出。想看源码细节时，再点其中一格。</p>
+  <ol class="pipeline">
+    <li class="pipe"><button type="button" class="pipe-node" data-stage="observe"><div class="pipe-io">输入：用户这一句 + memory</div><div class="pipe-act">各模块观察</div><div class="pipe-io">去向：只改记忆，不回复</div></button></li>
+    <li class="pipe-arrow" aria-hidden="true">→</li>
+    <li class="pipe"><button type="button" class="pipe-node" data-stage="respond"><div class="pipe-io">输入：各模块的 memory 副本</div><div class="pipe-act">独立提议一句或弃权</div><div class="pipe-io">去向：候选列表</div></button></li>
+    <li class="pipe-arrow" aria-hidden="true">→</li>
+    <li class="pipe"><button type="button" class="pipe-node" data-stage="choose"><div class="pipe-io">输入：候选（模块、优先级、回复）</div><div class="pipe-act">仲裁器选出一句</div><div class="pipe-io">去向：胜出模块的 memory 成为会话记忆</div></button></li>
+    <li class="pipe-arrow" aria-hidden="true">→</li>
+    <li class="pipe"><button type="button" class="pipe-node" data-stage="after"><div class="pipe-io">输入：选定的回复</div><div class="pipe-act">after 钩子 + 追加 turns</div><div class="pipe-io">去向：memory["turns"] 与屏幕上的一行</div></button></li>
+  </ol>
+  <div class="drawer" id="flow-detail" aria-live="polite">点击流程中的一格，可看到这一步的机制说明。不点也能从框图读懂主路径。</div>
+</section>
+
+<section class="card" id="use">
+  <h2>怎么用</h2>
+  <div class="use-grid">
+    <div class="use-box yes">
+      <h3>什么情况下用</h3>
+      <ul class="act">
+        <li>想亲手检查「规则机器人」怎样选题、怎样记住刚说过的话，而不是只看模型权重。</li>
+        <li>需要一个零依赖、可离线跑的小实验：只要 Python 3.8+，不用下载模型。</li>
+        <li>关心智能体群如何把评测信号变成大量可运行代码，而不是直接当产品客服用。</li>
+      </ul>
+    </div>
+    <div class="use-box no">
+      <h3>什么情况下不用</h3>
+      <ul class="act">
+        <li>需要开放域、工具调用或长程推理——规则库会在没写过的题目上失效。</li>
+        <li>不能接受数秒启动和约一秒级回复：运行时要加载整份 <code>bot/</code> 包。</li>
+        <li>把 README 里的胜率数字当成可部署指标。那是作者用 LLM 裁判做的对比，本文未复跑。</li>
+      </ul>
+    </div>
+  </div>
+  <h3>最小上手方案</h3>
+  <p>仓库 README 给出的本地入口（分析提交，Python 3.8+，无第三方依赖）：</p>
+<pre><code>git clone https://github.com/huggingface/pybot
+cd pybot
+python -m pybot</code></pre>
+  <ul class="act">
+    <li>交互聊天支持 <code>/reset</code>、<code>/exit</code>；也可用 <code>python -m pybot -p "……"</code> 问一句就退出，或加 <code>-v</code> 在 stderr 打印胜出模块和耗时。<a href="https://github.com/huggingface/pybot/blob/7d63c7fbebb44c7e466e5c8b5c1f341ab767929e/pybot.py#L1-L9" target="_blank" rel="noopener noreferrer"><code>pybot.py:1–9</code></a> <a href="https://github.com/huggingface/pybot/blob/7d63c7fbebb44c7e466e5c8b5c1f341ab767929e/README.md#L31-L71" target="_blank" rel="noopener noreferrer"><code>README.md:31–71</code></a></li>
+    <li>浏览器演示在 <a href="https://huggingface.co/spaces/HuggingFaceSwarms/PyBot" target="_blank" rel="noopener noreferrer">Hugging Face Space</a>，作者称每条回复会标出产生它的模块。<span class="ev ev-claim">作者宣称</span></li>
+    <li>本文未在本机启动聊天或复现基准。<span class="ev ev-pending">待验证</span></li>
+  </ul>
+</section>
+
+<section class="card" id="deep">
+  <h2>深入</h2>
+  <p class="muted">下面这些不影响先建立整体图景。需要对照源码、字段或边界时再展开。证据仍指向固定提交。</p>
+  <details class="deep">
+    <summary>固定运行时 vs 生成出来的模块</summary>
+    <ul class="act">
+      <li>真正的状态机在 <a href="https://github.com/huggingface/pybot/blob/7d63c7fbebb44c7e466e5c8b5c1f341ab767929e/bot/runtime.py#L1-L121" target="_blank" rel="noopener noreferrer"><code>bot/runtime.py:1–121</code></a>：加载模块、观察、提议、仲裁、after、追加 <code>turns</code>。作者在文件头写明「改模块，别改这个文件」。</li>
+      <li>命令行 <a href="https://github.com/huggingface/pybot/blob/7d63c7fbebb44c7e466e5c8b5c1f341ab767929e/pybot.py#L1-L9" target="_blank" rel="noopener noreferrer"><code>pybot.py:1–9</code></a> 只做界面；<code>SOURCE_COMMIT = 24cbc0439e07fd015c0747ab3be6e782a42b5c5b</code> 记录 <code>bot/</code> 拷贝来源。<a href="https://github.com/huggingface/pybot/blob/7d63c7fbebb44c7e466e5c8b5c1f341ab767929e/pybot.py#L19-L20" target="_blank" rel="noopener noreferrer"><code>pybot.py:19–20</code></a></li>
+      <li>本分析提交中，GitHub 目录接口列出 <code>bot/modules/</code> 有 110 个条目，其中包括约 309 KB 的 <code>arbiter.py</code>、约 1.0 MB 的 <code>chat.py</code>、约 746 KB 的 <code>safety.py</code>、约 715 KB 的 <code>answers.py</code>。这是目录元数据，不是行数实测。<span class="ev ev-source">源码确认</span></li>
+      <li>README 把共享层写成 understanding / memory / knowledge / compose，并给出约 64 万行代码、55 万行测试等数字。<a href="https://github.com/huggingface/pybot/blob/7d63c7fbebb44c7e466e5c8b5c1f341ab767929e/README.md#L75-L93" target="_blank" rel="noopener noreferrer"><code>README.md:75–93</code></a> 这些体量是<span class="ev ev-claim">作者宣称</span>。本仓库根目录的 <code>tests/</code> 按 README 只覆盖命令行；本文未清点 <code>bot/</code> 内是否另有测试。</li>
+    </ul>
+  </details>
+  <details class="deep">
+    <summary>记忆里有什么，权威在哪</summary>
+    <ul class="act">
+      <li>权威状态就是进程内的 <code>memory</code> 字典。运行时保证 <code>memory["turns"]</code> 只由自己追加；模块在 <code>respond</code> 里改的是副本，只有胜出者的副本被写回。<a href="https://github.com/huggingface/pybot/blob/7d63c7fbebb44c7e466e5c8b5c1f341ab767929e/bot/runtime.py#L57-L63" target="_blank" rel="noopener noreferrer"><code>bot/runtime.py:57–63</code></a> <a href="https://github.com/huggingface/pybot/blob/7d63c7fbebb44c7e466e5c8b5c1f341ab767929e/bot/runtime.py#L101-L108" target="_blank" rel="noopener noreferrer"><code>bot/runtime.py:101–108</code></a></li>
+      <li>仲裁器文档把话题等阅读结果指向 <code>memory["understood"]["topics"]</code> 等字段。<a href="https://github.com/huggingface/pybot/blob/7d63c7fbebb44c7e466e5c8b5c1f341ab767929e/bot/modules/arbiter.py#L12-L16" target="_blank" rel="noopener noreferrer"><code>bot/modules/arbiter.py:12–16</code></a> 这是仲裁器源码中的约定，具体读写在 <code>bot/understanding/</code> 与 <code>bot/memory/</code>，本文未逐文件核对字段表。</li>
+      <li>没有把对话持久化到磁盘的运行时逻辑：重启或 <code>/reset</code> 会丢掉会话。<span class="ev ev-infer">推断</span>自命令行与 <code>memory</code> 只存在于本次进程。</li>
+    </ul>
+  </details>
+  <details class="deep">
+    <summary>和替代方案比，以及失效边界</summary>
+    <ul class="act">
+      <li>相对手写 ELIZA：扩展能力来自生成代码，但仲裁与记忆协议是固定的，一轮不会因某模块崩溃而中断。<a href="https://github.com/huggingface/pybot/blob/7d63c7fbebb44c7e466e5c8b5c1f341ab767929e/bot/runtime.py#L84-L90" target="_blank" rel="noopener noreferrer"><code>bot/runtime.py:84–90</code></a></li>
+      <li>相对小参数指令模型：推理不需要 GPU 或权重文件；代价是覆盖面等于已写规则，启动要导入整包。作者称在 SmolTalkBench 上，用 LLM 裁判对比参考答案，胜率约 26%，与 SmolLM-360M-Instruct 相当，并经过约 1000 个智能体、5000 个版本。<a href="https://github.com/huggingface/pybot/blob/7d63c7fbebb44c7e466e5c8b5c1f341ab767929e/README.md#L13-L19" target="_blank" rel="noopener noreferrer"><code>README.md:13–19</code></a> <span class="ev ev-claim">作者宣称</span>，本文未复跑，也不把该数字当作产品指标。</li>
+      <li>失效边界：没写过的意图会落到后备句；安全档（优先级 ≥ 9000）按仲裁器注释不会被普通让路规则翻盘，但其识别质量取决于生成出的 <code>safety*.py</code>，不是形式化保证。<a href="https://github.com/huggingface/pybot/blob/7d63c7fbebb44c7e466e5c8b5c1f341ab767929e/bot/modules/arbiter.py#L171-L171" target="_blank" rel="noopener noreferrer"><code>bot/modules/arbiter.py:171–171</code></a></li>
+      <li>评测依赖 LLM 裁判，和人类偏好或真实任务成功率不是一回事。<span class="ev ev-infer">推断</span></li>
+    </ul>
+  </details>
+  <details class="deep">
+    <summary>分析范围与未验证事项</summary>
+    <ul class="act">
+      <li>范围：提交 <code>7d63c7f</code> 的运行时、命令行、仲裁器入口，以及模块目录元数据、README。</li>
+      <li>未读完 <code>bot/knowledge/</code>、<code>bot/compose/</code> 和绝大多数业务模块；不声称理解每一条规则。</li>
+      <li>未运行 <code>python -m pybot</code>，未复现 Space 演示，未核对图表数据。</li>
+    </ul>
+  </details>
+</section>
+
+<footer class="ft">
+<div class="foot-nav"><a href="index.html">← 返回开源解剖主页</a></div>
+<p>XHOT 是独立的个人项目，与 X Corp.、AIHOT、GitHub、Hugging Face 及本文所述开源项目无隶属或背书关系。开源解剖根据公开源码整理，可能有误，以仓库原文与指定版本为准。文中不含任何个人或公司私密信息。本文未在本机运行项目或复现其基准。</p>
+<p><a href="../about.html">关于 · 数据来源 · 免责声明</a> · <a href="https://github.com/88daxiong/xhot/issues" target="_blank" rel="noopener noreferrer">反馈 / 撤下请求（GitHub Issues）</a></p>
+</footer>
+</main>
+<script type="application/json" id="anatomy-data">{"stages":[{"id":"observe","title":"观察，不回复","evidence":"source","detail":"<p>运行时先按优先级加载 <code>bot/modules/</code> 里每一个模块，然后对所有实现了 <code>observe(text, memory)</code> 的模块依次调用。这一阶段只允许改记忆（名字、事实、话题），不能产出回复。单个模块抛错会被跳过，整轮对话不会失败。</p><p class='src'>依据：<a href=\"https://github.com/huggingface/pybot/blob/7d63c7fbebb44c7e466e5c8b5c1f341ab767929e/bot/runtime.py#L1-L16\" target=\"_blank\" rel=\"noopener noreferrer\"><code>bot/runtime.py:1–16</code></a>；<a href=\"https://github.com/huggingface/pybot/blob/7d63c7fbebb44c7e466e5c8b5c1f341ab767929e/bot/runtime.py#L50-L53\" target=\"_blank\" rel=\"noopener noreferrer\"><code>bot/runtime.py:50–53</code></a>；<a href=\"https://github.com/huggingface/pybot/blob/7d63c7fbebb44c7e466e5c8b5c1f341ab767929e/bot/runtime.py#L84-L90\" target=\"_blank\" rel=\"noopener noreferrer\"><code>bot/runtime.py:84–90</code></a></p>"},{"id":"respond","title":"各模块独立提议","evidence":"source","detail":"<p>每个实现了 <code>respond</code> 的模块拿到一份 memory 深拷贝（<code>memory[\"turns\"]</code> 共享、只由运行时写入）。模块返回非空字符串即成为候选 <code>{module, priority, reply}</code>；返回空或抛错则不进入候选。未被选中的提议不会把副本写回会话记忆。</p><p class='src'>依据：<a href=\"https://github.com/huggingface/pybot/blob/7d63c7fbebb44c7e466e5c8b5c1f341ab767929e/bot/runtime.py#L57-L63\" target=\"_blank\" rel=\"noopener noreferrer\"><code>bot/runtime.py:57–63</code></a>；<a href=\"https://github.com/huggingface/pybot/blob/7d63c7fbebb44c7e466e5c8b5c1f341ab767929e/bot/runtime.py#L91-L100\" target=\"_blank\" rel=\"noopener noreferrer\"><code>bot/runtime.py:91–100</code></a></p>"},{"id":"choose","title":"仲裁器选定一句","evidence":"source","detail":"<p><code>bot/modules/arbiter.py</code> 的 <code>choose(text, memory, candidates)</code> 返回候选下标或候选对象。仲裁器失败、返回非法值，或候选不足两条时，运行时退回最高优先级（列表第一项）。选中模块的 memory 副本被写回会话；若没有任何候选，回复固定为 <code>Hello!</code>。</p><p>仲裁器文件里把 <code>SAFETY = 9000</code> 标成「不会被其他规则翻盘」的安全档；文档说明优先级 ≥ 9000 的候选不会因为「排除项 / 已说过」这类通行规则被让路。仲裁器本身也是智能体生成的大规则文件，不是一个小的打分函数。</p><p class='src'>依据：<a href=\"https://github.com/huggingface/pybot/blob/7d63c7fbebb44c7e466e5c8b5c1f341ab767929e/bot/runtime.py#L65-L81\" target=\"_blank\" rel=\"noopener noreferrer\"><code>bot/runtime.py:65–81</code></a>；<a href=\"https://github.com/huggingface/pybot/blob/7d63c7fbebb44c7e466e5c8b5c1f341ab767929e/bot/runtime.py#L101-L108\" target=\"_blank\" rel=\"noopener noreferrer\"><code>bot/runtime.py:101–108</code></a>；<a href=\"https://github.com/huggingface/pybot/blob/7d63c7fbebb44c7e466e5c8b5c1f341ab767929e/bot/modules/arbiter.py#L204-L215\" target=\"_blank\" rel=\"noopener noreferrer\"><code>bot/modules/arbiter.py:204–215</code></a>；<a href=\"https://github.com/huggingface/pybot/blob/7d63c7fbebb44c7e466e5c8b5c1f341ab767929e/bot/modules/arbiter.py#L171-L171\" target=\"_blank\" rel=\"noopener noreferrer\"><code>bot/modules/arbiter.py:171–171</code></a>；<a href=\"https://github.com/huggingface/pybot/blob/7d63c7fbebb44c7e466e5c8b5c1f341ab767929e/bot/modules/arbiter.py#L59-L61\" target=\"_blank\" rel=\"noopener noreferrer\"><code>bot/modules/arbiter.py:59–61</code></a></p>"},{"id":"after","title":"收尾并记下这一轮","evidence":"source","detail":"<p>所有实现了 <code>after(text, reply, memory)</code> 的模块再跑一遍。然后运行时把 <code>{user, bot, module}</code> 追加到 <code>memory[\"turns\"]</code>。命令行只调用 <code>runtime.turn</code>，本身不含聊天逻辑；一条回复被压成单行，异常时退回 <code>Hello!</code>。</p><p class='src'>依据：<a href=\"https://github.com/huggingface/pybot/blob/7d63c7fbebb44c7e466e5c8b5c1f341ab767929e/bot/runtime.py#L109-L118\" target=\"_blank\" rel=\"noopener noreferrer\"><code>bot/runtime.py:109–118</code></a>；<a href=\"https://github.com/huggingface/pybot/blob/7d63c7fbebb44c7e466e5c8b5c1f341ab767929e/pybot.py#L1-L9\" target=\"_blank\" rel=\"noopener noreferrer\"><code>pybot.py:1–9</code></a>；<a href=\"https://github.com/huggingface/pybot/blob/7d63c7fbebb44c7e466e5c8b5c1f341ab767929e/pybot.py#L59-L71\" target=\"_blank\" rel=\"noopener noreferrer\"><code>pybot.py:59–71</code></a></p>"}]}</script>
+</body>
+</html>

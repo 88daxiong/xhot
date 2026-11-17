@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="light" data-pref="auto">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-eySqtWEMW2APPEHKl4ofjbb4sL/hbt3uVDrovVQbBOY='; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'none'; connect-src 'self'; media-src 'none'; frame-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%E2%9A%A1%3C/text%3E%3C/svg%3E">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#6d28d9">
+<meta name="description" content="从第一性原理拆解 rust-anything：编码代理怎样用录制、桥接和对拍门禁，把程序一段段迁到 Rust。">
+<title>rust-anything · 开源解剖 · XHOT</title>
+<script>(function(){var d=document.documentElement,t,s;try{t=localStorage.getItem('xhot-theme');s=localStorage.getItem('xhot-density')}catch(e){}t=(t==='light'||t==='dark')?t:'auto';d.setAttribute('data-pref',t);d.setAttribute('data-theme',t==='auto'?(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'):t);if(s==='compact')d.setAttribute('data-density','compact')})();</script>
+<link rel="stylesheet" href="anatomy.css">
+<script src="anatomy.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">跳到正文</a>
+<div class="ambient" aria-hidden="true"><div class="orb orb-1"></div><div class="orb orb-2"></div></div>
+<header class="top">
+<div class="bar">
+<a class="lg" href="../index.html"><i aria-hidden="true">⚡</i>XHOT<span>X 热点雷达</span></a>
+<nav class="nav" aria-label="栏目"><a href="../index.html">今日</a><a href="../d/ai.html">领域</a><a href="../people.html">人物</a><a href="../news.html">资讯</a><a href="../trends.html">趋势</a><a href="../agents.html">Agent</a><a href="index.html">解剖</a></nav>
+<span class="sp0"></span>
+<div class="tg" role="group" aria-label="主题"><button type="button" data-set-theme="light" aria-label="浅色">☀</button><button type="button" data-set-theme="dark" aria-label="深色">☾</button><button type="button" data-set-theme="auto">自动</button></div>
+</div>
+<div class="subbar">  <a class="back" href="index.html">← 返回开源解剖主页</a>
+  <nav class="page-toc" aria-label="本页目录">
+    <a href="#highlight">亮点</a>
+    <a href="#flow">流程</a>
+    <a href="#use">怎么用</a>
+    <a href="#deep">深入</a>
+  </nav></div>
+</header>
+<main id="main" class="wrap">
+
+<article class="card hero">
+  <div class="badge-row"><span class="pill">开源解剖</span><span class="pill purple">v1.1.0</span><span class="pill">MIT</span></div>
+  <h1>rust-anything</h1>
+  <p class="essence">给编码代理用的渐进式 Rust 迁移夹具：它不负责把代码翻译成 Rust，而是剖出热路径、生成桥接、录下原实现行为，再用对拍门禁证明「结果没变」。</p>
+  <div class="meta">
+    <span>仓库 <a href="https://github.com/erkamyaman/rust-anything" target="_blank" rel="noopener noreferrer">erkamyaman/rust-anything</a></span>
+    <span>分析提交 <a href="https://github.com/erkamyaman/rust-anything/tree/2f84e86ce98822bcb6589238ad868682dbdbefb3" target="_blank" rel="noopener noreferrer"><code>2f84e86</code></a>（2026-11-17 20:06 北京时间）</span>
+    <span>GitHub API 星标 70（观察于 2026-11-17 20:17 北京时间，会变动）</span>
+    <span>创建于 2026-11-16</span>
+    <span>语言 Rust · 许可 MIT</span>
+    <span>单文件版 <a href="exports/rust-anything.standalone.html">下载</a></span>
+  </div>
+</article>
+
+<section class="card" id="highlight">
+  <div class="highlight">
+    <div class="kicker">最大亮点</div>
+    <p class="lead">把「改写成 Rust」拆成一条可判定的闭环：原实现先把输入输出写成 <code>cases.jsonl</code>，Rust 端口必须在门禁里对上每一条，并且通过格式、警告、测试和构建，才允许说这一单元完成。</p>
+    <p class="why">常见做法是让模型整段翻译，再靠几个手工例子冒烟。rust-anything 假定模型不可靠的是「该搬哪、行为如何对齐、怎样安全替换」，于是用分析器、桥接代码生成和录制回放来补上这些步骤。调用方在迁移过程中仍走原 API。<span class="ev ev-source">源码确认</span></p>
+  </div>
+  <p class="muted" style="margin-top:12px">一句话输入输出：输入是一个仍可运行的原语言单元（可加上工作负载和补充用例）；输出是保留原 API 的桥接 crate、一份录制用例，以及一次全通过或指出失败项的 <code>gate</code> 报告。</p>
+</section>
+
+<section class="card" id="flow">
+  <h2>它怎么运转</h2>
+  <p>下面这条路径默认就能看完。每个框里写了动作、数据去向和进出。想看源码细节时，再点其中一格。</p>
+  <ol class="pipeline">
+    <li class="pipe"><button type="button" class="pipe-node" data-stage="profile"><div class="pipe-io">输入：仓库 + 真实工作负载</div><div class="pipe-act">剖析并规划单元</div><div class="pipe-io">去向：迁移顺序与风险点</div></button></li>
+    <li class="pipe-arrow" aria-hidden="true">→</li>
+    <li class="pipe"><button type="button" class="pipe-node" data-stage="bridge"><div class="pipe-io">输入：导出口与类型</div><div class="pipe-act">生成桥接 crate</div><div class="pipe-io">去向：原 API 包装 + 待填的 port.rs</div></button></li>
+    <li class="pipe-arrow" aria-hidden="true">→</li>
+    <li class="pipe"><button type="button" class="pipe-node" data-stage="record"><div class="pipe-io">输入：生成参数 / 陷阱 / 你的用例</div><div class="pipe-act">对原实现录音</div><div class="pipe-io">去向：cases.jsonl</div></button></li>
+    <li class="pipe-arrow" aria-hidden="true">→</li>
+    <li class="pipe"><button type="button" class="pipe-node" data-stage="gate"><div class="pipe-io">输入：你写的 Rust + 录音</div><div class="pipe-act">对拍并过门禁</div><div class="pipe-io">去向：通过或列出失败检查</div></button></li>
+  </ol>
+  <div class="drawer" id="flow-detail" aria-live="polite">点击流程中的一格，可看到这一步的机制说明。不点也能从框图读懂主路径。</div>
+</section>
+
+<section class="card" id="use">
+  <h2>怎么用</h2>
+  <div class="use-grid">
+    <div class="use-box yes">
+      <h3>什么情况下用</h3>
+      <ul class="act">
+        <li>有一段可运行的 TypeScript/JavaScript、Python、C、Go、Ruby 或 Java 代码，想逐步换成 Rust，并且每一步都能证明行为没变。</li>
+        <li>只想加速热循环，而不是一次重写整个程序。</li>
+        <li>编码代理负责写 Rust，但需要外部夹具来决定搬什么、如何对齐、何时算完成。</li>
+      </ul>
+    </div>
+    <div class="use-box no">
+      <h3>什么情况下不用</h3>
+      <ul class="act">
+        <li>期望这个工具自动把程序翻译成 Rust——它明确不承担翻译。</li>
+        <li>热点是「每次调用都很小」的函数：作者也写明，单次跨语言调用往往比 JIT 还慢，值得搬的是成批循环。</li>
+        <li>类型信息不足（没有 TS 类型、Python 注解、C/Go/Java 签名或 Ruby YARD），生成用例和桥接会变差。</li>
+      </ul>
+    </div>
+  </div>
+  <h3>最小上手方案</h3>
+  <p>README 建议把下面这段交给 Claude Code、Codex、Cursor 或 Gemini CLI，或自己安装：</p>
+<pre><code>npm install -g rust-anything
+# 或：cargo install --git https://github.com/erkamyaman/rust-anything
+rust-anything setup</code></pre>
+  <ul class="act">
+    <li><code>setup</code> 会给找到的 Claude Code、Codex、Cursor、Gemini CLI 注册 MCP，并安装技能；改已有配置前会在旁写 <code>*.rust-anything.bak</code>，<code>--remove</code> 可撤销。<a href="https://github.com/erkamyaman/rust-anything/blob/2f84e86ce98822bcb6589238ad868682dbdbefb3/README.md#L33-L60" target="_blank" rel="noopener noreferrer"><code>README.md:33–60</code></a></li>
+    <li>手动最小闭环（README）：<code>profile</code> → <code>bridge</code> → 编写 <code>src/port.rs</code> → <code>record</code> → <code>diff</code> → <code>bench</code> → <code>gate</code>。<a href="https://github.com/erkamyaman/rust-anything/blob/2f84e86ce98822bcb6589238ad868682dbdbefb3/README.md#L87-L95" target="_blank" rel="noopener noreferrer"><code>README.md:87–95</code></a></li>
+    <li>README 中的加速倍数来自 <code>demo/</code> 基准，并写明先核对结果再计时。<a href="https://github.com/erkamyaman/rust-anything/blob/2f84e86ce98822bcb6589238ad868682dbdbefb3/README.md#L13-L28" target="_blank" rel="noopener noreferrer"><code>README.md:13–28</code></a> 这些数字是<span class="ev ev-claim">作者宣称</span>，本文未复跑。</li>
+    <li>本文未在本机执行安装、迁移或 <code>gate</code>。<span class="ev ev-pending">待验证</span></li>
+  </ul>
+</section>
+
+<section class="card" id="deep">
+  <h2>深入</h2>
+  <p class="muted">下面这些不影响先建立整体图景。需要对照源码、字段或边界时再展开。证据仍指向固定提交。</p>
+  <details class="deep">
+    <summary>行为真源和门禁里有哪些检查</summary>
+    <ul class="act">
+      <li>录制产物是 crate 目录下的 <code>cases.jsonl</code>，工作文件在 <code>.rust-anything/</code>。<a href="https://github.com/erkamyaman/rust-anything/blob/2f84e86ce98822bcb6589238ad868682dbdbefb3/src/harness.rs#L20-L21" target="_blank" rel="noopener noreferrer"><code>src/harness.rs:20–21</code></a></li>
+      <li><code>RecordOutcome</code> 统计总用例、错误数、陷阱用例和按函数计数；<code>DiffOutcome</code> 含通过/失败数、缺失导出口和首批不匹配（函数、参数、期望、实际）。<a href="https://github.com/erkamyaman/rust-anything/blob/2f84e86ce98822bcb6589238ad868682dbdbefb3/src/harness.rs#L62-L87" target="_blank" rel="noopener noreferrer"><code>src/harness.rs:62–87</code></a></li>
+      <li><code>gate</code> 聚合：格式、clippy（警告即失败）、<code>cargo test</code>、带 <code>// SAFETY:</code> 的 unsafe、不再有 <code>unimplemented!</code>、构建、导出口、全部用例匹配；另会并入 <code>error_paths::checks</code>。全部通过才 <code>passed</code>。<a href="https://github.com/erkamyaman/rust-anything/blob/2f84e86ce98822bcb6589238ad868682dbdbefb3/src/gate.rs#L28-L107" target="_blank" rel="noopener noreferrer"><code>src/gate.rs:28–107</code></a></li>
+      <li>工具自身的 <a href="https://github.com/erkamyaman/rust-anything/blob/2f84e86ce98822bcb6589238ad868682dbdbefb3/Cargo.toml" target="_blank" rel="noopener noreferrer"><code>Cargo.toml</code></a> 写了 <code>unsafe_code = "forbid"</code>，这约束的是 rust-anything 这个 CLI，不是被迁移的 crate。被迁移 crate 允许有注释清楚的 unsafe。</li>
+    </ul>
+  </details>
+  <details class="deep">
+    <summary>各语言桥接能覆盖什么</summary>
+    <ul class="act">
+      <li>README 表格（分析提交）：TS/JS 可到文件夹或文件，含 class 与 async；Python 到包或模块；C 到 <code>.c</code> 文件中的同名函数；Go 到包；Ruby 到模块函数；Java 到 <code>public static</code> 方法。除 C 外可使用 <code>--batch</code>，让数据留在 Rust 里批量计算。<a href="https://github.com/erkamyaman/rust-anything/blob/2f84e86ce98822bcb6589238ad868682dbdbefb3/README.md#L103-L115" target="_blank" rel="noopener noreferrer"><code>README.md:103–115</code></a></li>
+      <li>类型来自源码中的类型/注解/签名；未加类型却当数字用的参数会被推断为数字。语言也可由清单文件检测，或用 <code>--lang</code> 覆盖。<span class="ev ev-claim">作者宣称</span>（同表），实现分散在 <code>src/lang/</code> 与各 <code>codegen_*.rs</code>。</li>
+      <li>整应用升级还有 <code>analyze --whole-app</code>、<code>app record</code>、front-door 等另一条环，入口在 <a href="https://github.com/erkamyaman/rust-anything/blob/2f84e86ce98822bcb6589238ad868682dbdbefb3/src/main.rs#L184-L210" target="_blank" rel="noopener noreferrer"><code>src/main.rs:184–210</code></a>。本文以单单元循环为主，未完整展开整应用路径。</li>
+    </ul>
+  </details>
+  <details class="deep">
+    <summary>和替代方案比，以及失效边界</summary>
+    <ul class="act">
+      <li>相对「让模型直接重写」：多了可重复的录音和对拍，少了自动翻译。失败时你看到的是具体用例差异，而不是一段无法验证的新代码。</li>
+      <li>相对手工写 FFI：桥接和包装是生成的，但仍要你保证 Rust 算法正确，并且原程序能被驱动、能导入。</li>
+      <li>边界：原实现若有隐藏的全局状态、时间、随机性或未建模的副作用，录音会对不准；键顺序默认要一致（<code>diff</code> 可选择忽略键序）。<a href="https://github.com/erkamyaman/rust-anything/blob/2f84e86ce98822bcb6589238ad868682dbdbefb3/src/harness.rs#L565-L572" target="_blank" rel="noopener noreferrer"><code>src/harness.rs:565–572</code></a></li>
+      <li>FFI 开销可能让细粒度函数变慢。仓库带有 <code>tests/loop.rs</code> 与 <code>demo/</code>，但本文没有跑它们。</li>
+    </ul>
+  </details>
+  <details class="deep">
+    <summary>分析范围与未验证事项</summary>
+    <ul class="act">
+      <li>范围：提交 <code>2f84e86</code> 的 <code>record</code> / <code>diff</code> / <code>gate</code> / <code>bridge</code> 入口、命令行子命令和 README。该提交说明是「README: live GitHub star count」，代码与 1.1.0 清单一同出现在此树中。</li>
+      <li>未逐行审计各语言代码生成器，未运行测试或基准。</li>
+    </ul>
+  </details>
+</section>
+
+<footer class="ft">
+<div class="foot-nav"><a href="index.html">← 返回开源解剖主页</a></div>
+<p>XHOT 是独立的个人项目，与 X Corp.、AIHOT、GitHub、Hugging Face 及本文所述开源项目无隶属或背书关系。开源解剖根据公开源码整理，可能有误，以仓库原文与指定版本为准。文中不含任何个人或公司私密信息。本文未在本机运行项目或复现其基准。</p>
+<p><a href="../about.html">关于 · 数据来源 · 免责声明</a> · <a href="https://github.com/88daxiong/xhot/issues" target="_blank" rel="noopener noreferrer">反馈 / 撤下请求（GitHub Issues）</a></p>
+</footer>
+</main>
+<script type="application/json" id="anatomy-data">{"stages":[{"id":"profile","title":"剖出该搬的热路径","evidence":"source","detail":"<p>工具不翻译源码。它先用各语言自己的分析器找出热点和调用关系，再规划迁移单元与顺序。Rust 由你或编码代理写进 <code>src/port.rs</code>。</p><p class='src'>依据：<a href=\"https://github.com/erkamyaman/rust-anything/blob/2f84e86ce98822bcb6589238ad868682dbdbefb3/src/main.rs#L155-L176\" target=\"_blank\" rel=\"noopener noreferrer\"><code>src/main.rs:155–176</code></a>；README 中的循环说明 <a href=\"https://github.com/erkamyaman/rust-anything/blob/2f84e86ce98822bcb6589238ad868682dbdbefb3/README.md#L122-L132\" target=\"_blank\" rel=\"noopener noreferrer\"><code>README.md:122–132</code></a></p>"},{"id":"bridge","title":"生成桥接，保留原 API","evidence":"source","detail":"<p><code>bridge</code> 根据导出口生成 Rust crate 和原语言包装：TypeScript/JavaScript 走 napi-rs 或 wasm-bindgen，Python 走 PyO3，C 走 <code>extern \"C\"</code>，Go 走 cgo，Ruby 走 magnus，Java 走 JNI。调用方仍使用原来的函数名和模块路径，以便逐步替换。</p><p class='src'>依据：<a href=\"https://github.com/erkamyaman/rust-anything/blob/2f84e86ce98822bcb6589238ad868682dbdbefb3/src/bridge.rs#L877-L877\" target=\"_blank\" rel=\"noopener noreferrer\"><code>src/bridge.rs:877–877</code></a>；语言与桥接表见 <a href=\"https://github.com/erkamyaman/rust-anything/blob/2f84e86ce98822bcb6589238ad868682dbdbefb3/README.md#L103-L113\" target=\"_blank\" rel=\"noopener noreferrer\"><code>README.md:103–113</code></a></p>"},{"id":"record","title":"用原实现录下行为","evidence":"source","detail":"<p><code>record</code> 按类型生成参数，再补语义陷阱用例，并允许追加一行一条的 JSON 输入。它驱动<strong>原来的实现</strong>跑这些例子，把结果写到 crate 目录下的 <code>cases.jsonl</code>。原实现是行为真源；Rust 还不是。</p><p class='src'>依据：<a href=\"https://github.com/erkamyaman/rust-anything/blob/2f84e86ce98822bcb6589238ad868682dbdbefb3/src/harness.rs#L20-L21\" target=\"_blank\" rel=\"noopener noreferrer\"><code>src/harness.rs:20–21</code></a>；<a href=\"https://github.com/erkamyaman/rust-anything/blob/2f84e86ce98822bcb6589238ad868682dbdbefb3/src/harness.rs#L62-L72\" target=\"_blank\" rel=\"noopener noreferrer\"><code>src/harness.rs:62–72</code></a>；<a href=\"https://github.com/erkamyaman/rust-anything/blob/2f84e86ce98822bcb6589238ad868682dbdbefb3/src/harness.rs#L95-L160\" target=\"_blank\" rel=\"noopener noreferrer\"><code>src/harness.rs:95–160</code></a></p>"},{"id":"gate","title":"对拍通过才算完成","evidence":"source","detail":"<p><code>diff</code> 把同一份 <code>cases.jsonl</code> 在 Rust 端口上重放，比较返回值或异常。<code>gate</code> 必须全部通过：<code>cargo fmt --check</code>、<code>clippy -D warnings</code>、<code>cargo test</code>、每个 <code>unsafe</code> 都有 <code>// SAFETY:</code> 注释、<code>port.rs</code> 中不再有 <code>unimplemented!</code>、构建成功、导出口齐全，以及全部录制用例匹配。少一条就不算完成。</p><p class='src'>依据：<a href=\"https://github.com/erkamyaman/rust-anything/blob/2f84e86ce98822bcb6589238ad868682dbdbefb3/src/harness.rs#L565-L617\" target=\"_blank\" rel=\"noopener noreferrer\"><code>src/harness.rs:565–617</code></a>；<a href=\"https://github.com/erkamyaman/rust-anything/blob/2f84e86ce98822bcb6589238ad868682dbdbefb3/src/gate.rs#L28-L107\" target=\"_blank\" rel=\"noopener noreferrer\"><code>src/gate.rs:28–107</code></a>；<a href=\"https://github.com/erkamyaman/rust-anything/blob/2f84e86ce98822bcb6589238ad868682dbdbefb3/src/gate.rs#L112-L182\" target=\"_blank\" rel=\"noopener noreferrer\"><code>src/gate.rs:112–182</code></a></p>"}]}</script>
+</body>
+</html>

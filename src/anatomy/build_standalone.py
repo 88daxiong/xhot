@@ -95,7 +95,7 @@ def set_script_src(html: str, hashes: list[str]) -> str:
 
 def rewrite_links(html: str) -> str:
     html = html.replace('href="index.html"', f'href="{ANAT}index.html"')
-    for name in ("ai-memory.html", "weknora.html", "git-twig.html", "motlab.html"):
+    for name in ("ai-memory.html", "weknora.html", "git-twig.html", "motlab.html", "pybot.html", "rust-anything.html"):
         html = html.replace(f'href="{name}"', f'href="{ANAT}{name}"')
     html = html.replace('href="exports/', f'href="{ANAT}exports/')
     html = html.replace('href="../', f'href="{SITE}')
@@ -167,6 +167,8 @@ def main(argv: list[str] | None = None) -> int:
     exports = {
         "ai-memory.html": HERE / "exports" / "ai-memory.standalone.html",
         "weknora.html": HERE / "exports" / "weknora.standalone.html",
+        "pybot.html": HERE / "exports" / "pybot.standalone.html",
+        "rust-anything.html": HERE / "exports" / "rust-anything.standalone.html",
     }
     if args.check:
         failed = 0

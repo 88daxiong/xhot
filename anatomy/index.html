@@ -38,7 +38,7 @@
 
 <section class="card" aria-labelledby="choose">
   <h2 id="choose">选择一篇拆解</h2>
-  <p class="muted">下面四篇都会直接显示。搜索和筛选只是辅助，不是入口。</p>
+  <p class="muted">下面六篇都会直接显示。搜索和筛选只是辅助，不是入口。</p>
   <div class="cards" style="margin-top:8px">
     <a class="proj-card" href="ai-memory.html" data-tags="memory agent rust" data-hay="ai-memory akitaonrails wiki markdown sqlite 记忆 交接 编程 agent 零llm">
       <div class="badge-row"><span class="pill">Agent 记忆</span><span class="pill purple">Rust</span><span class="pill">v3.4.7</span></div>
@@ -68,6 +68,20 @@
       <p style="margin-top:10px">适合：想用代码精确控制短视频画面，而不是让模型直接生成整段成片。</p>
       <p class="cta">阅读拆解 →</p>
     </a>
+    <a class="proj-card" href="pybot.html" data-tags="rules agent python" data-hay="pybot huggingface 规则 聊天 无权重 eliza arbiter swarm 模块">
+      <div class="badge-row"><span class="pill">规则聊天</span><span class="pill purple">Python</span><span class="pill">v0.1.0</span></div>
+      <h2>PyBot</h2>
+      <p class="hl">最大亮点：没有权重的规则聊天机器人——固定运行时做观察、提议和仲裁，智能体群写出大量可检查的规则模块。</p>
+      <p style="margin-top:10px">适合：想看清规则机器人如何选题和记会话，或研究用智能体群生成可运行代码，而不是拿它当通用助手。</p>
+      <p class="cta">阅读拆解 →</p>
+    </a>
+    <a class="proj-card" href="rust-anything.html" data-tags="port rust mcp" data-hay="rust-anything 迁移 ffi 对拍 cases.jsonl gate bridge napi pyo3 编码代理">
+      <div class="badge-row"><span class="pill">Rust 迁移</span><span class="pill purple">Rust</span><span class="pill">v1.1.0</span></div>
+      <h2>rust-anything</h2>
+      <p class="hl">最大亮点：不翻译代码，而是给编码代理一条可判定闭环：录下原实现行为，生成桥接，对拍通过才算完成。</p>
+      <p style="margin-top:10px">适合：要把 TypeScript、Python、C、Go、Ruby 或 Java 的热路径逐步换成 Rust，并且每一步都能证明结果没变。</p>
+      <p class="cta">阅读拆解 →</p>
+    </a>
   </div>
   <p id="filter-empty" class="muted" hidden style="margin-top:16px">没有符合条件的文章。可点「全部」重新显示。</p>
   <div class="filter-bar">
@@ -78,6 +92,8 @@
       <button type="button" data-filter-tag="rag" aria-pressed="false">文档 RAG</button>
       <button type="button" data-filter-tag="git" aria-pressed="false">Git / 存储</button>
       <button type="button" data-filter-tag="video" aria-pressed="false">视频渲染</button>
+      <button type="button" data-filter-tag="rules" aria-pressed="false">规则聊天</button>
+      <button type="button" data-filter-tag="port" aria-pressed="false">Rust 迁移</button>
     </div>
   </div>
 </section>
