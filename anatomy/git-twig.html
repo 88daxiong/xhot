@@ -118,6 +118,13 @@ ul.act li,ol.act li{margin:6px 0}
 .proj-card h2{font-size:var(--t-xl);margin:4px 0 8px}
 .howto{margin-top:28px}
 .howto ol{margin:10px 0 0 1.2em;color:var(--tx2)}
+
+/* 共享导航：返回开源解剖主页 */
+.subbar{max-width:1760px;margin:0 auto;padding:8px clamp(12px,2vw,36px) 10px;display:flex;flex-wrap:wrap;gap:8px 16px;align-items:center;border-top:1px solid var(--bd)}
+.back{display:inline-flex;align-items:center;gap:6px;min-height:44px;padding:8px 14px;border-radius:12px;border:1px solid color-mix(in srgb,var(--ac) 35%,var(--bd));background:var(--card);color:var(--actx);font-weight:650;text-decoration:none}
+.back:hover{background:var(--hov)}
+.foot-nav{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:8px 0 12px}
+.foot-nav a{display:inline-flex;align-items:center;min-height:44px;padding:0 14px;border-radius:12px;border:1px solid var(--bd);background:var(--card);color:var(--actx);text-decoration:none;font-weight:650}
 </style>
 
 <script src="anatomy.js" defer></script>
@@ -127,10 +134,14 @@ ul.act li,ol.act li{margin:6px 0}
 <div class="ambient" aria-hidden="true"><div class="orb orb-1"></div><div class="orb orb-2"></div><div class="orb orb-3"></div></div>
 <header class="top"><div class="bar">
 <a class="lg" href="../index.html"><i aria-hidden="true">⚡</i>XHOT<span>X 热点雷达</span></a>
-<nav class="nav" aria-label="栏目"><a href="../index.html">今日</a><a href="../d/ai.html">领域</a><a href="../people.html">人物</a><a href="../news.html">资讯</a><a href="../trends.html">趋势</a><a href="../agents.html">Agent</a><a href="index.html" aria-current=page>解剖</a></nav>
+<nav class="nav" aria-label="栏目"><a href="../index.html">今日</a><a href="../d/ai.html">领域</a><a href="../people.html">人物</a><a href="../news.html">资讯</a><a href="../trends.html">趋势</a><a href="../agents.html">Agent</a><a href="index.html">解剖</a></nav>
 <span class="sp0"></span>
 <div class="tg" role="group" aria-label="主题"><button type="button" data-set-theme="light" aria-label="浅色">☀</button><button type="button" data-set-theme="dark" aria-label="深色">☾</button><button type="button" data-set-theme="auto">自动</button></div>
-</div></header>
+</div>
+<div class="subbar">
+  <a class="back" href="index.html">← 返回开源解剖主页</a>
+</div>
+</header>
 <main id="main" class="wrap">
 
 <article class="liquid hero">
@@ -282,6 +293,7 @@ Entry（来自 git ls-tree -rlz --full-tree）:
 </section>
 
 <footer class="ft">
+<div class="foot-nav"><a href="index.html">← 返回开源解剖主页</a></div>
 <p>XHOT 是独立的个人项目，与 X Corp.、AIHOT、GitHub 及本文所述开源项目无隶属或背书关系。开源解剖根据公开源码整理，可能有误，以仓库原文与指定版本为准。</p>
 <p><a href="../about.html">关于 · 数据来源 · 免责声明</a> · <a href="index.html">开源解剖索引</a> · <a href="https://github.com/88daxiong/xhot/issues" target="_blank" rel="noopener noreferrer">反馈 / 撤下请求（GitHub Issues）</a></p>
 </footer>

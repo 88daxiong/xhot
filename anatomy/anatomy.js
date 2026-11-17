@@ -75,14 +75,14 @@
     var stages = data.stages || [];
     var st = stages.find(function (s) { return s.id === id; }) || stages[0];
     if (!st) return;
-    document.querySelectorAll('.flow-node, .arch-node').forEach(function (n) {
+    document.querySelectorAll('.flow-node, .arch-node, .pipe-node').forEach(function (n) {
       n.classList.toggle('selected', n.getAttribute('data-stage') === st.id);
     });
     renderDetail(document.getElementById('flow-detail'), st.title, st.evidence, st.detail);
   }
 
   function bindStages() {
-    document.querySelectorAll('.flow-node, .arch-node').forEach(function (n) {
+    document.querySelectorAll('.flow-node, .arch-node, .pipe-node').forEach(function (n) {
       if (!n.hasAttribute('tabindex')) n.setAttribute('tabindex', '0');
       if (!n.hasAttribute('role')) n.setAttribute('role', 'button');
       n.addEventListener('click', function () { showStage(n.getAttribute('data-stage')); });
@@ -90,6 +90,7 @@
         if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); showStage(n.getAttribute('data-stage')); }
       });
     });
+    // 旧文仍自动展开第一格；新文的流程图本身已可读，不自动打开抽屉。
     var first = document.querySelector('.flow-node, .arch-node');
     if (first) showStage(first.getAttribute('data-stage'));
   }
