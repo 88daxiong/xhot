@@ -2,6 +2,244 @@
   "handle": "paulg",
   "tweets": [
     {
+      "created_at": "2026-11-16T21:44:22.000Z",
+      "id": "2122445700105445886",
+      "lang": "",
+      "metrics": {
+        "bookmark": 194,
+        "impression": 129526,
+        "like": 1046,
+        "quote": 8,
+        "reply": 120,
+        "retweet": 62
+      },
+      "url": "https://x.com/paulg/status/2122445700105445886"
+    },
+    {
+      "created_at": "2026-11-16T21:06:30.000Z",
+      "id": "2122436170655429047",
+      "lang": "",
+      "metrics": {
+        "bookmark": 116,
+        "impression": 95850,
+        "like": 996,
+        "quote": 0,
+        "reply": 61,
+        "retweet": 40
+      },
+      "url": "https://x.com/paulg/status/2122436170655429047"
+    },
+    {
+      "created_at": "2026-11-16T20:59:46.000Z",
+      "id": "2122434473643885049",
+      "lang": "",
+      "metrics": {
+        "bookmark": 77,
+        "impression": 129030,
+        "like": 1419,
+        "quote": 5,
+        "reply": 86,
+        "retweet": 18
+      },
+      "url": "https://x.com/paulg/status/2122434473643885049"
+    },
+    {
+      "created_at": "2026-11-16T17:33:20.000Z",
+      "id": "2122382522986136021",
+      "lang": "",
+      "metrics": {
+        "bookmark": 368,
+        "impression": 114773,
+        "like": 1196,
+        "quote": 10,
+        "reply": 77,
+        "retweet": 45
+      },
+      "url": "https://x.com/paulg/status/2122382522986136021"
+    },
+    {
+      "created_at": "2026-11-16T17:10:41.000Z",
+      "id": "2122376825003446748",
+      "lang": "",
+      "metrics": {
+        "bookmark": 8,
+        "impression": 13719,
+        "like": 38,
+        "quote": 0,
+        "reply": 8,
+        "retweet": 0
+      },
+      "url": "https://x.com/paulg/status/2122376825003446748"
+    },
+    {
+      "created_at": "2026-11-16T17:03:41.000Z",
+      "id": "2122375063026446606",
+      "lang": "",
+      "metrics": {
+        "bookmark": 100,
+        "impression": 50391,
+        "like": 228,
+        "quote": 0,
+        "reply": 43,
+        "retweet": 9
+      },
+      "url": "https://x.com/paulg/status/2122375063026446606"
+    },
+    {
+      "created_at": "2026-11-16T16:31:50.000Z",
+      "id": "2122367046487056667",
+      "lang": "",
+      "metrics": {
+        "bookmark": 102,
+        "impression": 84644,
+        "like": 562,
+        "quote": 4,
+        "reply": 59,
+        "retweet": 11
+      },
+      "url": "https://x.com/paulg/status/2122367046487056667"
+    },
+    {
+      "created_at": "2026-11-16T10:53:00.000Z",
+      "id": "2122281776122929461",
+      "lang": "",
+      "metrics": {
+        "bookmark": 139,
+        "impression": 157373,
+        "like": 1775,
+        "quote": 9,
+        "reply": 124,
+        "retweet": 74
+      },
+      "url": "https://x.com/paulg/status/2122281776122929461"
+    },
+    {
+      "created_at": "2026-11-15T23:48:41.000Z",
+      "id": "2122114597494866218",
+      "lang": "",
+      "metrics": {
+        "bookmark": 89,
+        "impression": 161922,
+        "like": 328,
+        "quote": 4,
+        "reply": 45,
+        "retweet": 7
+      },
+      "url": "https://x.com/paulg/status/2122114597494866218"
+    },
+    {
+      "created_at": "2026-11-15T18:30:52.000Z",
+      "id": "2122034614415823291",
+      "lang": "",
+      "metrics": {
+        "bookmark": 187,
+        "impression": 237554,
+        "like": 3556,
+        "quote": 20,
+        "reply": 203,
+        "retweet": 123
+      },
+      "url": "https://x.com/paulg/status/2122034614415823291"
+    },
+    {
+      "created_at": "2026-11-15T18:26:32.000Z",
+      "id": "2122033524857589799",
+      "lang": "",
+      "metrics": {
+        "bookmark": 2271,
+        "impression": 1335121,
+        "like": 30694,
+        "quote": 219,
+        "reply": 1080,
+        "retweet": 1965
+      },
+      "url": "https://x.com/paulg/status/2122033524857589799"
+    },
+    {
+      "created_at": "2026-11-15T14:46:04.000Z",
+      "id": "2121978044525195284",
+      "lang": "",
+      "metrics": {
+        "bookmark": 138,
+        "impression": 173134,
+        "like": 1752,
+        "quote": 4,
+        "reply": 95,
+        "retweet": 31
+      },
+      "url": "https://x.com/paulg/status/2121978044525195284"
+    },
+    {
+      "created_at": "2026-11-15T14:37:59.000Z",
+      "id": "2121976008152948811",
+      "lang": "",
+      "metrics": {
+        "bookmark": 51,
+        "impression": 28123,
+        "like": 286,
+        "quote": 0,
+        "reply": 8,
+        "retweet": 15
+      },
+      "url": "https://x.com/paulg/status/2121976008152948811"
+    },
+    {
+      "created_at": "2026-11-15T14:32:46.000Z",
+      "id": "2121974695801319443",
+      "lang": "",
+      "metrics": {
+        "bookmark": 894,
+        "impression": 214358,
+        "like": 4788,
+        "quote": 94,
+        "reply": 342,
+        "retweet": 367
+      },
+      "url": "https://x.com/paulg/status/2121974695801319443"
+    },
+    {
+      "created_at": "2026-11-15T10:16:11.000Z",
+      "id": "2121910122960363676",
+      "lang": "",
+      "metrics": {
+        "bookmark": 36,
+        "impression": 135872,
+        "like": 276,
+        "quote": 1,
+        "reply": 60,
+        "retweet": 6
+      },
+      "url": "https://x.com/paulg/status/2121910122960363676"
+    },
+    {
+      "created_at": "2026-11-15T09:30:42.000Z",
+      "id": "2121898679929868632",
+      "lang": "",
+      "metrics": {
+        "bookmark": 40,
+        "impression": 123742,
+        "like": 377,
+        "quote": 4,
+        "reply": 43,
+        "retweet": 10
+      },
+      "url": "https://x.com/paulg/status/2121898679929868632"
+    },
+    {
+      "created_at": "2026-11-15T01:09:01.000Z",
+      "id": "2121772423473176912",
+      "lang": "",
+      "metrics": {
+        "bookmark": 110,
+        "impression": 194509,
+        "like": 1217,
+        "quote": 10,
+        "reply": 63,
+        "retweet": 43
+      },
+      "url": "https://x.com/paulg/status/2121772423473176912"
+    },
+    {
       "created_at": "2026-11-13T16:29:06.000Z",
       "id": "2121279197154877816",
       "lang": "en",

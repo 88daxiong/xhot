@@ -2,6 +2,34 @@
   "handle": "thedankoe",
   "tweets": [
     {
+      "created_at": "2026-11-16T17:00:12.000Z",
+      "id": "2122374187935523045",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 5635,
+        "impression": 208273,
+        "like": 5175,
+        "quote": 26,
+        "reply": 119,
+        "retweet": 539
+      },
+      "url": "https://x.com/thedankoe/status/2122374187935523045"
+    },
+    {
+      "created_at": "2026-11-14T16:07:37.000Z",
+      "id": "2121636177702727868",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 2390,
+        "impression": 465763,
+        "like": 14623,
+        "quote": 239,
+        "reply": 588,
+        "retweet": 1861
+      },
+      "url": "https://x.com/thedankoe/status/2121636177702727868"
+    },
+    {
       "created_at": "2026-11-12T20:37:35.000Z",
       "id": "2120979340775117026",
       "lang": "",

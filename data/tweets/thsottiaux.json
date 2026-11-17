@@ -2,6 +2,34 @@
   "handle": "thsottiaux",
   "tweets": [
     {
+      "created_at": "2026-11-16T05:55:49.000Z",
+      "id": "2122206990101536852",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 543,
+        "impression": 1163453,
+        "like": 8893,
+        "quote": 373,
+        "reply": 2410,
+        "retweet": 244
+      },
+      "url": "https://x.com/thsottiaux/status/2122206990101536852"
+    },
+    {
+      "created_at": "2026-11-15T06:01:14.000Z",
+      "id": "2121845965997101118",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 480,
+        "impression": 1257101,
+        "like": 4678,
+        "quote": 183,
+        "reply": 2531,
+        "retweet": 139
+      },
+      "url": "https://x.com/thsottiaux/status/2121845965997101118"
+    },
+    {
       "created_at": "2026-11-13T02:09:55.000Z",
       "id": "2121062974161092792",
       "lang": "",
