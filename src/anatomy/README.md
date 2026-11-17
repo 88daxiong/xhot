@@ -15,4 +15,13 @@
 
 ## 单文件导出
 
-详细拆解另有零外部依赖的单文件版，放在 `exports/*.standalone.html`：CSS 与 `anatomy.js` 均内联，可本地下载打开。生成器会把该目录一并复制到站点 `anatomy/exports/`。
+详细拆解另有零外部依赖的单文件版，放在 `exports/*.standalone.html`：CSS 与 `anatomy.js` 均内联，可本地下载打开。全站 `generate.py` 会把该目录一并复制到站点 `anatomy/exports/`。
+
+不要手改导出文件。从对应站点页重新生成：
+
+```bash
+python3 src/anatomy/build_standalone.py
+python3 src/anatomy/build_standalone.py --check
+```
+
+导出页会为每一个可执行的内联脚本计算 SHA-256，并写入该文件自己的 CSP `script-src`。站点页的 CSP 保持 `script-src 'self'` 加上主题引导脚本哈希，继续外链 `anatomy.js`。不要在 `script-src` 里加 `'unsafe-inline'`：只要存在哈希，浏览器就会忽略它，未列入哈希的内联脚本仍会被拦截。
