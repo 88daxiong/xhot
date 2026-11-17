@@ -33,6 +33,7 @@ XHOT 是一个**纯静态**的 X（Twitter）热点简报：关注 AI、搞钱�
 | 资讯 | `news.html` | 两栏阅读器：AIHOT 中文资讯在前，X 新闻在后 |
 | 趋势 | `trends.html` | X 话题讨论量 7 天涨跌 + GitHub 今日 AI / 开发工具趋势 |
 | Agent | `agents.html` | AI 开发工具雷达：今日热门 / 本周热门 / 新出现 三个标签页，分类筛选，每页 9 张卡片（3/2/1 列），点卡片打开详情（README 纯文本摘要 + 中文一句话），数据懒加载自 `assets/agents.json` |
+| 解剖 | `anatomy/index.html`、`anatomy/<项目>.html` | 开源解剖：按第一性原理拆解重要开源项目的问题、状态机、与替代方案的差别和失效边界。索引可搜索 / 筛选；每篇是零外部依赖的独立 HTML（同目录 `anatomy.js`）。源文件在 `src/anatomy/`，生成时原样复制到站点 `anatomy/` 并登记产出清单，避免被清理删除。新增文章：在 `src/anatomy/` 放入 HTML，并在索引页加卡片，然后重新生成 |
 | — | 展开 | **每张帖子卡片都能展开**（今日 / 日报 / 领域 / 全部归档 / 人物页，含「再显示」载入的帖子与高光帖）：长摘录解除 6 行折叠，并显示详情（北京时间发布时间、点赞 / 转发 / 评论 / 引用 / 浏览 / 热度，及「全文请看原帖」说明）；必读卡片展开原帖摘录与译文切换（没有摘录时也能展开看数据）；Top30 与 Agent 列表行展开摘录、数据与动作区。**每个 GitHub 条目都能展开**：趋势页仓库行展开 README 摘要（有缓存时）、中文简介、描述、语言、★、今日 / 本周增星，以及 GitHub 与复制按钮（详情首次展开时才读 `assets/gh.json`）；Agent 卡片打开详情面板。⌘K 搜索结果是跳转链接，不是卡片 |
 | — | 一键复制 | Agent 卡片与趋势页每个仓库有复制链接按钮；Agent 详情可复制仓库链接、`git clone https://github.com/<owner>/<repo>.git` 与仓库名；帖子卡片（今日 Top 30 / 领域 / 全部 / 人物页）复制帖子链接（放在动作区最后）；必读卡片不单独放链接复制按钮（「复制译文 / 复制摘录」已附带原帖链接，头部保持一行）；资讯正文复制原文链接 |
 | — | `about.html` | 数据来源、AI 生成内容说明、撤下方式、免责声明（每页页脚有入口） |
@@ -241,7 +242,7 @@ python3 generate.py            # → site/
 ```
 产物结构（即发布到 Pages 仓库根目录的内容）：
 ```
-index.html news.html trends.html people.html agents.html about.html _headers
+index.html news.html trends.html people.html agents.html about.html anatomy/ _headers
 d/{ai,money,growth,all}.html      day/<YYYY-MM-DD>.html      p/<handle>.html + p/<handle>.json
 feed/<YYYY-MM-DD>.json            # 全部归档按天分片
 assets/core|feed|news|agents.<hash>.js
@@ -436,6 +437,13 @@ jobs:
 - **改标签**：`generate.py` 中的标签规则表（形如 `('code','编程','ai', r'claude code|codex|…')`：键、显示名、所属领域、正则）。保持受控标签数量少而稳定。
 - **Agent 页**：分类规则与屏蔽词在 `devtools_fetch.py` 的 `RULES` / `BLOCK`；中文一句话、改分类、隐藏在 `devtools_zh.json`。
 - **改样式**：先改 `ds_tokens.json` 与 `style_ds.css`，再跑 `ds_audit.py`。
+
+## 开源解剖页面
+
+- 手写文章放在 `src/anatomy/`（`.html` / `.js` / `.css` / `.json` / `.svg` / `.txt`）。`generate.py` 会复制到输出目录的 `anatomy/`，并加入产出清单，这样清理步骤不会删掉它们。
+- 全站顶栏「解剖」指向 `anatomy/index.html`。新文章只要在索引里加卡片，不必手改各栏目页导航。
+- 页面必须零第三方请求、无统计脚本，沿用站内字号与移动顶栏；机制结论要区分源码确认 / 作者宣称 / 推断 / 待验证，并写明分析版本、提交与时间（北京时间）。
+- 同步到 Pages 仓库时不要单独删掉 `anatomy/`；它是生成产物的一部分。
 
 ## 常见问题与排错
 

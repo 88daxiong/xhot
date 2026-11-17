@@ -57,6 +57,8 @@ try:
         if any(('<' in str(v[0]) or '>' in str(v[0])) for v in _dj.values()): issues.append('agents.json README 摘要含尖括号')
     except Exception as _x: issues.append('agents.json 读取失败 '+type(_x).__name__)
     if 'href="agents.html"' not in open(S+'/index.html',encoding='utf-8').read(): issues.append('导航缺 Agent')
+    if 'href="anatomy/index.html"' not in open(S+'/index.html',encoding='utf-8').read(): issues.append('导航缺 开源解剖')
+    if not os.path.isfile(S+'/anatomy/index.html'): issues.append('缺 anatomy/index.html')
     if 'dcard' in open(S+'/trends.html',encoding='utf-8').read(): issues.append('trends.html 仍含 AI 开发工具')
     
 except FileNotFoundError: issues.append('缺 agents.html')

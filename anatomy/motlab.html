@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="light" data-pref="auto">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-eySqtWEMW2APPEHKl4ofjbb4sL/hbt3uVDrovVQbBOY='; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'none'; connect-src 'self'; media-src 'none'; frame-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%E2%9A%A1%3C/text%3E%3C/svg%3E">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#7c3aed">
+<meta name="description" content="从第一性原理拆解 motlab：视频即页面，如何在无头 Chrome 里用 WebCodecs 编码并在本机拼接成片。">
+<title>motlab · 开源解剖 · XHOT</title>
+<script>(function(){var d=document.documentElement,t,s;try{t=localStorage.getItem('xhot-theme');s=localStorage.getItem('xhot-density')}catch(e){}t=(t==='light'||t==='dark')?t:'auto';d.setAttribute('data-pref',t);d.setAttribute('data-theme',t==='auto'?(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'):t);if(s==='compact')d.setAttribute('data-density','compact')})();</script>
+<style>
+:root{--t-cap:0.75rem;--t-sm:0.8125rem;--t-md:0.875rem;--t-lg:1rem;--t-xl:1.25rem;--t-xxl:1.75rem;--bg:#f6f5fb;--card:#fff;--bd:#e6e4ef;--bd2:#f0eef6;--hov:#f4f2fa;--tx:#18181b;--tx2:#3f3f46;--mu:#6b6880;--ac:#7c3aed;--actx:#6d28d9;--glow:rgba(124,58,237,.18);--up:#16a34a;--dn:#dc2626;--g1:#7c3aed;--g2:#db2777;--g3:#f97316;--ai:#7c3aed;--money:#d97706;--growth:#0d9488;--heat:#ea580c;--sh:0 1px 2px rgba(24,24,27,.05),0 4px 14px -8px rgba(76,29,149,.18);--glass:rgba(255,255,255,.72);--glass2:rgba(255,255,255,.5);--glass-bd:rgba(255,255,255,.55);--glass-hi:rgba(255,255,255,.85);--accent-blue:#0284c7;--accent-purple:#7c3aed;--accent-emerald:#059669;--accent-amber:#d97706;--accent-rose:#e11d48;color-scheme:light}
+@media(max-width:720px){:root{--t-cap:0.75rem;--t-sm:0.8125rem;--t-md:0.9375rem;--t-lg:1.0625rem;--t-xl:1.25rem;--t-xxl:1.75rem}}
+html[data-theme=dark]{--bg:#0f0c26;--card:#1a1640;--bd:#2c2856;--bd2:#221e48;--hov:#221e4a;--tx:#f4f4f5;--tx2:#d4d4d8;--mu:#a5a3c9;--ac:#c084fc;--actx:#e9d5ff;--glow:rgba(192,132,252,.28);--up:#4ade80;--dn:#fb7185;--ai:#a78bfa;--money:#fbbf24;--growth:#2dd4bf;--heat:#fb923c;--sh:none;--glass:rgba(255,255,255,.07);--glass2:rgba(255,255,255,.04);--glass-bd:rgba(255,255,255,.16);--glass-hi:rgba(255,255,255,.28);--accent-blue:#38bdf8;--accent-purple:#a78bfa;--accent-emerald:#34d399;--accent-amber:#fbbf24;--accent-rose:#fb7185;color-scheme:dark}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--tx);font:400 0.9375rem/1.6 system-ui,"Noto Sans CJK SC",-apple-system,"PingFang SC","Helvetica Neue",sans-serif;touch-action:manipulation;min-height:100vh;overflow-x:hidden}
+a{color:inherit}
+button{font:inherit}
+:focus-visible{outline:2px solid var(--ac);outline-offset:2px;border-radius:6px}
+.skip{position:absolute;left:12px;top:-60px;z-index:100;padding:8px 16px;border-radius:8px;background:#5b21b6;color:#fff;font-weight:600;text-decoration:none}
+.skip:focus{top:8px}
+.top{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 96%,transparent);backdrop-filter:blur(16px) saturate(180%);-webkit-backdrop-filter:blur(16px) saturate(180%);border-bottom:1px solid var(--bd)}
+.top::before{content:"";display:block;height:3px;background:linear-gradient(90deg,var(--g1),var(--g2),var(--g3))}
+.bar{max-width:1760px;margin:0 auto;padding:0 clamp(12px,2vw,36px);height:56px;display:flex;align-items:center;gap:16px}
+.lg{display:flex;align-items:center;gap:8px;font-weight:600;font-size:var(--t-lg);letter-spacing:0;text-decoration:none;white-space:nowrap}
+.lg i{font-style:normal;width:28px;height:28px;border-radius:8px;display:grid;place-items:center;color:#fff;background:linear-gradient(135deg,var(--g1),var(--g2) 60%,var(--g3));font-size:var(--t-lg)}
+.lg span{font-weight:500;font-size:var(--t-sm);color:var(--mu)}
+.nav{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none;flex:1;min-width:0}
+.nav::-webkit-scrollbar{display:none}
+.nav a{display:inline-flex;align-items:center;gap:4px;height:36px;padding:0 12px;border-radius:8px;text-decoration:none;color:var(--tx2);font-weight:500;white-space:nowrap;min-height:44px}
+.nav a:hover{background:var(--hov);color:var(--tx)}
+.nav a[aria-current=page]{color:#fff;background:linear-gradient(135deg,var(--g1),var(--g2));box-shadow:0 4px 14px -6px var(--g2)}
+.sp0{flex:0 0 auto;margin-left:auto}
+.tg{display:inline-flex;padding:2px;border-radius:8px;background:var(--hov);border:1px solid var(--bd);flex:none}
+.tg button{height:36px;min-width:44px;padding:0 8px;border:0;border-radius:6px;background:none;color:var(--mu);cursor:pointer;font-size:var(--t-sm);min-height:44px}
+.tg button.on{background:var(--card);color:var(--tx);box-shadow:0 1px 3px rgba(0,0,0,.14)}
+.wrap{max-width:1120px;margin:0 auto;padding:24px clamp(12px,2vw,36px) 48px}
+.ft{margin-top:32px;font-size:var(--t-sm);color:var(--mu);text-align:center}
+.ft p{margin:0 0 4px}
+.ft a{color:var(--actx);text-decoration:underline;text-underline-offset:2px}
+@media(max-width:1060px){.bar{flex-wrap:wrap;height:auto;padding-top:8px;padding-bottom:8px;gap:8px}}
+@media(max-width:720px){.bar{gap:8px}.lg span{display:none}.wrap{padding:16px 12px 40px}}
+
+.ambient{position:fixed;inset:0;z-index:-1;overflow:hidden;pointer-events:none}
+.orb{position:absolute;border-radius:50%;filter:blur(110px);opacity:.28;animation:float 18s ease-in-out infinite alternate}
+html[data-theme=dark] .orb{opacity:.45}
+.orb-1{width:520px;height:520px;background:radial-gradient(circle,#7c3aed,transparent 70%);top:-120px;left:-80px}
+.orb-2{width:460px;height:460px;background:radial-gradient(circle,#db2777,transparent 70%);bottom:-100px;right:-60px;animation-delay:-6s}
+.orb-3{width:360px;height:360px;background:radial-gradient(circle,#0d9488,transparent 70%);top:42%;left:52%;animation-delay:-12s}
+@keyframes float{0%{transform:translate(0,0) scale(1)}100%{transform:translate(40px,-30px) scale(1.08)}}
+
+.liquid{background:linear-gradient(135deg,var(--glass) 0%,var(--glass2) 100%);backdrop-filter:blur(28px) saturate(185%);-webkit-backdrop-filter:blur(28px) saturate(185%);border:1px solid var(--glass-bd);border-top-color:var(--glass-hi);border-radius:24px;box-shadow:var(--sh),inset 0 1px 0 0 var(--glass-hi);padding:28px}
+.hero{margin-bottom:20px;overflow:hidden}
+.badge-row{display:flex;gap:8px;align-items:center;margin-bottom:14px;flex-wrap:wrap}
+.pill{font-size:var(--t-cap);font-weight:600;letter-spacing:.04em;padding:4px 12px;border-radius:999px;background:color-mix(in srgb,var(--accent-blue) 14%,transparent);border:1px solid color-mix(in srgb,var(--accent-blue) 35%,transparent);color:var(--accent-blue)}
+.pill.purple{background:color-mix(in srgb,var(--accent-purple) 14%,transparent);border-color:color-mix(in srgb,var(--accent-purple) 35%,transparent);color:var(--accent-purple)}
+h1{font-size:var(--t-xxl);font-weight:700;letter-spacing:-.02em;margin-bottom:12px;line-height:1.25}
+h2{font-size:var(--t-xl);font-weight:600;letter-spacing:-.02em;margin-bottom:8px}
+h3{font-size:var(--t-lg);font-weight:600}
+.essence{font-size:var(--t-lg);color:var(--tx);background:color-mix(in srgb,var(--tx) 4%,transparent);border-left:3px solid var(--accent-blue);padding:14px 18px;border-radius:0 14px 14px 0}
+.meta{margin-top:14px;font-size:var(--t-sm);color:var(--mu);display:flex;flex-wrap:wrap;gap:8px 16px}
+.meta a{color:var(--actx)}
+.seg{display:inline-flex;background:color-mix(in srgb,var(--tx) 6%,transparent);backdrop-filter:blur(20px);border:1px solid var(--bd);border-radius:16px;padding:5px;margin:0 0 20px;gap:4px;flex-wrap:wrap}
+.seg-btn{background:transparent;border:none;color:var(--tx2);font-size:var(--t-sm);font-weight:500;padding:9px 16px;border-radius:12px;cursor:pointer;min-height:44px}
+.seg-btn:hover{color:var(--tx)}
+.seg-btn.active{background:color-mix(in srgb,var(--card) 90%,transparent);color:var(--tx);box-shadow:0 4px 12px rgba(0,0,0,.08),inset 0 1px 0 var(--glass-hi)}
+.tab-panel{display:none}
+.tab-panel.active{display:block;animation:fadeIn .3s ease}
+@keyframes fadeIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.flow{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-top:16px}
+.flow-node{background:color-mix(in srgb,var(--card) 70%,transparent);border:1px solid var(--bd);border-radius:18px;padding:16px;cursor:pointer;text-align:left;color:inherit}
+.flow-node:hover,.flow-node.selected{background:color-mix(in srgb,var(--accent-blue) 12%,var(--card));border-color:var(--accent-blue);transform:translateY(-2px)}
+.node-step{font-size:11px;color:var(--accent-blue);font-weight:700;letter-spacing:.04em;text-transform:uppercase}
+.node-title{font-size:var(--t-md);font-weight:600;margin:6px 0}
+.node-desc{font-size:var(--t-sm);color:var(--tx2)}
+.drawer{margin-top:16px;padding:16px 18px;border-radius:16px;background:color-mix(in srgb,var(--tx) 4%,var(--card));border:1px solid color-mix(in srgb,var(--accent-blue) 28%,var(--bd));font-size:var(--t-sm);color:var(--tx2)}
+.drawer strong{color:var(--tx);display:inline;margin-right:8px}
+.detail-body{margin-top:8px}
+.grid-2{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;margin-top:16px}
+table{width:100%;border-collapse:collapse;margin-top:14px;font-size:var(--t-sm)}
+th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--bd);vertical-align:top}
+th{color:var(--mu);font-weight:600;font-size:var(--t-cap);text-transform:uppercase}
+pre,code{font-family:ui-monospace,"SF Mono",Menlo,Consolas,monospace}
+pre{background:color-mix(in srgb,var(--tx) 8%,var(--card));border:1px solid var(--bd);border-radius:14px;padding:16px;overflow-x:auto;font-size:12px;color:var(--tx);margin-top:12px;line-height:1.55;white-space:pre-wrap;word-break:break-word}
+.warn{border-left:3px solid var(--accent-rose);background:color-mix(in srgb,var(--accent-rose) 7%,transparent);padding:14px 16px;border-radius:0 14px 14px 0;margin-top:12px}
+.ev{display:inline-block;font-size:11px;font-weight:600;padding:1px 8px;border-radius:999px;margin-left:6px;vertical-align:middle}
+.ev-source{background:color-mix(in srgb,var(--accent-emerald) 16%,transparent);color:var(--accent-emerald)}
+.ev-claim{background:color-mix(in srgb,var(--accent-amber) 16%,transparent);color:var(--accent-amber)}
+.ev-infer{background:color-mix(in srgb,var(--accent-purple) 16%,transparent);color:var(--accent-purple)}
+.ev-pending{background:color-mix(in srgb,var(--accent-rose) 16%,transparent);color:var(--accent-rose)}
+.legend{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 16px;font-size:var(--t-sm);color:var(--mu)}
+.arch{width:100%;overflow-x:auto;margin:12px 0}
+.arch svg{width:100%;min-width:640px;height:auto;display:block}
+.arch-node{cursor:pointer}
+.arch-node rect,.arch-node polygon{fill:color-mix(in srgb,var(--card) 80%,transparent);stroke:var(--bd);stroke-width:1.5}
+.arch-node.selected rect,.arch-node.selected polygon{fill:color-mix(in srgb,var(--accent-blue) 18%,var(--card));stroke:var(--accent-blue)}
+.arch-node text{fill:var(--tx);font-size:12px;font-family:inherit;pointer-events:none}
+.arch-label{fill:var(--mu);font-size:11px}
+.arch line,.arch path.arrow{stroke:var(--mu);stroke-width:1.25;fill:none;marker-end:url(#arr)}
+.story{margin-top:12px;font-size:var(--t-md);color:var(--tx);background:color-mix(in srgb,var(--tx) 4%,transparent);padding:16px;border-radius:14px}
+.story p+p{margin-top:10px}
+ul.act,ol.act{margin:12px 0 0 1.15em;color:var(--tx2)}
+ul.act li,ol.act li{margin:6px 0}
+.src a{color:var(--actx)}
+.muted{color:var(--mu);font-size:var(--t-sm)}
+.filter-bar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:16px 0}
+.filter-bar input{flex:1;min-width:200px;height:44px;padding:0 14px;border-radius:12px;border:1px solid var(--bd);background:var(--card);color:var(--tx);font:inherit}
+.filter-chips{display:flex;flex-wrap:wrap;gap:6px}
+.filter-chips button{height:36px;min-height:44px;padding:0 12px;border-radius:999px;border:1px solid var(--bd);background:var(--card);color:var(--tx2);cursor:pointer}
+.filter-chips button.on{background:var(--ac);color:#fff;border-color:transparent}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;margin-top:8px}
+.proj-card{display:block;text-decoration:none;color:inherit;padding:22px;border-radius:20px;min-height:100%}
+.proj-card:hover{border-color:var(--ac)}
+.proj-card h2{font-size:var(--t-xl);margin:4px 0 8px}
+.howto{margin-top:28px}
+.howto ol{margin:10px 0 0 1.2em;color:var(--tx2)}
+</style>
+
+<script src="anatomy.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">跳到正文</a>
+<div class="ambient" aria-hidden="true"><div class="orb orb-1"></div><div class="orb orb-2"></div><div class="orb orb-3"></div></div>
+<header class="top"><div class="bar">
+<a class="lg" href="../index.html"><i aria-hidden="true">⚡</i>XHOT<span>X 热点雷达</span></a>
+<nav class="nav" aria-label="栏目"><a href="../index.html">今日</a><a href="../d/ai.html">领域</a><a href="../people.html">人物</a><a href="../news.html">资讯</a><a href="../trends.html">趋势</a><a href="../agents.html">Agent</a><a href="index.html" aria-current=page>解剖</a></nav>
+<span class="sp0"></span>
+<div class="tg" role="group" aria-label="主题"><button type="button" data-set-theme="light" aria-label="浅色">☀</button><button type="button" data-set-theme="dark" aria-label="深色">☾</button><button type="button" data-set-theme="auto">自动</button></div>
+</div></header>
+<main id="main" class="wrap">
+
+<article class="liquid hero">
+  <div class="badge-row">
+    <span class="pill">开源解剖</span>
+    <span class="pill purple">Tech Precision</span>
+    <span class="pill">MIT</span>
+    <span class="pill">v0.2.2</span>
+  </div>
+  <h1>motlab：把视频写成页面，在 Chrome 里直接编码</h1>
+  <div class="essence"><strong>物理本质：</strong>它不把「视频」存成时间线上的媒体文件再去渲染；它把每一场戏写成一张会按时间画图的网页，用无头 Chrome 在页内用 WebCodecs 压成码流，再在本机用 ffmpeg 做无损拼接和混音。</div>
+  <div class="meta">
+    <span>仓库 <a href="https://github.com/staryone/motlab" target="_blank" rel="noopener noreferrer">staryone/motlab</a></span>
+    <span>npm 包 @motlab/cli 0.2.2</span>
+    <span>分析提交 <a href="https://github.com/staryone/motlab/tree/538cb843c52b3e525ebd79d97284d87c218f6e61" target="_blank" rel="noopener noreferrer"><code>538cb84</code></a>（2026-11-17 03:14，北京时间）</span>
+    <span>创建于 2026-11-16 21:45（北京时间）</span>
+    <span>GitHub API 星标 123（观察于 2026-11-17 16:27，北京时间，会变动）</span>
+    <span>语言 JavaScript · 许可 MIT · 引擎要求 Node ≥ 24</span>
+  </div>
+</article>
+
+<div class="legend">证据分级：<span class="ev ev-source">源码确认</span> 对照指定提交源码　<span class="ev ev-claim">作者宣称</span> 来自 README / 文档，本文未复跑性能　<span class="ev ev-infer">推断</span> 由源码推出　<span class="ev ev-pending">待验证</span> 尚未在本机验证</div>
+
+<div class="seg" role="tablist" aria-label="解剖视图">
+  <button class="seg-btn active" data-tab="flow" role="tab" aria-selected="true">1. 状态与流转</button>
+  <button class="seg-btn" data-tab="core" role="tab" aria-selected="false">2. 核心骨相</button>
+  <button class="seg-btn" data-tab="story" role="tab" aria-selected="false">3. 故事板</button>
+  <button class="seg-btn" data-tab="action" role="tab" aria-selected="false">4. 死穴与落地</button>
+</div>
+
+<section id="tab-flow" class="tab-panel active liquid">
+  <h2>状态跃迁（点击节点或架构图查看细节）</h2>
+  <div class="arch" role="img" aria-label="motlab 渲染架构图">
+    <svg viewBox="0 0 980 280" xmlns="http://www.w3.org/2000/svg">
+      <defs><marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="currentColor"/></marker></defs>
+      <g class="arch-node" data-stage="contract" tabindex="0" role="button"><rect x="20" y="36" width="150" height="70" rx="12"/><text x="95" y="66" text-anchor="middle">场景 HTML</text><text x="95" y="86" text-anchor="middle" class="arch-label">renderAt / TOTAL</text></g>
+      <g class="arch-node" data-stage="serve" tabindex="0" role="button"><rect x="210" y="36" width="150" height="70" rx="12"/><text x="285" y="66" text-anchor="middle">127.0.0.1 服务</text><text x="285" y="86" text-anchor="middle" class="arch-label">随机上传前缀</text></g>
+      <g class="arch-node" data-stage="chrome" tabindex="0" role="button"><rect x="400" y="36" width="160" height="70" rx="12"/><text x="480" y="66" text-anchor="middle">无头 Chrome</text><text x="480" y="86" text-anchor="middle" class="arch-label">DevTools / GPU</text></g>
+      <g class="arch-node" data-stage="encode" tabindex="0" role="button"><rect x="600" y="36" width="160" height="70" rx="12"/><text x="680" y="66" text-anchor="middle">WebCodecs</text><text x="680" y="86" text-anchor="middle" class="arch-label">帧不离页为图</text></g>
+      <g class="arch-node" data-stage="mux" tabindex="0" role="button"><rect x="800" y="36" width="160" height="70" rx="12"/><text x="880" y="66" text-anchor="middle">ffmpeg 封装</text><text x="880" y="86" text-anchor="middle" class="arch-label">.part → rename</text></g>
+      <g class="arch-node" data-stage="project" tabindex="0" role="button"><rect x="300" y="170" width="380" height="70" rx="12"/><text x="490" y="200" text-anchor="middle">project.json 时间线：场景 + 转场 + 混音</text><text x="490" y="218" text-anchor="middle" class="arch-label">同一编码器才能 -c copy 拼接</text></g>
+      <line x1="170" y1="71" x2="208" y2="71"/>
+      <line x1="360" y1="71" x2="398" y2="71"/>
+      <line x1="560" y1="71" x2="598" y2="71"/>
+      <line x1="760" y1="71" x2="798" y2="71"/>
+      <path class="arrow" d="M880 106 L880 205 L682 205"/>
+    </svg>
+  </div>
+  <div class="flow" id="flow-nodes">
+    <button type="button" class="flow-node" data-stage="contract"><div class="node-step">STAGE 01</div><div class="node-title">页面契约</div><div class="node-desc">场景是带 canvas 的 HTML，必须暴露 renderAt 和 ready。</div></button><button type="button" class="flow-node" data-stage="serve"><div class="node-step">STAGE 02</div><div class="node-title">本机静态服务</div><div class="node-desc">只监听 127.0.0.1；场景不能逃出项目根。</div></button><button type="button" class="flow-node" data-stage="chrome"><div class="node-step">STAGE 03</div><div class="node-title">无头 Chrome + 真 GPU</div><div class="node-desc">自研 DevTools 客户端，不引入 Playwright。</div></button><button type="button" class="flow-node" data-stage="encode"><div class="node-step">STAGE 04</div><div class="node-title">页内 WebCodecs 编码</div><div class="node-desc">renderAt 画到 canvas，再变成 VideoFrame 进编码器。</div></button><button type="button" class="flow-node" data-stage="mux"><div class="node-step">STAGE 05</div><div class="node-title">封装与拼接</div><div class="node-desc">优先页内 Mediabunny 封装 MP4，失败再走裸码流 + ffmpeg。</div></button><button type="button" class="flow-node" data-stage="project"><div class="node-step">STAGE 06</div><div class="node-title">项目级时间线</div><div class="node-desc">多场景首尾相接；转场是单独一段，并从相邻场景抠掉重叠帧。</div></button>
+  </div>
+  <div class="drawer" id="flow-detail">点击上方节点，查看输入契约、状态变更与隐性代价。</div>
+</section>
+
+<section id="tab-core" class="tab-panel liquid">
+  <h2>唯一事实来源与不可替代闭环</h2>
+  <div class="grid-2">
+    <div>
+      <h3 style="color:var(--accent-blue)">底牌：项目文件夹就是时间线</h3>
+      <pre>project.json
+  fps
+  scenes: [ "a.html" | { file, transition: { type, duration, ease, params } } ]
+  audio:  [ { file, start, volume, from?, duration? } ]
+
+页面契约（运行时 SSOT）:
+  canvas#c, renderAt(t), ready, TOTAL, EVENTS?
+
+输出前的物理约束:
+  宽高必须为偶数（H.264 / HEVC）
+  各场景画布尺寸必须相同
+  各分段色彩范围必须相同
+  成片帧数 / 时长必须对得上</pre>
+    </div>
+    <div>
+      <h3 style="color:var(--accent-purple)">暗逻辑：画图发生在页内，离页的只有码流</h3>
+      <p style="margin-top:12px;color:var(--tx2);font-size:var(--t-sm)">剥掉 CLI、查看器和 Skill 之后，剩下的闭环是：<span class="ev ev-source">源码确认</span></p>
+      <ol class="act">
+        <li>Agent 或人写的是普通 HTML/JS，不是专有时间线二进制。</li>
+        <li>Chrome 在真实（或软件）GPU 上执行 <code>renderAt</code>，用 WebCodecs 编码。</li>
+        <li>Node 只收编码后的字节，再用 ffmpeg 做 copy、拼接、混音和色彩标签。</li>
+        <li>Skill 只负责帮你把分镜写成符合契约的页面；它不是渲染内核。</li>
+      </ol>
+    </div>
+  </div>
+  <h3 style="margin-top:22px">和常见替代方案的差别</h3>
+  <table>
+    <thead><tr><th>做法</th><th>画面如何变成视频</th><th>对 Agent 的含义</th><th>代价</th></tr></thead>
+    <tbody>
+      <tr><td>Remotion / 传统动画工具</td><td>框架自己调度帧并编码<span class="ev ev-infer">推断</span></td><td>要学框架模型</td><td>表达力强，但页面契约不同；motlab 的基准目录里有 Remotion 对照，本文未评价快慢<span class="ev ev-pending">待验证</span></td></tr>
+      <tr><td>截屏 / 逐帧导出 PNG 再 ffmpeg</td><td>图像离开浏览器再压</td><td>实现简单</td><td>I/O 和体积都大。motlab 源码写明「帧不以图像离开 Chrome」<span class="ev ev-source">源码确认</span></td></tr>
+      <tr><td>纯 ffmpeg / 编辑器时间线</td><td>操作媒体文件</td><td>不适合「用代码画运动图形」</td><td>和「视频即代码」目标不同</td></tr>
+      <tr><td>motlab</td><td>页内 WebCodecs + 本机拼接</td><td>会写 canvas 页面就能出片</td><td>强依赖本机 Chrome / ffmpeg / Node 24；场景页被当作受信代码<span class="ev ev-source">源码确认</span></td></tr>
+    </tbody>
+  </table>
+</section>
+
+<section id="tab-story" class="tab-panel liquid">
+  <h2>故事板：自己会演戏的分镜纸</h2>
+  <div class="story">
+    <p>你不是把胶片交给后期再一格格扫描，而是把每一场戏写在一张「会自己演戏的纸」上：别人只要喊「第 3.2 秒」，纸上的画布就把那一刹那画出来。</p>
+    <p>放映厅就在这台电脑里。放映员不拍照，而是在厅里直接把画面送进压片机，送出大门的只有压好的胶片卷。如果一场戏太长，就同时开几个厅，各放一段，最后把胶片接起来。两场之间的叠化不是把两卷胶片叠着放，而是单独拍一段过渡，并把正片头尾相应的格子剪掉，免得同一格出现两次。</p>
+    <p>配乐在最后按进场时间叠上去。任何一场画幅大小不一样，整部片子就不能直接接带——这是物理限制，不是口味问题。</p>
+  </div>
+  <table>
+    <thead><tr><th>原系统概念</th><th>故事里的对应物</th><th>第一性原理作用</th></tr></thead>
+    <tbody>
+      <tr><td>renderAt(t) + canvas#c</td><td>会按秒数演戏的分镜纸</td><td>时间到画面的唯一函数，引擎不理解你的动画库</td></tr>
+      <tr><td>WebCodecs VideoEncoder</td><td>厅内的压片机</td><td>避免海量位图出进程，只移动压缩后的码流</td></tr>
+      <tr><td>workers + 帧区间</td><td>多个放映厅各放一段</td><td>用进程换吞吐，再无损接片</td></tr>
+      <tr><td>transition.html + head/tail</td><td>单独拍摄的叠化、剪掉重叠格</td><td>转场是一等公民的一段时间，而不是后期滤镜</td></tr>
+      <tr><td>*.part 再 rename</td><td>接好带才换片盒标签</td><td>失败或中断不留下看起来完整的坏文件</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<section id="tab-action" class="tab-panel liquid">
+  <h2>取舍、失效边界与最小落地</h2>
+  <div class="warn">
+    <strong style="color:var(--accent-rose)">崩溃与安全边界</strong>
+    <ul class="act">
+      <li>缺 Chrome、ffmpeg/ffprobe，或 Node 低于 24，命令会失败。<span class="ev ev-source">源码确认</span></li>
+      <li>页面不暴露契约、画布宽高为奇数、各场景尺寸或色彩范围不一致、成片帧数对不上，都会在结束前报错。<span class="ev ev-source">源码确认</span></li>
+      <li>场景 HTML 被当作本机受信代码，可以做页面在浏览器里能做的事。不要拿来渲染来路不明的项目。<span class="ev ev-source">源码确认</span> 见 SECURITY.md。</li>
+      <li>Chrome 带 <code>--enable-unsafe-swiftshader</code>，作者限定只打开用户自己的页面。<span class="ev ev-source">源码确认</span></li>
+      <li>本地 HTTP 虽绑在 127.0.0.1 并做了路径约束，但仍是把项目目录提供给本机浏览器进程。<span class="ev ev-source">源码确认</span></li>
+      <li>硬件编码、颜色范围（GPU 与 SwiftShader 不同）和「auto 编码器」选择依赖本机探测缓存；换机器或驱程后应用 <code>--reprobe</code>。<span class="ev ev-source">源码确认</span> 具体快慢未在本机测量。<span class="ev ev-pending">待验证</span></li>
+    </ul>
+  </div>
+  <h3 style="color:var(--accent-emerald);margin-top:20px">最小落地建议</h3>
+  <ol class="act">
+    <li>先装 Node 24+、本机 Chrome/Chromium、PATH 上的 ffmpeg 与 ffprobe，再按上游文档安装 <code>@motlab/cli</code>。用 <code>motlab doctor</code> 检查，不要先跑仓库里的安装脚本做实验。</li>
+    <li>从官方 <code>example/</code> 看 <code>project.json</code> 和场景页如何暴露 <code>renderAt</code>，先 <code>motlab render example</code> 验证整条链路。<span class="ev ev-pending">待验证</span>（本环境未实渲染）</li>
+    <li>给 Agent 用时，让它只改场景 HTML 与 <code>project.json</code>，把渲染交给 CLI；Skill 是写作指南，不是内核。</li>
+    <li>需要并行加速时再加 <code>--workers</code>；第一段会锁死编码器，避免混用硬件/软件分段。</li>
+    <li>不要把未审查的第三方 motlab 项目直接丢给引擎；把它当「会跑代码的构建工具」。</li>
+  </ol>
+  <p class="muted src" style="margin-top:16px">主要源码永久链接（提交 538cb843c52b3e525ebd79d97284d87c218f6e61）：
+    <a href="https://github.com/staryone/motlab/blob/538cb843c52b3e525ebd79d97284d87c218f6e61/src/render.js" target="_blank" rel="noopener noreferrer">render.js</a> ·
+    <a href="https://github.com/staryone/motlab/blob/538cb843c52b3e525ebd79d97284d87c218f6e61/src/page/runtime.js" target="_blank" rel="noopener noreferrer">runtime.js</a> ·
+    <a href="https://github.com/staryone/motlab/blob/538cb843c52b3e525ebd79d97284d87c218f6e61/src/project.js" target="_blank" rel="noopener noreferrer">project.js</a> ·
+    <a href="https://github.com/staryone/motlab/blob/538cb843c52b3e525ebd79d97284d87c218f6e61/src/chrome.js" target="_blank" rel="noopener noreferrer">chrome.js</a> ·
+    <a href="https://github.com/staryone/motlab/blob/538cb843c52b3e525ebd79d97284d87c218f6e61/src/server.js" target="_blank" rel="noopener noreferrer">server.js</a> ·
+    <a href="https://github.com/staryone/motlab/blob/538cb843c52b3e525ebd79d97284d87c218f6e61/SECURITY.md" target="_blank" rel="noopener noreferrer">SECURITY.md</a> ·
+    <a href="https://github.com/staryone/motlab/blob/538cb843c52b3e525ebd79d97284d87c218f6e61/package.json" target="_blank" rel="noopener noreferrer">package.json</a>
+  </p>
+</section>
+
+<footer class="ft">
+<p>XHOT 是独立的个人项目，与 X Corp.、AIHOT、GitHub 及本文所述开源项目无隶属或背书关系。开源解剖根据公开源码整理，可能有误，以仓库原文与指定版本为准。</p>
+<p><a href="../about.html">关于 · 数据来源 · 免责声明</a> · <a href="index.html">开源解剖索引</a> · <a href="https://github.com/88daxiong/xhot/issues" target="_blank" rel="noopener noreferrer">反馈 / 撤下请求（GitHub Issues）</a></p>
+</footer>
+</main>
+<script type="application/json" id="anatomy-data">{"stages":[{"id":"contract","title":"\u9875\u9762\u5951\u7ea6","summary":"\u573a\u666f\u662f\u5e26 canvas \u7684 HTML\uff0c\u5fc5\u987b\u66b4\u9732 renderAt \u548c ready\u3002","evidence":"source","detail":"\u5f15\u64ce\u4e0d\u89e3\u6790\u52a8\u753b DSL\u3002\u6bcf\u4e00\u9875\u8981\u6709 <code>&lt;canvas id=\"c\"&gt;</code>\uff0c\u63d0\u4f9b <code>window.renderAt(t)</code>\u3001<code>window.ready</code>\u3001<code>window.TOTAL</code>\uff08\u79d2\uff09\uff0c\u53ef\u9009 <code>EVENTS</code>\u3002\u6e32\u67d3\u8fdb\u7a0b\u6253\u5f00\u9875\u9762\u540e\u6700\u591a\u7b49\u6587\u6863\u52a0\u8f7d\u540e 8 \u79d2\uff08\u6709\u811a\u672c\u9519\u8bef\u5219 5 \u79d2\uff09\u770b\u5230\u5951\u7ea6\uff0c\u518d\u7b49\u5f85 <code>ready</code> \u5b8c\u6210\uff0c\u7136\u540e\u628a <code>runtime.js</code> \u6ce8\u5165\u9875\u9762\u2014\u2014\u9875\u9762\u6587\u4ef6\u672c\u8eab\u4e0d\u4f1a\u88ab\u6539\u5199\u3002<a href='https://github.com/staryone/motlab/blob/538cb843c52b3e525ebd79d97284d87c218f6e61/src/render.js#L34-L55' target='_blank' rel='noopener noreferrer'>openPage()</a>\u3001<a href='https://github.com/staryone/motlab/blob/538cb843c52b3e525ebd79d97284d87c218f6e61/src/page/runtime.js#L1-L36' target='_blank' rel='noopener noreferrer'>runtime \u5951\u7ea6</a>\u3002"},{"id":"serve","title":"\u672c\u673a\u9759\u6001\u670d\u52a1","summary":"\u53ea\u76d1\u542c 127.0.0.1\uff1b\u573a\u666f\u4e0d\u80fd\u9003\u51fa\u9879\u76ee\u6839\u3002","evidence":"source","detail":"\u9ed8\u8ba4\u4ece\u6700\u8fd1\u7684 <code>project.json</code> \u76ee\u5f55\uff08\u6216\u9875\u9762\u6240\u5728\u76ee\u5f55\uff09\u8d77\u4e00\u4e2a\u4e34\u65f6\u7aef\u53e3\u670d\u52a1\u5668\uff0c\u4e14\u7ed1\u5b9a <code>127.0.0.1</code>\u3002\u9875\u9762\u8def\u5f84\u82e5\u843d\u5728\u6839\u76ee\u5f55\u4e4b\u5916\u4f1a\u76f4\u63a5\u62d2\u7edd\u3002\u4e0a\u4f20\u7f16\u7801\u7ed3\u679c\u7684\u63a5\u53e3\u6302\u5728\u968f\u673a 8 \u5b57\u8282\u524d\u7f00\u4e0b\uff0c\u907f\u514d\u88ab\u968f\u4fbf\u731c\u5230\u3002\u9759\u6001\u6587\u4ef6\u6709\u76ee\u5f55\u7a7f\u8d8a\u68c0\u67e5\uff08\u89e3\u6790\u540e\u5fc5\u987b\u4ecd\u4f4d\u4e8e\u6839\u4e0b\uff09\u3002\u9879\u76ee\u7ea7\u5b89\u5168\u653f\u7b56\u628a\u300c\u573a\u666f\u9875\u89c6\u4e3a\u53d7\u4fe1\u4efb\u4ee3\u7801\u300d\u5199\u5f97\u5f88\u6e05\u695a\uff1a\u6709\u5bb3\u9875\u9762\u4e0d\u7b97\u5f15\u64ce\u6f0f\u6d1e\u3002<a href='https://github.com/staryone/motlab/blob/538cb843c52b3e525ebd79d97284d87c218f6e61/src/server.js' target='_blank' rel='noopener noreferrer'>server.js</a>\u3001<a href='https://github.com/staryone/motlab/blob/538cb843c52b3e525ebd79d97284d87c218f6e61/SECURITY.md' target='_blank' rel='noopener noreferrer'>SECURITY.md</a>\u3002"},{"id":"chrome","title":"\u65e0\u5934 Chrome + \u771f GPU","summary":"\u81ea\u7814 DevTools \u5ba2\u6237\u7aef\uff0c\u4e0d\u5f15\u5165 Playwright\u3002","evidence":"source","detail":"\u7528 Node \u5185\u7f6e WebSocket \u8fde Chrome DevTools\u3002\u542f\u52a8\u53c2\u6570\u5305\u62ec <code>--headless=new</code>\u3001<code>--enable-gpu</code>\u3001<code>--force_high_performance_gpu</code>\u3001<code>--enable-unsafe-swiftshader</code>\uff08\u65e0 GPU \u65f6\u8f6f\u4ef6 WebGL\uff1b\u4f5c\u8005\u5199\u660e\u53ea\u6253\u5f00\u7528\u6237\u81ea\u5df1\u7684\u9875\u9762\uff09\u3002\u72ec\u7acb\u4e34\u65f6 user-data-dir\uff0c\u8fdb\u7a0b\u9000\u51fa\u65f6\u6e05\u7406\u3002\u901a\u8fc7 Runtime binding \u63a5\u6536\u9875\u5185\u8fdb\u5ea6\uff0c\u800c\u4e0d\u662f\u628a\u4e00\u5e27\u5e27\u4f4d\u56fe\u9001\u56de Node\u3002<a href='https://github.com/staryone/motlab/blob/538cb843c52b3e525ebd79d97284d87c218f6e61/src/chrome.js' target='_blank' rel='noopener noreferrer'>chrome.js</a>\u3002"},{"id":"encode","title":"\u9875\u5185 WebCodecs \u7f16\u7801","summary":"renderAt \u753b\u5230 canvas\uff0c\u518d\u53d8\u6210 VideoFrame \u8fdb\u7f16\u7801\u5668\u3002","evidence":"source","detail":"\u8fd9\u662f\u6838\u5fc3\u95ed\u73af\uff1a<code>renderAt((start+i)/fps)</code> \u2192 <code>new VideoFrame(canvas)</code> \u2192 <code>VideoEncoder.encode</code>\u3002\u50cf\u7d20\u4e0d\u4f5c\u4e3a PNG/JPEG \u79bb\u5f00 Chrome\uff0c\u53ea\u6709\u5df2\u7f16\u7801\u7684\u7801\u6d41 POST \u56de Node\u3002\u7f16\u7801\u5668\u53ef\u8d70\u786c\u4ef6\u6216\u8f6f\u4ef6\u3001H.264 \u6216 HEVC\u3001\u6052\u5b9a QP \u6216\u53ef\u53d8\u7801\u7387\u3002\u591a worker \u65f6\u6309\u5e27\u533a\u95f4\u5207\u5f00\uff0c\u65f6\u95f4\u6233\u5728\u5404\u81ea\u533a\u95f4\u4ece 0 \u8d77\u3002\u5173\u952e\u5e27\u95f4\u9694\u9ed8\u8ba4\u7ea6 2 \u79d2\u3002<a href='https://github.com/staryone/motlab/blob/538cb843c52b3e525ebd79d97284d87c218f6e61/src/page/runtime.js#L82-L119' target='_blank' rel='noopener noreferrer'>encodeRange()</a>\u3002"},{"id":"mux","title":"\u5c01\u88c5\u4e0e\u62fc\u63a5","summary":"\u4f18\u5148\u9875\u5185 Mediabunny \u5c01\u88c5 MP4\uff0c\u5931\u8d25\u518d\u8d70\u88f8\u7801\u6d41 + ffmpeg\u3002","evidence":"source","detail":"<code>mux=auto</code> \u65f6\u5148\u8ba9\u9875\u9762\u7528\u4f9d\u8d56\u5e93 Mediabunny\uff08\u9489\u6b7b 1.65.2\uff09\u505a MP4\uff0c\u518d\u7531 ffmpeg <code>-c copy</code> \u5199\u8272\u5f69\u6807\u7b7e\u3001\u62fc\u63a5\u5206\u6bb5\u3001\u6df7\u97f3\u3002\u5931\u8d25\u5219\u6539\u5199 Annex B \u88f8\u6d41\uff0c\u591a\u6bb5\u76f4\u63a5\u62fc\u63a5\u540e\u4ea4\u7ed9 ffmpeg\u3002\u6700\u7ec8\u5148\u5199 <code>*.part</code> \u518d rename\uff0c\u907f\u514d\u7559\u4e0b\u534a\u622a\u6210\u54c1\u3002\u8f93\u51fa\u8fd8\u8981\u6838\u5bf9\u5e27\u6570\u548c\u65f6\u957f\uff0c\u5bf9\u4e0d\u4e0a\u5c31\u62a5\u9519\u3002<a href='https://github.com/staryone/motlab/blob/538cb843c52b3e525ebd79d97284d87c218f6e61/src/render.js#L101-L148' target='_blank' rel='noopener noreferrer'>attempt / finalize / \u6821\u9a8c</a>\u3002"},{"id":"project","title":"\u9879\u76ee\u7ea7\u65f6\u95f4\u7ebf","summary":"\u591a\u573a\u666f\u9996\u5c3e\u76f8\u63a5\uff1b\u8f6c\u573a\u662f\u5355\u72ec\u4e00\u6bb5\uff0c\u5e76\u4ece\u76f8\u90bb\u573a\u666f\u62a0\u6389\u91cd\u53e0\u5e27\u3002","evidence":"source","detail":"<code>project.json</code> \u5217\u51fa\u573a\u666f\u3001\u53ef\u9009\u8f6c\u573a\u548c\u97f3\u9891\u3002\u6bcf\u4e2a\u573a\u666f\u5148\u6e32\u6210\u4e00\u6bb5 MP4\uff0c\u540e\u7eed\u573a\u666f\u88ab\u8feb\u4f7f\u7528\u7b2c\u4e00\u6bb5\u9009\u5b9a\u7684\u540c\u4e00\u7f16\u7801\u5668\uff0c\u624d\u80fd\u65e0\u91cd\u7f16\u7801\u62fc\u63a5\u3002\u82e5\u573a\u666f N\u2192N+1 \u6709\u8f6c\u573a\uff0c\u5f15\u64ce\u53e6\u6e32 <code>__motlab/transition.html</code>\uff0c\u5e76\u628a\u8fd9\u6bb5\u5e27\u4ece\u4e24\u573a\u7684 head/tail \u91cc\u5254\u9664\uff0c\u907f\u514d\u753b\u9762\u91cd\u590d\u3001\u603b\u65f6\u957f\u7f29\u77ed\u3002\u97f3\u9891\u7528 ffmpeg \u505a delay/\u97f3\u91cf/amix\uff0c\u5355\u58f0\u9053\u6309\u89c2\u770b\u5668\u8bed\u4e49\u590d\u5236\u5230\u5de6\u53f3\u58f0\u9053\u800c\u4e0d\u662f\u964d\u4f4e 3 dB\u3002\u6240\u6709\u573a\u666f\u753b\u5e03\u5c3a\u5bf8\u548c\u8272\u5f69\u8303\u56f4\u5fc5\u987b\u4e00\u81f4\u3002<a href='https://github.com/staryone/motlab/blob/538cb843c52b3e525ebd79d97284d87c218f6e61/src/project.js' target='_blank' rel='noopener noreferrer'>project.js</a>\u3002"}]}</script>
+</body>
+</html>
