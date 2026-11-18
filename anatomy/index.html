@@ -38,7 +38,7 @@
 
 <section class="card" aria-labelledby="choose">
   <h2 id="choose">选择一篇拆解</h2>
-  <p class="muted">下面八篇都会直接显示。搜索和筛选只是辅助，不是入口。</p>
+  <p class="muted">下面九篇都会直接显示。搜索和筛选只是辅助，不是入口。</p>
   <div class="cards" style="margin-top:8px">
     <a class="proj-card" href="ai-memory.html" data-tags="memory agent rust" data-hay="ai-memory akitaonrails wiki markdown sqlite 记忆 交接 编程 agent 零llm">
       <div class="badge-row"><span class="pill">Agent 记忆</span><span class="pill purple">Rust</span><span class="pill">v3.4.7</span></div>
@@ -98,6 +98,14 @@
       <p class="cta">阅读拆解 →</p>
     </a>
 
+    <a class="proj-card" href="mingle.html" data-tags="im harness agent" data-hay="mingle earayu 聊天 飞书 slack telegram wecom dingtalk qq discord 机器人 oar claude code codex opencode 本地 钥匙串 memory.md">
+      <div class="badge-row"><span class="pill">聊天接入</span><span class="pill purple">TypeScript</span><span class="pill">v0.3.1</span></div>
+      <h2>Mingle</h2>
+      <p class="hl">最大亮点：一个长期存在的本机 Agent，以官方机器人身份出现在你正在用的聊天软件里；所有消息进入同一条可恢复的编码代理会话。</p>
+      <p style="margin-top:10px">适合：已经在用 Claude Code 或 Codex，希望同一个 Agent 出现在飞书、Slack、Telegram 等对话里，并且不把聊天记录交给第三方服务器。</p>
+      <p class="cta">阅读拆解 →</p>
+    </a>
+
   </div>
   <p id="filter-empty" class="muted" hidden style="margin-top:16px">没有符合条件的文章。可点「全部」重新显示。</p>
   <div class="filter-bar">
@@ -112,6 +120,7 @@
       <button type="button" data-filter-tag="port" aria-pressed="false">Rust 迁移</button>
       <button type="button" data-filter-tag="harness" aria-pressed="false">Agent 运行时</button>
       <button type="button" data-filter-tag="team" aria-pressed="false">多智能体</button>
+      <button type="button" data-filter-tag="im" aria-pressed="false">聊天接入</button>
     </div>
   </div>
 </section>

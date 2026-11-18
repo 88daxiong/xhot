@@ -1,0 +1,630 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="light" data-pref="auto">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-eySqtWEMW2APPEHKl4ofjbb4sL/hbt3uVDrovVQbBOY=' 'sha256-kbD/g4DLVOhYU6B+C0687/8qBj95Yaq3fG36+otXe9I='; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'none'; connect-src 'self'; media-src 'none'; frame-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%E2%9A%A1%3C/text%3E%3C/svg%3E">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#6d28d9">
+<meta name="description" content="从第一性原理拆解 Mingle：把本机已有的编码代理会话接到你正在用的聊天软件里，不自建服务器，也不另写一套模型循环。">
+<title>Mingle · 开源解剖 · XHOT</title>
+<script>(function(){var d=document.documentElement,t,s;try{t=localStorage.getItem('xhot-theme');s=localStorage.getItem('xhot-density')}catch(e){}t=(t==='light'||t==='dark')?t:'auto';d.setAttribute('data-pref',t);d.setAttribute('data-theme',t==='auto'?(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'):t);if(s==='compact')d.setAttribute('data-density','compact')})();</script>
+<style>
+/* XHOT 开源解剖：共用样式。可读性优先，玻璃效果克制。 */
+:root{--t-cap:0.75rem;--t-sm:0.8125rem;--t-md:0.9375rem;--t-lg:1.0625rem;--t-xl:1.25rem;--t-xxl:1.5rem;--bg:#f4f3f8;--card:#fff;--bd:#d9d6e3;--bd2:#eceaf2;--hov:#f3f1f8;--tx:#18181b;--tx2:#3f3f46;--mu:#5c5870;--ac:#6d28d9;--actx:#5b21b6;--glow:rgba(109,40,217,.16);--up:#16a34a;--dn:#dc2626;--g1:#7c3aed;--g2:#db2777;--g3:#f97316;--sh:0 1px 2px rgba(24,24,27,.06),0 8px 24px -12px rgba(76,29,149,.16);--accent-blue:#0369a1;--accent-purple:#6d28d9;--accent-emerald:#047857;--accent-amber:#b45309;--accent-rose:#be123c;color-scheme:light}
+@media(max-width:720px){:root{--t-xxl:1.375rem}}
+html[data-theme=dark]{--bg:#120f22;--card:#1c1838;--bd:#3a3660;--bd2:#2a2650;--hov:#262148;--tx:#f4f4f5;--tx2:#d4d4d8;--mu:#b4b1ce;--ac:#c4b5fd;--actx:#ddd6fe;--glow:rgba(196,181,253,.2);--up:#4ade80;--dn:#fb7185;--sh:0 1px 0 rgba(255,255,255,.04);--accent-blue:#7dd3fc;--accent-purple:#c4b5fd;--accent-emerald:#6ee7b7;--accent-amber:#fcd34d;--accent-rose:#fb7185;color-scheme:dark}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--bg);color:var(--tx);font:400 var(--t-md)/1.6 system-ui,"Noto Sans CJK SC",-apple-system,"PingFang SC","Helvetica Neue",sans-serif;touch-action:manipulation;min-height:100vh;overflow-x:hidden}
+a{color:inherit}
+button,summary{font:inherit}
+:focus-visible{outline:2px solid var(--ac);outline-offset:2px;border-radius:6px}
+.skip{position:absolute;left:12px;top:-60px;z-index:100;padding:8px 16px;border-radius:8px;background:#5b21b6;color:#fff;font-weight:600;text-decoration:none}
+.skip:focus{top:8px}
+
+.top{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 94%,transparent);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--bd)}
+.top::before{content:"";display:block;height:3px;background:linear-gradient(90deg,var(--g1),var(--g2),var(--g3))}
+.bar{max-width:1600px;margin:0 auto;padding:0 clamp(12px,2vw,32px);height:52px;display:flex;align-items:center;gap:12px}
+.lg{display:flex;align-items:center;gap:8px;font-weight:600;font-size:var(--t-lg);text-decoration:none;white-space:nowrap}
+.lg i{font-style:normal;width:28px;height:28px;border-radius:8px;display:grid;place-items:center;color:#fff;background:linear-gradient(135deg,var(--g1),var(--g2) 60%,var(--g3));font-size:var(--t-lg)}
+.lg span{font-weight:500;font-size:var(--t-sm);color:var(--mu)}
+.nav{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none;flex:1;min-width:0}
+.nav::-webkit-scrollbar{display:none}
+.nav a{display:inline-flex;align-items:center;height:32px;padding:0 10px;border-radius:8px;text-decoration:none;color:var(--tx2);font-weight:500;white-space:nowrap;min-height:36px}
+.nav a:hover{background:var(--hov);color:var(--tx)}
+.nav a[aria-current=page]{color:#fff;background:linear-gradient(135deg,var(--g1),var(--g2));box-shadow:0 4px 14px -6px var(--g2)}
+.sp0{flex:0 0 auto;margin-left:auto}
+.tg{display:inline-flex;padding:2px;border-radius:8px;background:var(--hov);border:1px solid var(--bd);flex:none}
+.tg button{height:32px;min-width:36px;padding:0 8px;border:0;border-radius:6px;background:none;color:var(--mu);cursor:pointer;font-size:var(--t-sm);min-height:36px}
+.tg button.on{background:var(--card);color:var(--tx);box-shadow:0 1px 3px rgba(0,0,0,.14)}
+
+.subbar{max-width:1600px;margin:0 auto;padding:4px clamp(12px,2vw,32px) 6px;display:flex;flex-wrap:wrap;gap:4px 12px;align-items:center;border-top:1px solid var(--bd)}
+.back{display:inline-flex;align-items:center;gap:6px;min-height:36px;padding:4px 10px;border-radius:8px;border:1px solid color-mix(in srgb,var(--ac) 35%,var(--bd));background:var(--card);color:var(--actx);font-weight:650;text-decoration:none}
+.back:hover{background:var(--hov)}
+.page-toc{display:flex;flex-wrap:wrap;gap:4px;align-items:center}
+.page-toc a{display:inline-flex;align-items:center;min-height:36px;padding:0 10px;border-radius:8px;text-decoration:none;color:var(--tx2);font-weight:600}
+.page-toc a:hover{background:var(--hov);color:var(--tx)}
+
+.wrap{max-width:980px;margin:0 auto;padding:16px clamp(12px,2vw,28px) 32px}
+.ft{margin-top:24px;font-size:var(--t-sm);color:var(--mu);text-align:center}
+.ft p{margin:0 0 8px}
+.ft a{color:var(--actx);text-decoration:underline;text-underline-offset:2px;font-weight:600}
+@media(max-width:1060px){.bar{flex-wrap:wrap;height:auto;padding-top:8px;padding-bottom:8px;gap:8px}}
+@media(max-width:720px){.bar{gap:8px}.lg span{display:none}.wrap{padding:12px 12px 36px}}
+@media(pointer:coarse),(max-width:720px){
+  .back,.page-toc a,.foot-nav a,.nav a,.filter-chips button,.filter-bar input,details.deep>summary{min-height:44px}
+}
+
+.ambient{position:fixed;inset:0;z-index:-1;overflow:hidden;pointer-events:none}
+.orb{position:absolute;border-radius:50%;filter:blur(90px);opacity:.12}
+html[data-theme=dark] .orb{opacity:.28}
+.orb-1{width:280px;height:280px;background:radial-gradient(circle,#7c3aed,transparent 70%);top:-120px;left:-80px}
+.orb-2{width:240px;height:240px;background:radial-gradient(circle,#db2777,transparent 70%);bottom:-80px;right:-40px}
+.orb-3{display:none}
+
+.card{background:var(--card);border:1px solid var(--bd);border-radius:14px;box-shadow:var(--sh);padding:14px 16px;margin-bottom:12px}
+/* 兼容旧文的 liquid 类，改为更实的卡片，避免字衬在玻璃上发虚 */
+.liquid{background:var(--card);border:1px solid var(--bd);border-radius:14px;box-shadow:var(--sh);padding:14px 16px;margin-bottom:12px;backdrop-filter:none;-webkit-backdrop-filter:none}
+.hero{margin-bottom:12px}
+.badge-row{display:flex;gap:6px;align-items:center;margin-bottom:8px;flex-wrap:wrap}
+.pill{font-size:var(--t-cap);font-weight:650;letter-spacing:.02em;padding:2px 8px;border-radius:999px;background:color-mix(in srgb,var(--accent-blue) 12%,transparent);border:1px solid color-mix(in srgb,var(--accent-blue) 30%,transparent);color:var(--accent-blue)}
+.pill.purple{background:color-mix(in srgb,var(--accent-purple) 12%,transparent);border-color:color-mix(in srgb,var(--accent-purple) 30%,transparent);color:var(--accent-purple)}
+h1{font-size:var(--t-xxl);font-weight:700;letter-spacing:-.02em;margin-bottom:8px;line-height:1.3}
+h2{font-size:var(--t-lg);font-weight:700;letter-spacing:-.01em;margin-bottom:8px}
+h3{font-size:var(--t-md);font-weight:650;margin:12px 0 6px}
+.essence{font-size:var(--t-md);color:var(--tx);background:color-mix(in srgb,var(--tx) 4%,var(--card));border-left:3px solid var(--ac);padding:8px 12px;border-radius:0 10px 10px 0}
+.meta{margin-top:8px;font-size:var(--t-sm);color:var(--mu);display:flex;flex-wrap:wrap;gap:4px 12px}
+.meta a{color:var(--actx);font-weight:600}
+p+p,ul+p,ol+p{margin-top:8px}
+.muted{color:var(--mu);font-size:var(--t-sm)}
+
+#highlight,#flow,#use,#deep,#projects,#compare{scroll-margin-top:108px}
+
+.highlight{border:1px solid color-mix(in srgb,var(--ac) 40%,var(--bd));background:color-mix(in srgb,var(--ac) 7%,var(--card));border-radius:12px;padding:12px 14px}
+.highlight .kicker{font-size:var(--t-cap);font-weight:750;letter-spacing:.04em;text-transform:uppercase;color:var(--ac);margin-bottom:4px}
+.highlight .lead{font-size:var(--t-lg);line-height:1.5;font-weight:600}
+.highlight .why{margin-top:8px;color:var(--tx2)}
+
+.pipeline{list-style:none;display:flex;flex-wrap:nowrap;gap:0;align-items:stretch;margin:0;padding:0;width:100%}
+.pipeline .pipe{flex:1 1 0;min-width:0}
+.pipe-node{width:100%;height:100%;text-align:left;border:1px solid var(--bd);background:var(--bg);border-radius:10px;padding:8px 10px;cursor:pointer;color:inherit}
+.pipe-node:hover,.pipe-node.selected{border-color:var(--ac);background:color-mix(in srgb,var(--ac) 8%,var(--card));box-shadow:0 0 0 3px color-mix(in srgb,var(--ac) 22%,transparent)}
+.pipe-io{font-size:var(--t-cap);color:var(--mu);line-height:1.4;word-break:break-word}
+.pipe-act{font-weight:700;margin:4px 0;font-size:var(--t-sm);line-height:1.35}
+.pipe-arrow{flex:0 0 16px;display:flex;align-items:center;justify-content:center;color:var(--mu);font-size:0.95rem;line-height:1;padding:0}
+.drawer{margin-top:8px;padding:10px 12px;border-radius:10px;background:var(--bg);border:1px solid var(--bd);font-size:var(--t-sm);color:var(--tx2)}
+.drawer strong{color:var(--tx);margin-right:8px}
+.pipe-label{font-weight:700;margin:10px 0 6px;font-size:var(--t-sm)}
+.pipe-label:first-of-type{margin-top:4px}
+.drawer .detail-body{margin-top:6px}
+.drawer p+p{margin-top:8px}
+
+@media(max-width:860px){
+  .pipeline{flex-direction:column}
+  .pipe-arrow{flex:0 0 14px;height:14px;transform:rotate(90deg)}
+}
+
+.use-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:10px;margin-top:8px}
+.use-box{border:1px solid var(--bd);border-radius:10px;padding:10px 12px;background:var(--bg)}
+.use-box h3{margin-top:0}
+.use-box.no{border-color:color-mix(in srgb,var(--accent-rose) 35%,var(--bd))}
+.use-box.yes{border-color:color-mix(in srgb,var(--accent-emerald) 35%,var(--bd))}
+ol.act,ul.act{margin:6px 0 0 1.15em;color:var(--tx2)}
+ol.act li,ul.act li{margin:4px 0}
+pre,code{font-family:ui-monospace,"SF Mono",Menlo,Consolas,monospace}
+pre{background:var(--bg);border:1px solid var(--bd);border-radius:10px;padding:10px 12px;overflow-x:auto;font-size:0.8125rem;color:var(--tx);margin-top:8px;line-height:1.5;white-space:pre-wrap;word-break:break-word}
+.warn{border-left:3px solid var(--accent-amber);background:color-mix(in srgb,var(--accent-amber) 8%,var(--card));padding:8px 12px;border-radius:0 10px 10px 0;margin-top:8px}
+.ev{display:inline-block;font-size:0.75rem;font-weight:700;padding:1px 8px;border-radius:999px;margin-left:6px;vertical-align:middle}
+.ev-source{background:color-mix(in srgb,var(--accent-emerald) 16%,transparent);color:var(--accent-emerald)}
+.ev-claim{background:color-mix(in srgb,var(--accent-amber) 16%,transparent);color:var(--accent-amber)}
+.ev-infer{background:color-mix(in srgb,var(--accent-purple) 16%,transparent);color:var(--accent-purple)}
+.ev-pending{background:color-mix(in srgb,var(--accent-rose) 16%,transparent);color:var(--accent-rose)}
+.legend{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 16px;font-size:var(--t-sm);color:var(--mu);align-items:center}
+table{width:100%;border-collapse:collapse;margin-top:8px;font-size:var(--t-sm)}
+th,td{text-align:left;padding:6px 8px;border-bottom:1px solid var(--bd);vertical-align:top}
+th{color:var(--mu);font-weight:700}
+.src a,.card a{color:var(--actx)}
+
+details.deep{border:1px solid var(--bd);border-radius:10px;padding:2px 12px 8px;margin-top:8px;background:var(--bg)}
+details.deep>summary{cursor:pointer;font-weight:700;min-height:40px;display:flex;align-items:center;list-style:none}
+details.deep>summary::-webkit-details-marker{display:none}
+details.deep>summary::after{content:"展开";margin-left:auto;font-weight:500;color:var(--mu);font-size:var(--t-sm)}
+details.deep[open]>summary::after{content:"收起"}
+.formula{background:var(--bg);border:1px solid var(--bd);border-radius:10px;padding:10px 12px;overflow-x:auto;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:0.8125rem;margin:8px 0;line-height:1.5}
+
+.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:8px}
+@media(max-width:720px){.cards{grid-template-columns:1fr}}
+.proj-card{display:flex;flex-direction:column;text-decoration:none;color:inherit;padding:12px 14px;border-radius:12px;min-height:0;border:1px solid var(--bd);background:var(--card);box-shadow:var(--sh)}
+.proj-card:hover{border-color:var(--ac)}
+.proj-card h2{font-size:var(--t-lg);margin:2px 0 4px}
+.proj-card .hl{margin-top:6px;padding:6px 8px;border-radius:8px;background:color-mix(in srgb,var(--ac) 7%,var(--bg));font-weight:600}
+.proj-card .cta{margin-top:8px;padding-top:0;font-weight:700;color:var(--actx)}
+.filter-bar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:10px 0 0}
+.filter-bar input{flex:1;min-width:200px;height:36px;padding:0 10px;border-radius:8px;border:1px solid var(--bd);background:var(--card);color:var(--tx);font:inherit}
+.filter-chips{display:flex;flex-wrap:wrap;gap:6px}
+.filter-chips button{height:32px;min-height:36px;padding:0 10px;border-radius:999px;border:1px solid var(--bd);background:var(--card);color:var(--tx2);cursor:pointer}
+.filter-chips button.on{background:var(--ac);color:#fff;border-color:transparent}
+
+/* 旧文仍用到的阶段卡片 / 分段，保持可用 */
+.seg{display:inline-flex;background:var(--bg);border:1px solid var(--bd);border-radius:16px;padding:5px;margin:0 0 20px;gap:4px;flex-wrap:wrap}
+.seg-btn{background:transparent;border:none;color:var(--tx2);font-size:var(--t-sm);font-weight:500;padding:9px 16px;border-radius:12px;cursor:pointer;min-height:44px}
+.seg-btn.active{background:var(--card);color:var(--tx);box-shadow:0 4px 12px rgba(0,0,0,.06)}
+.tab-panel{display:none}
+.tab-panel.active{display:block}
+.flow{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:8px;margin-top:10px}
+.flow-node{background:var(--bg);border:1px solid var(--bd);border-radius:10px;padding:10px;cursor:pointer;text-align:left;color:inherit}
+.flow-node:hover,.flow-node.selected{background:color-mix(in srgb,var(--ac) 10%,var(--card));border-color:var(--ac)}
+.node-step{font-size:0.75rem;color:var(--ac);font-weight:700;letter-spacing:.04em;text-transform:uppercase}
+.node-title{font-size:var(--t-md);font-weight:650;margin:6px 0}
+.node-desc{font-size:var(--t-sm);color:var(--tx2)}
+.arch{width:100%;overflow-x:auto;margin:12px 0}
+.arch svg{width:100%;height:auto;display:block}
+.arch-node{cursor:pointer}
+.arch-node rect,.arch-node polygon{fill:var(--card);stroke:var(--bd);stroke-width:1.5}
+.arch-node.selected rect,.arch-node.selected polygon{fill:color-mix(in srgb,var(--ac) 16%,var(--card));stroke:var(--ac)}
+.arch-node text{fill:var(--tx);font-size:12px;font-family:inherit;pointer-events:none}
+.arch-label{fill:var(--mu);font-size:11px}
+.grid-2{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:10px;margin-top:8px}
+
+.foot-nav{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:4px 0 10px}
+.foot-nav a{display:inline-flex;align-items:center;min-height:36px;padding:0 12px;border-radius:8px;border:1px solid var(--bd);background:var(--card);color:var(--actx);text-decoration:none;font-weight:650}
+
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none !important;transition:none !important}
+  .orb{filter:none;opacity:.08}
+}
+
+</style>
+</head>
+<body>
+<a class="skip" href="#main">跳到正文</a>
+<div class="ambient" aria-hidden="true"><div class="orb orb-1"></div><div class="orb orb-2"></div></div>
+<header class="top">
+<div class="bar">
+<a class="lg" href="https://88daxiong.github.io/xhot/index.html"><i aria-hidden="true">⚡</i>XHOT<span>X 热点雷达</span></a>
+<nav class="nav" aria-label="栏目"><a href="https://88daxiong.github.io/xhot/index.html">今日</a><a href="https://88daxiong.github.io/xhot/d/ai.html">领域</a><a href="https://88daxiong.github.io/xhot/people.html">人物</a><a href="https://88daxiong.github.io/xhot/news.html">资讯</a><a href="https://88daxiong.github.io/xhot/trends.html">趋势</a><a href="https://88daxiong.github.io/xhot/agents.html">Agent</a><a href="https://88daxiong.github.io/xhot/anatomy/index.html">解剖</a></nav>
+<span class="sp0"></span>
+<div class="tg" role="group" aria-label="主题"><button type="button" data-set-theme="light" aria-label="浅色">☀</button><button type="button" data-set-theme="dark" aria-label="深色">☾</button><button type="button" data-set-theme="auto">自动</button></div>
+</div>
+<div class="subbar">  <a class="back" href="https://88daxiong.github.io/xhot/anatomy/index.html">← 返回开源解剖主页</a>
+  <nav class="page-toc" aria-label="本页目录">
+    <a href="#highlight">亮点</a>
+    <a href="#flow">流程</a>
+    <a href="#use">怎么用</a>
+    <a href="#deep">深入</a>
+  </nav></div>
+</header>
+<main id="main" class="wrap">
+
+<article class="card hero">
+  <div class="badge-row"><span class="pill">开源解剖</span><span class="pill purple">v0.3.1</span><span class="pill">MIT</span></div>
+  <h1>Mingle</h1>
+  <p class="essence">你在本机创建一个有名字、角色和记忆的 Agent，由已经登录的 Claude Code、Codex 等编码代理驱动；它以机器人身份出现在你正在用的聊天软件里。Mingle 没有自己的服务器，也不自己实现模型循环。</p>
+  <div class="meta">
+    <span>仓库 <a href="https://github.com/earayu/Mingle" target="_blank" rel="noopener noreferrer">earayu/Mingle</a></span>
+    <span>网站 <a href="https://mingle.build/" target="_blank" rel="noopener noreferrer">mingle.build</a></span>
+    <span>分析提交 <a href="https://github.com/earayu/Mingle/tree/58559b332b80493c0caf6956282e0c35200a0879" target="_blank" rel="noopener noreferrer"><code>58559b3</code></a>（2026-11-18 15:37 北京时间，Release 0.3.1）</span>
+    <span>GitHub 匿名搜索星标 41（观察于 2026-11-18 16:15 北京时间，会变动）</span>
+    <span>创建于 2026-11-11</span>
+    <span>语言 TypeScript · 许可 MIT · 需要 Node.js ≥ 24</span>
+    <span>单文件版 <a href="https://88daxiong.github.io/xhot/anatomy/exports/mingle.standalone.html">下载</a></span>
+  </div>
+</article>
+
+<section class="card" id="highlight">
+  <div class="highlight">
+    <div class="kicker">最大亮点</div>
+    <p class="lead">一等对象是长期存在的 Agent，不是某个聊天软件里的一次会话。所有 IM 的消息都进入同一条可恢复的 harness 会话；连续性来自这条会话和 <code>MEMORY.md</code>，而不是再造一个聊天平台。</p>
+    <p class="why">常见做法要么自建工作区和服务器（如 Raft），要么在 IM 里用命令去操控某个终端会话。Mingle 把已有的官方机器人通道接到本机已付费的编码代理上：控制台和 API 只监听 <code>127.0.0.1</code>，机器人凭据进系统钥匙串，模型登录态仍由各 harness 自己管。<span class="ev ev-source">源码确认</span></p>
+  </div>
+  <p class="muted" style="margin-top:12px">一句话输入输出：输入是某个已连接聊天里的一条消息（或提醒、交接）；输出是同一条会话里的模型回合，以及经权限检查后、通过 <code>mingle</code> 命令送回原聊天的回复。机器需要保持运行，并已安装、登录所选 harness。</p>
+</section>
+
+<section class="card" id="flow">
+  <h2>它怎么运转</h2>
+  <p>下面这条路径默认就能看完。每个框里写了动作、数据去向和进出。想看源码细节时，再点其中一格。</p>
+  <ol class="pipeline">
+    <li class="pipe"><button type="button" class="pipe-node" data-stage="in"><div class="pipe-io">输入：官方机器人 API 推送</div><div class="pipe-act">接入并归一成入站消息</div><div class="pipe-io">去向：本机 SQLite 消息账本</div></button></li>
+    <li class="pipe-arrow" aria-hidden="true">→</li>
+    <li class="pipe"><button type="button" class="pipe-node" data-stage="deliver"><div class="pipe-io">输入：received 状态的消息</div><div class="pipe-act">投递进同一条长期会话</div><div class="pipe-io">去向：prompted / steered / queued</div></button></li>
+    <li class="pipe-arrow" aria-hidden="true">→</li>
+    <li class="pipe"><button type="button" class="pipe-node" data-stage="act"><div class="pipe-io">输入：Agent 调用 mingle CLI</div><div class="pipe-act">检查权限并回写聊天</div><div class="pipe-io">去向：原 IM 的引用回复</div></button></li>
+    <li class="pipe-arrow" aria-hidden="true">→</li>
+    <li class="pipe"><button type="button" class="pipe-node" data-stage="memory"><div class="pipe-io">输入：ROLE.md / MEMORY.md / 账本</div><div class="pipe-act">压缩、重启或冷启动后接上</div><div class="pipe-io">去向：可丢的会话，不可丢的 Agent</div></button></li>
+  </ol>
+  <div class="drawer" id="flow-detail" aria-live="polite">点击流程中的一格，可看到这一步的机制说明。不点也能从框图读懂主路径。</div>
+</section>
+
+<section class="card" id="use">
+  <h2>怎么用</h2>
+  <div class="use-grid">
+    <div class="use-box yes">
+      <h3>什么情况下用</h3>
+      <ul class="act">
+        <li>已经在用 Claude Code、Codex、OpenCode 或 Kimi Code，希望同一个 Agent 出现在飞书、Slack、Telegram 等现有对话里，并且记得跨软件发生过的事。</li>
+        <li>不想把聊天记录交给第三方 Mingle 服务器，也不想再学一套新的工作区产品。</li>
+        <li>可以接受：电脑（或你自己的 SSH 主机）要在线，消息仍会经过 IM 平台和模型厂商。</li>
+      </ul>
+    </div>
+    <div class="use-box no">
+      <h3>什么情况下不用</h3>
+      <ul class="act">
+        <li>需要现在就把微信、钉钉等通道当成已经在真实租户里验证过的产品能力。作者写明核心端到端目前在 Claude Code / Codex / OpenCode / Kimi Code 上工作；飞书在真实租户验证过，其余聊天软件主要是对接官方 API 和测试。<span class="ev ev-claim">作者宣称</span></li>
+        <li>不能接受「一个 Agent 的记忆跨群共享」：私聊里听到的内容，可能在群里被说出来。这是规格里已接受的取舍。<span class="ev ev-source">源码确认</span></li>
+        <li>希望 Mingle 自己提供模型、账号或多设备云同步。这些明确不在范围内。</li>
+      </ul>
+    </div>
+  </div>
+  <h3>最小上手方案</h3>
+  <p>从 Releases 安装桌面应用（macOS 已签名公证；Windows 尚未签名），或在已有 Node.js 24 和 pnpm 的机器上从源码启动。分析所用版本是 0.3.1：</p>
+<pre><code>git clone https://github.com/earayu/Mingle.git &amp;&amp; cd Mingle
+git checkout 58559b332b80493c0caf6956282e0c35200a0879
+pnpm install &amp;&amp; pnpm build
+node dist/cli/main.js start
+node dist/cli/main.js agent create --name Alex --harness claude --role "You help me plan trips."
+echo "$TELEGRAM_BOT_TOKEN" | node dist/cli/main.js connect alex telegram</code></pre>
+  <ul class="act">
+    <li>桌面应用安装脚本见 README；控制台只绑在本机回环地址。<span class="ev ev-source">源码确认</span></li>
+    <li>谁扫码或向机器人发送 6 位认领码，就成为该 Agent 的 owner。之后 owner 可用 <code>/stop</code> 叫停当前回合。<span class="ev ev-claim">作者宣称</span></li>
+    <li>本文只阅读了源码、规格、测试目录和 Changelog，未在本机启动桌面应用，也未连接任何聊天租户。<span class="ev ev-pending">待验证</span></li>
+  </ul>
+</section>
+
+<section class="card" id="deep">
+  <h2>深入</h2>
+  <p class="muted">下面这些不影响先建立整体图景。需要对照源码、字段或边界时再展开。证据仍指向固定提交 <code>58559b3</code>。</p>
+  <details class="deep">
+    <summary>入站状态机：消息如何从收到变成已回复</summary>
+    <ul class="act">
+      <li><code>inbound.ts</code> 把入站消息写成有限状态：<code>received → delivered / waiting / failed / unanswered / replied / ignored / held</code>。例如 <code>deliver</code> 只从 <code>received</code> 走到 <code>delivered</code>；Agent 的 <code>reply</code> 可以从多种未完成状态走到 <code>replied</code>；普通 <code>send</code> 不能把从未送达的失败消息悄悄标成已回复。<span class="ev ev-source">源码确认</span></li>
+      <li>群里没被 @ 的背景消息、暂停期间的消息，以及 owner 拒绝的私聊/进群请求，不会唤醒回合。Owner 在群里的唯一会话命令是 <code>/stop</code>。<span class="ev ev-source">源码确认</span></li>
+    </ul>
+  </details>
+  <details class="deep">
+    <summary>投递：空闲合并、运转中插入，或排到下一回合</summary>
+    <ul class="act">
+      <li><code>AgentRuntime</code> 在空闲时把短时间里的多条消息合成一次新回合；回合进行中则把新输入 <code>steer</code> 进当前回合，若 harness 不支持插入就 <code>queue</code> 到下一回合。<span class="ev ev-source">源码确认</span></li>
+      <li>投递结果是 <code>prompted | steered | queued | rejected</code>。Kimi Code 会在自启后台任务未结束时立刻给出空回合，0.2.3 起这种空回合不算真正作答，消息继续等待真正跑模型的那一轮。<span class="ev ev-source">源码确认</span></li>
+      <li>若一个回合对正在等待回复的消息连续 20 分钟没有任何思考、正文、工具、子代理或 <code>mingle</code> 命令，运行时会自行结束该回合并换进程，避免状态一直停在「工作中」。无人等待的长任务不会被这条规则打断。<span class="ev ev-source">源码确认</span></li>
+    </ul>
+  </details>
+  <details class="deep">
+    <summary>会话可丢，Agent 不丢</summary>
+    <ul class="act">
+      <li>每个 Agent 只有一条长期 harness 会话，工作目录就是它的主目录。重启后用 OAR 的 <code>resume</code> 恢复同一会话 ID；会话损坏或更换 harness 时再开新会话，靠 <code>MEMORY.md</code> 和消息记录接上。<span class="ev ev-source">源码确认</span></li>
+      <li>冷启动默认关闭。空闲超过 1 小时、上下文超过 128K token、且这次不是插话时，可按 <code>MINGLE_COLD_START=rebuild</code> 新开会话，第一条输入由 Mingle 组装：<code>MEMORY.md</code> 开头约 16 KiB、最近 25 条跨聊天消息、近 2 小时改过的文件路径、最近 15 个工具动作，再加上触发这一次的输入。被替换的会话 ID 留在 <code>agents.previous_session_id</code>，新会话打开失败则继续指向旧会话。<span class="ev ev-source">源码确认</span></li>
+      <li>和 harness 的唯一接触点是 <code>src/harness/harness.ts</code>，它封装 <code>@botiverse/oar</code> 0.97.0。对不支持追加系统提示的 harness，引导说明改放在新会话的第一条消息里。<span class="ev ev-source">源码确认</span></li>
+    </ul>
+  </details>
+  <details class="deep">
+    <summary>数据放在哪，密钥不进数据库</summary>
+    <ul class="act">
+      <li>运行状态在 <code>~/.mingle/mingle.db</code>（Node 24 自带 <code>node:sqlite</code>）。角色、记忆和笔记是主目录里的普通文件，可以用编辑器和 git 管理。<span class="ev ev-source">源码确认</span></li>
+      <li>IM 凭据和 Agent 环境变量的值走 <code>defaultSecrets</code>：macOS 用 Keychain，Windows 用当前用户 DPAPI，Linux 优先 Secret Service；数据库只存引用或名字。控制台 API 只听 <code>127.0.0.1</code>。<span class="ev ev-source">源码确认</span></li>
+      <li>规格写明：消息必然经过 IM 平台和模型厂商，这不在「没有 Mingle 服务器」的承诺里；跨群记忆不隔离是为了保持「一条会话」的简单模型。<span class="ev ev-source">源码确认</span></li>
+    </ul>
+  </details>
+  <details class="deep">
+    <summary>和替代方案比，以及已知失效边界</summary>
+    <ul class="act">
+      <li>与 Raft 相比：学了它「长期进程 + MEMORY.md」的模型，但不自建频道和服务器。与 dsh-im、cc-connect 相比：不绑定单一 harness，也不把会话命令暴露到 IM 里。<span class="ev ev-claim">作者宣称</span></li>
+      <li>规格第 12 节记录了飞书真实租户上的多项通过项（私聊、群 @、离线补推、同群两个机器人去重等），也记下了未完整通过或仍待验证的项：例如早期 <code>/stop</code> 后后台任务仍可能回复（后续有模拟聊天复测，飞书真机回归仍待验证），以及需要管理员审核的租户表现。<span class="ev ev-claim">作者宣称</span> 本文未复现这些实测。<span class="ev ev-pending">待验证</span></li>
+      <li>Remote SSH（把 Agent 放到你自己的另一台机器上）在 0.2.0 已出现，规格仍将其标为开发中的能力，完整稳定性以仓库当前说明为准。<span class="ev ev-claim">作者宣称</span></li>
+      <li>仓库有大量单元测试（含 <code>flow.test.ts</code>、<code>harness.test.ts</code>、<code>inbound.test.ts</code>、<code>feishu.test.ts</code> 等）和 <code>pnpm check</code> 脚本。本文没有运行测试套件。<span class="ev ev-pending">待验证</span></li>
+    </ul>
+  </details>
+</section>
+<footer class="ft">
+<div class="foot-nav"><a href="https://88daxiong.github.io/xhot/anatomy/index.html">← 返回开源解剖主页</a></div>
+<p>XHOT 是独立的个人项目，与 X Corp.、AIHOT、GitHub 及本文所述开源项目无隶属或背书关系。开源解剖根据公开源码整理，可能有误，以仓库原文与指定版本为准。文中不含任何个人或公司私密信息。本文未在本机运行项目或连接其聊天通道。</p>
+<p><a href="https://88daxiong.github.io/xhot/about.html">关于 · 数据来源 · 免责声明</a> · <a href="https://github.com/88daxiong/xhot/issues" target="_blank" rel="noopener noreferrer">反馈 / 撤下请求（GitHub Issues）</a></p>
+</footer>
+</main>
+<script type="application/json" id="anatomy-data">{"stages":[{"id":"in","title":"接入并归一成入站消息","evidence":"source","detail":"<p>每个聊天平台实现同一份 <code>Channel</code> 接口：用官方机器人凭据 <code>connect</code>，把推送收成统一的 <code>InboundMessage</code>（聊天、发送者、正文、附件、是否机器人等）。优先官方机器人通道；没有合适通道时才允许在本机用个人账号接入，规格写明 Mingle 不加额外限制，但也不做云端收件箱。</p><p class='src'>依据：<a href=\"https://github.com/earayu/Mingle/blob/58559b332b80493c0caf6956282e0c35200a0879/src/channels/channel.ts#L15-L40\" target=\"_blank\" rel=\"noopener noreferrer\"><code>src/channels/channel.ts:15–40</code></a>；<a href=\"https://github.com/earayu/Mingle/blob/58559b332b80493c0caf6956282e0c35200a0879/src/channels/channel.ts#L334-L376\" target=\"_blank\" rel=\"noopener noreferrer\"><code>src/channels/channel.ts:334–376</code></a>；<a href=\"https://github.com/earayu/Mingle/blob/58559b332b80493c0caf6956282e0c35200a0879/docs/spec.md#L695-L830\" target=\"_blank\" rel=\"noopener noreferrer\"><code>docs/spec.md:695–830</code></a></p>"},{"id":"deliver","title":"投递进同一条长期会话","evidence":"source","detail":"<p><code>AgentRuntime</code> 先把消息标为 <code>delivered</code>，再调用 <code>HarnessSession.deliver</code>。空闲时合并短突发，运转中 steer 或 queue。所有 IM 共享这一条 OAR 会话，这就是跨群、跨软件还能接上话的原因——没有另做检索或任务匹配。</p><p class='src'>依据：<a href=\"https://github.com/earayu/Mingle/blob/58559b332b80493c0caf6956282e0c35200a0879/src/core/runtime.ts#L157-L171\" target=\"_blank\" rel=\"noopener noreferrer\"><code>src/core/runtime.ts:157–171</code></a>；<a href=\"https://github.com/earayu/Mingle/blob/58559b332b80493c0caf6956282e0c35200a0879/src/core/runtime.ts#L442-L489\" target=\"_blank\" rel=\"noopener noreferrer\"><code>src/core/runtime.ts:442–489</code></a>；<a href=\"https://github.com/earayu/Mingle/blob/58559b332b80493c0caf6956282e0c35200a0879/src/core/inbound.ts#L58-L87\" target=\"_blank\" rel=\"noopener noreferrer\"><code>src/core/inbound.ts:58–87</code></a>；<a href=\"https://github.com/earayu/Mingle/blob/58559b332b80493c0caf6956282e0c35200a0879/docs/spec.md#L103-L120\" target=\"_blank\" rel=\"noopener noreferrer\"><code>docs/spec.md:103–120</code></a></p>"},{"id":"act","title":"只通过 mingle CLI 行动并回写","evidence":"source","detail":"<p>Agent 用 <code>mingle</code> 命令回复、发消息、读和搜聊天、管理任务和通讯录。Mingle 在投递前检查权限，再交给对应连接发出。Changelog 0.2.2 写明：禁止改走各聊天软件自己的 CLI、MCP 或 skill 来发言，以免用错账号。失败时，<code>live.ts</code> 把 auth、额度、未安装等错误译成对用户可读的说明。</p><p class='src'>依据：<a href=\"https://github.com/earayu/Mingle/blob/58559b332b80493c0caf6956282e0c35200a0879/docs/spec.md#L573-L691\" target=\"_blank\" rel=\"noopener noreferrer\"><code>docs/spec.md:573–691</code></a>；<a href=\"https://github.com/earayu/Mingle/blob/58559b332b80493c0caf6956282e0c35200a0879/src/core/live.ts#L13-L58\" target=\"_blank\" rel=\"noopener noreferrer\"><code>src/core/live.ts:13–58</code></a>；<a href=\"https://github.com/earayu/Mingle/blob/58559b332b80493c0caf6956282e0c35200a0879/CHANGELOG.md\" target=\"_blank\" rel=\"noopener noreferrer\"><code>CHANGELOG.md</code></a>（0.2.2）</p>"},{"id":"memory","title":"用文件和账本在会话替换后接上","evidence":"source","detail":"<p>主目录约定 <code>ROLE.md</code>、<code>MEMORY.md</code> 和 <code>notes/</code>；其余文件由 Agent 自建。运行时状态（连接、聊天、联系人、消息状态、任务、提醒、交接）在 SQLite。冷启动和会话替换都不向模型宣布「换过会话」，而是把记忆和最近上下文重新交给它。</p><p class='src'>依据：<a href=\"https://github.com/earayu/Mingle/blob/58559b332b80493c0caf6956282e0c35200a0879/docs/spec.md#L903-L946\" target=\"_blank\" rel=\"noopener noreferrer\"><code>docs/spec.md:903–946</code></a>；<a href=\"https://github.com/earayu/Mingle/blob/58559b332b80493c0caf6956282e0c35200a0879/src/core/cold.ts#L15-L64\" target=\"_blank\" rel=\"noopener noreferrer\"><code>src/core/cold.ts:15–64</code></a>；<a href=\"https://github.com/earayu/Mingle/blob/58559b332b80493c0caf6956282e0c35200a0879/src/platform/secrets.ts#L230-L234\" target=\"_blank\" rel=\"noopener noreferrer\"><code>src/platform/secrets.ts:230–234</code></a></p>"}]}</script>
+<script>
+(function () {
+  'use strict';
+
+  function themeValue() {
+    try { return localStorage.getItem('xhot-theme') || 'auto'; } catch (e) { return 'auto'; }
+  }
+  function applyTheme(pref) {
+    var d = document.documentElement;
+    var t = (pref === 'light' || pref === 'dark') ? pref : 'auto';
+    d.setAttribute('data-pref', t);
+    d.setAttribute('data-theme', t === 'auto'
+      ? (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light')
+      : t);
+    document.querySelectorAll('[data-set-theme]').forEach(function (btn) {
+      btn.classList.toggle('on', btn.getAttribute('data-set-theme') === t);
+    });
+  }
+  function bindTheme() {
+    applyTheme(themeValue());
+    document.querySelectorAll('[data-set-theme]').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var v = btn.getAttribute('data-set-theme');
+        try { localStorage.setItem('xhot-theme', v); } catch (e) {}
+        applyTheme(v);
+      });
+    });
+    try {
+      matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function () {
+        if (themeValue() === 'auto') applyTheme('auto');
+      });
+    } catch (e) {}
+  }
+
+  function switchTab(tabId, btn) {
+    document.querySelectorAll('.tab-panel').forEach(function (el) { el.classList.remove('active'); });
+    document.querySelectorAll('.seg-btn').forEach(function (el) {
+      el.classList.remove('active');
+      el.setAttribute('aria-selected', 'false');
+    });
+    var panel = document.getElementById('tab-' + tabId);
+    if (panel) panel.classList.add('active');
+    if (btn) {
+      btn.classList.add('active');
+      btn.setAttribute('aria-selected', 'true');
+    }
+    if (btn && btn.scrollIntoView) {
+      try { btn.scrollIntoView({ block: 'nearest', inline: 'nearest', behavior: 'smooth' }); } catch (e) {}
+    }
+  }
+
+  function anatomyData() {
+    var dataEl = document.getElementById('anatomy-data');
+    try { return dataEl ? JSON.parse(dataEl.textContent) : {}; } catch (e) { return {}; }
+  }
+
+  function evidenceLabel(k) {
+    return ({
+      source: '源码确认',
+      claim: '作者宣称',
+      infer: '推断',
+      pending: '待验证',
+      sim: '模拟演示'
+    })[k] || k;
+  }
+
+  function renderDetail(box, title, evidence, detail) {
+    if (!box) return;
+    box.innerHTML = '<strong>[' + title + ']</strong>' +
+      (evidence ? '<span class="ev ev-' + evidence + '">' + evidenceLabel(evidence) + '</span>' : '') +
+      '<div class="detail-body">' + (detail || '') + '</div>';
+  }
+
+  function showStage(id) {
+    var data = anatomyData();
+    var stages = data.stages || [];
+    var st = stages.find(function (s) { return s.id === id; }) || stages[0];
+    if (!st) return;
+    document.querySelectorAll('.flow-node, .arch-node, .pipe-node').forEach(function (n) {
+      n.classList.toggle('selected', n.getAttribute('data-stage') === st.id);
+    });
+    renderDetail(document.getElementById('flow-detail'), st.title, st.evidence, st.detail);
+  }
+
+  function bindStages() {
+    document.querySelectorAll('.flow-node, .arch-node, .pipe-node').forEach(function (n) {
+      if (!n.hasAttribute('tabindex')) n.setAttribute('tabindex', '0');
+      if (!n.hasAttribute('role')) n.setAttribute('role', 'button');
+      n.addEventListener('click', function () { showStage(n.getAttribute('data-stage')); });
+      n.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); showStage(n.getAttribute('data-stage')); }
+      });
+    });
+    // 旧文仍自动展开第一格；新文的流程图本身已可读，不自动打开抽屉。
+    var first = document.querySelector('.flow-node, .arch-node');
+    if (first) showStage(first.getAttribute('data-stage'));
+  }
+
+  function bindSchema() {
+    var data = anatomyData();
+    var schemas = data.schemas || {};
+    if (!Object.keys(schemas).length) return;
+    function show(id) {
+      var sc = schemas[id];
+      if (!sc) return;
+      document.querySelectorAll('[data-schema]').forEach(function (n) {
+        n.classList.toggle('selected', n.getAttribute('data-schema') === id);
+      });
+      renderDetail(document.getElementById('schema-detail'), sc.title || id, sc.evidence, sc.detail);
+    }
+    document.querySelectorAll('[data-schema]').forEach(function (n) {
+      if (!n.hasAttribute('tabindex')) n.setAttribute('tabindex', '0');
+      n.addEventListener('click', function () { show(n.getAttribute('data-schema')); });
+      n.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); show(n.getAttribute('data-schema')); }
+      });
+    });
+    var first = document.querySelector('[data-schema]');
+    if (first) show(first.getAttribute('data-schema'));
+  }
+
+  var player = { i: 0, timer: null, steps: [] };
+
+  function reduceMotion() {
+    try { return matchMedia('(prefers-reduced-motion: reduce)').matches; } catch (e) { return false; }
+  }
+
+  function renderPlay(i) {
+    var steps = player.steps;
+    if (!steps.length) return;
+    player.i = (i + steps.length) % steps.length;
+    var st = steps[player.i];
+    document.querySelectorAll('[data-play-step]').forEach(function (n) {
+      n.classList.toggle('selected', Number(n.getAttribute('data-play-step')) === player.i);
+    });
+    var status = document.getElementById('play-status');
+    if (status) status.textContent = '第 ' + (player.i + 1) + ' / ' + steps.length + ' 步：' + st.title;
+    var bar = document.getElementById('play-bar');
+    if (bar) bar.style.width = (((player.i + 1) / steps.length) * 100) + '%';
+    renderDetail(document.getElementById('play-detail'), st.title, st.evidence, st.detail);
+    var sim = document.getElementById('play-sim');
+    if (sim) sim.innerHTML = st.sim || '';
+  }
+
+  function stopPlay() {
+    if (player.timer) { clearInterval(player.timer); player.timer = null; }
+    var btn = document.getElementById('play-toggle');
+    if (btn) { btn.textContent = '播放'; btn.setAttribute('aria-pressed', 'false'); }
+  }
+
+  function startPlay() {
+    if (player.timer) return;
+    var btn = document.getElementById('play-toggle');
+    if (btn) { btn.textContent = '暂停'; btn.setAttribute('aria-pressed', 'true'); }
+    var ms = reduceMotion() ? 0 : 2200;
+    if (!ms) {
+      renderPlay(player.i + 1);
+      stopPlay();
+      return;
+    }
+    player.timer = setInterval(function () {
+      if (player.i >= player.steps.length - 1) {
+        renderPlay(player.steps.length - 1);
+        stopPlay();
+        return;
+      }
+      renderPlay(player.i + 1);
+    }, ms);
+  }
+
+  function bindPlayer() {
+    var data = anatomyData();
+    player.steps = data.play || [];
+    if (!player.steps.length) return;
+    var list = document.getElementById('play-steps');
+    if (list && !list.children.length) {
+      player.steps.forEach(function (st, idx) {
+        var b = document.createElement('button');
+        b.type = 'button';
+        b.className = 'flow-node';
+        b.setAttribute('data-play-step', String(idx));
+        b.innerHTML = '<div class="node-step">步骤 ' + (idx + 1) + '</div><div class="node-title"></div>';
+        b.querySelector('.node-title').textContent = st.title;
+        b.addEventListener('click', function () { stopPlay(); renderPlay(idx); });
+        list.appendChild(b);
+      });
+    } else {
+      document.querySelectorAll('[data-play-step]').forEach(function (n) {
+        n.addEventListener('click', function () {
+          stopPlay();
+          renderPlay(Number(n.getAttribute('data-play-step')));
+        });
+      });
+    }
+    var prev = document.getElementById('play-prev');
+    var next = document.getElementById('play-next');
+    var tog = document.getElementById('play-toggle');
+    var rst = document.getElementById('play-reset');
+    if (prev) prev.addEventListener('click', function () { stopPlay(); renderPlay(player.i - 1); });
+    if (next) next.addEventListener('click', function () { stopPlay(); renderPlay(player.i + 1); });
+    if (tog) tog.addEventListener('click', function () { if (player.timer) stopPlay(); else startPlay(); });
+    if (rst) rst.addEventListener('click', function () { stopPlay(); renderPlay(0); });
+    var wrap = document.getElementById('play-controls');
+    if (wrap) {
+      wrap.addEventListener('keydown', function (e) {
+        if (e.key === 'ArrowLeft') { e.preventDefault(); stopPlay(); renderPlay(player.i - 1); }
+        if (e.key === 'ArrowRight') { e.preventDefault(); stopPlay(); renderPlay(player.i + 1); }
+        if (e.key === ' ') { e.preventDefault(); if (player.timer) stopPlay(); else startPlay(); }
+        if (e.key === 'Home') { e.preventDefault(); stopPlay(); renderPlay(0); }
+        if (e.key === 'End') { e.preventDefault(); stopPlay(); renderPlay(player.steps.length - 1); }
+      });
+    }
+    renderPlay(0);
+  }
+
+  function bindQuiz() {
+    document.querySelectorAll('[data-quiz]').forEach(function (root) {
+      var answers = root.querySelector('.quiz-answers');
+      root.querySelectorAll('[data-ok]').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var ok = btn.getAttribute('data-ok') === '1';
+          root.querySelectorAll('[data-ok]').forEach(function (b) { b.disabled = true; });
+          btn.classList.add(ok ? 'quiz-ok' : 'quiz-bad');
+          if (answers) {
+            answers.hidden = false;
+            answers.classList.add(ok ? 'ok' : 'bad');
+          }
+        });
+      });
+    });
+  }
+
+  function bindIndexFilter() {
+    var q = document.getElementById('anatomy-q');
+    var chips = document.querySelectorAll('[data-filter-tag]');
+    var cards = document.querySelectorAll('.proj-card');
+    var empty = document.getElementById('filter-empty');
+    if (!cards.length) return;
+    var tag = 'all';
+    function apply() {
+      var text = (q && q.value || '').trim().toLowerCase();
+      var shown = 0;
+      cards.forEach(function (card) {
+        var hay = (card.getAttribute('data-hay') || '').toLowerCase();
+        var tags = (card.getAttribute('data-tags') || '');
+        var ok = (!text || hay.indexOf(text) !== -1) && (tag === 'all' || tags.split(/\s+/).indexOf(tag) !== -1);
+        card.hidden = !ok;
+        if (ok) shown++;
+      });
+      if (empty) empty.hidden = shown !== 0;
+    }
+    if (q) q.addEventListener('input', apply);
+    chips.forEach(function (chip) {
+      chip.addEventListener('click', function () {
+        tag = chip.getAttribute('data-filter-tag');
+        chips.forEach(function (c) {
+          c.classList.toggle('on', c === chip);
+          c.setAttribute('aria-pressed', c === chip ? 'true' : 'false');
+        });
+        apply();
+      });
+    });
+    apply();
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    bindTheme();
+    bindStages();
+    bindSchema();
+    bindPlayer();
+    bindQuiz();
+    bindIndexFilter();
+    document.querySelectorAll('.seg-btn').forEach(function (btn) {
+      btn.addEventListener('click', function () { switchTab(btn.getAttribute('data-tab'), btn); });
+    });
+    document.querySelectorAll('[data-tab-jump]').forEach(function (a) {
+      a.addEventListener('click', function (e) {
+        var id = a.getAttribute('data-tab-jump');
+        var btn = document.querySelector('.seg-btn[data-tab="' + id + '"]');
+        if (btn) {
+          e.preventDefault();
+          switchTab(id, btn);
+          var panel = document.getElementById('tab-' + id);
+          if (panel && panel.scrollIntoView) {
+            try { panel.scrollIntoView({ block: 'start', behavior: reduceMotion() ? 'auto' : 'smooth' }); } catch (err) {}
+          }
+        }
+      });
+    });
+  });
+
+  window.xhotAnatomy = {
+    switchTab: switchTab,
+    showStage: showStage,
+    renderPlay: renderPlay,
+    stopPlay: stopPlay,
+    getPlayer: function () { return { i: player.i, n: player.steps.length, playing: !!player.timer }; }
+  };
+})();
+
+</script>
+</body>
+</html>
