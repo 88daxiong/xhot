@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="light" data-pref="auto">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-eySqtWEMW2APPEHKl4ofjbb4sL/hbt3uVDrovVQbBOY='; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'none'; connect-src 'self'; media-src 'none'; frame-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%E2%9A%A1%3C/text%3E%3C/svg%3E">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#6d28d9">
+<meta name="description" content="从第一性原理拆解 MAS Office：把真实的 Claude Code / Codex 会话编成可锁定的团队，并用同一份事件日志驱动办公桌面板和收件箱。">
+<title>MAS Office · 开源解剖 · XHOT</title>
+<script>(function(){var d=document.documentElement,t,s;try{t=localStorage.getItem('xhot-theme');s=localStorage.getItem('xhot-density')}catch(e){}t=(t==='light'||t==='dark')?t:'auto';d.setAttribute('data-pref',t);d.setAttribute('data-theme',t==='auto'?(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'):t);if(s==='compact')d.setAttribute('data-density','compact')})();</script>
+<link rel="stylesheet" href="anatomy.css">
+<script src="anatomy.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">跳到正文</a>
+<div class="ambient" aria-hidden="true"><div class="orb orb-1"></div><div class="orb orb-2"></div></div>
+<header class="top">
+<div class="bar">
+<a class="lg" href="../index.html"><i aria-hidden="true">⚡</i>XHOT<span>X 热点雷达</span></a>
+<nav class="nav" aria-label="栏目"><a href="../index.html">今日</a><a href="../d/ai.html">领域</a><a href="../people.html">人物</a><a href="../news.html">资讯</a><a href="../trends.html">趋势</a><a href="../agents.html">Agent</a><a href="index.html">解剖</a></nav>
+<span class="sp0"></span>
+<div class="tg" role="group" aria-label="主题"><button type="button" data-set-theme="light" aria-label="浅色">☀</button><button type="button" data-set-theme="dark" aria-label="深色">☾</button><button type="button" data-set-theme="auto">自动</button></div>
+</div>
+<div class="subbar">  <a class="back" href="index.html">← 返回开源解剖主页</a>
+  <nav class="page-toc" aria-label="本页目录">
+    <a href="#highlight">亮点</a>
+    <a href="#flow">流程</a>
+    <a href="#use">怎么用</a>
+    <a href="#deep">深入</a>
+  </nav></div>
+</header>
+<main id="main" class="wrap">
+
+<article class="card hero">
+  <div class="badge-row"><span class="pill">开源解剖</span><span class="pill purple">v0.3.0</span><span class="pill">MIT</span></div>
+  <h1>MAS Office</h1>
+  <p class="essence">每个角色都是你本机已登录的 Claude Code 或 Codex 会话。你先锁定团队设计，普通代码负责调度和工具策略；所有等人处理的事项进同一个收件箱，面板只是这份事件日志的投影。</p>
+  <div class="meta">
+    <span>仓库 <a href="https://github.com/weixijia/mas-office" target="_blank" rel="noopener noreferrer">weixijia/mas-office</a></span>
+    <span>网站 <a href="https://www.xijiawei.com/mas-office/" target="_blank" rel="noopener noreferrer">xijiawei.com/mas-office</a></span>
+    <span>分析提交 <a href="https://github.com/weixijia/mas-office/tree/5a768ecac2260ba4cb21c5450593ad1b7d190041" target="_blank" rel="noopener noreferrer"><code>5a768ec</code></a>（2026-11-11 08:51 北京时间；npm 包 mas-office 与 mas-office-runtime 均为 0.3.0）</span>
+    <span>GitHub 匿名搜索星标 98（观察于 2026-11-18 08:15 北京时间，会变动）</span>
+    <span>创建于 2026-11-06</span>
+    <span>语言 JavaScript · 协议 v0.2 · 许可 MIT</span>
+    <span>单文件版 <a href="exports/mas-office.standalone.html">下载</a></span>
+  </div>
+</article>
+
+<section class="card" id="highlight">
+  <div class="highlight">
+    <div class="kicker">最大亮点</div>
+    <p class="lead">不另写一套「假会话」运行时，而是把真实编码代理会话编成锁定的团队：行为签名对不上就拒绝开跑；每个工具调用只经过 <code>decideTool</code> 一个执法点；办公室画面由确定性归约器从追加型日志算出，不让模型去维护面板状态。</p>
+    <p class="why">自己开多个 Claude Code / Codex 窗口时，批准、提问、卡住的角色和检查点会散落在各终端里。MAS Office 把这些等人事项收进「Needs you」，并把「谁在生产事件」和「怎么画出来」拆开：生产者只追加 <code>mas/events.jsonl</code>，归约器按规范生成快照，面板只读快照。<span class="ev ev-source">源码确认</span></p>
+  </div>
+  <p class="muted" style="margin-top:12px">一句话输入输出：输入是已锁定的 <code>mas/structure.json</code>（或 .js）和一项任务；输出是追加写入的事件日志、快照，以及带出处标记、链接检查与检查者裁决的结果。运行真实团队需要你本机已安装并登录 Claude Code / Codex。</p>
+</section>
+
+<section class="card" id="flow">
+  <h2>它怎么运转</h2>
+  <p>下面这条路径默认就能看完。每个框里写了动作、数据去向和进出。想看源码细节时，再点其中一格。</p>
+  <ol class="pipeline">
+    <li class="pipe"><button type="button" class="pipe-node" data-stage="lock"><div class="pipe-io">输入：structure.json / .js</div><div class="pipe-act">检查并锁定签名</div><div class="pipe-io">去向：带 sha256 的锁定设计</div></button></li>
+    <li class="pipe-arrow" aria-hidden="true">→</li>
+    <li class="pipe"><button type="button" class="pipe-node" data-stage="up"><div class="pipe-io">输入：锁定设计 + 任务</div><div class="pipe-act">拉起真实会话</div><div class="pipe-io">去向：本机 Claude Code / Codex</div></button></li>
+    <li class="pipe-arrow" aria-hidden="true">→</li>
+    <li class="pipe"><button type="button" class="pipe-node" data-stage="decide"><div class="pipe-io">输入：编译后的角色与工具调用</div><div class="pipe-act">decideTool 执法</div><div class="pipe-io">去向：放行、拒绝，或送进收件箱</div></button></li>
+    <li class="pipe-arrow" aria-hidden="true">→</li>
+    <li class="pipe"><button type="button" class="pipe-node" data-stage="reduce"><div class="pipe-io">输入：events.jsonl</div><div class="pipe-act">确定性归约 + 核查</div><div class="pipe-io">去向：快照、办公桌与结果卡片</div></button></li>
+  </ol>
+  <div class="drawer" id="flow-detail" aria-live="polite">点击流程中的一格，可看到这一步的机制说明。不点也能从框图读懂主路径。</div>
+</section>
+
+<section class="card" id="use">
+  <h2>怎么用</h2>
+  <div class="use-grid">
+    <div class="use-box yes">
+      <h3>什么情况下用</h3>
+      <ul class="act">
+        <li>要比价、行程、可行性这类调研任务分成多个角色并行做，并且希望工具批准和检查点出现在同一个收件箱。</li>
+        <li>已经在用 Claude Code / Codex，想让每个角色带着自己的工具策略跑，而不是再包一层新的代理框架。</li>
+        <li>只想先看办公室怎么动：<code>npx mas-office demo</code> 不需要登录，用模拟团队即可。</li>
+      </ul>
+    </div>
+    <div class="use-box no">
+      <h3>什么情况下不用</h3>
+      <ul class="act">
+        <li>没有（或不想在这台机器登录）Claude Code / Codex。真实团队路径依赖你自己的会话。</li>
+        <li>需要现在就接管角色的原始终端，或要评测集上的质量数字。作者写明这些尚未完成，且暂无评测跑数。</li>
+        <li>不能接受「文件传输每项目一个写者进程」、或 Codex 沙箱对读范围的已知缺口。</li>
+      </ul>
+    </div>
+  </div>
+  <h3>最小上手方案</h3>
+  <p>README 给出的真实团队入口（Node ≥ 18.14，分析提交 v0.3.0）。工作区不要放在会加载到无关 <code>CLAUDE.md</code> 的父目录下：</p>
+<pre><code>mkdir ~/mas-work &amp;&amp; cd ~/mas-work
+npm install mas-office mas-office-runtime
+claude auth login
+codex login
+mkdir -p deals/mas
+curl -fsSL https://raw.githubusercontent.com/weixijia/mas-office/5a768ecac2260ba4cb21c5450593ad1b7d190041/examples/price-compare/mas/structure.js -o deals/mas/structure.js
+npx mas-office team check deals
+npx mas-office up . --project deals --open --task "Find the best UK price for Sony WH-1000XM6 headphones"</code></pre>
+  <ul class="act">
+    <li>只看动画、不登录：<code>npx mas-office demo</code>。<span class="ev ev-claim">作者宣称</span></li>
+    <li>工作区应放在仓库克隆之外，否则 Claude Code 会读到本仓库的 <code>CLAUDE.md</code>。<span class="ev ev-claim">作者宣称</span></li>
+    <li>本文未在本机安装 CLI，也未复现作者提到的 2026-11-10 那一次端到端运行。<span class="ev ev-pending">待验证</span></li>
+  </ul>
+</section>
+
+<section class="card" id="deep">
+  <h2>深入</h2>
+  <p class="muted">下面这些不影响先建立整体图景。需要对照源码、字段或边界时再展开。证据仍指向固定提交 <code>5a768ec</code>。</p>
+  <details class="deep">
+    <summary>锁定：只对「会改变行为」的字段签名</summary>
+    <ul class="act">
+      <li><code>signTeam</code> 对规范化后的行为子集做规范 JSON，再计算 <code>sha256:&lt;hex&gt;</code>。标题、名字、emoji 等外观字段被排除，所以给角色改名不会打破签名。<a href="https://github.com/weixijia/mas-office/blob/5a768ecac2260ba4cb21c5450593ad1b7d190041/packages/node/src/team/sign.js#L1-L8" target="_blank" rel="noopener noreferrer"><code>packages/node/src/team/sign.js:1–8</code></a> <a href="https://github.com/weixijia/mas-office/blob/5a768ecac2260ba4cb21c5450593ad1b7d190041/packages/node/src/team/sign.js#L51-L55" target="_blank" rel="noopener noreferrer"><code>packages/node/src/team/sign.js:51–55</code></a> <span class="ev ev-source">源码确认</span></li>
+      <li>行为子集包括拓扑、预算、核查配置、Lead 与角色的工具 / 模型 / 后端、以及闸门。<a href="https://github.com/weixijia/mas-office/blob/5a768ecac2260ba4cb21c5450593ad1b7d190041/packages/node/src/team/sign.js#L22-L40" target="_blank" rel="noopener noreferrer"><code>packages/node/src/team/sign.js:22–40</code></a></li>
+      <li>README 写明：未锁定或锁定后被改过的设计，运行会拒绝。<span class="ev ev-claim">作者宣称</span> 工具表是固定词表，锁定时拒绝词表外的工具。<span class="ev ev-claim">作者宣称</span></li>
+    </ul>
+  </details>
+  <details class="deep">
+    <summary>decideTool：唯一执法点</summary>
+    <ul class="act">
+      <li>文件头写明：这是已编译角色的唯一执法点。<code>allow</code> / <code>deny</code> 当场回答，<code>ask</code> 变成收件箱请求。<a href="https://github.com/weixijia/mas-office/blob/5a768ecac2260ba4cb21c5450593ad1b7d190041/packages/node/src/team/decide.js#L1-L4" target="_blank" rel="noopener noreferrer"><code>packages/node/src/team/decide.js:1–4</code></a> <a href="https://github.com/weixijia/mas-office/blob/5a768ecac2260ba4cb21c5450593ad1b7d190041/packages/node/src/team/decide.js#L84-L88" target="_blank" rel="noopener noreferrer"><code>packages/node/src/team/decide.js:84–88</code></a> <span class="ev ev-source">源码确认</span></li>
+      <li>硬拒绝包括：凭证路径、写出项目目录、改受保护的说明 / 设置文件、命令触及本机或本地网络、未授予的 MCP 服务器、MCP 自己落盘、全库宽搜索等。<a href="https://github.com/weixijia/mas-office/blob/5a768ecac2260ba4cb21c5450593ad1b7d190041/packages/node/src/team/decide.js#L102-L136" target="_blank" rel="noopener noreferrer"><code>packages/node/src/team/decide.js:102–136</code></a></li>
+      <li>未知工具默认是否定还是提问，由 <code>unknownTools</code> 决定。allow 规则对路径大小写保持原样（可写集合也是），ask/deny 在匹配时忽略大小写，以避免 macOS 上 <code>RAW/x.pdf</code> 读到 <code>raw/x.pdf</code>。<a href="https://github.com/weixijia/mas-office/blob/5a768ecac2260ba4cb21c5450593ad1b7d190041/packages/node/src/team/decide.js#L25-L27" target="_blank" rel="noopener noreferrer"><code>packages/node/src/team/decide.js:25–27</code></a> <a href="https://github.com/weixijia/mas-office/blob/5a768ecac2260ba4cb21c5450593ad1b7d190041/packages/node/src/team/decide.js#L84-L85" target="_blank" rel="noopener noreferrer"><code>packages/node/src/team/decide.js:84–85</code></a></li>
+    </ul>
+  </details>
+  <details class="deep">
+    <summary>事件日志与归约器，而不是模型改面板</summary>
+    <ul class="act">
+      <li>架构文档把生产者和视图拆开：追加 <code>events.jsonl</code>，归约器按规范生成快照，面板只读快照。文件传输用临时文件再改名，避免半份快照。<a href="https://github.com/weixijia/mas-office/blob/5a768ecac2260ba4cb21c5450593ad1b7d190041/docs/architecture.md#L1-L80" target="_blank" rel="noopener noreferrer"><code>docs/architecture.md:1–80</code></a> <span class="ev ev-source">源码确认</span></li>
+      <li>同一日志里既有等人处理的请求，也有发回给智能体的命令；文档写明命令本身不改智能体状态，只有会话随后上报的事件才改。<span class="ev ev-claim">作者宣称</span></li>
+      <li>链接健康检查由普通代码执行，不经过模型；私有与本地地址不会被抓取。<span class="ev ev-claim">作者宣称</span> 实现见 <a href="https://github.com/weixijia/mas-office/blob/5a768ecac2260ba4cb21c5450593ad1b7d190041/packages/node/src/verify/url-health.js#L1-L40" target="_blank" rel="noopener noreferrer"><code>packages/node/src/verify/url-health.js:1–40</code></a>，本文未穷尽每条 URL 规则。</li>
+    </ul>
+  </details>
+  <details class="deep">
+    <summary>取舍、已知缺口与替代方案</summary>
+    <ul class="act">
+      <li>与再写一套多代理框架相比：这里直接复用你已登录的 Claude Code / Codex，换来的是必须在本机持有这些 CLI，以及把调度绑在这些会话的能力边界上。<span class="ev ev-infer">推断</span></li>
+      <li>作者列出的缺口（README「Limits today」，视为<span class="ev ev-claim">作者宣称</span>）：Codex 0.167.0 的沙箱不会把读范围限制在项目目录，未询问就执行的命令会在拒绝时打断回合，但快命令可能先跑完；中断回合有单元测试，但尚未对真实 Claude Code CLI 演练；重启后未完成的批准不会被重新挂上；无代码套件还不走同一套引擎；Python SDK 尚未上 PyPI。</li>
+      <li>作者称 2026-11-10 做过一次真实端到端（Lead 与一名 finder 用 Claude Code，检查者用 Codex，检查者退回一次后在第 2 轮接受）。没有评测跑，因此没有答案质量数字。<span class="ev ev-claim">作者宣称</span> 本文未复现。<span class="ev ev-pending">待验证</span></li>
+      <li>文件传输约定每项目只有一个写者进程；多进程应改走 <code>mas-office serve</code>，由服务器分配 <code>seq</code>。<span class="ev ev-source">源码确认</span> 见架构文档。</li>
+    </ul>
+  </details>
+</section>
+<footer class="ft">
+<div class="foot-nav"><a href="index.html">← 返回开源解剖主页</a></div>
+<p>XHOT 是独立的个人项目，与 X Corp.、AIHOT、GitHub 及本文所述开源项目无隶属或背书关系。开源解剖根据公开源码整理，可能有误，以仓库原文与指定版本为准。文中不含任何个人或公司私密信息。本文未在本机运行项目或复现其基准。</p>
+<p><a href="../about.html">关于 · 数据来源 · 免责声明</a> · <a href="https://github.com/88daxiong/xhot/issues" target="_blank" rel="noopener noreferrer">反馈 / 撤下请求（GitHub Issues）</a></p>
+</footer>
+</main>
+<script type="application/json" id="anatomy-data">{"stages": [{"id": "lock", "title": "检查并锁定团队签名", "evidence": "source", "detail": "<p><code>signTeam</code> 只哈希会改变行为的字段：拓扑、预算、核查、模型、工具、闸门等。改显示名或 emoji 不会改变签名。运行时拒绝未锁定或锁定后被改过的设计，从而避免「面板上还是旧团队、会话已经换成新工具表」。</p><p class='src'>依据：<a href=\"https://github.com/weixijia/mas-office/blob/5a768ecac2260ba4cb21c5450593ad1b7d190041/packages/node/src/team/sign.js#L1-L8\" target=\"_blank\" rel=\"noopener noreferrer\"><code>packages/node/src/team/sign.js:1–8</code></a>；<a href=\"https://github.com/weixijia/mas-office/blob/5a768ecac2260ba4cb21c5450593ad1b7d190041/packages/node/src/team/sign.js#L22-L55\" target=\"_blank\" rel=\"noopener noreferrer\"><code>packages/node/src/team/sign.js:22–55</code></a>；<a href=\"https://github.com/weixijia/mas-office/blob/5a768ecac2260ba4cb21c5450593ad1b7d190041/packages/node/src/cli/commands/team.js#L1-L40\" target=\"_blank\" rel=\"noopener noreferrer\"><code>packages/node/src/cli/commands/team.js:1–40</code></a></p>"}, {"id": "up", "title": "拉起真实的编码代理会话", "evidence": "claim", "detail": "<p><code>mas-office up</code> 检查 Claude Code / Codex 是否已安装并登录，然后按锁定设计启动角色会话，并把工具策略编译进该会话的选项。Lead 先给出计划与各角色简报，调度器是普通代码，会校验 Lead 的返回。这是作者在 README 中描述的主路径；运行时入口在 <code>packages/runtime</code> 与 <code>packages/node/src/cli/commands/up.js</code>。本文未实际拉起会话。</p><p class='src'>依据：README 状态与 Quick start；<a href=\"https://github.com/weixijia/mas-office/blob/5a768ecac2260ba4cb21c5450593ad1b7d190041/packages/runtime/src/index.js#L1-L40\" target=\"_blank\" rel=\"noopener noreferrer\"><code>packages/runtime/src/index.js:1–40</code></a>；<a href=\"https://github.com/weixijia/mas-office/blob/5a768ecac2260ba4cb21c5450593ad1b7d190041/packages/node/src/cli/commands/up.js#L1-L40\" target=\"_blank\" rel=\"noopener noreferrer\"><code>packages/node/src/cli/commands/up.js:1–40</code></a></p>"}, {"id": "decide", "title": "每个工具调用只经过 decideTool", "evidence": "source", "detail": "<p>编译后的角色把每次工具调用送到 <code>decideTool</code>：允许、拒绝，或变成收件箱里的 <code>ask</code>。凭证文件、写出项目、改说明文件、访问本机网络、未授予的 MCP、MCP 自行写文件，都会硬拒绝。这是策略的单一入口，避免各后端各自解释规则。</p><p class='src'>依据：<a href=\"https://github.com/weixijia/mas-office/blob/5a768ecac2260ba4cb21c5450593ad1b7d190041/packages/node/src/team/decide.js#L1-L4\" target=\"_blank\" rel=\"noopener noreferrer\"><code>packages/node/src/team/decide.js:1–4</code></a>；<a href=\"https://github.com/weixijia/mas-office/blob/5a768ecac2260ba4cb21c5450593ad1b7d190041/packages/node/src/team/decide.js#L84-L136\" target=\"_blank\" rel=\"noopener noreferrer\"><code>packages/node/src/team/decide.js:84–136</code></a></p>"}, {"id": "reduce", "title": "日志归约成办公室，并核查出处", "evidence": "source", "detail": "<p>生产者只追加 <code>events.jsonl</code>。确定性归约器生成结构、状态和结果快照，面板只读这些快照。链接是否存活由普通代码检查，不交给模型；私有与本地地址不会被抓取。检查者在干净上下文里裁决声明。命令写入日志不会直接改智能体状态，只有会话随后上报的事件才改——后一点来自文档，实现需对照运行时。</p><p class='src'>依据：<a href=\"https://github.com/weixijia/mas-office/blob/5a768ecac2260ba4cb21c5450593ad1b7d190041/docs/architecture.md#L1-L80\" target=\"_blank\" rel=\"noopener noreferrer\"><code>docs/architecture.md:1–80</code></a>；<a href=\"https://github.com/weixijia/mas-office/blob/5a768ecac2260ba4cb21c5450593ad1b7d190041/packages/node/src/sdk/reducer.js#L1-L40\" target=\"_blank\" rel=\"noopener noreferrer\"><code>packages/node/src/sdk/reducer.js:1–40</code></a>；<a href=\"https://github.com/weixijia/mas-office/blob/5a768ecac2260ba4cb21c5450593ad1b7d190041/packages/node/src/verify/url-health.js#L1-L40\" target=\"_blank\" rel=\"noopener noreferrer\"><code>packages/node/src/verify/url-health.js:1–40</code></a></p>"}]}</script>
+</body>
+</html>

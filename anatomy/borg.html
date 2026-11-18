@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="light" data-pref="auto">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-eySqtWEMW2APPEHKl4ofjbb4sL/hbt3uVDrovVQbBOY='; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'none'; connect-src 'self'; media-src 'none'; frame-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%E2%9A%A1%3C/text%3E%3C/svg%3E">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#6d28d9">
+<meta name="description" content="从第一性原理拆解 borg：Rust 监督式 Agent 运行时如何组合 LLM 调用，并在取消、恐慌、预算与检查点上形成闭环。">
+<title>borg · 开源解剖 · XHOT</title>
+<script>(function(){var d=document.documentElement,t,s;try{t=localStorage.getItem('xhot-theme');s=localStorage.getItem('xhot-density')}catch(e){}t=(t==='light'||t==='dark')?t:'auto';d.setAttribute('data-pref',t);d.setAttribute('data-theme',t==='auto'?(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'):t);if(s==='compact')d.setAttribute('data-density','compact')})();</script>
+<link rel="stylesheet" href="anatomy.css">
+<script src="anatomy.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">跳到正文</a>
+<div class="ambient" aria-hidden="true"><div class="orb orb-1"></div><div class="orb orb-2"></div></div>
+<header class="top">
+<div class="bar">
+<a class="lg" href="../index.html"><i aria-hidden="true">⚡</i>XHOT<span>X 热点雷达</span></a>
+<nav class="nav" aria-label="栏目"><a href="../index.html">今日</a><a href="../d/ai.html">领域</a><a href="../people.html">人物</a><a href="../news.html">资讯</a><a href="../trends.html">趋势</a><a href="../agents.html">Agent</a><a href="index.html">解剖</a></nav>
+<span class="sp0"></span>
+<div class="tg" role="group" aria-label="主题"><button type="button" data-set-theme="light" aria-label="浅色">☀</button><button type="button" data-set-theme="dark" aria-label="深色">☾</button><button type="button" data-set-theme="auto">自动</button></div>
+</div>
+<div class="subbar">  <a class="back" href="index.html">← 返回开源解剖主页</a>
+  <nav class="page-toc" aria-label="本页目录">
+    <a href="#highlight">亮点</a>
+    <a href="#flow">流程</a>
+    <a href="#use">怎么用</a>
+    <a href="#deep">深入</a>
+  </nav></div>
+</header>
+<main id="main" class="wrap">
+
+<article class="card hero">
+  <div class="badge-row"><span class="pill">开源解剖</span><span class="pill purple">v1.0.0</span><span class="pill">MIT OR Apache-2.0</span></div>
+  <h1>borg</h1>
+  <p class="essence">把多次 LLM 调用编成可取消、可隔离恐慌、可重试、有预算、崩溃后能接着跑的流水线。它是库，不是带供应商客户端的产品。</p>
+  <div class="meta">
+    <span>仓库 <a href="https://github.com/joydle/borg" target="_blank" rel="noopener noreferrer">joydle/borg</a></span>
+    <span>文档站 <a href="https://joydle.github.io/borg/" target="_blank" rel="noopener noreferrer">joydle.github.io/borg</a></span>
+    <span>分析提交 <a href="https://github.com/joydle/borg/tree/7030d45a39f1910cd556ef5e7738b9a22c44c74b" target="_blank" rel="noopener noreferrer"><code>7030d45</code></a>（2026-11-18 05:25 北京时间；工作区版本 1.0.0，另有同名发行标签）</span>
+    <span>GitHub 匿名搜索星标 107（观察于 2026-11-18 08:15 北京时间，会变动）</span>
+    <span>创建于 2026-11-07</span>
+    <span>语言 Rust 1.88+ · Tokio · 许可 MIT OR Apache-2.0</span>
+    <span>单文件版 <a href="exports/borg.standalone.html">下载</a></span>
+  </div>
+</article>
+
+<section class="card" id="highlight">
+  <div class="highlight">
+    <div class="kicker">最大亮点</div>
+    <p class="lead">把「编排 LLM 调用」从业务代码里抽成监督运行时：组合子描述怎么跑，执行器在每个边界检查取消与预算，子任务恐慌不会带走兄弟任务，流水线形状变了就不能拿旧检查点接着跑。</p>
+    <p class="why">常见写法是自己 <code>tokio::spawn</code> 再拼重试。一旦要取消整棵树、限制并行打到供应商的请求、或在崩溃后跳过已完成步骤，这些约束容易散落各处。borg 的 <code>Supervisor</code> 给每个孩子单独的取消令牌和 <code>JoinSet</code>，并用 <code>catch_unwind</code> 把恐慌收成 <code>ChildPanicked</code>；<code>execute_resumable</code> 用组合树指纹拒绝形状不匹配的快照。<span class="ev ev-source">源码确认</span></p>
+  </div>
+  <p class="muted" style="margin-top:12px">一句话输入输出：输入是一棵 <code>Composition</code>（智能体、工具、预算、取消令牌和可选检查点存储）；输出是 <code>Verdict</code> / <code>ExecutionOutcome</code>，以及按策略写下的快照。仓库不附带任何真实模型客户端，示例走内置 <code>FakeLlmClient</code>。</p>
+</section>
+
+<section class="card" id="flow">
+  <h2>它怎么运转</h2>
+  <p>下面这条路径默认就能看完。每个框里写了动作、数据去向和进出。想看源码细节时，再点其中一格。</p>
+  <ol class="pipeline">
+    <li class="pipe"><button type="button" class="pipe-node" data-stage="compose"><div class="pipe-io">输入：智能体与步骤工厂</div><div class="pipe-act">组成 Composition 树</div><div class="pipe-io">去向：execute / execute_resumable</div></button></li>
+    <li class="pipe-arrow" aria-hidden="true">→</li>
+    <li class="pipe"><button type="button" class="pipe-node" data-stage="admit"><div class="pipe-io">输入：剩余预算与并行支路数</div><div class="pipe-act">入场检查</div><div class="pipe-io">去向：放行、降级或拒绝</div></button></li>
+    <li class="pipe-arrow" aria-hidden="true">→</li>
+    <li class="pipe"><button type="button" class="pipe-node" data-stage="supervise"><div class="pipe-io">输入：子任务与父取消令牌</div><div class="pipe-act">监督执行</div><div class="pipe-io">去向：Verdict，或 ChildPanicked / Cancelled</div></button></li>
+    <li class="pipe-arrow" aria-hidden="true">→</li>
+    <li class="pipe"><button type="button" class="pipe-node" data-stage="resume"><div class="pipe-io">输入：快照与当前树指纹</div><div class="pipe-act">检查点恢复</div><div class="pipe-io">去向：跳过已完成步骤，或拒绝恢复</div></button></li>
+  </ol>
+  <div class="drawer" id="flow-detail" aria-live="polite">点击流程中的一格，可看到这一步的机制说明。不点也能从框图读懂主路径。</div>
+</section>
+
+<section class="card" id="use">
+  <h2>怎么用</h2>
+  <div class="use-grid">
+    <div class="use-box yes">
+      <h3>什么情况下用</h3>
+      <ul class="act">
+        <li>你在写 Rust 服务，要把多次模型调用编成流水线，并且必须能取消、限制并发、崩溃后接着跑。</li>
+        <li>需要把重试、熔断、模型降级和工具 / MCP 调度放在同一套组合子里，而不是散落在业务代码中。</li>
+        <li>想先用 <code>FakeLlmClient</code> 把监督与检查点测通，再自己实现 <code>AgentLlmClient</code> 接真实 API。</li>
+      </ul>
+    </div>
+    <div class="use-box no">
+      <h3>什么情况下不用</h3>
+      <ul class="act">
+        <li>只想要开箱即用的 Claude Code / Codex 产品或带官方客户端的框架——borg 明确不附带供应商客户端。</li>
+        <li>需要现成的虚拟机 / 容器隔离。默认的 <code>borg-sandbox</code> 后端是普通子进程，权限与调用者相同，文档写明它不是隔离层。</li>
+        <li>不能接受从 Git 标签依赖、也不想自己实现 LLM 客户端。它不发布到 crates.io（该名已被无关 crate 占用）。</li>
+      </ul>
+    </div>
+  </div>
+  <h3>最小上手方案</h3>
+  <p>工作区 <code>Cargo.toml</code> 写明从 GitHub 标签引用，且 <code>publish = false</code>。README 给出的依赖写法（分析提交）：</p>
+<pre><code>borg = { git = "https://github.com/joydle/borg.git", tag = "v1.0.0" }
+async-trait = "0.1"</code></pre>
+  <ul class="act">
+    <li>示例不需要 API 密钥，走内置 <code>FakeLlmClient</code>。长会话与人工确认见 <code>streaming_session</code>、<code>human_in_the_loop</code> 示例。<span class="ev ev-claim">作者宣称</span></li>
+    <li>Rust 1.88+、Tokio。派生宏会展开为 <code>#[async_trait]</code>。<span class="ev ev-source">源码确认</span></li>
+    <li>本文未在本机编译或运行测试。源码树中约有 45 个含测试的 Rust 文件、约 676 个 <code>#[test]</code> / <code>#[tokio::test]</code> 标注，这是对分析提交的目录统计，不是实测结果。<span class="ev ev-pending">待验证</span></li>
+  </ul>
+</section>
+
+<section class="card" id="deep">
+  <h2>深入</h2>
+  <p class="muted">下面这些不影响先建立整体图景。需要对照源码、字段或边界时再展开。证据仍指向固定提交 <code>7030d45</code>。</p>
+  <details class="deep">
+    <summary>组合树与交接状态</summary>
+    <ul class="act">
+      <li><code>Composition</code> 包括 Single、Sequential、Parallel、LoopUntil、Branch、Fallback、FallbackLadder、Agent（工具循环）等。Parallel 在扇出时给各支路同一份交接快照，扇入时合并写入；构建器要求支路名（以及声明的 output_key）唯一。<a href="https://github.com/joydle/borg/blob/7030d45a39f1910cd556ef5e7738b9a22c44c74b/crates/borg/src/composition.rs#L303-L340" target="_blank" rel="noopener noreferrer"><code>crates/borg/src/composition.rs:303–340</code></a> <span class="ev ev-source">源码确认</span></li>
+      <li>LoopUntil 的 body 是工厂，每次迭代用 <code>LoopCtx</code> 重建，从而不必让 <code>Composition</code> 实现 <code>Clone</code>。<a href="https://github.com/joydle/borg/blob/7030d45a39f1910cd556ef5e7738b9a22c44c74b/crates/borg/src/composition.rs#L334-L347" target="_blank" rel="noopener noreferrer"><code>crates/borg/src/composition.rs:334–347</code></a></li>
+      <li>Agent 变体把「一次模型调用 + 该次响应里的全部工具调用」算作一步；结果写入交接槽 <code>tool_results</code>。<a href="https://github.com/joydle/borg/blob/7030d45a39f1910cd556ef5e7738b9a22c44c74b/crates/borg/src/composition.rs#L370-L390" target="_blank" rel="noopener noreferrer"><code>crates/borg/src/composition.rs:370–390</code></a> 行号随枚举变体位置，以链接为准。</li>
+    </ul>
+  </details>
+  <details class="deep">
+    <summary>监督：取消、恐慌隔离、并发上限</summary>
+    <ul class="act">
+      <li>模块文档写明：这不是完整 Actor 系统，没有消息传递或链接；重启策略是 OneForOne。<a href="https://github.com/joydle/borg/blob/7030d45a39f1910cd556ef5e7738b9a22c44c74b/crates/borg/src/supervisor.rs#L1-L23" target="_blank" rel="noopener noreferrer"><code>crates/borg/src/supervisor.rs:1–23</code></a> <span class="ev ev-source">源码确认</span></li>
+      <li>父取消令牌派生 <code>child_token()</code>，取消会传到后代；信号量限制同时进行的 LLM 往返，避免宽 Parallel 打满供应商限额。丢弃 Supervisor 会中止仍在飞行的孩子。<a href="https://github.com/joydle/borg/blob/7030d45a39f1910cd556ef5e7738b9a22c44c74b/crates/borg/src/supervisor.rs#L6-L14" target="_blank" rel="noopener noreferrer"><code>crates/borg/src/supervisor.rs:6–14</code></a> <a href="https://github.com/joydle/borg/blob/7030d45a39f1910cd556ef5e7738b9a22c44c74b/crates/borg/src/supervisor.rs#L95-L99" target="_blank" rel="noopener noreferrer"><code>crates/borg/src/supervisor.rs:95–99</code></a></li>
+      <li>合作式取消走孩子的 token；<code>abort()</code> 是后盾，会直接丢弃 Future。执行器在边界看见父取消时立即发出 <code>Cancelled</code>。<a href="https://github.com/joydle/borg/blob/7030d45a39f1910cd556ef5e7738b9a22c44c74b/crates/borg/src/supervisor.rs#L47-L58" target="_blank" rel="noopener noreferrer"><code>crates/borg/src/supervisor.rs:47–58</code></a> <a href="https://github.com/joydle/borg/blob/7030d45a39f1910cd556ef5e7738b9a22c44c74b/crates/borg/src/executor.rs#L16-L18" target="_blank" rel="noopener noreferrer"><code>crates/borg/src/executor.rs:16–18</code></a></li>
+      <li>工作区 <code>Cargo.toml</code> 故意不设 <code>panic = "abort"</code>，因为监督依赖 <code>catch_unwind</code>。若你的二进制改成 abort，恐慌隔离会失效。<span class="ev ev-source">源码确认</span></li>
+    </ul>
+  </details>
+  <details class="deep">
+    <summary>预算入场与缓存计价</summary>
+    <ul class="act">
+      <li><code>Budget::admit_parallel(branches, min_per_branch)</code> 在任何支路生成前做入场检查，结果可以是放行、降级或拒绝。<a href="https://github.com/joydle/borg/blob/7030d45a39f1910cd556ef5e7738b9a22c44c74b/crates/borg/src/budget.rs#L83-L140" target="_blank" rel="noopener noreferrer"><code>crates/borg/src/budget.rs:83–140</code></a> <span class="ev ev-source">源码确认</span></li>
+      <li><code>TokenUsage::chargeable</code> 可把缓存读取按百分比计价（向下取整）。默认 <code>InMemoryBudget</code> 对缓存读取按 100% 计；注释说明若把 20K 缓存前缀当成 20K 全价，会吃空会话池。<a href="https://github.com/joydle/borg/blob/7030d45a39f1910cd556ef5e7738b9a22c44c74b/crates/borg/src/budget.rs#L54-L65" target="_blank" rel="noopener noreferrer"><code>crates/borg/src/budget.rs:54–65</code></a> <a href="https://github.com/joydle/borg/blob/7030d45a39f1910cd556ef5e7738b9a22c44c74b/crates/borg/src/budget.rs#L188-L196" target="_blank" rel="noopener noreferrer"><code>crates/borg/src/budget.rs:188–196</code></a></li>
+      <li><code>sub_budget</code> 可从会话预算再切出一轮子预算。<a href="https://github.com/joydle/borg/blob/7030d45a39f1910cd556ef5e7738b9a22c44c74b/crates/borg/src/budget.rs#L263-L274" target="_blank" rel="noopener noreferrer"><code>crates/borg/src/budget.rs:263–274</code></a></li>
+    </ul>
+  </details>
+  <details class="deep">
+    <summary>检查点：指纹必须对上</summary>
+    <ul class="act">
+      <li><code>Snapshot</code> 带 schema 版本和组合树指纹。恢复时执行器先比版本，再比指纹；对不上就返回 <code>BorgError::Internal</code>，避免用新树去读旧进度。要改结构得先 <code>CheckpointStore::delete</code>。<a href="https://github.com/joydle/borg/blob/7030d45a39f1910cd556ef5e7738b9a22c44c74b/crates/borg/src/checkpoint.rs#L12-L15" target="_blank" rel="noopener noreferrer"><code>crates/borg/src/checkpoint.rs:12–15</code></a> <a href="https://github.com/joydle/borg/blob/7030d45a39f1910cd556ef5e7738b9a22c44c74b/crates/borg/src/executor.rs#L562-L587" target="_blank" rel="noopener noreferrer"><code>crates/borg/src/executor.rs:562–587</code></a> <span class="ev ev-source">源码确认</span></li>
+      <li>入口是 <code>execute_resumable</code> / <code>execute_resumable_with</code>。<a href="https://github.com/joydle/borg/blob/7030d45a39f1910cd556ef5e7738b9a22c44c74b/crates/borg/src/executor.rs#L536-L553" target="_blank" rel="noopener noreferrer"><code>crates/borg/src/executor.rs:536–553</code></a></li>
+    </ul>
+  </details>
+  <details class="deep">
+    <summary>取舍、失效边界与替代方案</summary>
+    <ul class="act">
+      <li>与 LangGraph / 自写 Tokio 监督相比：borg 把取消传播、恐慌隔离、预算入场和检查点指纹放进核心库，但换来的是你必须实现 LLM 客户端，并且运行时是 Rust。<span class="ev ev-infer">推断</span></li>
+      <li><code>TokioBackend</code> 明确「不是隔离」：以调用者权限跑普通子进程；要跑不信任代码，需自己实现 <code>SandboxBackend</code>。<a href="https://github.com/joydle/borg/blob/7030d45a39f1910cd556ef5e7738b9a22c44c74b/crates/borg-sandbox/src/lib.rs#L1-L16" target="_blank" rel="noopener noreferrer"><code>crates/borg-sandbox/src/lib.rs:1–16</code></a> <span class="ev ev-source">源码确认</span></li>
+      <li>失败分类把额度用尽、上下文超长等标成不可重试；重试靠字符串 / 状态码启发式，分类错了就会误重试或过早放弃。<span class="ev ev-infer">推断</span></li>
+      <li>仓库声称另有护栏（Warn / Throttle / Halt）、滑窗熔断、重启风暴（meltdown）和 MCP 接入。实现文件存在（如 <code>guardrails.rs</code>、<code>meltdown.rs</code>、<code>crates/borg-mcp</code>），本文未逐步走完每条路径。<span class="ev ev-pending">待验证</span></li>
+    </ul>
+  </details>
+</section>
+<footer class="ft">
+<div class="foot-nav"><a href="index.html">← 返回开源解剖主页</a></div>
+<p>XHOT 是独立的个人项目，与 X Corp.、AIHOT、GitHub 及本文所述开源项目无隶属或背书关系。开源解剖根据公开源码整理，可能有误，以仓库原文与指定版本为准。文中不含任何个人或公司私密信息。本文未在本机运行项目或复现其基准。</p>
+<p><a href="../about.html">关于 · 数据来源 · 免责声明</a> · <a href="https://github.com/88daxiong/xhot/issues" target="_blank" rel="noopener noreferrer">反馈 / 撤下请求（GitHub Issues）</a></p>
+</footer>
+</main>
+<script type="application/json" id="anatomy-data">{"stages": [{"id": "compose", "title": "组成 Composition 树", "evidence": "source", "detail": "<p>调用方用 <code>seq</code> / <code>par</code> / <code>repeat</code> 或 <code>pipeline!</code> 宏搭树。<code>Composition</code> 拥有智能体；<code>execute</code> 会消耗这棵树。Parallel 在扇出时复制同一份交接快照，扇入时合并；LoopUntil 的 body 是工厂，每轮重建，从而不必 <code>Clone</code> 整棵树。</p><p class='src'>依据：<a href=\"https://github.com/joydle/borg/blob/7030d45a39f1910cd556ef5e7738b9a22c44c74b/crates/borg/src/composition.rs#L303-L347\" target=\"_blank\" rel=\"noopener noreferrer\"><code>crates/borg/src/composition.rs:303–347</code></a>；<a href=\"https://github.com/joydle/borg/blob/7030d45a39f1910cd556ef5e7738b9a22c44c74b/crates/borg/src/dsl.rs#L1-L40\" target=\"_blank\" rel=\"noopener noreferrer\"><code>crates/borg/src/dsl.rs:1–40</code></a>；<a href=\"https://github.com/joydle/borg/blob/7030d45a39f1910cd556ef5e7738b9a22c44c74b/crates/borg/src/executor.rs#L105-L116\" target=\"_blank\" rel=\"noopener noreferrer\"><code>crates/borg/src/executor.rs:105–116</code></a></p>"}, {"id": "admit", "title": "并行入场与记账", "evidence": "source", "detail": "<p>执行器在生成并行支路前调用 <code>admit_parallel</code>。预算可以放行、降级或拒绝。事后按 <code>chargeable</code> 记账：未缓存输入和输出按全价，缓存读取可按百分比计价并向下取整。默认内存预算对缓存读取仍按 100% 计。</p><p class='src'>依据：<a href=\"https://github.com/joydle/borg/blob/7030d45a39f1910cd556ef5e7738b9a22c44c74b/crates/borg/src/budget.rs#L54-L65\" target=\"_blank\" rel=\"noopener noreferrer\"><code>crates/borg/src/budget.rs:54–65</code></a>；<a href=\"https://github.com/joydle/borg/blob/7030d45a39f1910cd556ef5e7738b9a22c44c74b/crates/borg/src/budget.rs#L139-L140\" target=\"_blank\" rel=\"noopener noreferrer\"><code>crates/borg/src/budget.rs:139–140</code></a>；<a href=\"https://github.com/joydle/borg/blob/7030d45a39f1910cd556ef5e7738b9a22c44c74b/crates/borg/src/budget.rs#L171-L197\" target=\"_blank\" rel=\"noopener noreferrer\"><code>crates/borg/src/budget.rs:171–197</code></a></p>"}, {"id": "supervise", "title": "监督执行：取消与恐慌隔离", "evidence": "source", "detail": "<p>每个孩子拿父令牌的 <code>child_token()</code>，父取消会传到后代，但孩子的取消不会向上冒泡。合作式取消走 token；不听话的任务再 <code>abort</code>。恐慌被收成 <code>ChildPanicked</code>，不把兄弟任务一起Unwind。信号量限制同时进行的模型往返。丢弃 Supervisor 会中止仍在飞行的孩子。</p><p class='src'>依据：<a href=\"https://github.com/joydle/borg/blob/7030d45a39f1910cd556ef5e7738b9a22c44c74b/crates/borg/src/supervisor.rs#L1-L14\" target=\"_blank\" rel=\"noopener noreferrer\"><code>crates/borg/src/supervisor.rs:1–14</code></a>；<a href=\"https://github.com/joydle/borg/blob/7030d45a39f1910cd556ef5e7738b9a22c44c74b/crates/borg/src/supervisor.rs#L47-L99\" target=\"_blank\" rel=\"noopener noreferrer\"><code>crates/borg/src/supervisor.rs:47–99</code></a>；<a href=\"https://github.com/joydle/borg/blob/7030d45a39f1910cd556ef5e7738b9a22c44c74b/crates/borg/src/executor.rs#L937-L958\" target=\"_blank\" rel=\"noopener noreferrer\"><code>crates/borg/src/executor.rs:937–958</code></a></p>"}, {"id": "resume", "title": "检查点：指纹对不上就拒绝", "evidence": "source", "detail": "<p><code>execute_resumable</code> 先算当前组合树指纹。若已有快照，必须 schema 版本一致且指纹相同，否则返回 <code>BorgError::Internal</code>。这是为了防止用改过形状的新树去接旧进度。要改结构，需先删除该检查点。</p><p class='src'>依据：<a href=\"https://github.com/joydle/borg/blob/7030d45a39f1910cd556ef5e7738b9a22c44c74b/crates/borg/src/checkpoint.rs#L12-L15\" target=\"_blank\" rel=\"noopener noreferrer\"><code>crates/borg/src/checkpoint.rs:12–15</code></a>；<a href=\"https://github.com/joydle/borg/blob/7030d45a39f1910cd556ef5e7738b9a22c44c74b/crates/borg/src/executor.rs#L536-L553\" target=\"_blank\" rel=\"noopener noreferrer\"><code>crates/borg/src/executor.rs:536–553</code></a>；<a href=\"https://github.com/joydle/borg/blob/7030d45a39f1910cd556ef5e7738b9a22c44c74b/crates/borg/src/executor.rs#L562-L587\" target=\"_blank\" rel=\"noopener noreferrer\"><code>crates/borg/src/executor.rs:562–587</code></a></p>"}]}</script>
+</body>
+</html>

@@ -38,7 +38,7 @@
 
 <section class="card" aria-labelledby="choose">
   <h2 id="choose">选择一篇拆解</h2>
-  <p class="muted">下面六篇都会直接显示。搜索和筛选只是辅助，不是入口。</p>
+  <p class="muted">下面八篇都会直接显示。搜索和筛选只是辅助，不是入口。</p>
   <div class="cards" style="margin-top:8px">
     <a class="proj-card" href="ai-memory.html" data-tags="memory agent rust" data-hay="ai-memory akitaonrails wiki markdown sqlite 记忆 交接 编程 agent 零llm">
       <div class="badge-row"><span class="pill">Agent 记忆</span><span class="pill purple">Rust</span><span class="pill">v3.4.7</span></div>
@@ -82,6 +82,22 @@
       <p style="margin-top:10px">适合：要把 TypeScript、Python、C、Go、Ruby 或 Java 的热路径逐步换成 Rust，并且每一步都能证明结果没变。</p>
       <p class="cta">阅读拆解 →</p>
     </a>
+
+    <a class="proj-card" href="borg.html" data-tags="harness runtime rust" data-hay="borg joydle 监督 运行时 rust pipeline 取消 恐慌 预算 检查点 agent runtime tokio mcp">
+      <div class="badge-row"><span class="pill">Agent 运行时</span><span class="pill purple">Rust</span><span class="pill">v1.0.0</span></div>
+      <h2>borg</h2>
+      <p class="hl">最大亮点：把多次 LLM 调用编成可取消、可隔离恐慌、有预算、崩溃后按组合树指纹恢复的流水线。</p>
+      <p style="margin-top:10px">适合：在 Rust 里编排模型调用，并且必须把取消、并发上限和检查点写成硬约束，而不是散落在业务代码中。</p>
+      <p class="cta">阅读拆解 →</p>
+    </a>
+    <a class="proj-card" href="mas-office.html" data-tags="team ops agent" data-hay="mas-office 多智能体 claude code codex 收件箱 锁定 协议 办公桌 decideTool events.jsonl">
+      <div class="badge-row"><span class="pill">多智能体</span><span class="pill purple">JavaScript</span><span class="pill">v0.3.0</span></div>
+      <h2>MAS Office</h2>
+      <p class="hl">最大亮点：每个角色都是本机真实的 Claude Code 或 Codex 会话；先锁定团队设计，工具调用只经过一个执法点，面板是事件日志的投影。</p>
+      <p style="margin-top:10px">适合：要把调研或决策任务分成多个已登录的编码代理角色，并在同一个收件箱里处理批准和检查点。</p>
+      <p class="cta">阅读拆解 →</p>
+    </a>
+
   </div>
   <p id="filter-empty" class="muted" hidden style="margin-top:16px">没有符合条件的文章。可点「全部」重新显示。</p>
   <div class="filter-bar">
@@ -94,6 +110,8 @@
       <button type="button" data-filter-tag="video" aria-pressed="false">视频渲染</button>
       <button type="button" data-filter-tag="rules" aria-pressed="false">规则聊天</button>
       <button type="button" data-filter-tag="port" aria-pressed="false">Rust 迁移</button>
+      <button type="button" data-filter-tag="harness" aria-pressed="false">Agent 运行时</button>
+      <button type="button" data-filter-tag="team" aria-pressed="false">多智能体</button>
     </div>
   </div>
 </section>
