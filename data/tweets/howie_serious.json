@@ -2,6 +2,48 @@
   "handle": "howie_serious",
   "tweets": [
     {
+      "created_at": "2026-11-15T02:00:08.000Z",
+      "id": "2121785290910208468",
+      "lang": "",
+      "metrics": {
+        "bookmark": 10,
+        "impression": 9139,
+        "like": 21,
+        "quote": 1,
+        "reply": 17,
+        "retweet": 1
+      },
+      "url": "https://x.com/howie_serious/status/2121785290910208468"
+    },
+    {
+      "created_at": "2026-11-14T05:59:06.000Z",
+      "id": "2121483038534311959",
+      "lang": "",
+      "metrics": {
+        "bookmark": 2,
+        "impression": 2920,
+        "like": 1,
+        "quote": 0,
+        "reply": 0,
+        "retweet": 0
+      },
+      "url": "https://x.com/howie_serious/status/2121483038534311959"
+    },
+    {
+      "created_at": "2026-11-14T02:23:11.000Z",
+      "id": "2121428703184089248",
+      "lang": "",
+      "metrics": {
+        "bookmark": 2,
+        "impression": 4662,
+        "like": 9,
+        "quote": 0,
+        "reply": 2,
+        "retweet": 0
+      },
+      "url": "https://x.com/howie_serious/status/2121428703184089248"
+    },
+    {
       "created_at": "2026-11-13T11:17:19.000Z",
       "id": "2121200731508351392",
       "lang": "zh",

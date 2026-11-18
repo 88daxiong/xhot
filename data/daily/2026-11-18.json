@@ -1,0 +1,159 @@
+{
+  "changelog": [
+    {
+      "date": "2026-11-18"
+    }
+  ],
+  "date": "2026-11-18",
+  "followers_zh": "近 4 日粉丝增加最多的是 Naval（+1.8 万）、OpenAI（+1.3 万）和 Claude（+1.2 万）；马斯克减少约 32.0 万，Google、Meta 各减少约 1.7 万和 1.2 万。",
+  "gists": {
+    "2122472344052531640": "马斯克分享从塔上拍摄的 Starship 着陆画面。",
+    "2122479807858680178": "NVIDIA 在 SC26 发布面向科学的 Nemotron 模型。",
+    "2122487017137398256": "Jeremy Howard 称 AnswerAI 将内部学习工具 SolveIt 首次向公众开放。",
+    "2122500307557265651": "Simon Willison 分享为编程智能体所写代码做沙箱隔离的新探索。",
+    "2122514904750174408": "WuBlockchain 援引 Wintermute 警告：加密熊市尚未结束，近期抛售并不意味着见底。",
+    "2122561319509557595": "Tim Ferriss 称很喜欢 Waymo，但刚经历一次可怕行程，并提到其 Jaguar 车型。",
+    "2122577169863885235": "马斯克称，持续强化学习对超级智能来说，大概会像《明日边缘》一样周而复始。",
+    "2122664990624641421": "Mollick 认同 Anthropic：与其堆叠各团队的专项子智能体，一个智能体往往更好更便宜。",
+    "2122697413571809687": "Sahil Bloom 建议学会接受赞美，不要下意识地推辞。",
+    "2122708751782445423": "Nadella 预告 Ignite 于太平洋时间上午 10 点开始，欢迎在线参加。",
+    "2122711140383838692": "Pieter Levels 发帖称“她正在学”。",
+    "2122713540666806397": "为庆祝 Mistral Vibe + Le Chonk，欧洲前 3 个月免费用 Vibe，并称其编程优于 GLM / DeepSeek。",
+    "2122728603909783741": "Perplexity 推出 Multiagent，作为 Computer 与队友中的新努力等级。",
+    "2122737596971503885": "Gemini 宣布 Tasks 向美国、日本、韩国、加拿大、澳大利亚和印度符合条件的用户免费开放。",
+    "2122740715633426666": "Google 宣布即日起将 Gemini 中的 Tasks 免费扩展到数亿用户。",
+    "2122750126297161811": "OpenAI 称 GPT-6.2 Astra 在专业与科研评测创新高，单任务成本不到 GPT-6 Astra 的三分之一。",
+    "2122751678503907590": "Codie Sanchez 认为，高效能者常被低估的标志之一是讨厌闲聊。",
+    "2122752256923873753": "OpenAI 开发者账号宣布，GPT-6.2 Astra 与 Sol 已可在 Codex 和 API 中使用。",
+    "2122752345364935113": "Greg Brockman 称 GPT-6.2 Astra 与 Sol 已上线，擅长专业工作与科研，且单任务成本更低。",
+    "2122755693191287009": "Mollick 认为 GPT-6.2 Astra 难以驾驭、表现不稳定，但在宏大项目上也能交出不错结果。",
+    "2122756702961299800": "微软发布 Copilot Workspaces，让人与智能体在共享上下文中朝同一目标协作。",
+    "2122766682716307482": "Google 称美国地区的 Gemini Tasks 即日起能承担更多平台事务。",
+    "2122777818434265318": "McKay 调侃 Astra 6.2 的表现，简直像是给 Anthropic IPO 做的广告。",
+    "2122784279604383914": "Hugging Face 用强化学习与 LoRA 将 Qwen 适配 pi 编程智能体，SWE-bench Pro 等指标大幅提升。",
+    "2122785177135096053": "Perplexity 发布 Orchestrator API，可按任务选择并路由到合适的模型。",
+    "2122793040058442116": "Nadella 称微软 Ignite 的目标是把技术进步转化为对人、组织与社会的实际杠杆。"
+  },
+  "hide": [
+    "2122547875200786471",
+    "2122727208754254245",
+    "2122544596928676108"
+  ],
+  "highlights": [
+    {
+      "excerpt": "Some of you have been asking very politely. Some of you have just been asking.\n\nGPT-6.2 Astra and Sol are now available.\n\nSuper efficient and built to perform where it counts—the real world.\n\nhttps://t.co/qr2iP0GpfX https://t.co/jLCyVIws2Y",
+      "excerpt_zh": "你们有的一直很礼貌地在问，有的则是一直在问。\n\nGPT-6.2 Astra 和 Sol 现已可用。\n\n它们非常高效，并且为真正重要的地方——真实世界——而打造。\n\nhttps://t.co/qr2iP0GpfX https://t.co/jLCyVIws2Y",
+      "handle": "OpenAI",
+      "likes": 28854,
+      "name": "OpenAI",
+      "post_id": "2122750124543926515",
+      "tags": [
+        "model",
+        "product"
+      ],
+      "text_zh": "OpenAI 宣布 GPT-6.2 Astra 与 Sol 上线，强调更高效、更面向真实世界任务。",
+      "url": "https://x.com/OpenAI/status/2122750124543926515"
+    },
+    {
+      "excerpt": "Thrilled to announce $5B in funding for @IsomorphicLabs to accelerate our mission to Solve All Disease. We continue to make rapid progress reimagining drug design from first principles with AI to radically cut the time & cost to find new medicines. Gradually, then all at once... https://t.co/ihOS3L9vPC",
+      "excerpt_zh": "非常高兴宣布 @IsomorphicLabs 获得 50 亿美元融资，以加速我们「解决所有疾病」的使命。我们继续用 AI 从第一性原理重新构想药物设计，迅速推进，以大幅缩短发现新药的时间并降低成本。循序渐进，然后突然加速…… https://t.co/ihOS3L9vPC",
+      "handle": "demishassabis",
+      "likes": 11177,
+      "name": "Demis Hassabis",
+      "post_id": "2122662616367853670",
+      "tags": [
+        "funding",
+        "research"
+      ],
+      "text_zh": "Hassabis 宣布 Isomorphic Labs 获 50 亿美元融资，加速用 AI 从第一性原理做药物设计。",
+      "url": "https://x.com/demishassabis/status/2122662616367853670"
+    },
+    {
+      "excerpt": "GPT-6.2 Sol & Astra are *finally* here. We've also expanded ultrafast to Pro 200 plans for GPT-6.2 Sol, it's my go-to model for most day to day things. https://t.co/niwTIAgvab",
+      "excerpt_zh": "GPT-6.2 Sol 和 Astra *终于*来了。我们还把 GPT-6.2 Sol 的 ultrafast 扩展到了 Pro 200 套餐，它是我日常大多数事情的首选模型。 https://t.co/niwTIAgvab",
+      "handle": "thsottiaux",
+      "likes": 10362,
+      "name": "Tibo",
+      "post_id": "2122753991000133943",
+      "tags": [
+        "model"
+      ],
+      "text_zh": "Tibo 称 GPT-6.2 Sol 与 Astra 已上线，并把 Sol ultrafast 扩至 Pro 200。",
+      "url": "https://x.com/thsottiaux/status/2122753991000133943"
+    },
+    {
+      "excerpt": "And here we go…GPT-6.2 Astra and GPT-6.2 Sol are yours to make more games with.\n\nOh, and they’re also super efficient and really good at making slides, building websites, and tackling the work you were doing before you started making games.",
+      "excerpt_zh": "来了……GPT-6.2 Astra 和 GPT-6.2 Sol 可以供你用来做更多游戏。\n\n对了，它们也非常高效，而且很擅长做幻灯片、建网站，以及处理你开始做游戏之前正在做的那些工作。\n\n即日起向 ChatGPT Work 和 Codex 的 Plus、Pro、Enterprise 和 Edu 用户推送。\n\nhttps://t.co/tjQBDQWB2n",
+      "handle": "ChatGPT",
+      "likes": 10136,
+      "name": "ChatGPT",
+      "post_id": "2122751009156210841",
+      "tags": [
+        "model",
+        "product"
+      ],
+      "text_zh": "ChatGPT 称 GPT-6.2 Astra 与 Sol 今日向 Work 与 Codex 的 Plus 等用户推送。",
+      "url": "https://x.com/ChatGPT/status/2122751009156210841"
+    },
+    {
+      "excerpt": "Imagine being a board member at Nvidia considering potential candidates for CEO, and trying to claim with a straight face that one of the others would do a better job. https://t.co/DVLxWTgkI1",
+      "excerpt_zh": "想象你是英伟达董事会成员，正在考虑潜在的 CEO 人选，还要一本正经地声称其他人会干得更好。 https://t.co/DVLxWTgkI1",
+      "handle": "paulg",
+      "likes": 9707,
+      "name": "Paul Graham",
+      "post_id": "2122745936279462274",
+      "tags": [
+        "chips"
+      ],
+      "text_zh": "Paul Graham 调侃：英伟达董事会很难一本正经地说，别人会比现任 CEO 干得更好。",
+      "url": "https://x.com/paulg/status/2122745936279462274"
+    },
+    {
+      "excerpt": "I will not be writing a full review of GPT-6.2 Astra / Sol.\n\nI had a terrible experience testing them. They were essentially unusable.\n\nI do not recommend these models. https://t.co/MbNGtLWjbY",
+      "excerpt_zh": "我不会写一篇关于 GPT-6.2 Astra / Sol 的完整评测。\n\n我测试它们的体验很糟糕。它们基本上没法用。\n\n我不推荐这些模型。 https://t.co/MbNGtLWjbY",
+      "handle": "mattshumer_",
+      "likes": 4976,
+      "name": "Matt Shumer",
+      "post_id": "2122752192226406421",
+      "tags": [
+        "model"
+      ],
+      "text_zh": "Matt Shumer 称测试 GPT-6.2 体验很差、几乎无法使用，故不做完整评测、不推荐。",
+      "url": "https://x.com/mattshumer_/status/2122752192226406421"
+    },
+    {
+      "excerpt": "Yesterday, I revealed that Perplexity crossed $1B ARR. We have strong margins and a healthy growth rate. We don’t talk about our finances very often because we’re focused on building. Follow our research: https://t.co/Ovl8YuZmS0",
+      "excerpt_zh": "昨天我透露，Perplexity 的年经常性收入已突破 10 亿美元。我们有很强的利润率和健康的增长率。我们不太常谈财务，因为我们专注于把产品做出来。关注我们的研究： https://t.co/Ovl8YuZmS0",
+      "handle": "AravSrinivas",
+      "likes": 3616,
+      "name": "Aravind Srinivas",
+      "post_id": "2122734422445445629",
+      "tags": [
+        "startup"
+      ],
+      "text_zh": "Srinivas 称 Perplexity 年经常性收入已破 10 亿美元，利润率与增速都健康。",
+      "url": "https://x.com/AravSrinivas/status/2122734422445445629"
+    },
+    {
+      "excerpt": "Knowing things → doing things → finding ways to save you time and money\n\nWe’re expanding Tasks in Gemini free of charge to hundreds of millions of people in six countries. Powered by Gemini 4 Hydrogen, Tasks lets you hand off everyday life admin directly:\n\n- Forward emails to gemini@google.",
+      "excerpt_zh": "从知道事情 → 去做事情 → 想办法帮你省时省钱\n\n我们正在把 Gemini 中的 Tasks 免费扩展到六个国家的数亿用户。由 Gemini 4 Hydrogen 驱动，Tasks 能让你直接把日常事务交出去：\n\n- 把邮件转发到 gemini@google.com，即可回复邀请并加入家庭日历\n- 让 Gemini 致电本地商家比较报价、查询库存（全程有文字记录，拨打前需你批准）",
+      "handle": "sundarpichai",
+      "likes": 3137,
+      "name": "Sundar Pichai",
+      "post_id": "2122741728247738688",
+      "tags": [
+        "product",
+        "agent"
+      ],
+      "text_zh": "Pichai 宣布 Gemini Tasks 向六国数亿用户免费开放，可代办日程、询价并支持支付。",
+      "url": "https://x.com/sundarpichai/status/2122741728247738688"
+    }
+  ],
+  "pin": [],
+  "summary_zh": [
+    "OpenAI 发布 GPT-6.2 Astra 与 Sol，官方介绍帖约 2.9 万赞。",
+    "Isomorphic Labs 获 50 亿美元融资；Perplexity 称 ARR 已破 10 亿美元。",
+    "话题上 GLM 智谱涨 48.2%、Codex 涨 35.5%；Gemini 与 Kimi 分别下跌。"
+  ],
+  "topics_zh": "涨幅领先的是 GLM 智谱（+48.2%）、Codex（+35.5%）、Opus 5.5（+28.3%）和 Claude Code（+26.0%）；Gemini（-12.3%）与 Kimi（-14.9%）回落。"
+}

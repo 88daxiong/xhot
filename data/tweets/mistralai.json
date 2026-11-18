@@ -2,6 +2,90 @@
   "handle": "mistralai",
   "tweets": [
     {
+      "created_at": "2026-11-17T16:27:02.000Z",
+      "id": "2122728226531545138",
+      "lang": "",
+      "metrics": {
+        "bookmark": 92,
+        "impression": 28664,
+        "like": 559,
+        "quote": 12,
+        "reply": 43,
+        "retweet": 26
+      },
+      "url": "https://x.com/MistralAI/status/2122728226531545138"
+    },
+    {
+      "created_at": "2026-11-17T15:32:10.000Z",
+      "id": "2122714420606325008",
+      "lang": "",
+      "metrics": {
+        "bookmark": 38,
+        "impression": 34131,
+        "like": 141,
+        "quote": 5,
+        "reply": 13,
+        "retweet": 8
+      },
+      "url": "https://x.com/MistralAI/status/2122714420606325008"
+    },
+    {
+      "created_at": "2026-11-17T15:28:43.000Z",
+      "id": "2122713550774804919",
+      "lang": "",
+      "metrics": {
+        "bookmark": 220,
+        "impression": 43454,
+        "like": 215,
+        "quote": 14,
+        "reply": 71,
+        "retweet": 6
+      },
+      "url": "https://x.com/MistralAI/status/2122713550774804919"
+    },
+    {
+      "created_at": "2026-11-17T15:28:42.000Z",
+      "id": "2122713547952324750",
+      "lang": "",
+      "metrics": {
+        "bookmark": 52,
+        "impression": 48237,
+        "like": 293,
+        "quote": 21,
+        "reply": 19,
+        "retweet": 36
+      },
+      "url": "https://x.com/MistralAI/status/2122713547952324750"
+    },
+    {
+      "created_at": "2026-11-17T15:28:41.000Z",
+      "id": "2122713544525562123",
+      "lang": "",
+      "metrics": {
+        "bookmark": 18,
+        "impression": 28956,
+        "like": 195,
+        "quote": 4,
+        "reply": 5,
+        "retweet": 5
+      },
+      "url": "https://x.com/MistralAI/status/2122713544525562123"
+    },
+    {
+      "created_at": "2026-11-17T15:28:40.000Z",
+      "id": "2122713540666806397",
+      "lang": "",
+      "metrics": {
+        "bookmark": 1500,
+        "impression": 226021,
+        "like": 3186,
+        "quote": 125,
+        "reply": 218,
+        "retweet": 302
+      },
+      "url": "https://x.com/MistralAI/status/2122713540666806397"
+    },
+    {
       "created_at": "2026-11-11T12:12:32.000Z",
       "id": "2120489851615084876",
       "lang": "",

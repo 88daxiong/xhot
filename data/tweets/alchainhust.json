@@ -2,6 +2,160 @@
   "handle": "alchainhust",
   "tweets": [
     {
+      "created_at": "2026-11-17T19:57:14.000Z",
+      "id": "2122781125026418895",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 927,
+        "like": 1,
+        "quote": 0,
+        "reply": 1,
+        "retweet": 0
+      },
+      "url": "https://x.com/AlchainHust/status/2122781125026418895"
+    },
+    {
+      "created_at": "2026-11-16T18:16:50.000Z",
+      "id": "2122393471638237214",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 2,
+        "impression": 3191,
+        "like": 6,
+        "quote": 0,
+        "reply": 11,
+        "retweet": 0
+      },
+      "url": "https://x.com/AlchainHust/status/2122393471638237214"
+    },
+    {
+      "created_at": "2026-11-16T06:57:00.000Z",
+      "id": "2122222386443595795",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 37,
+        "impression": 11626,
+        "like": 40,
+        "quote": 0,
+        "reply": 26,
+        "retweet": 3
+      },
+      "url": "https://x.com/AlchainHust/status/2122222386443595795"
+    },
+    {
+      "created_at": "2026-11-15T23:10:13.000Z",
+      "id": "2122104914851873230",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 3,
+        "impression": 1760,
+        "like": 1,
+        "quote": 0,
+        "reply": 1,
+        "retweet": 0
+      },
+      "url": "https://x.com/AlchainHust/status/2122104914851873230"
+    },
+    {
+      "created_at": "2026-11-15T23:10:04.000Z",
+      "id": "2122104879477121294",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 2891,
+        "like": 0,
+        "quote": 0,
+        "reply": 2,
+        "retweet": 0
+      },
+      "url": "https://x.com/AlchainHust/status/2122104879477121294"
+    },
+    {
+      "created_at": "2026-11-15T23:09:56.000Z",
+      "id": "2122104845171868058",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 7,
+        "impression": 6887,
+        "like": 6,
+        "quote": 1,
+        "reply": 27,
+        "retweet": 0
+      },
+      "url": "https://x.com/AlchainHust/status/2122104845171868058"
+    },
+    {
+      "created_at": "2026-11-15T22:53:54.000Z",
+      "id": "2122100809873911979",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 2478,
+        "like": 9,
+        "quote": 0,
+        "reply": 11,
+        "retweet": 0
+      },
+      "url": "https://x.com/AlchainHust/status/2122100809873911979"
+    },
+    {
+      "created_at": "2026-11-15T06:29:17.000Z",
+      "id": "2121853022611677269",
+      "lang": "ja",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 5805,
+        "like": 16,
+        "quote": 0,
+        "reply": 7,
+        "retweet": 0
+      },
+      "url": "https://x.com/AlchainHust/status/2121853022611677269"
+    },
+    {
+      "created_at": "2026-11-14T23:19:09.000Z",
+      "id": "2121744774877389261",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 50,
+        "impression": 6417,
+        "like": 29,
+        "quote": 2,
+        "reply": 16,
+        "retweet": 8
+      },
+      "url": "https://x.com/AlchainHust/status/2121744774877389261"
+    },
+    {
+      "created_at": "2026-11-14T09:28:53.000Z",
+      "id": "2121535832859529725",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 112,
+        "impression": 11588,
+        "like": 50,
+        "quote": 1,
+        "reply": 13,
+        "retweet": 14
+      },
+      "url": "https://x.com/AlchainHust/status/2121535832859529725"
+    },
+    {
+      "created_at": "2026-11-14T06:08:01.000Z",
+      "id": "2121485281744531496",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 168,
+        "impression": 21697,
+        "like": 85,
+        "quote": 4,
+        "reply": 31,
+        "retweet": 13
+      },
+      "url": "https://x.com/AlchainHust/status/2121485281744531496"
+    },
+    {
       "created_at": "2026-11-12T04:39:52.000Z",
       "id": "2120738325636190688",
       "lang": "zh",

@@ -2,6 +2,174 @@
   "handle": "geminiapp",
   "tweets": [
     {
+      "created_at": "2026-11-18T00:05:40.000Z",
+      "id": "2122843646789837145",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 1,
+        "impression": 731,
+        "like": 2,
+        "quote": 0,
+        "reply": 1,
+        "retweet": 0
+      },
+      "url": "https://x.com/GeminiApp/status/2122843646789837145"
+    },
+    {
+      "created_at": "2026-11-18T00:00:40.000Z",
+      "id": "2122842388792233998",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 8,
+        "impression": 5339,
+        "like": 33,
+        "quote": 0,
+        "reply": 5,
+        "retweet": 5
+      },
+      "url": "https://x.com/GeminiApp/status/2122842388792233998"
+    },
+    {
+      "created_at": "2026-11-17T17:09:53.000Z",
+      "id": "2122739010787520756",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 8,
+        "impression": 8661,
+        "like": 47,
+        "quote": 0,
+        "reply": 3,
+        "retweet": 0
+      },
+      "url": "https://x.com/GeminiApp/status/2122739010787520756"
+    },
+    {
+      "created_at": "2026-11-17T17:09:16.000Z",
+      "id": "2122738855455633674",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 7,
+        "impression": 9118,
+        "like": 43,
+        "quote": 0,
+        "reply": 3,
+        "retweet": 1
+      },
+      "url": "https://x.com/GeminiApp/status/2122738855455633674"
+    },
+    {
+      "created_at": "2026-11-17T17:08:57.000Z",
+      "id": "2122738775516418224",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 8,
+        "impression": 3889,
+        "like": 32,
+        "quote": 0,
+        "reply": 1,
+        "retweet": 2
+      },
+      "url": "https://x.com/GeminiApp/status/2122738775516418224"
+    },
+    {
+      "created_at": "2026-11-17T17:08:23.000Z",
+      "id": "2122738631635030283",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 11,
+        "impression": 8207,
+        "like": 40,
+        "quote": 5,
+        "reply": 1,
+        "retweet": 2
+      },
+      "url": "https://x.com/GeminiApp/status/2122738631635030283"
+    },
+    {
+      "created_at": "2026-11-17T17:07:50.000Z",
+      "id": "2122738493751468342",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 15,
+        "impression": 4939,
+        "like": 37,
+        "quote": 1,
+        "reply": 2,
+        "retweet": 4
+      },
+      "url": "https://x.com/GeminiApp/status/2122738493751468342"
+    },
+    {
+      "created_at": "2026-11-17T17:07:18.000Z",
+      "id": "2122738360016072871",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 8,
+        "impression": 5430,
+        "like": 35,
+        "quote": 0,
+        "reply": 1,
+        "retweet": 0
+      },
+      "url": "https://x.com/GeminiApp/status/2122738360016072871"
+    },
+    {
+      "created_at": "2026-11-17T17:06:35.000Z",
+      "id": "2122738182617997707",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 8,
+        "impression": 6992,
+        "like": 63,
+        "quote": 0,
+        "reply": 2,
+        "retweet": 3
+      },
+      "url": "https://x.com/GeminiApp/status/2122738182617997707"
+    },
+    {
+      "created_at": "2026-11-17T17:05:33.000Z",
+      "id": "2122737922600485207",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 9,
+        "impression": 9395,
+        "like": 75,
+        "quote": 2,
+        "reply": 5,
+        "retweet": 4
+      },
+      "url": "https://x.com/GeminiApp/status/2122737922600485207"
+    },
+    {
+      "created_at": "2026-11-17T17:04:16.000Z",
+      "id": "2122737596971503885",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 491,
+        "impression": 139021,
+        "like": 1660,
+        "quote": 95,
+        "reply": 116,
+        "retweet": 130
+      },
+      "url": "https://x.com/GeminiApp/status/2122737596971503885"
+    },
+    {
+      "created_at": "2026-11-16T16:23:05.000Z",
+      "id": "2122364846725583154",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 503,
+        "impression": 167107,
+        "like": 1447,
+        "quote": 51,
+        "reply": 122,
+        "retweet": 122
+      },
+      "url": "https://x.com/GeminiApp/status/2122364846725583154"
+    },
+    {
       "created_at": "2026-11-13T22:05:33.000Z",
       "id": "2121363868425306372",
       "lang": "",

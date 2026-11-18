@@ -2,6 +2,314 @@
   "handle": "microsoft",
   "tweets": [
     {
+      "created_at": "2026-11-17T20:00:17.000Z",
+      "id": "2122781892214727160",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 37,
+        "impression": 22623,
+        "like": 68,
+        "quote": 3,
+        "reply": 7,
+        "retweet": 18
+      },
+      "url": "https://x.com/Microsoft/status/2122781892214727160"
+    },
+    {
+      "created_at": "2026-11-17T18:49:20.000Z",
+      "id": "2122764039084208561",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 3,
+        "impression": 18529,
+        "like": 37,
+        "quote": 1,
+        "reply": 3,
+        "retweet": 11
+      },
+      "url": "https://x.com/Microsoft/status/2122764039084208561"
+    },
+    {
+      "created_at": "2026-11-17T18:36:16.000Z",
+      "id": "2122760748849914041",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 36,
+        "impression": 41841,
+        "like": 185,
+        "quote": 9,
+        "reply": 18,
+        "retweet": 26
+      },
+      "url": "https://x.com/Microsoft/status/2122760748849914041"
+    },
+    {
+      "created_at": "2026-11-17T18:35:25.000Z",
+      "id": "2122760535598895604",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 3,
+        "impression": 8858,
+        "like": 24,
+        "quote": 0,
+        "reply": 0,
+        "retweet": 3
+      },
+      "url": "https://x.com/Microsoft/status/2122760535598895604"
+    },
+    {
+      "created_at": "2026-11-17T18:35:24.000Z",
+      "id": "2122760532688044523",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 88,
+        "impression": 39693,
+        "like": 283,
+        "quote": 5,
+        "reply": 14,
+        "retweet": 49
+      },
+      "url": "https://x.com/Microsoft/status/2122760532688044523"
+    },
+    {
+      "created_at": "2026-11-17T18:33:49.000Z",
+      "id": "2122760135260983729",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 7534,
+        "like": 10,
+        "quote": 0,
+        "reply": 0,
+        "retweet": 1
+      },
+      "url": "https://x.com/Microsoft/status/2122760135260983729"
+    },
+    {
+      "created_at": "2026-11-17T18:33:49.000Z",
+      "id": "2122760132773700011",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 7,
+        "impression": 20081,
+        "like": 54,
+        "quote": 5,
+        "reply": 10,
+        "retweet": 13
+      },
+      "url": "https://x.com/Microsoft/status/2122760132773700011"
+    },
+    {
+      "created_at": "2026-11-17T18:29:34.000Z",
+      "id": "2122759065071690123",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 6734,
+        "like": 10,
+        "quote": 0,
+        "reply": 0,
+        "retweet": 3
+      },
+      "url": "https://x.com/Microsoft/status/2122759065071690123"
+    },
+    {
+      "created_at": "2026-11-17T18:29:34.000Z",
+      "id": "2122759062970355965",
+      "lang": "zxx",
+      "metrics": {
+        "bookmark": 1,
+        "impression": 6469,
+        "like": 7,
+        "quote": 0,
+        "reply": 3,
+        "retweet": 2
+      },
+      "url": "https://x.com/Microsoft/status/2122759062970355965"
+    },
+    {
+      "created_at": "2026-11-17T18:29:33.000Z",
+      "id": "2122759058453123469",
+      "lang": "zxx",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 2102,
+        "like": 7,
+        "quote": 0,
+        "reply": 3,
+        "retweet": 1
+      },
+      "url": "https://x.com/Microsoft/status/2122759058453123469"
+    },
+    {
+      "created_at": "2026-11-17T18:29:32.000Z",
+      "id": "2122759053885501742",
+      "lang": "zxx",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 3663,
+        "like": 10,
+        "quote": 0,
+        "reply": 3,
+        "retweet": 2
+      },
+      "url": "https://x.com/Microsoft/status/2122759053885501742"
+    },
+    {
+      "created_at": "2026-11-17T18:29:30.000Z",
+      "id": "2122759048827138273",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 93,
+        "impression": 45783,
+        "like": 421,
+        "quote": 17,
+        "reply": 24,
+        "retweet": 50
+      },
+      "url": "https://x.com/Microsoft/status/2122759048827138273"
+    },
+    {
+      "created_at": "2026-11-17T18:22:35.000Z",
+      "id": "2122757305028501681",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 1,
+        "impression": 7313,
+        "like": 12,
+        "quote": 0,
+        "reply": 0,
+        "retweet": 1
+      },
+      "url": "https://x.com/Microsoft/status/2122757305028501681"
+    },
+    {
+      "created_at": "2026-11-17T18:22:34.000Z",
+      "id": "2122757302167970071",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 11,
+        "impression": 22129,
+        "like": 85,
+        "quote": 3,
+        "reply": 5,
+        "retweet": 24
+      },
+      "url": "https://x.com/Microsoft/status/2122757302167970071"
+    },
+    {
+      "created_at": "2026-11-17T18:20:12.000Z",
+      "id": "2122756704928444606",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 3,
+        "impression": 10268,
+        "like": 16,
+        "quote": 0,
+        "reply": 0,
+        "retweet": 1
+      },
+      "url": "https://x.com/Microsoft/status/2122756704928444606"
+    },
+    {
+      "created_at": "2026-11-17T18:20:11.000Z",
+      "id": "2122756702961299800",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 269,
+        "impression": 122637,
+        "like": 775,
+        "quote": 30,
+        "reply": 56,
+        "retweet": 87
+      },
+      "url": "https://x.com/Microsoft/status/2122756702961299800"
+    },
+    {
+      "created_at": "2026-11-17T18:07:35.000Z",
+      "id": "2122753531203506316",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 21,
+        "impression": 36382,
+        "like": 157,
+        "quote": 5,
+        "reply": 13,
+        "retweet": 32
+      },
+      "url": "https://x.com/Microsoft/status/2122753531203506316"
+    },
+    {
+      "created_at": "2026-11-17T18:02:15.000Z",
+      "id": "2122752187973673319",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 18,
+        "impression": 29020,
+        "like": 140,
+        "quote": 9,
+        "reply": 10,
+        "retweet": 35
+      },
+      "url": "https://x.com/Microsoft/status/2122752187973673319"
+    },
+    {
+      "created_at": "2026-11-17T17:30:11.000Z",
+      "id": "2122744120208986369",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 35,
+        "impression": 42553,
+        "like": 170,
+        "quote": 12,
+        "reply": 18,
+        "retweet": 33
+      },
+      "url": "https://x.com/Microsoft/status/2122744120208986369"
+    },
+    {
+      "created_at": "2026-11-17T17:00:00.000Z",
+      "id": "2122736524848476258",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 10,
+        "impression": 23902,
+        "like": 66,
+        "quote": 3,
+        "reply": 14,
+        "retweet": 11
+      },
+      "url": "https://x.com/Microsoft/status/2122736524848476258"
+    },
+    {
+      "created_at": "2026-11-16T21:19:17.000Z",
+      "id": "2122439385929171391",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 8,
+        "impression": 29624,
+        "like": 89,
+        "quote": 2,
+        "reply": 27,
+        "retweet": 14
+      },
+      "url": "https://x.com/Microsoft/status/2122439385929171391"
+    },
+    {
+      "created_at": "2026-11-16T16:44:11.000Z",
+      "id": "2122370155737194964",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 47,
+        "impression": 54020,
+        "like": 282,
+        "quote": 9,
+        "reply": 26,
+        "retweet": 63
+      },
+      "url": "https://x.com/Microsoft/status/2122370155737194964"
+    },
+    {
       "created_at": "2026-11-13T16:40:18.000Z",
       "id": "2121282013600907325",
       "lang": "",

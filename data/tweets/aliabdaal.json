@@ -2,6 +2,34 @@
   "handle": "aliabdaal",
   "tweets": [
     {
+      "created_at": "2026-11-16T07:54:48.000Z",
+      "id": "2122236932499390697",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 5,
+        "impression": 8311,
+        "like": 20,
+        "quote": 0,
+        "reply": 5,
+        "retweet": 3
+      },
+      "url": "https://x.com/AliAbdaal/status/2122236932499390697"
+    },
+    {
+      "created_at": "2026-11-15T05:51:45.000Z",
+      "id": "2121843577680715855",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 106,
+        "impression": 81005,
+        "like": 85,
+        "quote": 1,
+        "reply": 18,
+        "retweet": 1
+      },
+      "url": "https://x.com/AliAbdaal/status/2121843577680715855"
+    },
+    {
       "created_at": "2026-11-12T06:25:07.000Z",
       "id": "2120764811348770857",
       "lang": "",

@@ -2,6 +2,48 @@
   "handle": "mckaywrigley",
   "tweets": [
     {
+      "created_at": "2026-11-17T21:10:38.000Z",
+      "id": "2122799598892912749",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 2924,
+        "like": 9,
+        "quote": 0,
+        "reply": 1,
+        "retweet": 0
+      },
+      "url": "https://x.com/mckaywrigley/status/2122799598892912749"
+    },
+    {
+      "created_at": "2026-11-17T19:52:49.000Z",
+      "id": "2122780014437634266",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 1,
+        "impression": 5408,
+        "like": 28,
+        "quote": 0,
+        "reply": 2,
+        "retweet": 1
+      },
+      "url": "https://x.com/mckaywrigley/status/2122780014437634266"
+    },
+    {
+      "created_at": "2026-11-17T19:44:05.000Z",
+      "id": "2122777818434265318",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 30,
+        "impression": 37533,
+        "like": 971,
+        "quote": 7,
+        "reply": 38,
+        "retweet": 15
+      },
+      "url": "https://x.com/mckaywrigley/status/2122777818434265318"
+    },
+    {
       "created_at": "2026-10-21T22:48:51.000Z",
       "id": "2113039842825363807",
       "lang": "en",
