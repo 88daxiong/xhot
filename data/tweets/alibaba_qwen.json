@@ -2,6 +2,34 @@
   "handle": "alibaba_qwen",
   "tweets": [
     {
+      "created_at": "2026-11-18T07:42:13.000Z",
+      "id": "2122958542982508901",
+      "lang": "",
+      "metrics": {
+        "bookmark": 12,
+        "impression": 16958,
+        "like": 136,
+        "quote": 3,
+        "reply": 35,
+        "retweet": 4
+      },
+      "url": "https://x.com/Alibaba_Qwen/status/2122958542982508901"
+    },
+    {
+      "created_at": "2026-11-18T03:02:40.000Z",
+      "id": "2122888191950901534",
+      "lang": "",
+      "metrics": {
+        "bookmark": 16,
+        "impression": 33112,
+        "like": 308,
+        "quote": 5,
+        "reply": 36,
+        "retweet": 14
+      },
+      "url": "https://x.com/Alibaba_Qwen/status/2122888191950901534"
+    },
+    {
       "created_at": "2026-11-17T09:31:09.000Z",
       "id": "2122623567674396990",
       "lang": "",

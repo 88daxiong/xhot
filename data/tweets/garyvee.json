@@ -2,6 +2,48 @@
   "handle": "garyvee",
   "tweets": [
     {
+      "created_at": "2026-11-18T02:56:22.000Z",
+      "id": "2122886602573701292",
+      "lang": "",
+      "metrics": {
+        "bookmark": 16,
+        "impression": 16980,
+        "like": 107,
+        "quote": 2,
+        "reply": 26,
+        "retweet": 16
+      },
+      "url": "https://x.com/garyvee/status/2122886602573701292"
+    },
+    {
+      "created_at": "2026-11-18T02:13:58.000Z",
+      "id": "2122875933065433375",
+      "lang": "",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 16510,
+        "like": 49,
+        "quote": 1,
+        "reply": 14,
+        "retweet": 5
+      },
+      "url": "https://x.com/garyvee/status/2122875933065433375"
+    },
+    {
+      "created_at": "2026-11-18T02:13:29.000Z",
+      "id": "2122875813741690963",
+      "lang": "",
+      "metrics": {
+        "bookmark": 3,
+        "impression": 13325,
+        "like": 89,
+        "quote": 3,
+        "reply": 21,
+        "retweet": 14
+      },
+      "url": "https://x.com/garyvee/status/2122875813741690963"
+    },
+    {
       "created_at": "2026-11-17T23:48:33.000Z",
       "id": "2122839340501925895",
       "lang": "",
@@ -2758,48 +2800,6 @@
         "retweet": 7
       },
       "url": "https://x.com/garyvee/status/2110012248194232749"
-    },
-    {
-      "created_at": "2026-10-13T14:01:26.000Z",
-      "id": "2110008011762684304",
-      "lang": "",
-      "metrics": {
-        "bookmark": 14,
-        "impression": 13113,
-        "like": 61,
-        "quote": 1,
-        "reply": 20,
-        "retweet": 5
-      },
-      "url": "https://x.com/garyvee/status/2110008011762684304"
-    },
-    {
-      "created_at": "2026-10-13T12:40:17.000Z",
-      "id": "2109987587012358152",
-      "lang": "",
-      "metrics": {
-        "bookmark": 38,
-        "impression": 22910,
-        "like": 360,
-        "quote": 8,
-        "reply": 69,
-        "retweet": 37
-      },
-      "url": "https://x.com/garyvee/status/2109987587012358152"
-    },
-    {
-      "created_at": "2026-10-12T23:35:53.000Z",
-      "id": "2109790189006508513",
-      "lang": "",
-      "metrics": {
-        "bookmark": 40,
-        "impression": 23381,
-        "like": 218,
-        "quote": 5,
-        "reply": 33,
-        "retweet": 21
-      },
-      "url": "https://x.com/garyvee/status/2109790189006508513"
     }
   ],
   "user_id": "5768872"
