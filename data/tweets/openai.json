@@ -2,6 +2,48 @@
   "handle": "openai",
   "tweets": [
     {
+      "created_at": "2026-11-18T23:07:23.000Z",
+      "id": "2123191365983248653",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 368,
+        "impression": 119506,
+        "like": 1086,
+        "quote": 48,
+        "reply": 102,
+        "retweet": 114
+      },
+      "url": "https://x.com/OpenAI/status/2123191365983248653"
+    },
+    {
+      "created_at": "2026-11-18T21:26:05.000Z",
+      "id": "2123165872261075233",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 135,
+        "impression": 152130,
+        "like": 1151,
+        "quote": 13,
+        "reply": 128,
+        "retweet": 52
+      },
+      "url": "https://x.com/OpenAI/status/2123165872261075233"
+    },
+    {
+      "created_at": "2026-11-18T17:05:52.000Z",
+      "id": "2123100386638877054",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 608,
+        "impression": 517684,
+        "like": 3765,
+        "quote": 189,
+        "reply": 318,
+        "retweet": 332
+      },
+      "url": "https://x.com/OpenAI/status/2123100386638877054"
+    },
+    {
       "created_at": "2026-11-17T17:54:05.000Z",
       "id": "2122750135608528984",
       "lang": "en",

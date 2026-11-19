@@ -2,6 +2,48 @@
   "handle": "mistralai",
   "tweets": [
     {
+      "created_at": "2026-11-18T15:17:44.000Z",
+      "id": "2123073173662949427",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 112,
+        "impression": 50497,
+        "like": 171,
+        "quote": 9,
+        "reply": 71,
+        "retweet": 4
+      },
+      "url": "https://x.com/MistralAI/status/2123073173662949427"
+    },
+    {
+      "created_at": "2026-11-18T15:17:43.000Z",
+      "id": "2123073171809018048",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 33,
+        "impression": 31588,
+        "like": 159,
+        "quote": 0,
+        "reply": 13,
+        "retweet": 3
+      },
+      "url": "https://x.com/MistralAI/status/2123073171809018048"
+    },
+    {
+      "created_at": "2026-11-18T15:17:42.000Z",
+      "id": "2123073168659141119",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 688,
+        "impression": 149506,
+        "like": 2141,
+        "quote": 84,
+        "reply": 226,
+        "retweet": 182
+      },
+      "url": "https://x.com/MistralAI/status/2123073168659141119"
+    },
+    {
       "created_at": "2026-11-17T16:27:02.000Z",
       "id": "2122728226531545138",
       "lang": "",

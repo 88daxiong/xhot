@@ -1,0 +1,157 @@
+{
+  "changelog": [
+    {
+      "date": "2026-11-19"
+    }
+  ],
+  "date": "2026-11-19",
+  "followers_zh": "粉丝增加最多的是 OpenAI（+4043）、Sam Altman（+3911）和 Logan Kilpatrick（+3714）；马斯克减少约 4.0 万，CZ 减少 3081。",
+  "gists": {
+    "2122857829795299793": "感慨四年前 ChatGPT 还不存在。",
+    "2122874904903397495": "分享 Ignite 开场要点：打造前沿生态，把 AI 进展落到真实世界影响。",
+    "2122876403091959982": "只发了一句「Gemini」。",
+    "2122895253468295605": "称负面评测集中发布是因为有禁言期，不是阴谋，模型本身就不好。",
+    "2122905202760249514": "祝贺前实习生 @ch402。",
+    "2122925042400895056": "套用狄更斯句式写道：这是最聪明的时代，也是最愚蠢的时代。",
+    "2122942819283427452": "报道有用户称在迪拜购得的 Ledger 钱包疑似被植入硬件，并出现资产被盗。",
+    "2123099687838183712": "做生意归结为三件事：别把现金花光、每周看账户、把每位顾客当最后一位。",
+    "2123100943604707606": "Gemini 应用经过重构，已可在内存更低的 Android（含 Go 版）手机上运行。",
+    "2123102254031135211": "发布 GTA 5 与 GTA 6 对比视频。",
+    "2123102642704675241": "上线 Grok Bot 社区目录，可浏览、安装或发布别人做的 bot 和应用。",
+    "2123113107048501273": "询问大家今天用 6.2 Sol 的体验如何。",
+    "2123114715257946334": "ChatGPT 听写更快更稳，Live Dictation 能边说边出字。",
+    "2123117819948638448": "宣布 DeepMind 的 Genie 4 已进入 Project Genie，支持会话中编辑和共同创作智能体。",
+    "2123119560803176533": "宣布将 Salesforce 接入 Copilot，打造「工作操作系统」。",
+    "2123129469447880885": "介绍 Codex 沙箱：在自有环境里运行命令，并受你设定的文件与网络限制约束。",
+    "2123143850210533408": "以「Happy WedNEsday」祝大家周三快乐。",
+    "2123159371119280372": "配图称「我们在公共安全上花了很多心思」。",
+    "2123167780988125621": "宣布 Gemini 4 Neon 开始向 Gemini API、企业版以及付费 Pro/Ultra 用户推送。",
+    "2123168218743554465": "宣布推出 Gemini 4 Neon，称其智力处在前沿、任务完成很快，Pro 与 Ultra 用户现已可用。",
+    "2123168242797809944": "介绍 Gemini 4 Neon：更快完成复杂编码与知识工作，并强调更低编造率。",
+    "2123168704662012079": "Gemini 4 Neon 已向 Google AI Pro 与 Ultra 订阅用户在手机、桌面和网页开放。",
+    "2123172282574987698": "介绍 Gemini 4 Neon，称其在 Intelligence Index 上总体排第 3，并进入帕累托前沿。",
+    "2123188195202617408": "GPT-6.2 Astra/Sol 在 Responses API 后台模式可最多比标准价便宜 40%。"
+  },
+  "hide": [
+    "2123102254031135211",
+    "2122876403091959982",
+    "2123143850210533408",
+    "2123113107048501273"
+  ],
+  "highlights": [
+    {
+      "excerpt": "One of the funny reasons for the difference in vibes between the influencers and the crowd today on 6.2 Sol/Astra is that we gave a few folks access a while ago and then made a lot of changes in the last 3-4 days and I'm pretty sure no re-testing was done within those days and the videos were produced last week.",
+      "excerpt_zh": "今天网红和大众对 6.2 Sol/Astra 观感反差的一个有趣原因是：我们早些时候给了少数人试用资格，随后又在最近 3–4 天做了大量改动；我基本确定那些天里没有重新测试，视频也是上周拍的。",
+      "handle": "thsottiaux",
+      "likes": 11096,
+      "name": "Tibo",
+      "post_id": "2122929634916679820",
+      "tags": [
+        "model"
+      ],
+      "text_zh": "称 GPT-6.2 评测视频多在改模型前拍的，没赶上近 3–4 天的更新。",
+      "url": "https://x.com/thsottiaux/status/2122929634916679820"
+    },
+    {
+      "excerpt": "A huge percentage of my life is spent avoiding crowds. Avoiding fashionable ideas, investing in underpriced assets, finding cool places that aren't deluged with tourists — they're all variants of the same thing. Whenever I find myself in a crowd, I feel something is wrong.",
+      "excerpt_zh": "我人生很大一部分时间都花在避开人群上。避开时髦想法、投资被低估的资产、寻找还没被游客淹没的好地方——这些其实都是同一件事的变体。每当我发现自己身处人群之中，就会觉得有什么不对。",
+      "handle": "paulg",
+      "likes": 9449,
+      "name": "Paul Graham",
+      "post_id": "2123122026932007233",
+      "tags": [],
+      "text_zh": "人生很大一部分是在避开人群：时髦想法、被高估的资产和过热景点。",
+      "url": "https://x.com/paulg/status/2123122026932007233"
+    },
+    {
+      "excerpt": "Introducing Gemini 4 Neon! Pushing the frontier across domains and punching above its model class in a meaningful way. To me, Neon feels like the right balance of intelligence, speed, and usability. Available now across @GoogleAIStudio, the API, and more! https://t.co/ANqCSTEWcS",
+      "excerpt_zh": "介绍 Gemini 4 Neon！它在多个领域推进前沿，并且切实超越了同级别模型。对我来说，Neon 在智力、速度和易用性之间取得了恰到好处的平衡。现已在 @GoogleAIStudio、API 等渠道开放！ https://t.co/ANqCSTEWcS",
+      "handle": "OfficialLoganK",
+      "likes": 7696,
+      "name": "Logan Kilpatrick",
+      "post_id": "2123167791922741362",
+      "tags": [
+        "model",
+        "product"
+      ],
+      "text_zh": "推出 Gemini 4 Neon，认为它在智力、速度和易用性之间取得平衡。",
+      "url": "https://x.com/OfficialLoganK/status/2123167791922741362"
+    },
+    {
+      "excerpt": "Gemini 4 Neon is rolling out now.\n\nSitting between Carbon and Hydrogen, it brings frontier intelligence and fast task completion for complex software engineering, knowledge work, and science.",
+      "excerpt_zh": "Gemini 4 Neon 现已开始推送。\n\n它介于 Carbon 与 Hydrogen 之间，为复杂软件工程、知识工作和科学带来前沿智力与快速任务完成。",
+      "handle": "GoogleDeepMind",
+      "likes": 4353,
+      "name": "Google DeepMind",
+      "post_id": "2123167884411077030",
+      "tags": [
+        "model",
+        "product"
+      ],
+      "text_zh": "Gemini 4 Neon 开始推送，定位介于 Carbon 与 Hydrogen，面向复杂工程与科学。",
+      "url": "https://x.com/GoogleDeepMind/status/2123167884411077030"
+    },
+    {
+      "excerpt": "I’m convinced that one of the greatest gifts you can give your children is letting them see you enjoy your life. Laugh with your spouse. Get excited about a hobby. Go on adventures with friends. Do hard things you love. Pursue something meaningful. Children embody what they see.",
+      "excerpt_zh": "我确信，你能给孩子的最珍贵礼物之一，就是让他们看见你享受自己的生活。和伴侣一起笑。为爱好感到兴奋。和朋友去冒险。去做你热爱的难事。追求有意义的事。孩子会把他们看见的活成自己。",
+      "handle": "SahilBloom",
+      "likes": 4315,
+      "name": "Sahil Bloom",
+      "post_id": "2123044189478764984",
+      "tags": [
+        "habit"
+      ],
+      "text_zh": "给孩子最好的礼物之一，是让他们看见你享受自己的生活。",
+      "url": "https://x.com/SahilBloom/status/2123044189478764984"
+    },
+    {
+      "excerpt": "Working with @AMD, our models identified up to 14% PPA improvement on flagship GPU IP in less than five months—building on designs AMD’s engineers had already spent years optimizing.\n\nThe same approach helped improve Jalapeño, our first custom inference chip, with gains verified on real silicon.",
+      "excerpt_zh": "与 @AMD 合作，我们的模型在不到五个月内，在 AMD 工程师已经打磨多年的旗舰 GPU IP 上又找出了最高 14% 的 PPA 提升。\n\n同一方法也改进了我们首款自研推理芯片 Jalapeño，增益已在真实芯片上得到验证。",
+      "handle": "OpenAI",
+      "likes": 3765,
+      "name": "OpenAI",
+      "post_id": "2123100386638877054",
+      "tags": [
+        "model",
+        "chips"
+      ],
+      "text_zh": "与 AMD 合作，不到五个月在已优化的旗舰 GPU 上再挖出最高 14% PPA。",
+      "url": "https://x.com/OpenAI/status/2123100386638877054"
+    },
+    {
+      "excerpt": "Mistral Vibe is now available on Desktop!\n\nRun agents locally or remotely, and start shipping straight from your MacOS or Windows device.\n\nYou can try the Pro plan for free if you’re building in Europe. Coupon code: LECHONK\n\n(yes, we added more  after we ran out yesterday).\n\nUse the link in 🧵:",
+      "excerpt_zh": "Mistral Vibe 现已登陆桌面端！\n\n你可以在本地或远程运行智能体，直接在 MacOS 或 Windows 设备上开始交付。\n\n如果你在欧洲做产品，可以免费试用 Pro 计划。优惠码：LECHONK\n\n（是的，昨天发完后又补了一些）。\n\n链接见 🧵：",
+      "handle": "MistralAI",
+      "likes": 2141,
+      "name": "Mistral AI",
+      "post_id": "2123073168659141119",
+      "tags": [
+        "model",
+        "agent"
+      ],
+      "text_zh": "Mistral Vibe 桌面版上线，可在 Mac/Windows 上本地或远程运行智能体。",
+      "url": "https://x.com/MistralAI/status/2123073168659141119"
+    },
+    {
+      "excerpt": "Genie 4 is now available in Project Genie.\n\nIt brings native audio, real-time editing, and a new agent to help you create interactive, virtual worlds.",
+      "excerpt_zh": "Genie 4 现已在 Project Genie 中上线。\n\n它带来原生音频、实时编辑，以及一个帮你创造互动虚拟世界的新智能体。",
+      "handle": "GoogleDeepMind",
+      "likes": 1767,
+      "name": "Google DeepMind",
+      "post_id": "2123117733709586849",
+      "tags": [
+        "agent",
+        "product"
+      ],
+      "text_zh": "Genie 4 在 Project Genie 上线，支持原生音频、实时编辑和共同创作智能体。",
+      "url": "https://x.com/GoogleDeepMind/status/2123117733709586849"
+    }
+  ],
+  "pin": [],
+  "summary_zh": [
+    "谷歌发布 Gemini 4 Neon，主打前沿智力与快速完成复杂工程、知识与科学任务。",
+    "OpenAI 称与 AMD 合作，不到 5 个月将旗舰 GPU 的 PPA 再提升最高 14%。",
+    "Opus 5.5 涨 40.5%，Gemini 涨 35.0%，GLM 智谱涨 28.3%；Kimi 回落 15.3%。"
+  ],
+  "topics_zh": "涨幅领先的是 Opus 5.5（+40.5%）、Gemini（+35.0%）和 GLM 智谱（+28.3%）；Kimi（-15.3%）与千问（-9.5%）回落。"
+}

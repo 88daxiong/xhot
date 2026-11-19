@@ -2,6 +2,34 @@
   "handle": "nvidia",
   "tweets": [
     {
+      "created_at": "2026-11-18T16:07:07.000Z",
+      "id": "2123085601520197974",
+      "lang": "",
+      "metrics": {
+        "bookmark": 14,
+        "impression": 50752,
+        "like": 216,
+        "quote": 5,
+        "reply": 319,
+        "retweet": 27
+      },
+      "url": "https://x.com/nvidia/status/2123085601520197974"
+    },
+    {
+      "created_at": "2026-11-18T14:58:32.000Z",
+      "id": "2123068342013710394",
+      "lang": "",
+      "metrics": {
+        "bookmark": 89,
+        "impression": 95956,
+        "like": 364,
+        "quote": 20,
+        "reply": 307,
+        "retweet": 38
+      },
+      "url": "https://x.com/nvidia/status/2123068342013710394"
+    },
+    {
       "created_at": "2026-11-16T20:41:30.000Z",
       "id": "2122429877488169123",
       "lang": "",

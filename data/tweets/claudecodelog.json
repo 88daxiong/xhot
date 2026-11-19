@@ -2,6 +2,20 @@
   "handle": "claudecodelog",
   "tweets": [
     {
+      "created_at": "2026-11-18T23:12:40.000Z",
+      "id": "2123192695522767087",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 1,
+        "impression": 3516,
+        "like": 27,
+        "quote": 0,
+        "reply": 4,
+        "retweet": 1
+      },
+      "url": "https://x.com/ClaudeCodeLog/status/2123192695522767087"
+    },
+    {
       "created_at": "2026-11-17T23:33:19.000Z",
       "id": "2122835506715074803",
       "lang": "en",

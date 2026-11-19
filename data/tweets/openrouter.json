@@ -2,6 +2,20 @@
   "handle": "openrouter",
   "tweets": [
     {
+      "created_at": "2026-11-18T21:42:43.000Z",
+      "id": "2123170058574905675",
+      "lang": "",
+      "metrics": {
+        "bookmark": 3,
+        "impression": 3462,
+        "like": 19,
+        "quote": 0,
+        "reply": 2,
+        "retweet": 1
+      },
+      "url": "https://x.com/OpenRouter/status/2123170058574905675"
+    },
+    {
       "created_at": "2026-11-18T00:11:15.000Z",
       "id": "2122845050854101013",
       "lang": "",

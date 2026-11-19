@@ -2,6 +2,48 @@
   "handle": "gefei55",
   "tweets": [
     {
+      "created_at": "2026-11-18T15:36:37.000Z",
+      "id": "2123077928913392111",
+      "lang": "",
+      "metrics": {
+        "bookmark": 1,
+        "impression": 2669,
+        "like": 6,
+        "quote": 1,
+        "reply": 1,
+        "retweet": 0
+      },
+      "url": "https://x.com/gefei55/status/2123077928913392111"
+    },
+    {
+      "created_at": "2026-11-18T02:47:57.000Z",
+      "id": "2122884488451776766",
+      "lang": "",
+      "metrics": {
+        "bookmark": 11,
+        "impression": 1853,
+        "like": 3,
+        "quote": 0,
+        "reply": 1,
+        "retweet": 0
+      },
+      "url": "https://x.com/gefei55/status/2122884488451776766"
+    },
+    {
+      "created_at": "2026-11-18T02:47:10.000Z",
+      "id": "2122884290786762768",
+      "lang": "",
+      "metrics": {
+        "bookmark": 35,
+        "impression": 10757,
+        "like": 55,
+        "quote": 1,
+        "reply": 18,
+        "retweet": 3
+      },
+      "url": "https://x.com/gefei55/status/2122884290786762768"
+    },
+    {
       "created_at": "2026-11-17T06:54:23.000Z",
       "id": "2122584116587851796",
       "lang": "",
@@ -2758,48 +2800,6 @@
         "retweet": 0
       },
       "url": "https://x.com/gefei55/status/2110363773383102648"
-    },
-    {
-      "created_at": "2026-10-14T12:58:50.000Z",
-      "id": "2110354646661558584",
-      "lang": "zh",
-      "metrics": {
-        "bookmark": 14,
-        "impression": 3543,
-        "like": 9,
-        "quote": 0,
-        "reply": 3,
-        "retweet": 1
-      },
-      "url": "https://x.com/gefei55/status/2110354646661558584"
-    },
-    {
-      "created_at": "2026-10-14T08:56:46.000Z",
-      "id": "2110293727264596349",
-      "lang": "zxx",
-      "metrics": {
-        "bookmark": 4,
-        "impression": 1498,
-        "like": 3,
-        "quote": 0,
-        "reply": 2,
-        "retweet": 0
-      },
-      "url": "https://x.com/gefei55/status/2110293727264596349"
-    },
-    {
-      "created_at": "2026-10-14T08:56:11.000Z",
-      "id": "2110293581831565707",
-      "lang": "zh",
-      "metrics": {
-        "bookmark": 51,
-        "impression": 6197,
-        "like": 52,
-        "quote": 0,
-        "reply": 12,
-        "retweet": 4
-      },
-      "url": "https://x.com/gefei55/status/2110293581831565707"
     }
   ],
   "user_id": "362252075"

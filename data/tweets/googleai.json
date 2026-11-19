@@ -2,6 +2,62 @@
   "handle": "googleai",
   "tweets": [
     {
+      "created_at": "2026-11-18T21:35:30.000Z",
+      "id": "2123168244861141164",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 1,
+        "impression": 6078,
+        "like": 26,
+        "quote": 0,
+        "reply": 0,
+        "retweet": 1
+      },
+      "url": "https://x.com/GoogleAI/status/2123168244861141164"
+    },
+    {
+      "created_at": "2026-11-18T21:35:30.000Z",
+      "id": "2123168242797809944",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 153,
+        "impression": 34731,
+        "like": 848,
+        "quote": 22,
+        "reply": 30,
+        "retweet": 77
+      },
+      "url": "https://x.com/GoogleAI/status/2123168242797809944"
+    },
+    {
+      "created_at": "2026-11-18T18:15:05.000Z",
+      "id": "2123117805570580933",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 9,
+        "impression": 7372,
+        "like": 26,
+        "quote": 0,
+        "reply": 1,
+        "retweet": 3
+      },
+      "url": "https://x.com/GoogleAI/status/2123117805570580933"
+    },
+    {
+      "created_at": "2026-11-18T18:15:04.000Z",
+      "id": "2123117803775426737",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 161,
+        "impression": 39794,
+        "like": 611,
+        "quote": 18,
+        "reply": 24,
+        "retweet": 34
+      },
+      "url": "https://x.com/GoogleAI/status/2123117803775426737"
+    },
+    {
       "created_at": "2026-11-12T18:03:59.000Z",
       "id": "2120940686811750596",
       "lang": "en",

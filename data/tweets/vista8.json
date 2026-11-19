@@ -2,6 +2,20 @@
   "handle": "vista8",
   "tweets": [
     {
+      "created_at": "2026-11-18T16:46:28.000Z",
+      "id": "2123095504024437155",
+      "lang": "",
+      "metrics": {
+        "bookmark": 45,
+        "impression": 4011,
+        "like": 56,
+        "quote": 0,
+        "reply": 9,
+        "retweet": 1
+      },
+      "url": "https://x.com/vista8/status/2123095504024437155"
+    },
+    {
       "created_at": "2026-11-18T09:23:55.000Z",
       "id": "2122984134519972212",
       "lang": "",
@@ -2786,20 +2800,6 @@
         "retweet": 3
       },
       "url": "https://x.com/vista8/status/2114983951186165789"
-    },
-    {
-      "created_at": "2026-10-27T06:35:34.000Z",
-      "id": "2114969236611465415",
-      "lang": "zh",
-      "metrics": {
-        "bookmark": 19,
-        "impression": 2366,
-        "like": 10,
-        "quote": 0,
-        "reply": 0,
-        "retweet": 1
-      },
-      "url": "https://x.com/vista8/status/2114969236611465415"
     }
   ],
   "user_id": "6690032"

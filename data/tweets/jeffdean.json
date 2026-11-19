@@ -2,6 +2,34 @@
   "handle": "jeffdean",
   "tweets": [
     {
+      "created_at": "2026-11-18T15:22:07.000Z",
+      "id": "2123074280405823990",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 17,
+        "impression": 12292,
+        "like": 159,
+        "quote": 1,
+        "reply": 6,
+        "retweet": 2
+      },
+      "url": "https://x.com/JeffDean/status/2123074280405823990"
+    },
+    {
+      "created_at": "2026-11-18T04:10:16.000Z",
+      "id": "2122905202760249514",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 783,
+        "impression": 309880,
+        "like": 3414,
+        "quote": 4,
+        "reply": 30,
+        "retweet": 96
+      },
+      "url": "https://x.com/JeffDean/status/2122905202760249514"
+    },
+    {
       "created_at": "2026-11-15T03:05:59.000Z",
       "id": "2121801861833556239",
       "lang": "en",

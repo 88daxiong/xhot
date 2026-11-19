@@ -2,6 +2,34 @@
   "handle": "hwchase17",
   "tweets": [
     {
+      "created_at": "2026-11-18T18:54:20.000Z",
+      "id": "2123127685455249854",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 9,
+        "impression": 3203,
+        "like": 30,
+        "quote": 0,
+        "reply": 30,
+        "retweet": 4
+      },
+      "url": "https://x.com/hwchase17/status/2123127685455249854"
+    },
+    {
+      "created_at": "2026-11-18T17:39:55.000Z",
+      "id": "2123108957560742315",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 12,
+        "impression": 4601,
+        "like": 43,
+        "quote": 1,
+        "reply": 21,
+        "retweet": 5
+      },
+      "url": "https://x.com/hwchase17/status/2123108957560742315"
+    },
+    {
       "created_at": "2026-11-17T18:25:00.000Z",
       "id": "2122757916398862740",
       "lang": "en",

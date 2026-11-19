@@ -2,6 +2,34 @@
   "handle": "microsoft",
   "tweets": [
     {
+      "created_at": "2026-11-18T17:04:28.000Z",
+      "id": "2123100035185545394",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 26,
+        "impression": 22592,
+        "like": 148,
+        "quote": 1,
+        "reply": 16,
+        "retweet": 27
+      },
+      "url": "https://x.com/Microsoft/status/2123100035185545394"
+    },
+    {
+      "created_at": "2026-11-18T02:21:51.000Z",
+      "id": "2122877917697065050",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 22,
+        "impression": 56068,
+        "like": 375,
+        "quote": 4,
+        "reply": 20,
+        "retweet": 32
+      },
+      "url": "https://x.com/Microsoft/status/2122877917697065050"
+    },
+    {
       "created_at": "2026-11-17T20:00:17.000Z",
       "id": "2122781892214727160",
       "lang": "en",

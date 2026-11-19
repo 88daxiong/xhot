@@ -2,6 +2,34 @@
   "handle": "satyanadella",
   "tweets": [
     {
+      "created_at": "2026-11-18T18:22:03.000Z",
+      "id": "2123119560803176533",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 133,
+        "impression": 116348,
+        "like": 842,
+        "quote": 15,
+        "reply": 76,
+        "retweet": 49
+      },
+      "url": "https://x.com/satyanadella/status/2123119560803176533"
+    },
+    {
+      "created_at": "2026-11-18T02:09:53.000Z",
+      "id": "2122874904903397495",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 215,
+        "impression": 150327,
+        "like": 1077,
+        "quote": 20,
+        "reply": 144,
+        "retweet": 139
+      },
+      "url": "https://x.com/satyanadella/status/2122874904903397495"
+    },
+    {
       "created_at": "2026-11-17T21:14:57.000Z",
       "id": "2122800683867082960",
       "lang": "en",

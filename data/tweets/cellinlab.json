@@ -2,6 +2,62 @@
   "handle": "cellinlab",
   "tweets": [
     {
+      "created_at": "2026-11-18T02:32:43.000Z",
+      "id": "2122880652332700001",
+      "lang": "",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 5101,
+        "like": 16,
+        "quote": 0,
+        "reply": 11,
+        "retweet": 1
+      },
+      "url": "https://x.com/cellinlab/status/2122880652332700001"
+    },
+    {
+      "created_at": "2026-11-18T02:17:47.000Z",
+      "id": "2122876894307577958",
+      "lang": "",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 1050,
+        "like": 0,
+        "quote": 0,
+        "reply": 0,
+        "retweet": 0
+      },
+      "url": "https://x.com/cellinlab/status/2122876894307577958"
+    },
+    {
+      "created_at": "2026-11-18T02:15:23.000Z",
+      "id": "2122876289396900091",
+      "lang": "",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 794,
+        "like": 0,
+        "quote": 0,
+        "reply": 1,
+        "retweet": 0
+      },
+      "url": "https://x.com/cellinlab/status/2122876289396900091"
+    },
+    {
+      "created_at": "2026-11-18T00:34:30.000Z",
+      "id": "2122850902889672940",
+      "lang": "",
+      "metrics": {
+        "bookmark": 5,
+        "impression": 2636,
+        "like": 6,
+        "quote": 0,
+        "reply": 2,
+        "retweet": 0
+      },
+      "url": "https://x.com/cellinlab/status/2122850902889672940"
+    },
+    {
       "created_at": "2026-11-17T14:13:33.000Z",
       "id": "2122694635386454025",
       "lang": "",
@@ -2744,62 +2800,6 @@
         "retweet": 0
       },
       "url": "https://x.com/cellinlab/status/2115990748638421204"
-    },
-    {
-      "created_at": "2026-10-30T02:14:38.000Z",
-      "id": "2115990732423278617",
-      "lang": "zh",
-      "metrics": {
-        "bookmark": 0,
-        "impression": 63,
-        "like": 0,
-        "quote": 0,
-        "reply": 1,
-        "retweet": 0
-      },
-      "url": "https://x.com/cellinlab/status/2115990732423278617"
-    },
-    {
-      "created_at": "2026-10-30T02:14:34.000Z",
-      "id": "2115990716451266593",
-      "lang": "zh",
-      "metrics": {
-        "bookmark": 0,
-        "impression": 77,
-        "like": 1,
-        "quote": 0,
-        "reply": 1,
-        "retweet": 0
-      },
-      "url": "https://x.com/cellinlab/status/2115990716451266593"
-    },
-    {
-      "created_at": "2026-10-30T02:14:30.000Z",
-      "id": "2115990700185792630",
-      "lang": "zh",
-      "metrics": {
-        "bookmark": 15,
-        "impression": 3135,
-        "like": 23,
-        "quote": 11,
-        "reply": 21,
-        "retweet": 7
-      },
-      "url": "https://x.com/cellinlab/status/2115990700185792630"
-    },
-    {
-      "created_at": "2026-10-30T02:13:46.000Z",
-      "id": "2115990512431984915",
-      "lang": "zh",
-      "metrics": {
-        "bookmark": 0,
-        "impression": 353,
-        "like": 0,
-        "quote": 0,
-        "reply": 2,
-        "retweet": 0
-      },
-      "url": "https://x.com/cellinlab/status/2115990512431984915"
     }
   ],
   "user_id": "1131442257675083777"
