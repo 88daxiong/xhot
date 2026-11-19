@@ -2,6 +2,48 @@
   "handle": "simonw",
   "tweets": [
     {
+      "created_at": "2026-11-19T06:42:27.000Z",
+      "id": "2123305889700667899",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 3,
+        "impression": 6232,
+        "like": 12,
+        "quote": 0,
+        "reply": 1,
+        "retweet": 0
+      },
+      "url": "https://x.com/simonw/status/2123305889700667899"
+    },
+    {
+      "created_at": "2026-11-19T06:42:04.000Z",
+      "id": "2123305792854217049",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 3,
+        "impression": 7955,
+        "like": 32,
+        "quote": 1,
+        "reply": 5,
+        "retweet": 0
+      },
+      "url": "https://x.com/simonw/status/2123305792854217049"
+    },
+    {
+      "created_at": "2026-11-19T06:39:27.000Z",
+      "id": "2123305131206967571",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 56,
+        "impression": 28880,
+        "like": 337,
+        "quote": 11,
+        "reply": 143,
+        "retweet": 14
+      },
+      "url": "https://x.com/simonw/status/2123305131206967571"
+    },
+    {
       "created_at": "2026-11-17T22:41:35.000Z",
       "id": "2122822484529684838",
       "lang": "",
