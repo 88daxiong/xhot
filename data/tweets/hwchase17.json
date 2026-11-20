@@ -2,6 +2,104 @@
   "handle": "hwchase17",
   "tweets": [
     {
+      "created_at": "2026-11-20T00:00:32.000Z",
+      "id": "2123567130897784911",
+      "lang": "",
+      "metrics": {
+        "bookmark": 2,
+        "impression": 677,
+        "like": 7,
+        "quote": 0,
+        "reply": 3,
+        "retweet": 1
+      },
+      "url": "https://x.com/hwchase17/status/2123567130897784911"
+    },
+    {
+      "created_at": "2026-11-19T23:46:43.000Z",
+      "id": "2123563652464971838",
+      "lang": "",
+      "metrics": {
+        "bookmark": 6,
+        "impression": 1254,
+        "like": 20,
+        "quote": 0,
+        "reply": 13,
+        "retweet": 1
+      },
+      "url": "https://x.com/hwchase17/status/2123563652464971838"
+    },
+    {
+      "created_at": "2026-11-19T19:00:40.000Z",
+      "id": "2123491665092784224",
+      "lang": "",
+      "metrics": {
+        "bookmark": 109,
+        "impression": 10785,
+        "like": 91,
+        "quote": 0,
+        "reply": 22,
+        "retweet": 11
+      },
+      "url": "https://x.com/hwchase17/status/2123491665092784224"
+    },
+    {
+      "created_at": "2026-11-19T15:27:07.000Z",
+      "id": "2123437925820203463",
+      "lang": "",
+      "metrics": {
+        "bookmark": 2,
+        "impression": 3576,
+        "like": 29,
+        "quote": 0,
+        "reply": 23,
+        "retweet": 2
+      },
+      "url": "https://x.com/hwchase17/status/2123437925820203463"
+    },
+    {
+      "created_at": "2026-11-19T15:25:29.000Z",
+      "id": "2123437513809494349",
+      "lang": "",
+      "metrics": {
+        "bookmark": 16,
+        "impression": 5700,
+        "like": 38,
+        "quote": 3,
+        "reply": 38,
+        "retweet": 0
+      },
+      "url": "https://x.com/hwchase17/status/2123437513809494349"
+    },
+    {
+      "created_at": "2026-11-19T14:55:53.000Z",
+      "id": "2123430062913724481",
+      "lang": "",
+      "metrics": {
+        "bookmark": 23,
+        "impression": 6696,
+        "like": 78,
+        "quote": 0,
+        "reply": 23,
+        "retweet": 4
+      },
+      "url": "https://x.com/hwchase17/status/2123430062913724481"
+    },
+    {
+      "created_at": "2026-11-19T05:53:14.000Z",
+      "id": "2123293504164311419",
+      "lang": "",
+      "metrics": {
+        "bookmark": 124,
+        "impression": 28983,
+        "like": 257,
+        "quote": 15,
+        "reply": 154,
+        "retweet": 19
+      },
+      "url": "https://x.com/hwchase17/status/2123293504164311419"
+    },
+    {
       "created_at": "2026-11-18T18:54:20.000Z",
       "id": "2123127685455249854",
       "lang": "en",

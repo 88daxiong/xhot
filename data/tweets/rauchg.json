@@ -2,6 +2,76 @@
   "handle": "rauchg",
   "tweets": [
     {
+      "created_at": "2026-11-19T23:08:16.000Z",
+      "id": "2123553975945556144",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 33,
+        "impression": 7262,
+        "like": 62,
+        "quote": 0,
+        "reply": 23,
+        "retweet": 1
+      },
+      "url": "https://x.com/rauchg/status/2123553975945556144"
+    },
+    {
+      "created_at": "2026-11-19T19:55:14.000Z",
+      "id": "2123505400591106113",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 341,
+        "impression": 45107,
+        "like": 1052,
+        "quote": 7,
+        "reply": 97,
+        "retweet": 62
+      },
+      "url": "https://x.com/rauchg/status/2123505400591106113"
+    },
+    {
+      "created_at": "2026-11-19T17:29:54.000Z",
+      "id": "2123468825538789380",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 202,
+        "impression": 28715,
+        "like": 276,
+        "quote": 6,
+        "reply": 74,
+        "retweet": 7
+      },
+      "url": "https://x.com/rauchg/status/2123468825538789380"
+    },
+    {
+      "created_at": "2026-11-19T15:28:58.000Z",
+      "id": "2123438391090147775",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 374,
+        "impression": 79418,
+        "like": 2528,
+        "quote": 60,
+        "reply": 218,
+        "retweet": 217
+      },
+      "url": "https://x.com/rauchg/status/2123438391090147775"
+    },
+    {
+      "created_at": "2026-11-19T12:12:12.000Z",
+      "id": "2123388870813450641",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 33,
+        "impression": 20259,
+        "like": 372,
+        "quote": 3,
+        "reply": 75,
+        "retweet": 6
+      },
+      "url": "https://x.com/rauchg/status/2123388870813450641"
+    },
+    {
       "created_at": "2026-11-19T06:13:21.000Z",
       "id": "2123298562960466017",
       "lang": "",

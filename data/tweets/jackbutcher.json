@@ -2,6 +2,34 @@
   "handle": "jackbutcher",
   "tweets": [
     {
+      "created_at": "2026-11-19T18:57:06.000Z",
+      "id": "2123490768262230094",
+      "lang": "zxx",
+      "metrics": {
+        "bookmark": 26,
+        "impression": 11879,
+        "like": 404,
+        "quote": 5,
+        "reply": 33,
+        "retweet": 37
+      },
+      "url": "https://x.com/jackbutcher/status/2123490768262230094"
+    },
+    {
+      "created_at": "2026-11-19T13:58:44.000Z",
+      "id": "2123415681513234908",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 6,
+        "impression": 11368,
+        "like": 142,
+        "quote": 2,
+        "reply": 26,
+        "retweet": 16
+      },
+      "url": "https://x.com/jackbutcher/status/2123415681513234908"
+    },
+    {
       "created_at": "2026-11-17T16:24:22.000Z",
       "id": "2122727558219202586",
       "lang": "sv",

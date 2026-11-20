@@ -2,6 +2,48 @@
   "handle": "geminiapp",
   "tweets": [
     {
+      "created_at": "2026-11-19T23:33:21.000Z",
+      "id": "2123560288670871751",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 21,
+        "impression": 11347,
+        "like": 103,
+        "quote": 2,
+        "reply": 9,
+        "retweet": 12
+      },
+      "url": "https://x.com/GeminiApp/status/2123560288670871751"
+    },
+    {
+      "created_at": "2026-11-19T20:26:56.000Z",
+      "id": "2123513377268109331",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 16,
+        "impression": 10619,
+        "like": 52,
+        "quote": 2,
+        "reply": 4,
+        "retweet": 2
+      },
+      "url": "https://x.com/GeminiApp/status/2123513377268109331"
+    },
+    {
+      "created_at": "2026-11-19T20:26:15.000Z",
+      "id": "2123513203745538423",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 334,
+        "impression": 86544,
+        "like": 1014,
+        "quote": 57,
+        "reply": 97,
+        "retweet": 88
+      },
+      "url": "https://x.com/GeminiApp/status/2123513203745538423"
+    },
+    {
       "created_at": "2026-11-18T21:38:47.000Z",
       "id": "2123169070988337603",
       "lang": "",

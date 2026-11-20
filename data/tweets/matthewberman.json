@@ -2,6 +2,90 @@
   "handle": "matthewberman",
   "tweets": [
     {
+      "created_at": "2026-11-19T22:39:32.000Z",
+      "id": "2123546744759984513",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 2,
+        "impression": 3855,
+        "like": 35,
+        "quote": 0,
+        "reply": 11,
+        "retweet": 0
+      },
+      "url": "https://x.com/MatthewBerman/status/2123546744759984513"
+    },
+    {
+      "created_at": "2026-11-19T20:32:42.000Z",
+      "id": "2123514828665053397",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 10,
+        "impression": 9630,
+        "like": 249,
+        "quote": 0,
+        "reply": 21,
+        "retweet": 2
+      },
+      "url": "https://x.com/MatthewBerman/status/2123514828665053397"
+    },
+    {
+      "created_at": "2026-11-19T20:27:40.000Z",
+      "id": "2123513560680784131",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 5,
+        "impression": 7607,
+        "like": 75,
+        "quote": 1,
+        "reply": 5,
+        "retweet": 0
+      },
+      "url": "https://x.com/MatthewBerman/status/2123513560680784131"
+    },
+    {
+      "created_at": "2026-11-19T19:47:13.000Z",
+      "id": "2123503380064792609",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 14,
+        "impression": 10799,
+        "like": 480,
+        "quote": 1,
+        "reply": 26,
+        "retweet": 5
+      },
+      "url": "https://x.com/MatthewBerman/status/2123503380064792609"
+    },
+    {
+      "created_at": "2026-11-19T16:05:28.000Z",
+      "id": "2123447576049619087",
+      "lang": "zxx",
+      "metrics": {
+        "bookmark": 1,
+        "impression": 7912,
+        "like": 70,
+        "quote": 0,
+        "reply": 7,
+        "retweet": 0
+      },
+      "url": "https://x.com/MatthewBerman/status/2123447576049619087"
+    },
+    {
+      "created_at": "2026-11-19T15:41:00.000Z",
+      "id": "2123441419063030260",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 17,
+        "impression": 33318,
+        "like": 352,
+        "quote": 4,
+        "reply": 25,
+        "retweet": 6
+      },
+      "url": "https://x.com/MatthewBerman/status/2123441419063030260"
+    },
+    {
       "created_at": "2026-11-19T06:42:35.000Z",
       "id": "2123305921518653450",
       "lang": "",
@@ -2716,48 +2800,6 @@
         "retweet": 4
       },
       "url": "https://x.com/MatthewBerman/status/2108696895455654237"
-    },
-    {
-      "created_at": "2026-10-09T22:21:40.000Z",
-      "id": "2108684345406038490",
-      "lang": "en",
-      "metrics": {
-        "bookmark": 33,
-        "impression": 33126,
-        "like": 206,
-        "quote": 0,
-        "reply": 4,
-        "retweet": 0
-      },
-      "url": "https://x.com/MatthewBerman/status/2108684345406038490"
-    },
-    {
-      "created_at": "2026-10-09T21:46:42.000Z",
-      "id": "2108675546829951339",
-      "lang": "en",
-      "metrics": {
-        "bookmark": 6619,
-        "impression": 583904,
-        "like": 10364,
-        "quote": 22,
-        "reply": 109,
-        "retweet": 452
-      },
-      "url": "https://x.com/MatthewBerman/status/2108675546829951339"
-    },
-    {
-      "created_at": "2026-10-08T23:17:14.000Z",
-      "id": "2108335941819731970",
-      "lang": "en",
-      "metrics": {
-        "bookmark": 472,
-        "impression": 240507,
-        "like": 2314,
-        "quote": 10,
-        "reply": 139,
-        "retweet": 47
-      },
-      "url": "https://x.com/MatthewBerman/status/2108335941819731970"
     }
   ],
   "user_id": "6681172"

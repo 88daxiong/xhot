@@ -1,0 +1,157 @@
+{
+  "changelog": [
+    {
+      "date": "2026-11-20"
+    }
+  ],
+  "date": "2026-11-20",
+  "followers_zh": "粉丝增加最多的是 Anthropic（+20804）、ChatGPT（+6229）和 Dario Amodei（+3289）；马斯克减少约 5.3 万，CZ 减少 5067。",
+  "gists": {
+    "2123220899264679988": "马斯克称接住飞船是最后一块主要拼图。",
+    "2123226990551445634": "Claude Code 2.1.328 发布，共 144 项 CLI 改动，包括云端 Auto mode 可跳过权限提示。",
+    "2123229344936173890": "马斯克招募硬核工程师加入 Terafab。",
+    "2123237505810178434": "Rauch 认为留言板是促成重大科研与安全突破的关键基础设施。",
+    "2123249864503091301": "Mollick 调侃按谷歌当前发模型节奏，元素名将在 11 月 24 日用完。",
+    "2123293504164311419": "Harrison Chase：大家在建软件工厂，做智能体更该建知识工厂。",
+    "2123362003746222129": "吴说香港证监会将 Hyperliquid 列入可疑虚拟资产交易平台名单。",
+    "2123363754394231178": "Jeremy Howard 调侃三家目标：OpenAI 要占尽未来价值，Anthropic 要统治世界，谷歌要完成四季度预期。",
+    "2123388955143893122": "levelsio 公布「X 垃圾回复账号名单」：3728 个用 AI 自动回复刷互动的账号，其中 498 个已被封。",
+    "2123418096484687915": "GaryVee 催促未来 42 天把清单上的事都做完。",
+    "2123438391090147775": "Guillermo Rauch 说现在可以从科幻倒推去建造任何东西。",
+    "2123444250536972483": "Aravind 称看到的编排能力水平令人惊叹。",
+    "2123449395882701224": "Perplexity 的 Brain 智能体会根据过往会话自动生成并更新个性化 agent skills。",
+    "2123470665210851508": "Gemini 4 Neon 在 Antigravity 里从零写出约 1 万行 JS 的勃朗峰第一人称滑雪模拟器。",
+    "2123479017785618463": "CZ 称通胀还会来，建议持有能抗通胀的资产（非投资建议）。",
+    "2123486281644560724": "Perplexity 称人们已在管理能写应用、交代码、跑业务的队友型智能体。",
+    "2123513203745538423": "Gemini Mac 应用支持 computer use：可在后台窗口点击、滚动和输入，把草图变成 Blender 里的 3D 模型。",
+    "2123517320798801949": "谷歌转发用 Gemini 4 Neon 做出的作品，包括高思考模式下的发光 3D 地球。"
+  },
+  "hide": [
+    "2123431910991155403",
+    "2123250731537006956",
+    "2123404196917686353",
+    "2123264774838407231",
+    "2123491544648880404",
+    "2123272422719967730",
+    "2123425605719146785",
+    "2123207973875102182",
+    "2123216422122016965",
+    "2123467160974692857"
+  ],
+  "highlights": [
+    {
+      "excerpt": "Remarks from Anthropic CEO @DarioAmodei on our initial public offering:\n\nMy co-founders and I started Anthropic because we believe that the most powerful technology of our time should be built for the benefit of humankind.",
+      "excerpt_zh": "Anthropic CEO @DarioAmodei 就公司首次公开募股发表的致辞：\n\n我和联合创始人当初创立 Anthropic，是因为我们坚信：这个时代最强大的技术，应当为了全人类的福祉而打造。",
+      "handle": "AnthropicAI",
+      "likes": 8561,
+      "name": "Anthropic",
+      "post_id": "2123461658890686863",
+      "tags": [
+        "startup"
+      ],
+      "text_zh": "Dario 就 IPO 发长文：创立 Anthropic 是为让最强大的技术造福人类。",
+      "url": "https://x.com/AnthropicAI/status/2123461658890686863"
+    },
+    {
+      "excerpt": "Feels like a turning point...\n\nOn the day OpenAI ships their worst ever model releases, Google ships the best model they, or indeed anyone, has ever made.",
+      "excerpt_zh": "感觉像一个转折点……\n\n就在 OpenAI 发布他们有史以来最差模型的同一天，谷歌交出了他们——乃至任何人——做过的最好模型。",
+      "handle": "jeremyphoward",
+      "likes": 3697,
+      "name": "Jeremy Howard",
+      "post_id": "2123340065715937423",
+      "tags": [
+        "model"
+      ],
+      "text_zh": "称这像转折点：OpenAI 发布史上最差模型之日，谷歌交出迄今最强模型。",
+      "url": "https://x.com/jeremyphoward/status/2123340065715937423"
+    },
+    {
+      "excerpt": "I regret to inform you that you need to do uncomfortable things sooner. The delayed conversation gets harder. The ignored problem expands. The minor repair becomes a major one. Peace isn’t found through avoidance. It’s earned through early action. The recipe for a good life.",
+      "excerpt_zh": "很遗憾地告诉你：难受的事情要尽早做。被推迟的谈话会更难开口，被忽略的问题会膨胀，小修小补会变成大工程。平静不是靠回避得到的，而是靠尽早行动挣来的。这就是过好一生的方法。",
+      "handle": "SahilBloom",
+      "likes": 3266,
+      "name": "Sahil Bloom",
+      "post_id": "2123445057051099457",
+      "tags": [
+        "habit"
+      ],
+      "text_zh": "越早做难受的事越好：拖延的对话会更难，被忽略的问题会变大。",
+      "url": "https://x.com/SahilBloom/status/2123445057051099457"
+    },
+    {
+      "excerpt": "Really neat part of Genie 4 is you can type new prompts while exploring a generated world, like dropping in characters or changing the scene + the native audio adapts in real time! Now available in Project Genie for eligible Google AI Ultra subscribers. https://t.co/8Z0H7AIx3r",
+      "excerpt_zh": "Genie 4 很妙的一点是：你可以在探索生成世界的同时输入新提示词，比如加入角色或改场景，原生音频还会实时适配！现已在 Project Genie 向符合条件的 Google AI Ultra 订阅用户开放。 https://t.co/8Z0H7AIx3r",
+      "handle": "sundarpichai",
+      "likes": 3235,
+      "name": "Sundar Pichai",
+      "post_id": "2123241253982916795",
+      "tags": [
+        "product"
+      ],
+      "text_zh": "Genie 4 可在探索生成世界时继续输入提示词，原生音频会实时适配。",
+      "url": "https://x.com/sundarpichai/status/2123241253982916795"
+    },
+    {
+      "excerpt": "GPT-Live-1.1 is now available in the API.\n\nIt speaks with more natural and consistent accents across languages, supports lower idle costs with a new standby option, and completes tasks even more reliably. https://t.co/8DkU6Q2IIt",
+      "excerpt_zh": "GPT-Live-1.1 现已在 API 中提供。\n\n它在多种语言里的口音更自然也更稳定，新增 standby 选项可降低空闲成本，完成任务也更可靠。 https://t.co/8DkU6Q2IIt",
+      "handle": "OpenAIDevs",
+      "likes": 2880,
+      "name": "OpenAI Developers",
+      "post_id": "2123506733524136446",
+      "tags": [
+        "product"
+      ],
+      "text_zh": "GPT-Live-1.1 已开放 API：口音更自然，新增 standby 降低空闲成本。",
+      "url": "https://x.com/OpenAIDevs/status/2123506733524136446"
+    },
+    {
+      "excerpt": "Introducing Genie 4 in the Gemini API + @GoogleAIStudio, our first world model for developers to build with and create new world model experiences 🔮\n\n Try it out: https://t.co/hy6wuttqIq",
+      "excerpt_zh": "Genie 4 现已登陆 Gemini API 和 @GoogleAIStudio，这是我们面向开发者、可供搭建新世界模型体验的首个世界模型 🔮\n\n 试用： https://t.co/hy6wuttqIq",
+      "handle": "OfficialLoganK",
+      "likes": 2770,
+      "name": "Logan Kilpatrick",
+      "post_id": "2123467449257623770",
+      "tags": [
+        "model",
+        "product"
+      ],
+      "text_zh": "Genie 4 登陆 Gemini API 与 Google AI Studio，供开发者搭建世界模型体验。",
+      "url": "https://x.com/OfficialLoganK/status/2123467449257623770"
+    },
+    {
+      "excerpt": "Congratulations to @AnthropicAI on their historic IPO today! Anthropic has shown the world what a focused, high-conviction, taste-driven team can execute in a short time. Opus 5.5 remains the best model in the industry by a good margin.",
+      "excerpt_zh": "祝贺 @AnthropicAI 今天完成历史性 IPO！Anthropic 向世界证明，一支专注、信念坚定、有品味的团队能在短时间内做成什么。Opus 5.5 仍以明显优势保持行业最好模型。",
+      "handle": "AravSrinivas",
+      "likes": 2239,
+      "name": "Aravind Srinivas",
+      "post_id": "2123480966459174920",
+      "tags": [
+        "model",
+        "funding"
+      ],
+      "text_zh": "祝贺 Anthropic 历史性 IPO，并称 Opus 5.5 仍是行业最好模型。",
+      "url": "https://x.com/AravSrinivas/status/2123480966459174920"
+    },
+    {
+      "excerpt": "Codex already helps us build ChatGPT faster. Now it’s helping us keep ChatGPT fast.\n\nWe built the Performance Factory to coordinate agents that investigate regressions, propose fixes for engineers to review, and check if those fixes work in production. https://t.co/zUEAO4wjoI",
+      "excerpt_zh": "Codex 已经在帮我们更快地做 ChatGPT。现在它还在帮我们把 ChatGPT 保持在很快的状态。\n\n我们搭建了 Performance Factory，协调智能体调查性能回归、提出修复方案供工程师审阅，并检查这些修复在生产环境是否生效。 https://t.co/zUEAO4wjoI",
+      "handle": "OpenAIDevs",
+      "likes": 1584,
+      "name": "OpenAI Developers",
+      "post_id": "2123471880292299171",
+      "tags": [
+        "agent",
+        "code"
+      ],
+      "text_zh": "OpenAI 用 Codex 搭建 Performance Factory，让智能体调查回归并提议修复。",
+      "url": "https://x.com/OpenAIDevs/status/2123471880292299171"
+    }
+  ],
+  "pin": [],
+  "summary_zh": [
+    "Anthropic 上市，Dario 发长文谈使命与风险；官方账号一天涨粉约 2.1 万。",
+    "谷歌推出 Gemini 4 Neon 与 Genie 4 世界模型，Gemini 话题讨论量涨 97%。",
+    "OpenAI 上线 GPT-Live-1.1 API，并用 Codex 建 Performance Factory。"
+  ],
+  "topics_zh": "涨幅领先的是 Gemini（+97.0%）、solopreneur（+51.2%）和智能体 Agent（+17.8%）；DeepSeek（-19.3%）与 Dan Koe（-79.9%）回落。"
+}

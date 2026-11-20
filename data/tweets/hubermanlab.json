@@ -2,6 +2,34 @@
   "handle": "hubermanlab",
   "tweets": [
     {
+      "created_at": "2026-11-19T22:27:22.000Z",
+      "id": "2123543685996695908",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 56,
+        "impression": 28703,
+        "like": 79,
+        "quote": 1,
+        "reply": 9,
+        "retweet": 4
+      },
+      "url": "https://x.com/hubermanlab/status/2123543685996695908"
+    },
+    {
+      "created_at": "2026-11-19T15:00:01.000Z",
+      "id": "2123431105701216341",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 84,
+        "impression": 55948,
+        "like": 128,
+        "quote": 3,
+        "reply": 15,
+        "retweet": 10
+      },
+      "url": "https://x.com/hubermanlab/status/2123431105701216341"
+    },
+    {
       "created_at": "2026-11-16T18:58:15.000Z",
       "id": "2122403893103759472",
       "lang": "zxx",

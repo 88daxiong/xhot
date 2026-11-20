@@ -2,6 +2,34 @@
   "handle": "codie_sanchez",
   "tweets": [
     {
+      "created_at": "2026-11-19T22:54:00.000Z",
+      "id": "2123550385553944669",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 43,
+        "impression": 9458,
+        "like": 318,
+        "quote": 2,
+        "reply": 41,
+        "retweet": 37
+      },
+      "url": "https://x.com/Codie_Sanchez/status/2123550385553944669"
+    },
+    {
+      "created_at": "2026-11-19T17:03:06.000Z",
+      "id": "2123462081718497594",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 41,
+        "impression": 52921,
+        "like": 277,
+        "quote": 4,
+        "reply": 95,
+        "retweet": 5
+      },
+      "url": "https://x.com/Codie_Sanchez/status/2123462081718497594"
+    },
+    {
       "created_at": "2026-11-18T21:30:25.000Z",
       "id": "2123166964877033863",
       "lang": "",
