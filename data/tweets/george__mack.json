@@ -2,6 +2,20 @@
   "handle": "george__mack",
   "tweets": [
     {
+      "created_at": "2026-11-20T19:02:00.000Z",
+      "id": "2123854389760926029",
+      "lang": "",
+      "metrics": {
+        "bookmark": 20,
+        "impression": 6563,
+        "like": 67,
+        "quote": 1,
+        "reply": 10,
+        "retweet": 2
+      },
+      "url": "https://x.com/george__mack/status/2123854389760926029"
+    },
+    {
       "created_at": "2026-11-17T15:55:50.000Z",
       "id": "2122720375029248402",
       "lang": "",

@@ -2,6 +2,76 @@
   "handle": "nicolascole77",
   "tweets": [
     {
+      "created_at": "2026-11-20T23:22:55.000Z",
+      "id": "2123920050323374086",
+      "lang": "",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 1092,
+        "like": 59,
+        "quote": 0,
+        "reply": 18,
+        "retweet": 0
+      },
+      "url": "https://x.com/Nicolascole77/status/2123920050323374086"
+    },
+    {
+      "created_at": "2026-11-20T15:46:09.000Z",
+      "id": "2123805102041362480",
+      "lang": "",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 324,
+        "like": 3,
+        "quote": 0,
+        "reply": 0,
+        "retweet": 1
+      },
+      "url": "https://x.com/Nicolascole77/status/2123805102041362480"
+    },
+    {
+      "created_at": "2026-11-20T14:46:04.000Z",
+      "id": "2123789980283641921",
+      "lang": "",
+      "metrics": {
+        "bookmark": 11,
+        "impression": 4186,
+        "like": 32,
+        "quote": 0,
+        "reply": 15,
+        "retweet": 0
+      },
+      "url": "https://x.com/Nicolascole77/status/2123789980283641921"
+    },
+    {
+      "created_at": "2026-11-20T04:02:14.000Z",
+      "id": "2123627954391445913",
+      "lang": "",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 484,
+        "like": 2,
+        "quote": 0,
+        "reply": 0,
+        "retweet": 0
+      },
+      "url": "https://x.com/Nicolascole77/status/2123627954391445913"
+    },
+    {
+      "created_at": "2026-11-20T03:02:07.000Z",
+      "id": "2123612827898241175",
+      "lang": "",
+      "metrics": {
+        "bookmark": 33,
+        "impression": 2774,
+        "like": 36,
+        "quote": 1,
+        "reply": 10,
+        "retweet": 2
+      },
+      "url": "https://x.com/Nicolascole77/status/2123612827898241175"
+    },
+    {
       "created_at": "2026-11-19T14:52:15.000Z",
       "id": "2123429149444309318",
       "lang": "",
@@ -2730,76 +2800,6 @@
         "retweet": 0
       },
       "url": "https://x.com/Nicolascole77/status/2109648243114328088"
-    },
-    {
-      "created_at": "2026-10-12T13:00:05.000Z",
-      "id": "2109630184995369009",
-      "lang": "en",
-      "metrics": {
-        "bookmark": 34,
-        "impression": 4749,
-        "like": 61,
-        "quote": 0,
-        "reply": 75,
-        "retweet": 1
-      },
-      "url": "https://x.com/Nicolascole77/status/2109630184995369009"
-    },
-    {
-      "created_at": "2026-10-11T13:00:03.000Z",
-      "id": "2109267789181550660",
-      "lang": "en",
-      "metrics": {
-        "bookmark": 9,
-        "impression": 5293,
-        "like": 61,
-        "quote": 0,
-        "reply": 91,
-        "retweet": 0
-      },
-      "url": "https://x.com/Nicolascole77/status/2109267789181550660"
-    },
-    {
-      "created_at": "2026-10-11T02:59:07.000Z",
-      "id": "2109116557053845623",
-      "lang": "en",
-      "metrics": {
-        "bookmark": 21,
-        "impression": 4474,
-        "like": 31,
-        "quote": 0,
-        "reply": 10,
-        "retweet": 2
-      },
-      "url": "https://x.com/Nicolascole77/status/2109116557053845623"
-    },
-    {
-      "created_at": "2026-10-11T01:03:40.000Z",
-      "id": "2109087504762556883",
-      "lang": "en",
-      "metrics": {
-        "bookmark": 5,
-        "impression": 4183,
-        "like": 13,
-        "quote": 0,
-        "reply": 4,
-        "retweet": 0
-      },
-      "url": "https://x.com/Nicolascole77/status/2109087504762556883"
-    },
-    {
-      "created_at": "2026-10-10T19:12:05.000Z",
-      "id": "2108999025340956778",
-      "lang": "en",
-      "metrics": {
-        "bookmark": 29,
-        "impression": 7447,
-        "like": 55,
-        "quote": 0,
-        "reply": 20,
-        "retweet": 1
-      },
-      "url": "https://x.com/Nicolascole77/status/2108999025340956778"
     }
   ],
   "user_id": "617073276"

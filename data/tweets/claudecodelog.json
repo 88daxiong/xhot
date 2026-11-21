@@ -2,6 +2,76 @@
   "handle": "claudecodelog",
   "tweets": [
     {
+      "created_at": "2026-11-20T22:55:53.000Z",
+      "id": "2123913246771929545",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 602,
+        "like": 0,
+        "quote": 0,
+        "reply": 0,
+        "retweet": 0
+      },
+      "url": "https://x.com/ClaudeCodeLog/status/2123913246771929545"
+    },
+    {
+      "created_at": "2026-11-20T22:55:50.000Z",
+      "id": "2123913235829031077",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 1,
+        "impression": 938,
+        "like": 5,
+        "quote": 0,
+        "reply": 2,
+        "retweet": 0
+      },
+      "url": "https://x.com/ClaudeCodeLog/status/2123913235829031077"
+    },
+    {
+      "created_at": "2026-11-20T22:55:46.000Z",
+      "id": "2123913219777380699",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 1133,
+        "like": 2,
+        "quote": 1,
+        "reply": 1,
+        "retweet": 0
+      },
+      "url": "https://x.com/ClaudeCodeLog/status/2123913219777380699"
+    },
+    {
+      "created_at": "2026-11-20T22:55:43.000Z",
+      "id": "2123913205575496028",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 2,
+        "impression": 5052,
+        "like": 52,
+        "quote": 2,
+        "reply": 7,
+        "retweet": 2
+      },
+      "url": "https://x.com/ClaudeCodeLog/status/2123913205575496028"
+    },
+    {
+      "created_at": "2026-11-20T19:20:29.000Z",
+      "id": "2123859040144929132",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 5640,
+        "like": 65,
+        "quote": 0,
+        "reply": 0,
+        "retweet": 2
+      },
+      "url": "https://x.com/ClaudeCodeLog/status/2123859040144929132"
+    },
+    {
       "created_at": "2026-11-19T22:36:51.000Z",
       "id": "2123546072077177303",
       "lang": "",

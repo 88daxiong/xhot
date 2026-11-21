@@ -2,6 +2,34 @@
   "handle": "sahilbloom",
   "tweets": [
     {
+      "created_at": "2026-11-20T23:23:26.000Z",
+      "id": "2123920182972170632",
+      "lang": "",
+      "metrics": {
+        "bookmark": 17,
+        "impression": 9263,
+        "like": 91,
+        "quote": 4,
+        "reply": 12,
+        "retweet": 8
+      },
+      "url": "https://x.com/SahilBloom/status/2123920182972170632"
+    },
+    {
+      "created_at": "2026-11-20T15:13:59.000Z",
+      "id": "2123797008888516999",
+      "lang": "",
+      "metrics": {
+        "bookmark": 724,
+        "impression": 111298,
+        "like": 2398,
+        "quote": 9,
+        "reply": 105,
+        "retweet": 186
+      },
+      "url": "https://x.com/SahilBloom/status/2123797008888516999"
+    },
+    {
       "created_at": "2026-11-19T20:22:19.000Z",
       "id": "2123512215403696170",
       "lang": "",

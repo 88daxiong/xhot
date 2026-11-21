@@ -2,6 +2,20 @@
   "handle": "nutlope",
   "tweets": [
     {
+      "created_at": "2026-11-20T16:37:33.000Z",
+      "id": "2123818037321114063",
+      "lang": "",
+      "metrics": {
+        "bookmark": 9,
+        "impression": 2735,
+        "like": 25,
+        "quote": 0,
+        "reply": 16,
+        "retweet": 1
+      },
+      "url": "https://x.com/nutlope/status/2123818037321114063"
+    },
+    {
       "created_at": "2026-11-16T19:07:50.000Z",
       "id": "2122406305432305902",
       "lang": "en",

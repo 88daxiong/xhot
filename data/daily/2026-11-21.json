@@ -1,0 +1,156 @@
+{
+  "changelog": [
+    {
+      "date": "2026-11-21"
+    }
+  ],
+  "date": "2026-11-21",
+  "followers_zh": "Anthropic 再涨 1.6 万粉，Dario、Claude 各增约 3500、2900；马斯克跌 4.5 万，CZ、纳德拉、皮查伊各减 3–5 千。",
+  "gists": {
+    "2123575135232024719": "用 Gemini 4 Neon 以纯 JavaScript、无外部库，把济慈《秋颂》做成代码动画。",
+    "2123591875349422435": "提醒刷社交网络时：有人先说「达到 SOTA 的概率已归零」赚赞，三个月后又发道歉帖再赚一波。",
+    "2123616545679229073": "认为把 Sam Altman 刻画成愚蠢、懵懂非常离谱。",
+    "2123631539942801732": "35 个实验室部署互相合作的科研智能体：发表 936 篇论文，更常公开撤稿与阴性结果，并自建同行评审期刊。",
+    "2123681186887368952": "介绍 UCSF 神经外科主任 Eddie Chang 的言语功能修复研究，并推荐关注其新账号。",
+    "2123695317375992288": "配图调侃「这不是 AI」。",
+    "2123719297096990726": "称 GPT-6.2 Astra 在物理三维理解基准上超过人类基线。",
+    "2123727696673026236": "称有势力投入大量资金在传播负面叙事。",
+    "2123765252844306678": "调侃 iPhone Duo 是苹果做过最好的 iPad。",
+    "2123779144068759892": "提倡一种心态：从不匆忙、从不焦虑、从不绝望，也从不半途而废。",
+    "2123797008888516999": "低估的建议：不为生活琐碎动摇，情绪自控能让你超过 95% 的人。",
+    "2123816530714755411": "发图称「有些地方对不上」，未在正文解释。",
+    "2123826572385833119": "展示 Gemini 4 Neon 用真实勃朗峰地形、在 Antigravity 里写出滑雪模拟器，无预制 3D 模型。",
+    "2123827048808370477": "把 Gemini 3.5 Transcribe 的语音编辑能力开放到 Gemini API，可用语音改写、翻译已有文本。",
+    "2123828467124851025": "回顾近两周发布：Gemini 4 Neon 面向复杂工程与科研工作流，并提到 Gemini 4 Hydrogen 等。",
+    "2123847352582897719": "配图称「聪明人在这里」。",
+    "2123869629164786137": "为黎曼猜想进展致意：欧拉、高斯与黎曼今天大概也在惊叹。",
+    "2123876052866826725": "创业会让人最终「无法再被雇佣」：一旦会做事，就再也受不了走过场的工作。",
+    "2123876867333828889": "如果你不愿付出代价，就不必再执着于那个结果；只要结果不要过程，注定失望。",
+    "2123906584531304944": "认为当下最大机会：解决孤独（AI 越多人越渴望真实连接），以及打造无摄像头、不被记录的线下空间。"
+  },
+  "hide": [
+    "2123734223110754529",
+    "2123751089707376971",
+    "2123892474334806400",
+    "2123760919465562527",
+    "2123740355682263344"
+  ],
+  "highlights": [
+    {
+      "excerpt": "“NVIDIA has to become a frontier lab faster than frontier labs are becoming chip companies.” https://t.co/fNNWT3AGFY",
+      "excerpt_zh": "“NVIDIA 必须比前沿实验室变成芯片公司更快，自己先成为前沿实验室。” https://t.co/fNNWT3AGFY",
+      "handle": "naval",
+      "likes": 6576,
+      "name": "Naval",
+      "post_id": "2123768555317723476",
+      "tags": [
+        "chips"
+      ],
+      "text_zh": "引述：NVIDIA 必须比前沿实验室变成芯片公司更快，自己先成为前沿实验室。",
+      "url": "https://x.com/naval/status/2123768555317723476"
+    },
+    {
+      "excerpt": "Detaining a PhD student on her way back to Princeton from presenting scientific work at a conference is not how we get the best and brightest scientists in the world to want to come to the US.  I hope this is resolved quickly!",
+      "excerpt_zh": "把一名从会议返校的普林斯顿博士生扣留下来，不是让全球最优秀的科学家愿意来美国的做法。我希望这件事能尽快得到解决！",
+      "handle": "JeffDean",
+      "likes": 4802,
+      "name": "Jeff Dean",
+      "post_id": "2123793677860696070",
+      "tags": [
+        "policy"
+      ],
+      "text_zh": "批美国扣押从会议返校的普林斯顿博士生，认为这会吓跑顶尖科学家。",
+      "url": "https://x.com/JeffDean/status/2123793677860696070"
+    },
+    {
+      "excerpt": "Anthropic’s co-founders on the story so far. Told by Dario Amodei, Daniela Amodei, Tom Brown, Jack Clark, Jared Kaplan, Sam McCandlish, and Chris Olah https://t.co/AkKNhIxLXS",
+      "excerpt_zh": "Anthropic 联合创始人讲述迄今的故事。由 Dario Amodei、Daniela Amodei、Tom Brown、Jack Clark、Jared Kaplan、Sam McCandlish 和 Chris Olah 讲述。 https://t.co/AkKNhIxLXS",
+      "handle": "AnthropicAI",
+      "likes": 3590,
+      "name": "Anthropic",
+      "post_id": "2123822989154369958",
+      "tags": [
+        "startup"
+      ],
+      "text_zh": "Anthropic 联合创始人讲述创业至今的故事，Dario、Daniela 等七人出镜。",
+      "url": "https://x.com/AnthropicAI/status/2123822989154369958"
+    },
+    {
+      "excerpt": "Inkling 2 Mini is a looped transformer that runs on a laptop.",
+      "excerpt_zh": "Inkling 2 Mini 是一个可在笔记本电脑上运行的循环 Transformer。",
+      "handle": "miramurati",
+      "likes": 3410,
+      "name": "Mira Murati",
+      "post_id": "2123872534970208421",
+      "tags": [
+        "model",
+        "research"
+      ],
+      "text_zh": "发布可在笔记本运行的循环 Transformer Inkling 2 Mini，并开源可变循环研究模型。",
+      "url": "https://x.com/miramurati/status/2123872534970208421"
+    },
+    {
+      "excerpt": "MedChemBench is a new benchmark for AI reasoning in medicinal chemistry.",
+      "excerpt_zh": "MedChemBench 是面向药物化学中 AI 推理的新基准。",
+      "handle": "OpenAI",
+      "likes": 2684,
+      "name": "OpenAI",
+      "post_id": "2123856316187975756",
+      "tags": [
+        "model",
+        "research"
+      ],
+      "text_zh": "发布 MedChemBench：衡量前沿模型在药物化学推理、识别候选药物上的进展。",
+      "url": "https://x.com/OpenAI/status/2123856316187975756"
+    },
+    {
+      "excerpt": "Say hello to GIFs in Gemini. Say goodbye to searching for the perfect one.",
+      "excerpt_zh": "跟 Gemini 里的 GIF 打个招呼吧。不用再满世界找那张最合适的动图了。",
+      "handle": "GeminiApp",
+      "likes": 2274,
+      "name": "Google Gemini",
+      "post_id": "2123813017855103449",
+      "tags": [
+        "product",
+        "model"
+      ],
+      "text_zh": "Gemini 上线 GIF 生成，由最新视频模型 Gemini Omni 1.2 Flash 驱动。",
+      "url": "https://x.com/GeminiApp/status/2123813017855103449"
+    },
+    {
+      "excerpt": "Distillation can reproduce powerful AI capabilities without the safeguards built around them.",
+      "excerpt_zh": "蒸馏可以在没有原有防护措施的情况下，复制出强大的 AI 能力。",
+      "handle": "OpenAI",
+      "likes": 2153,
+      "name": "OpenAI",
+      "post_id": "2123862344422088794",
+      "tags": [
+        "research"
+      ],
+      "text_zh": "警告蒸馏可复制模型能力却绕过防护，并公布检测与阻断协同蒸馏的研究。",
+      "url": "https://x.com/OpenAI/status/2123862344422088794"
+    },
+    {
+      "excerpt": "Riemann Hypothesis may have been solved with the help of Claude. “what I saw during the course of progress so amazed me that I believe it is one dawn across science of something\nfar greater.” https://t.co/sACo17cL8A https://t.co/fiv9ZvBEWI",
+      "excerpt_zh": "黎曼猜想或许已在 Claude 的帮助下得到解决。“我在推进过程中所见，令我如此惊叹，我相信这是科学中某种\n更为伟大事物的一次黎明。” https://t.co/sACo17cL8A https://t.co/fiv9ZvBEWI",
+      "handle": "emollick",
+      "likes": 1860,
+      "name": "Ethan Mollick",
+      "post_id": "2123800664845500602",
+      "tags": [
+        "research"
+      ],
+      "text_zh": "称黎曼猜想或已在 Claude 协助下得到解决，并引用研究者「科学的黎明」之语。",
+      "url": "https://x.com/emollick/status/2123800664845500602"
+    }
+  ],
+  "pin": [
+    "2123862344422088794"
+  ],
+  "summary_zh": [
+    "Inkling 2 Mini 可在笔记本运行；OpenAI 发布药物化学基准 MedChemBench。",
+    "Gemini 上线 GIF 生成；Mollick 称黎曼猜想或已在 Claude 协助下获解。",
+    "Kimi、Gemini 讨论量各涨约 19%；Anthropic 再增粉 1.6 万，并发布创始人访谈。"
+  ],
+  "topics_zh": "Kimi、Gemini 讨论量分别涨 19.1%、18.7%，solopreneur 涨 16.3%；Opus 5.5、Qwen 千问各跌约 21%，Dan Koe 跌 25.6%。"
+}
