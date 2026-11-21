@@ -2,6 +2,48 @@
   "handle": "jeffdean",
   "tweets": [
     {
+      "created_at": "2026-11-21T07:56:18.000Z",
+      "id": "2124049248874639701",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 11,
+        "impression": 10718,
+        "like": 226,
+        "quote": 0,
+        "reply": 7,
+        "retweet": 4
+      },
+      "url": "https://x.com/JeffDean/status/2124049248874639701"
+    },
+    {
+      "created_at": "2026-11-21T07:52:10.000Z",
+      "id": "2124048210335592895",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 7,
+        "impression": 13188,
+        "like": 166,
+        "quote": 2,
+        "reply": 5,
+        "retweet": 5
+      },
+      "url": "https://x.com/JeffDean/status/2124048210335592895"
+    },
+    {
+      "created_at": "2026-11-21T07:35:23.000Z",
+      "id": "2124043983878066407",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 260,
+        "impression": 27500,
+        "like": 400,
+        "quote": 4,
+        "reply": 15,
+        "retweet": 40
+      },
+      "url": "https://x.com/JeffDean/status/2124043983878066407"
+    },
+    {
       "created_at": "2026-11-20T15:00:45.000Z",
       "id": "2123793677860696070",
       "lang": "",

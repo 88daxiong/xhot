@@ -2,6 +2,48 @@
   "handle": "justinsuntron",
   "tweets": [
     {
+      "created_at": "2026-11-21T09:39:06.000Z",
+      "id": "2124075117861085388",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 2,
+        "impression": 52288,
+        "like": 116,
+        "quote": 5,
+        "reply": 55,
+        "retweet": 6
+      },
+      "url": "https://x.com/justinsuntron/status/2124075117861085388"
+    },
+    {
+      "created_at": "2026-11-21T07:06:08.000Z",
+      "id": "2124036622987710730",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 10,
+        "impression": 48548,
+        "like": 88,
+        "quote": 12,
+        "reply": 52,
+        "retweet": 5
+      },
+      "url": "https://x.com/justinsuntron/status/2124036622987710730"
+    },
+    {
+      "created_at": "2026-11-21T05:35:00.000Z",
+      "id": "2124013687556165828",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 90,
+        "impression": 598399,
+        "like": 988,
+        "quote": 66,
+        "reply": 553,
+        "retweet": 19
+      },
+      "url": "https://x.com/justinsuntron/status/2124013687556165828"
+    },
+    {
       "created_at": "2026-11-20T16:11:19.000Z",
       "id": "2123811434320871659",
       "lang": "",
@@ -2758,48 +2800,6 @@
         "retweet": 19
       },
       "url": "https://x.com/justinsuntron/status/2109822931761312144"
-    },
-    {
-      "created_at": "2026-10-12T23:04:32.000Z",
-      "id": "2109782297910428146",
-      "lang": "zh",
-      "metrics": {
-        "bookmark": 7,
-        "impression": 80198,
-        "like": 101,
-        "quote": 5,
-        "reply": 44,
-        "retweet": 10
-      },
-      "url": "https://x.com/justinsuntron/status/2109782297910428146"
-    },
-    {
-      "created_at": "2026-10-12T22:00:01.000Z",
-      "id": "2109766061679948206",
-      "lang": "en",
-      "metrics": {
-        "bookmark": 10,
-        "impression": 68279,
-        "like": 283,
-        "quote": 11,
-        "reply": 71,
-        "retweet": 32
-      },
-      "url": "https://x.com/justinsuntron/status/2109766061679948206"
-    },
-    {
-      "created_at": "2026-10-12T21:13:01.000Z",
-      "id": "2109754236158505158",
-      "lang": "en",
-      "metrics": {
-        "bookmark": 2,
-        "impression": 50804,
-        "like": 110,
-        "quote": 7,
-        "reply": 29,
-        "retweet": 9
-      },
-      "url": "https://x.com/justinsuntron/status/2109754236158505158"
     }
   ],
   "user_id": "902839045356744704"

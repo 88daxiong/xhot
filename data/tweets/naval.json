@@ -2,6 +2,34 @@
   "handle": "naval",
   "tweets": [
     {
+      "created_at": "2026-11-21T02:26:35.000Z",
+      "id": "2123966274321719745",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 681,
+        "impression": 205967,
+        "like": 4491,
+        "quote": 71,
+        "reply": 547,
+        "retweet": 348
+      },
+      "url": "https://x.com/naval/status/2123966274321719745"
+    },
+    {
+      "created_at": "2026-11-21T02:08:51.000Z",
+      "id": "2123961809963245728",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 19,
+        "impression": 40749,
+        "like": 239,
+        "quote": 1,
+        "reply": 14,
+        "retweet": 9
+      },
+      "url": "https://x.com/naval/status/2123961809963245728"
+    },
+    {
       "created_at": "2026-11-20T13:20:55.000Z",
       "id": "2123768555317723476",
       "lang": "",

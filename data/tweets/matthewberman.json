@@ -2,6 +2,20 @@
   "handle": "matthewberman",
   "tweets": [
     {
+      "created_at": "2026-11-21T00:27:10.000Z",
+      "id": "2123936222204870938",
+      "lang": "",
+      "metrics": {
+        "bookmark": 27,
+        "impression": 36935,
+        "like": 452,
+        "quote": 2,
+        "reply": 75,
+        "retweet": 11
+      },
+      "url": "https://x.com/MatthewBerman/status/2123936222204870938"
+    },
+    {
       "created_at": "2026-11-20T21:23:17.000Z",
       "id": "2123889942988455993",
       "lang": "en",
@@ -2786,20 +2800,6 @@
         "retweet": 12
       },
       "url": "https://x.com/MatthewBerman/status/2109694434833285178"
-    },
-    {
-      "created_at": "2026-10-12T01:35:17.000Z",
-      "id": "2109457849281839541",
-      "lang": "en",
-      "metrics": {
-        "bookmark": 18,
-        "impression": 19222,
-        "like": 457,
-        "quote": 4,
-        "reply": 79,
-        "retweet": 11
-      },
-      "url": "https://x.com/MatthewBerman/status/2109457849281839541"
     }
   ],
   "user_id": "6681172"
