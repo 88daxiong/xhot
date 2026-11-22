@@ -2,6 +2,20 @@
   "handle": "tibo_maker",
   "tweets": [
     {
+      "created_at": "2026-11-21T14:55:47.000Z",
+      "id": "2124154815110402444",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 4,
+        "impression": 4371,
+        "like": 60,
+        "quote": 0,
+        "reply": 61,
+        "retweet": 4
+      },
+      "url": "https://x.com/tibo_maker/status/2124154815110402444"
+    },
+    {
       "created_at": "2026-11-20T19:18:01.000Z",
       "id": "2123858420943974702",
       "lang": "en",

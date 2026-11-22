@@ -2,6 +2,34 @@
   "handle": "mckaywrigley",
   "tweets": [
     {
+      "created_at": "2026-11-21T02:10:34.000Z",
+      "id": "2123962243012526268",
+      "lang": "",
+      "metrics": {
+        "bookmark": 6,
+        "impression": 4453,
+        "like": 99,
+        "quote": 0,
+        "reply": 3,
+        "retweet": 5
+      },
+      "url": "https://x.com/mckaywrigley/status/2123962243012526268"
+    },
+    {
+      "created_at": "2026-11-21T02:05:52.000Z",
+      "id": "2123961058532757790",
+      "lang": "",
+      "metrics": {
+        "bookmark": 281,
+        "impression": 42701,
+        "like": 1113,
+        "quote": 9,
+        "reply": 76,
+        "retweet": 76
+      },
+      "url": "https://x.com/mckaywrigley/status/2123961058532757790"
+    },
+    {
       "created_at": "2026-11-17T21:10:38.000Z",
       "id": "2122799598892912749",
       "lang": "en",

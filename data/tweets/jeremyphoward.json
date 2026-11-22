@@ -2,6 +2,34 @@
   "handle": "jeremyphoward",
   "tweets": [
     {
+      "created_at": "2026-11-21T22:55:09.000Z",
+      "id": "2124275453800378435",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 48,
+        "impression": 12923,
+        "like": 345,
+        "quote": 2,
+        "reply": 24,
+        "retweet": 13
+      },
+      "url": "https://x.com/jeremyphoward/status/2124275453800378435"
+    },
+    {
+      "created_at": "2026-11-21T21:15:38.000Z",
+      "id": "2124250408873034194",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 15,
+        "impression": 8022,
+        "like": 53,
+        "quote": 0,
+        "reply": 2,
+        "retweet": 3
+      },
+      "url": "https://x.com/jeremyphoward/status/2124250408873034194"
+    },
+    {
       "created_at": "2026-11-19T10:32:23.000Z",
       "id": "2123363754394231178",
       "lang": "",

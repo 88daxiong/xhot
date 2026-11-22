@@ -2,6 +2,34 @@
   "handle": "simonw",
   "tweets": [
     {
+      "created_at": "2026-11-21T19:28:07.000Z",
+      "id": "2124223349769609407",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 7,
+        "impression": 5875,
+        "like": 27,
+        "quote": 0,
+        "reply": 4,
+        "retweet": 5
+      },
+      "url": "https://x.com/simonw/status/2124223349769609407"
+    },
+    {
+      "created_at": "2026-11-21T19:06:22.000Z",
+      "id": "2124217876777464269",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 40,
+        "impression": 19173,
+        "like": 252,
+        "quote": 14,
+        "reply": 115,
+        "retweet": 7
+      },
+      "url": "https://x.com/simonw/status/2124217876777464269"
+    },
+    {
       "created_at": "2026-11-20T15:59:23.000Z",
       "id": "2123808432830701909",
       "lang": "",

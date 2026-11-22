@@ -2,6 +2,48 @@
   "handle": "dickiebush",
   "tweets": [
     {
+      "created_at": "2026-11-21T19:22:07.000Z",
+      "id": "2124221839094222965",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 18,
+        "impression": 3452,
+        "like": 28,
+        "quote": 0,
+        "reply": 11,
+        "retweet": 2
+      },
+      "url": "https://x.com/dickiebush/status/2124221839094222965"
+    },
+    {
+      "created_at": "2026-11-21T16:00:06.000Z",
+      "id": "2124171003014099152",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 24,
+        "impression": 3512,
+        "like": 30,
+        "quote": 0,
+        "reply": 23,
+        "retweet": 0
+      },
+      "url": "https://x.com/dickiebush/status/2124171003014099152"
+    },
+    {
+      "created_at": "2026-11-21T13:00:04.000Z",
+      "id": "2124125693801894040",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 27,
+        "impression": 9679,
+        "like": 147,
+        "quote": 2,
+        "reply": 37,
+        "retweet": 8
+      },
+      "url": "https://x.com/dickiebush/status/2124125693801894040"
+    },
+    {
       "created_at": "2026-11-21T00:59:03.000Z",
       "id": "2123944242615640141",
       "lang": "en",
