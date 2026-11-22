@@ -2,6 +2,20 @@
   "handle": "garyvee",
   "tweets": [
     {
+      "created_at": "2026-11-22T00:34:14.000Z",
+      "id": "2124300388517994587",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 10,
+        "impression": 19669,
+        "like": 96,
+        "quote": 3,
+        "reply": 36,
+        "retweet": 16
+      },
+      "url": "https://x.com/garyvee/status/2124300388517994587"
+    },
+    {
       "created_at": "2026-11-21T14:46:02.000Z",
       "id": "2124152360935346651",
       "lang": "en",
@@ -2786,20 +2800,6 @@
         "retweet": 52
       },
       "url": "https://x.com/garyvee/status/2111486720273522878"
-    },
-    {
-      "created_at": "2026-10-17T13:33:41.000Z",
-      "id": "2111450579943805009",
-      "lang": "en",
-      "metrics": {
-        "bookmark": 28,
-        "impression": 25392,
-        "like": 289,
-        "quote": 7,
-        "reply": 63,
-        "retweet": 29
-      },
-      "url": "https://x.com/garyvee/status/2111450579943805009"
     }
   ],
   "user_id": "5768872"

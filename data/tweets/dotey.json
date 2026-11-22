@@ -2,6 +2,20 @@
   "handle": "dotey",
   "tweets": [
     {
+      "created_at": "2026-11-22T00:15:09.000Z",
+      "id": "2124295583238443309",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 13,
+        "impression": 6026,
+        "like": 12,
+        "quote": 0,
+        "reply": 7,
+        "retweet": 1
+      },
+      "url": "https://x.com/dotey/status/2124295583238443309"
+    },
+    {
       "created_at": "2026-11-21T23:23:00.000Z",
       "id": "2124282462343967111",
       "lang": "",
@@ -2786,20 +2800,6 @@
         "retweet": 2
       },
       "url": "https://x.com/dotey/status/2115284160415686888"
-    },
-    {
-      "created_at": "2026-10-28T03:20:14.000Z",
-      "id": "2115282464935473225",
-      "lang": "zh",
-      "metrics": {
-        "bookmark": 402,
-        "impression": 39937,
-        "like": 405,
-        "quote": 20,
-        "reply": 133,
-        "retweet": 59
-      },
-      "url": "https://x.com/dotey/status/2115282464935473225"
     }
   ],
   "user_id": "3178231"
