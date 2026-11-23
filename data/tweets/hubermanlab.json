@@ -2,6 +2,48 @@
   "handle": "hubermanlab",
   "tweets": [
     {
+      "created_at": "2026-11-22T20:17:26.000Z",
+      "id": "2124598149281104295",
+      "lang": "",
+      "metrics": {
+        "bookmark": 13,
+        "impression": 21054,
+        "like": 118,
+        "quote": 0,
+        "reply": 0,
+        "retweet": 1
+      },
+      "url": "https://x.com/hubermanlab/status/2124598149281104295"
+    },
+    {
+      "created_at": "2026-11-22T20:16:18.000Z",
+      "id": "2124597864185884727",
+      "lang": "",
+      "metrics": {
+        "bookmark": 1251,
+        "impression": 194704,
+        "like": 2746,
+        "quote": 2,
+        "reply": 50,
+        "retweet": 105
+      },
+      "url": "https://x.com/hubermanlab/status/2124597864185884727"
+    },
+    {
+      "created_at": "2026-11-22T20:05:26.000Z",
+      "id": "2124595127390003389",
+      "lang": "",
+      "metrics": {
+        "bookmark": 26,
+        "impression": 31397,
+        "like": 103,
+        "quote": 1,
+        "reply": 5,
+        "retweet": 7
+      },
+      "url": "https://x.com/hubermanlab/status/2124595127390003389"
+    },
+    {
       "created_at": "2026-11-20T23:29:09.000Z",
       "id": "2123921619538284716",
       "lang": "",

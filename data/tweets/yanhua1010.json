@@ -2,6 +2,34 @@
   "handle": "yanhua1010",
   "tweets": [
     {
+      "created_at": "2026-11-22T13:56:16.000Z",
+      "id": "2124502224508527020",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 4,
+        "impression": 1090,
+        "like": 2,
+        "quote": 0,
+        "reply": 1,
+        "retweet": 0
+      },
+      "url": "https://x.com/yanhua1010/status/2124502224508527020"
+    },
+    {
+      "created_at": "2026-11-22T09:59:02.000Z",
+      "id": "2124442521472577928",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 1621,
+        "like": 2,
+        "quote": 1,
+        "reply": 0,
+        "retweet": 0
+      },
+      "url": "https://x.com/yanhua1010/status/2124442521472577928"
+    },
+    {
       "created_at": "2026-11-21T12:11:26.000Z",
       "id": "2124113454873354382",
       "lang": "",
@@ -2772,34 +2800,6 @@
         "retweet": 0
       },
       "url": "https://x.com/yanhua1010/status/2108778496915030026"
-    },
-    {
-      "created_at": "2026-10-10T02:24:30.000Z",
-      "id": "2108745459904975305",
-      "lang": "",
-      "metrics": {
-        "bookmark": 0,
-        "impression": 1251,
-        "like": 1,
-        "quote": 0,
-        "reply": 1,
-        "retweet": 0
-      },
-      "url": "https://x.com/yanhua1010/status/2108745459904975305"
-    },
-    {
-      "created_at": "2026-10-09T23:35:19.000Z",
-      "id": "2108702880953925787",
-      "lang": "",
-      "metrics": {
-        "bookmark": 44,
-        "impression": 20041,
-        "like": 38,
-        "quote": 0,
-        "reply": 29,
-        "retweet": 5
-      },
-      "url": "https://x.com/yanhua1010/status/2108702880953925787"
     }
   ],
   "user_id": "1932935705711513600"

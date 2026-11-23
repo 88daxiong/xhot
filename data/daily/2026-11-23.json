@@ -1,0 +1,144 @@
+{
+  "changelog": [],
+  "date": "2026-11-23",
+  "followers_zh": "涨粉最多：Anthropic +2506、Karpathy +2271、LeCun +2069、Naval +1676、Claude +1623；马斯克日减约 9.8 万，Google -4617、CZ -4010。",
+  "gists": {
+    "2124305043541434835": "开源 AI 视频编辑器 Scarlet 大更新：支持 Gemini Neon、帧上涂画指出修改、自动对口型等。",
+    "2124305614172037537": "提醒自己：95% 的阅读、规划和头脑风暴只是伪装成效率的拖延。",
+    "2124322968499282388": "询问 ChatGPT/Codex 桌面应用昨日更新后还有哪些问题，并称团队已在准备下一次大更新。",
+    "2124328393164706015": "菲律宾最大交易所 Coins.ph 自 11 月 19 日起停止与自托管钱包互转，仅允许与受监管交易所划转。",
+    "2124340719397781824": "称 FSD 就像现实版的 GTA。",
+    "2124342498625740988": "担心人们面对 AI 能力提升会后退，而不是重新设计任务与体验，让人类工作保持中心。",
+    "2124348445649768955": "对比上月对黎曼猜想何时被解决的预测：Metaculus 看 2035 年，陶哲轩倾向于 2050 年左右人机协作。",
+    "2124498865390821583": "提醒成年人仍可交新朋友：跑团、画画课、邻里邀约或健身房攀谈，关键是开始。",
+    "2124508261990961492": "认为人生最宝贵的技能是学会在正确的时间和程度去在意，包括完全不在意。",
+    "2124511744533856590": "认为变有钱最好的部分不是买东西，而是买到时间：白天去健身房、慢早晨、不错过家庭时刻。",
+    "2124522043274351096": "称 Grok Bot 帮他处理亚马逊错扣，翻邮件、填表并提交，省下 100 美元。",
+    "2124542701848998228": "认为学会热爱正在做的事，比只做自己热爱的事更重要，世界会因此更宽而非更窄。",
+    "2124546828117090309": "称 Kurzweil 1999 年就预测 2029 年机器将自称有意识且被广泛接受，2005 年预测当年达到人类水平智能。",
+    "2124549237761302905": "转述马斯克：经营企业就是不断发现层层叠加的谎言；CEO 的工作是找出没人告诉你的真相。",
+    "2124569960282546467": "给出综合成本、质量与速度的模型排名：Opus 5.5、Neon、Fable 5.2、Astra 6.2、Sol 6.2。",
+    "2124583459356373052": "指出 OpenAI 提议用困惑度（而非 FLOPS）作为行业自律与节奏的通用度量。"
+  },
+  "hide": [
+    "2124553942889857465",
+    "2124346969778979315",
+    "2124411907172184385",
+    "2124323591575777512",
+    "2124566037853245497"
+  ],
+  "highlights": [
+    {
+      "excerpt": "Consciousness is either an illusion or ubiquitous on a gradient.\n\nDifficult to argue that carbon is conscious, but silicon is not.",
+      "excerpt_zh": "意识要么是幻觉，要么沿梯度普遍存在。\n\n很难主张碳基有意识，而硅基没有。",
+      "handle": "elonmusk",
+      "likes": 20564,
+      "name": "Elon Musk",
+      "post_id": "2124619599882920139",
+      "tags": [],
+      "text_zh": "认为意识要么是幻觉，要么沿梯度普遍存在，很难主张碳基有意识而硅基没有。",
+      "url": "https://x.com/elonmusk/status/2124619599882920139"
+    },
+    {
+      "excerpt": "This is the most important thing OpenAI has published in awhile.\n\nWe are providing a lot of transparency into our pretraining progress and hope we can agree as a frield to common limits. I think that would be very wise and help ensure safety and control.",
+      "excerpt_zh": "这是 OpenAI 一段时间以来发布的最重要内容。\n\n我们正在对预训练进展提供大量透明度，并希望能作为业界就共同上限达成一致。我认为这非常明智，有助于确保安全与可控。",
+      "handle": "sama",
+      "likes": 7182,
+      "name": "Sam Altman",
+      "post_id": "2124551594691932405",
+      "tags": [
+        "policy"
+      ],
+      "text_zh": "称这是 OpenAI 一段时间来最重要发布，公开预训练进展并倡议共同上限。",
+      "url": "https://x.com/sama/status/2124551594691932405"
+    },
+    {
+      "excerpt": "GREAT advice I got (directly) from 2 experts.\n1) No matter your level: practice/train. “Exercise/working out” = “get through the workout” mindset whereas training/practice = focus & effort goes up. (P. Tsatsouline)\n2) Learn to relish the hardest parts of training. (Mike Mentzer)",
+      "excerpt_zh": "我从两位专家那里直接得到的极好建议。\n1) 不论水平如何：都要练习/训练。「锻炼/对付完训练」是熬过去的心态，而训练/练习则意味着专注和力度上升。（P. Tsatsouline）\n2) 学会享受训练中最难的部分。（Mike Mentzer）",
+      "handle": "hubermanlab",
+      "likes": 2746,
+      "name": "Andrew D. Huberman, Ph.D.",
+      "post_id": "2124597864185884727",
+      "tags": [
+        "habit",
+        "career"
+      ],
+      "text_zh": "转述两位教练：用「训练」心态练习，并学会享受训练中最难的部分。",
+      "url": "https://x.com/hubermanlab/status/2124597864185884727"
+    },
+    {
+      "excerpt": "I helped start OpenAI because I want AGI to be safe and beneficial for people. This post provides transparency that can be the foundation of industry-wide shared safety bars.",
+      "excerpt_zh": "我参与创立 OpenAI，是希望 AGI 对人类安全而有益。这篇文章提供的透明度，可以成为行业共同安全标准的基础。",
+      "handle": "gdb",
+      "likes": 1089,
+      "name": "Greg Brockman",
+      "post_id": "2124582684840399311",
+      "tags": [
+        "policy"
+      ],
+      "text_zh": "称创立 OpenAI 是为让 AGI 安全有益，此文旨在为行业共同安全标准打基础。",
+      "url": "https://x.com/gdb/status/2124582684840399311"
+    },
+    {
+      "excerpt": "What's the most useful thing you've done with AI assistants/agents so far, even if mundane?\n\nOne simple personal example - in about 48 hours, found and cancelled old subscriptions across multiple cards, out-of-date excess insurance policies, outdated services for employees, etc. Result: ~$10,000/year savings.",
+      "excerpt_zh": "到目前为止，你用 AI 助手/智能体做过最有用的事是什么，哪怕很日常？\n\n一个简单的个人例子——大约 48 小时内，我在多张卡上找到并取消了旧订阅、过时的多余保单、给员工用的过期服务等。结果：每年节省约 10,000 美元。",
+      "handle": "tferriss",
+      "likes": 1034,
+      "name": "Tim Ferriss",
+      "post_id": "2124313547773771817",
+      "tags": [
+        "agent",
+        "indie"
+      ],
+      "text_zh": "用 AI 智能体约 48 小时清理过期订阅与保单，一年节省约 1 万美元。",
+      "url": "https://x.com/tferriss/status/2124313547773771817"
+    },
+    {
+      "excerpt": "A high school kid is recompiling the GTA6 to work on PC.\n\nWhat’s more interesting is how they’re github issues to coordinate tasks across agent swarms.\n\nA new model for open source?",
+      "excerpt_zh": "一个高中生正在把 GTA6 重编译到 PC 上运行。\n\n更有意思的是，他们用 GitHub Issues 在智能体集群之间协调任务。\n\n这会是开源的一种新模式吗？",
+      "handle": "amasad",
+      "likes": 722,
+      "name": "Amjad Masad",
+      "post_id": "2124345037408686228",
+      "tags": [
+        "agent",
+        "oss"
+      ],
+      "text_zh": "高中生把 GTA6 重编译到 PC，并用 GitHub Issues 协调智能体集群。",
+      "url": "https://x.com/amasad/status/2124345037408686228"
+    },
+    {
+      "excerpt": "Security researchers recently found data-handling problems with some inference providers available on OpenRouter. The findings showed no breach of OpenRouter itself.\n\nIn response, we’ve off-boarded 3 providers, removed many endpoints from ZDR eligibility, and notified affected customers.",
+      "excerpt_zh": "安全研究人员最近发现，OpenRouter 上部分推理供应商存在数据处理问题。调查显示 OpenRouter 自身未被攻破。\n\n作为回应，我们已下架 3 家供应商，取消了许多端点的 ZDR 资格，并通知了受影响的客户。",
+      "handle": "OpenRouter",
+      "likes": 605,
+      "name": "OpenRouter",
+      "post_id": "2124315081899200715",
+      "tags": [
+        "research"
+      ],
+      "text_zh": "因推理供应商数据处理问题，已下架 3 家并取消多项 ZDR 资格。",
+      "url": "https://x.com/OpenRouter/status/2124315081899200715"
+    },
+    {
+      "excerpt": "朋友今年做了 20 多部 AI 短剧，有个红果播放超 5000 万。\n\n他说工作流中整合了一个叫老李 Skill 的东西。\n\n搜了下，原来叫“漫剧老李 AIGC 创作全流程 Skill”\n\n（竟一点没听过，果然隔行如隔山，目前Star 两千多）\n\n他说这个 Skill 分镜做的不错，让抽卡成功率提升很多，感兴趣的朋友可以试试。",
+      "handle": "vista8",
+      "likes": 515,
+      "name": "向阳乔木",
+      "post_id": "2124527741613830190",
+      "tags": [
+        "agent",
+        "career"
+      ],
+      "text_zh": "朋友用「漫剧老李」Skill 做 20 多部 AI 短剧，红果一部播放超 5000 万。",
+      "url": "https://x.com/vista8/status/2124527741613830190"
+    }
+  ],
+  "pin": [],
+  "summary_zh": [
+    "Altman 称 OpenAI 公布预训练透明度并倡议共同上限，该帖获 7182 赞。",
+    "话题几乎全线回落：仅 Kimi 涨 2.6%，Claude Code 与 Gemini 等跌约 18–21%。",
+    "Anthropic 增粉 2506，Karpathy +2271、LeCun +2069；马斯克粉丝减少约 9.8 万。"
+  ],
+  "topics_zh": "监控话题几乎全线回落：仅 Kimi 涨 2.6%、搞钱·副业持平；Claude Code -18.6%、智能体 -19.1%、Gemini -20.7%、DeepSeek -22%，Dan Koe -54.3%。"
+}

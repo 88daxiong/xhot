@@ -1,0 +1,168 @@
+{
+  "exclude": [
+    "Suu766",
+    "SoulSloop99"
+  ],
+  "people": {
+    "alibaba_qwen": {
+      "bullets": [
+        "发布 Qwen4-Max：MoE 架构、原生视觉与 100 万 token 上下文（1.45 万赞）。",
+        "Qwen4-Max 在 Code Arena: WebDev 排到第 6，较上代提高 74 分。"
+      ]
+    },
+    "amasad": {
+      "bullets": [
+        "观察到大模型更自主了，但被赋予目标时仍常理解错、漫无目的并浪费 token。"
+      ]
+    },
+    "aravsrinivas": {
+      "bullets": [
+        "披露 Perplexity 年经常性收入已超 10 亿美元（3616 赞）。",
+        "宣布 Frontier Research，并承诺至少 1 万张 GPU 做多智能体与持续学习。"
+      ]
+    },
+    "codie_sanchez": {
+      "bullets": [
+        "称 2026 年「基本靠谱」本身就是稀缺能力（3528 赞）；并写变有钱最好的部分是买到时间（3462 赞）。"
+      ]
+    },
+    "elonmusk": {
+      "bullets": [
+        "本周 95 帖；最热「We’ve come a long way」获 8.4 万赞。",
+        "另称曾向 FAA 提供免费 Starlink，但对方表示不需要（7.4 万赞）。"
+      ]
+    },
+    "emollick": {
+      "bullets": [
+        "感叹人类语言对宇宙建模「不合理地有效」（6176 赞），并关注黎曼猜想或已在 Claude 帮助下取得进展。"
+      ]
+    },
+    "geminiapp": {
+      "bullets": [
+        "上线 Gemini 生成 GIF 与 Tasks；展示用 Gemini 4 Hydrogen 把草图做成自定义字体。"
+      ]
+    },
+    "goan999999": {
+      "bullets": [
+        "介绍近 1 万星、含 79 个游戏开发 Skill 的仓库，以及 4.64 万星的开源下载工具 Cobalt。"
+      ]
+    },
+    "google": {
+      "bullets": [
+        "Gemini Notebook 现可将资料生成交互网站；同步宣布 Genie 4 与 Gemini 4 Neon。"
+      ]
+    },
+    "googledeepmind": {
+      "bullets": [
+        "Gemini 4 Neon 开始推送（4353 赞）；Genie 4 已进入 Project Genie。",
+        "展示 Neon 根据真实勃朗峰地形写出的滑雪模拟器。"
+      ]
+    },
+    "hubermanlab": {
+      "bullets": [
+        "介绍 UCSF 神经外科主任 Eddie Chang 的新发现，并转述「要用训练心态、享受最难部分」（2746 赞）。"
+      ]
+    },
+    "hwchase17": {
+      "bullets": [
+        "称 LangChain 内部智能体都有学习闭环，并撰文解释「知识工厂」由哪些部分组成（1377 赞）。"
+      ]
+    },
+    "jeremyphoward": {
+      "bullets": [
+        "称 OpenAI 推出「有史以来最差」模型当天，Google 发布了最好的模型（3697 赞）。",
+        "把 AnswerAI 内部学习工具 SolveIt 首次向公众开放。"
+      ]
+    },
+    "justinsuntron": {
+      "bullets": [
+        "把短视频比作精神上的「高糖高油高盐」（2854 赞），并批评中概股缺少回购销毁。"
+      ]
+    },
+    "laobaishare": {
+      "bullets": [
+        "本周 77 帖偏引流；较实质的一条批评只会让 AI「写个/解释一下」等于浪费。"
+      ]
+    },
+    "levelsio": {
+      "bullets": [
+        "调侃美国人因痴迷工作而富有、后 AGI 时代或不再如此（3274 赞）。",
+        "公布「X 垃圾账号名单」，列出 3728 个自动 AI 回复账号。"
+      ]
+    },
+    "lxfater": {
+      "bullets": [
+        "介绍把 123 种应用商店拒审坑做成的开源 Skill（近 2000 星），以及从 681 份漏洞报告提炼的安全技能。"
+      ]
+    },
+    "mattshumer_": {
+      "bullets": [
+        "拒绝撰写 GPT-6.2 Astra / Sol 完整评测，称测试体验极差、模型基本不可用（4976 赞）。"
+      ]
+    },
+    "mistralai": {
+      "bullets": [
+        "庆祝 Vibe + Le Chonk，欧洲前 3 个月免费使用 Vibe（3186 赞）；并推出可本地或远程运行的桌面版。"
+      ]
+    },
+    "officiallogank": {
+      "bullets": [
+        "介绍 Gemini 4 Neon，称它在智能、速度与模型体量之间取得很好平衡（7696 赞）。"
+      ]
+    },
+    "openai": {
+      "bullets": [
+        "正式推出 GPT-6.2 Astra 与 Sol（2.89 万赞）。",
+        "宣布向最多 20 万名科学家免费开放前沿模型，11 月 23 日起接受申请。"
+      ]
+    },
+    "openaidevs": {
+      "bullets": [
+        "宣布 GPT-6.2 Astra 与 Sol 登陆 Codex 和 API（3433 赞）。",
+        "发布 GPT-Live-1.1，并用 Performance Factory 智能体保障 ChatGPT 性能。"
+      ]
+    },
+    "paulg": {
+      "bullets": [
+        "连发两帖批评 NVIDIA 董事会对黄仁勋的处置（9707 / 8033 赞），并谈如何避开人群与时髦观念。"
+      ]
+    },
+    "perplexity_ai": {
+      "bullets": [
+        "发布 Frontier Research，目标是做出能自主研究的系统，并推出 Multiagent 与 Brain。"
+      ]
+    },
+    "petergyang": {
+      "bullets": [
+        "恶搞黄仁勋给素食松鼠送牛胸肉的帖获 5298 赞，是本周最热内容之一。"
+      ]
+    },
+    "rauchg": {
+      "bullets": [
+        "称软件进入「个性化、完全自有、开源且质量更高」的新阶段（4287 赞），并发布 Rust/wasm 的推文渲染器 xeet。"
+      ]
+    },
+    "sahilbloom": {
+      "bullets": [
+        "连发人生清单：让孩子看见你享受生活（4315 赞），以及尽早做不舒服但该做的事（3266 赞）。"
+      ]
+    },
+    "satyanadella": {
+      "bullets": [
+        "在 Ignite 上强调把技术进步变成对个人、组织与社会的实际杠杆（2146 赞）。"
+      ]
+    },
+    "thsottiaux": {
+      "bullets": [
+        "宣布 GPT-6.2 Sol / Astra 终于上线，并把超快档扩到 Pro 200（1.04 万赞）。",
+        "解释影响者与大众体感差异：部分人更早拿到、期间模型又改了很多（1.11 万赞）。"
+      ]
+    },
+    "trq212": {
+      "bullets": [
+        "认为 software factory 只是暂时问题，模型会自己造；更值得问的是如何搭建让智能体生长的工作区（5867 赞）。"
+      ]
+    }
+  },
+  "week": "2026-W48"
+}

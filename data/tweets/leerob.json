@@ -2,6 +2,20 @@
   "handle": "leerob",
   "tweets": [
     {
+      "created_at": "2026-11-22T15:15:01.000Z",
+      "id": "2124522043274351096",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 749,
+        "impression": 154895,
+        "like": 1156,
+        "quote": 7,
+        "reply": 84,
+        "retweet": 14
+      },
+      "url": "https://x.com/leerob/status/2124522043274351096"
+    },
+    {
       "created_at": "2026-11-20T18:26:28.000Z",
       "id": "2123845449413239273",
       "lang": "en",

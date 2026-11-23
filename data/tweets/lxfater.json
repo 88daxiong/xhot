@@ -2,6 +2,174 @@
   "handle": "lxfater",
   "tweets": [
     {
+      "created_at": "2026-11-22T16:03:35.000Z",
+      "id": "2124534265555964228",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 2,
+        "impression": 2208,
+        "like": 3,
+        "quote": 0,
+        "reply": 4,
+        "retweet": 0
+      },
+      "url": "https://x.com/lxfater/status/2124534265555964228"
+    },
+    {
+      "created_at": "2026-11-22T15:40:03.000Z",
+      "id": "2124528342992920691",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 6,
+        "impression": 4042,
+        "like": 4,
+        "quote": 0,
+        "reply": 3,
+        "retweet": 1
+      },
+      "url": "https://x.com/lxfater/status/2124528342992920691"
+    },
+    {
+      "created_at": "2026-11-22T15:31:08.000Z",
+      "id": "2124526101107994865",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 34,
+        "impression": 4551,
+        "like": 23,
+        "quote": 0,
+        "reply": 8,
+        "retweet": 4
+      },
+      "url": "https://x.com/lxfater/status/2124526101107994865"
+    },
+    {
+      "created_at": "2026-11-22T15:15:04.000Z",
+      "id": "2124522057115263110",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 14,
+        "impression": 2830,
+        "like": 13,
+        "quote": 0,
+        "reply": 8,
+        "retweet": 0
+      },
+      "url": "https://x.com/lxfater/status/2124522057115263110"
+    },
+    {
+      "created_at": "2026-11-22T15:01:00.000Z",
+      "id": "2124518514320867668",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 20,
+        "impression": 2560,
+        "like": 19,
+        "quote": 0,
+        "reply": 6,
+        "retweet": 3
+      },
+      "url": "https://x.com/lxfater/status/2124518514320867668"
+    },
+    {
+      "created_at": "2026-11-22T14:50:01.000Z",
+      "id": "2124515753617412463",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 6,
+        "impression": 3602,
+        "like": 5,
+        "quote": 1,
+        "reply": 8,
+        "retweet": 0
+      },
+      "url": "https://x.com/lxfater/status/2124515753617412463"
+    },
+    {
+      "created_at": "2026-11-22T14:30:18.000Z",
+      "id": "2124510787951603965",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 12,
+        "impression": 2451,
+        "like": 11,
+        "quote": 0,
+        "reply": 4,
+        "retweet": 0
+      },
+      "url": "https://x.com/lxfater/status/2124510787951603965"
+    },
+    {
+      "created_at": "2026-11-22T14:05:02.000Z",
+      "id": "2124504433195171902",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 25,
+        "impression": 3002,
+        "like": 16,
+        "quote": 0,
+        "reply": 8,
+        "retweet": 5
+      },
+      "url": "https://x.com/lxfater/status/2124504433195171902"
+    },
+    {
+      "created_at": "2026-11-22T13:45:08.000Z",
+      "id": "2124499423241666719",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 5,
+        "impression": 2589,
+        "like": 8,
+        "quote": 0,
+        "reply": 7,
+        "retweet": 2
+      },
+      "url": "https://x.com/lxfater/status/2124499423241666719"
+    },
+    {
+      "created_at": "2026-11-22T13:20:02.000Z",
+      "id": "2124493106254905788",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 135,
+        "impression": 9187,
+        "like": 87,
+        "quote": 0,
+        "reply": 17,
+        "retweet": 12
+      },
+      "url": "https://x.com/lxfater/status/2124493106254905788"
+    },
+    {
+      "created_at": "2026-11-22T12:55:02.000Z",
+      "id": "2124486813582553338",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 2,
+        "impression": 3095,
+        "like": 7,
+        "quote": 0,
+        "reply": 9,
+        "retweet": 0
+      },
+      "url": "https://x.com/lxfater/status/2124486813582553338"
+    },
+    {
+      "created_at": "2026-11-22T12:30:19.000Z",
+      "id": "2124480596902638080",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 68,
+        "impression": 13709,
+        "like": 58,
+        "quote": 1,
+        "reply": 26,
+        "retweet": 3
+      },
+      "url": "https://x.com/lxfater/status/2124480596902638080"
+    },
+    {
       "created_at": "2026-11-22T11:53:19.000Z",
       "id": "2124471283010113949",
       "lang": "",
@@ -2632,174 +2800,6 @@
         "retweet": 34
       },
       "url": "https://x.com/lxfater/status/2113622664115888562"
-    },
-    {
-      "created_at": "2026-10-23T10:32:32.000Z",
-      "id": "2113579318299459723",
-      "lang": "zh",
-      "metrics": {
-        "bookmark": 7,
-        "impression": 2610,
-        "like": 8,
-        "quote": 0,
-        "reply": 13,
-        "retweet": 2
-      },
-      "url": "https://x.com/lxfater/status/2113579318299459723"
-    },
-    {
-      "created_at": "2026-10-23T10:16:55.000Z",
-      "id": "2113575389117235501",
-      "lang": "zh",
-      "metrics": {
-        "bookmark": 2,
-        "impression": 2404,
-        "like": 10,
-        "quote": 1,
-        "reply": 11,
-        "retweet": 0
-      },
-      "url": "https://x.com/lxfater/status/2113575389117235501"
-    },
-    {
-      "created_at": "2026-10-23T06:21:49.000Z",
-      "id": "2113516222944104525",
-      "lang": "zh",
-      "metrics": {
-        "bookmark": 27,
-        "impression": 18672,
-        "like": 43,
-        "quote": 13,
-        "reply": 46,
-        "retweet": 11
-      },
-      "url": "https://x.com/lxfater/status/2113516222944104525"
-    },
-    {
-      "created_at": "2026-10-23T02:41:33.000Z",
-      "id": "2113460793035682228",
-      "lang": "zh",
-      "metrics": {
-        "bookmark": 2,
-        "impression": 4516,
-        "like": 12,
-        "quote": 0,
-        "reply": 9,
-        "retweet": 0
-      },
-      "url": "https://x.com/lxfater/status/2113460793035682228"
-    },
-    {
-      "created_at": "2026-10-22T16:46:53.000Z",
-      "id": "2113311139958505827",
-      "lang": "zh",
-      "metrics": {
-        "bookmark": 3,
-        "impression": 1904,
-        "like": 6,
-        "quote": 0,
-        "reply": 2,
-        "retweet": 0
-      },
-      "url": "https://x.com/lxfater/status/2113311139958505827"
-    },
-    {
-      "created_at": "2026-10-22T14:32:21.000Z",
-      "id": "2113277282533998665",
-      "lang": "zh",
-      "metrics": {
-        "bookmark": 6,
-        "impression": 3931,
-        "like": 5,
-        "quote": 1,
-        "reply": 7,
-        "retweet": 0
-      },
-      "url": "https://x.com/lxfater/status/2113277282533998665"
-    },
-    {
-      "created_at": "2026-10-22T12:10:01.000Z",
-      "id": "2113241463438147977",
-      "lang": "zh",
-      "metrics": {
-        "bookmark": 1,
-        "impression": 4083,
-        "like": 5,
-        "quote": 0,
-        "reply": 13,
-        "retweet": 0
-      },
-      "url": "https://x.com/lxfater/status/2113241463438147977"
-    },
-    {
-      "created_at": "2026-10-22T08:00:30.000Z",
-      "id": "2113178668831055969",
-      "lang": "zh",
-      "metrics": {
-        "bookmark": 15,
-        "impression": 11755,
-        "like": 6,
-        "quote": 0,
-        "reply": 32,
-        "retweet": 0
-      },
-      "url": "https://x.com/lxfater/status/2113178668831055969"
-    },
-    {
-      "created_at": "2026-10-22T04:33:40.000Z",
-      "id": "2113126618684404037",
-      "lang": "zh",
-      "metrics": {
-        "bookmark": 29,
-        "impression": 15681,
-        "like": 62,
-        "quote": 5,
-        "reply": 51,
-        "retweet": 3
-      },
-      "url": "https://x.com/lxfater/status/2113126618684404037"
-    },
-    {
-      "created_at": "2026-10-22T04:01:23.000Z",
-      "id": "2113118493474529785",
-      "lang": "zh",
-      "metrics": {
-        "bookmark": 3,
-        "impression": 11541,
-        "like": 0,
-        "quote": 0,
-        "reply": 0,
-        "retweet": 1
-      },
-      "url": "https://x.com/lxfater/status/2113118493474529785"
-    },
-    {
-      "created_at": "2026-10-21T14:51:29.000Z",
-      "id": "2112919709695828162",
-      "lang": "",
-      "metrics": {
-        "bookmark": 14,
-        "impression": 7218,
-        "like": 8,
-        "quote": 1,
-        "reply": 13,
-        "retweet": 2
-      },
-      "url": "https://x.com/lxfater/status/2112919709695828162"
-    },
-    {
-      "created_at": "2026-10-21T13:59:06.000Z",
-      "id": "2112906525069185514",
-      "lang": "",
-      "metrics": {
-        "bookmark": 4,
-        "impression": 6527,
-        "like": 31,
-        "quote": 0,
-        "reply": 16,
-        "retweet": 0
-      },
-      "url": "https://x.com/lxfater/status/2112906525069185514"
     }
   ],
   "user_id": "452072245"
