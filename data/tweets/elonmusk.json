@@ -2,6 +2,20 @@
   "handle": "elonmusk",
   "tweets": [
     {
+      "created_at": "2026-11-23T01:20:01.000Z",
+      "id": "2124674295246811586",
+      "lang": "",
+      "metrics": {
+        "bookmark": 521,
+        "impression": 1820235,
+        "like": 11951,
+        "quote": 80,
+        "reply": 1060,
+        "retweet": 752
+      },
+      "url": "https://x.com/elonmusk/status/2124674295246811586"
+    },
+    {
       "created_at": "2026-11-22T22:01:12.000Z",
       "id": "2124624263214662097",
       "lang": "en",
@@ -2786,20 +2800,6 @@
         "retweet": 1108
       },
       "url": "https://x.com/elonmusk/status/2118620772268990966"
-    },
-    {
-      "created_at": "2026-11-06T06:50:11.000Z",
-      "id": "2118596790958322075",
-      "lang": "art",
-      "metrics": {
-        "bookmark": 682,
-        "impression": 3826231,
-        "like": 20647,
-        "quote": 145,
-        "reply": 1762,
-        "retweet": 1462
-      },
-      "url": "https://x.com/elonmusk/status/2118596790958322075"
     }
   ],
   "user_id": "44196397"
