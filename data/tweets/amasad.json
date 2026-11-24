@@ -2,6 +2,104 @@
   "handle": "amasad",
   "tweets": [
     {
+      "created_at": "2026-11-23T23:29:15.000Z",
+      "id": "2125008810041610359",
+      "lang": "",
+      "metrics": {
+        "bookmark": 24,
+        "impression": 10514,
+        "like": 340,
+        "quote": 3,
+        "reply": 24,
+        "retweet": 22
+      },
+      "url": "https://x.com/amasad/status/2125008810041610359"
+    },
+    {
+      "created_at": "2026-11-23T22:59:42.000Z",
+      "id": "2125001371472871659",
+      "lang": "",
+      "metrics": {
+        "bookmark": 19,
+        "impression": 19970,
+        "like": 541,
+        "quote": 3,
+        "reply": 21,
+        "retweet": 28
+      },
+      "url": "https://x.com/amasad/status/2125001371472871659"
+    },
+    {
+      "created_at": "2026-11-23T20:52:17.000Z",
+      "id": "2124969305674748175",
+      "lang": "",
+      "metrics": {
+        "bookmark": 75,
+        "impression": 10493,
+        "like": 187,
+        "quote": 1,
+        "reply": 54,
+        "retweet": 11
+      },
+      "url": "https://x.com/amasad/status/2124969305674748175"
+    },
+    {
+      "created_at": "2026-11-23T20:34:01.000Z",
+      "id": "2124964710407930157",
+      "lang": "",
+      "metrics": {
+        "bookmark": 127,
+        "impression": 21656,
+        "like": 297,
+        "quote": 5,
+        "reply": 24,
+        "retweet": 15
+      },
+      "url": "https://x.com/amasad/status/2124964710407930157"
+    },
+    {
+      "created_at": "2026-11-23T20:25:04.000Z",
+      "id": "2124962459115307499",
+      "lang": "",
+      "metrics": {
+        "bookmark": 11,
+        "impression": 9182,
+        "like": 117,
+        "quote": 1,
+        "reply": 18,
+        "retweet": 5
+      },
+      "url": "https://x.com/amasad/status/2124962459115307499"
+    },
+    {
+      "created_at": "2026-11-23T18:28:38.000Z",
+      "id": "2124933157862646244",
+      "lang": "",
+      "metrics": {
+        "bookmark": 54,
+        "impression": 11291,
+        "like": 141,
+        "quote": 1,
+        "reply": 5,
+        "retweet": 10
+      },
+      "url": "https://x.com/amasad/status/2124933157862646244"
+    },
+    {
+      "created_at": "2026-11-23T18:03:55.000Z",
+      "id": "2124926938225705097",
+      "lang": "",
+      "metrics": {
+        "bookmark": 42,
+        "impression": 8474,
+        "like": 74,
+        "quote": 0,
+        "reply": 23,
+        "retweet": 12
+      },
+      "url": "https://x.com/amasad/status/2124926938225705097"
+    },
+    {
       "created_at": "2026-11-23T01:08:15.000Z",
       "id": "2124671335700091020",
       "lang": "en",

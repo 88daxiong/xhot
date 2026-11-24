@@ -2,6 +2,132 @@
   "handle": "dotey",
   "tweets": [
     {
+      "created_at": "2026-11-23T23:17:55.000Z",
+      "id": "2125005958762172419",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 2,
+        "impression": 3118,
+        "like": 9,
+        "quote": 0,
+        "reply": 13,
+        "retweet": 0
+      },
+      "url": "https://x.com/dotey/status/2125005958762172419"
+    },
+    {
+      "created_at": "2026-11-23T23:14:54.000Z",
+      "id": "2125005196648431731",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 14,
+        "impression": 13398,
+        "like": 94,
+        "quote": 3,
+        "reply": 9,
+        "retweet": 7
+      },
+      "url": "https://x.com/dotey/status/2125005196648431731"
+    },
+    {
+      "created_at": "2026-11-23T23:01:04.000Z",
+      "id": "2125001715346714894",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 1967,
+        "like": 4,
+        "quote": 0,
+        "reply": 3,
+        "retweet": 0
+      },
+      "url": "https://x.com/dotey/status/2125001715346714894"
+    },
+    {
+      "created_at": "2026-11-23T22:48:14.000Z",
+      "id": "2124998487221694583",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 3,
+        "impression": 7018,
+        "like": 26,
+        "quote": 1,
+        "reply": 15,
+        "retweet": 0
+      },
+      "url": "https://x.com/dotey/status/2124998487221694583"
+    },
+    {
+      "created_at": "2026-11-23T16:17:55.000Z",
+      "id": "2124900260925296807",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 7,
+        "impression": 9666,
+        "like": 22,
+        "quote": 0,
+        "reply": 18,
+        "retweet": 2
+      },
+      "url": "https://x.com/dotey/status/2124900260925296807"
+    },
+    {
+      "created_at": "2026-11-23T08:02:19.000Z",
+      "id": "2124775538648633370",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 115,
+        "impression": 23920,
+        "like": 116,
+        "quote": 5,
+        "reply": 78,
+        "retweet": 12
+      },
+      "url": "https://x.com/dotey/status/2124775538648633370"
+    },
+    {
+      "created_at": "2026-11-23T06:47:22.000Z",
+      "id": "2124756676607627434",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 194,
+        "impression": 56457,
+        "like": 215,
+        "quote": 6,
+        "reply": 65,
+        "retweet": 28
+      },
+      "url": "https://x.com/dotey/status/2124756676607627434"
+    },
+    {
+      "created_at": "2026-11-23T04:46:01.000Z",
+      "id": "2124726140023537849",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 16,
+        "impression": 39861,
+        "like": 104,
+        "quote": 7,
+        "reply": 93,
+        "retweet": 5
+      },
+      "url": "https://x.com/dotey/status/2124726140023537849"
+    },
+    {
+      "created_at": "2026-11-23T01:50:13.000Z",
+      "id": "2124681897263444343",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 190,
+        "impression": 58988,
+        "like": 227,
+        "quote": 5,
+        "reply": 94,
+        "retweet": 32
+      },
+      "url": "https://x.com/dotey/status/2124681897263444343"
+    },
+    {
       "created_at": "2026-11-22T22:56:05.000Z",
       "id": "2124638072981643530",
       "lang": "zh",
@@ -2674,132 +2800,6 @@
         "retweet": 2
       },
       "url": "https://x.com/dotey/status/2115610195053220343"
-    },
-    {
-      "created_at": "2026-10-28T23:46:30.000Z",
-      "id": "2115591064073413118",
-      "lang": "zh",
-      "metrics": {
-        "bookmark": 39,
-        "impression": 5504,
-        "like": 36,
-        "quote": 3,
-        "reply": 16,
-        "retweet": 1
-      },
-      "url": "https://x.com/dotey/status/2115591064073413118"
-    },
-    {
-      "created_at": "2026-10-28T22:51:09.000Z",
-      "id": "2115577135762919483",
-      "lang": "zh",
-      "metrics": {
-        "bookmark": 13,
-        "impression": 5667,
-        "like": 20,
-        "quote": 1,
-        "reply": 14,
-        "retweet": 5
-      },
-      "url": "https://x.com/dotey/status/2115577135762919483"
-    },
-    {
-      "created_at": "2026-10-28T21:30:45.000Z",
-      "id": "2115556902876991894",
-      "lang": "zh",
-      "metrics": {
-        "bookmark": 125,
-        "impression": 10992,
-        "like": 91,
-        "quote": 0,
-        "reply": 14,
-        "retweet": 8
-      },
-      "url": "https://x.com/dotey/status/2115556902876991894"
-    },
-    {
-      "created_at": "2026-10-28T19:15:35.000Z",
-      "id": "2115522887926890800",
-      "lang": "zh",
-      "metrics": {
-        "bookmark": 8,
-        "impression": 5706,
-        "like": 25,
-        "quote": 5,
-        "reply": 12,
-        "retweet": 0
-      },
-      "url": "https://x.com/dotey/status/2115522887926890800"
-    },
-    {
-      "created_at": "2026-10-28T18:46:19.000Z",
-      "id": "2115515523391783005",
-      "lang": "zh",
-      "metrics": {
-        "bookmark": 2,
-        "impression": 6521,
-        "like": 7,
-        "quote": 1,
-        "reply": 8,
-        "retweet": 0
-      },
-      "url": "https://x.com/dotey/status/2115515523391783005"
-    },
-    {
-      "created_at": "2026-10-28T18:35:22.000Z",
-      "id": "2115512767394275550",
-      "lang": "zh",
-      "metrics": {
-        "bookmark": 4,
-        "impression": 6044,
-        "like": 12,
-        "quote": 0,
-        "reply": 17,
-        "retweet": 0
-      },
-      "url": "https://x.com/dotey/status/2115512767394275550"
-    },
-    {
-      "created_at": "2026-10-28T18:18:24.000Z",
-      "id": "2115508498607833290",
-      "lang": "zh",
-      "metrics": {
-        "bookmark": 12,
-        "impression": 13172,
-        "like": 34,
-        "quote": 0,
-        "reply": 9,
-        "retweet": 4
-      },
-      "url": "https://x.com/dotey/status/2115508498607833290"
-    },
-    {
-      "created_at": "2026-10-28T18:08:16.000Z",
-      "id": "2115505947187585302",
-      "lang": "zh",
-      "metrics": {
-        "bookmark": 149,
-        "impression": 13931,
-        "like": 133,
-        "quote": 3,
-        "reply": 17,
-        "retweet": 21
-      },
-      "url": "https://x.com/dotey/status/2115505947187585302"
-    },
-    {
-      "created_at": "2026-10-28T17:36:07.000Z",
-      "id": "2115497857054605821",
-      "lang": "zh",
-      "metrics": {
-        "bookmark": 13,
-        "impression": 23011,
-        "like": 93,
-        "quote": 2,
-        "reply": 21,
-        "retweet": 2
-      },
-      "url": "https://x.com/dotey/status/2115497857054605821"
     }
   ],
   "user_id": "3178231"

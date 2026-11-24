@@ -1,0 +1,160 @@
+{
+  "changelog": [],
+  "date": "2026-11-24",
+  "followers_zh": "涨粉最多：sama +6489、英伟达 AI +5452、LeCun +5384、NVIDIA +4888、Anthropic +2920、智谱 Z.ai +2398；马斯克日减约 17.9 万，MrBeast -3873、Google -3781。",
+  "gists": {
+    "2124663594449318173": "支持 OpenAI 透明度倡议，并公布 MAI-2 Base 在同一评测集上的 perplexity 为 0.819。",
+    "2124697969547182326": "认为「软件已被解决」的人还不够大胆，真正做极难之事才会看清边界。",
+    "2124698685116383430": "用 Grok Bot 清理已关注的不活跃和辱骂账号，并要求保留建设性批评。",
+    "2124730733147390347": "推荐一份从创立到被收购的创始人复盘，呼吁更多人记录遗憾与建议。",
+    "2124765417378099414": "称 Gemini 4 Neon 在 Perplexity 上 Ask 查询日增 10.6%，Computer 任务日增 15.0%。",
+    "2124875521720713531": "盘点黄仁勋回归、Gemini Neon，以及用 Fable 约 6 美元生成 4K 影片、智能体自行租 GPU。",
+    "2124880074168242369": "用 Fable 根据自己的编程会话做对比评测，结果选了 Gemini Neon。",
+    "2124880652562498029": "新一集播客上线：与 Eckhart Tolle 谈活在当下、觉知与心流。",
+    "2124895755785957676": "开始连载新书摘句：骄傲、怯懦、恐慌与怀旧都是拒绝做出应有牺牲。",
+    "2124905610386780451": "欧洲 Vibe Pro 免费试用一小时内满额，现取消名额上限并再送一个月。",
+    "2124910501998239778": "转述 Eckhart Tolle：练习「聆听寂静」有助于在嘈杂中保持平静。",
+    "2124917923391443211": "称在本平台违法者将被起诉，不论人身在世界何处。",
+    "2124925631012209137": "上周用户在 Google 模型上的花费超过 OpenAI，Neon 与 Carbon 助其份额破 50%。",
+    "2124929944530587712": "面向合格企业的 ZDR + EFS 公开测试：在零数据留存前提下跨请求检测滥用。",
+    "2124940416072200521": "介绍 OpenWorks：资助本地 AI 专家，免费帮小企业用 AI 成长。",
+    "2124942828274925651": "称自己认识的英伟达人都希望黄仁勋回归，而且从反响看得出来。",
+    "2124944225955639430": "用 GPT-6.2 在 Blender 里生成旧金山 1915 世博会风格胶片，展示 3D 世界构建。",
+    "2124950255003476279": "借用狄更斯句式祝贺「也许是开端的结束」，暗示行业进入新阶段。",
+    "2124951681465000008": "展示 Googler 用 Gemini 4 Neon 做的作品，包括弹球机等。",
+    "2124967271814910183": "介绍 Gemini 家族：Neon 做复杂编程与企业工作流，Carbon 攻坚长周期，Hydrogen 跑日常。"
+  },
+  "hide": [
+    "2124872664938602736",
+    "2124875939133751684",
+    "2124887162206495228",
+    "2124870891536592986",
+    "2124884174691823900",
+    "2124897123296481428",
+    "2124870759147606082",
+    "2124866879101493290",
+    "2124952011779211444",
+    "2124846562010710129",
+    "2124682806299423050",
+    "2124874343712981152",
+    "2124767804247379968"
+  ],
+  "highlights": [
+    {
+      "excerpt": "Introducing GLM-5.4: Generalized Coding with Our First Loop Transformer.\n\n- Loops existing layers in the GLM-5 base model for deeper reasoning\n- Pushes beyond traditional coding to video, games, 3D shaders, and CAD modeling\n- Adds vision capabilities for stronger visual coding",
+      "excerpt_zh": "介绍 GLM-5.4：用我们的首个 Loop Transformer 做通用编程。\n\n- 在 GLM-5 基座模型中循环已有层，以加深推理\n- 从传统编程延伸到视频、游戏、3D 着色器与 CAD 建模\n- 加入视觉能力，增强视觉编程",
+      "handle": "Zai_org",
+      "likes": 10751,
+      "name": "Z.ai",
+      "post_id": "2124811995912286352",
+      "tags": [
+        "model",
+        "code"
+      ],
+      "text_zh": "发布 GLM-5.4：首次用 Loop Transformer 加深推理，覆盖视频、游戏、着色器与 CAD，并将开放权重。",
+      "url": "https://x.com/Zai_org/status/2124811995912286352"
+    },
+    {
+      "excerpt": "We’re introducing Shirudo, an open-source Linux runtime allowing agents to defend systems without downtime. It lets agents write dynamic eBPF controls to shield systems from exploits, giving defenders more time to test and roll out patches. Built by @cisco together with OpenAI.",
+      "excerpt_zh": "我们推出 Shirudo，这是一个开源 Linux 运行时，让智能体在不停机的情况下防护系统。它允许智能体编写动态 eBPF 控制来抵御漏洞利用，为防守方争取更多时间来测试并推出补丁。由 @cisco 与 OpenAI 共同打造。",
+      "handle": "OpenAI",
+      "likes": 7122,
+      "name": "OpenAI",
+      "post_id": "2124980590717911527",
+      "tags": [
+        "agent",
+        "oss"
+      ],
+      "text_zh": "与 Cisco 合作开源 Linux 运行时 Shirudo，让智能体用动态 eBPF 防护系统且不停机。",
+      "url": "https://x.com/OpenAI/status/2124980590717911527"
+    },
+    {
+      "excerpt": "We’re rolling out a version of GPT-6.2 Sol in the Chat tab, optimized for everyday conversation.\n\nIt’s much better at handling complex requests, especially when you give it detailed instructions or ask it to find information online. \n\nA few improvements you might notice in everyday chats:",
+      "excerpt_zh": "我们正在向 Chat 页推送面向日常对话优化的 GPT-6.2 Sol 版本。\n\n它更擅长处理复杂请求，尤其是在你给出详细指令或让它上网查找信息时。\n\n你在日常对话里可能会注意到这些改进：",
+      "handle": "ChatGPT",
+      "likes": 5544,
+      "name": "ChatGPT",
+      "post_id": "2124942186425069836",
+      "tags": [
+        "model",
+        "product"
+      ],
+      "text_zh": "Chat 页开始推送面向日常对话的 GPT-6.2 Sol，Plus/Pro/商业/企业用户今日上线。",
+      "url": "https://x.com/ChatGPT/status/2124942186425069836"
+    },
+    {
+      "excerpt": "Every model has its day in the sun. For GPT-5.6, it's time to set.\n\nOn December 23, we're deprecating GPT-5.6 Sol in Chat, and GPT-5.6 Sol and Terra in Work and Codex.\n\nThere's always more on the horizon.",
+      "excerpt_zh": "每个模型都有属于它的高光时刻。对 GPT-5.6 来说，是时候落幕了。\n\n我们将于 12 月 23 日在 Chat 中停用 GPT-5.6 Sol，并在 Work 和 Codex 中停用 GPT-5.6 Sol 与 Terra。\n\n地平线上总会有新的东西。",
+      "handle": "ChatGPT",
+      "likes": 5353,
+      "name": "ChatGPT",
+      "post_id": "2124981905380569283",
+      "tags": [
+        "model",
+        "code"
+      ],
+      "text_zh": "将于 12 月 23 日下线 Chat 中的 GPT-5.6 Sol，以及 Work 与 Codex 中的 Sol 和 Terra。",
+      "url": "https://x.com/ChatGPT/status/2124981905380569283"
+    },
+    {
+      "excerpt": "Through our new program OpenWorks, we fund local AI experts to help small businesses develop the tools and skills they need to grow their own business, at no cost to them.\n\nWe invite AI experts who love teaching others and small business owners who want to learn to implement AI to join us at https://t.co/Z9h8Mal5X3.",
+      "excerpt_zh": "通过我们的新项目 OpenWorks，我们资助本地 AI 专家，免费帮助小企业开发他们做大业务所需的工具与技能。\n\n我们邀请乐于教导他人的 AI 专家，以及希望学习落地 AI 的小企业主，在 https://t.co/Z9h8Mal5X3 加入我们。",
+      "handle": "OpenAI",
+      "likes": 4878,
+      "name": "OpenAI",
+      "post_id": "2124922133545714160",
+      "tags": [
+        "career"
+      ],
+      "text_zh": "启动 OpenWorks：资助本地 AI 专家，免费帮小企业开发所需工具与技能。",
+      "url": "https://x.com/OpenAI/status/2124922133545714160"
+    },
+    {
+      "excerpt": "There’s now one way to connect your tools to Claude, teach it a new skill, or do both.\n\nConnectors and skills come together as plugins. Live on Free, Pro, Max, and Ultra plans, with Team and Enterprise coming soon.\n\nBrowse 10,000+ plugins: https://t.co/gSwpY9HDPY https://t.co/K78lwls8qh",
+      "excerpt_zh": "现在只需一种方式，就能把工具接到 Claude、教它新技能，或两者都做。\n\nConnectors 和 skills 合并为 plugins。已在 Free、Pro、Max 和 Ultra 方案上线，Team 和 Enterprise 即将推出。\n\n浏览 10,000+ 个插件：https://t.co/gSwpY9HDPY https://t.co/K78lwls8qh",
+      "handle": "claudeai",
+      "likes": 4460,
+      "name": "Claude",
+      "post_id": "2124970294523945328",
+      "tags": [
+        "product"
+      ],
+      "text_zh": "Connectors 与 skills 合并为 plugins，Free/Pro/Max/Ultra 已上线，可浏览 1 万余个插件。",
+      "url": "https://x.com/claudeai/status/2124970294523945328"
+    },
+    {
+      "excerpt": "A year ago we launched Opus 4.5, the first model to write 100% of my code.\n\nShipping PRs hasn’t caught up, so today we’re launching Claude Ship in beta for Team and Enterprise. I use it all day every day and can’t imagine shipping without it. https://t.co/IfK0Oua6rZ",
+      "excerpt_zh": "一年前我们发布了 Opus 4.5，这是第一个能写出我 100% 代码的模型。\n\n合并 PR 的速度还没跟上，所以今天我们推出面向 Team 和 Enterprise 的 Claude Ship 测试版。我整天都在用它，已经无法想象没有它怎么发版。https://t.co/IfK0Oua6rZ",
+      "handle": "bcherny",
+      "likes": 4218,
+      "name": "Boris Cherny",
+      "post_id": "2124961485801836573",
+      "tags": [
+        "product"
+      ],
+      "text_zh": "推出面向 Team 与 Enterprise 的 Claude Ship 测试版，用来补上模型写代码之后的合并与发布。",
+      "url": "https://x.com/bcherny/status/2124961485801836573"
+    },
+    {
+      "excerpt": "Quantum computers could one day transform fusion energy, chemistry, and drug discovery - if we can make the algorithms efficient enough to run on early hardware.\n\nUsing teams of Gemini 4 agents, we’ve built new quantum circuits that cut future simulation costs by up to 10 times. https://t.co/H6xArBtsvQ",
+      "excerpt_zh": "量子计算机有朝一日可能改变聚变能源、化学和药物发现——前提是我们能让算法足够高效，以便在早期硬件上运行。\n\n我们用多组 Gemini 4 智能体，构建了可将未来模拟成本降低最多 10 倍的新量子电路。https://t.co/H6xArBtsvQ",
+      "handle": "GoogleDeepMind",
+      "likes": 3359,
+      "name": "Google DeepMind",
+      "post_id": "2124911073266413634",
+      "tags": [
+        "research",
+        "agent"
+      ],
+      "text_zh": "用 Gemini 4 智能体团队设计新量子电路，有望把未来模拟成本降低最多 10 倍。",
+      "url": "https://x.com/GoogleDeepMind/status/2124911073266413634"
+    }
+  ],
+  "pin": [],
+  "summary_zh": [
+    "黄仁勋回归引发热议：马斯克相关帖最高约 23 万赞，英伟达 AI 官方帖获 6.3 万赞。",
+    "智谱发布 GLM-5.4（1.1 万赞），OpenAI 开源 Shirudo 并上线 GPT-6.2 Sol。",
+    "话题上 GLM 智谱暴涨 334%；sama 增粉 6489、英伟达 AI +5452；马斯克粉丝减少约 17.9 万。"
+  ],
+  "topics_zh": "涨幅最大是 GLM 智谱 +334.4%（末日 8980 条），solopreneur +28%、千问 +19.3%、MCP +14.6%；Gemini -11.9%，REA -12.6%，monk mode -15.1%。"
+}

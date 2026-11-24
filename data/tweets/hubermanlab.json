@@ -2,6 +2,62 @@
   "handle": "hubermanlab",
   "tweets": [
     {
+      "created_at": "2026-11-23T23:04:15.000Z",
+      "id": "2125002516232626182",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 88,
+        "impression": 23784,
+        "like": 166,
+        "quote": 0,
+        "reply": 8,
+        "retweet": 8
+      },
+      "url": "https://x.com/hubermanlab/status/2125002516232626182"
+    },
+    {
+      "created_at": "2026-11-23T17:00:47.000Z",
+      "id": "2124911047463370904",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 16,
+        "impression": 13608,
+        "like": 41,
+        "quote": 1,
+        "reply": 2,
+        "retweet": 2
+      },
+      "url": "https://x.com/hubermanlab/status/2124911047463370904"
+    },
+    {
+      "created_at": "2026-11-23T16:58:37.000Z",
+      "id": "2124910501998239778",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 523,
+        "impression": 66475,
+        "like": 1043,
+        "quote": 12,
+        "reply": 64,
+        "retweet": 87
+      },
+      "url": "https://x.com/hubermanlab/status/2124910501998239778"
+    },
+    {
+      "created_at": "2026-11-23T15:00:00.000Z",
+      "id": "2124880652562498029",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 627,
+        "impression": 120076,
+        "like": 920,
+        "quote": 10,
+        "reply": 50,
+        "retweet": 91
+      },
+      "url": "https://x.com/hubermanlab/status/2124880652562498029"
+    },
+    {
       "created_at": "2026-11-22T20:17:26.000Z",
       "id": "2124598149281104295",
       "lang": "",

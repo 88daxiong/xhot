@@ -2,6 +2,104 @@
   "handle": "oran_ge",
   "tweets": [
     {
+      "created_at": "2026-11-23T22:24:42.000Z",
+      "id": "2124992563891622320",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 3,
+        "impression": 3753,
+        "like": 5,
+        "quote": 0,
+        "reply": 7,
+        "retweet": 0
+      },
+      "url": "https://x.com/oran_ge/status/2124992563891622320"
+    },
+    {
+      "created_at": "2026-11-23T22:09:39.000Z",
+      "id": "2124988778217693375",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 3,
+        "impression": 1680,
+        "like": 9,
+        "quote": 0,
+        "reply": 6,
+        "retweet": 0
+      },
+      "url": "https://x.com/oran_ge/status/2124988778217693375"
+    },
+    {
+      "created_at": "2026-11-23T14:34:56.000Z",
+      "id": "2124874343712981152",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 38,
+        "impression": 61212,
+        "like": 566,
+        "quote": 8,
+        "reply": 3,
+        "retweet": 23
+      },
+      "url": "https://x.com/oran_ge/status/2124874343712981152"
+    },
+    {
+      "created_at": "2026-11-23T14:29:41.000Z",
+      "id": "2124873021177626772",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 6,
+        "impression": 16596,
+        "like": 162,
+        "quote": 1,
+        "reply": 12,
+        "retweet": 1
+      },
+      "url": "https://x.com/oran_ge/status/2124873021177626772"
+    },
+    {
+      "created_at": "2026-11-23T12:14:53.000Z",
+      "id": "2124839101052690879",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 3136,
+        "like": 7,
+        "quote": 0,
+        "reply": 2,
+        "retweet": 0
+      },
+      "url": "https://x.com/oran_ge/status/2124839101052690879"
+    },
+    {
+      "created_at": "2026-11-23T11:36:26.000Z",
+      "id": "2124829423669330149",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 1,
+        "impression": 19637,
+        "like": 68,
+        "quote": 1,
+        "reply": 41,
+        "retweet": 0
+      },
+      "url": "https://x.com/oran_ge/status/2124829423669330149"
+    },
+    {
+      "created_at": "2026-11-23T02:05:00.000Z",
+      "id": "2124685614981554454",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 2,
+        "impression": 7368,
+        "like": 23,
+        "quote": 0,
+        "reply": 13,
+        "retweet": 0
+      },
+      "url": "https://x.com/oran_ge/status/2124685614981554454"
+    },
+    {
       "created_at": "2026-11-22T23:28:02.000Z",
       "id": "2124646115173933157",
       "lang": "zh",
@@ -2702,104 +2800,6 @@
         "retweet": 6
       },
       "url": "https://x.com/oran_ge/status/2108706833938751966"
-    },
-    {
-      "created_at": "2026-10-09T22:39:29.000Z",
-      "id": "2108688832023736391",
-      "lang": "zh",
-      "metrics": {
-        "bookmark": 49,
-        "impression": 10452,
-        "like": 74,
-        "quote": 0,
-        "reply": 6,
-        "retweet": 13
-      },
-      "url": "https://x.com/oran_ge/status/2108688832023736391"
-    },
-    {
-      "created_at": "2026-10-09T22:26:11.000Z",
-      "id": "2108685483895410762",
-      "lang": "zh",
-      "metrics": {
-        "bookmark": 11,
-        "impression": 27019,
-        "like": 30,
-        "quote": 1,
-        "reply": 12,
-        "retweet": 0
-      },
-      "url": "https://x.com/oran_ge/status/2108685483895410762"
-    },
-    {
-      "created_at": "2026-10-08T14:49:05.000Z",
-      "id": "2108208061202776080",
-      "lang": "zh",
-      "metrics": {
-        "bookmark": 1,
-        "impression": 21874,
-        "like": 25,
-        "quote": 3,
-        "reply": 44,
-        "retweet": 0
-      },
-      "url": "https://x.com/oran_ge/status/2108208061202776080"
-    },
-    {
-      "created_at": "2026-10-08T13:48:35.000Z",
-      "id": "2108192836906819644",
-      "lang": "zh",
-      "metrics": {
-        "bookmark": 10,
-        "impression": 58100,
-        "like": 147,
-        "quote": 2,
-        "reply": 38,
-        "retweet": 2
-      },
-      "url": "https://x.com/oran_ge/status/2108192836906819644"
-    },
-    {
-      "created_at": "2026-10-08T01:56:58.000Z",
-      "id": "2108013755393311116",
-      "lang": "zh",
-      "metrics": {
-        "bookmark": 6,
-        "impression": 6988,
-        "like": 13,
-        "quote": 0,
-        "reply": 0,
-        "retweet": 0
-      },
-      "url": "https://x.com/oran_ge/status/2108013755393311116"
-    },
-    {
-      "created_at": "2026-10-08T01:54:23.000Z",
-      "id": "2108013105162985561",
-      "lang": "zxx",
-      "metrics": {
-        "bookmark": 117,
-        "impression": 32378,
-        "like": 76,
-        "quote": 4,
-        "reply": 11,
-        "retweet": 11
-      },
-      "url": "https://x.com/oran_ge/status/2108013105162985561"
-    },
-    {
-      "created_at": "2026-10-07T12:08:57.000Z",
-      "id": "2107805376423104559",
-      "lang": "zh",
-      "metrics": {
-        "bookmark": 201,
-        "impression": 13307,
-        "like": 158,
-        "quote": 7,
-        "reply": 14,
-        "retweet": 36
-      },
-      "url": "https://x.com/oran_ge/status/2107805376423104559"
     }
   ],
   "user_id": "6782882"

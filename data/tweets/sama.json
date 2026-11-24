@@ -2,6 +2,34 @@
   "handle": "sama",
   "tweets": [
     {
+      "created_at": "2026-11-23T15:54:05.000Z",
+      "id": "2124894264564092952",
+      "lang": "",
+      "metrics": {
+        "bookmark": 2373,
+        "impression": 477066,
+        "like": 3566,
+        "quote": 35,
+        "reply": 290,
+        "retweet": 245
+      },
+      "url": "https://x.com/sama/status/2124894264564092952"
+    },
+    {
+      "created_at": "2026-11-23T15:25:52.000Z",
+      "id": "2124887162206495228",
+      "lang": "",
+      "metrics": {
+        "bookmark": 1715,
+        "impression": 2074470,
+        "like": 77011,
+        "quote": 480,
+        "reply": 1825,
+        "retweet": 3130
+      },
+      "url": "https://x.com/sama/status/2124887162206495228"
+    },
+    {
       "created_at": "2026-11-22T17:40:44.000Z",
       "id": "2124558713646428663",
       "lang": "",

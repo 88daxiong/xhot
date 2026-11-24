@@ -2,6 +2,34 @@
   "handle": "jordanbpeterson",
   "tweets": [
     {
+      "created_at": "2026-11-23T19:23:03.000Z",
+      "id": "2124946851661062320",
+      "lang": "",
+      "metrics": {
+        "bookmark": 183,
+        "impression": 82760,
+        "like": 877,
+        "quote": 6,
+        "reply": 29,
+        "retweet": 80
+      },
+      "url": "https://x.com/jordanbpeterson/status/2124946851661062320"
+    },
+    {
+      "created_at": "2026-11-23T16:00:01.000Z",
+      "id": "2124895755785957676",
+      "lang": "",
+      "metrics": {
+        "bookmark": 1188,
+        "impression": 283716,
+        "like": 8813,
+        "quote": 66,
+        "reply": 341,
+        "retweet": 681
+      },
+      "url": "https://x.com/jordanbpeterson/status/2124895755785957676"
+    },
+    {
       "created_at": "2026-11-21T16:00:00.000Z",
       "id": "2124170977240035838",
       "lang": "",
