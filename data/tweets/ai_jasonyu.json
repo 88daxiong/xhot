@@ -2,6 +2,48 @@
   "handle": "ai_jasonyu",
   "tweets": [
     {
+      "created_at": "2026-11-24T12:14:30.000Z",
+      "id": "2125201389764677815",
+      "lang": "",
+      "metrics": {
+        "bookmark": 5,
+        "impression": 936,
+        "like": 0,
+        "quote": 0,
+        "reply": 0,
+        "retweet": 0
+      },
+      "url": "https://x.com/AI_Jasonyu/status/2125201389764677815"
+    },
+    {
+      "created_at": "2026-11-24T12:04:27.000Z",
+      "id": "2125198862688321790",
+      "lang": "",
+      "metrics": {
+        "bookmark": 5,
+        "impression": 716,
+        "like": 3,
+        "quote": 0,
+        "reply": 0,
+        "retweet": 0
+      },
+      "url": "https://x.com/AI_Jasonyu/status/2125198862688321790"
+    },
+    {
+      "created_at": "2026-11-24T12:04:23.000Z",
+      "id": "2125198844749377976",
+      "lang": "",
+      "metrics": {
+        "bookmark": 28,
+        "impression": 5639,
+        "like": 18,
+        "quote": 0,
+        "reply": 7,
+        "retweet": 0
+      },
+      "url": "https://x.com/AI_Jasonyu/status/2125198844749377976"
+    },
+    {
       "created_at": "2026-11-23T13:41:16.000Z",
       "id": "2124860838678794668",
       "lang": "",
@@ -2758,48 +2800,6 @@
         "retweet": 0
       },
       "url": "https://x.com/AI_Jasonyu/status/2109452871469289937"
-    },
-    {
-      "created_at": "2026-10-12T01:10:04.000Z",
-      "id": "2109451503018602521",
-      "lang": "zh",
-      "metrics": {
-        "bookmark": 9,
-        "impression": 10478,
-        "like": 26,
-        "quote": 0,
-        "reply": 51,
-        "retweet": 0
-      },
-      "url": "https://x.com/AI_Jasonyu/status/2109451503018602521"
-    },
-    {
-      "created_at": "2026-10-12T00:46:12.000Z",
-      "id": "2109445495290519863",
-      "lang": "zh",
-      "metrics": {
-        "bookmark": 1,
-        "impression": 814,
-        "like": 3,
-        "quote": 0,
-        "reply": 0,
-        "retweet": 0
-      },
-      "url": "https://x.com/AI_Jasonyu/status/2109445495290519863"
-    },
-    {
-      "created_at": "2026-10-12T00:45:31.000Z",
-      "id": "2109445326100734245",
-      "lang": "zh",
-      "metrics": {
-        "bookmark": 12,
-        "impression": 3696,
-        "like": 18,
-        "quote": 0,
-        "reply": 12,
-        "retweet": 1
-      },
-      "url": "https://x.com/AI_Jasonyu/status/2109445326100734245"
     }
   ],
   "user_id": "756319701861601281"

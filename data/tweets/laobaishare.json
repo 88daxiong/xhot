@@ -2,6 +2,20 @@
   "handle": "laobaishare",
   "tweets": [
     {
+      "created_at": "2026-11-24T13:34:00.000Z",
+      "id": "2125221396582391815",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 6,
+        "impression": 9256,
+        "like": 7,
+        "quote": 0,
+        "reply": 2,
+        "retweet": 3
+      },
+      "url": "https://x.com/laobaishare/status/2125221396582391815"
+    },
+    {
       "created_at": "2026-11-24T09:20:00.000Z",
       "id": "2125157474990952907",
       "lang": "",
@@ -2786,20 +2800,6 @@
         "retweet": 0
       },
       "url": "https://x.com/laobaishare/status/2120447948505149463"
-    },
-    {
-      "created_at": "2026-11-11T09:26:01.000Z",
-      "id": "2120447946873618783",
-      "lang": "",
-      "metrics": {
-        "bookmark": 6,
-        "impression": 1821,
-        "like": 5,
-        "quote": 0,
-        "reply": 2,
-        "retweet": 2
-      },
-      "url": "https://x.com/laobaishare/status/2120447946873618783"
     }
   ],
   "user_id": "1398934230407606278"

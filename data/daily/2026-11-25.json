@@ -1,0 +1,152 @@
+{
+  "changelog": [],
+  "date": "2026-11-25",
+  "followers_zh": "涨粉最多：NVIDIA +36054、ChatGPT +5687、Claude +4096、Anthropic +3632、levelsio +2608、NVIDIA AI +2124；马斯克日减约 5.9 万，Google -3843、CZ -3605、MrBeast -1221。",
+  "gists": {
+    "2125042638781120632": "开放申请 OpenWorks：可成为合作伙伴，或为自己的业务获取支持。",
+    "2125098309928812898": "Anthropic 新论文两点：AI 最大价值来自改组织；员工对采用 AI 阻力大，或因前者；扩大职责并分享收益或有帮助。",
+    "2125115240690201049": "Greg Brockman 称机器人控制正在迎来一次复兴。",
+    "2125144248962162798": "levelsio 认为约 2028 年会出现新一波数字游民：办公将被随地写提示词取代，再叠加自动驾驶与房车。",
+    "2125213046062678029": "Carson 已弃用桌面 macOS，称一旦有搭载 Omarchy 的手机就会丢掉 iPhone；智能体优先的操作系统让其他系统显得原始。",
+    "2125217281349472651": "CZ 引用前 CFO 魏的帖文，称对方虽与自己不和，也认为 Netflix 剧情把 FTX 投资故事写反了。",
+    "2125219710501273753": "有人用 AI 把狗照片画成瑞典海上堡垒油画肖像，月入 30 万美元；Greg 以此回应「软件已死」。",
+    "2125227688944390442": "精英运动员越来越奉行「过程」哲学：忽略结果、把小事做好；人生由一次次行动堆成，先完成手头这件事。",
+    "2125246815884984398": "Peter Yang 做了 Gemini 4 Neon 与 Antigravity 的免费视频教程，提到 Orchestrator 与 /swarm 可调度多智能体，一次曾跑到 42 个。",
+    "2125270100496265626": "Clem 称未来是开源定制模型；上周发布的 Qwen3.8-27B-pi-adapted 成为 Hugging Face 第二热门，还有一批适配 harness 的模型。",
+    "2125272195119083827": "MiniMax 推出 H3 家族：3 个月 1.8 亿次下载、1600 多个基于 H3 的模型，并新增 5 个旗舰与 10 个合作方专用模型。",
+    "2125279609478648291": "英伟达 AI 祝贺 OpenClaw 一周年，称将继续与社区共建。",
+    "2125295258816954674": "Eckhart Tolle 在 Huberman 播客谈心态转变：世界不是为了让你快乐，而是让你觉察体验，反而会带来更多喜悦。",
+    "2125297504858305021": "OpenRouter 上开源权重模型支出占比从 1 月的 15% 升至 35%，领先的是 DeepSeek、Moonshot、智谱、千问和 xAI。",
+    "2125299248782778588": "Tibo 面向 ChatGPT Business 团队推出两项免费福利，截至 12 月 31 日：banked reset 与 fast mode。",
+    "2125304129463705744": "多学能增加知识，但只有多尝试才能减少恐惧；越做越不怕。",
+    "2125305606685053416": "两位业余天文爱好者分别用 Codex 和 Astra，在公开望远镜数据里找到可能指示系外行星的信号。",
+    "2125327793517146539": "Gemini 4 Neon 端到端生成 80 年代霓虹街机连锁反应动画，同步亚毫秒物理、1728 帧路径追踪和 Lyria 3.5 配乐。"
+  },
+  "hide": [
+    "2125363942977597554",
+    "2125249786253357399",
+    "2125178485555757238",
+    "2125146556919693682",
+    "2125273131845869784",
+    "2125076496842973248",
+    "2125126990713983408",
+    "2125301776106791103"
+  ],
+  "highlights": [
+    {
+      "excerpt": "Neon set a new Day-1 usage record on our paid APIs and @Antigravity tokens/day are ⬆️ 82% since Argon launched (only) 6 weeks ago.",
+      "excerpt_zh": "Neon 在我们的付费 API 上创下新的首日用量纪录，自 Argon 上线（仅）6 周以来，@Antigravity 的日 token 用量⬆️ 82%。",
+      "handle": "sundarpichai",
+      "likes": 6733,
+      "name": "Sundar Pichai",
+      "post_id": "2125311868168515603",
+      "tags": [
+        "product",
+        "model"
+      ],
+      "text_zh": "Neon 创付费 API 首日用量纪录，Antigravity 日 token 六周内升 82%。",
+      "url": "https://x.com/sundarpichai/status/2125311868168515603"
+    },
+    {
+      "excerpt": "Hi. We’re beginning to roll out the combined Chat and Work experience to a small group of Pro users to learn from feedback before we roll out more broadly.\n\nLet us know what you think and where we can improve!",
+      "excerpt_zh": "你好。我们开始向一小部分 Pro 用户推送合并后的 Chat 与 Work 体验，以便在更大规模推送前收集反馈。\n\n欢迎告诉我们你的想法，以及我们可以改进的地方！",
+      "handle": "thsottiaux",
+      "likes": 5219,
+      "name": "Tibo",
+      "post_id": "2125284868414394550",
+      "tags": [
+        "product"
+      ],
+      "text_zh": "Chat 与 Work 合并体验开始向小范围 Pro 用户推送，先收集反馈再扩大。",
+      "url": "https://x.com/thsottiaux/status/2125284868414394550"
+    },
+    {
+      "excerpt": "Thing I am hearing from a number of big firms, from manufacturers to financial services: we have scattered teams of 2-3 people using AI that are doing the work of dozens of folks in a fraction of the time, creating large-scale management fights over the implications and politics.",
+      "excerpt_zh": "我从不少大公司听到，从制造商到金融服务都有：分散的 2–3 人小组在用 AI，以几分之一的时间完成数十人的工作，由此引发关于影响与政治的大规模管理争执。",
+      "handle": "emollick",
+      "likes": 4631,
+      "name": "Ethan Mollick",
+      "post_id": "2125267894644916669",
+      "tags": [
+        "agent"
+      ],
+      "text_zh": "多家大厂出现 2–3 人 AI 小组，用更短时间完成数十人的工作，管理层争议随之而来。",
+      "url": "https://x.com/emollick/status/2125267894644916669"
+    },
+    {
+      "excerpt": "We’re sharing a new preprint showing wet lab validation of intrinsic protein design capabilities of the GPT-6 family of models.\n\nOur models can design new protein shapes and sequences using reasoning and code, without calling specialized biology models to generate them.\n\nhttps://t.co/cFfB0QHXub",
+      "excerpt_zh": "我们分享了一份新的预印本，展示 GPT-6 系列模型内在蛋白质设计能力的湿实验验证。\n\n我们的模型可以用推理和代码设计新的蛋白质形状与序列，无需调用专用生物模型来生成它们。\n\nhttps://t.co/cFfB0QHXub",
+      "handle": "OpenAI",
+      "likes": 4257,
+      "name": "OpenAI",
+      "post_id": "2125334383490105601",
+      "tags": [
+        "research",
+        "model"
+      ],
+      "text_zh": "OpenAI 发布预印本：GPT-6 系列无需专用生物模型，即可用推理和代码设计新蛋白质，已通过湿实验验证。",
+      "url": "https://x.com/OpenAI/status/2125334383490105601"
+    },
+    {
+      "excerpt": "Really excited about this one. MCP servers can now ship with their own skills, so Claude Code knows how to use them out of the box. https://t.co/Z0TQVOfGTz",
+      "excerpt_zh": "这个更新让我很兴奋。MCP 服务器现在可以自带 skills，这样 Claude Code 开箱就知道如何使用它们。 https://t.co/Z0TQVOfGTz",
+      "handle": "bcherny",
+      "likes": 3989,
+      "name": "Boris Cherny",
+      "post_id": "2125292098165612585",
+      "tags": [
+        "agent"
+      ],
+      "text_zh": "MCP 服务器现在可自带 skills，Claude Code 开箱即会使用。",
+      "url": "https://x.com/bcherny/status/2125292098165612585"
+    },
+    {
+      "excerpt": "Outcome per dollar is the frontier. We’re advancing it at every layer: FLOPs-efficient pretraining (MAI Base 2), long RL climbs (Rocket), and token-efficient models (seven new MAI models announced last week). All driving better economics for our customers.",
+      "excerpt_zh": "每美元产出才是前沿。我们在每一层推进：高 FLOPs 效率的预训练（MAI Base 2）、长周期 RL 攀升（Rocket），以及高 token 效率的模型（上周宣布的 7 个新 MAI 模型）。一切都在为客户带来更好的经济性。",
+      "handle": "satyanadella",
+      "likes": 1560,
+      "name": "Satya Nadella",
+      "post_id": "2125055415620866113",
+      "tags": [
+        "model",
+        "product"
+      ],
+      "text_zh": "Nadella 称每美元产出是新前沿，并推进 MAI Base 2、Rocket 长 RL 及 7 个新 MAI 模型。",
+      "url": "https://x.com/satyanadella/status/2125055415620866113"
+    },
+    {
+      "excerpt": "We've passed 120B tokens of Gemini 4 Neon usage inside Perplexity, doubling daily token volume in just 3 days. Monday (yesterday) alone was 36B. We're going to optimize our harness to smooth out some rough edges around Neon's formatting and task duration.",
+      "excerpt_zh": "我们在 Perplexity 内的 Gemini 4 Neon 用量已突破 1200 亿 token，仅 3 天日均用量就翻了一倍。周一（昨天）单日就有 360 亿。我们会优化 harness，抹平 Neon 在格式和任务时长上的一些毛边。",
+      "handle": "AravSrinivas",
+      "likes": 1150,
+      "name": "Aravind Srinivas",
+      "post_id": "2125328996221231313",
+      "tags": [
+        "model"
+      ],
+      "text_zh": "Perplexity 内 Neon 用量达 1200 亿 token，3 天日均翻倍，周一单日 360 亿。",
+      "url": "https://x.com/AravSrinivas/status/2125328996221231313"
+    },
+    {
+      "excerpt": "Ever scroll back through 1,000+ camera-roll clips trying to find the two seconds that actually fit your video? 🎬\n\nUsing Gemini 4 Neon in @Antigravity, we built a prototype that turns messy footage into a searchable 3D studio:\n\n🎞️ Indexes keyframes, lighting cues, and spoken voiceovers in one 1M-token window",
+      "excerpt_zh": "有没有在 1000 多段相册片段里来回翻找，就为了那刚好能用的两秒？🎬\n\n我们用 Gemini 4 Neon 在 @Antigravity 里做了一个原型，把杂乱素材变成可搜索的 3D 工作室：\n\n🎞️ 在一个 100 万 token 窗口里索引关键帧、光线线索和口播",
+      "handle": "Google",
+      "likes": 914,
+      "name": "Google",
+      "post_id": "2125261986690703620",
+      "tags": [
+        "product",
+        "model"
+      ],
+      "text_zh": "Google 用 Neon 在 Antigravity 做出原型：把杂乱素材变成可搜索的 3D 剪辑工作室。",
+      "url": "https://x.com/Google/status/2125261986690703620"
+    }
+  ],
+  "pin": [],
+  "summary_zh": [
+    "Sundar 称 Neon 创付费 API 首日用量纪录，Antigravity 日 token 六周内升 82%。",
+    "OpenAI 发布 GPT-6 蛋白质设计湿实验预印本；MCP 可自带 skills 供 Claude Code 用。",
+    "话题上 Dan Koe +258%、GLM 智谱 +51%；NVIDIA 增粉 3.6 万，马斯克减粉约 5.9 万。"
+  ],
+  "topics_zh": "涨幅最大是 Dan Koe +258%（末日 305 条，基数较小），GLM 智谱 +51.2%（5049 条），MCP +34%，solopreneur +28%，vibe coding +27.2%，Codex +25.6%；Kimi -18.9%，Gemini -8.3%，Opus 5.5 -2.4%。"
+}
