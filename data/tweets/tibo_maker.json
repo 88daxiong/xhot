@@ -2,6 +2,62 @@
   "handle": "tibo_maker",
   "tweets": [
     {
+      "created_at": "2026-11-25T10:35:28.000Z",
+      "id": "2125538853977215308",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 16,
+        "impression": 3282,
+        "like": 12,
+        "quote": 0,
+        "reply": 7,
+        "retweet": 2
+      },
+      "url": "https://x.com/tibo_maker/status/2125538853977215308"
+    },
+    {
+      "created_at": "2026-11-25T10:30:10.000Z",
+      "id": "2125537522923053555",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 427,
+        "like": 2,
+        "quote": 0,
+        "reply": 1,
+        "retweet": 0
+      },
+      "url": "https://x.com/tibo_maker/status/2125537522923053555"
+    },
+    {
+      "created_at": "2026-11-25T10:30:10.000Z",
+      "id": "2125537520079241321",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 5,
+        "impression": 2040,
+        "like": 14,
+        "quote": 0,
+        "reply": 15,
+        "retweet": 0
+      },
+      "url": "https://x.com/tibo_maker/status/2125537520079241321"
+    },
+    {
+      "created_at": "2026-11-25T09:50:11.000Z",
+      "id": "2125527460452163894",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 11,
+        "impression": 3676,
+        "like": 31,
+        "quote": 1,
+        "reply": 43,
+        "retweet": 3
+      },
+      "url": "https://x.com/tibo_maker/status/2125527460452163894"
+    },
+    {
       "created_at": "2026-11-24T12:09:21.000Z",
       "id": "2125200093838008559",
       "lang": "",
@@ -2744,62 +2800,6 @@
         "retweet": 120
       },
       "url": "https://x.com/tibo_maker/status/2108490225982775619"
-    },
-    {
-      "created_at": "2026-10-08T21:03:27.000Z",
-      "id": "2108302277035319788",
-      "lang": "en",
-      "metrics": {
-        "bookmark": 2,
-        "impression": 1310,
-        "like": 0,
-        "quote": 0,
-        "reply": 1,
-        "retweet": 0
-      },
-      "url": "https://x.com/tibo_maker/status/2108302277035319788"
-    },
-    {
-      "created_at": "2026-10-08T13:01:24.000Z",
-      "id": "2108180962487963891",
-      "lang": "en",
-      "metrics": {
-        "bookmark": 93,
-        "impression": 10086,
-        "like": 92,
-        "quote": 6,
-        "reply": 75,
-        "retweet": 3
-      },
-      "url": "https://x.com/tibo_maker/status/2108180962487963891"
-    },
-    {
-      "created_at": "2026-10-08T12:15:09.000Z",
-      "id": "2108169324892414310",
-      "lang": "en",
-      "metrics": {
-        "bookmark": 32,
-        "impression": 8310,
-        "like": 81,
-        "quote": 1,
-        "reply": 42,
-        "retweet": 4
-      },
-      "url": "https://x.com/tibo_maker/status/2108169324892414310"
-    },
-    {
-      "created_at": "2026-10-08T09:30:28.000Z",
-      "id": "2108127880970436741",
-      "lang": "en",
-      "metrics": {
-        "bookmark": 68,
-        "impression": 9899,
-        "like": 57,
-        "quote": 1,
-        "reply": 41,
-        "retweet": 9
-      },
-      "url": "https://x.com/tibo_maker/status/2108127880970436741"
     }
   ],
   "user_id": "470129898"

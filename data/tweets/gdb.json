@@ -2,6 +2,104 @@
   "handle": "gdb",
   "tweets": [
     {
+      "created_at": "2026-11-25T09:41:02.000Z",
+      "id": "2125525157464973661",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 172,
+        "impression": 31653,
+        "like": 401,
+        "quote": 8,
+        "reply": 46,
+        "retweet": 32
+      },
+      "url": "https://x.com/gdb/status/2125525157464973661"
+    },
+    {
+      "created_at": "2026-11-25T07:15:38.000Z",
+      "id": "2125488568101736872",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 75,
+        "impression": 41540,
+        "like": 568,
+        "quote": 9,
+        "reply": 41,
+        "retweet": 48
+      },
+      "url": "https://x.com/gdb/status/2125488568101736872"
+    },
+    {
+      "created_at": "2026-11-25T03:15:49.000Z",
+      "id": "2125428215347085370",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 115,
+        "impression": 55890,
+        "like": 1171,
+        "quote": 9,
+        "reply": 82,
+        "retweet": 67
+      },
+      "url": "https://x.com/gdb/status/2125428215347085370"
+    },
+    {
+      "created_at": "2026-11-25T02:35:38.000Z",
+      "id": "2125418102049628201",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 639,
+        "impression": 244879,
+        "like": 3197,
+        "quote": 37,
+        "reply": 80,
+        "retweet": 136
+      },
+      "url": "https://x.com/gdb/status/2125418102049628201"
+    },
+    {
+      "created_at": "2026-11-25T00:49:27.000Z",
+      "id": "2125391380038230058",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 146,
+        "impression": 46064,
+        "like": 484,
+        "quote": 15,
+        "reply": 69,
+        "retweet": 23
+      },
+      "url": "https://x.com/gdb/status/2125391380038230058"
+    },
+    {
+      "created_at": "2026-11-25T00:30:37.000Z",
+      "id": "2125386640923521141",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 297,
+        "impression": 67146,
+        "like": 930,
+        "quote": 7,
+        "reply": 71,
+        "retweet": 35
+      },
+      "url": "https://x.com/gdb/status/2125386640923521141"
+    },
+    {
+      "created_at": "2026-11-25T00:11:05.000Z",
+      "id": "2125381723185955294",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 58,
+        "impression": 59921,
+        "like": 815,
+        "quote": 3,
+        "reply": 115,
+        "retweet": 24
+      },
+      "url": "https://x.com/gdb/status/2125381723185955294"
+    },
+    {
       "created_at": "2026-11-24T23:53:37.000Z",
       "id": "2125377328629031248",
       "lang": "en",
