@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="light" data-pref="auto">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-eySqtWEMW2APPEHKl4ofjbb4sL/hbt3uVDrovVQbBOY='; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'none'; connect-src 'self'; media-src 'none'; frame-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%E2%9A%A1%3C/text%3E%3C/svg%3E">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#6d28d9">
+<meta name="description" content="从第一性原理拆解 n8n 的 Nod：本机个人 Agent 把真实差事放到沙箱和浏览器里跑，批准与策略放在服务器，而不是只写在提示词里。">
+<title>Nod · 开源解剖 · XHOT</title>
+<script>(function(){var d=document.documentElement,t,s;try{t=localStorage.getItem('xhot-theme');s=localStorage.getItem('xhot-density')}catch(e){}t=(t==='light'||t==='dark')?t:'auto';d.setAttribute('data-pref',t);d.setAttribute('data-theme',t==='auto'?(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'):t);if(s==='compact')d.setAttribute('data-density','compact')})();</script>
+<link rel="stylesheet" href="anatomy.css">
+<script src="anatomy.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">跳到正文</a>
+<div class="ambient" aria-hidden="true"><div class="orb orb-1"></div><div class="orb orb-2"></div></div>
+<header class="top">
+<div class="bar">
+<a class="lg" href="../index.html"><i aria-hidden="true">⚡</i>XHOT<span>X 热点雷达</span></a>
+<nav class="nav" aria-label="栏目"><a href="../index.html">今日</a><a href="../d/ai.html">领域</a><a href="../people.html">人物</a><a href="../news.html">资讯</a><a href="../trends.html">趋势</a><a href="../agents.html">Agent</a><a href="index.html">解剖</a></nav>
+<span class="sp0"></span>
+<div class="tg" role="group" aria-label="主题"><button type="button" data-set-theme="light" aria-label="浅色">☀</button><button type="button" data-set-theme="dark" aria-label="深色">☾</button><button type="button" data-set-theme="auto">自动</button></div>
+</div>
+<div class="subbar">  <a class="back" href="index.html">← 返回开源解剖主页</a>
+  <nav class="page-toc" aria-label="本页目录">
+    <a href="#highlight">亮点</a>
+    <a href="#flow">流程</a>
+    <a href="#use">怎么用</a>
+    <a href="#deep">深入</a>
+  </nav></div>
+</header>
+<main id="main" class="wrap">
+
+<article class="card hero">
+  <div class="badge-row"><span class="pill">开源解剖</span><span class="pill purple">nod-v0.9.7</span><span class="pill">Apache-2.0</span></div>
+  <h1>Nod</h1>
+  <p class="essence">n8n 团队做的本机个人 Agent：它在你自己的电脑上处理真实差事——读邮件、写通话简报、在网页上取消试用——并且把「能不能做」放在服务器策略里，而不是只写进提示词。</p>
+  <div class="meta">
+    <span>仓库 <a href="https://github.com/n8n-io/nod" target="_blank" rel="noopener noreferrer">n8n-io/nod</a></span>
+    <span>网站 <a href="https://nod.n8n.io" target="_blank" rel="noopener noreferrer">nod.n8n.io</a></span>
+    <span>分析提交 <a href="https://github.com/n8n-io/nod/tree/1128fcfd770d619f3391e0bd9f1ca2f9966f2be6" target="_blank" rel="noopener noreferrer"><code>1128fcf</code></a>（发布 <a href="https://github.com/n8n-io/nod/releases/tag/nod-v0.9.7" target="_blank" rel="noopener noreferrer">nod-v0.9.7</a>，2026-11-25 17:39 北京时间）</span>
+    <span>GitHub 匿名搜索星标 3568（观察于 2026-11-26 08:20 北京时间，会变动）；本周趋势页显示约 +1008</span>
+    <span>创建于 2026-09-25</span>
+    <span>语言 TypeScript · 许可 Apache-2.0 · 需要 Node.js ≥ 24.21、Docker；桌面端另有 Electron</span>
+    <span>单文件版 <a href="exports/nod.standalone.html">下载</a></span>
+  </div>
+</article>
+
+<section class="card" id="highlight">
+  <div class="highlight">
+    <div class="kicker">最大亮点</div>
+    <p class="lead">政策在服务器里执行，不在提示词里商量。工具结果默认被标成不可信数据；对外发言、付款等动作先写成待批准快照，你确认后由可信 worker 按该快照执行一次。</p>
+    <p class="why">常见的电脑使用 Agent 把「请先问我」写在系统提示里，模型一旦把网页或邮件内容当成指令，就可能越权。Nod 把批准、保险库和花费上限做成服务端状态机，并把浏览器、搜索、本地文件等工具输出用分隔符包起来再交回模型。<span class="ev ev-source">源码确认</span></p>
+  </div>
+  <p class="muted" style="margin-top:12px">一句话输入输出：输入是桌面应用、Telegram 或 WhatsApp 里的一项任务；输出是沙箱或浏览器里的实际操作，以及需要你点头后才会发出去的邮件、消息或付款。电脑要保持开机，并已连接你自己的模型。</p>
+</section>
+
+<section class="card" id="flow">
+  <h2>它怎么运转</h2>
+  <p>下面这条路径默认就能看完。每个框里写了动作、数据去向和进出。想看源码细节时，再点其中一格。</p>
+  <ol class="pipeline">
+    <li class="pipe"><button type="button" class="pipe-node" data-stage="in"><div class="pipe-io">输入：应用 / Telegram / WhatsApp</div><div class="pipe-act">本机 Node 服务接到任务</div><div class="pipe-io">去向：Pi 运行时的一轮工具循环</div></button></li>
+    <li class="pipe-arrow" aria-hidden="true">→</li>
+    <li class="pipe"><button type="button" class="pipe-node" data-stage="sandbox"><div class="pipe-io">输入：要跑的命令、要打开的网页</div><div class="pipe-act">分别进入 workspace 与 Chromium 容器</div><div class="pipe-io">去向：容器内的文件、页面和工具结果</div></button></li>
+    <li class="pipe-arrow" aria-hidden="true">→</li>
+    <li class="pipe"><button type="button" class="pipe-node" data-stage="trust"><div class="pipe-io">输入：工具结果，或一次对外动作</div><div class="pipe-act">标成数据，或写入待批准快照</div><div class="pipe-io">去向：模型上下文，或等你确认</div></button></li>
+    <li class="pipe-arrow" aria-hidden="true">→</li>
+    <li class="pipe"><button type="button" class="pipe-node" data-stage="memory"><div class="pipe-io">输入：你确认后的快照，或要记住的事实</div><div class="pipe-act">可信 worker 执行一次；记忆写入树</div><div class="pipe-io">去向：操作记录，以及可开关的记忆存储</div></button></li>
+  </ol>
+  <div class="drawer" id="flow-detail" aria-live="polite">点击流程中的一格，可看到这一步的机制说明。不点也能从框图读懂主路径。</div>
+</section>
+
+<section class="card" id="use">
+  <h2>怎么用</h2>
+  <div class="use-grid">
+    <div class="use-box yes">
+      <h3>什么情况下用</h3>
+      <ul class="act">
+        <li>希望有一个跑在自己电脑上的个人助手，能处理邮件、日历、Slack 和真实网页上的差事，并且在对外行动前先问你。</li>
+        <li>可以接受自己提供模型（API 或 ChatGPT Plus/Pro 一类），并在这台机器上安装 Docker。</li>
+        <li>在意密钥和卡片安全码不要进聊天、不要进沙箱；能接受应用连接默认经过 n8n 托管的连接服务。<span class="ev ev-claim">作者宣称</span></li>
+      </ul>
+    </div>
+    <div class="use-box no">
+      <h3>什么情况下不用</h3>
+      <ul class="act">
+        <li>需要笔记本合上后定时任务仍要跑。作者写明日程只在运行 Nod 的那台机器开机时执行；一直在线需要 Mac mini 或自建服务器，托管版还在路线图上。<span class="ev ev-claim">作者宣称</span></li>
+        <li>不能接受数据经过模型供应商，或默认把基础用量分享给 n8n（设置里可关闭新的发送）。<span class="ev ev-claim">作者宣称</span></li>
+        <li>想把它当成已经定稿的生产安全产品。仓库标注 research preview；作者写明安全检查仍是模型判断。<span class="ev ev-claim">作者宣称</span></li>
+      </ul>
+    </div>
+  </div>
+  <h3>最小上手方案</h3>
+  <p>从 Releases 安装桌面应用（macOS 14+；Windows 11 与 Linux x64 为预览），或在已有 Node.js 24.21、pnpm 和 Docker 的机器上从源码启动。分析所用版本是 nod-v0.9.7：</p>
+<pre><code>git clone https://github.com/n8n-io/nod.git &amp;&amp; cd nod
+git checkout 1128fcfd770d619f3391e0bd9f1ca2f9966f2be6
+corepack enable
+pnpm start</code></pre>
+  <ul class="act">
+    <li>安装后连接你自己的模型，再连接需要的应用。作者称完整设置大约十分钟。<span class="ev ev-claim">作者宣称</span></li>
+    <li>它不是 n8n 工作流产品里的 AI Assistant，而是同一团队做的独立应用。<span class="ev ev-claim">作者宣称</span></li>
+    <li>本文只阅读了公开源码、compose 文件、工具定义和官方文档，没有在本机启动 Nod，也没有跑能力评测。<span class="ev ev-pending">待验证</span></li>
+  </ul>
+</section>
+
+<section class="card" id="deep">
+  <h2>深入</h2>
+  <p class="muted">下面这些不影响先建立整体图景。需要对照源码、字段或边界时再展开。证据指向提交 <code>1128fcf</code>（nod-v0.9.7）。核对过的文件与该标签内容一致。</p>
+  <details class="deep">
+    <summary>进程与容器怎么分开</summary>
+    <ul class="act">
+      <li>本机 <code>compose.yaml</code> 起四个角色：PostgreSQL 17、只读加固的 Chromium 浏览器容器、workspace 容器，以及一个仅有 <code>NET_ADMIN</code> 的 <code>workspace-network</code> 旁路。workspace 通过 <code>network_mode: service:workspace-network</code> 上网，自己不持有这张网卡。<span class="ev ev-source">源码确认</span></li>
+      <li>浏览器与 workspace 都 <code>cap_drop: [ALL]</code>、<code>no-new-privileges</code>；浏览器还是 <code>read_only</code>，数据放在 <code>/data</code> 卷和 tmpfs。workspace 镜像基于 Node 24，预装办公套件、ripgrep、OCR 等，默认用户是 <code>node</code>，工作目录 <code>/workspace</code>。<span class="ev ev-source">源码确认</span></li>
+      <li>依赖里能看到运行时选型：<code>@earendil-works/pi-coding-agent</code> 1.5.2、Fastify、agent-browser、Composio、Electron 桌面壳，以及 1Password SDK。<span class="ev ev-source">源码确认</span></li>
+    </ul>
+  </details>
+  <details class="deep">
+    <summary>不可信数据如何进模型</summary>
+    <ul class="act">
+      <li><code>src/runtime/untrusted.ts</code> 的 <code>delimit()</code> 会中和文本，再按来源加上开闭分隔符。运行时对 <code>browser</code>、<code>web_search</code>、<code>files</code>、<code>computer</code>、<code>codemode</code> 以及 <code>mcp__</code> 等工具结果走这条路径。<span class="ev ev-source">源码确认</span></li>
+      <li>这只能降低「网页或邮件把自身当成指令」的成功率，并不能证明模型永远不会越权。分隔之后，政策仍要靠下面的批准状态机来兜。<span class="ev ev-inference">推断</span></li>
+    </ul>
+  </details>
+  <details class="deep">
+    <summary>批准是快照，不是再问一句「可以吗」</summary>
+    <ul class="act">
+      <li><code>createApprovals</code> 把待确认动作写入 <code>approvals</code> 表。用户确认后，提示要求可信 worker 执行<strong>当时保存的那份快照</strong>一次，不得改换动作，也不得由模型自己再执行一遍。执行结果用 <code>untrustedBlock</code> 包回上下文。<span class="ev ev-source">源码确认</span></li>
+      <li>付款工具要求先填好结账页可见总额，再走私人批准；卡片安全码不在聊天里收集，由 Nod 代为提交一次。工具说明写明：卡片输入并不证明已经结算。<span class="ev ev-source">源码确认</span></li>
+      <li>浏览器私有配置要先经过 sign-in 信任检查才能复用已登录会话；公开页面只需打开浏览器。<span class="ev ev-source">源码确认</span></li>
+    </ul>
+  </details>
+  <details class="deep">
+    <summary>记忆、禁入名单，以及仍然存在的边界</summary>
+    <ul class="act">
+      <li>记忆是一棵可开关的树：条目、归档和技能。关闭后默认不能再写入；服务把它渲染成字节，存进对象存储，带版本。<span class="ev ev-source">源码确认</span></li>
+      <li>用户可维护 <code>local_keep_out</code> 与 <code>computer_keep_out</code> 名单，限制本地文件和电脑使用的范围。<span class="ev ev-source">源码确认</span></li>
+      <li>README 写明：文件、记忆和已保存登录态留在运行 Nod 的机器上；模型供应商仍会收到任务所需内容；应用连接默认走 n8n 托管的连接服务；新用户默认分享基础用量。作者还给出一组 240 次决策的模型对比数字。这些是文档主张，本文没有复现评测，也没有审计出站流量。<span class="ev ev-claim">作者宣称</span><span class="ev ev-pending">待验证</span></li>
+      <li>仓库有真实 harness 上的能力评测（假应用和仿网站，调用付费模型）。单元测试不会跑它们。本文没有执行 <code>pnpm run eval:capability</code>。<span class="ev ev-pending">待验证</span></li>
+    </ul>
+  </details>
+  <details class="deep">
+    <summary>和替代方案比</summary>
+    <ul class="act">
+      <li>与 OpenAI Operator、Claude Computer Use 一类托管电脑使用相比：Nod 把运行时放在你的机器上，模型也可以自选；代价是你要维持这台机器在线，并且默认仍经过 n8n 的连接服务。<span class="ev ev-inference">推断</span></li>
+      <li>与只提供代码沙箱的 E2B / OpenSandbox 相比：Nod 是面向个人差事的完整产品（记忆、批准、浏览器、付款、聊天通道），不是给其他 Agent 调用的通用沙箱 API。<span class="ev ev-inference">推断</span></li>
+      <li>与 Mingle 相比：Mingle 把已有编码代理接到你正在用的 IM；Nod 自己用 Pi 跑循环，目标是替你操作邮箱、日历和网站。二者可以同时存在，但不是同一层。<span class="ev ev-inference">推断</span></li>
+    </ul>
+  </details>
+</section>
+<footer class="ft">
+<div class="foot-nav"><a href="index.html">← 返回开源解剖主页</a></div>
+<p>XHOT 是独立的个人项目，与 X Corp.、AIHOT、GitHub、n8n 及本文所述开源项目无隶属或背书关系。开源解剖根据公开源码整理，可能有误，以仓库原文与指定版本为准。文中不含任何个人或公司私密信息。本文未在本机运行项目或连接其应用账号。</p>
+<p><a href="../about.html">关于 · 数据来源 · 免责声明</a> · <a href="https://github.com/88daxiong/xhot/issues" target="_blank" rel="noopener noreferrer">反馈 / 撤下请求（GitHub Issues）</a></p>
+</footer>
+</main>
+<script type="application/json" id="anatomy-data">{"stages":[{"id":"in","title":"本机 Node 服务接到任务","evidence":"source","detail":"<p>桌面应用、Telegram 或 WhatsApp 把任务送到本机 Nod 服务器。服务器用 Fastify，Agent 循环建立在 <code>@earendil-works/pi-coding-agent</code> 上；工具目录在 <code>src/runtime/tools.ts</code> 与 <code>src/runtime/index.ts</code>，包括应用、文件、浏览器、委派和付款等。</p><p class='src'>依据：<a href=\"https://github.com/n8n-io/nod/blob/1128fcfd770d619f3391e0bd9f1ca2f9966f2be6/package.json\" target=\"_blank\" rel=\"noopener noreferrer\"><code>package.json</code></a>；<a href=\"https://github.com/n8n-io/nod/blob/1128fcfd770d619f3391e0bd9f1ca2f9966f2be6/src/runtime/tools.ts\" target=\"_blank\" rel=\"noopener noreferrer\"><code>src/runtime/tools.ts</code></a>；<a href=\"https://github.com/n8n-io/nod/blob/1128fcfd770d619f3391e0bd9f1ca2f9966f2be6/README.md\" target=\"_blank\" rel=\"noopener noreferrer\"><code>README.md</code></a>（架构图）</p>"},{"id":"sandbox","title":"命令和网页进入隔离容器","evidence":"source","detail":"<p><code>compose.yaml</code> 把 workspace 和 Chromium 分成两个容器：两者都丢掉全部 capability，并禁止提权。浏览器只读，控制套接字在 <code>/data</code>。workspace 的网络由旁边的 <code>workspace-network</code> 容器提供。运行时里的 <code>sandboxTool</code> 会在执行 bash 前做 admission，并校验命令与超时。</p><p class='src'>依据：<a href=\"https://github.com/n8n-io/nod/blob/1128fcfd770d619f3391e0bd9f1ca2f9966f2be6/compose.yaml\" target=\"_blank\" rel=\"noopener noreferrer\"><code>compose.yaml</code></a>；<a href=\"https://github.com/n8n-io/nod/blob/1128fcfd770d619f3391e0bd9f1ca2f9966f2be6/Dockerfile.workspace\" target=\"_blank\" rel=\"noopener noreferrer\"><code>Dockerfile.workspace</code></a>；<a href=\"https://github.com/n8n-io/nod/blob/1128fcfd770d619f3391e0bd9f1ca2f9966f2be6/src/runtime/index.ts#L793-L820\" target=\"_blank\" rel=\"noopener noreferrer\"><code>src/runtime/index.ts:793–820</code></a></p>"},{"id":"trust","title":"结果标成数据，对外动作先批准","evidence":"source","detail":"<p><code>delimit()</code> 给指定工具和 MCP 结果加上不可信分隔符。需要你确认的动作写入 <code>approvals</code>，运行时在 <code>approval</code> 处暂停。确认文案要求可信 worker 只执行已保存快照一次。</p><p class='src'>依据：<a href=\"https://github.com/n8n-io/nod/blob/1128fcfd770d619f3391e0bd9f1ca2f9966f2be6/src/runtime/untrusted.ts\" target=\"_blank\" rel=\"noopener noreferrer\"><code>src/runtime/untrusted.ts</code></a>；<a href=\"https://github.com/n8n-io/nod/blob/1128fcfd770d619f3391e0bd9f1ca2f9966f2be6/src/runtime/index.ts#L129-L144\" target=\"_blank\" rel=\"noopener noreferrer\"><code>src/runtime/index.ts:129–144</code></a>；<a href=\"https://github.com/n8n-io/nod/blob/1128fcfd770d619f3391e0bd9f1ca2f9966f2be6/src/server/approvals.ts#L295-L354\" target=\"_blank\" rel=\"noopener noreferrer\"><code>src/server/approvals.ts:295–354</code></a>；<a href=\"https://github.com/n8n-io/nod/blob/1128fcfd770d619f3391e0bd9f1ca2f9966f2be6/src/server/approvals.ts#L936-L936\" target=\"_blank\" rel=\"noopener noreferrer\"><code>src/server/approvals.ts:936</code></a></p>"},{"id":"memory","title":"执行一次，并把记忆写成树","evidence":"source","detail":"<p>确认后的动作由可信 worker 执行，结果再按不可信数据返回。记忆服务把一棵含条目、归档和技能的树渲染成字节，写入对象存储；关闭后默认拒绝写入。用户还可以维护本地文件和电脑使用的禁入名单。</p><p class='src'>依据：<a href=\"https://github.com/n8n-io/nod/blob/1128fcfd770d619f3391e0bd9f1ca2f9966f2be6/src/server/approvals.ts#L154-L164\" target=\"_blank\" rel=\"noopener noreferrer\"><code>src/server/approvals.ts:154–164</code></a>；<a href=\"https://github.com/n8n-io/nod/blob/1128fcfd770d619f3391e0bd9f1ca2f9966f2be6/src/server/memory.ts#L84-L113\" target=\"_blank\" rel=\"noopener noreferrer\"><code>src/server/memory.ts:84–113</code></a>；<a href=\"https://github.com/n8n-io/nod/blob/1128fcfd770d619f3391e0bd9f1ca2f9966f2be6/src/server/keep-out.ts\" target=\"_blank\" rel=\"noopener noreferrer\"><code>src/server/keep-out.ts</code></a></p>"}]}</script>
+</body>
+</html>

@@ -38,8 +38,15 @@
 
 <section class="card" aria-labelledby="choose">
   <h2 id="choose">选择一篇拆解</h2>
-  <p class="muted">下面九篇都会直接显示。搜索和筛选只是辅助，不是入口。</p>
+  <p class="muted">下面十篇都会直接显示。搜索和筛选只是辅助，不是入口。</p>
   <div class="cards" style="margin-top:8px">
+    <a class="proj-card" href="nod.html" data-tags="agent computer-use desktop" data-hay="nod n8n 个人助手 电脑使用 sandbox browser 批准 vault pi telegram whatsapp 沙箱 浏览器">
+      <div class="badge-row"><span class="pill">个人助手</span><span class="pill purple">TypeScript</span><span class="pill">nod-v0.9.7</span></div>
+      <h2>Nod</h2>
+      <p class="hl">最大亮点：政策在服务器里执行，不在提示词里商量；工具结果标成不可信数据，对外动作先写成待批准快照。</p>
+      <p style="margin-top:10px">适合：希望在自己的电脑上跑一个会处理邮件和网页差事的个人 Agent，并且在对外行动前先问你。</p>
+      <p class="cta">阅读拆解 →</p>
+    </a>
     <a class="proj-card" href="ai-memory.html" data-tags="memory agent rust" data-hay="ai-memory akitaonrails wiki markdown sqlite 记忆 交接 编程 agent 零llm">
       <div class="badge-row"><span class="pill">Agent 记忆</span><span class="pill purple">Rust</span><span class="pill">v3.4.7</span></div>
       <h2>ai-memory</h2>
@@ -121,6 +128,7 @@
       <button type="button" data-filter-tag="harness" aria-pressed="false">Agent 运行时</button>
       <button type="button" data-filter-tag="team" aria-pressed="false">多智能体</button>
       <button type="button" data-filter-tag="im" aria-pressed="false">聊天接入</button>
+      <button type="button" data-filter-tag="computer-use" aria-pressed="false">个人助手</button>
     </div>
   </div>
 </section>
