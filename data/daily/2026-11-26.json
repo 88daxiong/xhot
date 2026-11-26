@@ -1,0 +1,175 @@
+{
+  "changelog": [],
+  "date": "2026-11-26",
+  "followers_zh": "涨粉最多：Dario Amodei +14719、NVIDIA +6942、Anthropic +5135、Sundar Pichai +5096、Thariq +3862、Claude +3707；马斯克日减约 19.1 万，MrBeast -10468、CZ -9262、Google -4668、levelsio -2593。",
+  "gists": {
+    "2125178828943184363": "马斯克回「Bullseye」，未展开细节。",
+    "2125363942977597554": "马斯克转发并只写了「Starlink」。",
+    "2125383610266157090": "马斯克发「别惹 𝕏」，未展开细节。",
+    "2125383859592479201": "马斯克称 Starlink 已在非洲 54 个国家中的 30 个获批。",
+    "2125389696138449240": "Huberman 感谢读者支持新书 Protocols，覆盖睡眠、运动、营养等身体操作系统。",
+    "2125393449952391282": "Huberman 认为 AI 在健康发现上的进展惊人，未来五年会很好看。",
+    "2125406441796206946": "Claude Code 2.1.332：默认确认高风险操作；MCP 服务器托管的技能可在 / 菜单以 server:skill 使用（beta）。",
+    "2125444028527468699": "swyx 调侃「硅谷还好吗」，配图吐槽当下的离谱现象。",
+    "2125458638823379123": "Perplexity 上 Gemini 4 Neon 周二已消耗 445.2 亿 token，比周一全天高出 23.5%，且当天还剩 3 小时。",
+    "2125462322483503370": "马斯克回「True」，未展开细节。",
+    "2125463852146114994": "马斯克评「Google 的工作令人印象深刻」，未展开细节。",
+    "2125464682580623467": "马斯克称 Grok Bot 能帮你研究黑五优惠并核对真伪。",
+    "2125508105262043195": "levelsio 称「我就说过它们会吃掉一切」，呼应 AI 正在吞并更多应用层。",
+    "2125515439770104282": "levelsio 称 Claude 已能生成个性化 macOS 应用，AI 实验室接下来可能染指操作系统层。",
+    "2125516475712844116": "马斯克称在 Tesla 长途旅行中用 Grok 很有趣。",
+    "2125516563277328690": "马斯克转发并只写了「Starlink」。",
+    "2125576163720642762": "马斯克回「Yes」，未展开细节。",
+    "2125576951364731018": "马斯克回「Hmm」，未展开细节。",
+    "2125609241264456150": "开源 /video-explainer 技能，可用三种风格为任意主题生成带旁白和字幕的讲解视频。",
+    "2125624740601835523": "Matthew Berman 称 Neon 比他预想的还好，而他原本就已经很看好。",
+    "2125627281230205435": "swyx 认为「每任务成本」会误导，稀缺的是人类注意力；帕累托曲线可能掩盖严重可靠性问题。",
+    "2125663033993437651": "Demis Hassabis 推荐试试 Gemini Neon，称这是一个好模型。",
+    "2125667315303723011": "用 Antigravity 的 /swarm，Gemini 4 Neon 把一张照片变成 10 万格的真实 Google Sheet，纯公式做边缘检测和光照。",
+    "2125669066388209784": "马斯克发「Interesting」，未展开细节。",
+    "2125685936344236471": "Gemini Live 的 Guided Vision 已登陆 iOS：打开 Live、对准相机，即可获得屏幕上的实时指引。",
+    "2125707364053680383": "Perplexity 推出 Time Machine，可把任意日期的网页原样交给模型做智能体后训练，已在 Search/Context API 上线。",
+    "2125718798603079866": "Matt 用 Higgsfield MAGI-2 花 $2.70 做出 1080p 视频，并分享 7 个接近 Seedance 2.5、成本约 1/7 的技巧。"
+  },
+  "hide": [
+    "2125381945672761599",
+    "2125411174993010839",
+    "2125430661456773416",
+    "2125687998805152181",
+    "2125640447305420950",
+    "2125495200676041016",
+    "2125504148552695927",
+    "2125593568295481385",
+    "2125621572975423546",
+    "2125670205456257409",
+    "2125667762324541673",
+    "2125578626502394096",
+    "2125383610266157090",
+    "2125462322483503370",
+    "2125576163720642762",
+    "2125463852146114994",
+    "2125669066388209784",
+    "2125576951364731018",
+    "2125363942977597554",
+    "2125178828943184363",
+    "2125516563277328690",
+    "2125516475712844116"
+  ],
+  "highlights": [
+    {
+      "excerpt": "I've joined OpenAI!\n\nI'm very proud of my time at Anthropic, and I'll continue to root for my former colleagues. Both companies have important roles to play in the future.\n\nThere is a tremendous amount of work ahead of us to bring AI to the world, and it will demand the very best",
+      "excerpt_zh": "我加入了 OpenAI！\n\n我为在 Anthropic 的时光深感自豪，也会继续为前同事加油。两家公司在未来都有重要角色要扮演。\n\n要把 AI 带给全世界，前面还有大量工作，而且需要最顶尖的",
+      "handle": "trq212",
+      "likes": 18357,
+      "name": "Thariq",
+      "post_id": "2125675533761671405",
+      "tags": [
+        "career"
+      ],
+      "text_zh": "Thariq 宣布离开 Anthropic、加入 OpenAI，并称两家公司未来都有重要角色。",
+      "url": "https://x.com/trq212/status/2125675533761671405"
+    },
+    {
+      "excerpt": "No, I do not believe that we should “surrender human free will” to AI systems, and it’s absurd to suggest that I do. I have written hundreds of pages of essays and a constant theme in them is the need for AI to be governed by legitimate democratic processes. For millennia (going https://t.co/DUQxWZDPAk",
+      "excerpt_zh": "不，我不认为我们应该把人类的自由意志「交给」AI 系统，说我会这么想十分荒谬。我写过数百页文章，其中一以贯之的主题是：AI 必须由合法的民主程序来治理。几千年来（待续 https://t.co/DUQxWZDPAk",
+      "handle": "DarioAmodei",
+      "likes": 13111,
+      "name": "Dario Amodei",
+      "post_id": "2125656399392690605",
+      "tags": [
+        "write",
+        "policy"
+      ],
+      "text_zh": "Dario 否认要「把人类自由意志交给 AI」，强调应用合法民主程序来治理。",
+      "url": "https://x.com/DarioAmodei/status/2125656399392690605"
+    },
+    {
+      "excerpt": "It’s been two weeks since we released Claude Fable 5.2. Here’s what people have been exploring with it:\n\nWhere the letter A came from, one alphabet at a time. https://t.co/BTSn7Js8yR",
+      "excerpt_zh": "距离我们发布 Claude Fable 5.2 已经两周。来看看大家用它在探索什么：\n\n字母 A 从何而来，一个字母表一个字母表地看。 https://t.co/BTSn7Js8yR",
+      "handle": "claudeai",
+      "likes": 10142,
+      "name": "Claude",
+      "post_id": "2125616057788637364",
+      "tags": [
+        "model",
+        "product"
+      ],
+      "text_zh": "Claude 官方回顾 Fable 5.2 发布两周，并分享用户用它追溯字母 A 起源的探索。",
+      "url": "https://x.com/claudeai/status/2125616057788637364"
+    },
+    {
+      "excerpt": "We recently migrated our Messages API from Python to Rust.\n\nOn our engineering blog, we share how we used the existing service to verify the new one, with teams of Claude agents tracking down and fixing differences between the two versions.\n\nhttps://t.co/NdrMzgrOwP",
+      "excerpt_zh": "我们最近把 Messages API 从 Python 迁移到了 Rust。\n\n在工程博客中，我们分享了如何用现有服务来验证新服务，由多组 Claude 智能体追踪并修复两个版本之间的差异。\n\nhttps://t.co/NdrMzgrOwP",
+      "handle": "AnthropicAI",
+      "likes": 7963,
+      "name": "Anthropic",
+      "post_id": "2125627317263466739",
+      "tags": [
+        "model",
+        "agent"
+      ],
+      "text_zh": "Anthropic 把 Messages API 迁到 Rust，并用 Claude 智能体对照修复差异。",
+      "url": "https://x.com/AnthropicAI/status/2125627317263466739"
+    },
+    {
+      "excerpt": "We’re now testing Private Inference, our latest offering as part of OpenAI Private Intelligence, with a small group of customers.\n\nStronger privacy protections will make frontier AI useful for a lot more work, and business privacy is important for a healthy ecosystem. Reach out to @shekar4x if interested!",
+      "excerpt_zh": "我们正在与一小部分客户测试 Private Inference，这是 OpenAI Private Intelligence 的最新能力。\n\n更强的隐私保护将让前沿 AI 能用于更多工作，而商业隐私对健康的生态很重要。有兴趣请联系 @shekar4x！",
+      "handle": "sama",
+      "likes": 6702,
+      "name": "Sam Altman",
+      "post_id": "2125638790593274259",
+      "tags": [
+        "policy"
+      ],
+      "text_zh": "OpenAI 开始小范围测试 Private Inference，强化企业隐私与无人员查看的安全审核。",
+      "url": "https://x.com/sama/status/2125638790593274259"
+    },
+    {
+      "excerpt": "We are crossing a threshold. Safety and alignment work is the only thing that matters.",
+      "excerpt_zh": "我们正在越过一道门槛。安全与对齐工作是唯一要紧的事。",
+      "handle": "mustafasuleyman",
+      "likes": 4261,
+      "name": "Mustafa Suleyman",
+      "post_id": "2125446171909136630",
+      "tags": [
+        "research",
+        "policy"
+      ],
+      "text_zh": "Mustafa Suleyman 称已越过门槛，安全与对齐是当下唯一要紧的事。",
+      "url": "https://x.com/mustafasuleyman/status/2125446171909136630"
+    },
+    {
+      "excerpt": "matrix multiplication exponent is exactly 9/4: \"This is really the kind of result that I never thought I would see in my lifetime\" https://t.co/bsqPABeTia",
+      "excerpt_zh": "矩阵乘法指数恰好是 9/4：「我真的没想过这辈子还能见到这样的结果」 https://t.co/bsqPABeTia",
+      "handle": "gdb",
+      "likes": 3197,
+      "name": "Greg Brockman",
+      "post_id": "2125418102049628201",
+      "tags": [
+        "research"
+      ],
+      "text_zh": "Greg Brockman 转发矩阵乘法指数恰好为 9/4 的结果，称这是一生难得见到的突破。",
+      "url": "https://x.com/gdb/status/2125418102049628201"
+    },
+    {
+      "excerpt": "Gemini just got a lot more personal. Say hello to 60+ new expressive voices with local accents across the US, UK, India, Indonesia, Korea, and Brazil. Pick yours in settings.",
+      "excerpt_zh": "Gemini 变得更有个人色彩了。和新上线的 60 多种表现力语音打个招呼，它们带有美国、英国、印度、印度尼西亚、韩国和巴西的本地口音。可在设置中选择你的语音。",
+      "handle": "GeminiApp",
+      "likes": 1809,
+      "name": "Google Gemini",
+      "post_id": "2125629066006950339",
+      "tags": [
+        "model"
+      ],
+      "text_zh": "Gemini 新上线 60 余种带各地口音的表现力语音，可在设置中选用。",
+      "url": "https://x.com/GeminiApp/status/2125629066006950339"
+    }
+  ],
+  "pin": [],
+  "summary_zh": [
+    "Thariq 宣布离开 Anthropic 加入 OpenAI，该帖获 1.8 万赞。",
+    "Anthropic 将 Messages API 迁至 Rust，并用 Claude 智能体对照修复差异。",
+    "话题 Dan Koe +167%、MCP +37%；Dario 增粉 1.47 万，马斯克减粉约 19.1 万。"
+  ],
+  "topics_zh": "涨幅最大是 Dan Koe +167%（末日 362 条，基数较小），MCP +36.9%（1279 条），Qwen 千问 +31.6%（4333 条），Codex +28.8%，vibe coding +26.4%，搞钱·副业 +21.9%，Claude Code +19.4%；GLM 智谱 -18.3%，monk mode -13.7%，Gemini -5.2%。"
+}

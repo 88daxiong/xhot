@@ -2,6 +2,174 @@
   "handle": "gorden_sun",
   "tweets": [
     {
+      "created_at": "2026-11-25T23:44:52.000Z",
+      "id": "2125737516963926390",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 1,
+        "impression": 456,
+        "like": 2,
+        "quote": 0,
+        "reply": 3,
+        "retweet": 0
+      },
+      "url": "https://x.com/Gorden_Sun/status/2125737516963926390"
+    },
+    {
+      "created_at": "2026-11-25T15:49:50.000Z",
+      "id": "2125617968977740241",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 2,
+        "impression": 1377,
+        "like": 6,
+        "quote": 1,
+        "reply": 9,
+        "retweet": 0
+      },
+      "url": "https://x.com/Gorden_Sun/status/2125617968977740241"
+    },
+    {
+      "created_at": "2026-11-25T15:22:15.000Z",
+      "id": "2125611027899482575",
+      "lang": "ja",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 1514,
+        "like": 2,
+        "quote": 0,
+        "reply": 1,
+        "retweet": 0
+      },
+      "url": "https://x.com/Gorden_Sun/status/2125611027899482575"
+    },
+    {
+      "created_at": "2026-11-25T15:17:20.000Z",
+      "id": "2125609787874578669",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 3,
+        "impression": 1244,
+        "like": 3,
+        "quote": 0,
+        "reply": 2,
+        "retweet": 0
+      },
+      "url": "https://x.com/Gorden_Sun/status/2125609787874578669"
+    },
+    {
+      "created_at": "2026-11-25T10:24:08.000Z",
+      "id": "2125536002362188089",
+      "lang": "ja",
+      "metrics": {
+        "bookmark": 2,
+        "impression": 1059,
+        "like": 1,
+        "quote": 0,
+        "reply": 1,
+        "retweet": 0
+      },
+      "url": "https://x.com/Gorden_Sun/status/2125536002362188089"
+    },
+    {
+      "created_at": "2026-11-25T10:23:28.000Z",
+      "id": "2125535834476781799",
+      "lang": "et",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 387,
+        "like": 0,
+        "quote": 0,
+        "reply": 0,
+        "retweet": 0
+      },
+      "url": "https://x.com/Gorden_Sun/status/2125535834476781799"
+    },
+    {
+      "created_at": "2026-11-25T10:22:21.000Z",
+      "id": "2125535553949163935",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 591,
+        "like": 3,
+        "quote": 0,
+        "reply": 2,
+        "retweet": 0
+      },
+      "url": "https://x.com/Gorden_Sun/status/2125535553949163935"
+    },
+    {
+      "created_at": "2026-11-25T10:21:03.000Z",
+      "id": "2125535227250618548",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 34,
+        "impression": 8644,
+        "like": 45,
+        "quote": 0,
+        "reply": 21,
+        "retweet": 2
+      },
+      "url": "https://x.com/Gorden_Sun/status/2125535227250618548"
+    },
+    {
+      "created_at": "2026-11-25T09:40:35.000Z",
+      "id": "2125525045409948104",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 7,
+        "impression": 1320,
+        "like": 12,
+        "quote": 0,
+        "reply": 14,
+        "retweet": 0
+      },
+      "url": "https://x.com/Gorden_Sun/status/2125525045409948104"
+    },
+    {
+      "created_at": "2026-11-25T08:38:53.000Z",
+      "id": "2125509518595707184",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 5,
+        "impression": 2389,
+        "like": 6,
+        "quote": 1,
+        "reply": 6,
+        "retweet": 0
+      },
+      "url": "https://x.com/Gorden_Sun/status/2125509518595707184"
+    },
+    {
+      "created_at": "2026-11-25T08:20:58.000Z",
+      "id": "2125505009525911726",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 6,
+        "impression": 1746,
+        "like": 13,
+        "quote": 0,
+        "reply": 21,
+        "retweet": 1
+      },
+      "url": "https://x.com/Gorden_Sun/status/2125505009525911726"
+    },
+    {
+      "created_at": "2026-11-25T04:53:56.000Z",
+      "id": "2125452905927111051",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 13,
+        "impression": 3500,
+        "like": 50,
+        "quote": 0,
+        "reply": 11,
+        "retweet": 2
+      },
+      "url": "https://x.com/Gorden_Sun/status/2125452905927111051"
+    },
+    {
       "created_at": "2026-11-24T16:08:31.000Z",
       "id": "2125260283799359867",
       "lang": "zh",
@@ -2632,174 +2800,6 @@
         "retweet": 0
       },
       "url": "https://x.com/Gorden_Sun/status/2114916787972452789"
-    },
-    {
-      "created_at": "2026-10-27T02:22:04.000Z",
-      "id": "2114905437871170005",
-      "lang": "zh",
-      "metrics": {
-        "bookmark": 44,
-        "impression": 79788,
-        "like": 383,
-        "quote": 3,
-        "reply": 42,
-        "retweet": 17
-      },
-      "url": "https://x.com/Gorden_Sun/status/2114905437871170005"
-    },
-    {
-      "created_at": "2026-10-27T02:09:25.000Z",
-      "id": "2114902254352511322",
-      "lang": "zh",
-      "metrics": {
-        "bookmark": 1,
-        "impression": 2061,
-        "like": 5,
-        "quote": 0,
-        "reply": 6,
-        "retweet": 0
-      },
-      "url": "https://x.com/Gorden_Sun/status/2114902254352511322"
-    },
-    {
-      "created_at": "2026-10-27T00:36:51.000Z",
-      "id": "2114878962958823572",
-      "lang": "zh",
-      "metrics": {
-        "bookmark": 1,
-        "impression": 6593,
-        "like": 15,
-        "quote": 0,
-        "reply": 13,
-        "retweet": 0
-      },
-      "url": "https://x.com/Gorden_Sun/status/2114878962958823572"
-    },
-    {
-      "created_at": "2026-10-26T15:41:08.000Z",
-      "id": "2114744143117525281",
-      "lang": "",
-      "metrics": {
-        "bookmark": 6,
-        "impression": 2130,
-        "like": 3,
-        "quote": 1,
-        "reply": 1,
-        "retweet": 0
-      },
-      "url": "https://x.com/Gorden_Sun/status/2114744143117525281"
-    },
-    {
-      "created_at": "2026-10-26T15:28:57.000Z",
-      "id": "2114741076859003127",
-      "lang": "",
-      "metrics": {
-        "bookmark": 11,
-        "impression": 1886,
-        "like": 21,
-        "quote": 1,
-        "reply": 9,
-        "retweet": 0
-      },
-      "url": "https://x.com/Gorden_Sun/status/2114741076859003127"
-    },
-    {
-      "created_at": "2026-10-26T10:52:05.000Z",
-      "id": "2114671400724365699",
-      "lang": "",
-      "metrics": {
-        "bookmark": 27,
-        "impression": 7382,
-        "like": 93,
-        "quote": 1,
-        "reply": 6,
-        "retweet": 10
-      },
-      "url": "https://x.com/Gorden_Sun/status/2114671400724365699"
-    },
-    {
-      "created_at": "2026-10-26T09:19:15.000Z",
-      "id": "2114648038212034981",
-      "lang": "",
-      "metrics": {
-        "bookmark": 15,
-        "impression": 2286,
-        "like": 35,
-        "quote": 2,
-        "reply": 19,
-        "retweet": 0
-      },
-      "url": "https://x.com/Gorden_Sun/status/2114648038212034981"
-    },
-    {
-      "created_at": "2026-10-26T07:59:13.000Z",
-      "id": "2114627896493183174",
-      "lang": "",
-      "metrics": {
-        "bookmark": 5,
-        "impression": 1793,
-        "like": 5,
-        "quote": 1,
-        "reply": 8,
-        "retweet": 2
-      },
-      "url": "https://x.com/Gorden_Sun/status/2114627896493183174"
-    },
-    {
-      "created_at": "2026-10-26T07:31:57.000Z",
-      "id": "2114621038281814167",
-      "lang": "",
-      "metrics": {
-        "bookmark": 43,
-        "impression": 3977,
-        "like": 32,
-        "quote": 2,
-        "reply": 23,
-        "retweet": 7
-      },
-      "url": "https://x.com/Gorden_Sun/status/2114621038281814167"
-    },
-    {
-      "created_at": "2026-10-26T06:45:06.000Z",
-      "id": "2114609247527031151",
-      "lang": "",
-      "metrics": {
-        "bookmark": 2,
-        "impression": 4660,
-        "like": 6,
-        "quote": 0,
-        "reply": 10,
-        "retweet": 0
-      },
-      "url": "https://x.com/Gorden_Sun/status/2114609247527031151"
-    },
-    {
-      "created_at": "2026-10-26T06:24:55.000Z",
-      "id": "2114604166433886392",
-      "lang": "",
-      "metrics": {
-        "bookmark": 4,
-        "impression": 3673,
-        "like": 10,
-        "quote": 1,
-        "reply": 11,
-        "retweet": 0
-      },
-      "url": "https://x.com/Gorden_Sun/status/2114604166433886392"
-    },
-    {
-      "created_at": "2026-10-26T06:19:15.000Z",
-      "id": "2114602742295761046",
-      "lang": "",
-      "metrics": {
-        "bookmark": 54,
-        "impression": 31750,
-        "like": 156,
-        "quote": 1,
-        "reply": 13,
-        "retweet": 14
-      },
-      "url": "https://x.com/Gorden_Sun/status/2114602742295761046"
     }
   ],
   "user_id": "1657474831"

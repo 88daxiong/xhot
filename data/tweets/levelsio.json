@@ -2,6 +2,62 @@
   "handle": "levelsio",
   "tweets": [
     {
+      "created_at": "2026-11-25T15:32:09.000Z",
+      "id": "2125613519873995002",
+      "lang": "",
+      "metrics": {
+        "bookmark": 14,
+        "impression": 26183,
+        "like": 311,
+        "quote": 2,
+        "reply": 79,
+        "retweet": 3
+      },
+      "url": "https://x.com/levelsio/status/2125613519873995002"
+    },
+    {
+      "created_at": "2026-11-25T15:04:28.000Z",
+      "id": "2125606553835503644",
+      "lang": "",
+      "metrics": {
+        "bookmark": 2,
+        "impression": 8375,
+        "like": 64,
+        "quote": 0,
+        "reply": 8,
+        "retweet": 0
+      },
+      "url": "https://x.com/levelsio/status/2125606553835503644"
+    },
+    {
+      "created_at": "2026-11-25T15:04:14.000Z",
+      "id": "2125606495056449835",
+      "lang": "",
+      "metrics": {
+        "bookmark": 6,
+        "impression": 24982,
+        "like": 246,
+        "quote": 1,
+        "reply": 76,
+        "retweet": 2
+      },
+      "url": "https://x.com/levelsio/status/2125606495056449835"
+    },
+    {
+      "created_at": "2026-11-25T14:07:45.000Z",
+      "id": "2125592280505704637",
+      "lang": "",
+      "metrics": {
+        "bookmark": 37,
+        "impression": 83250,
+        "like": 779,
+        "quote": 26,
+        "reply": 234,
+        "retweet": 7
+      },
+      "url": "https://x.com/levelsio/status/2125592280505704637"
+    },
+    {
       "created_at": "2026-11-25T10:02:21.000Z",
       "id": "2125530522130796596",
       "lang": "",
@@ -2744,62 +2800,6 @@
         "retweet": 32
       },
       "url": "https://x.com/levelsio/status/2117285295054016630"
-    },
-    {
-      "created_at": "2026-11-02T15:07:44.000Z",
-      "id": "2117272451545514001",
-      "lang": "",
-      "metrics": {
-        "bookmark": 499,
-        "impression": 110999,
-        "like": 1512,
-        "quote": 63,
-        "reply": 102,
-        "retweet": 86
-      },
-      "url": "https://x.com/levelsio/status/2117272451545514001"
-    },
-    {
-      "created_at": "2026-11-02T14:31:23.000Z",
-      "id": "2117263304032682057",
-      "lang": "",
-      "metrics": {
-        "bookmark": 218,
-        "impression": 57893,
-        "like": 503,
-        "quote": 3,
-        "reply": 109,
-        "retweet": 16
-      },
-      "url": "https://x.com/levelsio/status/2117263304032682057"
-    },
-    {
-      "created_at": "2026-11-02T14:17:29.000Z",
-      "id": "2117259805932884467",
-      "lang": "",
-      "metrics": {
-        "bookmark": 152,
-        "impression": 183602,
-        "like": 1014,
-        "quote": 37,
-        "reply": 113,
-        "retweet": 24
-      },
-      "url": "https://x.com/levelsio/status/2117259805932884467"
-    },
-    {
-      "created_at": "2026-11-02T14:01:17.000Z",
-      "id": "2117255729748836380",
-      "lang": "",
-      "metrics": {
-        "bookmark": 4,
-        "impression": 15864,
-        "like": 26,
-        "quote": 0,
-        "reply": 1,
-        "retweet": 0
-      },
-      "url": "https://x.com/levelsio/status/2117255729748836380"
     }
   ],
   "user_id": "1577241403"
