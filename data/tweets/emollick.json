@@ -2,6 +2,48 @@
   "handle": "emollick",
   "tweets": [
     {
+      "created_at": "2026-11-26T05:58:00.000Z",
+      "id": "2125831416491692310",
+      "lang": "",
+      "metrics": {
+        "bookmark": 30,
+        "impression": 19780,
+        "like": 237,
+        "quote": 2,
+        "reply": 67,
+        "retweet": 5
+      },
+      "url": "https://x.com/emollick/status/2125831416491692310"
+    },
+    {
+      "created_at": "2026-11-26T04:49:15.000Z",
+      "id": "2125814113641071008",
+      "lang": "",
+      "metrics": {
+        "bookmark": 2,
+        "impression": 7130,
+        "like": 33,
+        "quote": 0,
+        "reply": 5,
+        "retweet": 0
+      },
+      "url": "https://x.com/emollick/status/2125814113641071008"
+    },
+    {
+      "created_at": "2026-11-26T04:44:03.000Z",
+      "id": "2125812805534183923",
+      "lang": "",
+      "metrics": {
+        "bookmark": 8,
+        "impression": 17756,
+        "like": 174,
+        "quote": 9,
+        "reply": 133,
+        "retweet": 0
+      },
+      "url": "https://x.com/emollick/status/2125812805534183923"
+    },
+    {
       "created_at": "2026-11-25T16:17:01.000Z",
       "id": "2125624808893538497",
       "lang": "",
@@ -2758,48 +2800,6 @@
         "retweet": 5
       },
       "url": "https://x.com/emollick/status/2115584471089262988"
-    },
-    {
-      "created_at": "2026-10-28T12:25:27.000Z",
-      "id": "2115419671877062710",
-      "lang": "",
-      "metrics": {
-        "bookmark": 119,
-        "impression": 24793,
-        "like": 379,
-        "quote": 4,
-        "reply": 146,
-        "retweet": 31
-      },
-      "url": "https://x.com/emollick/status/2115419671877062710"
-    },
-    {
-      "created_at": "2026-10-28T02:59:39.000Z",
-      "id": "2115277286123704654",
-      "lang": "en",
-      "metrics": {
-        "bookmark": 216,
-        "impression": 77287,
-        "like": 1082,
-        "quote": 17,
-        "reply": 174,
-        "retweet": 76
-      },
-      "url": "https://x.com/emollick/status/2115277286123704654"
-    },
-    {
-      "created_at": "2026-10-28T02:43:30.000Z",
-      "id": "2115273222061015169",
-      "lang": "en",
-      "metrics": {
-        "bookmark": 70,
-        "impression": 24451,
-        "like": 371,
-        "quote": 11,
-        "reply": 66,
-        "retweet": 22
-      },
-      "url": "https://x.com/emollick/status/2115273222061015169"
     }
   ],
   "user_id": "39125788"

@@ -2,6 +2,20 @@
   "handle": "mistralai",
   "tweets": [
     {
+      "created_at": "2026-11-26T11:33:05.000Z",
+      "id": "2125915743212761359",
+      "lang": "",
+      "metrics": {
+        "bookmark": 42,
+        "impression": 11150,
+        "like": 302,
+        "quote": 7,
+        "reply": 31,
+        "retweet": 17
+      },
+      "url": "https://x.com/MistralAI/status/2125915743212761359"
+    },
+    {
       "created_at": "2026-11-23T16:39:11.000Z",
       "id": "2124905614254149941",
       "lang": "",
