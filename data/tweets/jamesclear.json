@@ -2,6 +2,34 @@
   "handle": "jamesclear",
   "tweets": [
     {
+      "created_at": "2026-11-26T19:05:59.000Z",
+      "id": "2126029720835760609",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 1,
+        "impression": 8466,
+        "like": 9,
+        "quote": 0,
+        "reply": 0,
+        "retweet": 0
+      },
+      "url": "https://x.com/JamesClear/status/2126029720835760609"
+    },
+    {
+      "created_at": "2026-11-26T19:05:59.000Z",
+      "id": "2126029719594274909",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 104,
+        "impression": 29447,
+        "like": 393,
+        "quote": 5,
+        "reply": 1,
+        "retweet": 32
+      },
+      "url": "https://x.com/JamesClear/status/2126029719594274909"
+    },
+    {
       "created_at": "2026-11-24T19:02:45.000Z",
       "id": "2125304129463705744",
       "lang": "",

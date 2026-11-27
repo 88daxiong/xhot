@@ -2,6 +2,34 @@
   "handle": "pluvio9yte",
   "tweets": [
     {
+      "created_at": "2026-11-26T14:20:05.000Z",
+      "id": "2125957771271299503",
+      "lang": "",
+      "metrics": {
+        "bookmark": 2,
+        "impression": 2798,
+        "like": 3,
+        "quote": 0,
+        "reply": 1,
+        "retweet": 0
+      },
+      "url": "https://x.com/Pluvio9yte/status/2125957771271299503"
+    },
+    {
+      "created_at": "2026-11-26T14:05:50.000Z",
+      "id": "2125954182444446167",
+      "lang": "",
+      "metrics": {
+        "bookmark": 76,
+        "impression": 11509,
+        "like": 43,
+        "quote": 1,
+        "reply": 12,
+        "retweet": 0
+      },
+      "url": "https://x.com/Pluvio9yte/status/2125954182444446167"
+    },
+    {
       "created_at": "2026-11-26T04:44:30.000Z",
       "id": "2125812918709309932",
       "lang": "zh",

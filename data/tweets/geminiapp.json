@@ -2,6 +2,34 @@
   "handle": "geminiapp",
   "tweets": [
     {
+      "created_at": "2026-11-26T16:46:22.000Z",
+      "id": "2125994582173450638",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 11,
+        "impression": 14322,
+        "like": 37,
+        "quote": 0,
+        "reply": 6,
+        "retweet": 3
+      },
+      "url": "https://x.com/GeminiApp/status/2125994582173450638"
+    },
+    {
+      "created_at": "2026-11-26T16:24:47.000Z",
+      "id": "2125989152575635789",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 448,
+        "impression": 92556,
+        "like": 1808,
+        "quote": 24,
+        "reply": 111,
+        "retweet": 124
+      },
+      "url": "https://x.com/GeminiApp/status/2125989152575635789"
+    },
+    {
       "created_at": "2026-11-25T20:19:55.000Z",
       "id": "2125685936344236471",
       "lang": "",

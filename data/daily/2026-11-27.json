@@ -1,0 +1,147 @@
+{
+  "changelog": [],
+  "date": "2026-11-27",
+  "followers_zh": "涨粉最多：Dario Amodei +20821、Thariq +5404、Tibo +5334、Anthropic +4357、Karpathy +3862、Claude +2872；马斯克日减约 6.4 万，Satya Nadella -4726、Sundar Pichai -4141、CZ -3036、Paul Graham -1671、Microsoft -1613。",
+  "gists": {
+    "2125798914490249411": "Qwen-Audio-3.1 升级多语言能力，ASR 覆盖 59 种语言和 8 种中国方言。",
+    "2125853628250599730": "Tibo 宣布 Banked reset 已上线。",
+    "2125858270296285463": "马斯克配图短评：很难相信这件事终于发生了。",
+    "2125899913892380917": "总结 6 场年收入合计超 1100 万美元创始人 AMA：约 75% 的 ChatGPT 推荐来自清单文。",
+    "2125969097276178943": "观察到越来越多做了十年以上的 SaaS 创始人要重做公司，这正冲击靠锁定用户的懒惰模式。",
+    "2125972074707476811": "一位 SuperX 用户免费月结束后不愿续费，但录视频说明原因，他认为这很有价值。",
+    "2125980456311222488": "引用宏观史判断：我们比曾曾曾祖辈约富 10 倍，而他们只比耶稣时代约富 2 倍。",
+    "2125998076896920034": "用 2026 年用量、价格与支出数据验证杰文斯悖论仍成立，但近几个月弱于年初。",
+    "2125998873252605954": "吐槽主题为「您关于[转述我博客]的帖子引起了我的注意」的来信很让人沮丧。"
+  },
+  "hide": [
+    "2126045116624216127",
+    "2125850542161191235",
+    "2125787610014798257",
+    "2125754870456316093",
+    "2125966888131830030",
+    "2125816458911600681",
+    "2125751388583923822",
+    "2125787894522544318",
+    "2126013273573298400",
+    "2125952212732162128",
+    "2125983591389974980",
+    "2126031228734488953",
+    "2125760650697998820",
+    "2125831567981297892",
+    "2125919480593494334",
+    "2125919748391334067"
+  ],
+  "highlights": [
+    {
+      "excerpt": "Every child in America will receive two SpaceX shares, one from the company and one from me personally",
+      "excerpt_zh": "每个美国儿童都将获得两股 SpaceX 股份，一股来自公司，一股来自我个人。",
+      "handle": "elonmusk",
+      "likes": 314487,
+      "name": "Elon Musk",
+      "post_id": "2125797463047258119",
+      "tags": [],
+      "text_zh": "马斯克宣布每个美国儿童将获两股 SpaceX 股份，一股来自公司、一股来自他本人。",
+      "url": "https://x.com/elonmusk/status/2125797463047258119"
+    },
+    {
+      "excerpt": "I asked Claude to populate a Civilization-style game map with real data from the US. Opus 5.5 downloaded and parse a ton of public data and 7 hours and 45K lines of code later... it works :)",
+      "excerpt_zh": "我让 Claude 用美国真实数据填充一张文明风格的游戏地图。Opus 5.5 下载并解析了大量公开数据，7 小时、4.5 万行代码之后……它能跑了 :)",
+      "handle": "karpathy",
+      "likes": 23707,
+      "name": "Andrej Karpathy",
+      "post_id": "2125779541952246039",
+      "tags": [
+        "model",
+        "code"
+      ],
+      "text_zh": "用 Opus 5.5 花 7 小时写出 4.5 万行代码，把美国真实数据做成文明风格地图。",
+      "url": "https://x.com/karpathy/status/2125779541952246039"
+    },
+    {
+      "excerpt": "We made a billing mistake at launch of GPT-6.2 that incorrectly discounted GPT-6.2 Astra and Sol usage for most users. \n\nWe’ve fixed this now, so the same work will use more of your plan’s usage allowance. Comparing to last week, you will reach your limits 40% faster on GPT-6.2",
+      "excerpt_zh": "我们在 GPT-6.2 发布时出现了计费错误，导致大多数用户的 GPT-6.2 Astra 和 Sol 用量被错误地打折。\n\n现已修复，因此同样的工作会占用你套餐里更多的用量额度。与上周相比，你用 GPT-6.2 会快 40% 达到上限。",
+      "handle": "thsottiaux",
+      "likes": 14498,
+      "name": "Tibo",
+      "post_id": "2125784147889393806",
+      "tags": [
+        "model",
+        "product"
+      ],
+      "text_zh": "称 GPT-6.2 发布时计费出错，修复后同样工作会快 40% 用完额度。",
+      "url": "https://x.com/thsottiaux/status/2125784147889393806"
+    },
+    {
+      "excerpt": "Ven was one of the earliest believers that we could use our then-current model to solve millenium prize problems.",
+      "excerpt_zh": "Ven 是最早相信我们可以用当时的模型去攻克千禧年大奖难题的人之一。",
+      "handle": "sama",
+      "likes": 5789,
+      "name": "Sam Altman",
+      "post_id": "2125990371897557278",
+      "tags": [
+        "model"
+      ],
+      "text_zh": "感谢 Ven 很早相信可用当时的模型冲击千禧年大奖难题。",
+      "url": "https://x.com/sama/status/2125990371897557278"
+    },
+    {
+      "excerpt": "If you use 1Password, recommend you to change ALL your passwords. It's a pain in the neck, but necessary. https://t.co/p5XpheMwVv",
+      "excerpt_zh": "如果你在用 1Password，建议把所有密码都改掉。很麻烦，但有必要。 https://t.co/p5XpheMwVv",
+      "handle": "cz_binance",
+      "likes": 2941,
+      "name": "CZ 🔶 BNB",
+      "post_id": "2125775937405137135",
+      "tags": [],
+      "text_zh": "提醒 1Password 用户务必修改全部密码，虽麻烦但有必要。",
+      "url": "https://x.com/cz_binance/status/2125775937405137135"
+    },
+    {
+      "excerpt": "Gemini 4 Neon built this interactive 3D oven planner to solve Thanksgiving's toughest oven jigsaw logistics problem. Dial in your turkey weight, sides, and serving time to map out rack space, resolve temp conflicts, and generate a printable minute-by-minute checklist.",
+      "excerpt_zh": "Gemini 4 Neon 做了这个交互式 3D 烤箱规划器，用来解决感恩节最难的烤箱「拼图」排布问题。输入火鸡重量、配菜和开饭时间，就能规划烤架空间、解决温度冲突，并生成可打印的逐分钟清单。",
+      "handle": "GeminiApp",
+      "likes": 1808,
+      "name": "Google Gemini",
+      "post_id": "2125989152575635789",
+      "tags": [
+        "model",
+        "product"
+      ],
+      "text_zh": "Gemini 4 Neon 做了感恩节烤箱 3D 排布工具，可生成分时清单。",
+      "url": "https://x.com/GeminiApp/status/2125989152575635789"
+    },
+    {
+      "excerpt": "A guy let Claude read his 1994 Jeep's engine computer through a $3 chip.\n\nIt found why the car kept failing smog, and he says it passed. \n\nThe whole thing cost about $15 in parts, and it's free on GitHub. https://t.co/E9kOFaX8sq",
+      "excerpt_zh": "有人用一枚 3 美元的芯片，让 Claude 读取他那辆 1994 年吉普的发动机电脑。\n\n它找出了这车总过不了排放检测的原因，他说后来通过了。\n\n全部零件大约 15 美元，而且在 GitHub 上免费。 https://t.co/E9kOFaX8sq",
+      "handle": "gregisenberg",
+      "likes": 1153,
+      "name": "GREG ISENBERG",
+      "post_id": "2126004403052445733",
+      "tags": [
+        "model",
+        "code"
+      ],
+      "text_zh": "有人用 3 美元芯片让 Claude 读 1994 年吉普发动机电脑，通过了排放检测。",
+      "url": "https://x.com/gregisenberg/status/2126004403052445733"
+    },
+    {
+      "excerpt": "Neon has doubled day over day usage on Perplexity (no default model routing), doing 100B+ tokens in a single day. It’s rare to see such an exponential growth for a model. We’ve merged in some harness improvements to address formatting issues that existed earlier.",
+      "excerpt_zh": "Neon 在 Perplexity 上的日用量翻倍（没有默认模型路由），单日 token 超过 1000 亿。这种指数级增长对一个模型来说很少见。我们已经合并了一些工具层改进，以解决早先存在的格式问题。",
+      "handle": "AravSrinivas",
+      "likes": 795,
+      "name": "Aravind Srinivas",
+      "post_id": "2125816545897312752",
+      "tags": [
+        "model"
+      ],
+      "text_zh": "称 Neon 在 Perplexity 日用量翻倍，单日 token 超过 1000 亿。",
+      "url": "https://x.com/AravSrinivas/status/2125816545897312752"
+    }
+  ],
+  "pin": [],
+  "summary_zh": [
+    "马斯克宣布每个美国儿童将获两股 SpaceX 股份，该帖获 31.4 万赞。",
+    "Karpathy 用 Opus 5.5 耗时 7 小时、写 4.5 万行代码，做成美国数据文明地图。",
+    "话题 Dan Koe +196%、千问 +55%；Dario 增粉 2.08 万，马斯克减粉约 6.4 万。"
+  ],
+  "topics_zh": "涨幅最大是 Dan Koe +195.6%（末日 528 条，基数较小），Qwen 千问 +54.7%（5488 条），Kimi +38.4%（1203 条），搞钱·副业 +31.8%，monk mode +24.3%，MCP +19.1%；GLM 智谱 -7.0%，Gemini -2.7%。"
+}

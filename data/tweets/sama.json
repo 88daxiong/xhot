@@ -2,6 +2,48 @@
   "handle": "sama",
   "tweets": [
     {
+      "created_at": "2026-11-26T16:29:38.000Z",
+      "id": "2125990371897557278",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 777,
+        "impression": 427624,
+        "like": 5789,
+        "quote": 81,
+        "reply": 362,
+        "retweet": 247
+      },
+      "url": "https://x.com/sama/status/2125990371897557278"
+    },
+    {
+      "created_at": "2026-11-26T16:04:31.000Z",
+      "id": "2125984053119836399",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 99,
+        "impression": 138175,
+        "like": 1862,
+        "quote": 12,
+        "reply": 113,
+        "retweet": 35
+      },
+      "url": "https://x.com/sama/status/2125984053119836399"
+    },
+    {
+      "created_at": "2026-11-26T16:02:41.000Z",
+      "id": "2125983591389974980",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 792,
+        "impression": 842939,
+        "like": 11304,
+        "quote": 117,
+        "reply": 798,
+        "retweet": 314
+      },
+      "url": "https://x.com/sama/status/2125983591389974980"
+    },
+    {
       "created_at": "2026-11-25T17:15:04.000Z",
       "id": "2125639418849714280",
       "lang": "en",
