@@ -2,6 +2,76 @@
   "handle": "justinsuntron",
   "tweets": [
     {
+      "created_at": "2026-11-27T06:42:00.000Z",
+      "id": "2126204876543627711",
+      "lang": "",
+      "metrics": {
+        "bookmark": 1,
+        "impression": 35437,
+        "like": 39,
+        "quote": 0,
+        "reply": 33,
+        "retweet": 3
+      },
+      "url": "https://x.com/justinsuntron/status/2126204876543627711"
+    },
+    {
+      "created_at": "2026-11-27T05:54:00.000Z",
+      "id": "2126192796927144275",
+      "lang": "",
+      "metrics": {
+        "bookmark": 1,
+        "impression": 47453,
+        "like": 75,
+        "quote": 2,
+        "reply": 35,
+        "retweet": 11
+      },
+      "url": "https://x.com/justinsuntron/status/2126192796927144275"
+    },
+    {
+      "created_at": "2026-11-27T05:29:30.000Z",
+      "id": "2126186631023763610",
+      "lang": "",
+      "metrics": {
+        "bookmark": 3,
+        "impression": 37688,
+        "like": 86,
+        "quote": 8,
+        "reply": 39,
+        "retweet": 13
+      },
+      "url": "https://x.com/justinsuntron/status/2126186631023763610"
+    },
+    {
+      "created_at": "2026-11-27T02:32:41.000Z",
+      "id": "2126142133526790186",
+      "lang": "",
+      "metrics": {
+        "bookmark": 3,
+        "impression": 46120,
+        "like": 80,
+        "quote": 4,
+        "reply": 46,
+        "retweet": 10
+      },
+      "url": "https://x.com/justinsuntron/status/2126142133526790186"
+    },
+    {
+      "created_at": "2026-11-27T02:32:15.000Z",
+      "id": "2126142027897409678",
+      "lang": "",
+      "metrics": {
+        "bookmark": 2,
+        "impression": 39092,
+        "like": 56,
+        "quote": 2,
+        "reply": 27,
+        "retweet": 4
+      },
+      "url": "https://x.com/justinsuntron/status/2126142027897409678"
+    },
+    {
       "created_at": "2026-11-26T11:49:00.000Z",
       "id": "2125919748391334067",
       "lang": "zh",
@@ -2730,76 +2800,6 @@
         "retweet": 7
       },
       "url": "https://x.com/justinsuntron/status/2112725330167480672"
-    },
-    {
-      "created_at": "2026-10-20T06:45:53.000Z",
-      "id": "2112435116152947111",
-      "lang": "",
-      "metrics": {
-        "bookmark": 5,
-        "impression": 48433,
-        "like": 147,
-        "quote": 4,
-        "reply": 77,
-        "retweet": 11
-      },
-      "url": "https://x.com/justinsuntron/status/2112435116152947111"
-    },
-    {
-      "created_at": "2026-10-20T01:46:00.000Z",
-      "id": "2112359646879002721",
-      "lang": "",
-      "metrics": {
-        "bookmark": 2,
-        "impression": 20975,
-        "like": 34,
-        "quote": 3,
-        "reply": 19,
-        "retweet": 2
-      },
-      "url": "https://x.com/justinsuntron/status/2112359646879002721"
-    },
-    {
-      "created_at": "2026-10-19T14:17:04.000Z",
-      "id": "2112186273612055033",
-      "lang": "",
-      "metrics": {
-        "bookmark": 5,
-        "impression": 63837,
-        "like": 122,
-        "quote": 2,
-        "reply": 52,
-        "retweet": 16
-      },
-      "url": "https://x.com/justinsuntron/status/2112186273612055033"
-    },
-    {
-      "created_at": "2026-10-19T12:28:21.000Z",
-      "id": "2112158914502603210",
-      "lang": "",
-      "metrics": {
-        "bookmark": 2,
-        "impression": 52684,
-        "like": 55,
-        "quote": 1,
-        "reply": 27,
-        "retweet": 7
-      },
-      "url": "https://x.com/justinsuntron/status/2112158914502603210"
-    },
-    {
-      "created_at": "2026-10-19T09:17:37.000Z",
-      "id": "2112110911834173638",
-      "lang": "",
-      "metrics": {
-        "bookmark": 10,
-        "impression": 104498,
-        "like": 204,
-        "quote": 4,
-        "reply": 62,
-        "retweet": 15
-      },
-      "url": "https://x.com/justinsuntron/status/2112110911834173638"
     }
   ],
   "user_id": "902839045356744704"
