@@ -2,6 +2,34 @@
   "handle": "laobaishare",
   "tweets": [
     {
+      "created_at": "2026-11-28T02:00:03.000Z",
+      "id": "2126496312392863980",
+      "lang": "",
+      "metrics": {
+        "bookmark": 2,
+        "impression": 1231,
+        "like": 0,
+        "quote": 0,
+        "reply": 0,
+        "retweet": 0
+      },
+      "url": "https://x.com/laobaishare/status/2126496312392863980"
+    },
+    {
+      "created_at": "2026-11-28T02:00:03.000Z",
+      "id": "2126496310098641266",
+      "lang": "",
+      "metrics": {
+        "bookmark": 1,
+        "impression": 4423,
+        "like": 4,
+        "quote": 0,
+        "reply": 1,
+        "retweet": 1
+      },
+      "url": "https://x.com/laobaishare/status/2126496310098641266"
+    },
+    {
       "created_at": "2026-11-27T13:48:01.000Z",
       "id": "2126312087077200141",
       "lang": "",
@@ -2772,34 +2800,6 @@
         "retweet": 1
       },
       "url": "https://x.com/laobaishare/status/2121132210539614603"
-    },
-    {
-      "created_at": "2026-11-13T06:45:01.000Z",
-      "id": "2121132208773828806",
-      "lang": "",
-      "metrics": {
-        "bookmark": 0,
-        "impression": 183,
-        "like": 0,
-        "quote": 0,
-        "reply": 1,
-        "retweet": 0
-      },
-      "url": "https://x.com/laobaishare/status/2121132208773828806"
-    },
-    {
-      "created_at": "2026-11-13T06:45:01.000Z",
-      "id": "2121132207129714848",
-      "lang": "",
-      "metrics": {
-        "bookmark": 1,
-        "impression": 282,
-        "like": 2,
-        "quote": 0,
-        "reply": 1,
-        "retweet": 0
-      },
-      "url": "https://x.com/laobaishare/status/2121132207129714848"
     }
   ],
   "user_id": "1398934230407606278"

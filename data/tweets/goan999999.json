@@ -2,6 +2,118 @@
   "handle": "goan999999",
   "tweets": [
     {
+      "created_at": "2026-11-28T11:20:46.000Z",
+      "id": "2126637421366476931",
+      "lang": "",
+      "metrics": {
+        "bookmark": 1,
+        "impression": 173,
+        "like": 1,
+        "quote": 0,
+        "reply": 1,
+        "retweet": 0
+      },
+      "url": "https://x.com/goan999999/status/2126637421366476931"
+    },
+    {
+      "created_at": "2026-11-28T10:21:58.000Z",
+      "id": "2126622623958532217",
+      "lang": "",
+      "metrics": {
+        "bookmark": 2,
+        "impression": 570,
+        "like": 4,
+        "quote": 0,
+        "reply": 3,
+        "retweet": 0
+      },
+      "url": "https://x.com/goan999999/status/2126622623958532217"
+    },
+    {
+      "created_at": "2026-11-28T09:28:50.000Z",
+      "id": "2126609249426149884",
+      "lang": "",
+      "metrics": {
+        "bookmark": 7,
+        "impression": 1202,
+        "like": 7,
+        "quote": 1,
+        "reply": 6,
+        "retweet": 0
+      },
+      "url": "https://x.com/goan999999/status/2126609249426149884"
+    },
+    {
+      "created_at": "2026-11-28T08:48:48.000Z",
+      "id": "2126599174863089682",
+      "lang": "",
+      "metrics": {
+        "bookmark": 3,
+        "impression": 706,
+        "like": 2,
+        "quote": 0,
+        "reply": 0,
+        "retweet": 0
+      },
+      "url": "https://x.com/goan999999/status/2126599174863089682"
+    },
+    {
+      "created_at": "2026-11-28T07:21:45.000Z",
+      "id": "2126577268692848888",
+      "lang": "",
+      "metrics": {
+        "bookmark": 4,
+        "impression": 687,
+        "like": 3,
+        "quote": 1,
+        "reply": 2,
+        "retweet": 0
+      },
+      "url": "https://x.com/goan999999/status/2126577268692848888"
+    },
+    {
+      "created_at": "2026-11-28T06:03:12.000Z",
+      "id": "2126557502796177740",
+      "lang": "",
+      "metrics": {
+        "bookmark": 74,
+        "impression": 3934,
+        "like": 46,
+        "quote": 0,
+        "reply": 5,
+        "retweet": 12
+      },
+      "url": "https://x.com/goan999999/status/2126557502796177740"
+    },
+    {
+      "created_at": "2026-11-28T03:22:27.000Z",
+      "id": "2126517048071319980",
+      "lang": "",
+      "metrics": {
+        "bookmark": 3,
+        "impression": 873,
+        "like": 7,
+        "quote": 0,
+        "reply": 1,
+        "retweet": 1
+      },
+      "url": "https://x.com/goan999999/status/2126517048071319980"
+    },
+    {
+      "created_at": "2026-11-28T03:00:56.000Z",
+      "id": "2126511630842507329",
+      "lang": "",
+      "metrics": {
+        "bookmark": 3,
+        "impression": 2598,
+        "like": 6,
+        "quote": 0,
+        "reply": 3,
+        "retweet": 1
+      },
+      "url": "https://x.com/goan999999/status/2126511630842507329"
+    },
+    {
       "created_at": "2026-11-27T13:55:59.000Z",
       "id": "2126314093183389957",
       "lang": "",
@@ -2688,118 +2800,6 @@
         "retweet": 2
       },
       "url": "https://x.com/goan999999/status/2119673260480553261"
-    },
-    {
-      "created_at": "2026-11-09T04:35:51.000Z",
-      "id": "2119650149937115437",
-      "lang": "zh",
-      "metrics": {
-        "bookmark": 14,
-        "impression": 4992,
-        "like": 23,
-        "quote": 1,
-        "reply": 5,
-        "retweet": 4
-      },
-      "url": "https://x.com/goan999999/status/2119650149937115437"
-    },
-    {
-      "created_at": "2026-11-09T03:53:11.000Z",
-      "id": "2119639411558392059",
-      "lang": "zh",
-      "metrics": {
-        "bookmark": 271,
-        "impression": 16677,
-        "like": 154,
-        "quote": 3,
-        "reply": 22,
-        "retweet": 15
-      },
-      "url": "https://x.com/goan999999/status/2119639411558392059"
-    },
-    {
-      "created_at": "2026-11-09T02:51:21.000Z",
-      "id": "2119623850195665347",
-      "lang": "zh",
-      "metrics": {
-        "bookmark": 37,
-        "impression": 19644,
-        "like": 21,
-        "quote": 2,
-        "reply": 11,
-        "retweet": 4
-      },
-      "url": "https://x.com/goan999999/status/2119623850195665347"
-    },
-    {
-      "created_at": "2026-11-08T17:01:07.000Z",
-      "id": "2119475314749546571",
-      "lang": "zh",
-      "metrics": {
-        "bookmark": 1,
-        "impression": 565,
-        "like": 3,
-        "quote": 1,
-        "reply": 0,
-        "retweet": 0
-      },
-      "url": "https://x.com/goan999999/status/2119475314749546571"
-    },
-    {
-      "created_at": "2026-11-08T13:19:21.000Z",
-      "id": "2119419502823985244",
-      "lang": "zh",
-      "metrics": {
-        "bookmark": 0,
-        "impression": 865,
-        "like": 9,
-        "quote": 0,
-        "reply": 0,
-        "retweet": 0
-      },
-      "url": "https://x.com/goan999999/status/2119419502823985244"
-    },
-    {
-      "created_at": "2026-11-08T12:55:44.000Z",
-      "id": "2119413560212324635",
-      "lang": "zh",
-      "metrics": {
-        "bookmark": 11,
-        "impression": 1884,
-        "like": 8,
-        "quote": 0,
-        "reply": 1,
-        "retweet": 1
-      },
-      "url": "https://x.com/goan999999/status/2119413560212324635"
-    },
-    {
-      "created_at": "2026-11-08T09:33:00.000Z",
-      "id": "2119362541172527458",
-      "lang": "zh",
-      "metrics": {
-        "bookmark": 3,
-        "impression": 876,
-        "like": 2,
-        "quote": 0,
-        "reply": 2,
-        "retweet": 0
-      },
-      "url": "https://x.com/goan999999/status/2119362541172527458"
-    },
-    {
-      "created_at": "2026-11-08T08:45:00.000Z",
-      "id": "2119350461450916071",
-      "lang": "zh",
-      "metrics": {
-        "bookmark": 163,
-        "impression": 10663,
-        "like": 203,
-        "quote": 1,
-        "reply": 6,
-        "retweet": 32
-      },
-      "url": "https://x.com/goan999999/status/2119350461450916071"
     }
   ],
   "user_id": "1466773942371520514"

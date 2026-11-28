@@ -2,6 +2,20 @@
   "handle": "pluvio9yte",
   "tweets": [
     {
+      "created_at": "2026-11-28T04:30:56.000Z",
+      "id": "2126534279832486112",
+      "lang": "",
+      "metrics": {
+        "bookmark": 23,
+        "impression": 3300,
+        "like": 26,
+        "quote": 0,
+        "reply": 9,
+        "retweet": 1
+      },
+      "url": "https://x.com/Pluvio9yte/status/2126534279832486112"
+    },
+    {
       "created_at": "2026-11-27T04:00:05.000Z",
       "id": "2126164130596065755",
       "lang": "zh",
@@ -2786,20 +2800,6 @@
         "retweet": 1
       },
       "url": "https://x.com/Pluvio9yte/status/2107845895102620074"
-    },
-    {
-      "created_at": "2026-10-07T12:54:41.000Z",
-      "id": "2107816885828125006",
-      "lang": "",
-      "metrics": {
-        "bookmark": 0,
-        "impression": 1538,
-        "like": 5,
-        "quote": 0,
-        "reply": 1,
-        "retweet": 0
-      },
-      "url": "https://x.com/Pluvio9yte/status/2107816885828125006"
     }
   ],
   "user_id": "1667439202357899267"

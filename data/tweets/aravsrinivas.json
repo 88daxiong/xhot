@@ -2,6 +2,34 @@
   "handle": "aravsrinivas",
   "tweets": [
     {
+      "created_at": "2026-11-28T07:41:56.000Z",
+      "id": "2126582346937930238",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 102,
+        "impression": 27830,
+        "like": 264,
+        "quote": 5,
+        "reply": 81,
+        "retweet": 17
+      },
+      "url": "https://x.com/AravSrinivas/status/2126582346937930238"
+    },
+    {
+      "created_at": "2026-11-28T04:10:25.000Z",
+      "id": "2126529117466345619",
+      "lang": "en",
+      "metrics": {
+        "bookmark": 17,
+        "impression": 23948,
+        "like": 176,
+        "quote": 9,
+        "reply": 58,
+        "retweet": 6
+      },
+      "url": "https://x.com/AravSrinivas/status/2126529117466345619"
+    },
+    {
       "created_at": "2026-11-27T22:15:11.000Z",
       "id": "2126439722746785869",
       "lang": "",
@@ -2772,34 +2800,6 @@
         "retweet": 3
       },
       "url": "https://x.com/AravSrinivas/status/2110414597585047637"
-    },
-    {
-      "created_at": "2026-10-14T16:23:04.000Z",
-      "id": "2110406042114990162",
-      "lang": "",
-      "metrics": {
-        "bookmark": 42,
-        "impression": 19181,
-        "like": 190,
-        "quote": 2,
-        "reply": 22,
-        "retweet": 7
-      },
-      "url": "https://x.com/AravSrinivas/status/2110406042114990162"
-    },
-    {
-      "created_at": "2026-10-14T15:17:50.000Z",
-      "id": "2110389625277813212",
-      "lang": "",
-      "metrics": {
-        "bookmark": 291,
-        "impression": 45155,
-        "like": 802,
-        "quote": 11,
-        "reply": 71,
-        "retweet": 41
-      },
-      "url": "https://x.com/AravSrinivas/status/2110389625277813212"
     }
   ],
   "user_id": "759894532649545732"
