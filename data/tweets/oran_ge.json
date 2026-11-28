@@ -2,6 +2,20 @@
   "handle": "oran_ge",
   "tweets": [
     {
+      "created_at": "2026-11-27T00:08:27.000Z",
+      "id": "2126105837416718663",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 1,
+        "impression": 2249,
+        "like": 0,
+        "quote": 0,
+        "reply": 1,
+        "retweet": 0
+      },
+      "url": "https://x.com/oran_ge/status/2126105837416718663"
+    },
+    {
       "created_at": "2026-11-27T00:01:13.000Z",
       "id": "2126104017147474204",
       "lang": "",
@@ -2786,20 +2800,6 @@
         "retweet": 1
       },
       "url": "https://x.com/oran_ge/status/2109239962935976035"
-    },
-    {
-      "created_at": "2026-10-11T08:54:09.000Z",
-      "id": "2109205903937515600",
-      "lang": "zh",
-      "metrics": {
-        "bookmark": 76,
-        "impression": 20251,
-        "like": 84,
-        "quote": 5,
-        "reply": 37,
-        "retweet": 6
-      },
-      "url": "https://x.com/oran_ge/status/2109205903937515600"
     }
   ],
   "user_id": "6782882"

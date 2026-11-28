@@ -2,6 +2,48 @@
   "handle": "thedankoe",
   "tweets": [
     {
+      "created_at": "2026-11-27T18:10:44.000Z",
+      "id": "2126378202222477807",
+      "lang": "",
+      "metrics": {
+        "bookmark": 20,
+        "impression": 7239,
+        "like": 11,
+        "quote": 0,
+        "reply": 1,
+        "retweet": 1
+      },
+      "url": "https://x.com/thedankoe/status/2126378202222477807"
+    },
+    {
+      "created_at": "2026-11-27T18:07:19.000Z",
+      "id": "2126377342075539604",
+      "lang": "",
+      "metrics": {
+        "bookmark": 21,
+        "impression": 9122,
+        "like": 22,
+        "quote": 0,
+        "reply": 2,
+        "retweet": 0
+      },
+      "url": "https://x.com/thedankoe/status/2126377342075539604"
+    },
+    {
+      "created_at": "2026-11-27T18:06:54.000Z",
+      "id": "2126377239235477689",
+      "lang": "",
+      "metrics": {
+        "bookmark": 278,
+        "impression": 42767,
+        "like": 370,
+        "quote": 4,
+        "reply": 31,
+        "retweet": 15
+      },
+      "url": "https://x.com/thedankoe/status/2126377239235477689"
+    },
+    {
       "created_at": "2026-11-25T17:32:32.000Z",
       "id": "2125643815122002300",
       "lang": "",

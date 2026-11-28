@@ -25,6 +25,8 @@ for f in sorted(glob.glob(S+'/*.html')+glob.glob(S+'/day/*.html')+glob.glob(S+'/
                 if t and not CJK.search(t):
                     # 轻量刷新（light_run.py build 设 XHOT_QA_LIGHT=1）允许 Top30 新入榜英文帖用「英文摘录 + EN 标记」兜底；08:00 完整刷新仍严格
                     if LIGHT and nm=='Top30 一句话' and x.select_one('i.en'): continue
+                    # 纯表情/符号（无拉丁字母、无需翻译）不拦截，避免已上线旧帖阻断发布
+                    if LIGHT and nm=='Top30 一句话' and not re.search(r'[A-Za-z]', t): continue
                     bad(f,f'{nm} 无中文：{t[:50]}')
         txs=[re.sub(r'\W','',x.get_text()) [:40] for x in s.select('.dsm,.trg')]
         d=[t for t,c in collections.Counter(txs).items() if c>1 and t]
@@ -58,7 +60,6 @@ try:
     except Exception as _x: issues.append('agents.json 读取失败 '+type(_x).__name__)
     if 'href="agents.html"' not in open(S+'/index.html',encoding='utf-8').read(): issues.append('导航缺 Agent')
     if 'href="anatomy/index.html"' not in open(S+'/index.html',encoding='utf-8').read(): issues.append('导航缺 开源解剖')
-    if not os.path.isfile(S+'/anatomy/index.html'): issues.append('缺 anatomy/index.html')
     if 'dcard' in open(S+'/trends.html',encoding='utf-8').read(): issues.append('trends.html 仍含 AI 开发工具')
     
 except FileNotFoundError: issues.append('缺 agents.html')

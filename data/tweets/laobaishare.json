@@ -2,6 +2,48 @@
   "handle": "laobaishare",
   "tweets": [
     {
+      "created_at": "2026-11-27T13:48:01.000Z",
+      "id": "2126312087077200141",
+      "lang": "",
+      "metrics": {
+        "bookmark": 5,
+        "impression": 3869,
+        "like": 18,
+        "quote": 0,
+        "reply": 3,
+        "retweet": 2
+      },
+      "url": "https://x.com/laobaishare/status/2126312087077200141"
+    },
+    {
+      "created_at": "2026-11-27T13:06:00.000Z",
+      "id": "2126301513417171199",
+      "lang": "",
+      "metrics": {
+        "bookmark": 113,
+        "impression": 36108,
+        "like": 152,
+        "quote": 1,
+        "reply": 1,
+        "retweet": 8
+      },
+      "url": "https://x.com/laobaishare/status/2126301513417171199"
+    },
+    {
+      "created_at": "2026-11-27T13:01:13.000Z",
+      "id": "2126300311203844385",
+      "lang": "",
+      "metrics": {
+        "bookmark": 2,
+        "impression": 4797,
+        "like": 2,
+        "quote": 0,
+        "reply": 3,
+        "retweet": 1
+      },
+      "url": "https://x.com/laobaishare/status/2126300311203844385"
+    },
+    {
       "created_at": "2026-11-27T11:02:04.000Z",
       "id": "2126270325516284380",
       "lang": "zh",
@@ -2758,48 +2800,6 @@
         "retweet": 0
       },
       "url": "https://x.com/laobaishare/status/2121132207129714848"
-    },
-    {
-      "created_at": "2026-11-13T06:45:01.000Z",
-      "id": "2121132205531644358",
-      "lang": "",
-      "metrics": {
-        "bookmark": 9,
-        "impression": 3046,
-        "like": 7,
-        "quote": 0,
-        "reply": 5,
-        "retweet": 0
-      },
-      "url": "https://x.com/laobaishare/status/2121132205531644358"
-    },
-    {
-      "created_at": "2026-11-13T03:49:34.000Z",
-      "id": "2121088054786216061",
-      "lang": "",
-      "metrics": {
-        "bookmark": 3,
-        "impression": 3331,
-        "like": 8,
-        "quote": 0,
-        "reply": 2,
-        "retweet": 1
-      },
-      "url": "https://x.com/laobaishare/status/2121088054786216061"
-    },
-    {
-      "created_at": "2026-11-13T03:14:11.000Z",
-      "id": "2121079149792223307",
-      "lang": "",
-      "metrics": {
-        "bookmark": 4,
-        "impression": 2444,
-        "like": 9,
-        "quote": 0,
-        "reply": 0,
-        "retweet": 1
-      },
-      "url": "https://x.com/laobaishare/status/2121079149792223307"
     }
   ],
   "user_id": "1398934230407606278"

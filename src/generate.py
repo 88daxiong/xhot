@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """XHOT v15 生成器（任务导向重构）：今日 · 领域 · 人物 · 资讯 · 趋势 + ⌘K 搜索
   index.html 今日（最新一期） · day/<date>.html 往期 · d/<ai|money|growth|all>.html 领域/归档 · people.html 人物目录 · p/<handle>.html 人物页
-  news.html 资讯 · trends.html 趋势 · agents.html Agent（AI 开发工具）· anatomy/ 开源解剖；hot.html / accounts.html / daily/<date>.html 为旧链接跳转页
+  news.html 资讯 · trends.html 趋势 · agents.html Agent（AI 开发工具）；hot.html / accounts.html / daily/<date>.html 为旧链接跳转页
   assets/：style.<h>.css · core/news/feed.<h>.js · search.<h>.json · av/ 头像；feed/<day>.<h>.json 按天分片；p/<handle>.<h>.json 个人分片
   公开数据策略（TEXT_MODE=excerpt，默认）：站点与 data/ 只含帖子 ID、指标、短摘录（≤220 字，日报必读 ≤320 字）+ 中文要点 + 原帖链接，不含推文全文。
   用法：python3 generate.py [输出目录]"""
@@ -212,7 +212,8 @@ def excerpt(t,n):
     return (cut[:m] if m>=n*0.7 else cut).rstrip(' ,，、')+'…'
 def is_en(t):
     t=re.sub(r'https?://\S+|[@#]\w+','',t or ''); cj=len(re.findall(r'[\u3400-\u9fff]',t)); la=len(re.findall(r'[A-Za-z]',t))
-    return la>=12 and cj<=max(2,0.05*(cj+la))
+    # 短纯拉丁文（如 "has landed"）也算英文，否则 Top30 兜底没有 EN 标记，轻量 QA 会误杀
+    return (la>=12 and cj<=max(2,0.05*(cj+la))) or (la>=4 and cj==0)
 def clean1(t,n=96):
     t=re.sub(r'https?://\S+','',t or ''); t=re.sub(r'\s+',' ',t).strip(); return t if len(t)<=n else t[:n].rstrip(' ,，、。')+'…'
 def xlink(h,i): return f'https://x.com/{h}/status/{i}'
@@ -621,7 +622,7 @@ if os.environ.get('XHOT_DRAFT'):
           is_english=p['en'],created_at=p['ts'],excerpt=excerpt(p['t'],EXCH),has_gist=p['id'] in _d.get('gists',{})) for p in _rows],ensure_ascii=False,indent=1)); sys.exit(0)
 def gist_of(p,G):
     g=G.get(p['id'])
-    if g: return g,False
+    if g: return g,is_en(g)
     return clean1(p['ex'],100),p['en']
 
 # ---- 周要点草稿模式：XHOT_WEEKLY=1 → 打印本周 Top 30 人物及其最热 3 帖摘录后退出 ----
@@ -825,12 +826,10 @@ def about_page():
       f'<li><b>X</b>：通过 X 官方 API（只读，开发者账号授权）获取公开帖子与账号资料。站内展示的是<b>短摘录</b>、互动数字和指向原帖的链接；每条都可点「在 X 打开」查看完整原文。{L("https://developer.x.com/en/developer-terms/agreement-and-policy","X 开发者协议与政策")}适用于这些内容。头像为小尺寸缓存，仅用于标识作者。</li>'
       f'<li><b>AIHOT</b>：资讯页的精选与热点来自 {L("https://aihot.news","aihot.news")} 的公开 API，按其 MIT 许可使用并署名；文章原文版权属于原站，本站只给链接。许可声明见仓库中的 LICENSE-THIRD-PARTY.md。</li>'
       f'<li><b>GitHub Trending</b>：趋势页读取 {L("https://github.com/trending","GitHub Trending")} 公开页面中的项目名与星标数，只做索引并链接到项目主页，不转载项目内容；每日一次，不做高频抓取。 Agent 页另用 GitHub 公开搜索 API（不登录，每天约 20 次）补充近期新建项目与创建日期；项目一句话中文介绍由 AI 助手撰写，以项目主页为准。</li>'
-      '<li><b>开源解剖</b>：<code>anatomy/</code> 下的独立页面，依据公开仓库源码做机制拆解，并链接到指定提交的永久地址；不转载项目全部源码。源文件在本仓库 <code>src/anatomy/</code>，生成时原样复制到站点。</li>'
       '</ul></section>'
       '<section class="abt"><h2>哪些内容是 AI 生成的</h2><ul>'
       '<li>「今天一眼看完」「必读」中的<b>中文要点</b>、英文帖的<b>中文译文</b>（带「译」标记）、人物「本周要点」和话题解读，均由 AI 助手自动整理，<b>不是 X 官方内容，也不代表原作者的表述</b>，可能有误；以原帖为准。</li>'
-      '<li>热度、重要度、标签是公开的规则公式 / 关键词规则计算的结果，不是 X 官方排名。</li>'
-      '<li>「开源解剖」中的机制拆解由 AI 助手根据当时检出的公开源码整理，<b>不是项目官方文档</b>，可能有误；以仓库原文和文中注明的版本 / 提交为准。</li></ul></section>'
+      '<li>热度、重要度、标签是公开的规则公式 / 关键词规则计算的结果，不是 X 官方排名。</li></ul></section>'
       '<section class="abt"><h2>内容撤下与合规</h2><ul>'
       '<li>每天刷新一次；X 已删除、改为受保护或不再可获取的帖子，会在下一轮刷新后撤下。站点另有一份撤下清单，可按帖子或账号即时屏蔽。</li>'
       f'<li>如果你是原作者或相关方，希望撤下某条内容、头像或整个账号，请在 {L("https://github.com/88daxiong/xhot/issues","GitHub Issues")} 留言（只需给出帖子或账号链接，不要提供个人隐私信息），我们会尽快处理。</li>'
@@ -948,21 +947,6 @@ write('_headers',"""/*
 /p/*.json
   Cache-Control: public, max-age=31536000, immutable
 """)
-# 开源解剖：手写静态页。源文件在 src/anatomy/，生成时原样复制到输出目录 anatomy/ 并登记 EMIT，避免清理阶段删除。
-# 新增文章：在 src/anatomy/ 放入独立 HTML（及同目录静态资源），并在 anatomy/index.html 加卡片，然后重新生成。
-def emit_anatomy():
-    src=os.path.join(D,'anatomy')
-    if not os.path.isdir(src):
-        return
-    for root, ds, fs in os.walk(src):
-        ds[:] = [x for x in ds if not x.startswith('.')]
-        for f in fs:
-            if f.startswith('.') or not f.endswith(('.html','.js','.css','.json','.svg','.txt')):
-                continue
-            path=os.path.join(root,f)
-            rel=os.path.relpath(path, src)
-            write(os.path.join('anatomy', rel), open(path,'rb').read())
-emit_anatomy()
 # 清理：只保留本次产出的文件
 for root,ds,fs in os.walk(OUT,topdown=False):
     for f in fs:

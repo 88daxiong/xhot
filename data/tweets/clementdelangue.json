@@ -2,6 +2,34 @@
   "handle": "clementdelangue",
   "tweets": [
     {
+      "created_at": "2026-11-27T14:56:50.000Z",
+      "id": "2126329405093867686",
+      "lang": "",
+      "metrics": {
+        "bookmark": 567,
+        "impression": 43883,
+        "like": 1295,
+        "quote": 24,
+        "reply": 91,
+        "retweet": 123
+      },
+      "url": "https://x.com/ClementDelangue/status/2126329405093867686"
+    },
+    {
+      "created_at": "2026-11-27T14:28:04.000Z",
+      "id": "2126322165364719677",
+      "lang": "",
+      "metrics": {
+        "bookmark": 920,
+        "impression": 150270,
+        "like": 4376,
+        "quote": 90,
+        "reply": 191,
+        "retweet": 447
+      },
+      "url": "https://x.com/ClementDelangue/status/2126322165364719677"
+    },
+    {
       "created_at": "2026-11-25T20:51:40.000Z",
       "id": "2125693927735115943",
       "lang": "en",

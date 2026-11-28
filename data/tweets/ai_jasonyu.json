@@ -2,6 +2,62 @@
   "handle": "ai_jasonyu",
   "tweets": [
     {
+      "created_at": "2026-11-27T07:23:58.000Z",
+      "id": "2126215438392852930",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 1,
+        "impression": 10920,
+        "like": 5,
+        "quote": 0,
+        "reply": 8,
+        "retweet": 0
+      },
+      "url": "https://x.com/AI_Jasonyu/status/2126215438392852930"
+    },
+    {
+      "created_at": "2026-11-27T06:45:59.000Z",
+      "id": "2126205881721520324",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 0,
+        "impression": 702,
+        "like": 0,
+        "quote": 0,
+        "reply": 0,
+        "retweet": 0
+      },
+      "url": "https://x.com/AI_Jasonyu/status/2126205881721520324"
+    },
+    {
+      "created_at": "2026-11-27T06:21:33.000Z",
+      "id": "2126199730224959817",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 1,
+        "impression": 2163,
+        "like": 8,
+        "quote": 0,
+        "reply": 8,
+        "retweet": 0
+      },
+      "url": "https://x.com/AI_Jasonyu/status/2126199730224959817"
+    },
+    {
+      "created_at": "2026-11-27T04:17:03.000Z",
+      "id": "2126168398702797077",
+      "lang": "zh",
+      "metrics": {
+        "bookmark": 7,
+        "impression": 5571,
+        "like": 7,
+        "quote": 0,
+        "reply": 7,
+        "retweet": 1
+      },
+      "url": "https://x.com/AI_Jasonyu/status/2126168398702797077"
+    },
+    {
       "created_at": "2026-11-26T15:36:51.000Z",
       "id": "2125977088318742749",
       "lang": "ja",
@@ -2744,62 +2800,6 @@
         "retweet": 0
       },
       "url": "https://x.com/AI_Jasonyu/status/2109638007489782110"
-    },
-    {
-      "created_at": "2026-10-12T12:00:00.000Z",
-      "id": "2109615065297219766",
-      "lang": "zh",
-      "metrics": {
-        "bookmark": 39,
-        "impression": 8683,
-        "like": 40,
-        "quote": 1,
-        "reply": 13,
-        "retweet": 3
-      },
-      "url": "https://x.com/AI_Jasonyu/status/2109615065297219766"
-    },
-    {
-      "created_at": "2026-10-12T06:43:52.000Z",
-      "id": "2109535504270323821",
-      "lang": "zh",
-      "metrics": {
-        "bookmark": 135,
-        "impression": 18472,
-        "like": 88,
-        "quote": 0,
-        "reply": 11,
-        "retweet": 6
-      },
-      "url": "https://x.com/AI_Jasonyu/status/2109535504270323821"
-    },
-    {
-      "created_at": "2026-10-12T03:52:53.000Z",
-      "id": "2109492474926535086",
-      "lang": "zh",
-      "metrics": {
-        "bookmark": 4,
-        "impression": 10825,
-        "like": 7,
-        "quote": 0,
-        "reply": 6,
-        "retweet": 0
-      },
-      "url": "https://x.com/AI_Jasonyu/status/2109492474926535086"
-    },
-    {
-      "created_at": "2026-10-12T02:22:08.000Z",
-      "id": "2109469640477061164",
-      "lang": "en",
-      "metrics": {
-        "bookmark": 1,
-        "impression": 10033,
-        "like": 12,
-        "quote": 0,
-        "reply": 13,
-        "retweet": 0
-      },
-      "url": "https://x.com/AI_Jasonyu/status/2109469640477061164"
     }
   ],
   "user_id": "756319701861601281"

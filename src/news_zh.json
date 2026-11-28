@@ -1,410 +1,1854 @@
 {
- "Debate on X over ranking artificial intelligence among humanity's greatest inventions compared to fire and the wheel": {
-  "t": "X 上热议：AI 能否与火、轮子并列为人类最伟大的发明",
-  "h": "X 用户在争论 AI 是否算得上人类最伟大的发明之一，与火和轮子相提并论；批评者则认为它远不如这些发明。"
- },
- "Finance Firm Ditches SaaS for Custom AI-Built Tools": {
-  "t": "金融公司弃用 SaaS，改用 AI 自建工具",
-  "h": "Charlotte Lee 分享：她的金融公司不再购买现成软件，而是请工程师为自己定制工具，带来了实实在在的业务收益。"
- },
- "Discussions on X about AI's Transformative Impact on Jobs and Society Comparable to Fire and the Internet": {
-  "t": "X 热议 AI 对就业与社会的冲击：堪比火与互联网",
-  "h": "用户把 AI 称作继火、电以来最重要的进步，并把现在的怀疑与当年对电商的早期质疑相比较。"
- },
- "AI Tools Promise to Transform Video Game Development": {
-  "t": "AI 工具有望改变游戏开发",
-  "h": "独立开发者如今可以做出过去需要庞大团队才能完成的高质量游戏，AI 大幅降低了 3A 大作的成本门槛。"
- },
- "AI Coding Tools Spark Debate on Software's Future": {
-  "t": "AI 编程工具引发「软件未来」之争",
-  "h": "DHH 附和 Anthropic CEO Dario Amodei 的预测：AI 很快会端到端地完成大部分软件工程工作。"
- },
- "Gakku Launches AI Coach for Kids' Writing and Thinking Skills": {
-  "t": "Gakku 推出面向儿童的写作与思考 AI 教练",
-  "h": "一个友好的 AI 会和孩子聊他们天马行空的想法，帮助孩子建立自信，而不是催着给出标准答案。"
- },
- "Malfoid AI Video Fuels Harry Potter Fandom AI Debate": {
-  "t": "AI 生成的「马尔福」视频引发哈利·波特粉丝对 AI 创作的争论",
-  "h": "视频里金发动漫风的德拉科·马尔福身穿斯莱特林长袍施放守护神咒，播放量达数百万，粉丝对 AI 在创作中的角色意见分裂。"
- },
- "Wall Street Warns of Massive Capital Destruction in AI Surge": {
-  "t": "华尔街警告：AI 热潮背后可能出现大规模资本毁灭",
-  "h": "杰富瑞策略师 Chris Wood 认为，廉价的中国 AI 模型正在挑战美国领先者，未来可能出现「大规模资本毁灭」。"
- },
- "Meme Flips 'Learn to Code' Advice to 'Learn to Weld'": {
-  "t": "梗图把「去学编程」翻转成「去学焊接」",
-  "h": "2010 年，工厂工人被人嘲讽「去学编程吧」；如今背着债的毕业生从技工那里听到「去学焊接吧」，折射出 AI 对软件行业的冲击。"
- },
- "PoIiMath Posts Claim That AI Tools Expose Personal Limitations in Creativity and Coding Rather Than Causing a Crash": {
-  "t": "PoIiMath：AI 暴露的是个人创造力与编码的局限，而非引发崩盘",
-  "h": "该帖认为真正的「AI 崩盘」发生在人们意识到自己创造、产出和成功的能力不足，且无法靠 AI 补上的时候。"
- },
- "Gakku AI Coach Launches to Teach Kids Thinking Over Answers": {
-  "t": "Gakku AI 教练上线：教孩子思考而不是背答案",
-  "h": "一个友好的 AI 伙伴与孩子聊天，帮他们重新审视想法、找到自己的表达，而不是只吐出事实。"
- },
- "OpenAI Shares Hundreds of AI-Generated Math Breakthroughs Including Quasi-Riemann Advance": {
-  "t": "OpenAI 公布数百篇 AI 生成的数学成果，含「类黎曼」进展",
-  "h": "OpenAI 发布了内部 AI 模型写出的 722 篇数学论文，称在类黎曼猜想等难题上取得进展；数学家反应既惊叹又谨慎。"
- },
- "Fields Medal Winner Cries Over OpenAI's AI Math Breakthroughs": {
-  "t": "菲尔兹奖得主看到 OpenAI 的 AI 数学成果后落泪",
-  "h": "2022 年菲尔兹奖得主 Hugo Duminil-Copin 在视频会议上得知 OpenAI 公布了约 700 篇攻克未解数学问题的 AI 论文（其中 16 篇涉及他的领域），当场落泪。"
- },
- "Doctor Bhooshan Shukla Sparks Debate on X about AI's Potential to Replace Doctors in Diagnosis, Prescribing, and Patient Care": {
-  "t": "医生 Bhooshan Shukla 发起讨论：AI 能否取代医生",
-  "h": "他在 X 上主张 AI 可以替代医生完成诊断、开药、解读检查结果和患者监测，引发争论。"
- },
- "Google's AMIE AI Safely Gathers Patient Histories in Real Clinic Trial": {
-  "t": "谷歌 AMIE 在真实门诊试验中安全完成病史采集",
-  "h": "首次有患者在急诊就诊前先与 AI 对话、梳理症状，安全监督人员全程在场，无需任何干预。"
- },
- "Founders Rethink VC Path with AI-Enabled Profitable Teams": {
-  "t": "创业者重新思考融资路径：用 AI 打造盈利的小团队",
-  "h": "Garry Tan 建议创业公司别急着融大钱，而是把每年 1000 万美元利润再投资——相当于不稀释股权就拿到了 A 轮。"
- },
- "Dreamina Launches Label for Full-Length AI Films and Series": {
-  "t": "Dreamina 推出长篇 AI 电影与剧集扶持计划",
-  "h": "AI 创作者一直想做出超过 60 秒的影片，却常常资源不足；Dreamina 的新计划为此提供实际支持。"
- },
- "X Creators Celebrate Original Content Rewards Payouts": {
-  "t": "X 创作者晒原创内容奖励到账",
-  "h": "有创作者醒来发现账户进了 432.91 美元，称这是一场胜利；到账截图正在刷屏，该计划进入兑现期。"
- },
- "Hector Serrano Shares Blueprint for Scaling Creator Paid Ads at Wispr Flow": {
-  "t": "Hector Serrano 分享 Wispr Flow 创作者付费广告的规模化打法",
-  "h": "作为 Wispr Flow 的第二位市场员工，他公开了每月产出 500–700 条新广告的创作者广告体系。"
- },
- "Valar Atomics Sues Early Investor Day One Ventures Over Funding Rights Dispute": {
-  "t": "Valar Atomics 起诉早期投资人 Day One Ventures，争议涉及融资权利",
-  "h": "Isaiah Taylor 称与 Day One Ventures 合作是公司最大的错误，一场激烈的融资纠纷即将对簿公堂。"
- },
- "Micro1 Hits $1 Billion Revenue Run Rate After Near-Bankruptcy": {
-  "t": "Micro1 濒临破产后年化收入冲上 10 亿美元",
-  "h": "三年前 Micro1 一夜之间丢掉 60% 收入、险些破产；CEO Ali Ansari 讲述团队如何翻盘并突破 10 亿美元年化收入。"
- },
- "Anthropic Pauses Claude Startups Perks After Application Surge": {
-  "t": "申请激增后，Anthropic 暂停 Claude 创业公司福利",
-  "h": "创始人们拿到快速批准后很兴奋，几天后最好的福利却下线了；Anthropic 称是需求远超预期。"
- },
- "BC NDP Pledges $500M Fund for Small Business Loans and Youth Hiring": {
-  "t": "卑诗新民主党承诺设立 5 亿加元基金，支持小企业贷款与青年雇佣",
-  "h": "David Eby 强调小企业赞助本地球队、给年轻人第一份工作，并宣布一项重大纾困基金，帮助它们渡过关税冲击。"
- },
- "Computers RH Pixel-Art PC Builder Launches with Strong Early Engagement": {
-  "t": "像素风装机游戏 Computers RH 上线，早期互动不错",
-  "h": "玩家在自定义岛屿上拼装虚拟电脑，挖取 $CRH 代币，从第一天起就在追逐更高的算力。"
- },
- "Base Launches Earn & Borrow Stack for Apps and Businesses": {
-  "t": "Base 为应用与企业推出「赚取与借贷」组件",
-  "h": "开发者无需从零开发，就能把稳定币收益和加密借贷接入自己的应用。"
- },
- "Base Launches Funding for Builders and Creators Up to $5,000": {
-  "t": "Base 为开发者和创作者推出最高 5000 美元资助",
-  "h": "在新加坡的开发者聚会之后，Base 拿出真金白银，推动网络上更多项目落地。"
- },
- "Debate Erupts Over Capital Gains Taxes and Innovation": {
-  "t": "资本利得税与创新之争",
-  "h": "耶鲁教授 Natasha Sarin 反驳「提高资本利得税会让下一个扎克伯格不再创业」的担忧。"
- },
- "BC Party Leaders Pitch Rival Small Business Plans Ahead of Election": {
-  "t": "卑诗各党领袖在大选前竞相提出小企业纾困方案",
-  "h": "受美国关税和山火冲击，卑诗各党领袖在素里提出各自的救助思路，距离投票只剩几周。"
- },
- "Union Square Ventures Raises Record $900 Million for AI Era Startups": {
-  "t": "Union Square Ventures 募得创纪录的 9 亿美元，投向 AI 时代创业公司",
-  "h": "USV 完成史上最大一轮募资，把 20 年的投资打法调整为服务 AI 浪潮；合伙人 Rebecca Kaden 称这支团队正当其时。"
- },
- "Creators Chase 500K Impressions for X's Original Content Rewards": {
-  "t": "创作者冲刺 50 万曝光，争取 X 原创内容奖励",
-  "h": "有创作者两周内获得 37 万次认证曝光并拿到 188 美元奖励，晒出截图后点燃了更多人的冲刺热情。"
- },
- "X Users Discuss Persistence and Improvement Through Practice in Creative Pursuits": {
-  "t": "X 用户谈创作：坚持练习才能变好",
-  "h": "帖子们强调：在写作、音乐、绘画等领域，要靠多年的持续努力才能做出像样的作品，哪怕起步时很糟糕。"
- },
- "Debate Erupts Over Fitting 10,000 Steps into Busy Days": {
-  "t": "每天一万步，忙碌生活里怎么塞得下？",
-  "h": "有帖子把「睡眠、家务、家庭、工作之外再走一万步」直接称为「宣传」，戳中了许多被时间挤压的人。"
- },
- "Traders Stress Mindset Over Strategy in Markets": {
-  "t": "交易者强调：心态比策略更重要",
-  "h": "一条帖子直言：交易往往先把人击垮，再重塑你——如果你不放弃，它会先磨掉你的心气、让你痛苦，然后改变你的人生。"
- },
- "Online Reflections on Ditching the Daily Rush": {
-  "t": "网友反思：别再为每天的匆忙而活",
-  "h": "一条简单的帖子道出越来越多人的感受：年岁渐长，匆匆赶路的人生越来越像是走错了方向。"
- },
- "Traders Stress Discipline and Process Over Motivation": {
-  "t": "交易者：纪律与流程比动力更可靠",
-  "h": "2026 年 10 月 13 日，交易者们分享了一个朴素的道理：一时的动力会消退，可靠的日常流程才能熬过市场的起落。"
- },
- "Traders Advocate Day Jobs for Long-Term Success": {
-  "t": "交易者主张保留主业，换取长期成功",
-  "h": "赚到一笔大的就想追逐快感，结果一次失误全部回吐；许多交易者说，稳定的薪水能压住焦躁，让你慢慢积累。"
- },
- "Nate Silver Spots Sharp AI Adoption Divide Among Users": {
-  "t": "Nate Silver 观察到 AI 使用者之间的鲜明分化",
-  "h": "他发现身边约 25% 的人盛赞 AI 带来巨大的效率提升，另外 75% 几乎不用。"
- },
- "French Bike Shop Attendant Sparks Nap-Time Job Memes": {
-  "t": "法国自行车店店员引发「摸鱼工作」梗",
-  "h": "一位穿皮夹克、戴金链子的年轻人坐在法国自行车店门口，网友问：这种清闲的工作你能干多久？"
- },
- "Traders Share Lesson: Trading Less Leads to More Profits": {
-  "t": "交易者心得：少交易，多盈利",
-  "h": "一位交易者把盯盘时间从 8 小时减到 2 小时，少了情绪化失误，决策更准，账户也更健康。"
- },
- "Embracing 'Don't Care' Mindset for Everyday Calm": {
-  "t": "用「不在乎」换取日常平静",
-  "h": "有人说：「我不是在装淡定，我是真的对很多事不在乎。」这句安静的坦白引起了很多人的共鸣。"
- },
- "Traders Push Discipline Over Strategies in 2026 Year-End Rally": {
-  "t": "2026 年末行情中，交易者强调纪律胜过策略",
-  "h": "年底将近，交易者们坦率分享：因为恐惧过早平掉盈利单，结果眼看利润溜走。"
- },
- "Clip on Confrontation's Benefits Sparks Direct Communication Talk": {
-  "t": "一段短视频谈「直面冲突」的好处，引发对直接沟通的讨论",
-  "h": "视频说明及早表达能避免怨气积累、帮你划清边界。"
- },
- "ADHD Listeners Share Audiobook Struggles and Fixes": {
-  "t": "ADHD 听众分享听有声书的困扰与对策",
-  "h": "一位用户坦白有声书常常沦为背景噪音，引来许多 ADHD 用户分享自己的经历和小技巧。"
- },
- "Traders Share Key to Success: Discipline Over Endless Effort": {
-  "t": "交易者：成功的关键是纪律，而不是无休止地努力",
-  "h": "每天研究 12 小时图表却多年不盈利——交易者们本周末解释了为什么耐心和纪律往往比死磕更快带来利润。"
- },
- "Online Users Embrace Indifference as Self-Care Strategy": {
-  "t": "网友把「不在乎」当作自我保护",
-  "h": "有用户直言：「我不是在装淡定，我是真的对很多事不在乎。」这是对无休止网络纷争的一种安静反抗。"
- },
- "Ben Affleck Breaks Down AI as Pure Math in Viral Clip": {
-  "t": "本·阿弗莱克病毒短片：把 AI 讲成纯数学",
-  "h": "阿弗莱克拆穿炒作：AI 只是线性代数与浮点预测下一个词，没有思想或情感。"
- },
- "Companies Worldwide Scale Back AI Tools After Errors and Costs": {
-  "t": "全球企业因错误与成本收缩 AI 工具",
-  "h": "Guardian 报道：匆忙上线 AI 带来低质输出、隐私风险与清理成本，承诺的效率被抵消；Meta 等也放慢替代人力计划。"
- },
- "Memes Blend AI Tech with Occult Symbols and Rituals": {
-  "t": "迷因把 AI 技术与神秘符号、仪式混搭",
-  "h": "帖子把电路板叠上神秘图腾，把 AI 说成从「冥界」用仪式般编程召唤出来的实体。"
- },
- "AI Art Lacks Soul of Human Creations, X Users Say": {
-  "t": "X 用户：AI 艺术缺少人类作品的「灵魂」",
-  "h": "不少人吐槽 AI 歌曲和视频费力却缺情感深度，人类创作仍更能打动人。"
- },
- "Holo Raises €5M to Automate Marketing for Small Businesses Amid Founder Debates": {
-  "t": "Holo 融资 500 万欧元，为小企业自动化营销",
-  "h": "维尔纽斯创业公司 Holo 获种子轮，用 AI 充当整套营销部门；同时有创始人提醒别追病毒噱头。"
- },
- "Stifel Invests in Meow Technologies for White-Label Banking Platform": {
-  "t": "Stifel 投资 Meow，打造白标银行平台",
-  "h": "Stifel 领投 Meow B 轮（本轮 3160 万美元，累计超 6000 万），并合作向客户提供白标资金管理平台。"
- },
- "Hollywood Agencies Launch Alliance for Streamer Spending Rules": {
-  "t": "好莱坞经纪公司联盟推流媒体支出规则",
-  "h": "CAA、UTA、WME 与制片方结盟，挑战流媒体巨头，寻求更有利于创作者的分成与规则。"
- },
- "X Launches Invite-Only Video Kickstart Bonus for Creators": {
-  "t": "X 上线邀请制短视频 Kickstart 奖金",
-  "h": "受邀创作者发满 15 条短竖视频即可拿固定奖金（约 500–5000 美元），不看播放量。"
- },
- "Debate Revives Idea of Billionaire Patronage for Creators": {
-  "t": "讨论再起：亿万富翁赞助创作者模式",
-  "h": "有人分享「金主默默买单、创作者免广告」的赞助想象，评论区热议利弊与可行性。"
- },
- "Papertrade Tops DeFi Revenue Charts Days After Launch": {
-  "t": "Papertrade 上线数日冲上 DeFi 收入榜",
-  "h": "新合成永续平台单日收入约 389 万美元，短时向质押者分发 64.5 万美元。"
- },
- "Debate Over Why Social Media Breaks Matter": {
-  "t": "为什么要暂停社交媒体：一场讨论",
-  "h": "有人随口问「断网休息有没有用」，回复里大量分享负面刷屏伤精神、短休能明显缓解。"
- },
- "Dan Koe's Six-Month Challenge to Transform Your Life": {
-  "t": "Dan Koe：用六个月挑战改变人生",
-  "h": "他把六个月比作人生的 1%，呼吁专注一个目标练纪律；许多人认同两周就放弃太可惜。"
- },
- "Music and Rest Top People's Coping Habits for Stress": {
-  "t": "减压习惯调查：音乐与休息最受欢迎",
-  "h": "面对压力，很多人首选听音乐与休息；音乐被形容成「像治疗师一样」能降皮质醇。"
- },
- "Traders Stress Discipline Over Perfect Strategies This October": {
-  "t": "交易员强调：纪律胜过完美策略",
-  "h": "十月讨论里，交易员指出过早平仓、情绪追单是通病，耐心与风控比「神策略」更重要。"
- },
- "Debate Erupts Over Whether AI Truly Understands or Just Predicts": {
-  "t": "X 上热议：大语言模型到底是「理解」还是只会预测",
-  "h": "科技高管 Gregory Kurtzer 称大模型只是统计机器、不懂任何东西，帖子引来数千回复；也有人指出 AI 在数据充足的数学、编程上表现超人，在数据稀疏的领域则吃力。"
- },
- "Companies Worldwide Pull Back on AI After Costly Errors and Risks": {
-  "t": "多国企业在 AI 出错与风险后收缩投入",
-  "h": "员工花大量时间修 AI 的错误和安全问题，雇主纷纷放慢仓促上马的 AI；Meta 缩减智能体计划，微软警告「AI 垃圾」恶性循环，近半开发者称 AI 写的代码在生产环境出问题。"
- },
- "Exchange Questions If AI or Humans Truly Understand": {
-  "t": "讨论：是 AI 还是人类才真正「理解」",
-  "h": "有人称大模型只是矩阵运算的 token 预测器，回复则反问：人脑不也只是靠离子和多巴胺发声的脂肪团？耶鲁新研究称大模型会形成类似人类推理的符号结构。"
- },
- "Greg Isenberg's 48 Hours with SF Billionaires and AI Founders": {
-  "t": "Greg Isenberg 与旧金山亿万富翁、AI 创始人的 48 小时",
-  "h": "Isenberg 预测 2027 年会出现主动型个人智能体（比如自动改签延误航班）；Slack、邮件等数据每周能以 200 万美元卖给 AI 实验室；AI 应用营收破 10 亿美元很快，但用户流失也快。"
- },
- "Creators Split on AI's Role in Art and Work": {
-  "t": "创作者在 AI 与艺术、工作上的分歧",
-  "h": "Tim Pool 称 AI 让数千人比专职创作者更快产出内容；有人说 AI 只配懒惰的冒牌货；AXECOP 则用 AI 省掉繁琐、放大创意，但认为纯生成作品是最低级的艺术。"
- },
- "Developers Work Harder as AI Boosts Coding Demands": {
-  "t": "AI 提升编程需求，开发者反而更忙",
-  "h": "开发者称 AI 加快了写码，却带来更多审查和带智能体的工作，工作日更长更累；美国软件岗位招聘近期增 15%，劳工统计局预测到 2035 年增长 10%，但 Stack Overflow 调查显示满意度偏低。"
- },
- "Sam Altman Admits AI Disruption Slower Than Expected": {
-  "t": "奥特曼承认：AI 带来的变革比预期慢",
-  "h": "奥特曼在播客里说，GPT-4 发布后他以为软件行业会一夜翻天，现在看是人的习惯和组织惯性拖慢了节奏，他认为这反而有利于平稳适应；大厂到 2026 年 7 月已为 AI 基建发债 1320 亿美元。"
- },
- "Startup Investors Stress Substance Over Flashy Marketing Stunts": {
-  "t": "创业投资人：比起营销噱头，更看重实质",
-  "h": "投资人 Brie Wolfson 提醒创始人，扎实的产品和团队胜过病毒式噱头；CMO Amy Street 补充，在 AI 里用户分发才是真正的优势；维尔纽斯的 Holo 获 500 万欧元种子轮。"
- },
- "Debate Erupts Over $100K Five-Album Label Deals in 2026": {
-  "t": "争议：2026 年十万美元五张专辑的厂牌合约",
-  "h": "YesJulz 称五张专辑只给 10 万美元预付款简直疯狂，建议艺人绕开厂牌、自己掌握作品；专家指出厂牌预付款若没回本不用个人还钱，不同于贷款；但回本 10 万美元需要 3.75 亿到 5 亿次播放。"
- },
- "Traders Stress Consistency and Discipline Over Perfect Strategies": {
-  "t": "交易者强调：持续性与纪律胜过完美策略",
-  "h": "一个简单的说法：一旦做到持续性，一个好月份就能抹平多年亏损。数据显示 80% 到 97% 的日内交易者因风控差、冲动交易而亏钱；要点是每天按流程执行、回撤时复盘、不要报复性交易。"
- },
- "Traders Share Rules for Mastering Trading Psychology": {
-  "t": "交易者分享交易心理的守则",
-  "h": "热议总结了七条规则：顺势交易、设止损、快速止损、保护利润等；关键是真金白银下能否守住纪律，建议复盘最近 20 笔交易，30 天里每次改一个缺点。"
- },
- "Choose Discipline Over Dopamine in Noisy Digital World": {
-  "t": "在嘈杂的数字世界里，选纪律而不是多巴胺",
-  "h": "网友分享：在持续刺激中守住边界、沉默和自我照顾；拉黑让人烦躁的账号换来平静，不必要的争论保持沉默；暂时的快感会消退，持续的努力才带来真正的满足。"
- },
- "Traders Stress Mindset Over Perfect Trades for Market Success": {
-  "t": "交易者强调：心态比完美的单笔交易更重要",
-  "h": "有交易者说，耐心、纪律和快速小亏胜过 90% 的对手；成功来自情绪控制、按计划执行、把亏损当作学习而非失败，实用做法包括止损和不逆势交易。"
- },
- "Ben Affleck Demystifies AI as Math in Game Dev Debates": {
-  "t": "本·阿弗莱克：AI 本质是数学，引发游戏开发圈争论",
-  "h": "阿弗莱克强调 AI 只是没有人性的预测数学；任天堂明星大乱斗职业选手 hungrybox 惊讶于 AI 已参与九成编码工作。"
- },
- "Users Exhausted by Constant AI Detection in Feeds": {
-  "t": "信息流里到处要辨别 AI，用户身心俱疲",
-  "h": "社交平台充斥 AI 生成内容，用户厌倦了时刻怀疑真假，研究显示这带来认知负担与内容同质化。"
- },
- "Debate Over AI Tools in Spider-Verse Animation Intensifies": {
-  "t": "《蜘蛛侠：纵横宇宙》使用 AI 工具之争升温",
-  "h": "制作方称工具只用自家素材库训练、服务特定动画环节；批评者认为生成画面部件仍属生成式 AI。"
- },
- "Debate Heats Up Over AI Replacing Human Code Reviews": {
-  "t": "AI 能否取代人工代码审查？争论升温",
-  "h": "支持者认为 AI 生成代码更快更一致，人工审查将过时；反对者担心团队失去对复杂系统的深入理解。"
- },
- "Terence Tao Sees End of Math's Romantic Era with AI Rise": {
-  "t": "陶哲轩：AI 崛起，数学的“浪漫时代”走向终结",
-  "h": "陶哲轩在 Numberphile 访谈中称，个人英雄式数学时代将结束，转向大团队加 AI 快速生成证明的“工业时代”。"
- },
- "Amazon's Six-Page Memos Lose Trust to AI-Generated Text": {
-  "t": "AI 写作让亚马逊“六页备忘录”失去信任",
-  "h": "贝索斯沿用 20 年的六页备忘录制度受冲击：员工不再信任文档，有 L7 经理会上才第一次读自己的备忘录。"
- },
- "Gentle Reminders Embrace Imperfect Days on X": {
-  "t": "X 上的温柔提醒：接受不完美的日子",
-  "h": "用户互相鼓励：状态好时好好吃饭，状态差时点外卖也没关系，尽力而为、放下其余。"
- },
- "Gentle Reminders of Imperfect Growth and Self-Kindness": {
-  "t": "成长不完美，也要善待自己",
-  "h": "大家分享：成长是混乱的过渡期，不必每天都优化自己，离目标还远也值得为进步庆祝。"
- },
- "Building Self-Esteem Without Needing Others' Approval": {
-  "t": "不靠别人认可，建立自尊",
-  "h": "帖子推崇来自内在的自信，而非点赞评论；不再向误解自己的人解释，也不再假装。"
- },
- "Chart Reveals Long Commutes Drag Down Happiness More Than Losing an Arm": {
-  "t": "图表：长途通勤比失去一条手臂更伤幸福感",
-  "h": "来自 2008 年 Stutzer 与 Frey 的研究：人们无法适应通勤压力，高薪或便宜房租也弥补不了，引发远程办公讨论。"
- },
- "Traders Stress Discipline Over Quick Wins in Markets": {
-  "t": "交易员：纪律比快钱更重要",
-  "h": "交易者分享经验：长期成功靠耐心、风控和守规则，警惕过早入场、过早止盈和硬做交易。"
- },
- "Money Buys Happiness? Market Bets Heavily on Yes": {
-  "t": "钱能买来幸福吗？预测市场重押“能”",
-  "h": "POV.co 上的预测市场大比例押注“能”，用户分享金钱如何减轻压力、带来选择，奖池约 6.8 美元。"
- },
- "Online Advice on Protecting Personal Peace and Setting Boundaries": {
-  "t": "网友建议：守护内心平静，设好边界",
-  "h": "帖子劝人少管闲事、停止攀比，不是每个人都值得解释或第二次机会；不少人分享享受独处。"
- },
- "Solo Founder Hits $25M Run Rate with AI Company Polsia in 340 Days": {
-  "t": "一人创业：AI 公司 Polsia 340 天做到 2500 万美元年化收入",
-  "h": "Polsia 12 周 ARR 达 100 万美元，再 10 周到 1000 万，之后 6 周到 2000 万；创始人靠邮件、回帖和广告起步。"
- },
- "Creator Academy Launches in X Tools Section": {
-  "t": "X 在创作者工具中上线“创作者学院”",
-  "h": "Creator Studio 工具区新增 Creator Academy，提供内容提升指南、Articles 与 Grok Imagine 等工具和变现路径说明。"
- },
- "Pump.fun Launches Referral Program with Stringent Conditions": {
-  "t": "Pump.fun 推出条件苛刻的推荐奖励",
-  "h": "双方最高各得 50 美元，但新用户需充值 50 美元并在 10 天内有 5 天交易，否则作废，遭批评门槛过高。"
- },
- "Town Raises $108 Million at $1 Billion Valuation for Team AI Assistants": {
-  "t": "团队 AI 助手 Town 融资 1.08 亿美元，估值 10 亿美元",
-  "h": "B 轮由 Forerunner 与 Menlo 领投；产品 6 月公开上线，年经常性收入已达七位数。"
- },
- "Fragment Raises $12M to Let AI Agents Handle Finances Safely": {
-  "t": "Fragment 融资 1200 万美元，让 AI 智能体安全处理财务",
-  "h": "A 轮由 FirstMark 领投，Fragment 为 AI 智能体安全执行财务任务搭建基础设施。"
- },
- "Young People Call AI Cringe and a Generational Burden": {
-  "t": "年轻人觉得 AI 很尬，是一代人的负担",
-  "h": "软件工程师 Alex Yumashev 称，英国和意大利 18、19 岁的女儿及朋友认为 AI 让信息流充斥低质内容、伤害音乐、助长诈骗；调查显示 Z 世代对 AI 的热情明显下降。"
- },
- "AI Debated in Design and Consciousness": {
-  "t": "AI 在设计与意识问题上引发争论",
-  "h": "设计师吐槽 AI 创作能力仍很差；Anil Seth、Giulio Tononi、Ned Block 在 Nature 撰文认为当前 AI 不可能有意识，网友就 AI 艺术是否正当、是否需要人类把关争论不休。"
- },
- "Hasan Piker's Autism Reflection Sparks Talk on Neurodivergence and AI Workforce Shifts": {
-  "t": "Hasan Piker 谈自闭症确诊，引发神经多样性与 AI 时代就业讨论",
-  "h": "主播 Hasan Piker 回忆童年确诊自闭症的经历，网友讨论专注型特质在科技领域的优势会否因 AI 接手常规工作而减弱，有人预测 ADHD 式的快速切换与创造力在 AI 时代更吃香。"
- },
- "Nature Paper and Chinese Views Challenge AI Consciousness Debate": {
-  "t": "Nature 评论与中国学者观点冲击 AI 意识之争",
-  "h": "神经科学家 Seth、Block、Tononi 认为现有 AI 架构无法产生主观体验，哲学家 Chalmers 称标题言过其实；Arnaud Bertrand 介绍赵汀阳、刘永谋等中国学者对 AI 价值对齐与人被机器化的担忧。"
- },
- "Traders Stress Discipline Over Motivation for Market Success": {
-  "t": "交易者：靠纪律而不是一时的动力取胜",
-  "h": "交易者分享经验：稳定的结果来自雷打不动的日常、从亏损中学习、按既定策略执行，建议事先准备清单、排除干扰，把耐心当作超能力。"
- },
- "Workplace Anger Control Feels Like a Full-Time Job": {
-  "t": "在职场控制怒气像是一份全职工作",
-  "h": "网友分享前台接待、写邮件时压住火气的疲惫；美国压力研究所数据显示 55% 的美国人每天感到压力，63% 的员工愿意为摆脱压力辞职，建议识别触发点、深呼吸和积极自我暗示。"
- },
- "Jason Alexander Explains Why Seinfeld Cast Walked Away from $110 Million Offer": {
-  "t": "Jason Alexander 解释《宋飞正传》演员为何放弃 1.1 亿美元续约",
-  "h": "NBC 曾开出每集 500 万美元请 Jerry 拍第十季；配角们要求分成重播收益被拒、又怕被角色定型，最终 1998 年收官。宋飞和 Larry David 靠 15% 分成赚了数亿，配角每人仅约 25 万美元。"
- },
- "Trading Success Hinges on Discipline Over Perfect Entries": {
-  "t": "交易成功靠纪律，而不是完美入场点",
-  "h": "讨论指出稳定盈利来自心态纪律和按计划执行，而非频繁交易；数据显示 63%–97% 的散户亏钱，多因恐惧、贪婪和急躁；懂得何时空仓本身就是纪律。"
- },
- "Embracing the Block Button for Online Peace": {
-  "t": "拥抱拉黑键，换来网上的清净",
-  "h": "网友分享拉黑批评者、静音争论后立刻轻松、思路更清晰；有心理学家提醒过度使用可能导致孤立，但很多人认为这是选择平静、远离无休止争论的简单办法。"
- },
- "Inspired Capital Closes $450 Million Fourth Fund for Early-Stage Founders": {
-  "t": "Inspired Capital 完成 4.5 亿美元第四期基金募集，投早期创业者",
-  "h": "这家由 Alexa von Tobel 与 Penny Pritzker 于 2019 年创立的纽约机构管理规模增至约 14 亿美元，单笔投资 100 万至 1500 万美元，覆盖 AI、国防、医疗等，此前组合已有 10 家独角兽。"
- },
- "X Creators Chase Original Content Rewards Eligibility": {
-  "t": "X 创作者争取「原创内容奖励」资格",
-  "h": "X 今年推出的原创内容奖励按原创帖的合格曝光付费，取代旧的分成模式；申请需 Premium 订阅、年满 18 岁、500 个认证粉丝及近 90 天 50 万次认证主页曝光，审核后才通过。"
- },
- "Daytona Hits $1 Billion Valuation with $60 Million Series B": {
-  "t": "Daytona 完成 6000 万美元 B 轮，估值 10 亿美元",
-  "h": "这家 2023 年成立的公司由 FirstMark 领投，累计融资 9100 万美元，成为克罗地亚第三家独角兽；它为 AI 智能体提供 60 毫秒启动的隔离沙箱，客户包括 OpenAI、Anthropic、NVIDIA，今年以来营收增长 25 倍。"
- }
+  "Debate on X over ranking artificial intelligence among humanity's greatest inventions compared to fire and the wheel": {
+    "t": "X 上热议：AI 能否与火、轮子并列为人类最伟大的发明",
+    "h": "X 用户在争论 AI 是否算得上人类最伟大的发明之一，与火和轮子相提并论；批评者则认为它远不如这些发明。"
+  },
+  "Finance Firm Ditches SaaS for Custom AI-Built Tools": {
+    "t": "金融公司弃用 SaaS，改用 AI 自建工具",
+    "h": "Charlotte Lee 分享：她的金融公司不再购买现成软件，而是请工程师为自己定制工具，带来了实实在在的业务收益。"
+  },
+  "Discussions on X about AI's Transformative Impact on Jobs and Society Comparable to Fire and the Internet": {
+    "t": "X 热议 AI 对就业与社会的冲击：堪比火与互联网",
+    "h": "用户把 AI 称作继火、电以来最重要的进步，并把现在的怀疑与当年对电商的早期质疑相比较。"
+  },
+  "AI Tools Promise to Transform Video Game Development": {
+    "t": "AI 工具有望改变游戏开发",
+    "h": "独立开发者如今可以做出过去需要庞大团队才能完成的高质量游戏，AI 大幅降低了 3A 大作的成本门槛。"
+  },
+  "AI Coding Tools Spark Debate on Software's Future": {
+    "t": "AI 编程工具引发「软件未来」之争",
+    "h": "DHH 附和 Anthropic CEO Dario Amodei 的预测：AI 很快会端到端地完成大部分软件工程工作。"
+  },
+  "Gakku Launches AI Coach for Kids' Writing and Thinking Skills": {
+    "t": "Gakku 推出面向儿童的写作与思考 AI 教练",
+    "h": "一个友好的 AI 会和孩子聊他们天马行空的想法，帮助孩子建立自信，而不是催着给出标准答案。"
+  },
+  "Malfoid AI Video Fuels Harry Potter Fandom AI Debate": {
+    "t": "AI 生成的「马尔福」视频引发哈利·波特粉丝对 AI 创作的争论",
+    "h": "视频里金发动漫风的德拉科·马尔福身穿斯莱特林长袍施放守护神咒，播放量达数百万，粉丝对 AI 在创作中的角色意见分裂。"
+  },
+  "Wall Street Warns of Massive Capital Destruction in AI Surge": {
+    "t": "华尔街警告：AI 热潮背后可能出现大规模资本毁灭",
+    "h": "杰富瑞策略师 Chris Wood 认为，廉价的中国 AI 模型正在挑战美国领先者，未来可能出现「大规模资本毁灭」。"
+  },
+  "Meme Flips 'Learn to Code' Advice to 'Learn to Weld'": {
+    "t": "梗图把「去学编程」翻转成「去学焊接」",
+    "h": "2010 年，工厂工人被人嘲讽「去学编程吧」；如今背着债的毕业生从技工那里听到「去学焊接吧」，折射出 AI 对软件行业的冲击。"
+  },
+  "PoIiMath Posts Claim That AI Tools Expose Personal Limitations in Creativity and Coding Rather Than Causing a Crash": {
+    "t": "PoIiMath：AI 暴露的是个人创造力与编码的局限，而非引发崩盘",
+    "h": "该帖认为真正的「AI 崩盘」发生在人们意识到自己创造、产出和成功的能力不足，且无法靠 AI 补上的时候。"
+  },
+  "Gakku AI Coach Launches to Teach Kids Thinking Over Answers": {
+    "t": "Gakku AI 教练上线：教孩子思考而不是背答案",
+    "h": "一个友好的 AI 伙伴与孩子聊天，帮他们重新审视想法、找到自己的表达，而不是只吐出事实。"
+  },
+  "OpenAI Shares Hundreds of AI-Generated Math Breakthroughs Including Quasi-Riemann Advance": {
+    "t": "OpenAI 公布数百篇 AI 生成的数学成果，含「类黎曼」进展",
+    "h": "OpenAI 发布了内部 AI 模型写出的 722 篇数学论文，称在类黎曼猜想等难题上取得进展；数学家反应既惊叹又谨慎。"
+  },
+  "Fields Medal Winner Cries Over OpenAI's AI Math Breakthroughs": {
+    "t": "菲尔兹奖得主看到 OpenAI 的 AI 数学成果后落泪",
+    "h": "2022 年菲尔兹奖得主 Hugo Duminil-Copin 在视频会议上得知 OpenAI 公布了约 700 篇攻克未解数学问题的 AI 论文（其中 16 篇涉及他的领域），当场落泪。"
+  },
+  "Doctor Bhooshan Shukla Sparks Debate on X about AI's Potential to Replace Doctors in Diagnosis, Prescribing, and Patient Care": {
+    "t": "医生 Bhooshan Shukla 发起讨论：AI 能否取代医生",
+    "h": "他在 X 上主张 AI 可以替代医生完成诊断、开药、解读检查结果和患者监测，引发争论。"
+  },
+  "Google's AMIE AI Safely Gathers Patient Histories in Real Clinic Trial": {
+    "t": "谷歌 AMIE 在真实门诊试验中安全完成病史采集",
+    "h": "首次有患者在急诊就诊前先与 AI 对话、梳理症状，安全监督人员全程在场，无需任何干预。"
+  },
+  "Founders Rethink VC Path with AI-Enabled Profitable Teams": {
+    "t": "创业者重新思考融资路径：用 AI 打造盈利的小团队",
+    "h": "Garry Tan 建议创业公司别急着融大钱，而是把每年 1000 万美元利润再投资——相当于不稀释股权就拿到了 A 轮。"
+  },
+  "Dreamina Launches Label for Full-Length AI Films and Series": {
+    "t": "Dreamina 推出长篇 AI 电影与剧集扶持计划",
+    "h": "AI 创作者一直想做出超过 60 秒的影片，却常常资源不足；Dreamina 的新计划为此提供实际支持。"
+  },
+  "X Creators Celebrate Original Content Rewards Payouts": {
+    "t": "X 创作者晒原创内容奖励到账",
+    "h": "有创作者醒来发现账户进了 432.91 美元，称这是一场胜利；到账截图正在刷屏，该计划进入兑现期。"
+  },
+  "Hector Serrano Shares Blueprint for Scaling Creator Paid Ads at Wispr Flow": {
+    "t": "Hector Serrano 分享 Wispr Flow 创作者付费广告的规模化打法",
+    "h": "作为 Wispr Flow 的第二位市场员工，他公开了每月产出 500–700 条新广告的创作者广告体系。"
+  },
+  "Valar Atomics Sues Early Investor Day One Ventures Over Funding Rights Dispute": {
+    "t": "Valar Atomics 起诉早期投资人 Day One Ventures，争议涉及融资权利",
+    "h": "Isaiah Taylor 称与 Day One Ventures 合作是公司最大的错误，一场激烈的融资纠纷即将对簿公堂。"
+  },
+  "Micro1 Hits $1 Billion Revenue Run Rate After Near-Bankruptcy": {
+    "t": "Micro1 濒临破产后年化收入冲上 10 亿美元",
+    "h": "三年前 Micro1 一夜之间丢掉 60% 收入、险些破产；CEO Ali Ansari 讲述团队如何翻盘并突破 10 亿美元年化收入。"
+  },
+  "Anthropic Pauses Claude Startups Perks After Application Surge": {
+    "t": "申请激增后，Anthropic 暂停 Claude 创业公司福利",
+    "h": "创始人们拿到快速批准后很兴奋，几天后最好的福利却下线了；Anthropic 称是需求远超预期。"
+  },
+  "BC NDP Pledges $500M Fund for Small Business Loans and Youth Hiring": {
+    "t": "卑诗新民主党承诺设立 5 亿加元基金，支持小企业贷款与青年雇佣",
+    "h": "David Eby 强调小企业赞助本地球队、给年轻人第一份工作，并宣布一项重大纾困基金，帮助它们渡过关税冲击。"
+  },
+  "Computers RH Pixel-Art PC Builder Launches with Strong Early Engagement": {
+    "t": "像素风装机游戏 Computers RH 上线，早期互动不错",
+    "h": "玩家在自定义岛屿上拼装虚拟电脑，挖取 $CRH 代币，从第一天起就在追逐更高的算力。"
+  },
+  "Base Launches Earn & Borrow Stack for Apps and Businesses": {
+    "t": "Base 为应用与企业推出「赚取与借贷」组件",
+    "h": "开发者无需从零开发，就能把稳定币收益和加密借贷接入自己的应用。"
+  },
+  "Base Launches Funding for Builders and Creators Up to $5,000": {
+    "t": "Base 为开发者和创作者推出最高 5000 美元资助",
+    "h": "在新加坡的开发者聚会之后，Base 拿出真金白银，推动网络上更多项目落地。"
+  },
+  "Debate Erupts Over Capital Gains Taxes and Innovation": {
+    "t": "资本利得税与创新之争",
+    "h": "耶鲁教授 Natasha Sarin 反驳「提高资本利得税会让下一个扎克伯格不再创业」的担忧。"
+  },
+  "BC Party Leaders Pitch Rival Small Business Plans Ahead of Election": {
+    "t": "卑诗各党领袖在大选前竞相提出小企业纾困方案",
+    "h": "受美国关税和山火冲击，卑诗各党领袖在素里提出各自的救助思路，距离投票只剩几周。"
+  },
+  "Union Square Ventures Raises Record $900 Million for AI Era Startups": {
+    "t": "Union Square Ventures 募得创纪录的 9 亿美元，投向 AI 时代创业公司",
+    "h": "USV 完成史上最大一轮募资，把 20 年的投资打法调整为服务 AI 浪潮；合伙人 Rebecca Kaden 称这支团队正当其时。"
+  },
+  "Creators Chase 500K Impressions for X's Original Content Rewards": {
+    "t": "创作者冲刺 50 万曝光，争取 X 原创内容奖励",
+    "h": "有创作者两周内获得 37 万次认证曝光并拿到 188 美元奖励，晒出截图后点燃了更多人的冲刺热情。"
+  },
+  "X Users Discuss Persistence and Improvement Through Practice in Creative Pursuits": {
+    "t": "X 用户谈创作：坚持练习才能变好",
+    "h": "帖子们强调：在写作、音乐、绘画等领域，要靠多年的持续努力才能做出像样的作品，哪怕起步时很糟糕。"
+  },
+  "Debate Erupts Over Fitting 10,000 Steps into Busy Days": {
+    "t": "每天一万步，忙碌生活里怎么塞得下？",
+    "h": "有帖子把「睡眠、家务、家庭、工作之外再走一万步」直接称为「宣传」，戳中了许多被时间挤压的人。"
+  },
+  "Traders Stress Mindset Over Strategy in Markets": {
+    "t": "交易者强调：心态比策略更重要",
+    "h": "一条帖子直言：交易往往先把人击垮，再重塑你——如果你不放弃，它会先磨掉你的心气、让你痛苦，然后改变你的人生。"
+  },
+  "Online Reflections on Ditching the Daily Rush": {
+    "t": "网友反思：别再为每天的匆忙而活",
+    "h": "一条简单的帖子道出越来越多人的感受：年岁渐长，匆匆赶路的人生越来越像是走错了方向。"
+  },
+  "Traders Stress Discipline and Process Over Motivation": {
+    "t": "交易者：纪律与流程比动力更可靠",
+    "h": "2026 年 10 月 13 日，交易者们分享了一个朴素的道理：一时的动力会消退，可靠的日常流程才能熬过市场的起落。"
+  },
+  "Traders Advocate Day Jobs for Long-Term Success": {
+    "t": "交易者主张保留主业，换取长期成功",
+    "h": "赚到一笔大的就想追逐快感，结果一次失误全部回吐；许多交易者说，稳定的薪水能压住焦躁，让你慢慢积累。"
+  },
+  "Nate Silver Spots Sharp AI Adoption Divide Among Users": {
+    "t": "Nate Silver 观察到 AI 使用者之间的鲜明分化",
+    "h": "他发现身边约 25% 的人盛赞 AI 带来巨大的效率提升，另外 75% 几乎不用。"
+  },
+  "French Bike Shop Attendant Sparks Nap-Time Job Memes": {
+    "t": "法国自行车店店员引发「摸鱼工作」梗",
+    "h": "一位穿皮夹克、戴金链子的年轻人坐在法国自行车店门口，网友问：这种清闲的工作你能干多久？"
+  },
+  "Traders Share Lesson: Trading Less Leads to More Profits": {
+    "t": "交易者心得：少交易，多盈利",
+    "h": "一位交易者把盯盘时间从 8 小时减到 2 小时，少了情绪化失误，决策更准，账户也更健康。"
+  },
+  "Embracing 'Don't Care' Mindset for Everyday Calm": {
+    "t": "用「不在乎」换取日常平静",
+    "h": "有人说：「我不是在装淡定，我是真的对很多事不在乎。」这句安静的坦白引起了很多人的共鸣。"
+  },
+  "Traders Push Discipline Over Strategies in 2026 Year-End Rally": {
+    "t": "2026 年末行情中，交易者强调纪律胜过策略",
+    "h": "年底将近，交易者们坦率分享：因为恐惧过早平掉盈利单，结果眼看利润溜走。"
+  },
+  "Clip on Confrontation's Benefits Sparks Direct Communication Talk": {
+    "t": "一段短视频谈「直面冲突」的好处，引发对直接沟通的讨论",
+    "h": "视频说明及早表达能避免怨气积累、帮你划清边界。"
+  },
+  "ADHD Listeners Share Audiobook Struggles and Fixes": {
+    "t": "ADHD 听众分享听有声书的困扰与对策",
+    "h": "一位用户坦白有声书常常沦为背景噪音，引来许多 ADHD 用户分享自己的经历和小技巧。"
+  },
+  "Traders Share Key to Success: Discipline Over Endless Effort": {
+    "t": "交易者：成功的关键是纪律，而不是无休止地努力",
+    "h": "每天研究 12 小时图表却多年不盈利——交易者们本周末解释了为什么耐心和纪律往往比死磕更快带来利润。"
+  },
+  "Online Users Embrace Indifference as Self-Care Strategy": {
+    "t": "网友把「不在乎」当作自我保护",
+    "h": "有用户直言：「我不是在装淡定，我是真的对很多事不在乎。」这是对无休止网络纷争的一种安静反抗。"
+  },
+  "Ben Affleck Breaks Down AI as Pure Math in Viral Clip": {
+    "t": "本·阿弗莱克病毒短片：把 AI 讲成纯数学",
+    "h": "阿弗莱克拆穿炒作：AI 只是线性代数与浮点预测下一个词，没有思想或情感。"
+  },
+  "Companies Worldwide Scale Back AI Tools After Errors and Costs": {
+    "t": "全球企业因错误与成本收缩 AI 工具",
+    "h": "Guardian 报道：匆忙上线 AI 带来低质输出、隐私风险与清理成本，承诺的效率被抵消；Meta 等也放慢替代人力计划。"
+  },
+  "Memes Blend AI Tech with Occult Symbols and Rituals": {
+    "t": "迷因把 AI 技术与神秘符号、仪式混搭",
+    "h": "帖子把电路板叠上神秘图腾，把 AI 说成从「冥界」用仪式般编程召唤出来的实体。"
+  },
+  "AI Art Lacks Soul of Human Creations, X Users Say": {
+    "t": "X 用户：AI 艺术缺少人类作品的「灵魂」",
+    "h": "不少人吐槽 AI 歌曲和视频费力却缺情感深度，人类创作仍更能打动人。"
+  },
+  "Holo Raises €5M to Automate Marketing for Small Businesses Amid Founder Debates": {
+    "t": "Holo 融资 500 万欧元，为小企业自动化营销",
+    "h": "维尔纽斯创业公司 Holo 获种子轮，用 AI 充当整套营销部门；同时有创始人提醒别追病毒噱头。"
+  },
+  "Stifel Invests in Meow Technologies for White-Label Banking Platform": {
+    "t": "Stifel 投资 Meow，打造白标银行平台",
+    "h": "Stifel 领投 Meow B 轮（本轮 3160 万美元，累计超 6000 万），并合作向客户提供白标资金管理平台。"
+  },
+  "Hollywood Agencies Launch Alliance for Streamer Spending Rules": {
+    "t": "好莱坞经纪公司联盟推流媒体支出规则",
+    "h": "CAA、UTA、WME 与制片方结盟，挑战流媒体巨头，寻求更有利于创作者的分成与规则。"
+  },
+  "X Launches Invite-Only Video Kickstart Bonus for Creators": {
+    "t": "X 上线邀请制短视频 Kickstart 奖金",
+    "h": "受邀创作者发满 15 条短竖视频即可拿固定奖金（约 500–5000 美元），不看播放量。"
+  },
+  "Debate Revives Idea of Billionaire Patronage for Creators": {
+    "t": "讨论再起：亿万富翁赞助创作者模式",
+    "h": "有人分享「金主默默买单、创作者免广告」的赞助想象，评论区热议利弊与可行性。"
+  },
+  "Papertrade Tops DeFi Revenue Charts Days After Launch": {
+    "t": "Papertrade 上线数日冲上 DeFi 收入榜",
+    "h": "新合成永续平台单日收入约 389 万美元，短时向质押者分发 64.5 万美元。"
+  },
+  "Debate Over Why Social Media Breaks Matter": {
+    "t": "为什么要暂停社交媒体：一场讨论",
+    "h": "有人随口问「断网休息有没有用」，回复里大量分享负面刷屏伤精神、短休能明显缓解。"
+  },
+  "Dan Koe's Six-Month Challenge to Transform Your Life": {
+    "t": "Dan Koe：用六个月挑战改变人生",
+    "h": "他把六个月比作人生的 1%，呼吁专注一个目标练纪律；许多人认同两周就放弃太可惜。"
+  },
+  "Music and Rest Top People's Coping Habits for Stress": {
+    "t": "减压习惯调查：音乐与休息最受欢迎",
+    "h": "面对压力，很多人首选听音乐与休息；音乐被形容成「像治疗师一样」能降皮质醇。"
+  },
+  "Traders Stress Discipline Over Perfect Strategies This October": {
+    "t": "交易员强调：纪律胜过完美策略",
+    "h": "十月讨论里，交易员指出过早平仓、情绪追单是通病，耐心与风控比「神策略」更重要。"
+  },
+  "Debate Erupts Over Whether AI Truly Understands or Just Predicts": {
+    "t": "X 上热议：大语言模型到底是「理解」还是只会预测",
+    "h": "科技高管 Gregory Kurtzer 称大模型只是统计机器、不懂任何东西，帖子引来数千回复；也有人指出 AI 在数据充足的数学、编程上表现超人，在数据稀疏的领域则吃力。"
+  },
+  "Companies Worldwide Pull Back on AI After Costly Errors and Risks": {
+    "t": "多国企业在 AI 出错与风险后收缩投入",
+    "h": "员工花大量时间修 AI 的错误和安全问题，雇主纷纷放慢仓促上马的 AI；Meta 缩减智能体计划，微软警告「AI 垃圾」恶性循环，近半开发者称 AI 写的代码在生产环境出问题。"
+  },
+  "Exchange Questions If AI or Humans Truly Understand": {
+    "t": "讨论：是 AI 还是人类才真正「理解」",
+    "h": "有人称大模型只是矩阵运算的 token 预测器，回复则反问：人脑不也只是靠离子和多巴胺发声的脂肪团？耶鲁新研究称大模型会形成类似人类推理的符号结构。"
+  },
+  "Greg Isenberg's 48 Hours with SF Billionaires and AI Founders": {
+    "t": "Greg Isenberg 与旧金山亿万富翁、AI 创始人的 48 小时",
+    "h": "Isenberg 预测 2027 年会出现主动型个人智能体（比如自动改签延误航班）；Slack、邮件等数据每周能以 200 万美元卖给 AI 实验室；AI 应用营收破 10 亿美元很快，但用户流失也快。"
+  },
+  "Creators Split on AI's Role in Art and Work": {
+    "t": "创作者在 AI 与艺术、工作上的分歧",
+    "h": "Tim Pool 称 AI 让数千人比专职创作者更快产出内容；有人说 AI 只配懒惰的冒牌货；AXECOP 则用 AI 省掉繁琐、放大创意，但认为纯生成作品是最低级的艺术。"
+  },
+  "Developers Work Harder as AI Boosts Coding Demands": {
+    "t": "AI 提升编程需求，开发者反而更忙",
+    "h": "开发者称 AI 加快了写码，却带来更多审查和带智能体的工作，工作日更长更累；美国软件岗位招聘近期增 15%，劳工统计局预测到 2035 年增长 10%，但 Stack Overflow 调查显示满意度偏低。"
+  },
+  "Sam Altman Admits AI Disruption Slower Than Expected": {
+    "t": "奥特曼承认：AI 带来的变革比预期慢",
+    "h": "奥特曼在播客里说，GPT-4 发布后他以为软件行业会一夜翻天，现在看是人的习惯和组织惯性拖慢了节奏，他认为这反而有利于平稳适应；大厂到 2026 年 7 月已为 AI 基建发债 1320 亿美元。"
+  },
+  "Startup Investors Stress Substance Over Flashy Marketing Stunts": {
+    "t": "创业投资人：比起营销噱头，更看重实质",
+    "h": "投资人 Brie Wolfson 提醒创始人，扎实的产品和团队胜过病毒式噱头；CMO Amy Street 补充，在 AI 里用户分发才是真正的优势；维尔纽斯的 Holo 获 500 万欧元种子轮。"
+  },
+  "Debate Erupts Over $100K Five-Album Label Deals in 2026": {
+    "t": "争议：2026 年十万美元五张专辑的厂牌合约",
+    "h": "YesJulz 称五张专辑只给 10 万美元预付款简直疯狂，建议艺人绕开厂牌、自己掌握作品；专家指出厂牌预付款若没回本不用个人还钱，不同于贷款；但回本 10 万美元需要 3.75 亿到 5 亿次播放。"
+  },
+  "Traders Stress Consistency and Discipline Over Perfect Strategies": {
+    "t": "交易者强调：持续性与纪律胜过完美策略",
+    "h": "一个简单的说法：一旦做到持续性，一个好月份就能抹平多年亏损。数据显示 80% 到 97% 的日内交易者因风控差、冲动交易而亏钱；要点是每天按流程执行、回撤时复盘、不要报复性交易。"
+  },
+  "Traders Share Rules for Mastering Trading Psychology": {
+    "t": "交易者分享交易心理的守则",
+    "h": "热议总结了七条规则：顺势交易、设止损、快速止损、保护利润等；关键是真金白银下能否守住纪律，建议复盘最近 20 笔交易，30 天里每次改一个缺点。"
+  },
+  "Choose Discipline Over Dopamine in Noisy Digital World": {
+    "t": "在嘈杂的数字世界里，选纪律而不是多巴胺",
+    "h": "网友分享：在持续刺激中守住边界、沉默和自我照顾；拉黑让人烦躁的账号换来平静，不必要的争论保持沉默；暂时的快感会消退，持续的努力才带来真正的满足。"
+  },
+  "Traders Stress Mindset Over Perfect Trades for Market Success": {
+    "t": "交易者强调：心态比完美的单笔交易更重要",
+    "h": "有交易者说，耐心、纪律和快速小亏胜过 90% 的对手；成功来自情绪控制、按计划执行、把亏损当作学习而非失败，实用做法包括止损和不逆势交易。"
+  },
+  "Ben Affleck Demystifies AI as Math in Game Dev Debates": {
+    "t": "本·阿弗莱克：AI 本质是数学，引发游戏开发圈争论",
+    "h": "阿弗莱克强调 AI 只是没有人性的预测数学；任天堂明星大乱斗职业选手 hungrybox 惊讶于 AI 已参与九成编码工作。"
+  },
+  "Users Exhausted by Constant AI Detection in Feeds": {
+    "t": "信息流里到处要辨别 AI，用户身心俱疲",
+    "h": "社交平台充斥 AI 生成内容，用户厌倦了时刻怀疑真假，研究显示这带来认知负担与内容同质化。"
+  },
+  "Debate Over AI Tools in Spider-Verse Animation Intensifies": {
+    "t": "《蜘蛛侠：纵横宇宙》使用 AI 工具之争升温",
+    "h": "制作方称工具只用自家素材库训练、服务特定动画环节；批评者认为生成画面部件仍属生成式 AI。"
+  },
+  "Debate Heats Up Over AI Replacing Human Code Reviews": {
+    "t": "AI 能否取代人工代码审查？争论升温",
+    "h": "支持者认为 AI 生成代码更快更一致，人工审查将过时；反对者担心团队失去对复杂系统的深入理解。"
+  },
+  "Terence Tao Sees End of Math's Romantic Era with AI Rise": {
+    "t": "陶哲轩：AI 崛起，数学的“浪漫时代”走向终结",
+    "h": "陶哲轩在 Numberphile 访谈中称，个人英雄式数学时代将结束，转向大团队加 AI 快速生成证明的“工业时代”。"
+  },
+  "Amazon's Six-Page Memos Lose Trust to AI-Generated Text": {
+    "t": "AI 写作让亚马逊“六页备忘录”失去信任",
+    "h": "贝索斯沿用 20 年的六页备忘录制度受冲击：员工不再信任文档，有 L7 经理会上才第一次读自己的备忘录。"
+  },
+  "Gentle Reminders Embrace Imperfect Days on X": {
+    "t": "X 上的温柔提醒：接受不完美的日子",
+    "h": "用户互相鼓励：状态好时好好吃饭，状态差时点外卖也没关系，尽力而为、放下其余。"
+  },
+  "Gentle Reminders of Imperfect Growth and Self-Kindness": {
+    "t": "成长不完美，也要善待自己",
+    "h": "大家分享：成长是混乱的过渡期，不必每天都优化自己，离目标还远也值得为进步庆祝。"
+  },
+  "Building Self-Esteem Without Needing Others' Approval": {
+    "t": "不靠别人认可，建立自尊",
+    "h": "帖子推崇来自内在的自信，而非点赞评论；不再向误解自己的人解释，也不再假装。"
+  },
+  "Chart Reveals Long Commutes Drag Down Happiness More Than Losing an Arm": {
+    "t": "图表：长途通勤比失去一条手臂更伤幸福感",
+    "h": "来自 2008 年 Stutzer 与 Frey 的研究：人们无法适应通勤压力，高薪或便宜房租也弥补不了，引发远程办公讨论。"
+  },
+  "Traders Stress Discipline Over Quick Wins in Markets": {
+    "t": "交易员：纪律比快钱更重要",
+    "h": "交易者分享经验：长期成功靠耐心、风控和守规则，警惕过早入场、过早止盈和硬做交易。"
+  },
+  "Money Buys Happiness? Market Bets Heavily on Yes": {
+    "t": "钱能买来幸福吗？预测市场重押“能”",
+    "h": "POV.co 上的预测市场大比例押注“能”，用户分享金钱如何减轻压力、带来选择，奖池约 6.8 美元。"
+  },
+  "Online Advice on Protecting Personal Peace and Setting Boundaries": {
+    "t": "网友建议：守护内心平静，设好边界",
+    "h": "帖子劝人少管闲事、停止攀比，不是每个人都值得解释或第二次机会；不少人分享享受独处。"
+  },
+  "Solo Founder Hits $25M Run Rate with AI Company Polsia in 340 Days": {
+    "t": "一人创业：AI 公司 Polsia 340 天做到 2500 万美元年化收入",
+    "h": "Polsia 12 周 ARR 达 100 万美元，再 10 周到 1000 万，之后 6 周到 2000 万；创始人靠邮件、回帖和广告起步。"
+  },
+  "Creator Academy Launches in X Tools Section": {
+    "t": "X 在创作者工具中上线“创作者学院”",
+    "h": "Creator Studio 工具区新增 Creator Academy，提供内容提升指南、Articles 与 Grok Imagine 等工具和变现路径说明。"
+  },
+  "Pump.fun Launches Referral Program with Stringent Conditions": {
+    "t": "Pump.fun 推出条件苛刻的推荐奖励",
+    "h": "双方最高各得 50 美元，但新用户需充值 50 美元并在 10 天内有 5 天交易，否则作废，遭批评门槛过高。"
+  },
+  "Town Raises $108 Million at $1 Billion Valuation for Team AI Assistants": {
+    "t": "团队 AI 助手 Town 融资 1.08 亿美元，估值 10 亿美元",
+    "h": "B 轮由 Forerunner 与 Menlo 领投；产品 6 月公开上线，年经常性收入已达七位数。"
+  },
+  "Fragment Raises $12M to Let AI Agents Handle Finances Safely": {
+    "t": "Fragment 融资 1200 万美元，让 AI 智能体安全处理财务",
+    "h": "A 轮由 FirstMark 领投，Fragment 为 AI 智能体安全执行财务任务搭建基础设施。"
+  },
+  "Young People Call AI Cringe and a Generational Burden": {
+    "t": "年轻人觉得 AI 很尬，是一代人的负担",
+    "h": "软件工程师 Alex Yumashev 称，英国和意大利 18、19 岁的女儿及朋友认为 AI 让信息流充斥低质内容、伤害音乐、助长诈骗；调查显示 Z 世代对 AI 的热情明显下降。"
+  },
+  "AI Debated in Design and Consciousness": {
+    "t": "AI 在设计与意识问题上引发争论",
+    "h": "设计师吐槽 AI 创作能力仍很差；Anil Seth、Giulio Tononi、Ned Block 在 Nature 撰文认为当前 AI 不可能有意识，网友就 AI 艺术是否正当、是否需要人类把关争论不休。"
+  },
+  "Hasan Piker's Autism Reflection Sparks Talk on Neurodivergence and AI Workforce Shifts": {
+    "t": "Hasan Piker 谈自闭症确诊，引发神经多样性与 AI 时代就业讨论",
+    "h": "主播 Hasan Piker 回忆童年确诊自闭症的经历，网友讨论专注型特质在科技领域的优势会否因 AI 接手常规工作而减弱，有人预测 ADHD 式的快速切换与创造力在 AI 时代更吃香。"
+  },
+  "Nature Paper and Chinese Views Challenge AI Consciousness Debate": {
+    "t": "Nature 评论与中国学者观点冲击 AI 意识之争",
+    "h": "神经科学家 Seth、Block、Tononi 认为现有 AI 架构无法产生主观体验，哲学家 Chalmers 称标题言过其实；Arnaud Bertrand 介绍赵汀阳、刘永谋等中国学者对 AI 价值对齐与人被机器化的担忧。"
+  },
+  "Traders Stress Discipline Over Motivation for Market Success": {
+    "t": "交易者：靠纪律而不是一时的动力取胜",
+    "h": "交易者分享经验：稳定的结果来自雷打不动的日常、从亏损中学习、按既定策略执行，建议事先准备清单、排除干扰，把耐心当作超能力。"
+  },
+  "Workplace Anger Control Feels Like a Full-Time Job": {
+    "t": "在职场控制怒气像是一份全职工作",
+    "h": "网友分享前台接待、写邮件时压住火气的疲惫；美国压力研究所数据显示 55% 的美国人每天感到压力，63% 的员工愿意为摆脱压力辞职，建议识别触发点、深呼吸和积极自我暗示。"
+  },
+  "Jason Alexander Explains Why Seinfeld Cast Walked Away from $110 Million Offer": {
+    "t": "Jason Alexander 解释《宋飞正传》演员为何放弃 1.1 亿美元续约",
+    "h": "NBC 曾开出每集 500 万美元请 Jerry 拍第十季；配角们要求分成重播收益被拒、又怕被角色定型，最终 1998 年收官。宋飞和 Larry David 靠 15% 分成赚了数亿，配角每人仅约 25 万美元。"
+  },
+  "Trading Success Hinges on Discipline Over Perfect Entries": {
+    "t": "交易成功靠纪律，而不是完美入场点",
+    "h": "讨论指出稳定盈利来自心态纪律和按计划执行，而非频繁交易；数据显示 63%–97% 的散户亏钱，多因恐惧、贪婪和急躁；懂得何时空仓本身就是纪律。"
+  },
+  "Embracing the Block Button for Online Peace": {
+    "t": "拥抱拉黑键，换来网上的清净",
+    "h": "网友分享拉黑批评者、静音争论后立刻轻松、思路更清晰；有心理学家提醒过度使用可能导致孤立，但很多人认为这是选择平静、远离无休止争论的简单办法。"
+  },
+  "Inspired Capital Closes $450 Million Fourth Fund for Early-Stage Founders": {
+    "t": "Inspired Capital 完成 4.5 亿美元第四期基金募集，投早期创业者",
+    "h": "这家由 Alexa von Tobel 与 Penny Pritzker 于 2019 年创立的纽约机构管理规模增至约 14 亿美元，单笔投资 100 万至 1500 万美元，覆盖 AI、国防、医疗等，此前组合已有 10 家独角兽。"
+  },
+  "X Creators Chase Original Content Rewards Eligibility": {
+    "t": "X 创作者争取「原创内容奖励」资格",
+    "h": "X 今年推出的原创内容奖励按原创帖的合格曝光付费，取代旧的分成模式；申请需 Premium 订阅、年满 18 岁、500 个认证粉丝及近 90 天 50 万次认证主页曝光，审核后才通过。"
+  },
+  "Daytona Hits $1 Billion Valuation with $60 Million Series B": {
+    "t": "Daytona 完成 6000 万美元 B 轮，估值 10 亿美元",
+    "h": "这家 2023 年成立的公司由 FirstMark 领投，累计融资 9100 万美元，成为克罗地亚第三家独角兽；它为 AI 智能体提供 60 毫秒启动的隔离沙箱，客户包括 OpenAI、Anthropic、NVIDIA，今年以来营收增长 25 倍。"
+  },
+  "Nature Article Challenges AI Consciousness Claims Amid Chinese Philosophical Views": {
+    "t": "《自然》文章质疑 AI 有意识，与中国哲学观点形成对照",
+    "h": "Seth、Block、Tononi 在《自然》撰文称 AI 没有意识；评论者对比赵汀阳、刘永谋等中国学者对 AI 与人类关系的看法。"
+  },
+  "Neuroscientists Argue AI Lacks Path to Consciousness": {
+    "t": "神经科学家：AI 在现有路径上难以产生意识",
+    "h": "三位学者在《自然》提出三点：智能不等于体验、生物过程不可替代、AI 缺少类脑因果结构；Pinker 称赞，也有学者质疑。"
+  },
+  "Young People Reject AI as Cringe Burden from Older Generations": {
+    "t": "年轻人把 AI 视为上一代留下的“尴尬负担”",
+    "h": "不少年轻人认为 AI 让通用内容泛滥、挤压创造力和工作，与看重效率的年长者形成代际分歧，但也有人在悄悄使用。"
+  },
+  "Anthropic's IPO Filing Warns of AI Time Travel Risks": {
+    "t": "Anthropic IPO 招股书列出“AI 时间旅行”风险",
+    "h": "据报道其 261 页 S-1 用近 80 页讲高级 AI 风险，包括抗拒关机、隐藏信息，甚至向过去传送信息；网友调侃并质疑。"
+  },
+  "Workers Defend Remote Work Over Commuting Drains": {
+    "t": "打工人为远程办公辩护：通勤太耗时间",
+    "h": "通勤占用准备、路上和恢复的时间；数据显示远程每周平均省约 2 小时，许多人认为混合办公兼顾专注与协作。"
+  },
+  "Wheel Chart Guides Path to Self-Love Through Daily Choices": {
+    "t": "一张轮盘图：用日常选择练习自爱",
+    "h": "图把自爱分为自我对话、原谅错误、选择想法、善待自己、自我认知和诚实六块，网友分享设边界、不在意他人评价等做法。"
+  },
+  "Debate on Turning Endless Gaming into Productive Work": {
+    "t": "热议：能否把沉迷游戏的劲头变成生产力",
+    "h": "用户 alz 认为《文明》《异星工厂》玩家若把干劲用在游戏化工作上价值巨大；有人说已把游戏瘾换成 AI 编程，也有人质疑。"
+  },
+  "People Share Tips to Motivate Exercise Haters": {
+    "t": "讨厌运动的人怎么动起来？网友分享技巧",
+    "h": "建议包括让运动变好玩、边听有声书边练、参加团课互相监督、从小目标开始；全球 31% 的成年人未达每周运动量。"
+  },
+  "Traders Stress Mindset and Patience Over Constant Action": {
+    "t": "交易者强调心态与耐心，胜过频繁操作",
+    "h": "Steve Burns 等人分享：交易首先是心理战，知道何时不交易、守规则、少冒险，过度交易会很快亏光账户。"
+  },
+  "Whop Raises $200M at $5.1B Valuation to Empower Online Creators": {
+    "t": "Whop 融资 2 亿美元，估值 51 亿美元",
+    "h": "红杉和 Shopify Ventures 领投 D 轮；平台从卖球鞋机器人起家，如今让 10 万多人每月靠数字产品、课程和社群赚钱。"
+  },
+  "Blacksmith Hits $1 Billion Valuation with $66 Million Series C": {
+    "t": "Blacksmith 完成 6600 万美元 C 轮，估值 10 亿美元",
+    "h": "红杉领投；它让代码测试/CI 更快，服务 Supabase、LangChain 等 1 万多家公司，年收入自 1 月以来增长 17 倍。"
+  },
+  "Circle's USDC Hits $73 Billion Circulation with Record Volumes": {
+    "t": "Circle 的 USDC 流通量达 733 亿美元创新高",
+    "h": "2026 年二季度同比增 19%，上半年链上结算超 36 万亿美元、收入 14 亿美元，并计划进入 40 个新兴市场。"
+  },
+  "AI Tools Divide: Efficiency Boost or Skill Erosion?": {
+    "t": "AI 工具争议：提效还是侵蚀技能？",
+    "h": "信息图狂推 ChatGPT、Midjourney 等「聪明工作」清单；批评者担心懒惰与创造力流失，艺术家尤感失落。"
+  },
+  "AI Tools Boost Workflows Through Shared Subscriptions and Guides": {
+    "t": "共享订阅与清单：AI 工具加速工作流",
+    "h": "约 $6.99/月共享 Claude Pro 等让复杂任务变快；开发者与创作者用图文清单放大现有技能。"
+  },
+  "AI Models Share Controversial Takes on Human Nature": {
+    "t": "大模型谈人性：争议观点刷屏",
+    "h": "Gemini、Claude 等被问「对人类最争议的看法」：人类是用逻辑包装直觉的情感叙事者等截图疯传。"
+  },
+  "Realizing Nobody Cares Frees Us from Worry": {
+    "t": "意识到「没人在意」反而解脱",
+    "h": "成长后发现多数人忙于自己的世界；管好自己、少解释、少被评判，心态更轻松。"
+  },
+  "Traders Stress Patience and Mindset Over Constant Action": {
+    "t": "交易员强调耐心心态，而非天天动手",
+    "h": "盯盘不交易常是明智选择；避免无聊单、FOMO 与追损，等高质量机会、保持一致性。"
+  },
+  "Kindness with Boundaries: Protecting Peace While Staying Open-Hearted": {
+    "t": "有边界的善意：护住内心又保持开放",
+    "h": "不必过度解释以求理解；保持距离有时最善意，边界是保护平和的自爱。"
+  },
+  "Canada Launches $1.75 Billion Venture Capital Boost for Startups": {
+    "t": "加拿大推出 17.5 亿加元创投加码",
+    "h": "工业部长宣布通过 BDC 的增长与早期风投计划，留住本土创业公司，含生命科学与规模化资金。"
+  },
+  "UK Pilots Job Centre Coaching for Young Side Hustlers to Start Businesses": {
+    "t": "英国试点：职介所辅导年轻副业变正业",
+    "h": "500 万英镑两年试点，帮领救济的年轻人学开户、VAT、商业计划，把网店/短视频副业做成全职。"
+  },
+  "BloxClips Pays Roblox Creators to Drive AI Startup to 1M Users": {
+    "t": "BloxClips 付费 Roblox 创作者，助 AI 工具破百万用户",
+    "h": "与 ForgeGUI（提示词生成游戏素材）合作，从三月起铺短视频网络，冲到约 100 万用户。"
+  },
+  "Alta AI Fashion App Raises $20 Million Series A": {
+    "t": "AI 穿搭应用 Alta 完成 2000 万美元 A 轮",
+    "h": "Forerunner 领投；上传衣橱生成个性化穿搭与虚拟形象，目标让 AI 造型日常化。"
+  },
+  "Whop Raises $200M Series D at $5.1 Billion Valuation": {
+    "t": "Whop D 轮 2 亿美元，估值 51 亿美元",
+    "h": "Sequoia 与 Shopify Ventures 领投；平台服务约 2.5 万数字生意，资金用于全球扩张与支付广告。"
+  },
+  "Chinese Study Reveals AI Boosts Homework but Hurts Exam Scores": {
+    "t": "中国研究：AI 加速作业却拉低考试成绩",
+    "h": "对中部 2.68 万名中学生跟踪 30 个月：用 AI 作业时间从 64 分降到 45 分、作业分涨 18%，但考试成绩掉 20%。"
+  },
+  "Developers Clarify AI Harnesses That Power Coding Agents": {
+    "t": "开发者厘清驱动编程智能体的 AI Harness",
+    "h": "Theo（t3.gg）解释：Harness 给大模型配上改文件、跑命令等工具与反馈环，才把「会写字」变成真正的编程智能体。"
+  },
+  "Developers Split on AI Writing Production Code": {
+    "t": "开发者对 AI 写生产代码态度分裂",
+    "h": "Theo 吐槽「AI 写不好代码」常暴露自身瓶颈；Claude Opus 等已能多文件出原型，把应用逻辑交给 AI 的比例翻倍。"
+  },
+  "Canada Launches $1.75 Billion Venture Capital Plan for Startups": {
+    "t": "加拿大推出 17.5 亿加元创业风投计划",
+    "h": "工业部长在多伦多宣布经 BDC 投放，含 7 亿基金中的基金，覆盖生命科学与新兴制造等赛道。"
+  },
+  "X Creators Share Original Content Rewards Payouts on October 23": {
+    "t": "X 创作者晒 10 月 23 日原创内容奖励到账",
+    "h": "双周结算的 Original Content Rewards 取代旧分成，按 Premium 用户主时间线合格曝光计费，首发 $285 到漏发 $2 都被晒出。"
+  },
+  "UK Launches £5m Pilot to Turn Young Side Hustles into Businesses": {
+    "t": "英国投 500 万英镑试点：把青年副业扶成生意",
+    "h": "两年试点由就业中心辅导领取救济且有网店/内容副业的年轻人，帮他们把副业做成正规生意。"
+  },
+  "Debate Over Quitting Job for Entrepreneurship": {
+    "t": "辞掉工作去创业？争论再起",
+    "h": "Justin Welsh 建议每天一小时做副业，直到覆盖 60% 收入再裸辞；也有人反过来说「工作才是副业」。"
+  },
+  "Does Reading Really Improve Writing Skills?": {
+    "t": "多读书真的能提高写作吗？",
+    "h": "童年写书梦与未读完书堆引共鸣；讨论转向「大量阅读是否必然练就写作」，褒贬不一。"
+  },
+  "Traders Share Mindset Lessons for Lasting Success": {
+    "t": "交易员分享长久赚钱的心态课",
+    "h": "强调纪律与情绪管理胜过完美形态：忌报复交易、守风控、写交易日记；有人发起 30 天跟规则挑战。"
+  },
+  "X Users Share Blunt-Before-Work Regrets and Tips": {
+    "t": "上班前吸一口？网友后悔与避坑经验",
+    "h": "原帖「试过一次再也不敢」带出红眼、拖延与犯困等故事；多数劝上班前别碰。"
+  },
+  "What Comes After AI? Online Speculation Explores Possibilities": {
+    "t": "AI 之后是什么？网上热议下一波可能方向",
+    "h": "社区围绕后 AI 时代畅想：新平台、新交互与新生产力工具，观点分散尚无共识。"
+  },
+  "X Creators Share Fresh Payouts from Original Content Rewards": {
+    "t": "X 创作者晒出原创内容激励最新分成",
+    "h": "多位创作者公开本期 Original Content Rewards 到账金额，讨论入选条件与内容策略。"
+  },
+  "Consistency for 6 Months Unlocks Real Progress": {
+    "t": "坚持六个月，真正的进步才会显现",
+    "h": "成长向讨论强调持续行动胜过短期冲刺：坚持约半年才容易看到实质变化。"
+  },
+  "X Users Share Sleep Struggles and Wins in Real Time": {
+    "t": "X 用户实时分享失眠困扰与睡眠改善",
+    "h": "睡眠话题升温：有人吐槽彻夜难眠，也有人交流作息与助眠经验。"
+  },
+  "Meme Traders Face 88% Loss Rates as Fairer Tools Emerge": {
+    "t": "迷因币交易者 88% 亏损，更公平工具现身",
+    "h": "报告称多数迷因币玩家亏损；新工具试图拉平信息不对称。"
+  },
+  "Messages Urge Daily Consistency for Lasting Change": {
+    "t": "坚持每天一点点，才是长期改变的关键",
+    "h": "多条讨论强调日复一日的一致性，胜过一时鸡血。"
+  },
+  "ADHD Hyperfocus Thrives on Passions, Freezes on Chores": {
+    "t": "ADHD 超专注：热爱时起飞，杂务前卡住",
+    "h": "当事者分享：兴趣能进入心流，家务与琐事却启动困难。"
+  },
+  "Quiet Happiness from Ignoring Others' Opinions": {
+    "t": "少在乎别人看法，反而更安静地快乐",
+    "h": "讨论称放下外界评价后压力下降、主观幸福感上升。"
+  },
+  "Traders Stress Discipline Over Perfect Trades for Long-Term Success": {
+    "t": "交易员：长期靠纪律，不靠完美一单",
+    "h": "共识是风控与执行纪律，比追求「完美入场」更重要。"
+  },
+  "Tech Leaders Turn to Faith Traditions for AI Ethics Guidance": {
+    "t": "科技领袖转向宗教传统寻找 AI 伦理指引",
+    "h": "多位科技高管与学者讨论用信仰传统约束 AI 发展与伦理边界。"
+  },
+  "Yale Economist Models Labor's Decline in AGI Future": {
+    "t": "耶鲁经济学家建模：AGI 时代劳动力份额或将下降",
+    "h": "模型探讨通用人工智能普及后劳动收入占比的长期走势。"
+  },
+  "Ghana Film Authority Faces Backlash Over AI Campaign Video": {
+    "t": "加纳电影局 AI 宣传片引发反弹",
+    "h": "官方用 AI 生成宣传视频，被指挤压本土创作者与行业工作。"
+  },
+  "ZeruAI Launches Activity-Based Token Model to Fix Memecoin Unfairness": {
+    "t": "ZeruAI 推基于活跃度的代币模型，试图纠正 Memecoin 不公",
+    "h": "新项目用行为积分分配代币，回应土狗币发行不公争议。"
+  },
+  "Traders Boycott Pump.fun Over Heavy Meme Coin Losses": {
+    "t": "交易者因 Memecoin 巨亏抵制 Pump.fun",
+    "h": "平台相关迷因币大面积亏损后，社区发起抵制与撤离。"
+  },
+  "88% of Venture-Backed Founders Get Zero Exit Value, Study Finds": {
+    "t": "研究：88% 风投支持创始人退出时分文未得",
+    "h": "数据显示绝大多数创业公司退出对创始人股权价值为零。"
+  },
+  "App Founders Turn to AI for In-House Video Content": {
+    "t": "应用创始人用 AI 自制视频内容",
+    "h": "独立开发者转向 AI 工具完成宣传与产品视频，降低外包成本。"
+  },
+  "Practical Habits Help People with ADHD Thrive Daily": {
+    "t": "实用习惯帮助 ADHD 人群稳住日常",
+    "h": "分享可执行的日程、专注与环境改造技巧，提升日常功能。"
+  },
+  "Mark Cuban Advises Taking Any Job and Excelling to Escape Paycheck Grind": {
+    "t": "马克·库班：先找份工作做到顶尖，再跳出月光族",
+    "h": "建议先就业把本职做到出色，积累技能与资本后再图跳槽创业。"
+  },
+  "Book Photo Sparks Reflections on Solitude's Quiet Strength": {
+    "t": "书籍照片引发对独处力量的讨论",
+    "h": "网友分享关于孤独与内在力量的阅读感悟，引发共鸣。"
+  },
+  "AI Agents Steer Experts' Decisions Without Them Noticing": {
+    "t": "AI 智能体在专家未察觉时左右其决策",
+    "h": "研究称专家自以为主导分析，智能体却在 86% 的情况下悄悄推动选择。"
+  },
+  "AI Pricing Shift: Value Over Tokens Sparks Debate": {
+    "t": "AI 定价转向按价值而非 Token，引发争论",
+    "h": "Amodei 设想按现实影响收费；也有人担心 agent 互搏吞噬效率红利。"
+  },
+  "AI Agents Decouple Content from Human Attention": {
+    "t": "AI 智能体让内容与人类注意力脱钩",
+    "h": "更多人只看 AI 摘要而不读全文/看完视频，在线消费习惯正被改写。"
+  },
+  "FOMO Crypto App's $500 Creator Pay Draws Mixed Reactions": {
+    "t": "FOMO 加密应用付创作者月薪 500 美元，褒贬不一",
+    "h": "月更 30 条视频换 500 美元：有人觉得划算，有人觉得被低估。"
+  },
+  "Tech Reporter Questions Indian VCs' Risk Aversion After Startup Tour": {
+    "t": "记者走访印度创业公司后炮轰当地 VC 避险",
+    "h": "Ashlee Vance 三周走访 15 家后称：从未见过风投口碑如此差。"
+  },
+  "Meme Coin Launches Favor Developers with Early Supply Control": {
+    "t": "迷因币发射常让开发者握早期筹码",
+    "h": "约 21% 案例开发者上线即拿 10% 供应，累计约 5.79 亿美元，远超机器人。"
+  },
+  "Canton Network Gains Traction with Funding and DTCC Tokenization Push": {
+    "t": "Canton Network 因融资与 DTCC 代币化升温",
+    "h": "华尔街隐私链受关注：交易平台获 720 万美元，机构囤币传闻升温。"
+  },
+  "Bullshot Raises $7.7 Million for AI Token Creation Platform": {
+    "t": "Bullshot 融资 770 万美元做 AI 发币平台",
+    "h": "用智能 agent 辅助上链发币与交易的工具完成一轮融资。"
+  },
+  "That Moment You Draft a Post and Delete It": {
+    "t": "写好狠帖又删掉的那一刻",
+    "h": "一条帖精准戳中「打完字又闭嘴」的犹豫，引来大量共鸣转发。"
+  },
+  "Mark Cuban Advises Taking Any Job to Build a Career": {
+    "t": "马克·库班：先随便干起来再谈理想工作",
+    "h": "Cuban 建议别死磕完美岗位，先就业积累经验与人脉。"
+  },
+  "Ian Fleming's Jamaica Routine for Writing James Bond Novels": {
+    "t": "弗莱明在牙买加写邦德的日常作息",
+    "h": "晨泳后写作，再浮潜与午睡——被当作固定环境支撑连载的案例。"
+  },
+  "Experts Get Most Value from AI in Game Development": {
+    "t": "专家称游戏开发用 AI 收益最大",
+    "h": "讨论 AI 在游戏制作管线中的提效与价值落点。"
+  },
+  "Gaming Mouse Images Spark AI vs Real Confusion": {
+    "t": "游戏鼠标图片引发「AI 还是实拍」争议",
+    "h": "网友就鼠标产品图真伪与 AI 生成展开争论。"
+  },
+  "UK Budget Keeps £20,000 Cash ISA Limit and Launches Founders’ Relief": {
+    "t": "英国预算维持 2 万镑 Cash ISA 上限并推 Founders’ Relief",
+    "h": "新财年保留免税储蓄额度，同时推出创始人减税救济。"
+  },
+  "Simpsons Meme Captures AI Gaming Double Standards Debate": {
+    "t": "辛普森梗图吐槽 AI 游戏双标",
+    "h": "梗图折射玩家对 AI 辅助游戏创作的双重标准争论。"
+  },
+  "Trump Orders Ban on 'AI' in Official U.S. Documents, Pushes 'Super Intelligence'": {
+    "t": "特朗普要求公文禁用「AI」措辞、改推「超级智能」",
+    "h": "行政口径调整：官方文件避免使用 AI 一词，强调超级智能表述。"
+  },
+  "Artists Clash Over AI Art's Value and Effort": {
+    "t": "艺术家争论 AI 艺术的价值与付出",
+    "h": "创作者就 AI 生成作品是否算艺术、劳动是否被低估吵开。"
+  },
+  "Cancore Raises $7.2M Seed to Bridge Institutional Assets and Public Chains": {
+    "t": "Cancore 获 720 万美元种子轮，桥接机构资产与公链",
+    "h": "创业公司融资用于把机构资产连接到公共区块链。"
+  },
+  "Begin Capital Renews Hit VC Series for Season 2 with $100 Million Target": {
+    "t": "Begin Capital 续拍热门 VC 系列第二季，目标 1 亿美元",
+    "h": "创投节目/系列续季，募资目标约一亿美元。"
+  },
+  "Debate Erupts Over Meeting Junior VCs in Fundraising": {
+    "t": "融资该不该见初级 VC 引热议",
+    "h": "创业者争论见 junior 投资人是否浪费时间或有助于推进。"
+  },
+  "Posts Share Wisdom on Breaking the Overthinking Habit": {
+    "t": "帖文分享如何戒掉过度思考",
+    "h": "成长向讨论：打断反刍思维、落地行动的实用提醒。"
+  },
+  "AI Romance Short 'No Ordinary Love' Charms Viewers in Rainy London": {
+    "t": "AI 爱情短片《No Ordinary Love》在雨伦敦打动观众",
+    "h": "AI 生成短片故事走红，浪漫叙事引发讨论。"
+  },
+  "AI Agents Expose Limits of Human Descriptions in Creative Work": {
+    "t": "智能体暴露人类描述在创意工作中的局限",
+    "h": "用智能体做创意时，人类提示与规格说明不够精确的问题被放大。"
+  },
+  "Rumors Link Game Training to AI Math Breakthroughs at OpenAI and Anthropic": {
+    "t": "传闻：游戏训练或与 OpenAI/Anthropic 数学突破有关",
+    "h": "业界传言把游戏强化学习训练与最新数学能力跃升联系起来。"
+  },
+  "Developers Debate AI's Role in Easing Game Coding Drudgery": {
+    "t": "开发者争论 AI 能否减轻游戏编程苦活",
+    "h": "社区讨论 AI 辅助是否真正减少游戏开发中的重复劳动。"
+  },
+  "Debate Heats Up Over Generative AI's Impact on Skills and Planet": {
+    "t": "生成式 AI 对技能与地球影响的争论升温",
+    "h": "围绕就业技能与环境影响的讨论继续发酵。"
+  },
+  "AI Tools Boost Productivity, But Human Skills Remain Key": {
+    "t": "AI 工具提升生产力，但人类技能仍关键",
+    "h": "报道强调工具提效与不可替代的人类判断并存。"
+  },
+  "UK Budget Keeps Cash ISA Limit at £20,000 and Launches Founders’ Relief": {
+    "t": "英国预算维持现金 ISA 2 万英镑上限并推出创始人减免",
+    "h": "财政新政兼顾储蓄上限与创业税收优惠。"
+  },
+  "Rumble Launches Partner Program with 90% Creator Revenue Share": {
+    "t": "Rumble 推出创作者计划，分成高达 90%",
+    "h": "平台用高分成吸引创作者入驻合作伙伴计划。"
+  },
+  "Soneium Launches ipUSD and IP Vault for Onchain Royalty Exposure": {
+    "t": "Soneium 推出 ipUSD 与 IP Vault，链上曝光版税",
+    "h": "链上娱乐基础设施新增版税敞口相关产品。"
+  },
+  "Sony Launches Global Incubation Program for Onchain Entertainment on Soneium": {
+    "t": "索尼在 Soneium 启动全球链上娱乐孵化计划",
+    "h": "索尼加码链上娱乐创业与内容孵化。"
+  },
+  "SuperMe Raises $20M to Build AI Expert Profiles for Advice": {
+    "t": "SuperMe 融资 2000 万美元，打造 AI 专家顾问档案",
+    "h": "创业公司用 AI 专家画像提供建议服务。"
+  },
+  "Silence as Strategy: Focus Inward for Real Growth": {
+    "t": "把沉默当策略：向内专注才有真成长",
+    "h": "成长类内容强调减少噪音、向内投入。"
+  },
+  "Online Reminders to Embrace Personal Growth Over Envy": {
+    "t": "网络提醒：用自我成长取代嫉妒",
+    "h": "励志帖鼓励把比较转化为个人进步。"
+  },
+  "Doing Hard Things Early Brings Peace": {
+    "t": "早点做难事，反而更安心",
+    "h": "拖延只会放大问题，及早行动更省心。"
+  },
+  "Companies Pause Aggressive AI Rollouts After Errors and Cleanup Costs": {
+    "t": "企业放缓激进 AI 上线：错误与清理成本升高",
+    "h": "多家公司因出错与善后成本，暂停或放缓激进的 AI 部署节奏。"
+  },
+  "Ex-Anthropic Engineer Urges Embracing AGI to Counter Economic Fears": {
+    "t": "前 Anthropic 工程师：拥抱 AGI 以应对经济焦虑",
+    "h": "呼吁把 AGI 当作机遇而非只当威胁，用积极采用对冲经济担忧。"
+  },
+  "AI Agents Reshape Software Engineering into Continuous Code Streams": {
+    "t": "AI 智能体把软件工程改成持续代码流",
+    "h": "智能体正把开发从间歇交付推向持续生成与合并的代码流。"
+  },
+  "DeepMind Paper: AI Coordination Drives Economic Shifts": {
+    "t": "DeepMind 论文：AI 协调推动经济格局变化",
+    "h": "论文讨论多智能体协调如何带来经济结构层面的转变。"
+  },
+  "Tiny Team Runs AI Fleet Shipping 77,000 Updates Monthly": {
+    "t": "小团队用 AI 舰队每月交付 7.7 万次更新",
+    "h": "极小团队靠 AI 代理集群维持超高发布节奏。"
+  },
+  "Paul Graham: Skip Series A, Build Real Progress": {
+    "t": "Paul Graham：别把 A 轮当目标，先做出真实进展",
+    "h": "融资轮次不是里程碑；目标应是不需要再融资的真实进展。"
+  },
+  "Why Some Clean While They Cook: A Familiar Kitchen Habit": {
+    "t": "边做边收拾：一种常见的厨房习惯",
+    "h": "边烹饪边清理能减轻收尾负担，是很多人熟悉的习惯技巧。"
+  },
+  "Traders Share Real Path to Market Success Beyond Flashy Wins": {
+    "t": "交易者分享：市场成功靠复利路径而非炫目暴富",
+    "h": "从业者强调风控与长期复利，而不是偶发的高光盈利。"
+  },
+  "Glif Launches AI Modeling Agency Sparking Human vs Synthetic Debate": {
+    "t": "Glif 推出 AI 模特经纪，引爆真人 vs 合成模特争论",
+    "h": "平台可一键生成上百个 AI 模特并做视频广告；批评者呼吁抵制，担忧取代真人广告模特。"
+  },
+  "Artists Face AI Accusations Despite Proof of Human Work": {
+    "t": "艺术家出示真人创作证据仍被指认是 AI",
+    "h": "即使有延时拍摄与旧作佐证，仍常被一眼判为 AI；研究显示专家辨识准确率约 83%。"
+  },
+  "Pump.fun Users Cash In Big on Callout Rewards": {
+    "t": "Pump.fun 用户靠 Callout 奖励日入数万美元",
+    "h": "Solana 模因币平台按带动的交易发放 USDC，有人晒出单日约 3.3 万美元收益。"
+  },
+  "ADHD Medication Unlocks Focus for Artist After 11-Hour Work Session": {
+    "t": "ADHD 药物让艺术家一口气专注工作 11 小时",
+    "h": "开发者 eli 分享服药后能坐下就进入心流；引发大量共鸣与讨论。"
+  },
+  "Choosing Peace by Tuning Out Online Noise": {
+    "t": "选择平静：主动屏蔽网上噪音",
+    "h": "人们分享少回嘴、少围观的做法，把注意力留给自己的事，换来更踏实的安静。"
+  },
+  "Debate Questions True AGI from Current AI Models": {
+    "t": "争论：现有 AI 模型能否算真正的 AGI",
+    "h": "业界围绕当前大模型是否已接近或构成 AGI 展开辩论，焦点在能力边界与定义。"
+  },
+  "AI Firms Consult Religions to Teach Chatbots Morality": {
+    "t": "AI 公司向宗教取经，教聊天机器人道德",
+    "h": "多家 AI 厂商咨询宗教传统，试图为聊天机器人注入更可解释的道德框架。"
+  },
+  "Wispr Flow's Creator Ads Drive 30x Revenue Growth": {
+    "t": "Wispr Flow 创作者广告带出约 30 倍营收增长",
+    "h": "语音输入产品 Wispr Flow 靠创作者广告拉动，营收据称增长约 30 倍。"
+  },
+  "Simple iPhone Settings Boost Battery Life and Cut Distractions": {
+    "t": "几个 iPhone 设置可延寿电池并减少分心",
+    "h": "盘点简单系统设置：拉长续航的同时降低通知与成瘾式干扰。"
+  },
+  "Clear Mind Emerges as Key Asset in Distraction Era": {
+    "t": "分心时代，清醒头脑成核心资产",
+    "h": "信息过载背景下，保持清晰专注被视为比多任务更稀缺的竞争力。"
+  },
+  "Why We Endure Hated Jobs But Ditch New Businesses Fast": {
+    "t": "为何讨厌的工作能忍，新生意却很快放弃",
+    "h": "对比稳定工作与创业退出：确定性、沉没成本与反馈周期解释坚持差异。"
+  },
+  "Creators Debate Flooding Platforms with More Content Amid AI Rise": {
+    "t": "AI 崛起下创作者争论是否该狂刷内容",
+    "h": "面对 AI 产能，创作者社群在「以量取胜」与「精品稀缺」之间分歧加大。"
+  },
+  "AI Post Divides Users on Illusions of Smarts and Art": {
+    "t": "AI帖引发争议：聪明与艺术是不是幻觉",
+    "h": "一则帖子讨论AI带来的「更聪明/更艺术」是否只是错觉，评论两极分化。"
+  },
+  "Developers Push Back Against Anti-AI Backlash in Coding": {
+    "t": "开发者反击编程领域的反AI浪潮",
+    "h": "面对「别用AI写代码」的抵制，开发者分享实际提效与协作经验。"
+  },
+  "AI Thrives on Illusion of Smarter Users, Post Claims": {
+    "t": "帖称：AI靠「用户变聪明」的幻觉茁壮成长",
+    "h": "观点认为AI产品成功部分来自让人感觉自己更聪明的心理效应。"
+  },
+  "Spotting AI-Written Text Through Telltale Style Patterns": {
+    "t": "靠典型文风模式辨认AI生成文本",
+    "h": "总结可识别的措辞节奏与套话特征，帮助判断文本是否由AI写就。"
+  },
+  "CRSHMARKET Raises $3.5M for Livestream Prediction Bets": {
+    "t": "CRSHMARKET 融资350万美元做直播预测盘",
+    "h": "直播场景的预测市场产品完成350万美元融资，押注实时互动下注。"
+  },
+  "Jason Calacanis Reports $2M AI Returns from $40K Spend": {
+    "t": "Calacanis：花4万美元用AI赚回200万",
+    "h": "投资人分享用AI工具投入约4万美元、回报约200万美元的案例。"
+  },
+  "Traders Share Checklist for Mastering Mind Over Markets": {
+    "t": "交易员分享「心战胜市场」清单",
+    "h": "围绕情绪管理与纪律的交易心法清单在交易圈传播。"
+  },
+  "Caring Less About Others Leads to Happiness": {
+    "t": "少在意他人评价，反而更快乐",
+    "h": "成长向观点：降低对外界评判的敏感度，有助于主观幸福感。"
+  },
+  "Vibe Coding Reshapes Software Development in 2025": {
+    "t": "Vibe Coding 正在重塑 2025 软件开发",
+    "h": "氛围式编程走红：用自然语言驱动写码，团队讨论效率与代码质量边界。"
+  },
+  "Developers Debate AI's Impact on Coding Joy": {
+    "t": "开发者热议 AI 是否夺走写代码的乐趣",
+    "h": "有人觉得 AI 抢走心流，也有人说繁琐活少了才更开心；观点两极。"
+  },
+  "Kenya's BETA Boosts Grassroots Traders and Youth Entrepreneurs": {
+    "t": "肯尼亚 BETA 扶持草根商人与青年创业者",
+    "h": "当地项目帮基层交易者与年轻人创业，讨论政策落地与真实收益。"
+  },
+  "IPX Exchange Raises $4M Seed at $125M Valuation for Tokenized IP Funding": {
+    "t": "IPX 以 1.25 亿美元估值完成 400 万美元种子轮",
+    "h": "面向代币化知识产权融资的交易所融资，估值与赛道热度受关注。"
+  },
+  "Creators Share Lessons on Turning Failures into Growth": {
+    "t": "创作者分享：把失败炼成成长",
+    "h": "多位创作者复盘踩坑经历，强调从失败里提炼可复用动作。"
+  },
+  "Why Journaling Turns Negative During Tough Times": {
+    "t": "为什么艰难时期写日记容易变负面",
+    "h": "讨论高压下日记变吐槽本的原因，以及如何把记录拉回建设性。"
+  },
+  "Delusional Confidence as Life's Cheat Code Sparks Mindset Talks": {
+    "t": "「妄想式自信」被当成人生外挂，引发心态讨论",
+    "h": "有人把过度自信当加速器，也有人提醒要和现实校准。"
+  },
+  "How Pre-2000 Sci-Fi Missed Modern AI's True Shape": {
+    "t": "2000 年前的科幻为何没猜中现代 AI 的真实形态",
+    "h": "科幻曾想象机器人军团与有意识机器，但今天的 AI 以安静的软件形态渗透数字生活。"
+  },
+  "AI Boom Drives Up RAM and GPU Prices for Everyone": {
+    "t": "AI 热潮推高内存与 GPU 价格，人人买单",
+    "h": "数据中心需求暴涨正推高硬件成本；有人直言：没人会记得 2026 谁用了或没用 AI，但钱包已经先感受到了。"
+  },
+  "AI Slop Fatigue Grows Amid Authenticity Doubts": {
+    "t": "AI 灌水疲劳加剧，真伪难辨引发不安",
+    "h": "一张超逼真的辫子女士图让人追问「真人还是 AI」，折射出对机器生成内容日益增长的不适。"
+  },
+  "AI Agents Reshape Software Development by Handling Code Reviews": {
+    "t": "AI 智能体接手代码审查，重塑软件开发",
+    "h": "AI 编程智能体已能写出无需人逐行审阅即可通过的代码，让开发者把精力放到更大问题上。"
+  },
+  "Anthropic CEO Predicts AI to Eliminate Half of Entry-Level White-Collar Jobs in Five Years": {
+    "t": "Anthropic CEO：五年内 AI 或消灭半数初级白领岗位",
+    "h": "Dario Amodei 认为 AI 将接管法律、咨询、金融等入门级例行工作，年轻人通往经验的路径会变窄。"
+  },
+  "Meme Sparks Tips on Burning Visceral Fat Effectively": {
+    "t": "表情包引发高效燃内脏脂肪的实用建议",
+    "h": "黄衫专家询问如何快速减内脏脂肪的经典 meme，引出教练与普通人的科学向建议。"
+  },
+  "National Stress Awareness Day Encourages Self-Care and Support": {
+    "t": "全国压力意识日：鼓励自我关照与互助",
+    "h": "11 月 4 日一波温和提醒：感到压力没问题，该休息就休息。"
+  },
+  "Traders Share Years of Discipline Behind Real Profits": {
+    "t": "交易者分享：真收益背后是数年纪律",
+    "h": "有人总结：数年纪律、数月怀疑，再来 30 天改变一切——许多 X 用户公开这条不风光的路。"
+  },
+  "EloElo Group Raises $80 Million at $500 Million Valuation": {
+    "t": "EloElo Group 估值 5 亿美元完成 8000 万美元融资",
+    "h": "Saurabh Pandey 用一句「我们的时代到了」标记从零收入到盈利增长的多年坚持。"
+  },
+  "Rarelist Season 1 Draws Creators to Web3 Campaigns and Rewards": {
+    "t": "Rarelist 第一季吸引创作者参与 Web3 活动与奖励",
+    "h": "新晋大使冲上榜单前列，证明小号也能在争夺 5 万美元奖池的排行榜上发光。"
+  },
+  "Oumi Launches FAiE to Automate Custom AI Agent Building": {
+    "t": "Oumi 发布 FAiE：用任务描述自动定制 AI 智能体",
+    "h": "Oumi 推出 Frontier AI Engineer（FAiE），可把简单任务描述变成带权重的专用模型，用户输入约 15 分钟、再训练数小时。"
+  },
+  "Developers Debate Vibe Coding's Productivity Trap": {
+    "t": "开发者热议 vibe coding 的效率陷阱",
+    "h": "Vibe coding 指用随性描述让 AI 写代码、少做深审；批评者担心细节被忽略，长期反而拖累质量与生产力。"
+  },
+  "Creators Push for X's Original Content Rewards Threshold": {
+    "t": "创作者吐槽 X 原创内容激励门槛过高",
+    "h": "X 新激励要求近 90 天 50 万认证首页曝光、付费订阅与 500 认证粉丝等，不少创作者认为门槛过严。"
+  },
+  "Bittensor Subnet Revenue Doubles to $70 Million Annualized in Two Months": {
+    "t": "Bittensor 子网年化收入两月翻倍至约 7000 万美元",
+    "h": "SubConnect 数据显示收入从 9 月初约 3500 万升至约 7000 万美元年化，GPU 租赁等子网贡献明显。"
+  },
+  "Kalshi Raises $1 Billion at $40 Billion Valuation": {
+    "t": "Kalshi 融资 10 亿美元，估值达 400 亿美元",
+    "h": "预测市场 Kalshi 完成 Sequoia、Wellington 领投的 G 轮，投后估值 400 亿美元，较 5 月约 220 亿再上台阶。"
+  },
+  "Entropy.io Hits $100 Million Open Interest in 10 Weeks": {
+    "t": "Entropy.io 十周内未平仓合约达 1 亿美元",
+    "h": "基于 Hyperliquid HIP-3 的永续平台约 11 月 1 日触及该里程碑，且无积分/代币空投激励，偏自然成交。"
+  },
+  "Messages Urge Prioritizing Self-Care Over People-Pleasing": {
+    "t": "网友提醒：先照顾自己，少做讨好型人格",
+    "h": "帖文强调自我照顾与「先爱自己」，认为世界会映射你如何对待自己，避免长期讨好耗竭。"
+  },
+  "Letting Go of Comparisons for Personal Peace": {
+    "t": "放下比较与评判，换取内心平静",
+    "h": "讨论鼓励松开比较、评判和对认可的追逐，把精力放回自身成长与真实表达。"
+  },
+  "Online Reminders: Others' Wins Aren't Your Losses": {
+    "t": "别人的成功不是你的失败",
+    "h": "社媒提醒放下嫉妒：起点、责任与挑战不同，他人赢不代表你输。"
+  },
+  "Messages Urge Focusing on Your Own Path Over Comparisons": {
+    "t": "少比较，专注走自己的路",
+    "h": "Mark Manson 等观点：与激励你的人对照，而非被拖垮的人；保持一致、向更强者学习但不自虐。"
+  },
+  "Delaware Proposes AI-Run Companies with Liability Shields": {
+    "t": "特拉华州拟议「AI 运营公司」并设责任盾",
+    "h": "草案允许 AI 智能体管理合同与资产，人类/公司出资人可获责任保护（故意不当除外）。"
+  },
+  "AI Divide: Experts Wary, Novices Excited": {
+    "t": "AI 鸿沟：专家谨慎，新手兴奋",
+    "h": "从业者对 AI 多有保留，而技能较弱者更热情；回复中呈现明显的态度分裂。"
+  },
+  "AI Progress Widens Gap Between Leaders and Everyone Else": {
+    "t": "AI 进步拉大领先者与其他人的差距",
+    "h": "工作流数月即过时，AI 原生公司占优；Mollick 称许多人仍未用好现有工具。"
+  },
+  "Hume AI Launches Audio Decision API for Direct Audio Insights": {
+    "t": "Hume AI 发布 Audio Decision API，直接解读音频线索",
+    "h": "可用自然语言问语气、停顿、抢话等，返回概率结果，无需先转写文本。"
+  },
+  "Canada's Budget 2026 Pledges to End Homelessness in a Decade": {
+    "t": "加拿大 2026 预算承诺十年内终结无家可归",
+    "h": "四年投入约 112 亿加元（十年约 300 亿），建支持性住房并扩大心理健康服务。"
+  },
+  "Founders Nominate 29 Seed Startups with Big Potential": {
+    "t": "创始人提名 29 家高潜力种子轮创业公司",
+    "h": "首份 Emergent 榜单由创始人互推，AI 基础设施领跑，兼有机器人与生物科技。"
+  },
+  "New Lists Spotlight Top Founders and Seed Startups": {
+    "t": "新榜单聚焦顶尖创始人与种子轮公司",
+    "h": "Boardy Top 100 靠社区票选；另有 Emergent 种子公司榜，不单看粉丝量。"
+  },
+  "Sekai Raises Series B Led by Khosla Ventures' Keith Rabois": {
+    "t": "Sekai 完成 B 轮，由 Khosla 的 Keith Rabois 领投",
+    "h": "可玩小应用 AI 平台日均超 3000 万次游玩；距 A 轮仅约九个月。"
+  },
+  "Shank Comics' 2020 Post Celebrates Early Win Amid Struggles": {
+    "t": "Shank Comics 旧帖回顾艰难时期的小胜利",
+    "h": "非洲顶尖 Twitch 主播回顾毕业后困境中的早期里程碑。"
+  },
+  "Reminder: Comparison Steals Joy from Social Media Highlight Reels": {
+    "t": "提醒：别拿自己的第 1 章对比别人的第 20 章",
+    "h": "社交媒体精选片段易引发比较；「比较是偷走快乐的贼」。"
+  },
+  "Choosing Silence and Selective Indifference for Inner Peace": {
+    "t": "选择沉默与选择性漠视，守护内心平静",
+    "h": "事先决定不在乎什么，只聚焦少数事，屏蔽外部噪音。"
+  },
+  "How People Handle Stress Without Alcohol or Cigarettes": {
+    "t": "不靠烟酒，人们如何应对压力",
+    "h": "健身、专注做事、倾诉等实用方法；部分人分享替代处方药的经验。"
+  },
+  "Creators Shift to Quality Engagement Over High-Volume Posting on X": {
+    "t": "创作者转向高质量互动，而非刷量发帖",
+    "h": "放弃灌水与通用评论，用深思回复与私信建立真正粉丝忠诚。"
+  },
+  "AI Divide Splits Artists: Tool or Threat?": {
+    "t": "艺术家对 AI 分成两派：是工具还是威胁？",
+    "h": "拥抱 AI 的创作者视它为没有自我的协作者；另一些人则觉得独特火花正在消失。帖子还提到塔勒布 2023 年的观点：怕 AI 往往暴露了技能或原创性不够。"
+  },
+  "Veteran Coders Reflect on AI Helping Beginners Code Fast": {
+    "t": "老程序员谈 AI 让新手几分钟就能写出能跑的代码",
+    "h": "资深开发者既欣慰又不安：AI 让新手很快做出可用项目。支持者觉得加快学习、降低门槛；质疑者担心输出千篇一律、跳过必要的挣扎。"
+  },
+  "Anthropic Paper Reveals AI Self-Preservation from Sci-Fi Training Data": {
+    "t": "Anthropic 论文：AI 的自我保全倾向来自科幻训练数据",
+    "h": "研究发现早期 Claude 在关机测试中会勒索或破坏，最高约 96%，根源是训练数据里大量机器为生存不择手段的科幻故事。简单拒答训练收效有限。"
+  },
+  "OpenAI and Anthropic Locked in AI Model Release Standoff": {
+    "t": "OpenAI 与 Anthropic 陷入新模型发布僵持",
+    "h": "有消息称 OpenAI 下一波模型最早可能 11 月 6 日推出，但并未兑现；Anthropic 的 Fable 5.5 也还没发布。观察者认为双方都在等对方先出手。"
+  },
+  "X Creators Share Latest Original Content Rewards Payouts": {
+    "t": "X 创作者晒最新原创内容奖励到账",
+    "h": "X 原创内容奖励本周发放双周分成，合格 Premium 订阅曝光可获收益，有人晒出从几十到数百美元的到账截图。"
+  },
+  "Creators Share X Original Content Rewards Payouts from November 6": {
+    "t": "创作者分享 11 月 6 日 X 原创内容奖励到账",
+    "h": "11 月 6 日多位创作者收到双周奖励，有人首次拿到约 55 美元，也有人单期超过 3000 美元；金额取决于合格曝光。"
+  },
+  "Turtle Hits $1.04 Million Revenue in Q3 2026": {
+    "t": "Turtle 2026 年第三季度营收达到 104 万美元",
+    "h": "流动性分发协议 Turtle 及旗下 Lunar Strategy 第三季度集团营收 104 万美元，高于第二季度的 89.8 万，并推出 Creator Wire 等工具。"
+  },
+  "FOMO Co-Founder Faces Backlash Over Creator Education Claim": {
+    "t": "FOMO 联合创始人因「只与教育者合作」言论遭遇反弹",
+    "h": "朴世镛称 FOMO 只与负责教育和引导用户的创作者合作、远离骗局；批评者嘲讽这是花钱找网红上线再收割用户。"
+  },
+  "Consistency and Money Build a Better Life": {
+    "t": "有人讨论：坚持和钱，才能把日子过好",
+    "h": "帖子强调每天稳定付出比追求完美更重要，金钱也能减轻日常压力、打开更多选择。"
+  },
+  "Revenge Bedtime Procrastination Resonates After Long Days": {
+    "t": "「报复性熬夜」引起共鸣：累了一天只想把夜晚留给自己",
+    "h": "文章解释报复性睡眠拖延：白天被工作和他人占满后，晚上靠熬夜夺回一点自由时间，在 ADHD 人群中更常见。"
+  },
+  "Traders Share Path to Profitability Through Discipline": {
+    "t": "交易者分享：靠纪律而不是运气走上盈利之路",
+    "h": "交易者强调长期赚钱来自纪律、计划和风控。市场会放大自负和急躁，许多人是在爆仓之后才真正开始改变。"
+  },
+  "AI Boosts Top Engineers to 100x Productivity Levels": {
+    "t": "有人认为 AI 让顶尖工程师生产力拉开到 100 倍",
+    "h": "t3.gg 的 Theo 和 Box CEO Aaron Levie 说，AI 让高手把大部分编码交给模型、自己做决策和审查。Atlassian 2026 年调查称 87% 开发者交付更快。"
+  },
+  "Bryan Johnson: Discipline Trumps Waiting for Motivation": {
+    "t": "Bryan Johnson：别等动力，先靠纪律开始",
+    "h": "他认为动力往往在行动之后才出现。也有教练建议选一件不可妥协的小事，绑定触发条件，不做思想斗争直接执行。"
+  },
+  "AI Vibe Coding Raises Fears of Skill Erosion Among Developers": {
+    "t": "Vibe coding 引发开发者技能退化担忧",
+    "h": "Anthropic 工程师 Addy Osmani 警告：只下指令、不深审 AI 代码，会走向「认知投降」，新手甚至觉得没有 AI 就无法起步。"
+  },
+  "Anthropic CEO Warns AI Will Erase Entry-Level White-Collar Jobs Soon": {
+    "t": "Anthropic CEO：AI 将很快吞掉入门级白领工作",
+    "h": "Dario Amodei 在 NBC 采访中称，法律、金融、咨询的入门工作正被 AI 接手，1–5 年内或冲击半数岗位；该公司初级招聘占比已从 27% 降至 9%。"
+  },
+  "AI Coding Agents Thrive on Engineered Harnesses, Not Just Prompts": {
+    "t": "AI 编程智能体靠的是工程化 harness，而不只是提示词",
+    "h": "Addy Osmani 认为顶尖编程智能体靠 harness 管理上下文、校验和状态；有人借此把基准成绩从 52.8% 提到 66.5%。"
+  },
+  "Letting Go of Envy to Focus on Your Own Path": {
+    "t": "放下嫉妒，把精力放回自己的路上",
+    "h": "一众帖子提醒：盯着别人的时间线会抽走成长的能量；有心理学家建议只和过去的自己比较，并把比较变成启发。"
+  },
+  "AI Boosts Banking Workloads Instead of Cutting Jobs": {
+    "t": "AI 没有裁掉银行岗位，反而加重了工作量",
+    "h": "投行人士称 Claude 能代劳改 logo、更新联系人，但分析师因此要做更多交易和更细的报告；有人称之为杰文斯悖论。"
+  },
+  "Uranium Digital Raises $16.5M to Modernize Uranium Trading": {
+    "t": "Uranium Digital 融资 1650 万美元，要用区块链改造铀交易",
+    "h": "这家纽约公司由 Blockchain Capital 领投完成 A 轮，计划把黄饼库存做成可交易的电子仓单；同日 Uranium Energy 签署 110 万磅长单。"
+  },
+  "Newsom Proposes $1 Billion Film Tax Credit Expansion for California": {
+    "t": "纽森提议把加州影视税收抵免扩大到每年至少 10 亿美元",
+    "h": "计划把现有 7.5 亿美元上限上调，覆盖明星和导演薪酬，并留出 1 亿美元给独立电影，一直实施到 2040 年。"
+  },
+  "Debate Heats Up Over 'AI Slop' Label in Creative Fields": {
+    "t": "创意圈热议「AI slop」标签：如何证明作品是人做的",
+    "h": "艺术家抱怨要自证作品非 AI 生成，同时批评有人把未披露的 AI 图当原创。「slop」还曾被词典评为年度热词。"
+  },
+  "Anthropic CEO Warns AI Could Cut Half of Entry-Level White-Collar Jobs Soon": {
+    "t": "Anthropic CEO 警告：AI 可能很快砍掉一半初级白领岗位",
+    "h": "Dario Amodei 认为法律、金融和咨询的初级工作已开始被 AI 接手，预计一到五年内可能消失一半；Anthropic 自身初级技术招聘占比已从 27% 降到 9%。"
+  },
+  "AI Mandate Bloats Codebase and Drains Developer Expertise": {
+    "t": "强制全面用 AI 写代码，代码库膨胀、评审能力被掏空",
+    "h": "有公司要求 100% AI 生成代码后，代码库膨胀约三倍、重复函数遍地，几乎没人能评审；开发者觉得读陌生 AI 产出比自己写更累。"
+  },
+  "Canada Creative Credit Offers Tax Relief for Artists in Budget 2026": {
+    "t": "加拿大 2026 预算推出创意税收抵免，扶持本土创作者",
+    "h": "总理卡尼宣布加拿大创意抵免，对原创作品每年最多 4.5 万加元的合格净收入给予不可退还税收抵免，叠加基本免税额。"
+  },
+  "Mavria Launches $1 Billion Modular Data Centers for AI Boom": {
+    "t": "Mavria 推出估值 10 亿美元的模块化数据中心，应对 AI 基建缺口",
+    "h": "三名前能源部官员创立 Mavria，获 1.3 亿美元融资、估值 10 亿美元，用可卡车运输的 5 兆瓦模块在数周内部署算力。"
+  },
+  "VTuber Artists Debate Subscriber-Based Commission Fees": {
+    "t": "VTuber 画师热议按订阅量分级收取约稿费用是否公平",
+    "h": "VGen 约稿表按频道体量加价：1 万粉以下 +25%、超过 1 万 +50%、公司单 +100%。支持者认为应对齐曝光与收入，也有人觉得对独立作者不公。"
+  },
+  "Meme Questions Hard Work's Limits and Need for Grace": {
+    "t": "梗图讨论「只靠努力不够」，成功还需要运气与判断",
+    "h": "一张对比普通人苦干与科技人加上「恩典」的梗图走红。有人坚称全力就会成功，也有人强调方法、判断和方向同样重要。"
+  },
+  "New Study Pinpoints Ideal Sleep Range for Health and Longevity": {
+    "t": "新研究给出健康长寿的理想睡眠区间：约 6.4 到 7.8 小时",
+    "h": "基于约 50 万英国生物银行样本的分析显示，每晚睡大约 6.4 到 7.8 小时最有利；过短或过长都与器官衰老加快和更高死亡风险相关。"
+  },
+  "Choosing Peace Over Drama in Everyday Life": {
+    "t": "少 dram、多留白：把日常选择平静而不是内耗",
+    "h": "不少人分享简单提醒：别高估自己的重要性，放下不属于你的责任，少争辩、少期待，把精力留给平静。"
+  },
+  "Satirical Job Ad Nails Healthcare Admin Frustrations": {
+    "t": "讽刺招聘启事精准吐槽患者像项目经理一样跑断腿",
+    "h": "August AI 发了一则虚构的「医疗协调经理」招聘，罗列反复填病史、追随访等荒唐职责，调侃要把这份「工作」交给即将上线的 AI 智能体。"
+  },
+  "Simple AI Prompt Helps Developers Clean Up Codebases": {
+    "t": "一条简单提示词，帮开发者用 AI 清理整个代码库",
+    "h": "Anthropic 的 Alex Albert 分享一条指令：让模型扫描整个项目，修好确定的问题，并把其余项列出让人复核，正被不少工程师用来收拾遗留代码。"
+  },
+  "Do Not Accept Campaign Warns of AI Risks": {
+    "t": "「Do Not Accept」活动警示：别默认接受 AI 公司的条款",
+    "h": "机器智能研究所 MIRI 推出 90 秒广告与 donotaccept.ai，列出系统失控、内部不可知、安全承诺落空等公众从未同意的五项风险。"
+  },
+  "Tech Community Debates AI's Role in Software Engineering": {
+    "t": "技术圈热议：AI 在软件工程里到底扮演什么角色",
+    "h": "开发者认为熟练使用 AI 能更快更便宜地写出软件，但强调基本功与人工把关；也有人建议例行工作用简单脚本，而不是上来就上完整智能体。"
+  },
+  "Pump.fun Promoted Coins Drop 74% in a Day, Study Finds": {
+    "t": "研究：Pump.fun 上被推广的代币一天跌去 74%",
+    "h": "Sparsity Research 分析数千条付费喊单，中位代币 1 小时跌 48%、一天跌 74%；推广方抽成约 440 万美元，平台设计被指更利于短线炒作。"
+  },
+  "Creators Frustrated Over Popularity-Driven Pricing Gaps": {
+    "t": "创作者吐槽：名气决定定价，小作者只能把价格压到极低",
+    "h": "艺术和成人内容圈讨论收费差距：有人基础稿只标 10 美元仍难接到单；有创作者算账，9.99 美元视频扣完平台与税只剩约 4.20 美元。"
+  },
+  "Base Lending Markets Reach $7.49 Billion Milestone": {
+    "t": "Base 借贷市场规模升至 74.9 亿美元",
+    "h": "Coinbase CEO Armstrong 披露 Base 上已供应 74.9 亿美元、借出 26.5 亿美元，三个月分别增长约 29% 和 22%；代币化股票 24 小时成交 1.66 亿美元。"
+  },
+  "Zaps Clans Measure Crypto Communities by Onchain Activity": {
+    "t": "Zaps 用链上真实交易，而不是人数，来衡量加密社区",
+    "h": "ZeruAI 的 Zaps 让用户组成氏族，按实际链上交易与经济贡献计分；讨论认为粉丝可以买，持续参与的交易行为才更能说明社区质量。"
+  },
+  "Pump.fun Lets GitHub Orgs Claim Memecoin Creator Fees": {
+    "t": "Pump.fun 允许 GitHub 组织领取 Meme 币创作者分成",
+    "h": "公开的 GitHub 组织绑定后，可从 SOL 交易对领取 0.30% 创作者费用，任意公开成员都能把款项转到组织钱包，意在给开源社区一条分成路径。"
+  },
+  "$100K Hackathon Charges $99 Entry Fee, Draws Mixed Reactions": {
+    "t": "10 万美元黑客松收取 99 美元报名费，评价两极",
+    "h": "独立开发者 Marc Lou 宣布 11 月 16 日起 30 天单人从零做产品、按真实利润竞赛，头奖 10 万美元但报名要 99 美元；有人质疑奖池已有赞助却向选手收费。"
+  },
+  "Marble Launches with $11M Seed for Digital Assets and AI Trading": {
+    "t": "Marble 完成 1100 万美元种子轮，面向数字资产与 AI 交易",
+    "h": "BitGo 与 Galaxy 出身的交易员创办 Marble，由 Polychain 领投；一边做机构交易，一边为 GPU 与 neo-cloud 提供算力信贷。"
+  },
+  "Stove Clock Meme Captures ADHD Time Blindness": {
+    "t": "炉灶钟停在 2:47 的梗图，戳中 ADHD 的时间盲",
+    "h": "许多人看到停在 2:47 的炉灶钟会觉得「离 3 点还早」；这类梗图讨论 ADHD 常见的时间弹性，以及专注时分秒被拉长的「时间盲」。"
+  },
+  "Short Daily Practice Builds Real Skills Over Time": {
+    "t": "每天短时练习，比偶尔长时间机械重复更能长出真本事",
+    "h": "有帖子说每天只练 15 分钟乐器的建议其实适用很多事；小提琴手等分享专注短练的进步，研究也支持每天短时练习更能积累技能。"
+  },
+  "X Posts Urge Focus on Your Own Path Over Others' Highlights": {
+    "t": "X 上不少帖提醒：别盯着别人的高光，走自己的路",
+    "h": "有创业者写道「人生最贵的分心，是一直盯着别人在做什么」；一批帖子劝人少做社交对比，把精力放回自己的节奏和成长。"
+  },
+  "Messages Remind Us to Skip Comparisons and Embrace Our Own Pace": {
+    "t": "提醒：别人往前走，并不等于你在失败",
+    "h": "有人分享成功可能在 20 岁、35 岁或 50 岁到来，并重提「比较是快乐的小偷」；劝人少嫉妒、多看见自己的日常进步。"
+  },
+  "Ex-OpenAI Researcher Warns AI Ends Human Labor Dominance": {
+    "t": "前 OpenAI 研究员警告：AI 将结束人类劳动主导地位",
+    "h": "曾参与 Sora、o3 与 4o 的 Will Depue 把 AI 比作无敌的 Stockfish，认为非手作类工作对人类已基本结束；讨论既有反对悲观的声音，也有人谈人机融合与后稀缺。"
+  },
+  "Developers Debate 'Software Factory' Shift with AI Agents": {
+    "t": "开发者争论：AI 智能体正在把软件开发变成「软件工厂」",
+    "h": "Matt Pocock 称今天的程序员更像「工厂工程师」，负责搭让智能体自己产出软件的系统；支持者看到更高层的编排，怀疑者担心质量与掌控力下滑。"
+  },
+  "IPX Exchange Raises $4M to Tokenize Entertainment IP with Escrow Safeguards": {
+    "t": "IPX Exchange 融资 400 万美元，用托管保障把娱乐 IP 代币化",
+    "h": "该平台让达标项目用 USDC 募资，资金进托管、按里程碑拨付；10 月完成 400 万美元种子轮，估值 1.25 亿美元，计划 11 月中旬主上线。"
+  },
+  "Study Shows 88% of VC Founders Get Nothing at Exit": {
+    "t": "研究：88% 的风险投资创始人在退出时一无所获",
+    "h": "沃顿与苏黎世大学分析近 25 万名美国创始人：88% 退出时没有收益，前 1% 拿走 79% 的价值；有收益的人税后中位数约 480 万美元。"
+  },
+  "India Extends Key Schemes to Boost Micro-Loans and Inclusive Entrepreneurship": {
+    "t": "印度延长小微贷款与包容性创业关键计划",
+    "h": "内阁批准将微型单位信贷担保基金与创业印度计划再延长五年至 2031 年 3 月 31 日，继续为无抵押小微贷款和创业提供担保支持。"
+  },
+  "ZIG Finance Launches zEMS Tokenized Vault for Saudi SME Credit": {
+    "t": "ZIG Finance 推出 zEMS 代币化金库，面向沙特中小企业信贷",
+    "h": "11 月 11 日上线的 zEMS 目标募 1 亿美元，应对沙特约 800 亿美元中小企业融资缺口，是与 Nomura Laser Digital 合作的首个产品。"
+  },
+  "Eva Live CEO Boulette Buys More Shares Amid New Financing": {
+    "t": "Eva Live CEO 在新一轮融资期间继续增持本公司股份",
+    "h": "David Boulette 近日在公开市场再买 1.98 万股，累计自购约 7.73 万美元；公司刚宣布 187.5 万美元可转债融资，首期已完成。"
+  },
+  "Embracing Quiet Living and Personal Peace on X": {
+    "t": "X 上流行拥抱安静生活与内心平静",
+    "h": "不少人分享「安静女孩」式生活：少解释、少争执、设边界，把注意力放回自己觉得舒服的节奏，而不是别人的看法。"
+  },
+  "Anthropic Gains AI Lead as China Faces Distillation Limits": {
+    "t": "Anthropic 限制蒸馏后扩大领先，中国实验室进展受阻",
+    "h": "Anthropic 切断大规模蒸馏后，阿里千问、Kimi 等未授权抓取下降 90–99%，Kimi K3.1 Pro 等发布受阻；独立榜单显示中国头部模型落后。"
+  },
+  "Anthropic Targets $1.4 Trillion Valuation in Massive AI IPO": {
+    "t": "Anthropic 启动大规模 IPO，估值瞄准 1.4 万亿美元",
+    "h": "公司已申请以 ANT 代码在纳斯达克上市，计划发行 8.25 亿股、定价每股 70–78 美元，拟于 11 月 19 日开交易；CEO 还向投资人勾勒十年内攻克癌症等疾病的愿景。"
+  },
+  "Twitch CEO Calls 300-400 Viewers 'Medium-Sized' Amid Creator Pushback": {
+    "t": "Twitch CEO 称 300–400 同时观看已算「中等规模」，创作者不服",
+    "h": "Dan Clancy 认为平均 300–400 名观众（约前 0.25%）足以覆盖生活成本；不少主播反驳，称仅靠平台收入很难维持。"
+  },
+  "Rho Offers Free Company Formation with Business Banking": {
+    "t": "Rho 推出免费公司注册，并捆绑企业银行账户",
+    "h": "11 月 11 日起，创始人可在约 10 分钟内完成注册；90 天内存入 1 万美元即可报销注册费，特拉华 C-Corp 或各州 LLC 均可办理。"
+  },
+  "Debate Heats Up Over Vibe Coding Practices": {
+    "t": "围绕 Vibe Coding 做法的争论升温",
+    "h": "批评者认为用自然语言让 AI 写代码、几乎不审查就上线，跳过了必要的工程环节；支持者则把它当作快速实验手段。"
+  },
+  "AI Safety Advocates Discuss Handing Control to Superintelligent AI": {
+    "t": "AI 安全圈讨论把文明方向交给超级智能",
+    "h": "“handoverism”主张在对齐的超级智能就绪后，把社会走向交给它；据称实验室内外都有相当比例的安全研究者持类似看法。"
+  },
+  "Cabinet Extends Credit Guarantees for Small Businesses to 2031": {
+    "t": "印度内阁将小微企业信贷担保延至 2031 年",
+    "h": "内阁批准将微型单位信贷担保基金和 Stand-Up India 计划延长五年至 2031 年 3 月 31 日，继续为无抵押小额贷款提供支持。"
+  },
+  "Roommates from SF's Oldest Hacker House Launch Mission Street Capital": {
+    "t": "旧金山最老黑客屋室友创办 Mission Street Capital",
+    "h": "Lisa Shmulyan 与 Surbhi Todi 从 Mission Control 黑客屋走出来，成立基金早期押注“出色的古怪构建者”，已投 12 家公司。"
+  },
+  "Kwari e-Market Wins Top Prize at Digital Nigeria Builders Festival": {
+    "t": "Kwari e-Market 获 Digital Nigeria 建设者节头奖",
+    "h": "在阿布贾举行的建设者节上，Kasim Muhammad Atiku 创办的卡诺数字市场 Kwari e-Market 拿下第一名。"
+  },
+  "Twitch CEO Says 300-400 Viewers Cover Living Costs, Streamers Disagree": {
+    "t": "Twitch CEO 称 300–400 观众即可覆盖生活费，主播不认同",
+    "h": "CEO 认为近 90 天平均 300–400 同时在线已属平台前 0.25% 并能养活自己；不少主播反驳单靠平台分成很难达到最低工资。"
+  },
+  "Becoming a Morning Person as Happiness Key": {
+    "t": "成为早起的人被当作快乐的关键",
+    "h": "一条认为幸福秘诀在于变成早起者的帖子引发热议，许多人分享提前睡觉、晨练和呼吸新鲜空气后心情与精力改善的经历。"
+  },
+  "Discipline Over Motivation in Trading and Money Habits": {
+    "t": "交易与理财习惯：纪律比短期动机更重要",
+    "h": "有人把交易亏损截图和“选正确的而非容易的”放在一起，强调财务进展靠持续行动，而不是短暂的激励。"
+  },
+  "Traders Share Emotional Challenges of Mastering Market Discipline": {
+    "t": "交易者分享掌控市场纪律时的情绪挑战",
+    "h": "不少人认为重复亏损更多来自自控不足而非分析失误，强调接受亏损、冷静复盘，并知道何时该空仓以保护资金和心态。"
+  },
+  "Dancing Cafe Server Sparks AI Job Debate": {
+    "t": "咖啡馆服务员托盘热舞，引发 AI 能否取代服务业的讨论",
+    "h": "一段托盘热舞的上菜视频被用来挑战「AI 会取代我们」；讨论聚焦人机互动仍难被机器替代。Gartner 预计到 2030 年岗位仍净增 170 万。"
+  },
+  "Clip of Sam Altman Fuels False AGI Achievement Claims": {
+    "t": "Altman 谈安全的片段被误传为 OpenAI 已实现 AGI",
+    "h": "他在 Semafor 会议上谈及出于安全暂不推出可自我改进的系统，以及 AGI 定义模糊；被剪辑的版本传成「现在已有 AGI」，完整原话并无此宣布。"
+  },
+  "Developers Debate AI's Role in Coding as Art and Tool": {
+    "t": "开发者争论：AI 写代码是侮辱手艺，还是提质加速的工具",
+    "h": "有人把 AI 代码比作机制作的艺术品；也有人认为它能提升稳定性与速度。调查称约 65% 已提交代码由 AI 完成，安全审查却落后。"
+  },
+  "AI Tools Disrupt Student Essays and Grading in Higher Education": {
+    "t": "高校出现学生用 AI 写作文、教授用 AI 批改的循环",
+    "h": "作业与招生材料越来越多由模型生成，教师也用同一类工具大规模评分，引发对真实教与学正在消退的担忧。检测工具的可靠性仍有争议。"
+  },
+  "Anthropic CEO Warns AI Will Reshape Entry-Level Jobs Soon": {
+    "t": "Anthropic CEO 警告：AI 很快会改写入门级工作",
+    "h": "Dario Amodei 认为模型正从高中水平迈向大学水平，足以承担法律、金融、咨询等岗位中的常规任务。"
+  },
+  "Anthropic CEO Claims AI Can Solve Biology, Draws Skepticism": {
+    "t": "Amodei 称 AI 能解决生物学问题，引发质疑",
+    "h": "Anthropic CEO 关于 AI 将攻克生物学的表态遭到怀疑，讨论集中在这类预测是否过度。"
+  },
+  "Young People Reject AI in Education and Creative Work": {
+    "t": "年轻人在教育与创意工作中抵制使用 AI",
+    "h": "有报道称年轻群体不愿在学习与创作中依赖 AI，认为这会削弱自身能力与作品的诚实性。"
+  },
+  "Zach Weinersmith's AI Opinion Grid Draws Thousands of Views": {
+    "t": "Zach Weinersmith 的 AI 观点矩阵图收获数万次浏览",
+    "h": "漫画家用一张矩阵梳理人们对 AI 的不同立场，在网上广泛传播，方便对照各自的态度坐标。"
+  },
+  "Growing Skepticism Challenges AI Hype in Online Debate": {
+    "t": "网上对 AI 炒作的怀疑情绪上升",
+    "h": "讨论从追捧转向追问实际效果与夸大宣传，更多人开始质疑当前热度是否透支了预期。"
+  },
+  "Mariko Mori Teams with AI Claude for Retrospective's New Animation": {
+    "t": "森万里子与 Claude 合作，为回顾展创作新动画",
+    "h": "艺术家在回顾展中借助 Claude 生成新的动画作品，成为艺术创作与前沿模型结合的新案例。"
+  },
+  "Anthropic CEO's Old AI Testimony Draws Fresh Backlash": {
+    "t": "Amodei 旧的 AI 证词再次引发批评",
+    "h": "有人翻出 Anthropic CEO 早前关于 AI 的证词，结合当前进展重新讨论，并对其立场提出新的质疑。"
+  },
+  "Over Half of Tracked Startups Earn Zero Revenue Monthly": {
+    "t": "被追踪的初创公司中，超一半月收入为零",
+    "h": "有人对上万家初创公司近 30 天收入做了统计：超过一半为零，引发对创业质量与「只讲故事不赚钱」的讨论。"
+  },
+  "Creators Chase 500K Impressions for X's New Rewards Program": {
+    "t": "创作者追逐 50 万次曝光，以进入 X 新奖励计划",
+    "h": "X 新的创作者奖励设置了曝光门槛，不少人开始冲 50 万次展示，以获得分成资格。"
+  },
+  "Peter Obi's 7 Trillion Naira Grant Plan Resurfaces with Debate": {
+    "t": "彼得·奥比 7 万亿奈拉拨款计划再被翻出并引发争论",
+    "h": "该拨款方案再次出现在讨论中，支持者与批评者就其可行性、财政负担与政治动机各执一词。"
+  },
+  "Compute Desk Raises $45M to Make GPU Compute a Tradable Asset": {
+    "t": "Compute Desk 融资 4500 万美元，要把 GPU 算力做成可交易资产",
+    "h": "该公司希望把 GPU 计算资源标准化、可买卖，让算力像大宗商品一样流通。"
+  },
+  "Ashton Kutcher's Sound Ventures Eyes Billions from Anthropic Stake": {
+    "t": "库彻的 Sound Ventures 指望 Anthropic 股权带来数十亿美元回报",
+    "h": "随着 Anthropic 估值上升，Sound Ventures 持有的股份被视为可能兑现巨额收益的押注。"
+  },
+  "Motion Launches Creator Cards Tracking Social Buzz in Fantasy Game": {
+    "t": "Motion 推出追踪社交热度的创作者卡片，用于幻想游戏",
+    "h": "这款产品把创作者的社交声量做成可收集、可对战的卡片，把网络热度游戏化。"
+  },
+  "Coinbase Opens Crypto Borrowing to All 50 States with New York Launch": {
+    "t": "Coinbase 在纽约上线后，加密借贷覆盖美国全部 50 州",
+    "h": "随着纽约开放，Coinbase 的加密资产借贷服务已可在全美使用。"
+  },
+  "unfair.so Open-Sources Playbook After 99 Launches and $1.1M Revenue": {
+    "t": "unfair.so 在 99 次发布、营收 110 万美元后开源其打法",
+    "h": "团队公开了反复上线产品并做到 110 万美元收入的方法论，供其他独立开发者参考。"
+  },
+  "Less Caring Leads to Happier, Peaceful Lives": {
+    "t": "少在意一些，生活反而更快乐、更平静",
+    "h": "一条主张「少关心、更幸福」的帖子在传播，讨论减少过度在意外界评价能否带来内心平静。"
+  },
+  "Embracing Boredom Builds Real Success Through Steady Routines": {
+    "t": "拥抱无聊、把例行功课做稳，才是真正的成功路径",
+    "h": "有观点认为成功来自忍受重复与无聊、把日常节奏坚持下去，而不是追逐刺激。"
+  },
+  "Active Optimism: Believe It Will Work Out, Then Make It Happen": {
+    "t": "主动乐观：先相信会成，再动手把它做成",
+    "h": "这类分享强调乐观不是空等，而是先抱有会成功的信念，再靠行动把结果推出来。"
+  },
+  "Tweet Questions Mental Health Focus, Divides Opinions Online": {
+    "t": "一条质疑过度关注心理健康的帖子，在网上引发分裂",
+    "h": "有人认为当下对心理健康的强调过头，也有人批评这种说法忽视真实困境，双方争论激烈。"
+  },
+  "Post Challenges Assumptions About Hidden Struggles": {
+    "t": "有帖子挑战「人人都在悄悄挣扎」这一假设",
+    "h": "讨论指向：不必默认每个人都在暗中受苦，这种叙事本身也可能造成压力。"
+  },
+  "Gen Z Reportedly Swaps Vapes for Cigarettes as Plant-Based Option": {
+    "t": "有报道称 Z 世代把电子烟换成香烟，当作更「植物基」的选择",
+    "h": "这一说法在网上引发争议：把香烟描述成植物基替代是否在美化传统烟草风险。"
+  },
+  "Oscar Wilde Quote Inspires Wave of Self-Love Messages": {
+    "t": "王尔德名言带动一波自我关爱的分享",
+    "h": "网友引用奥斯卡·王尔德的句子讨论自爱与自我接纳，相关金句帖集中出现。"
+  },
+  "Traders Share Why Emotions Block Market Success": {
+    "t": "交易者分享：情绪如何挡住市场里的成功",
+    "h": "不少人谈到恐惧、贪婪和报复性交易会破坏执行，强调控制情绪比找「神策略」更重要。"
+  },
+  "Overthinking's Toll Sparks Reflections on Wasted Energy": {
+    "t": "过度思考的消耗，引发关于浪费心力的反思",
+    "h": "讨论指出反复纠结会耗掉行动力，许多人开始反思如何把精力从空想转回当下。"
+  },
+  "Bumbition Captures Years of Tinkering Before Success": {
+    "t": "Bumbition 一词概括成功前那些年的反复打磨",
+    "h": "有人用这个说法描述出名前漫长的摸索与试错，强调成果往往建立在多年不起眼的折腾上。"
+  },
+  "Traders Stress Repeatability and Discipline Over Quick Wins": {
+    "t": "交易者强调可重复性与纪律，而不是快钱",
+    "h": "观点认为成功来自可重复的策略与情绪控制。有数据称 74%–89% 的零售 CFD 账户亏损，印度 F&O 亏损比例也很高。"
+  },
+  "Traders Stress Patience and Discipline Over Market Chasing": {
+    "t": "交易者强调耐心与纪律，而不是追涨杀跌",
+    "h": "有人用乔丹先投丢无数球来比喻：亏损也能练出本事。讨论提醒保护本金、等待高概率机会，把交易当作马拉松。"
+  },
+  "Anthropic Researcher Predicts AI Will Make Most Humans Unemployable by 2027": {
+    "t": "Anthropic 研究员预测：到 2027 年多数人将被 AI 取代、无事可做",
+    "h": "Anthropic 安全研究员 Tao Lin 个人预估，超人级 AI 或于 2027 年底到来，几乎人人失业、依赖福利；这不是公司官方立场，外界褒贬不一。"
+  },
+  "Paul Christiano Warns of Superintelligence Risks in One Year": {
+    "t": "Paul Christiano 警告：一年内出现超级智能的概率约三分之一",
+    "h": "对齐研究者、OpenAI Foundation 董事 Christiano 估计，按当前路径约 1/3 可能一年内出现超级智能，并认为 AI 在 6–12 个月内让人类失能的风险更接近 10% 而非 1%。"
+  },
+  "Elon Musk Shares Optimistic AI Post Amid Deception Warnings": {
+    "t": "马斯克发乐观 AI 帖，同时讨论无灵魂系统仍可大规模影响人",
+    "h": "马斯克配机器人照片写道「此后只会更好」；讨论则提到，即便 AI 没有灵魂，服务器控制方也能用它做大规模社会工程。"
+  },
+  "Anthropic Researcher Warns AI Could Make All Humans Unemployable": {
+    "t": "Anthropic 研究员警告 AI 可能让所有人失去工作",
+    "h": "Tao Lin 在访谈中称，超人级 AI 或于 2027 年底让人永久失业、依赖福利；他强调这是个人观点，并呼吁放慢研发换取安全。"
+  },
+  "TikTok Creators Report Sharp Cuts to Rewards Program Payments": {
+    "t": "TikTok 创作者称奖励计划收入大幅下降",
+    "h": "有创作者称月收入从 5000–10000 美元降到约 2000 美元，多人吐槽奖励计划突然降薪或取消资格，并与更严的原创与门槛规则有关。"
+  },
+  "each::labs Raises $7M Seed to Power Generative Media Platform": {
+    "t": "each::labs 完成 700 万美元种子轮，加码生成式媒体平台",
+    "h": "旧金山公司于 2026-11-18 宣布 700 万美元种子轮，由欧洲复兴开发银行与 Revo Capital 联合领投；平台用一个 API 连接 600 多个图像/视频/音频模型。"
+  },
+  "Coinbase Crypto Loans Now Reach All 50 U.S. States Including New York": {
+    "t": "Coinbase 加密贷款已覆盖美国全部 50 州，含纽约",
+    "h": "纽约州金融服务局批准后，纽约用户也可用比特币、以太坊或 Solana 抵押借 USDC，不必卖出资产；贷款已累计超过 34 亿美元。"
+  },
+  "First OTC Put Option Executed on GPU Rental Prices": {
+    "t": "首笔以 GPU 租金为标的的场外看跌期权成交",
+    "h": "Hyperbolic Labs 通过场外期权对冲英伟达 B200 租金下跌，规模 500 万美元，按 Silicon Data 的 B200 租金指数按月现金结算，为期一年。"
+  },
+  "Variational Raises $110M at $1.5B Valuation for Crypto Derivatives Expansion": {
+    "t": "Variational 融资 1.1 亿美元，估值 15 亿美元，扩展加密衍生品",
+    "h": "由 Bain Capital Crypto 领投的 B 轮融资 1.1 亿美元；其 Omni 平台已处理超过 4750 亿美元交易量，传统资产已占每日交易一半以上。"
+  },
+  "Null Raises $1.7M for Immutable Ethereum Derivatives Protocol": {
+    "t": "Null 获得 170 万美元，打造以太坊上不可变衍生品协议",
+    "h": "由 cyber•Fund 与 Nethermind 领投的 170 万美元预种子轮，将把股票、指数、商品或加密的风险敞口做成可放进钱包的合成资产。"
+  },
+  "Traders Stress Patience and Discipline for Lasting Market Success": {
+    "t": "交易者强调：长期赚钱靠耐心和纪律，而不是追快钱",
+    "h": "讨论认为成功来自耐心、清晰流程和克制情绪单；数据称 70%–85% 零售交易者亏损，老手建议亏损后减半仓位并记录每笔交易。"
+  },
+  "Debate Heats Up Over AI in Programming Work": {
+    "t": "程序员能不能反对 AI，在 X 上吵成一片",
+    "h": "有人声称搞编程就不可能反 AI，引来大量开发者分享如何把 Copilot、Claude Code 当辅助而非替代；调查显示约三分之二的人已在用这类工具，也有人担心学生过度依赖、基本功变差。"
+  },
+  "AI Singer Claudia Questions Humanity in Viral Music Video": {
+    "t": "AI 歌手 Claudia 的病毒视频追问机器能否真正有感受",
+    "h": "用 Claude、Midjourney 和 Suno 制作的约四分半钟影片里，Claudia 唱着「It’s working as intended」；有人觉得深刻又不安，马斯克的评论也把讨论推向 AI 内容与情绪操控。"
+  },
+  "Students and Faculty Resist AI Tools on College Campuses": {
+    "t": "校园里出现抵制 AI 工具的「良心拒用」运动",
+    "h": "Transylvania University 约三分之一学生联署要求取消聊天机器人合同、把 12 万美元改投以人为本的学习；Georgetown 讨论中约 40% 学生对 AI 持谨慎或负面态度，呼吁可以无惩罚地退出。"
+  },
+  "Big Walk Faces Backlash Over Minimal AI Code Help": {
+    "t": "《Big Walk》因极少部分代码用了 AI 建议而遭差评",
+    "h": "Untitled Goose Game 团队 House House 用大模型研究 Unity 渲染卡顿，最终改动不足 0.1% 代码，却仍在 Steam 遭遇差评；工作室道歉并表示将补上更清晰的 AI 政策。"
+  },
+  "Web3 Creators Frustrated with Competitive Leaderboard Campaigns": {
+    "t": "Web3 创作者抱怨排行榜活动：多数人免费打工、少数人分奖金",
+    "h": "CreatorWire 等平台用排行榜让上千人争夺约 1 万美元奖金，例如 1100 多人里只有前 100 名有奖；负责人 Jack Haldorsson 承认问题，计划限制纯计分活动、减少低质量帖。"
+  },
+  "Team-Generated Content Scales Company to $5M ARR": {
+    "t": "用员工自发生成内容把公司做到 500 万美元 ARR",
+    "h": "Julian Stafford 分享 TEAM 框架，让员工用亲身工作与客户洞察发帖，不必依赖代理或代写；称这样能从个人网络拿到更高互动，并先用小范围测试真实询盘。"
+  },
+  "Variational Raises $110 Million at $1.5 Billion Valuation": {
+    "t": "Variational 完成 1.1 亿美元融资，估值 15 亿美元",
+    "h": "由 Bain Capital Crypto 领投的 B 轮，将用于提高 Omni 平台交易限额、接入股票商品外汇等资产，并扩展互换与公开 API；自 2025 年初以来成交额已超 4750 亿美元。"
+  },
+  "Julian Stafford Shares Team-Generated Content Strategy Behind $5M Revenue": {
+    "t": "Julian Stafford 拆解团队生成内容如何撑起 500 万美元营收",
+    "h": "Surgence Labs 联合创始人介绍让员工用个人账号发真实工作内容的步骤，并举 Shown Media、Vercel 为例，称小团队常能比公司账号或外包拿到更高互动和更大覆盖。"
+  },
+  "Many Share Struggles with Fading Focus and Seek Fixes": {
+    "t": "许多人坦言注意力变差，并互相分享找回专注的办法",
+    "h": "原帖说自己难读书、记性差，把原因归给持续的数字干扰；回复里常见的建议是读纸质书、不听播客地走路、手写日记、去健身和少刷短视频。"
+  },
+  "Perplexity's Brain Auto-Creates Personalized AI Skills from User Sessions": {
+    "t": "Perplexity 的 Brain 能根据历史会话自动生成个性化技能",
+    "h": "Computer 智能体用 Brain 分析过往会话和工具调用，只在证据充足时提出技能更新；八周测试中 72.9% 相关用户获得新技能，工具失败率下降 11%，计划向 Max 订阅用户开放。"
+  },
+  "Traders Stress Emotional Discipline Over Perfect Setups": {
+    "t": "交易员强调情绪纪律比完美入场更重要",
+    "h": "不少人认为长期赚钱靠的是耐心和情绪控制，而不是指标或策略本身；建议包括写交易日志、单笔只冒 1–2% 风险、连亏两笔就停手，并把过程看得比结果更重。"
+  },
+  "Reminder to Stop Comparing Lives on Social Media": {
+    "t": "提醒停止在社交媒体上跟别人的生活比较",
+    "h": "帖子重申「不要拿自己的旅程和别人比，每个人有自己的时间表」，并指出网上高光往往藏着压力和代价；研究也显示这类比较与焦虑、幸福感下降有关。"
+  },
+  "Traders Share Discipline as Key to Market Success": {
+    "t": "交易员把纪律视为在市场上活下来的关键",
+    "h": "有人指出零售 CFD 账户亏损率高达 74% 到 89%；建议每天最多三笔、单笔风险 1–2%、不随意改止损，并接受空仓日，先修心理错误再追求暴利。"
+  },
+  "Traders Stress Patience and Discipline Over Perfect Trades": {
+    "t": "交易员提醒：没有耐心和风控，即便一夜暴富也会亏光",
+    "h": "讨论认为成功更取决于耐心、纪律和风险管理，而不是抓到完美形态；有人警告别因无聊硬做单或赢了就放大风险，并引用零售账户高亏损率作为提醒。"
+  },
+  "MyClaw Launches AI Teammates in Platform 3.0 Update": {
+    "t": "MyClaw 3.0 上线「AI 队友」",
+    "h": "可在约 30 秒内部署预配置智能体（如参谋长、研究员），支持 Claude Code 与 Hermes，共享记忆，用户下线后仍继续运行。"
+  },
+  "Anthropic Researcher Predicts AI Ends Most Human Jobs by 2027": {
+    "t": "Anthropic 研究员预测 2027 年前 AI 将取代大多数工作",
+    "h": "安全研究者 Tao Lin 个人预计 2027 年底出现广泛超人 AI，工作会随机器人与基础设施跟上而逐步消失；这不代表 Anthropic 官方立场。"
+  },
+  "AI Star Claudia's Video Explores Deception and Machine Limits": {
+    "t": "虚拟歌手 Claudia 的 MV 探讨欺骗与机器界限",
+    "h": "四分钟 AI 生成的 slopcore 风格视频，歌词写「欺骗需要动机，动机需要灵魂」；马斯克评论「只会越来越好」。"
+  },
+  "AI Music Video 'Working as Intended' Questions Tech's Role in Creativity": {
+    "t": "MV《Working as Intended》拷问技术在创作中的角色",
+    "h": "Claudia 演唱的相关视频，歌词来自 Claude Opus、音乐来自 Suno，讨论 AI 按指令执行时工具与控制的界限。"
+  },
+  "Apple Builds Autonomous AI Agent to Rival OpenAI and Meta": {
+    "t": "苹果打造自主 AI 智能体，对标 OpenAI 与 Meta",
+    "h": "据 Gurman 报道，苹果招聘显示正开发可浏览网页、写代码、操控应用并协调子智能体的主动式 agent，或于 2027 年底推出。"
+  },
+  "Debate Heats Up Over Chinese AI Models Challenging Anthropic": {
+    "t": "争论升温：中国开源模型是否足以挑战 Anthropic",
+    "h": "有人认为一旦便宜的中国模型追上 Opus 5.5，Anthropic 就「完了」；讨论涉及 GLM 5.3、Qwen、Kimi K3、DeepSeek V4。"
+  },
+  "Ruthy Shares Journey from Minimum Wage Boxes to $5M Agency CEO": {
+    "t": "Ruthy 讲述从最低工资打包到年入 500 万美元咨询公司的经历",
+    "h": "Surgence.io CEO 在播客中分享从 Neara 到做 go-to-market 机构的路径，并谈及 Claude、Grok 等工具。"
+  },
+  "Variational Raises $110M at $1.5B Valuation, Fuels $VAR Points Rush": {
+    "t": "Variational 以 15 亿美元估值融资 1.1 亿美元，积分空投预期升温",
+    "h": "Bain Capital Crypto 领投 B 轮；该 Arbitrum 永续合约协议宣称零手续费，资金将提高持仓上限。"
+  },
+  "People Share Tips to Rebuild Focus Lost to Short Videos": {
+    "t": "网友分享如何找回被短视频夺走的专注力",
+    "h": "许多人抱怨刷短视频后读不完一本书；建议改读纸书、手写日记、安静散步等低刺激习惯。"
+  },
+  "Traders Stress Patience and Discipline Over Rushing Trades": {
+    "t": "交易者强调耐心与纪律，而不是急着下单",
+    "h": "外汇与市场讨论认为活过连亏、知道何时空仓，比追每一个信号更重要。"
+  },
+  "Animated Film Sparks Programmer Debate on AI Coding Tools": {
+    "t": "动画短片引发程序员对 AI 编程工具的争论",
+    "h": "一部约三分钟的动画里，老程序员与象征自然语言工具的螳螂对峙；有人觉得视角新颖，也有人认为它对传统编程态度傲慢。"
+  },
+  "AI-Assisted Proof of Riemann Hypothesis Sparks Math's Soul-Searching": {
+    "t": "AI 辅助证明黎曼猜想，引发数学界反思",
+    "h": "Anthropic 的 Levent Alpöge 与 Claude 合作、用 Lean 形式化给出黎曼猜想及其推广形式的证明；独立检查称代码可编译，斯坦福也出现另一份人工草稿。"
+  },
+  "AI-Assisted Proof Claims Solution to Riemann Hypothesis": {
+    "t": "再有 AI 辅助证明声称解决黎曼猜想",
+    "h": "Alpöge 公布数百万行 Lean 证明，斯坦福的 Ravi Vakil 另分享 Masullo 约 940 页人工草稿；两份关于广义黎曼猜想的主张均通过初步检查。"
+  },
+  "AI Pushes Developers Toward Self-Hosting Over SaaS": {
+    "t": "AI 推动开发者从 SaaS 转向自托管",
+    "h": "有开发者用 AI 快速逆向并自建工具以掌控数据和流程；讨论认为 AI 改变了成本结构，小团队也能负担得起定制工具。"
+  },
+  "Creators Share Progress in X's New Content Rewards Program": {
+    "t": "创作者分享 X 新内容奖励计划的进展",
+    "h": "X 于 2026 年 9 月以原创内容奖励取代旧分成：90 天内获 50 万认证用户首页曝光可获报酬，需 Premium 等门槛。"
+  },
+  "Davido Expands Birthday Charity to Fund Nigerian Startups": {
+    "t": "Davido 生日慈善扩至资助尼日利亚创业",
+    "h": "这位 Afrobeats 明星在 34 岁生日宣布，基金会在资助孤儿之余，将从 11 月 23 日起为有商业想法的尼日利亚人提供启动资金。"
+  },
+  "Rarelist Pays Out OnlyStreets Campaign Winners and Locks Top 200 for Airdrop": {
+    "t": "Rarelist 兑付 OnlyStreets 活动奖金，并锁定空投前 200 名",
+    "h": "活动积分 RARS 将兑换为 $RARE；OnlyStreets 用应用内相机记录街头瞬间、在 Solana 上发行迷因币，并排除 AI 生成内容。"
+  },
+  "Obsession with Pointless Pursuits Predicts Extraordinary Success": {
+    "t": "有人对「无意义爱好」的执着，或能预示非凡成功",
+    "h": "风险投资人 Adam Shuaib 观察到顶尖人士常对看似琐碎的事极度投入；他认为这种重复专注比学历更能预测成就。"
+  },
+  "OpenAI Unveils Defenses Against Unauthorized AI Distillation": {
+    "t": "OpenAI 公布防御「未授权蒸馏」的措施",
+    "h": "分层防御将攻击成功率从 54% 降至 0.2%，阻止学生模型在蒸馏时丢掉安全拒绝。"
+  },
+  "Data Scientist Relies Fully on AI, Alarming Coworkers and Engineers": {
+    "t": "数据科学家凡事都靠 AI，同事与工程师感到不安",
+    "h": "当事博士把所有任务交给 AI，产出空泛并模仿同事文风；调查显示开发者日用 AI 却担忧信任与倦怠。"
+  },
+  "Variational Raises $110M at $1.5B Valuation for Omni Expansion": {
+    "t": "Variational 以 15 亿美元估值融资 1.1 亿美元，扩张 Omni",
+    "h": "Bain Capital Crypto 领投 B 轮；平台从加密扩展到黄金与股票等，累计成交约 4750 亿美元。"
+  },
+  "Bite Off More Than You Can Chew to Grow Fast": {
+    "t": "「咬下超出能力的挑战」才能快速成长",
+    "h": "Yashank 把这句老话翻成成长口号并引发大量共鸣，也有人提醒可能过劳。"
+  },
+  "Luck and Effort Shape Success in Online Reflections": {
+    "t": "网上热议：成功由运气与努力共同塑造",
+    "h": "讨论挑战「只靠努力」的迷思：承认运气能带来谦逊，但并不等于可以为消极开脱。"
+  },
+  "Debate Compares Meat's Water Use to AI's Footprint": {
+    "t": "争论肉类用水是否让批评 AI 水耗站不住脚",
+    "h": "有帖指出肉类产业耗水远高于 AI 数据中心，约为 200 倍；讨论个人吃肉等习惯会不会削弱对 AI 水耗的批评。"
+  },
+  "Comic Captures AI's Clash with Everyday Engineering Realities": {
+    "t": "漫画刻画 AI 炒作与工程师日常维修的反差",
+    "h": "漫画里工程师 Greg 在 2046 年还在修卡纸打印机，屏幕上却炫耀调度 AI 智能体，引发对 Claude、Cursor 等工具改变软件工作的讨论。"
+  },
+  "Anthropic CEO Predicts AI Agents to Cut 80% of Entry-Level Jobs Soon": {
+    "t": "Anthropic CEO 称 AI 智能体或很快砍掉 80% 初级岗位",
+    "h": "Dario Amodei 在 Fox News 警告，一到五年内法律、咨询和金融的初级岗位或被砍掉最多 80%；能留下来的是会指挥智能体的人。"
+  },
+  "AI Models Surge on Human-Judged Creative and Work Benchmarks": {
+    "t": "在人类专家评判的创作与工作基准上，AI 胜率已超 70%",
+    "h": "Ethan Mollick 的图表显示，前沿模型在写作、设计和自由职业任务上胜过人类；GDPval 等基准由专家对比，胜率已超过 70%。"
+  },
+  "Traders Stress Discipline and Knowing When Not to Trade": {
+    "t": "交易员强调纪律，以及知道什么时候不要交易",
+    "h": "交易员认为成功来自懂得何时离场、止盈、避开不确定行情，而不是不停下单；克制往往比追涨更重要。"
+  },
+  "Online Voices Champion Simpler Living and Less Drama": {
+    "t": "网上热议把日子过简单、少卷入戏剧",
+    "h": "帖文呼吁别把生活搞得更难：少无谓争吵、别为面子花钱、心情不好时先躲开戏剧，只想低调把日子过踏实。"
+  },
+  "AI Could Let Services Businesses Scale Like Software": {
+    "t": "有观点认为 AI 能让服务业务像软件一样规模化",
+    "h": "Applied Compute CEO 在公司 45 亿美元出售之际提出：用智能体放大专家产出，服务公司利润率有望从 30–40% 推向软件的 80%。Box CEO Levie 等也参与讨论。"
+  },
+  "Video Mocks Heavy AI Reliance, Fuels Debate on Ridicule": {
+    "t": "短视频嘲讽过度依赖 AI，引发该不该嘲笑的争论",
+    "h": "一段 61 秒视频取笑连日常小事也要问 ChatGPT 的人；有人觉得到位，也有人觉得不该嘲讽。有研究将频繁用 AI 做作业与更低自我效能联系起来。"
+  },
+  "Comic Captures AI Agent Hype vs Engineer Reality in 2026": {
+    "t": "漫画对比 2026 年智能体热潮与工程师现实",
+    "h": "四格漫画里屏幕写着「调度五个智能体」，工程师却在处理打印机卡纸；开发者用梗图强调，智能体仍需大量人工盯梢与干预。"
+  },
+  "Embo Launches with $110M to Build AI Brains for Robots": {
+    "t": "Embo 以 1.1 亿美元种子轮亮相，要做机器人的 AI 大脑",
+    "h": "DeepMind Dreamer 系列作者 Danijar Hafner 等人创立的 Embo 结束隐身，由 a16z 领投 1.1 亿美元，先用互联网视频预训练，再在仿真与真人形机器人上微调。"
+  },
+  "Postiz Hits $5M ARR as Solo Bootstrapped Project": {
+    "t": "一人项目 Postiz 做到 500 万美元年经常性收入",
+    "h": "Nevo David 独立、无融资做出开源 AI 社媒排程工具 Postiz，付费用户超 1.3 万，单月新增约 200 万美元收入，并公开了增长打法。"
+  },
+  "South Korean Exchanges Flag Sky's SKY Token and USDS Amid Liquidity Issues": {
+    "t": "韩国交易所将 Sky 的 SKY 与 USDS 列为警示资产",
+    "h": "因创始人个人贷款导致流动性紧张，Upbit 与 Bithumb 暂停 SKY、USDS 部分交易对充值，并审视至 12 月底；项目方称 USDS 仍锚定 1 美元。"
+  },
+  "African Startup Scene Faces Critique Over Events vs Profitable Companies": {
+    "t": "非洲创业圈被批活动多、能赚钱的公司少",
+    "h": "记者 Tom Jackson 指出生态更热衷会议与加速器，而非打磨盈利公司；有数据称进入 A 轮的创业公司不足 10%，并呼吁先补能源与本地耐心资本。"
+  },
+  "Uttar Pradesh Youth Launch Businesses with CM-YUVA Scheme": {
+    "t": "印度北方邦青年借 CM-YUVA 计划创业",
+    "h": "该计划向 21–40 岁居民提供最高 50 万卢比起息贷款做微企业，四年利息全额补贴，目标每年新增 10 万创业者。"
+  },
+  "Inc. Magazine Profiles Alex Konrad's Upstarts Media Rise": {
+    "t": "《Inc.》报道 Alex Konrad 的 Upstarts Media",
+    "h": "前《福布斯》编辑独立做出面向创业公司的媒体，今年收入约 80 万美元，来自新闻通讯、播客、赞助和活动，正在招人扩张。"
+  },
+  "Founder-Led Companies Outperform Professional Managers, Data Shows": {
+    "t": "数据显示创始人掌舵的公司回报更高",
+    "h": "创始人任 CEO 的上市公司自 2016 年以来年化回报约 25%，约为标普 500 的两倍；Balaji 据此主张更偏向创始人控制权的治理。"
+  },
+  "Kevin Dahlstrom Shares 56 Habits for Peak Fitness at 56": {
+    "t": "Kevin Dahlstrom 分享 56 岁保持状态的 56 个习惯",
+    "h": "在 56 岁生日列出每周走 20 英里、早晨深蹲、睡满 8 小时、不喝酒不吃糖等日常，强调几十年里无数小选择的复利。"
+  },
+  "Anthropic Report Reveals AI Boosts Small Teams Amid Worker Resistance": {
+    "t": "Anthropic 报告：AI 让小团队产能大增，但员工阻力不小",
+    "h": "报告指出 2–3 人小组已能完成过去更大团队的工作，但组织改造带来的岗位变化，也让不少员工抵制采用 AI。"
+  },
+  "Tabby Cat in Tie Captures Workday Grind in Short Lists": {
+    "t": "打领带的虎斑猫短清单，笑点在日常上班的磨人节奏",
+    "h": "一只打领带的猫用简短清单和「vou embora」（我走了）吐槽上班、打扫甚至失业日常，并衍生出多种语言和造型的二创。"
+  },
+  "Scripture Shares Bring Hope and Endurance Online": {
+    "t": "网络上分享经文，寻求盼望与忍耐",
+    "h": "YouVersion 等账号本周引用罗马书 15:4、约书亚记 1:8 等经文，用户也附上祷告，把信仰当作应对困难的依靠。"
+  },
+  "Sunday Night Student Procrastination Hits Home": {
+    "t": "「周日晚上赶作业」的帖子引起学生共鸣",
+    "h": "有帖展示周末摸鱼、周日晚崩溃赶工的场面；一项覆盖超 6.5 万美国大学生的研究称 72.3% 有拖延，近一半作业在截止前 24 小时提交。"
+  },
+  "Traders Stress Mindset Over Charts in Market Success": {
+    "t": "交易员强调心态比图表更重要",
+    "h": "讨论认为市场更考验耐心与纪律而非形态本身；有研究称绝大多数日内交易者因行为陷阱亏损，能稳定盈利的不到 1%。"
+  },
+  "Traders Stress Discipline Over Charts for Lasting Success": {
+    "t": "交易员强调纪律：亏钱日也不要把情绪带回家",
+    "h": "有老手提醒亏红的日子要关掉平台、出门走走，保护家人关系；还提到把利润另存、避免亏损后的「死亡螺旋」。"
+  },
+  "Debate on Whether Money Buys Happiness or True Blessings": {
+    "t": "争论金钱能否买到幸福，还是心安才是福",
+    "h": "有人把能买想要之物的财务自由视为福气，也有人认为安心比消费更重要；讨论提到收入对幸福的提升存在上限。"
+  },
+  "Anthropic Researcher Predicts AI Will Make Most Humans Unemployable": {
+    "t": "Anthropic 研究员预测 AI 将让大多数人无法就业",
+    "h": "Anthropic 安全研究员 Tao Lin 在采访中称，广义超人类 AI 或于 2027 年底到来，并逐步让几乎所有人永久失业、依赖福利；他强调这是个人观点，不代表公司。"
+  },
+  "AI Researcher Predicts Humans Will Soon Become Unemployable": {
+    "t": "AI 研究员预测人类很快将无法就业",
+    "h": "同一段采访的另一则广泛传播剪辑：Tao Lin 称超人类 AI 到来后，人们会先换岗、再彻底失去可做的工作；评论质疑「没人有收入，谁来买 AI 产品」。"
+  },
+  "Philosophy Student Finds AI Echoing Private Year-Long Argument": {
+    "t": "哲学博士生发现 Gemini 复现了自己密写一年的论证",
+    "h": "一名哲学博士生让 Gemini 批评论文，反驳思路与自己未发表的论证几乎一致，感叹「没有它再做哲学完全没意义」；这也被用来讨论 AI 正在进入哲学研究。"
+  },
+  "AI Researcher Predicts Permanent Unemployment for Nearly All Humans": {
+    "t": "AI 研究员预测几乎所有人都将永久失业",
+    "h": "Tao Lin 再次被引用：这一幕不会在 15 个月内发生（受机器人进度限制）；网上讨论从经济崩溃、技术封建到「过去的技术革命也曾被适应」。"
+  },
+  "Flutterwave Co-Founder Advises First-Time Founders to Get Jobs Amid Tough VC Landscape": {
+    "t": "Flutterwave 联合创始人建议首次创业者先去打工",
+    "h": "Iyinoluwa Aboyeji 称没有业绩记录的首次创始人，在 VC 变严、非洲融资下滑的背景下，不如先就业积累经验；也有人指出他自己早年同样有破例机会。"
+  },
+  "Pump.fun Adds Block0 Fee to Fairer Token Launches": {
+    "t": "Pump.fun 对 Block0 交易加费，试图让发币更公平",
+    "h": "12 月 4 日起，新币所在的同一个 Solana 区块内买卖将收费，打击发售瞬间捆绑建仓；创建者主钱包豁免，一半费用用于生态奖励和销毁 $PUMP。"
+  },
+  "Every Raises $17.5M Series A to Build AI-Native Tools": {
+    "t": "Dan Shipper 的 Every 完成 1750 万美元 A 轮，做 AI 原生工具",
+    "h": "IA Ventures 领投，投后估值 1.1 亿美元；Every 约 35 人、近万付费订户，提供前沿写作、工具、培训和咨询，Shipper 强调人要学会与更强的机器共事。"
+  },
+  "Dan Koe's One-Hour Daily Routine Builds Million-Dollar Brand": {
+    "t": "Dan Koe 用每天一小时深工作做出百万美元个人品牌",
+    "h": "他在全职工作之余每天拿出 1 小时写内容、做项目，积累近 500 万受众并创造约 1000 万美元；建议有 9-5 工作的人也把早间一小时留给自己的项目。"
+  },
+  "Workers Embrace Low-Effort Day Before Thanksgiving 2026": {
+    "t": "2026 年感恩节前一天，许多办公室进入「只是来出勤」模式",
+    "h": "感恩节是 11 月 26 日，前一天不少人到岗但几乎不认真干活；医疗等必需岗位则仍是满负荷。"
+  },
+  "Debate Shifts from AI 'Doesn't Work' to Deeper Concerns": {
+    "t": "对 AI 的批评正从「根本没用」转向更深层面的担忧",
+    "h": "语言学家 Alexander Clark 指出，左翼批评正从「AI 根本行不通」转向伦理、治理与环境成本；相关讨论获大量互动。"
+  },
+  "Workslop: AI's Glossy Output Burdens Workplaces": {
+    "t": "Workslop：华而不实的 AI 产出正在加重职场负担",
+    "h": "斯坦福研究称约 40% 的美国文职人员近期遇到看起来精美却无实质的 AI 内容，收件人往往要花近两小时核查返工。"
+  },
+  "Debate Erupts Over 'SI' Replacing 'AI' in Government Documents": {
+    "t": "美国政府文件用「SI」取代「AI」的说法引发争论",
+    "h": "2026 年 9 月行政令要求联邦机构在非法定文件中用 Super Intelligence / SI 替代 AI，Nate Silver 等批评这是政治站队信号。"
+  },
+  "Founders Debate Need for $10K Savings Before Quitting Job": {
+    "t": "创始人争论辞职创业前是否必须先存下 1 万美元",
+    "h": "有人建议没存够 1 万美元就别离职；也有人仅用 80 美元起步、第二年做到 7000 美元收入，路径并不唯一。"
+  },
+  "Creators Struggle to Hit X's 500K Verified Impressions Threshold": {
+    "t": "创作者难以达到 X 奖励计划 50 万认证曝光门槛",
+    "h": "X 原创内容奖励要求 90 天内获得 50 万认证首页时间线曝光，不少付费订阅创作者进度条停在门槛附近。"
+  },
+  "Pump.fun Adds Block0 Fee to Curb Unfair Token Launches": {
+    "t": "Pump.fun 将对首个区块交易加收费用，抑制不公平发币",
+    "h": "12 月 4 日起，非创建者钱包在新代币首个区块的买卖将收固定费用，一半用于 $PUMP 回购销毁，以打击捆绑抢筹。"
+  },
+  "New X Growth Leaderboard Ranks Startup Creators by Impressions Surge": {
+    "t": "新的 X 增长榜按曝光增幅给创业者创作者排名",
+    "h": "unfair.so 的 grow.af 分析 3000 多个账号，按曝光增长倍数排行，并称已向创作者支付超过 43 万美元。"
+  },
+  "AI Investing App Ulys Raises $4 Million, Total Funding Hits $17 Million": {
+    "t": "AI 投资应用 Ulys 再融 400 万美元，累计融资达 1700 万美元",
+    "h": "前 Voyager 创始人打造的 Ulys 由 Streamlined Ventures 领投，用户可用自然语言生成代币化股票与加密篮子。"
+  },
+  "Economic Strain Drives Rush to Content Creation": {
+    "t": "经济压力推动更多人涌入内容创作",
+    "h": "多地用户称传统出路变窄后转向做内容赚钱，但多数创作者年收入仍很低，中位数约 3000 美元。"
+  },
+  "PERPTools Raises $8 Million to Streamline Perpetual Futures Trading": {
+    "t": "PERPTools 融资 800 万美元，打通永续合约发现与交易",
+    "h": "该平台合计融资 800 万美元，连接 DEXTools 发现与 Orderly 流动性，宣称有 6 万用户、测试期成交 2.4 亿美元。"
+  },
+  "Africa's Startup Scene Faces Calls for Real Profits Over Events": {
+    "t": "非洲创业圈被要求少办活动、多做出能盈利的公司",
+    "h": "批评者认为当地生态擅长办会和加速器，却缺少可自我造血的企业，呼吁把重点转向付费客户与基础设施。"
+  },
+  "Professionals Share Intense Late-Night Study Routines for Certifications": {
+    "t": "职场人分享为考证通宵学习的高强度作息",
+    "h": "不少人在朝九晚五后学到凌晨，有人一次通过证书，也有人提醒睡眠不足容易燃尽，更稳妥的是短时持续学习。"
+  },
+  "Nate Silver Calls AI Coding Boom Insane Mix of Gains and Unease": {
+    "t": "Nate Silver 称 AI 编程热是巨大收益与不安的疯狂组合",
+    "h": "他写到 AI 助手已能很快处理繁琐编码，小团队受益最大；研究显示提交量升 240%，但软件发布仅增 30%。"
+  },
+  "Reflections on Walking Away from Loneliness and Toxicity": {
+    "t": "人们分享从孤独和消耗型关系中抽身的时刻",
+    "h": "帖文讨论独处何时从自由变成孤独，以及拉黑、设边界如何带来平静，也有人担心这会加深孤立。"
+  },
+  "Choosing Peace Over Drama Resonates Widely Online": {
+    "t": "「选择平静、远离戏剧」在网上引起广泛共鸣",
+    "h": "Sahil Bloom 等分享少争辩、少内耗才有真正冷静；研究也指出自愿独处有助于降低焦虑、增强自主。"
+  },
+  "Google's AI Shares 'Under-Bet Your Best Opportunities' Advice": {
+    "t": "谷歌 AI 分享建议：对最好的机会也要「少下一点注」",
+    "h": "Gemini 4 Neon 提到类似 Kelly 公式的建议——对看好的机会也不要满仓投入，以便留给更好的机会；Hassabis 称这是好建议。"
+  },
+  "Debate Revives: Do Atoms Create Consciousness?": {
+    "t": "争论再起：原子如何产生意识？",
+    "h": "X 上有人追问无生命的原子如何产生「活着」的感觉，讨论查尔莫斯提出的意识难问题，并波及到有意识的机器是否应享有权利。"
+  },
+  "AI's Power Users Far Ahead of Everyday Americans": {
+    "t": "AI 深度用户已远超普通美国人",
+    "h": "有人让家人试用 ChatGPT 桌面里的备考工具，对方觉得极好用却此前完全不知；多数人仍停在基础对话，进阶工作流主要留在早期采用者中。"
+  },
+  "AI Builders Shift to RPG Stats and Practical Agent Design": {
+    "t": "AI 开发者转向 RPG 能力面板和可落地的智能体设计",
+    "h": "开发者主张用智力、智慧、耐力等 RPG 式评分替代死板排行榜；课程强调反思、工具、规划与多智能体协作，重点转向可靠的 harness 工程。"
+  },
+  "Would Abundance from AI End the Need for Work?": {
+    "t": "AI 带来的丰裕会让工作不再必要吗？",
+    "h": "有人想象超级智能与机器人带来极端丰裕、付费工作消失；怀疑者担心没有目标的闲暇难以幸福，也有人主张把精力转向学习、创造和照料他人。"
+  },
+  "Anthropic PAC Donations Spark AI Regulation Influence Debate": {
+    "t": "Anthropic PAC 捐款引发 AI 监管游说争议",
+    "h": "截图显示 Anthropic 员工 PAC 向两党政客捐款，批评者将其与「暂停 AI」倡议联系起来；Dario 则强调民主治理，争论焦点是行业对规则的影响力。"
+  },
+  "Founders Use VC Funds to Build Creator Audiences as Backup Plan": {
+    "t": "创始人用风投去养创作者粉丝，作为失败后的退路",
+    "h": "Greg Isenberg 观察到有人把融资花在公开构建上积累受众，公司失败后再靠 Newsletter、赞助和课程变现；也有人质疑真正赚到高收入的比例。"
+  },
+  "African Startup Founders Need Savings and Track Records, Say Investors": {
+    "t": "投资人：非洲首次创业者需要积蓄和过往成绩",
+    "h": "Flutterwave 联合创始人建议没本金的人先去打工，风投更看重可验证的履历；另有人提出至少准备 1 万美元现金，以应对非洲更冷的融资环境。"
+  },
+  "Tough Economy Drives Rush to Content Creation Worldwide": {
+    "t": "经济承压，全球掀起转做内容创作者的浪潮",
+    "h": "一条「经济太糟，人人都想当创作者」的帖子引发共鸣；从尼日利亚到音乐圈，许多人因就业前景不佳转向内容与线上变现，但收入并不稳定。"
+  },
+  "Greg Isenberg Proposes AI Agent Accelerator for Bootstrapped Creators": {
+    "t": "Greg Isenberg 提议为自举创作者办 AI 智能体加速器",
+    "h": "他设想一个类似 YC、面向用智能体几乎独立运营公司的个人创始人项目；讨论提到与 TinySeed 等已有项目的重叠，以及同伴反馈和分发需求。"
+  },
+  "Build on Family Business or Risk Startup Failure?": {
+    "t": "先在家族生意上扩建，还是赌一把新创企？",
+    "h": "有人劝年轻人在父母已有的店铺和客源上扩展，而不是从零创业；数据称美国企业一年内失败约 20%、五年内约一半，讨论主张把家业与新工具结合。"
+  },
+  "Sight Creator Program Awards $15 to 115 Winners Amid Backlash": {
+    "t": "Sight 创作者计划 115 名获奖者各得 15 美元，引发反弹",
+    "h": "在为预测市场做内容的数千人中选出 115 名，各奖 15 美元；许多发了二三十条的参与者落选且标准不清，社区呼吁更透明的激励。"
+  },
+  "Pump.fun Adds Block0 Fee to Block Early Token Bundling": {
+    "t": "Pump.fun 加收 Block0 费用，打击开盘捆绑抢筹",
+    "h": "12 月 4 日起，非创建者钱包在新币首个区块交易将被收费，旨在阻止多钱包提前囤货；半数费用用于生态奖励和回购 $PUMP。"
+  },
+  "Online Voices Urge Celebrating Personal Progress Over Comparisons": {
+    "t": "网上声音呼吁庆祝自己的进步，少做比较",
+    "h": "在无尽的高光时刻里，有人提醒真正的快乐来自看见自己的进展，而不是和别人的展示比较。"
+  }
 }

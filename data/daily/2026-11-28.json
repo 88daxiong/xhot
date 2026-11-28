@@ -1,0 +1,154 @@
+{
+  "changelog": [],
+  "date": "2026-11-28",
+  "followers_zh": "涨粉最多：Dario Amodei +3847、Karpathy +2875、Dan Koe +2835、Anthropic +2580、Tibo +2214、Claude +1954；马斯克日减约 5.1 万，Satya Nadella -10500、CZ -8748、Sundar Pichai -7786、Paul Graham -3477、Google -2676。",
+  "gists": {
+    "2126142028060795261": "Mollick 认为，如今已能用很低成本、在任何语言里为手机用户提供优质个性化帮助，教育与医疗等难题本可被解决，但雄心仍不足。",
+    "2126142072491245817": "CZ 发帖祝贺感恩节。",
+    "2126146972059046194": "Sui 上永续合约成交曾占全网 95% 的 Bluefin 将于 12 月 4 日关停永续交易，转做现货、代币化和 RWA。",
+    "2126194774931857559": "CZ 询问谁在曼谷。",
+    "2126201671026180469": "swyx 称某产品在上线首日就超过 Cursor 和 t3code，开局强劲。",
+    "2126210197647753273": "Thariq 写道：一切都靠重复练习。",
+    "2126290561548370202": "保罗·格雷厄姆转引 Jessica：世界并不庆祝感恩节，却庆祝黑色星期五。",
+    "2126303459159011392": "Pieter Levels 转发并写下一句「我们必须反击」。",
+    "2126305373607113184": "Ryan Carson 说自己已改用 Neon，不再用 Opus 5.5，并感到不可思议。",
+    "2126310099475956175": "保罗·格雷厄姆批评加州拟要求 15 岁仍坐加高座椅，认为已成自我讽刺，应废止。",
+    "2126323762916159590": "Codie Sanchez 说赚钱不必靠天才：选一件事练满 1 万小时，想清楚如何收费，并比别人坚持得更久。",
+    "2126341534240874831": "Pieter Levels 推荐迪拜 Founders HQ，可办会员或免费坐咖啡馆，咖啡、网络和空调都很加分。",
+    "2126352854394790172": "swyx 称 Google 出现新的 Tibo，恰逢 Neon 成为最热前沿模型，DeepMind 自 Gemini 2.5 以来明显回暖。",
+    "2126372238853112227": "OpenAI 开发者账号介绍可对话的周边商店：用 GPT-Live 报加急与时效，Decisions API 评估退货，WebMCP 供智能体调用购物车。",
+    "2126395136192160056": "MrBeast 称买下 100 辆车，周日将在 Whatnot 直播中全部免费送出。",
+    "2126398247552037042": "马斯克转发并只评了一句「漂亮的工程」。",
+    "2126413886576590925": "马斯克建议像公司一样为 Grok Bot 设置专职角色，并由经理 Bot 统筹；把所有工作堆给一个 Bot 就会开始出错。"
+  },
+  "hide": [
+    "2126398247552037042",
+    "2126291229789102311",
+    "2126142072491245817",
+    "2126194774931857559",
+    "2126303459159011392",
+    "2126210197647753273",
+    "2126395136192160056",
+    "2126301513417171199",
+    "2126280533881799038",
+    "2126170829352477104",
+    "2126323121196040330"
+  ],
+  "highlights": [
+    {
+      "excerpt": "Vital that children have a stake in the future https://t.co/KtSGi3dSF7",
+      "excerpt_zh": "让孩子们在未来拥有一份权益，至关重要。 https://t.co/KtSGi3dSF7",
+      "handle": "elonmusk",
+      "likes": 30301,
+      "name": "Elon Musk",
+      "post_id": "2126110344120762593",
+      "tags": [],
+      "text_zh": "马斯克称，让孩子们在未来拥有一份权益至关重要。",
+      "url": "https://x.com/elonmusk/status/2126110344120762593"
+    },
+    {
+      "excerpt": "Distillation is good and healthy in AI. It's one of the few things limiting extreme concentration of power, capabilities and wealth (and very similar to how AI companies got successful distilling the web). Great to see @Google promoting it! https://t.co/LDMuX2upMA",
+      "excerpt_zh": "蒸馏对 AI 是一件好事，也是健康的。它是少数能限制权力、能力与财富极度集中的机制之一（这和 AI 公司靠蒸馏互联网获得成功非常相似）。很高兴看到 @Google 在推广它！ https://t.co/LDMuX2upMA",
+      "handle": "ClementDelangue",
+      "likes": 4376,
+      "name": "clem 🤗",
+      "post_id": "2126322165364719677",
+      "tags": [
+        "model"
+      ],
+      "text_zh": "Clem 认为蒸馏能抑制 AI 能力与财富过度集中，并赞赏 Google 推广这一做法。",
+      "url": "https://x.com/ClementDelangue/status/2126322165364719677"
+    },
+    {
+      "excerpt": "Models should be scored more like an RPG stat sheet than a leaderboard. https://t.co/dVkFqXXgNE",
+      "excerpt_zh": "模型应该更像 RPG 能力面板那样打分，而不是排行榜。 https://t.co/dVkFqXXgNE",
+      "handle": "trq212",
+      "likes": 3761,
+      "name": "Thariq",
+      "post_id": "2126386932989210714",
+      "tags": [
+        "model"
+      ],
+      "text_zh": "Thariq 提出，模型评估应更像 RPG 能力面板，而不是单一排行榜。",
+      "url": "https://x.com/trq212/status/2126386932989210714"
+    },
+    {
+      "excerpt": "Starting today, we're offering free Kimi API credits to support scientific research worldwide.\n\nSelected teams will receive free Kimi API credits, access to our latest models, and opportunities for long-term collaboration.  \n",
+      "excerpt_zh": "即日起，我们向全球科研提供免费的 Kimi API 额度。入选团队将获得免费 API 额度、最新模型使用权，以及长期合作机会。该计划延续我们对开权模型的承诺，让前沿 AI 对研究者更加可及。",
+      "handle": "Kimi_Moonshot",
+      "likes": 2796,
+      "name": "Kimi.ai",
+      "post_id": "2126154696947871760",
+      "tags": [
+        "model",
+        "research"
+      ],
+      "text_zh": "Kimi 即日起向全球科研团队免费提供 API 额度，首轮申请截止 12 月 8 日。",
+      "url": "https://x.com/Kimi_Moonshot/status/2126154696947871760"
+    },
+    {
+      "excerpt": "https://t.co/YtMHvZXTZu is absolutely unreal. It runs a full Linux kernal and distro in a browser tab. No tricks. The full thing. It can run coding agents, it can even run Chrome inside Chrome 🤯 and it's… fast!? https://t.co/gJLbYVyG1t",
+      "excerpt_zh": "https://t.co/YtMHvZXTZu 实在太不可思议了。它能在浏览器标签页里运行完整的 Linux 内核和发行版。没有花招，是完整的那一套。它能跑编程智能体，甚至能在 Chrome 里再跑一个 Chrome 🤯 而且还……很快！？ https://t.co/gJLbYVyG1t",
+      "handle": "rauchg",
+      "likes": 2170,
+      "name": "Guillermo Rauch",
+      "post_id": "2126416223592473046",
+      "tags": [
+        "agent",
+        "code"
+      ],
+      "text_zh": "Rauch 称可在浏览器标签页跑完整 Linux，并能运行编程智能体和套娃 Chrome。",
+      "url": "https://x.com/rauchg/status/2126416223592473046"
+    },
+    {
+      "excerpt": "I regret to inform you that a lot of the small problems, stresses, and anxieties of life disappear when you start taking action. It’s much harder for those things to catch a body in motion. The answers you seek are found in the relentless action you avoid.",
+      "excerpt_zh": "很遗憾地告诉你：生活中许多小问题、压力和焦虑，会在你开始行动之后消失。这些东西很难追上一个在动的人。你要找的答案，就藏在你一直回避的持续行动里。",
+      "handle": "SahilBloom",
+      "likes": 2046,
+      "name": "Sahil Bloom",
+      "post_id": "2126309932060578222",
+      "tags": [
+        "habit"
+      ],
+      "text_zh": "Sahil Bloom 说，许多焦虑会在开始行动后消失，答案往往藏在被回避的行动里。",
+      "url": "https://x.com/SahilBloom/status/2126309932060578222"
+    },
+    {
+      "excerpt": "New trend I'm observing:\n\n1. Startup raises venture capital\n2. Uses venture dollars to become creator \n3. Startup fails\n4. Fall back on becoming a full-time creator and makes $500k-$5M/year as creator\n5. Incubates other products bootstrapped\n6. Never raises VC again",
+      "excerpt_zh": "我观察到一个新趋势：\n\n1. 创企融到风险投资\n2. 用风投的钱去做创作者\n3. 创企失败\n4. 退回成为全职创作者，一年赚 50 万到 500 万美元\n5. 再自举孵化其他产品\n6. 从此不再融资",
+      "handle": "gregisenberg",
+      "likes": 2032,
+      "name": "GREG ISENBERG",
+      "post_id": "2126356350875709581",
+      "tags": [
+        "startup",
+        "creator"
+      ],
+      "text_zh": "Greg 观察到一种新路径：创企融资做内容，失败后转为全职创作者，再反向孵化产品、不再融资。",
+      "url": "https://x.com/gregisenberg/status/2126356350875709581"
+    },
+    {
+      "excerpt": "There's something happening with post-training! People are starting to realize you can post-train open-source model to frontier on your tasks and constraints at a fraction of the cost of generalist black-box APIs. Let's go! https://t.co/yRcOlWCSpo",
+      "excerpt_zh": "后训练正在发生一些事！人们开始意识到，可以把开源模型后训练到在自己的任务和约束上达到前沿水平，成本只是通用黑盒 API 的一小部分。冲！ https://t.co/yRcOlWCSpo",
+      "handle": "ClementDelangue",
+      "likes": 1295,
+      "name": "clem 🤗",
+      "post_id": "2126329405093867686",
+      "tags": [
+        "model",
+        "oss"
+      ],
+      "text_zh": "Clem 称，针对自身任务做开源模型后训练，成本远低于通用黑盒 API，却能达到前沿水平。",
+      "url": "https://x.com/ClementDelangue/status/2126329405093867686"
+    }
+  ],
+  "pin": [
+    "2126413886576590925"
+  ],
+  "summary_zh": [
+    "Kimi 向全球科研团队免费提供 API 额度，该帖获 2796 赞。",
+    "Rauch 展示可在浏览器标签页跑完整 Linux，并能运行编程智能体。",
+    "话题千问 +45.5%、Kimi +41.9%；Dario 增粉 3847，马斯克减粉约 5.1 万。"
+  ],
+  "topics_zh": "涨幅最大是 Qwen 千问 +45.5%（5848 条），Kimi +41.9%（1301 条），Dan Koe +36.4%（370 条），DeepSeek +25.2%，MCP +18.6%；solopreneur -23.3%，monk mode -15.3%，GLM 智谱 -7.9%，Codex -6.5%。"
+}
